@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SOVSBGV.Manager.Config" name="SOVSBGV">
+		<kind>View</kind>
+		<items>
+			<item name="SOVSBGV_ACTIVITY_DATE" logicalName="sovsbgvActivityDate" type="java.util.Date" physicalName="SOVSBGV_ACTIVITY_DATE"   /> 
+			<item name="SOVSBGV_TYPE_IND" logicalName="sovsbgvTypeInd" type="String" physicalName="SOVSBGV_TYPE_IND"   /> 
+			<item name="SOVSBGV_CODE" logicalName="sovsbgvCode" type="String" physicalName="SOVSBGV_CODE"   /> 
+			<item name="SOVSBGV_DESC" logicalName="sovsbgvDesc" type="String" physicalName="SOVSBGV_DESC"   /> 
+			<item name="SOVSBGV_CITY" logicalName="sovsbgvCity" type="String" physicalName="SOVSBGV_CITY"   /> 
+			<item name="SOVSBGV_STAT_CODE" logicalName="sovsbgvStatCode" type="String" physicalName="SOVSBGV_STAT_CODE"   /> 
+			<item name="SOVSBGV_ADMR_CODE" logicalName="sovsbgvAdmrCode" type="String" physicalName="SOVSBGV_ADMR_CODE"   /> 
+		</items>
+		
+		<adapterClass>net.hedtech.banner.student.common.Soisbgi.model.SovsbgvAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE ((sovsbgv_type_ind = :TYPE_IND) OR :TYPE_IND IS NULL) AND ((sovsbgv_srce_ind = :SRCE_IND) OR :SRCE_IND IS NULL)]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by sovsbgv_type_ind, sovsbgv_code]]></defaultOrderByClause>	
+		
+		<pagination maximumRows="20" enabled="true"/>
+
+	</manager>
+</b:beans>

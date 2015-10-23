@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="ftvacct.ftvacctCoasCode.prompt">Chart of Accounts</msg>
+  <msg id="ftvacct.ftvacctAcctCode.prompt">Account Code</msg>
+  <msg id="ftvacct.ftvacctTitle.prompt">Title</msg>
+  <msg id="ftvacct.ftvacctAtypCode.prompt">Type</msg>
+  <msg id="ftvacct.ftvacctDataEntryInd.prompt">Data Entry</msg>
+  <msg id="ftvacct.ftvacctAcctClassCode.prompt">Account Class</msg>
+  <msg id="ftvacct.ftvacctStatusInd.prompt">Status</msg>
+  <msg id="ftvacct.internalAtyp.prompt">Internal Type</msg>
+  <msg id="ftvacct.ftvacctEffDate.prompt">Effective Date</msg>
+  <msg id="ftvacct.ftvacctTermDate.prompt">Termination Date</msg>
+  <msg id="buttonControlBlock.ftvacct1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.ftvacct1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.ftvacct1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Account Code Validation</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+  <msg id="ftvatypLov.title">Account Type List (FTVATYP)</msg>
+  <msg id="ftvatypLov.ftvatypCoasCode.title">Code</msg>
+  <msg id="ftvatypLov.ftvatypAtypCode.title">Account Type</msg>
+  <msg id="ftvatypLov.ftvatypTitle.title">Account Title</msg>
+  <msg id="ftvatypLov.ftvatypAtypCodePred.title">Acct Type Pred</msg>
+  <msg id="ftvatypLov.ftvatypStatusInd.title">Status</msg>
+  <msg id="ftvatypLov.icrggq0.title">Eff Date</msg>
+  <msg id="ftvatypLov.icrggq1.title">Term Date</msg>
+  <msg id="ftvcoasLov.title">Chart of Accounts List (FTVCOAS)</msg>
+  <msg id="ftvcoasLov.ftvcoasCoasCode.title">COA</msg>
+  <msg id="ftvcoasLov.ftvcoasTitle.title">Chart of Account Title</msg>
+  <msg id="ftvcoasLov.ftvcoasStatusInd.title">Status</msg>
+  <msg id="ftvcoasLov.icrggq0.title">Eff Date</msg>
+  <msg id="ftvcoasLov.icrggq1.title">Term Date</msg>
+</messages>

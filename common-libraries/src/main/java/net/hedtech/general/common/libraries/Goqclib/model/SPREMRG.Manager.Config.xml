@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPREMRG.Manager.Config" name="SPREMRG">
+		
+		<items>
+			<item name="SPREMRG_PRIORITY" logicalName="spremrgPriority" type="String" physicalName="SPREMRG_PRIORITY"  />
+			<item name="SPREMRG_RELT_CODE" logicalName="spremrgReltCode" type="String" physicalName="SPREMRG_RELT_CODE"  />
+			<item name="RELT_DESCRIPTION" logicalName="reltDescription" type="String"  virtual="true" />
+			<item name="SPREMRG_SURNAME_PREFIX" logicalName="spremrgSurnamePrefix" type="String" physicalName="SPREMRG_SURNAME_PREFIX"  />
+			<item name="SPREMRG_LAST_NAME" logicalName="spremrgLastName" type="String" physicalName="SPREMRG_LAST_NAME"  />
+			<item name="SPREMRG_FIRST_NAME" logicalName="spremrgFirstName" type="String" physicalName="SPREMRG_FIRST_NAME"  />
+			<item name="SPREMRG_MI" logicalName="spremrgMi" type="String" physicalName="SPREMRG_MI"  />
+			<item name="SPREMRG_ATYP_CODE" logicalName="spremrgAtypCode" type="String" physicalName="SPREMRG_ATYP_CODE"  />
+			<item name="ATYP_DESCRIPTION" logicalName="atypDescription" type="String"  virtual="true" />
+			<item name="SPREMRG_HOUSE_NUMBER" logicalName="spremrgHouseNumber" type="String" physicalName="SPREMRG_HOUSE_NUMBER"  />
+			<item name="SPREMRG_STREET_LINE1" logicalName="spremrgStreetLine1" type="String" physicalName="SPREMRG_STREET_LINE1"  />
+			<item name="SPREMRG_STREET_LINE2" logicalName="spremrgStreetLine2" type="String" physicalName="SPREMRG_STREET_LINE2"  />
+			<item name="SPREMRG_STREET_LINE3" logicalName="spremrgStreetLine3" type="String" physicalName="SPREMRG_STREET_LINE3"  />
+			<item name="SPREMRG_STREET_LINE4" logicalName="spremrgStreetLine4" type="String" physicalName="SPREMRG_STREET_LINE4"  />
+			<item name="SPREMRG_CITY" logicalName="spremrgCity" type="String" physicalName="SPREMRG_CITY"  />
+			<item name="SPREMRG_STAT_CODE" logicalName="spremrgStatCode" type="String" physicalName="SPREMRG_STAT_CODE"  />
+			<item name="STATE_DESCRIPTION" logicalName="stateDescription" type="String"  virtual="true" />
+			<item name="SPREMRG_ZIP" logicalName="spremrgZip" type="String" physicalName="SPREMRG_ZIP"  />
+			<item name="SPREMRG_NATN_CODE" logicalName="spremrgNatnCode" type="String" physicalName="SPREMRG_NATN_CODE"  />
+			<item name="NATN_DESCRIPTION" logicalName="natnDescription" type="String"  virtual="true" />
+			<item name="SPREMRG_CTRY_CODE_PHONE" logicalName="spremrgCtryCodePhone" type="String" physicalName="SPREMRG_CTRY_CODE_PHONE"  />
+			<item name="SPREMRG_PHONE_AREA" logicalName="spremrgPhoneArea" type="String" physicalName="SPREMRG_PHONE_AREA"  />
+			<item name="SPREMRG_PHONE_NUMBER" logicalName="spremrgPhoneNumber" type="String" physicalName="SPREMRG_PHONE_NUMBER"  />
+			<item name="SPREMRG_PHONE_EXT" logicalName="spremrgPhoneExt" type="String" physicalName="SPREMRG_PHONE_EXT"  />
+			<item name="SPREMRG_USER_ID" logicalName="spremrgUserId" type="String" physicalName="SPREMRG_USER_ID"  />
+			<item name="SPREMRG_ACTIVITY_DATE" logicalName="spremrgActivityDate" type="java.util.Date" physicalName="SPREMRG_ACTIVITY_DATE"  />
+			<item name="SPREMRG_PIDM" logicalName="spremrgPidm" type="java.math.BigDecimal" physicalName="SPREMRG_PIDM"  />
+			<item name="PAGE0_SEQNO" logicalName="page0Seqno" type="java.math.BigDecimal"  virtual="true" />
+			<item name="NO_ADDR_INFO" logicalName="noAddrInfo" type="java.math.BigDecimal"  virtual="true" />
+			<item name="PARM_CNTY" logicalName="parmCnty" type="String"  virtual="true" />
+			<item name="HLD_ROWID" logicalName="hldRowid" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqclib.model.SpremrgAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE SPREMRG_PIDM = :KEY_BLOCK_PIDM]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[spremrg_priority, spremrg_activity_date desc]]></defaultOrderByClause>	
+		<queryAllRecords>true</queryAllRecords>	
+		<pagination maximumRows="1" enabled="true"/>
+	</manager>
+</b:beans>

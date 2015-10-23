@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/KEY_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/FRBPROP.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/FRRPRPT.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/FRRPUSN.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/FRRPLOC.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/FRRPRPI.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/BLOCK5.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/NAVIGATE_TO.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/COPY_BLOCK.Manager.Config.xml"/>
+	
+	<formModel id="FRAPROP.Model.Config" name="FRAPROP">
+		<modelClass>net.hedtech.banner.finance.common.Fraprop.model.FrapropModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="KEY_BLOCK" manager="KEY_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRBPROP" manager="FRBPROP.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRRPRPT" manager="FRRPRPT.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRRPUSN" manager="FRRPUSN.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRRPLOC" manager="FRRPLOC.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRRPRPI" manager="FRRPRPI.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="BLOCK5" manager="BLOCK5.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="NAVIGATE_TO" manager="NAVIGATE_TO.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="COPY_BLOCK" manager="COPY_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+	</formModel>
+</b:beans>

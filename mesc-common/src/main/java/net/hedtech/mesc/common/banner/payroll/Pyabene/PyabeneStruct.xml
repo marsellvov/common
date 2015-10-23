@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<FormStructure AlertDataPath="/net/hedtech/mesc/common/banner/payroll/Pyabene/PyabeneAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/mesc/common/banner/payroll/Pyabene/PyabeneLovs.xml" Name="PYABENE">
+	<Visual>
+		<Window Id="MAIN_WINDOW" Url="net/hedtech/mesc/common/banner/payroll/Pyabene/views/ViewMainWindow">
+			<StackedCanvas Id="G$_NAV_CANVAS" Visible="false"/>
+			<ContentCanvas Id="TEMP_CANVAS" Visible="false"/>
+			<ContentCanvas Id="KEY_BLOCK_CANVAS"/>
+			<StackedCanvas Id="PYRBENE_1_CANVAS"/>
+			<StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false"/>
+		</Window>
+		<Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/mesc/common/banner/payroll/Pyabene/views/PanelGOptCanvas">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    	</Window>
+	</Visual>
+	<Logic>
+		<Block Id="G$_SDKEY"/>
+		<Block Id="G$_SDISP"/>
+		<Block Id="G$_VPDI_BLOCK"/>
+		<Block Id="G$_NAV_BLOCK"/>
+		<Block Id="FORM_HEADER">
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_FORM" MaxLength="7" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowInsert="false" CanvasName="PYRBENE_1_CANVAS" Enabled="false" Id="DATA_SEPARATOR_LINE_0" MaxLength="24" Navigable="false" Type="DisplayItem"/>
+			<Item AllowInsert="false" CanvasName="PYRBENE_1_CANVAS" Enabled="false" Id="DATA_SEPARATOR_LINE_1" MaxLength="24" Navigable="false" Type="DisplayItem"/>
+			<Item AllowInsert="false" CanvasName="PYRBENE_1_CANVAS" Enabled="false" Id="DATA_SEPARATOR_LINE_2" MaxLength="24" Navigable="false" Type="DisplayItem"/>
+		</Block>
+		<Block Id="KEY_BLOCK">
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AutoSkip="true" CanvasName="KEY_BLOCK_CANVAS" Id="ID" MaxLength="9" Type="TextItem"/>
+			<Item AllowSearch="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="NAME" MaxLength="230" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="EMST_RULE" MaxLength="60" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="BCAT_CODE" MaxLength="2" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="BCAT_DESC" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" MaxLength="30" Type="Button"/>
+			<Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" MaxLength="30" Type="Button" Visible="false"/>
+		</Block>
+		<Block AllowInsert="false" Id="PDRBENE" MultiRecord="true">
+			<Item AllowSearch="false" Enabled="false" Id="PDRBENE_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item Enabled="false" Id="PDRBENE_SEQ_NO" MaxLength="2" Type="TextItem"/>
+			<Item AllowSearch="false" Enabled="false" Id="PDRBENE_BENE_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowInsert="false" AllowUpdate="false" AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Enabled="false" Id="PDRBENE_BENE_LAST_NAME" MaxLength="60" Type="TextItem"/>
+			<Item AllowSearch="false" AllowInsert="false" AllowUpdate="false" AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Enabled="false" Id="PDRBENE_BENE_FIRST_NAME" MaxLength="60" Type="TextItem"/>
+			<Item AllowSearch="false" AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Enabled="false" Id="PDRBENE_AGE" MaxLength="3" Type="TextItem"/>
+			<Item Id="MARTL_CODE" MaxLength="30" Type="TextItem"/>
+			<Item Id="BIRTH_NATN" MaxLength="30" Type="TextItem"/>
+			<Item Id="NATN_CODE" MaxLength="30" Type="TextItem"/>
+			<Item AllowSearch="false" AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Enabled="false" Id="PDRBENE_SEX_IND" MaxLength="1" Type="List"/>
+			<Item Id="PDRBENE_BREL_CODE" MaxLength="1" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="PYRBENE_1_CANVAS" Enabled="false" Id="PDRBENE_BREL_DESC" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" Id="PDRBENE_BREL_TYPE" MaxLength="1" Type="TextItem" Visible="false"/>
+			<Item AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_MARTL_CODE" Lov="STVMRTL_LOV" MaxLength="30" Type="TextItem"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_MARTL_CODE_LBT" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_MARTL_DESC" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+			<Item AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_NATN_CODE" Lov="STVNATN_LOV" MaxLength="5" Type="TextItem"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_NATN_CODE_LBT" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_NATN_DESC" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+			<Item AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_BIRTH_NATN" Lov="STVNATN_LOV" MaxLength="5" Type="TextItem"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_BIRTH_NATN_LBT" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_BIRTH_NATN_DESC" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_TKT_ELGBTY" MaxLength="1" Type="Checkbox"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_AIRFARE_CODE" MaxLength="8" Type="TextItem"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_AIRFARE_CODE_LBT" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_AIRFARE_DESC" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+			<Item AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_HOME_AIRPORT" Lov="GYVTYP1_LOV" MaxLength="30" Type="TextItem"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_HOME_AIRPORT_LBT" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_HOME_AIRPORT_DESC" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+			<Item AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_HOME_NATN" Lov="STVNATN_LOV" MaxLength="5" Type="TextItem"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_HOME_NATN_LBT" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_HOME_NATN_DESC" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+			<Item AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_ELGBTY_REASON" Lov="GYVTYP3_LOV" MaxLength="8" Type="TextItem"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_ELGBTY_REASON_LBT" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_ELGBTY_REASON_DESC" MaxLength="60" Navigable="false" Type="DisplayItem"/>
+			<Item AutoSkip="true" CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_REASON_DATE" MaxLength="26" Type="TextItem"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_REASON_DATE_DBT" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" Enabled="false" Id="PDRBENE_ACTIVITY_DATE" MaxLength="26" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_EDUFEE_ELGBTY" MaxLength="1" Type="Checkbox"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="PDRBENE_SPLFEE_ELGBTY" MaxLength="1" Type="Checkbox"/>
+		</Block>
+		<Block Id="BUTTON_CONTROL_BLOCK">
+			<Item CanvasName="TEMP_CANVAS" Id="PDRBENE_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button"/>
+			<Item CanvasName="TEMP_CANVAS" Id="PDRBENE_1_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button"/>
+			<Item CanvasName="TEMP_CANVAS" Id="PDRBENE_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item CanvasName="TEMP_CANVAS" Id="PDRBENE_1_EXITVALUE_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item CanvasName="PYRBENE_1_CANVAS" Id="ID_LBT" MaxLength="30" Navigable="false" Type="Button"/>
+		</Block>
+		<Block Id="G$_OPT_BLOCK">
+     		 <Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_SEL" MaxLength="30" Type="TextItem"/>
+     		 <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+    		 <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+     		 <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+     		 <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      		 <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      		 <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      		 <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      		 <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      		 <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      		 <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+     		 <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    		 <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      		 <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      		 <Item CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+    </Block>
+		<Block Id="G$_EXTENDED_SEARCH_BLOCK"/>
+	</Logic>
+</FormStructure>

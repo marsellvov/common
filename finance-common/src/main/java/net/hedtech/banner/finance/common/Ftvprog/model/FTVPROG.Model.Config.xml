@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Ftvprog/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Ftvprog/model/FTVPROG.Manager.Config.xml"/>
+	
+	<formModel id="FTVPROG.Model.Config" name="FTVPROG">
+		<modelClass>net.hedtech.banner.finance.common.Ftvprog.model.FtvprogModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FTVPROG" manager="FTVPROG.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+	</formModel>
+</b:beans>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="stvnatn.stvnatnCode.prompt">Nation Code</msg>
+  <msg id="stvnatn.stvnatnCode.hint">Nation code.</msg>
+  <msg id="stvnatn.stvnatnDescription.prompt">Nation Description</msg>
+  <msg id="stvnatn.stvnatnNation.hint">Name of nation.</msg>
+  <msg id="stvnatn.stvnatnSevisEquiv.prompt">SEVIS Equivalent</msg>
+  <msg id="stvnatn.stvnatnSevisEquiv.hint">SEVIS equivalent country code.</msg>
+  <msg id="stvnatn.stvnatnEdiEquiv.prompt">EDI Equivalent</msg>
+  <msg id="stvnatn.stvnatnEdiEquiv.hint">EDI Equivalent Country Code.</msg>
+  <msg id="stvnatn.stvnatnLmsEquiv.prompt">LMS Equivalent</msg>
+  <msg id="stvnatn.stvnatnLmsEquiv.hint">LMS Equivalent Country Code.</msg>
+  <msg id="stvnatn.stvnatnScodCodeIso.prompt">ISO Code</msg>
+  <msg id="stvnatn.stvnatnScodCodeIso.hint">ISO Code. Press LIST for valid values.</msg>
+  <msg id="stvnatn.stvnatnStatscanCde.prompt">Canadian Statistics Code</msg>
+  <msg id="stvnatn.stvnatnStatscanCde.hint">Canadian Statistics Reporting code; Institution Specific.</msg>
+  <msg id="stvnatn.stvnatnSsaReportingEquiv.prompt">MMREF Code</msg>
+  <msg id="stvnatn.stvnatnSsaReportingEquiv.hint">Country Code as listed in the SSA MMREF-1 requirements.</msg>
+  <msg id="stvnatn.stvnatnActivityDate.prompt">Activity Date</msg>
+  <msg id="buttonControlBlock.stvnatn1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.stvnatn1SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.stvnatn1ExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.stvnatn1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.stvnatnScodCodeIsoLbt.tooltip">Search</msg>
+  <msg id="mainWindow.title">Nation Code Validation</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

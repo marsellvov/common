@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="AGRGDES_GIFT_PIDM_RG.ValueSet.Config" name="AGRGDES_GIFT_PIDM_RG">
+    <columns>
+		<column name="AGRGDES_PLEDGE_NO" type="String" size="7"/>
+		<column name="AGRGDES_GIFT_NO" type="String" size="7"/>
+		<column name="AGRGDES_CAMPAIGN" type="String" size="5"/>
+		<column name="AGRGDES_DESG" type="String" size="10"/>
+	</columns>
+	<query><![CDATA[
+	SELECT agrgdes_pledge_no, agrgdes_gift_no, agrgdes_campaign, agrgdes_desg  FROM agrgdes  WHERE agrgdes_pidm = :PIDM AND agrgdes_gift_no = :AGRADTL_GIFT_NO AND agrgdes_pledge_no <> '0000000'  ORDER BY agrgdes_pledge_no, agrgdes_gift_no, agrgdes_campaign, agrgdes_desg
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="PIDM">
+			<value>
+				<item businessObject="" name="PIDM"/> 
+			</value>
+        </parameter>
+		<parameter name="AGRADTL_GIFT_NO">
+			<value>
+				<item businessObject="AGRADTL" name="AGRADTL_GIFT_NO"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="AGRGDES_GIFT_PIDM_PGBE_RG.ValueSet.Config" name="AGRGDES_GIFT_PIDM_PGBE_RG">
+    <columns>
+		<column name="AGRGDES_PLEDGE_NO" type="String" size="7"/>
+		<column name="AGRGDES_GIFT_NO" type="String" size="7"/>
+		<column name="AGRGDES_CAMPAIGN" type="String" size="5"/>
+		<column name="AGRGDES_DESG" type="String" size="10"/>
+	</columns>
+	<query><![CDATA[
+	SELECT agrgdes_pledge_no, agrgdes_gift_no, agrgdes_campaign, agrgdes_desg  FROM agrgdes  WHERE agrgdes_pidm = :PIDM AND agrgdes_gift_no = :AGRPGBE_GIFT_NO AND agrgdes_pledge_no <> '0000000'  ORDER BY agrgdes_pledge_no, agrgdes_gift_no, agrgdes_campaign, agrgdes_desg
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="PIDM">
+			<value>
+				<item businessObject="" name="PIDM"/> 
+			</value>
+        </parameter>
+		<parameter name="AGRPGBE_GIFT_NO">
+			<value>
+				<item businessObject="AGRPGBE" name="AGRPGBE_GIFT_NO"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="PLEDGE_NUM_RG.ValueSet.Config" name="PLEDGE_NUM_RG">
+    <columns>
+		<column name="AGRGDES_PLEDGE_NO" type="String" size="7"/>
+		<column name="AGRGDES_GIFT_NO" type="String" size="7"/>
+		<column name="AGRGDES_CAMPAIGN" type="String" size="5"/>
+		<column name="AGRGDES_DESG" type="String" size="10"/>
+	</columns>
+	<query><![CDATA[
+	SELECT agrgdes_pledge_no, agrgdes_gift_no, agrgdes_campaign, agrgdes_desg  FROM agrgdes  WHERE agrgdes_pidm = :PIDM AND agrgdes_gift_no = :GLOBAL_GIFT_NO  ORDER BY agrgdes_pledge_no, agrgdes_gift_no, agrgdes_campaign, agrgdes_desg
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="PIDM">
+			<value>
+				<item businessObject="" name="PIDM"/> 
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_GIFT_NO">
+			<value>
+				<globalVariable name="GIFT_NO"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="AGRGDES_PLEDGE_PIDM_RG.ValueSet.Config" name="AGRGDES_PLEDGE_PIDM_RG">
+    <columns>
+		<column name="AGRGDES_PLEDGE_NO" type="String" size="7"/>
+		<column name="AGRGDES_GIFT_NO" type="String" size="7"/>
+		<column name="AGRGDES_CAMPAIGN" type="String" size="5"/>
+		<column name="AGRGDES_DESG" type="String" size="10"/>
+	</columns>
+	<query><![CDATA[
+	SELECT agrgdes_pledge_no, agrgdes_gift_no, agrgdes_campaign, agrgdes_desg  FROM agrgdes  WHERE agrgdes_pidm = :PIDM AND agrgdes_pledge_no = :AGRADTL_PLEDGE_NO AND (agrgdes_gift_no = :GLOBAL_GIFT_NO OR :GLOBAL_GIFT_NO IS NULL)  ORDER BY agrgdes_pledge_no, agrgdes_gift_no, agrgdes_campaign, agrgdes_desg
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="PIDM">
+			<value>
+				<item businessObject="" name="PIDM"/> 
+			</value>
+        </parameter>
+		<parameter name="AGRADTL_PLEDGE_NO">
+			<value>
+				<item businessObject="AGRADTL" name="AGRADTL_PLEDGE_NO"/> 
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_GIFT_NO">
+			<value>
+				<globalVariable name="GIFT_NO"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="AGRGDES_PLEDGE_PIDM_PGBE_RG.ValueSet.Config" name="AGRGDES_PLEDGE_PIDM_PGBE_RG">
+    <columns>
+		<column name="AGRGDES_PLEDGE_NO" type="String" size="7"/>
+		<column name="AGRGDES_GIFT_NO" type="String" size="7"/>
+		<column name="AGRGDES_CAMPAIGN" type="String" size="5"/>
+		<column name="AGRGDES_DESG" type="String" size="10"/>
+	</columns>
+	<query><![CDATA[
+	SELECT agrgdes_pledge_no, agrgdes_gift_no, agrgdes_campaign, agrgdes_desg  FROM agrgdes  WHERE agrgdes_pidm = :PIDM AND agrgdes_pledge_no = :AGRPGBE_PLEDGE_NO AND (agrgdes_gift_no = :GLOBAL_GIFT_NO OR :GLOBAL_GIFT_NO IS NULL)  ORDER BY agrgdes_pledge_no, agrgdes_gift_no, agrgdes_campaign, agrgdes_desg
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="PIDM">
+			<value>
+				<item businessObject="" name="PIDM"/> 
+			</value>
+        </parameter>
+		<parameter name="AGRPGBE_PLEDGE_NO">
+			<value>
+				<item businessObject="AGRPGBE" name="AGRPGBE_PLEDGE_NO"/> 
+			</value>
+        </parameter>
+		<parameter name="GLOBAL_GIFT_NO">
+			<value>
+				<globalVariable name="GIFT_NO"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+</b:beans>

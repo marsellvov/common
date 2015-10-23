@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="vertical" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="G$_VPDI_BLOCK"/>
+	<panel label="&lt;title1&gt;" style="lightbox" width="100%">
+		<flowlayout orientation="vertical">
+			<textbox autoskip="true" block="G$_VPDI_BLOCK" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" label="gVpdiBlock.vpdiCode.prompt" maxlength="30" member="VPDI_CODE" name="vpdiCode" style="ui-buttoninput" validation="server" width="60px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textbox>
+			<button action="WHEN-BUTTON-PRESSED" block="G$_VPDI_BLOCK" icon="search" label="gVpdiBlock.vpdiCodeLbt.label" member="VPDI_CODE_LBT" name="vpdiCodeLbt" navigable="false" style="ui-buttoninput" tooltip="gVpdiBlock.vpdiCodeLbt.tooltip"/>
+			<textfield block="G$_VPDI_BLOCK" datatype="String" fontfamily="Verdana" fontsize="9pt" height="23px" maxlength="30" member="VPDI_DESC" name="vpdiDesc" width="225px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textfield>
+			<button action="WHEN-BUTTON-PRESSED" backgroundcolor="#b8b8b8" block="G$_VPDI_BLOCK" enabled="false" fontfamily="Verdana" fontsize="10pt" foregroundcolor="Black" label="gVpdiBlock.vpdiOtherInstitutions.label" member="VPDI_OTHER_INSTITUTIONS" name="vpdiOtherInstitutions" navigable="false" tooltip="gVpdiBlock.vpdiOtherInstitutions.tooltip" visible="false"/>
+		</flowlayout>
+	</panel>
+	<panel style="alert-footer">
+		<flowlayout orientation="horizontal">
+			<button action="WHEN-BUTTON-PRESSED" block="G$_VPDI_BLOCK" enabled="false" label="gVpdiBlock.vpdiCancelBtn.label" member="VPDI_CANCEL_BTN" name="vpdiCancelBtn"/>
+			<button action="WHEN-BUTTON-PRESSED" block="G$_VPDI_BLOCK" enabled="false" label="gVpdiBlock.vpdiOkBtn.label" member="VPDI_OK_BTN" name="vpdiOkBtn"/>
+		</flowlayout>
+	</panel>
+</config>

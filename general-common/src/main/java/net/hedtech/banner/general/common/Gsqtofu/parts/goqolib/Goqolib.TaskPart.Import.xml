@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<b:beans xmlns="urn:schemas:morphis:foundations:task" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:b="http://www.springframework.org/schema/beans" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+  <!-- model definition-->
+  <b:import resource="classpath:/net/hedtech/banner/general/common/Gsqtofu/parts/goqolib/model/GOQOLIB.Model.Config.xml" />
+  <task id="GOQOLIB.TaskPart.Import" name="GOQOLIB">
+    <taskResources>/net/hedtech/banner/general/common/Gsqtofu/parts/goqolib/GoqolibStruct.xml</taskResources>
+    <supportCodeConfiguration>
+      <packages>
+        <package name="G$_FORM_CLASS" />
+        <package name="G$_VAL_FORM_CLASS" />
+        <package name="G$_VPDI_BLOCK" />
+        <package name="G$_NAV_BLOCK" />
+        <package name="G$_CODE_CLASS" />
+      </packages>
+    </supportCodeConfiguration>
+    <formModelConfiguration config="GOQOLIB.Model.Config" />
+    <blockControllers>
+      <block name="G$_SDKEY" />
+      <block name="G$_SDISP" />
+    </blockControllers>
+  </task>
+</b:beans>

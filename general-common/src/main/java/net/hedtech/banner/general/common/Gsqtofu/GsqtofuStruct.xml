@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Gsqtofu/GsqtofuAlerts.xml" LovDataPath="/net/hedtech/banner/general/common/Gsqtofu/GsqtofuLovs.xml" Name="GSQTOFU">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Gsqtofu/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="TOFU_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_BLOCK" MaxLength="7" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="HEADER_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowInsert="false" AllowUpdate="false" Id="TERMS_OF_USAGE">
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="TOFU_CANVAS" DataType="String" Enabled="true" Id="GUBIPRF_TOFU_TEXT" MaxLength="32767" Navigable="false" Type="TextItem" />
+      <Item CanvasName="TOFU_CANVAS" Enabled="true" Hint="termsOfUsage.acceptBtn.hint" Id="ACCEPT_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="TOFU_CANVAS" Enabled="true" Hint="termsOfUsage.rejectBtn.hint" Id="REJECT_BTN" MaxLength="14" Type="Button" Visible="true" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+  </Logic>
+</FormStructure>

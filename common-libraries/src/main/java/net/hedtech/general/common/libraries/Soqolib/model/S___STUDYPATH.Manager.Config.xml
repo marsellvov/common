@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___STUDYPATH.Manager.Config" name="SStudypath">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="QUERY_TERM" logicalName="queryTerm" type="String"   />
+			<item name="STUDY_PATH_SEPARATOR_1" logicalName="studyPathSeparator1" type="String"   />
+			<item name="REG_INPROGRESS" logicalName="regInprogress" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SStudypath</managerClass>
+
+	</manager>
+</b:beans>

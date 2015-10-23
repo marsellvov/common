@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="QK_FLOW" />
+  <interactionblock name="QK_MENU" />
+  <panel width="386px" height="519px" top="25px" left="181px" id="pnlMenuEntire" name="MENU_ENTIRE" class="StackedCanvas" visible="false">
+    <textbox labelposition="left" labelalign="start" name="qk_menu_gurmenuName" style="GNvaTextItem" left="0px" top="0px" width="372px" height="17px" visible="false" bordertype="raised" member="GURMENU_NAME" block="QK_MENU" maxlength="30" datatype="String" case="mixed" />
+    <gridview top="3px" left="9px" width="377px" name="qk_menu_grdQkMenu" block="QK_MENU">
+      <viewheader>
+        <viewcolumn width="226px" label="" labelposition="left" labelalign="start" name="qk_menu_qkDesc" style="GNvaTextItem" labelstyle="DEFAULT" bordertype="none" member="QK_DESC" block="QK_MENU" maxlength="45" datatype="String" case="mixed" />
+        <viewcolumn width="0px" label="" labelposition="left" labelalign="start" name="qk_menu_qkType" style="GNvaTextItem" labelstyle="DEFAULT" visible="false" enabled="false" bordertype="none" member="QK_TYPE" block="QK_MENU" maxlength="10" datatype="String" case="upper" />
+        <viewcolumn width="140px" label="" labelposition="left" labelalign="start" name="qk_menu_gurmenuObjName" style="GNvaTextItem" labelstyle="DEFAULT" autoskip="true" bordertype="none" member="GURMENU_OBJ_NAME" block="QK_MENU" maxlength="30" datatype="String" case="upper" />
+      </viewheader>
+    </gridview>
+    <textbox labelposition="left" labelalign="start" name="qk_flow_gurcallCallCode" style="GNvaTextItem" left="0px" top="0px" width="372px" height="17px" enabled="false" bordertype="raised" member="GURCALL_CALL_CODE" block="QK_FLOW" maxlength="30" datatype="String" case="mixed" />
+    <gridview top="3px" left="9px" width="377px" name="qk_flow_grdQkFlow" block="QK_FLOW">
+      <viewheader>
+        <viewcolumn width="226px" label="" labelposition="left" labelalign="start" name="qk_flow_qkDesc1" style="GNvaTextItem" labelstyle="DEFAULT" bordertype="none" member="QK_DESC" block="QK_FLOW" maxlength="45" datatype="String" case="mixed" />
+        <viewcolumn width="0px" label="" labelposition="left" labelalign="start" name="qk_flow_qkType1" style="GNvaTextItem" labelstyle="DEFAULT" visible="false" enabled="false" bordertype="none" member="QK_TYPE" block="QK_FLOW" maxlength="10" datatype="String" case="upper" />
+        <viewcolumn width="140px" label="" labelposition="left" labelalign="start" name="qk_flow_gurcallForm" style="GNvaTextItem" labelstyle="DEFAULT" bordertype="none" member="GURCALL_FORM" block="QK_FLOW" required="true" maxlength="10" datatype="String" case="mixed" />
+      </viewheader>
+    </gridview>
+  </panel>
+</config>

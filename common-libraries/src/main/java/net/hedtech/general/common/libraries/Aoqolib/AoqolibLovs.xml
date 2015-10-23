@@ -1,0 +1,1458 @@
+﻿<Lovs>
+  <Lov Name="ATVPFTP_LOV" Title="Profile Category (ATVPFTP)" Width="359" Height="180" RecordGroup="ATVPFTP_RG">
+    <Columns>
+      <Column DataMember="ATVPFTP_CODE" Title="Type" Width="144" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPFTP_DESC" Title="Description" Width="548" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSGRP_LOV" Title="Solicitation Group (ATVSGRP)" Width="359" Height="180" RecordGroup="ATVSGRP_RG">
+    <Columns>
+      <Column DataMember="ATVSGRP_CODE" Title="Code" Width="144" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSGRP_DESC" Title="Description" Width="548" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVADTL_LOV" Title="Pledge and Gift Additional Details (ATVADTL)" Width="359" Height="180" RecordGroup="ATVADTL_RG">
+    <Columns>
+      <Column DataMember="ATVADTL_CODE" Title="Additional Details Type" Width="144" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVADTL_DESC" Title="Description" Width="548" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVADTL_ACTIVITY_DATE" Title="Activity Date" Width="108" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSCTG_LOV" Title="Solicitation Category (ATVSCTG)" Width="359" Height="180" RecordGroup="ATVSCTG_RG">
+    <Columns>
+      <Column DataMember="ATVSCTG_CODE" Title="Code" Width="144" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSCTG_DESC" Title="Description" Width="548" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVCCLS_LOV" Title="Comment Classification Codes (ATVCCLS)" Width="319" Height="226" RecordGroup="ATVCCLS_RG">
+    <Columns>
+      <Column DataMember="ATVCCLS_CODE" Title="Comment Classification" Width="160" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVCCLS_DESC" Title="Description" Width="1087" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVALRT_LOV" Title="Alert Codes (ATVALRT)" Width="319" Height="226" RecordGroup="ATVALRT_RG">
+    <Columns>
+      <Column DataMember="ATVALRT_CODE" Title="Alert Code" Width="86" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVALRT_DESC" Title="Alert Code Description" Width="548" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVACAT_LOV" Title="Alert Category Codes (ATVACAT)" Width="319" Height="226" RecordGroup="ATVACAT_RG">
+    <Columns>
+      <Column DataMember="ATVACAT_CODE" Title="Alert Category Code" Width="133" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVACAT_DESC" Title="Alert Category Description" Width="548" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVIGRP_LOV" Title="Interest Group Validation Codes (ATVIGRP)" Width="319" Height="226" RecordGroup="ATVIGRP_RG">
+    <Columns>
+      <Column DataMember="ATVIGRP_CODE" Title="Code" Width="88" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVIGRP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVIGRP_DISP_WEB_IND" Title="Web" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVIGRP_USER" Title="User" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVVIPC_LOV" Title="Variable Purpose Validation Codes (ATVVIPC)" Width="0" Height="0" RecordGroup="ATVVIPC_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVVIPC_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVVIPC_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMEDU_LOV" Title="Educational Institution Type Codes (ATVMEDU)" Width="0" Height="0" RecordGroup="ATVMEDU_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMEDU_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMEDU_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVUSRC_LOV" Title="User Defined Code Validation (ATVUSRC)" Width="0" Height="0" RecordGroup="ATVUSRC_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVUSRC_CODE" Title="Code" Width="168" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVUSRC_DESC" Title="Description" Width="327" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSTFT_LOV" Title="Staff Assignment Type Validation Codes (ATVSTFT)" Width="0" Height="0" RecordGroup="ATVSTFT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSTFT_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSTFT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVSTFT_SOLICIT_IND" Title="Solicitation Ind" Width="128" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSRCE_LOV" Title="Payment Source Validation Codes (ATVSRCE)" Width="0" Height="0" RecordGroup="ATVSRCE_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSRCE_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSRCE_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVSRCE_GIFT_CODE" Title="Gift Code" Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVSRCE_GCLS_CODE" Title="Class  " Width="40" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSOTP_LOV" Title="Solicitor Org Type Validation Codes (ATVSOTP)" Width="0" Height="0" RecordGroup="ATVSOTP_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSOTP_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSOTP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSORC_LOV" Title="Source Code Validation (ATVSORC)" Width="0" Height="0" RecordGroup="ATVSORC_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSORC_CODE" Title="Code" Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSORC_DESC" Title="Description" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSOLT_LOV" Title="Solicitor Type Validation Codes (ATVSOLT)" Width="0" Height="0" RecordGroup="ATVSOLT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSOLT_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSOLT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSOLC_LOV" Title="Solicitation Type Code Validation (ATVSOLC)" Width="0" Height="0" RecordGroup="ATVSOLC_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSOLC_CODE" Title="Code" Width="213" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSOLC_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSICC_LOV" Title="Standard Industrial Code Validation (ATVSICC)" Width="0" Height="0" RecordGroup="ATVSICC_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSICC_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSICC_DESC" Title="Description" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVSICC_DISP_WEB_IND" Title="Web" Width="40" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSCRS_LOV" Title="Solicitor Contact Result Code Validation (ATVSCRS)" Width="0" Height="0" RecordGroup="ATVSCRS_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSCRS_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSCRS_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVSCRS_SOLICITATION_IND" Title="Solicitation Ind" Width="128" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVSCRS_DISP_WEB_IND" Title="Web" Width="40" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSCNT_LOV" Title="Solicitor Contact Code Validation (ATVSCNT)" Width="0" Height="0" RecordGroup="ATVSCNT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSCNT_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSCNT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVSCNT_DISP_WEB_IND" Title="Web" Width="40" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSALU_LOV" Title="Salutation Type Validation Codes (ATVSALU)" Width="0" Height="0" RecordGroup="ATVSALU_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSALU_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSALU_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVSALU_DEFAULT_IND" Title="Default Ind" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVRTGT_LOV" Title="Rating Type Validation Codes (ATVRTGT)" Width="0" Height="0" RecordGroup="ATVRTGT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVRTGT_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVRTGT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVRSTA_LOV" Title="Receipt Status Code Validation (ATVRSTA)" Width="0" Height="0" RecordGroup="ATVRSTA_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVRSTA_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVRSTA_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVRSCR_LOV" Title="Ratings Screen Code Validation (ATVRSCR)" Width="0" Height="0" RecordGroup="ATVRSCR_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVRSCR_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVRSCR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVREFR_LOV" Title="Reference Code Validation (ATVREFR)" Width="0" Height="0" RecordGroup="ATVREFR_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVREFR_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVREFR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVRATE_LOV" Title="Rating Code Validation (ATVRATE)" Width="0" Height="0" RecordGroup="ATVRATE_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVRATE_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVRATE_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVRATE_RATE_AMT" Title="Rate Amt" Width="64" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPSTA_LOV" Title="Pledge Status Code Validation (ATVPSTA)" Width="0" Height="0" RecordGroup="ATVPSTA_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPSTA_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPSTA_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPSTA_ACTIVE_IND" Title="Active Ind" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPSTA_CHG_ACTIVE" Title="Change Active" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPRTP_LOV" Title="Special Purpose Type Validation Codes (ATVPRTP)" Width="0" Height="0" RecordGroup="ATVPRTP_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPRTP_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPRTP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPRST_LOV" Title="Prospect/Project Status Code Validation (ATVPRST)" Width="0" Height="0" RecordGroup="ATVPRST_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPRST_CODE" Title="Code" Width="80" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPRST_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPRST_ACTIVE_IND" Title="Active Ind" Width="80" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPROJ_LOV" Title="Project/Interest Code Validation (ATVPROJ)" Width="0" Height="0" RecordGroup="ATVPROJ_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPROJ_CODE" Title="Code" Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPROJ_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPRMD_LOV" Title="Pledge Reminder Code Validation (ATVPRMD)" Width="0" Height="0" RecordGroup="ATVPRMD_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPRMD_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPRMD_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPRMD_LETTER_TYPE" Title="Letter Type" Width="88" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPRCD_LOV" Title="Special Purpose Code Validation (ATVPRCD)" Width="0" Height="0" RecordGroup="ATVPRCD_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPRCD_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPRCD_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPDUR_LOV" Title="Duration Validation Codes (ATVPDUR)" Width="0" Height="0" RecordGroup="ATVPDUR_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPDUR_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPDUR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPDUR_MONTHS" Title="Months" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPDUR_DISP_WEB_IND" Title="Web" Width="40" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPLDG_LOV" Title="Pledge Type Validation Code (ATVPLDG)" Width="319" Height="226" RecordGroup="ATVPLDG_RG">
+    <Columns>
+      <Column DataMember="ATVPLDG_CODE" Title="Code" Width="24" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPLDG_DESC" Title="Desc" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPLDG_PAYROLL_DED_IND" Title="Payroll Ded Ind" Width="120" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPLDG_PAY_DED_CODE" Title="Payroll Ded Code" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPLDG_CFAE_PLDG_CATG" Title="VSE Pldg Catg" Width="112" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPLDG_RUCL_CODE" Title="Rucl Code" Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPLDG_DB_GL_ACCT" Title="Db Gl Acct" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPLDG_DISP_WEB_IND" Title="Web" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPLDG_PLANNED_GIFT_IND" Title="Planned Gift" Width="90" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPLDG_FEED_TO_FINANCE_IND" Title="Finance Feed" Width="90" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPCLS_LOV" Title="Pledge Classification Code Validation (ATVPCLS)" Width="0" Height="0" RecordGroup="ATVPCLS_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPCLS_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPCLS_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPCLS_ANONYMOUS_IND" Title="Anonymous Ind" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPACK_LOV" Title="Pledge Range Code Validation (ATVPACK)" Width="0" Height="0" RecordGroup="ATVPACK_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPACK_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPACK_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPACK_LOW_LEVEL" Title="Low Level" Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPACK_HIGH_LEVEL" Title="High Level" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVOCON_LOV" Title="Organization Contact Type Validation Codes (ATVOCON)" Width="0" Height="0" RecordGroup="ATVOCON_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVOCON_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVOCON_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMPUR_LOV" Title="Matching Gift Related Purpose Validation Codes (ATVMPUR)" Width="0" Height="0" RecordGroup="ATVMPUR_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMPUR_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMPUR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMPRO_LOV" Title="Matching Gift Procedure Validation Codes (ATVMPRO)" Width="0" Height="0" RecordGroup="ATVMPRO_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMPRO_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMPRO_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMOVE_LOV" Title="Move Type Code Validation (ATVMOVE)" Width="0" Height="0" RecordGroup="ATVMOVE_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMOVE_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMOVE_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMNED_LOV" Title="Matching Gift Non-Educational Code Validation (ATVMNED)" Width="0" Height="0" RecordGroup="ATVMNED_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMNED_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMNED_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMNAT_LOV" Title="Matching Gift National Association Validation Codes (ATVMNAT)" Width="0" Height="0" RecordGroup="ATVMNAT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMNAT_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMNAT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMLVL_LOV" Title="Matching Gift Institution Level Validation Codes (ATVMLVL)" Width="0" Height="0" RecordGroup="ATVMLVL_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMLVL_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMLVL_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMLOC_LOV" Title="Matching Gift Institution Location Validation Codes (ATVMLOC)" Width="0" Height="0" RecordGroup="ATVMLOC_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMLOC_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMLOC_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMIND_LOV" Title="Matching Gift Industry Type Validation Codes (ATVMIND)" Width="0" Height="0" RecordGroup="ATVMIND_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMIND_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMIND_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMERQ_LOV" Title="Matching Gift Employment Requirements Validation Codes (ATVMERQ)" Width="0" Height="0" RecordGroup="ATVMERQ_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMERQ_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMERQ_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMDIS_LOV" Title="Matching Gift Distribution Frequency Validation Codes (ATVMDIS)" Width="0" Height="0" RecordGroup="ATVMDIS_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMDIS_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMDIS_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMDEF_LOV" Title="Matching Gift Deferred Gift Validation Codes (ATVMDEF)" Width="0" Height="0" RecordGroup="ATVMDEF_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMDEF_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMDEF_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMCTL_LOV" Title="Matching Gift Institution Control Validation Codes (ATVMCTL)" Width="0" Height="0" RecordGroup="ATVMCTL_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMCTL_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMCTL_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMAST_LOV" Title="Matching Gift Alumni Status Validation Codes (ATVMAST)" Width="0" Height="0" RecordGroup="ATVMAST_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMAST_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMAST_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVMACC_LOV" Title="Matching Gift Institution Accreditation Validation Codes (ATVMACC)" Width="0" Height="0" RecordGroup="ATVMACC_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVMACC_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVMACC_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVJOBC_LOV" Title="Job Category Code Validation (ATVJOBC)" Width="0" Height="0" RecordGroup="ATVJOBC_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVJOBC_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVJOBC_DESC" Title="Description" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVJOBC_DISP_WEB_IND" Title="Web" Width="40" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVINCM_LOV" Title="Income Code Validation (ATVINCM)" Width="0" Height="0" RecordGroup="ATVINCM_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVINCM_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVINCM_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVGIVL_LOV" Title="Giving Level Code Validation (ATVGIVL)" Width="0" Height="0" RecordGroup="ATVGIVL_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVGIVL_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVGIVL_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIVL_LOW_RANGE" Title="Low Range" Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIVL_HIGH_RANGE" Title="High Range" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIVL_REPORT_CODE" Title="Report Code" Width="88" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVGIVH_LOV" Title="Giving Vehicle Code Validation (ATVGIVH)" Width="0" Height="0" RecordGroup="ATVGIVH_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVGIVH_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVGIVH_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVGIFT_LOV" Title="Gift/Payment Type Validation Codes (ATVGIFT)" Width="0" Height="0" RecordGroup="ATVGIFT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVGIFT_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVGIFT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIFT_CREDIT_CARD_IND" Title="Credit Card Ind" Width="120" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIFT_MATCH_IND" Title="Match Ind" Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIFT_CFAE_GIFT_CATG" Title="VSE" Width="32" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIFT_GIFT_GROUP" Title="Gift Group" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIFT_GIFT_GROUP_DESC" Title="Gift Group Desc" Width="120" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIFT_RUCL_CODE" Title="Rucl Code" Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIFT_DB_GL_ACCT" Title="Db Gl Acct" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIFT_PLANNED_GIFT_IND" Title="Planned Gift" Width="90" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIFT_DISP_WEB_IND" Title="Web" Width="90" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGIFT_FEED_TO_FINANCE_IND" Title="Finance Feed" Width="90" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVGCLS_LOV" Title="Gift Classification Code Validation (ATVGCLS)" Width="0" Height="0" RecordGroup="ATVGCLS_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVGCLS_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVGCLS_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGCLS_ANONYMOUS_IND" Title="Anonymous Ind" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVGACK_LOV" Title="Gift Range Code Validation (ATVGACK)" Width="0" Height="0" RecordGroup="ATVGACK_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVGACK_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVGACK_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGACK_LOW_LEVEL" Title="Low Level" Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVGACK_HIGH_LEVEL" Title="High Level" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVFUND_LOV" Title="Funding Code Areas Validation (ATVFUND)" Width="0" Height="0" RecordGroup="ATVFUND_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVFUND_CODE" Title="Code" Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVFUND_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVFREQ_LOV" Title="Frequency Code Validation (ATVFREQ)" Width="0" Height="0" RecordGroup="ATVFREQ_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVFREQ_CODE" Title="Code" Width="24" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVFREQ_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVFREQ_UNITS" Title="Units" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVFREQ_NO_OF_UNITS" Title="No Of Units" Width="88" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVFREQ_DISP_WEB_IND" Title="Disp Web Ind" Width="16" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVFISC_LOV" Title="Fiscal Year Validation Codes (ATVFISC)" Width="0" Height="0" RecordGroup="ATVFISC_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVFISC_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVFISC_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="START_DATE" Title="Start Date" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="END_DATE" Title="End Date" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVEXRS_LOV" Title="External Ratings Code Validation (ATVEXRS)" Width="0" Height="0" RecordGroup="ATVEXRS_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVEXRS_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVEXRS_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVEXCL_LOV" Title="Exclusion Code Validation (ATVEXCL)" Width="0" Height="0" RecordGroup="ATVEXCL_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVEXCL_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVEXCL_DESC" Title="Desc" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVEXCL_EXCLUDE_PHONE" Title="Exclude Phone" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVEXCL_EXCLUDE_MAIL" Title="Exclude Mail" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVEMPS_LOV" Title="Employment Status Validation Codes (ATVEMPS)" Width="0" Height="0" RecordGroup="ATVEMPS_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVEMPS_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVEMPS_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVEMPS_ACTIVE_IND" Title="Active Ind" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVEMPS_MERQ_CODE" Title="Merq Code" Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVEMPS_DISP_WEB_IND" Title="Disp Web Ind" Width="16" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDSTP_LOV" Title="Designation Type Validation Codes (ATVDSTP)" Width="0" Height="0" RecordGroup="ATVDSTP_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVDSTP_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVDSTP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDOTT_LOV" Title="DOTT Code Validation (ATVDOTT)" Width="0" Height="0" RecordGroup="ATVDOTT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVDOTT_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVDOTT_DESC" Title="Description" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDONR_LOV" Title="Donor Category Code Validation (ATVDONR)" Width="0" Height="0" RecordGroup="ATVDONR_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVDONR_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVDONR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDONR_ALUM_IND" Title="Alum Ind" Width="64" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDONR_FRND_IND" Title="Friend Ind" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDONR_SPOUSE_ONLY_IND" Title="Spouse Ind" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDONR_CFAE_1" Title="VSE_1" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDONR_CFAE_2" Title="VSE_2" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDONR_RPT_SEQ_IND" Title="Rpt Seq Ind" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDONR_SITE_SEQ_IND" Title="Site Seq Ind" Width="90" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDCYR_LOV" Title="Gift Society Year Validation Codes (ATVDCYR)" Width="0" Height="0" RecordGroup="ATVDCYR_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVDCYR_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVDCYR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="START_DATE" Title="Start Date" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="END_DATE" Title="End Date" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDCST_LOV" Title="Gift Society Type Validation Codes (ATVDCST)" Width="0" Height="0" RecordGroup="ATVDCST_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVDCST_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVDCST_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDCST_PRI_IND" Title="Priority Ind" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDCPR_LOV" Title="Benefits/Premiums Validation Codes (ATVDCPR)" Width="0" Height="0" RecordGroup="ATVDCPR_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVDCPR_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVDCPR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDCPR_VALUE" Title="Value" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDCPR_COST" Title="Cost" Width="40" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDCNP_LOV" Title="Gift Society Validation Codes (ATVDCNP)" Width="0" Height="0" RecordGroup="ATVDCNP_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVDCNP_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVDCNP_DESC" Title="Description" Width="266" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDCNP_PRIORITY_IND" Title="Priority Ind" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDCNP_DELETE_IND" Title="Delete Ind" Width="88" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity  Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDCNP_DCST_CODE" Title="Society Type" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDCNP_MANL_ENTRY_IND" Title="Manl Entry Ind" Width="112" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDCNP_DCYR_CODE" Title="Dcyr Code" Width="72" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDCAM_LOV" Title="Assignment Validation Codes (ATVDCAM)" Width="0" Height="0" RecordGroup="ATVDCAM_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVDCAM_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVDCAM_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDCAM_MAN_SYS_IND" Title="Man Sys Ind" Width="88" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVCONT_LOV" Title="Solicitor Contact Types Validation Codes (ATVCONT)" Width="0" Height="0" RecordGroup="ATVCONT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVCONT_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVCONT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVCMTP_LOV" Title="Campaign Type Validation Codes (ATVCMTP)" Width="0" Height="0" RecordGroup="ATVCMTP_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVCMTP_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVCMTP_DESC" Title="Descripton" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVCMTP_CAPITAL_IND" Title="Capital Ind" Width="88" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVCFAE_LOV" Title="VSE Code Validation (ATVVSER)" Width="0" Height="0" RecordGroup="ATVCFAE_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVCFAE_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVCFAE_TYPE" Title="Type" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVCFAE_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVCFAE_MG_PURPOSE" Title="MG Purpose" Width="80" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVAUXL_LOV" Title="Auxiliary Code Validation (ATVAUXL)" Width="0" Height="0" RecordGroup="ATVAUXL_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVAUXL_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVAUXL_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVAUXL_DCPR_CODE" Title="Premium Code" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVAUXL_DONR_IND" Title="Donr Ind" Width="64" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVAUXL_CLAS_IND" Title="Class Ind" Width="72" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVASSC_LOV" Title="Associated Type Code Validation (ATVASSC)" Width="0" Height="0" RecordGroup="ATVASSC_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVASSC_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVASSC_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVAMTP_LOV" Title="Membership Program Type Code Validation (ATVAMTP)" Width="0" Height="0" RecordGroup="ATVAMTP_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVAMTP_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVAMTP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVAMST_LOV" Title="Membership Status Code Validation (ATVAMST)" Width="0" Height="0" RecordGroup="ATVAMST_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVAMST_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVAMST_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVAMST_ACTIVE_IND" Title="Active Ind" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVAMST_GRACE_IND" Title="Grace Ind" Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVAMST_EXPIRED_IND" Title="Expired Ind" Width="88" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVAMPM_LOV" Title="Membership Promotion Code Validation (ATVAMPM)" Width="0" Height="0" RecordGroup="ATVAMPM_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVAMPM_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVAMPM_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVAMIN_LOV" Title="Interest Type Code Validation (ATVAMIN)" Width="0" Height="0" RecordGroup="ATVAMIN_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVAMIN_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVAMIN_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVAMGP_LOV" Title="Interest Group Code Validation (ATVAMGP)" Width="0" Height="0" RecordGroup="ATVAMGP_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVAMGP_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVAMGP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVAMCT_LOV" Title="Membership Category Code Validation (ATVAMCT)" Width="0" Height="0" RecordGroup="ATVAMCT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVAMCT_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVAMCT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVAMCT_LIFETIME_IND" Title="Lifetime Ind" Width="96" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVADJT_LOV" Title="Designation Adjustment Type Validation Codes (ATVADJT)" Width="0" Height="0" RecordGroup="ATVADJT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVADJT_CODE" Title=" Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVADJT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVADJT_DEBIT_CREDIT_IND" Title="Debit Credit Ind" Width="128" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVCTYP_LOV" Title="Condition Type Code Validation (ATVCTYP)" Width="0" Height="0" RecordGroup="ATVCTYP_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVCTYP_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVCTYP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVCTYP_USER" Title="User" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPCAT_LOV" Title="Pledge Category Code Validation (ATVPCAT)" Width="0" Height="0" RecordGroup="ATVPCAT_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPCAT_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPCAT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPCAT_COND_IND" Title="Conditional Ind" Width="120" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPCAT_USER" Title="User" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDGRP_LOV" Title="Designation Group Code Validation (ATVDGRP)" Width="80" Height="226" RecordGroup="ATVDGRP_RG">
+    <Columns>
+      <Column DataMember="ATVDGRP_CODE" Title="Code" Width="56" ReturnItem="global.value">
+      </Column>
+      <Column DataMember="ATVDGRP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDGRP_USER" Title="User" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDITP_LOV" Title="Designation ID Type Code Validation (ATVDITP)" Width="80" Height="226" RecordGroup="ATVDITP_RG">
+    <Columns>
+      <Column DataMember="ATVDITP_CODE" Title="Code" Width="48" ReturnItem="global.value">
+      </Column>
+      <Column DataMember="ATVDITP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDITP_USER" Title="User" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDIST_LOV" Title="Designation ID Status Code Validation (ATVDIST)" Width="80" Height="226" RecordGroup="ATVDIST_RG">
+    <Columns>
+      <Column DataMember="ATVDIST_CODE" Title="Code" Width="40" ReturnItem="global.value">
+      </Column>
+      <Column DataMember="ATVDIST_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDIST_ACTIVE_IND" Title="Active Indicator" Width="136" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDIST_USER" Title="User" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDSTA_LOV" Title="Designation Status Code Validation (ATVDSTA)" Width="80" Height="226" RecordGroup="ATVDSTA_RG">
+    <Columns>
+      <Column DataMember="ATVDSTA_CODE" Title="Code" Width="40" ReturnItem="global.value">
+      </Column>
+      <Column DataMember="ATVDSTA_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDSTA_ACTIVE_IND" Title="Active Indicator" Width="136" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDSTA_USER" Title="User" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDATR_LOV" Title="Designation Attribute Code Validation (ATVDATR)" Width="80" Height="226" RecordGroup="ATVDATR_RG">
+    <Columns>
+      <Column DataMember="ATVDATR_CODE" Title="Code" Width="48" ReturnItem="global.value">
+      </Column>
+      <Column DataMember="ATVDATR_DESC" Title="Description" Width="479" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDATR_USER" Title="User" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPROP_LOV" Title="Proposal Codes Validation (ATVPROP)" Width="0" Height="0" RecordGroup="ATVPROP_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPROP_CODE" Title="Code" Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVPROP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPROP_USER" Title="User" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVPGVE_LOV" Title="Pledge / Gift Vehicle Code Validation (ATVPGVE)" Width="160" Height="226" RecordGroup="ATVPGVE_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVPGVE_CODE" Title="Code" Width="48" ReturnItem="Global.value">
+      </Column>
+      <Column DataMember="ATVPGVE_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPGVE_3PP_IND" Title="3rd Party Payment" Width="136" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPGVE_USER" Title="User" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVSSTA_LOV" Title="Solicitor/Organization Status Code Validation (ATVSSTA)" Width="0" Height="0" RecordGroup="ATVSSTA_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVSSTA_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSSTA_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVSSTA_ACTIVE_IND" Title="Active" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVSSTA_USER" Title="User" Width="239" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVXREF_LOV" Title="Cross Reference Validation (ATVXREF)" Width="0" Height="0" RecordGroup="ATVXREF_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVXREF_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVXREF_DESC" Title="Description" Width="221" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVXREF_REVERSE_XREF" Title="Reverse" Width="56" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVXREF_SPOUSE_IND" Title="Spouse" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVXREF_EMPLOYER_IND" Title="Emr" Width="24" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVXREF_MATCH_GIFT_IND" Title="Match" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVXREF_HOUSEHOLD_IND" Title="Household" Width="66" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVXREF_ASSOC_PLEDGE_IND" Title="AsocPldg" Width="56" ReturnItem="">
+      </Column>
+      <Column DataMember="AGBSPRL_XREF_PRIORITY" Title="Split" Width="33" ReturnItem="">
+      </Column>
+      <Column DataMember="AGBSPRL_MULT_MEM_IND" Title="HardOrSoft" Width="60" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="90" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDOSR_LOV" Title="Advancement Officer Search Options (ATVDOSR)" Width="0" Height="0" RecordGroup="ATVDOSR_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="ATVDOSR_CODE" Title="Code" Width="98" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVDOSR_DESC" Title="Description" Width="278" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDOSR_TITLE" Title="Display Title" Width="548" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDOSR_DISPLAY_IND" Title="Display Indicator" Width="19" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDOSR_DFLT_DISP_SEQNO" Title="Default Display Sequence" Width="215" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDOSR_USER_ID" Title="User" Width="278" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDOSR_ACTIVITY_DATE" Title="Activity Date" Width="108" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDOSR_DATA_ORIGIN" Title="Data Origin" Width="278" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ADBDESG_LOV" Title="Designations" Width="80" Height="226" RecordGroup="ADBDESG_RG">
+    <Columns>
+      <Column DataMember="ADBDESG_DESG" Title="Designation" Width="104" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ADBDESG_NAME" Title="Name" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ADBDESG_DSTA_CODE" Title="Status" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="ADBDESG_DSTP_CODE" Title="Type" Width="32" ReturnItem="">
+      </Column>
+      <Column DataMember="ADBDESG_RESTR_IND" Title="Restrict" Width="64" ReturnItem="">
+      </Column>
+      <Column DataMember="ADBDESG_COLL_CODE" Title="College" Width="56" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AFBCAMP_LOV" Title="Campaigns" Width="80" Height="226" RecordGroup="AFBCAMP_RG">
+    <Columns>
+      <Column DataMember="AFBCAMP_CAMPAIGN" Title="Campaign" Width="80" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="AFBCAMP_NAME" Title="Name" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AFRCORG_LOV" Title="Campaign Solicitor Organizations" Width="479" Height="226" RecordGroup="AFRCORG_RG">
+    <Columns>
+      <Column DataMember="AFRCORG_SOL_ORG" Title="Organization" Width="104" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ASBSORG_NAME" Title="Name" Width="239" ReturnItem="">
+      </Column>
+      <Column DataMember="AFRCORG_GOAL" Title="Goal" Width="40" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AFRCSLT_LOV_OLD" Title="Solicitor List" Width="479" Height="226" RecordGroup="AFRCSLT_RG_OLD">
+    <Columns>
+      <Column DataMember="SPRIDEN_ID" Title="ID" Width="80" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="SPRIDEN_LAST_NAME" Title="Last Name" Width="160" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRIDEN_FIRST_NAME" Title="First Name" Width="128" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRIDEN_MI" Title="MI" Width="128" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AFRCSLT_LOV" Title="Solicitors for Camp/Type/Sol Org" Width="319" Height="226" RecordGroup="AFRCSLT_RG">
+    <Columns>
+      <Column DataMember="SPRIDEN_ID" Title="ID" Width="80" ReturnItem="global.value">
+      </Column>
+      <Column DataMember="SPRIDEN_NAME" Title="Name" Width="750" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AFRCSOL_LOV" Title="Solicitation Types for Campaign" Width="319" Height="226" RecordGroup="AFRCSOL_RG">
+    <Columns>
+      <Column DataMember="AFRCSOL_SOLC_CODE" Title="Solicitation Type" Width="213" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVSOLC_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AFRCTYP_LOV" Title="Solicitors for Contact" Width="622" Height="226" RecordGroup="AFRCTYP_RG">
+    <Columns>
+      <Column DataMember="AFRCTYP_CAMPAIGN" Title="Camp" Width="48" ReturnItem="GLOBAL.CAMPAIGN">
+      </Column>
+      <Column DataMember="AFRCTYP_SOLC_CODE" Title="Solc Type" Width="213" ReturnItem="GLOBAL.SOLICITATION_TYPE">
+      </Column>
+      <Column DataMember="AFRCTYP_SOL_ORG" Title="Org" Width="48" ReturnItem="GLOBAL.ORGANIZATION">
+      </Column>
+      <Column DataMember="AFRCTYP_DCYR_CODE" FormatMask="9999" Title="Year" Width="40" ReturnItem="GLOBAL.DCYR_CODE">
+      </Column>
+      <Column DataMember="SOLICITOR_NAME" Title="Solicitor Name" Width="207" ReturnItem="">
+      </Column>
+      <Column DataMember="SOLICITOR_ID" Title="" Width="0" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="AFRCTYP_CONSTITUENT_PIDM" Title="" Width="0" ReturnItem="GLOBAL.PIDM">
+      </Column>
+      <Column DataMember="CREDIT_NAME" Title="Credit Name" Width="200" ReturnItem="GLOBAL.CREDIT_NAME">
+      </Column>
+      <Column DataMember="CREDIT_ID" Title="" Width="0" ReturnItem="GLOBAL.CREDIT_ID">
+      </Column>
+      <Column DataMember="AFRCTYP_SEQ_NO" Title="" Width="0" ReturnItem="GLOBAL.SEQ_NO">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AGBPLDG_LOV" Title="ID's Pledge Numbers" Width="80" Height="226" RecordGroup="AGBPLDG_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="AGBPLDG_PLEDGE_NO" Title="Pledge #" Width="64" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PDATE" Title="Pledge Date" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="AGBPLDG_PCAT_CODE" Title="Pledge Category" Width="120" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVPCAT_DESC" Title="Category Description" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AMBPROP_LOV" Title="Prospect's Proposals" Width="399" Height="226" RecordGroup="AMBPROP_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="AMBPROP_PROP_CODE" Title="Proposal" Width="64" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="AMBPROP_PROP_SEQ_NO" Title="Sequence" Width="64" ReturnItem="GLOBAL.PROPOSAL_SEQ_NO">
+      </Column>
+      <Column DataMember="ATVPROP_DESC" Title="Description" Width="200" ReturnItem="">
+      </Column>
+      <Column DataMember="AMBPROP_ASK_AMOUNT" Title="Amount" Width="90" ReturnItem="">
+      </Column>
+      <Column DataMember="DUE_DATE" Title="Due Date" Width="96" ReturnItem="">
+      </Column>
+      <Column DataMember="AMBPROP_PRST_CODE" Title="Status" Width="90" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="APRCATG_LOV" Title="Donor Categories" Width="575" Height="267" RecordGroup="APRCATG_RG">
+    <Columns>
+      <Column DataMember="APRCATG_DONR_CODE" Title="Code" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDONR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="APRCATG_SPS_LOV" Title="Spouse Donor Categories" Width="80" Height="226" RecordGroup="APRCATG_SPS_RG">
+    <Columns>
+      <Column DataMember="APRCATG_DONR_CODE" Title="Code" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="ATVDONR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="APRDHIS_LOV" Title="Designations" Width="0" Height="226" RecordGroup="APRDHIS_RG" AutoSelect="true">
+    <Columns>
+      <Column DataMember="APRDHIS_DESG" Title="Designation" Width="88" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ADBDESG_NAME" Title="Description" Width="487" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ASCCSLT_LOV" Title="Solicitors" Width="80" Height="226" RecordGroup="ASCCSLT_RG">
+    <Columns>
+      <Column DataMember="SPRIDEN_ID" Title="ID" Width="80" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NAME" Title="Solicitor Name" Width="487" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ASCSORG_LOV" Title="Solicitor Organizations" Width="80" Height="226" RecordGroup="ASCSORG_RG">
+    <Columns>
+      <Column DataMember="ASBSORG_SOL_ORG" Title="Org" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ASBSORG_NAME" Title="Name" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ASBSORG_SOTP_CODE" Title="Type" Width="32" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ASRSOAG_LOV" Title="Goal Years for Solicitor Organizations" Width="80" Height="226" RecordGroup="ASRSOAG_RG">
+    <Columns>
+      <Column DataMember="ASRSOAG_DCYR_CODE" FormatMask="9999" Title="Year" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVDCYR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ASRSSAG_LOV" Title="Solicitors for an Organization/Year" Width="80" Height="226" RecordGroup="ASRSSAG_RG">
+    <Columns>
+      <Column DataMember="SPRIDEN_ID" Title="ID" Width="80" ReturnItem="GLOBAL.KEY_IDNO">
+      </Column>
+      <Column DataMember="SPRIDEN_NAME" Title="Name" Width="750" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ASRSORG_LOV" Title="Solicitors for an Organization" Width="80" Height="226" RecordGroup="ASRSORG_RG">
+    <Columns>
+      <Column DataMember="SPRIDEN_ID" Title="ID" Width="80" ReturnItem="GLOBAL.KEY_IDNO">
+      </Column>
+      <Column DataMember="SPRIDEN_NAME" Title="Name" Width="734" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="GTVNTYP_LOV" Title="Name Type Validation (GTVNTYP)" Width="0" Height="0" RecordGroup="GTVNTYP_RG">
+    <Columns>
+      <Column DataMember="GTVNTYP_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="GTVNTYP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="CAMP_ORG_SOL_LOV" Title="Solicitors for Campaign/Type/Org" Width="319" Height="226" RecordGroup="CAMP_ORG_SOL_RG">
+    <Columns>
+      <Column DataMember="SPRIDEN_ID" Title="ID" Width="80" ReturnItem="global.value">
+      </Column>
+      <Column DataMember="SPRIDEN_NAME" Title="Name" Width="750" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="TYPE_ORG_SOL_4_CAMP_LOV" Title="Solicitation Selections for Campaign" Width="319" Height="226" RecordGroup="TYPE_ORG_SOL_4_CAMP_RG">
+    <Columns>
+      <Column DataMember="AFRCSLT_SOLC_CODE" Title="Sol Type" Width="213" ReturnItem="GLOBAL.SOLICITATION_TYPE">
+      </Column>
+      <Column DataMember="AFRCSLT_SOL_ORG" Title="Org" Width="48" ReturnItem="global.organization">
+      </Column>
+      <Column DataMember="FULL_NAME" Title="Solicitor Name" Width="750" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRIDEN_ID" Title="Solicitor ID" Width="80" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="SPRIDEN_SURNAME_PREFIX" Title="" Width="0" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRIDEN_LAST_NAME" Title="" Width="0" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="YEAR_SOL_4_ORG_LOV" Title="Solicitation Selections for Organization" Width="319" Height="226" RecordGroup="YEAR_SOL_4_ORG_RG">
+    <Columns>
+      <Column DataMember="ASRSSAG_DCYR_CODE" FormatMask="9999" Title="Year" Width="40" ReturnItem="GLOBAL.DCYR_CODE">
+      </Column>
+      <Column DataMember="SPRIDEN_ID" Title="Solicitor ID" Width="80" ReturnItem="global.value">
+      </Column>
+      <Column DataMember="FULL_NAME" Title="Solicitor Name" Width="750" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRIDEN_SURNAME_PREFIX" Title="" Width="0" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRIDEN_LAST_NAME" Title="" Width="0" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ORG_YR_SOL_LOV" Title="Solicitors for Organization/Year" Width="80" Height="226" RecordGroup="ORG_YR_SOL_RG">
+    <Columns>
+      <Column DataMember="SPRIDEN_ID" Title="ID" Width="80" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="SPRIDEN_NAME" Title="Last Name" Width="742" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="APPLICATION_LOV" Title="Population Selection Applications" Width="319" Height="226" RecordGroup="POP_SEL_RG">
+    <Columns>
+      <Column DataMember="GLVSLCT_APPLICATION" Title="Application" Width="160" ReturnItem="GLOBAL.APPL_CODE">
+      </Column>
+      <Column DataMember="GLVSLCT_SELECTION" Title="Selection" Width="160" ReturnItem="GLOBAL.SLCT_CODE">
+      </Column>
+      <Column DataMember="GLVSLCT_CREATOR_ID" Title="Creator ID" Width="160" ReturnItem="GLOBAL.CREATOR_ID">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="SELECTION_LOV" Title="Population Selections" Width="319" Height="226" RecordGroup="POP_SEL_RG">
+    <Columns>
+      <Column DataMember="GLVSLCT_APPLICATION" Title="" Width="0" ReturnItem="">
+      </Column>
+      <Column DataMember="GLVSLCT_SELECTION" Title="Selection" Width="160" ReturnItem="GLOBAL.SLCT_CODE">
+      </Column>
+      <Column DataMember="GLVSLCT_CREATOR_ID" Title="Creator ID" Width="160" ReturnItem="GLOBAL.CREATOR_ID">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVDNAM_LOV" Title="Default Name for the User" Width="80" Height="226" RecordGroup="ATVDNAM_RG">
+    <Columns>
+      <Column DataMember="ATVDNAM_CODE" Title="Code" Width="88" ReturnItem="global.value">
+      </Column>
+      <Column DataMember="ATVDNAM_DESC" Title="Description" Width="120" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="88" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AGBPDEF_LOV" Title="Campaign Designation Default" Width="80" Height="226" RecordGroup="AGBPDEF_RG">
+    <Columns>
+      <Column DataMember="AGBPDEF_DNAM_CODE" Title="Code" Width="88" ReturnItem="global.value">
+      </Column>
+      <Column DataMember="ATVDNAM_DESC" Title="Description" Width="120" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="88" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ATVRCAT_LOV" Title="Connector Review Category (ATVRCAT)" Width="359" Height="180" RecordGroup="ATVRCAT_RG">
+    <Columns>
+      <Column DataMember="ATVRCAT_CODE" Title="Code" Width="278" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ATVRCAT_DESC" Title="Description" Width="548" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+</Lovs>

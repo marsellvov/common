@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPBPERS.Manager.Config" name="SPBPERS">
+		
+		<items>
+			<item name="PERS_SEX" logicalName="persSex" type="String"  virtual="true" >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="SPBPERS_BIRTH_DATE" logicalName="spbpersBirthDate" type="java.util.Date" physicalName="SPBPERS_BIRTH_DATE"  />
+			<item name="SPBPERS_SSN" logicalName="spbpersSsn" type="String" physicalName="SPBPERS_SSN"  />
+			<item name="PERS_AGE" logicalName="persAge" type="java.math.BigDecimal"  virtual="true" />
+			<item name="SPBPERS_CONFID_IND" logicalName="spbpersConfidInd" type="String" physicalName="SPBPERS_CONFID_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="SPBPERS_DEAD_IND" logicalName="spbpersDeadInd" type="String" physicalName="SPBPERS_DEAD_IND"  />
+			<item name="SPBPERS_DEAD_DATE" logicalName="spbpersDeadDate" type="java.util.Date" physicalName="SPBPERS_DEAD_DATE"  />
+			<item name="SPBPERS_CITZ_CODE" logicalName="spbpersCitzCode" type="String" physicalName="SPBPERS_CITZ_CODE"  />
+			<item name="CITZ_DESC" logicalName="citzDesc" type="String"  virtual="true" />
+			<item name="SPBPERS_MRTL_CODE" logicalName="spbpersMrtlCode" type="String" physicalName="SPBPERS_MRTL_CODE"  />
+			<item name="MRTL_DESCRIPTION" logicalName="mrtlDescription" type="String"  virtual="true" />
+			<item name="SPBPERS_RELG_CODE" logicalName="spbpersRelgCode" type="String" physicalName="SPBPERS_RELG_CODE"  />
+			<item name="RELG_DESCRIPTION" logicalName="relgDescription" type="String"  virtual="true" />
+			<item name="SPBPERS_LGCY_CODE" logicalName="spbpersLgcyCode" type="String" physicalName="SPBPERS_LGCY_CODE"  />
+			<item name="LGCY_DESCRIPTION" logicalName="lgcyDescription" type="String"  virtual="true" />
+			<item name="SPBPERS_ETHN_CODE" logicalName="spbpersEthnCode" type="String" physicalName="SPBPERS_ETHN_CODE"  />
+			<item name="ETHN_DESCRIPTION" logicalName="ethnDescription" type="String"  virtual="true" />
+			<item name="SPBPERS_ETHN_CDE" logicalName="spbpersEthnCde" type="String" physicalName="SPBPERS_ETHN_CDE"  />
+			<item name="SPBPERS_CONFIRMED_RE_CDE" logicalName="spbpersConfirmedReCde" type="String" physicalName="SPBPERS_CONFIRMED_RE_CDE"  />
+			<item name="SPBPERS_CONFIRMED_RE_DATE" logicalName="spbpersConfirmedReDate" type="java.util.Date" physicalName="SPBPERS_CONFIRMED_RE_DATE"  />
+			<item name="SPBPERS_VETC_FILE_NUMBER" logicalName="spbpersVetcFileNumber" type="String" physicalName="SPBPERS_VETC_FILE_NUMBER"  />
+			<item name="SPBPERS_VERA_IND" logicalName="spbpersVeraInd" type="String" physicalName="SPBPERS_VERA_IND"  />
+			<item name="SPBPERS_ACTIVE_DUTY_SEPR_DATE" logicalName="spbpersActiveDutySeprDate" type="java.util.Date" physicalName="SPBPERS_ACTIVE_DUTY_SEPR_DATE"  />
+			<item name="SPBPERS_ARMED_SERV_MED_VET_IND" logicalName="spbpersArmedServMedVetInd" type="String" physicalName="SPBPERS_ARMED_SERV_MED_VET_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="SPBPERS_SDVET_IND" logicalName="spbpersSdvetInd" type="String" physicalName="SPBPERS_SDVET_IND"  />
+			<item name="SPBPERS_USER_ID" logicalName="spbpersUserId" type="String" physicalName="SPBPERS_USER_ID"  />
+			<item name="SPBPERS_ACTIVITY_DATE" logicalName="spbpersActivityDate" type="java.util.Date" physicalName="SPBPERS_ACTIVITY_DATE"  />
+			<item name="SPBPERS_PIDM" logicalName="spbpersPidm" type="java.math.BigDecimal" physicalName="SPBPERS_PIDM"  >
+				<value>
+					<item name="PIDM" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="SPBPERS_SEX" logicalName="spbpersSex" type="String" physicalName="SPBPERS_SEX"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="SPBPERS_PREF_FIRST_NAME" logicalName="spbpersPrefFirstName" type="String" physicalName="SPBPERS_PREF_FIRST_NAME"  />
+			<item name="SPBPERS_LEGAL_NAME" logicalName="spbpersLegalName" type="String" physicalName="SPBPERS_LEGAL_NAME"  />
+			<item name="SPBPERS_NAME_PREFIX" logicalName="spbpersNamePrefix" type="String" physicalName="SPBPERS_NAME_PREFIX"  />
+			<item name="SPBPERS_NAME_SUFFIX" logicalName="spbpersNameSuffix" type="String" physicalName="SPBPERS_NAME_SUFFIX"  />
+			<item name="HOLD_CITZ_CODE" logicalName="holdCitzCode" type="String"  virtual="true" />
+			<item name="HOLD_ETHN_CODE" logicalName="holdEthnCode" type="String"  virtual="true" />
+			<item name="HOLD_LGCY_CODE" logicalName="holdLgcyCode" type="String"  virtual="true" />
+			<item name="HOLD_SEX" logicalName="holdSex" type="String"  virtual="true" />
+			<item name="HOLD_WEB_ACCESS_DATE" logicalName="holdWebAccessDate" type="java.util.Date"  virtual="true" />
+			<item name="GREEN_DATA_BAR_1" logicalName="greenDataBar1" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqclib.model.SpbpersAdapter</adapterClass>
+
+	</manager>
+</b:beans>

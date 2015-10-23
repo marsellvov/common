@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+	<b:import resource="classpath:/net/hedtech/general/common/forms/model/MENU_CONTROL.Manager.Config.xml"/>
+
+	
+	<formModel id="BASE.Model.Config" name="BASE">
+		<modelClass>net.hedtech.general.common.forms.model.BaseModel</modelClass>
+		<parameters>
+			<parameter name="G$_PREFERENCES" type="String">			</parameter>
+			<parameter name="STANDALONE" type="String"></parameter>
+		</parameters>
+		<businessObjects>
+			<businessObject name="MENU_CONTROL" manager="MENU_CONTROL.Manager.Config">
+			</businessObject>
+		</businessObjects>
+	</formModel>
+</b:beans>

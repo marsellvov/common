@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GURMENU2"/>
+	<panel style="ui-section" class="StackedCanvas" id="pnlGurmenu2Canvas" menu="G$_DEFAULT_PM" name="GURMENU2_CANVAS" width="100%">
+		<panel width="100%" >
+				<include src="net/hedtech/banner/general/common/Gutpmnu/views/PanelGubobjsCanvas"/>
+			
+		</panel>
+		<panel width="100%" >
+			<framepanel label="gurmenu.gurmenuObjType.prompt" name="grdGubobjs" width="100%">
+			 <gridview block="GUBOBJS" height="475px" width="100%">
+			 	<viewheader>
+					<viewcolumn block="GUBOBJS" case="upper" datatype="String" label="gubobjs.gubobjsName.prompt" labelstyle="DEFAULT" maxlength="30" member="GUBOBJS_NAME" name="gubobjsName" required="true" visible="false" width="50px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+					</viewcolumn>
+					<viewcolumn block="GUBOBJS" datatype="String" label="gubobjs.gubobjsDesc.prompt" labelstyle="DEFAULT" maxlength="80" member="GUBOBJS_DESC" name="gubobjsDesc" required="true" width="90px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+					</viewcolumn>
+				</viewheader>
+			</gridview>
+		</framepanel>
+		</panel>
+	</panel>
+</config>
+
+	
+<!-- 		 <gridview block="GURMENU2" height="502px" width="100%"> -->
+<!-- 					<viewheader> -->
+<!-- 						<viewcolumn autoskip="true" block="GURMENU2" case="upper" datatype="String" label="gurmenu2.gurmenuObjName.prompt" labelstyle="DEFAULT" maxlength="30" member="GURMENU_OBJ_NAME" name="gurmenuObjName" validation="server" width="200px"> -->
+<!-- 							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/> -->
+<!-- 						</viewcolumn> -->
+<!-- 						<viewcolumn block="GURMENU2" datatype="String" label="gurmenu2.displayDesc.prompt" labelstyle="DEFAULT" maxlength="80" member="DISPLAY_DESC" name="displayDesc" validation="server" width="305px"> -->
+<!-- 							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/> -->
+<!-- 						</viewcolumn> -->
+<!-- 					</viewheader> -->
+<!-- 				</gridview>  -->

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alerts>
+	<Alert Name="G$_INFO_ALERT" Title="Banner" Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_EXTEND_SOLUT_ALERT" Title="Message from Banner Document Management..." Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_EXTEND_SOLUT_2_ALERT" Title="Message from Banner Document Management..." Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="Yes" />
+  			<Button Type="BTN2" Label="No" />
+  			<Button Type="BTN3" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_WARNING_ALERT" Title="Banner" Type="ERROR">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_PIPE_MESSAGE_ALERT" Title="Banner" Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="Yes" />
+  			<Button Type="BTN2" Label="No" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="QUIT_ALERT" Title="Banner" Type="WARNING">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="Yes" />
+  			<Button Type="BTN2" Label="No" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="WARNING_ALERT" Title="" Type="WARNING">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_BANNER_ALERT" Title="" Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+</Alerts>
+

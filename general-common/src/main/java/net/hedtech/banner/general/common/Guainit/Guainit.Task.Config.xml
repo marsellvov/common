@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>		
+	
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqolib/Goqolib.TaskPart.Config.xml"/>
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/general/common/Guainit/model/GUAINIT.Model.Config.xml"/>
+	
+	<task id="GUAINIT.Task.Config" name="GUAINIT">
+		<taskParts> 
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.general.common.Guainit.GuainitTask</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/general/common/Guainit/GuainitStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.general.common.Guainit.services.GuainitServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+
+				<package  name="BAN_PREFERENCES">net.hedtech.banner.general.common.Guainit.services.BanPreferences</package> 
+				<package  name="CAPTURE_TIMINGS">net.hedtech.banner.general.common.Guainit.services.CaptureTimings</package> 
+				<package  name="PKG_TIMESTAMP_FORMAT">net.hedtech.banner.general.common.Guainit.services.PkgTimestampFormat</package> 
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="GUAINIT.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.banner.general.common.Guainit.controller.GuainitFormController</formController>
+		<blockControllers>
+		</blockControllers>
+
+	</task>
+</b:beans>
+
+ 

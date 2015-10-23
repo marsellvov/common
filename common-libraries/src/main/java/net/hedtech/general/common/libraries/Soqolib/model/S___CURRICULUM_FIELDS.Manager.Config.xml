@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___CURRICULUM_FIELDS.Manager.Config" name="SCurriculumFields">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CURR_OPTION_TITLE1" logicalName="currOptionTitle1" type="String"   />
+			<item name="CURR_OPTION_TITLE2" logicalName="currOptionTitle2" type="String"   />
+			<item name="CURR_OPTION_KEY1" logicalName="currOptionKey1" type="String"   />
+			<item name="CURR_OPTION_KEY2" logicalName="currOptionKey2" type="String"   />
+			<item name="CURR_DEPT_DESC" logicalName="currDeptDesc" type="String"   />
+			<item name="CURR_MAJR_DESC" logicalName="currMajrDesc" type="String"   />
+			<item name="CURR_PIDM" logicalName="currPidm" type="String"   />
+			<item name="CURR_PROGRAM_PROCESS" logicalName="currProgramProcess" type="String"   />
+			<item name="CURR_LOV" logicalName="currLov" type="String"   />
+			<item name="CURR_SAVE_LOV" logicalName="currSaveLov" type="String"   />
+			<item name="CURR_PROCESS" logicalName="currProcess" type="String"   />
+			<item name="CURR_BASE_CHECK" logicalName="currBaseCheck" type="String"   />
+			<item name="CURR_UPD_BASE_FIELD" logicalName="currUpdBaseField" type="String"   />
+			<item name="CURR_UPD_BASE_FIELD_2" logicalName="currUpdBaseField2" type="String"   />
+			<item name="CURR_UPD_MAJR_FIELD" logicalName="currUpdMajrField" type="String"   />
+			<item name="CURR_UPD_MAJR_FIELD_2" logicalName="currUpdMajrField2" type="String"   />
+			<item name="CURR_TERM_FIELD" logicalName="currTermField" type="String"   />
+			<item name="CURR_TERM_CATLG_1_FIELD" logicalName="currTermCatlg1Field" type="String"   />
+			<item name="CURR_TERM_CATLG_FIELD" logicalName="currTermCatlgField" type="String"   />
+			<item name="CURR_LEVL_DESC" logicalName="currLevlDesc" type="String"   />
+			<item name="CURR_LEVL_2_DESC" logicalName="currLevl2Desc" type="String"   />
+			<item name="CURR_DEGC_DESC" logicalName="currDegcDesc" type="String"   />
+			<item name="CURR_DEGC_2_DESC" logicalName="currDegc2Desc" type="String"   />
+			<item name="CURR_CAMP_DESC" logicalName="currCampDesc" type="String"   />
+			<item name="CURR_CAMP_2_DESC" logicalName="currCamp2Desc" type="String"   />
+			<item name="CURR_COLL_DESC" logicalName="currCollDesc" type="String"   />
+			<item name="CURR_COLL_2_DESC" logicalName="currColl2Desc" type="String"   />
+			<item name="CURR_LEVL_1_FIELD" logicalName="currLevl1Field" type="String"   />
+			<item name="CURR_CAMP_1_FIELD" logicalName="currCamp1Field" type="String"   />
+			<item name="CURR_DEGC_1_FIELD" logicalName="currDegc1Field" type="String"   />
+			<item name="CURR_COLL_1_FIELD" logicalName="currColl1Field" type="String"   />
+			<item name="CURR_PROGRAM_1_FIELD" logicalName="currProgram1Field" type="String"   />
+			<item name="CURR_MAJR_1_FIELD" logicalName="currMajr1Field" type="String"   />
+			<item name="CURR_DEPT_1_FIELD" logicalName="currDept1Field" type="String"   />
+			<item name="CURR_CONC_1_1_FIELD" logicalName="currConc11Field" type="String"   />
+			<item name="CURR_CONC_1_2_FIELD" logicalName="currConc12Field" type="String"   />
+			<item name="CURR_CONC_1_3_FIELD" logicalName="currConc13Field" type="String"   />
+			<item name="CURR_MAJR_1_2_FIELD" logicalName="currMajr12Field" type="String"   />
+			<item name="CURR_DEPT_1_2_FIELD" logicalName="currDept12Field" type="String"   />
+			<item name="CURR_CONC_121_FIELD" logicalName="currConc121Field" type="String"   />
+			<item name="CURR_CONC_122_FIELD" logicalName="currConc122Field" type="String"   />
+			<item name="CURR_CONC_123_FIELD" logicalName="currConc123Field" type="String"   />
+			<item name="CURR_MINR_1_1_FIELD" logicalName="currMinr11Field" type="String"   />
+			<item name="CURR_MINR_1_2_FIELD" logicalName="currMinr12Field" type="String"   />
+			<item name="CURR_TERM_CATLG_2_FIELD" logicalName="currTermCatlg2Field" type="String"   />
+			<item name="CURR_LEVL_2_FIELD" logicalName="currLevl2Field" type="String"   />
+			<item name="CURR_CAMP_2_FIELD" logicalName="currCamp2Field" type="String"   />
+			<item name="CURR_COLL_2_FIELD" logicalName="currColl2Field" type="String"   />
+			<item name="CURR_DEGC_2_FIELD" logicalName="currDegc2Field" type="String"   />
+			<item name="CURR_PROGRAM_2_FIELD" logicalName="currProgram2Field" type="String"   />
+			<item name="CURR_MAJR_2_FIELD" logicalName="currMajr2Field" type="String"   />
+			<item name="CURR_DEPT_2_FIELD" logicalName="currDept2Field" type="String"   />
+			<item name="CURR_CONC_2_1_FIELD" logicalName="currConc21Field" type="String"   />
+			<item name="CURR_CONC_2_2_FIELD" logicalName="currConc22Field" type="String"   />
+			<item name="CURR_CONC_2_3_FIELD" logicalName="currConc23Field" type="String"   />
+			<item name="CURR_MAJR_2_2_FIELD" logicalName="currMajr22Field" type="String"   />
+			<item name="CURR_DEPT_2_2_FIELD" logicalName="currDept22Field" type="String"   />
+			<item name="CURR_CONC_221_FIELD" logicalName="currConc221Field" type="String"   />
+			<item name="CURR_CONC_222_FIELD" logicalName="currConc222Field" type="String"   />
+			<item name="CURR_CONC_223_FIELD" logicalName="currConc223Field" type="String"   />
+			<item name="CURR_MINR_2_1_FIELD" logicalName="currMinr21Field" type="String"   />
+			<item name="CURR_MINR_2_2_FIELD" logicalName="currMinr22Field" type="String"   />
+			<item name="CURR_CONC_FIELD" logicalName="currConcField" type="String"   />
+			<item name="CURR_PROGRAM_FIELD" logicalName="currProgramField" type="String"   />
+			<item name="CURR_DEPT_FIELD" logicalName="currDeptField" type="String"   />
+			<item name="CURR_DEPT_FIELD_2" logicalName="currDeptField2" type="String"   />
+			<item name="CURR_MAJR_FIELD" logicalName="currMajrField" type="String"   />
+			<item name="CURR_MINR_FIELD" logicalName="currMinrField" type="String"   />
+			<item name="CURR_MAJR_FIELD_2" logicalName="currMajrField2" type="String"   />
+			<item name="CURR_RULE_FIELD" logicalName="currRuleField" type="String"   />
+			<item name="CURR_RULE_1_FIELD" logicalName="currRule1Field" type="String"   />
+			<item name="CURR_RULE_2_FIELD" logicalName="currRule2Field" type="String"   />
+			<item name="CURR_CMJR_RULE_FIELD" logicalName="currCmjrRuleField" type="String"   />
+			<item name="CURR_CMJR_RULE_FIELD_2" logicalName="currCmjrRuleField2" type="String"   />
+			<item name="CURR_CMJR_RULE_1_1_FIELD" logicalName="currCmjrRule11Field" type="String"   />
+			<item name="CURR_CMJR_RULE_2_1_FIELD" logicalName="currCmjrRule21Field" type="String"   />
+			<item name="CURR_CMNR_RULE_FIELD" logicalName="currCmnrRuleField" type="String"   />
+			<item name="CURR_CCON_RULE_FIELD" logicalName="currCconRuleField" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SCurriculumFields</managerClass>
+
+	</manager>
+</b:beans>

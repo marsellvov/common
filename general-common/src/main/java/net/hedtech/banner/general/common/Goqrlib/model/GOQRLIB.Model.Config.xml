@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goqrlib/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goqrlib/model/G___BANNER_REPORT_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goqrlib/model/G___BANNER_REPORT_BLOCK.Manager.Config.xml"/>
+	
+	<formModel id="GOQRLIB.Model.Config" name="GOQRLIB">
+		<modelClass>net.hedtech.banner.general.common.Goqrlib.model.GoqrlibModel</modelClass>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="G$_BANNER_REPORT_HEADER" manager="G___BANNER_REPORT_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="G$_BANNER_REPORT_BLOCK" manager="G___BANNER_REPORT_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+	</formModel>
+</b:beans>

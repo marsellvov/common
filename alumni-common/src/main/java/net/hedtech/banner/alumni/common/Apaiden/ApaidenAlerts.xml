@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alerts>
+	<Alert Name="PERS_SEARCH_ALERT" Title="" Type="WARNING">
+		<Text>*Warning* Similar name(s) exist.  Would you like to view them?</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="SOAIDEN" />
+  			<Button Type="BTN2" Label="AOAIDEN" />
+  			<Button Type="BTN3" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="ORG_SEARCH_ALERT" Title="" Type="WARNING">
+		<Text>*Warning* Similar name(s) exist.  Would you like to view them?</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="SOACOMP" />
+  			<Button Type="BTN2" Label="AOACOMP" />
+  			<Button Type="BTN3" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="BIO_TAB_ALERT" Title="" Type="WARNING">
+		<Text>*Warning* Please enter Non-person information on AOAORGN.</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="DEL_ORG_ADDR" Title="" Type="WARNING">
+		<Text> *WARNING* This address is currently identified as the preferred address. If deleted, consider whether a different address record should be identified as the preferred address on AOAORGN.</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+  			<Button Type="BTN2" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+</Alerts>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alerts>
+	<Alert Name="G$_GUAERRM_ALERT" Title="Banner" Type="ERROR">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_GUAERRM_W_ALERT" Title="Banner" Type="WARNING">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+</Alerts>
+

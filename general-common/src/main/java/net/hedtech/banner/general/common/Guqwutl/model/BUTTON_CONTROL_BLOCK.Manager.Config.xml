@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="BUTTON_CONTROL_BLOCK.Manager.Config" name="ButtonControlBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="GTVSYSI_1_ROLLBACK_BTN" logicalName="gtvsysi1RollbackBtn" type="String"   />
+			<item name="GTVSYSI_1_SAVE_BTN" logicalName="gtvsysi1SaveBtn" type="String"   />
+			<item name="GTVSYSI_1_EXIT_BTN" logicalName="gtvsysi1ExitBtn" type="String"   />
+			<item name="GTVSYSI_1_EXITVALUE_BTN" logicalName="gtvsysi1ExitvalueBtn" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Guqwutl.model.ButtonControlBlock</managerClass>
+
+	</manager>
+</b:beans>

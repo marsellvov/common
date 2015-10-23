@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SOUNDEX"/>
+	<panel class="StackedCanvas" id="pnlSoundexCanvas" menu="G$_DEFAULT_PM" name="SOUNDEX_CANVAS" width="100%">
+		<panel width="100%">
+			<gridlayout cols="2" orientation="vertical">
+				<gridcell>
+					<textbox autoskip="true" block="SOUNDEX" datatype="String" height="23px" label="soundex.soundexLastName.prompt" maxlength="25" member="SOUNDEX_LAST_NAME" name="soundexLastName" width="192px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+				</gridcell>
+				<gridcell>
+					<textbox autoskip="true" block="SOUNDEX" datatype="String" height="23px" label="soundex.soundexFirstName.prompt" maxlength="60" member="SOUNDEX_FIRST_NAME" name="soundexFirstName" width="120px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+				</gridcell>
+			</gridlayout>
+		</panel>
+	</panel>
+</config>

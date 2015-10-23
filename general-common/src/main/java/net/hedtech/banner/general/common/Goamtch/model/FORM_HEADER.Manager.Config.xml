@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FORM_HEADER.Manager.Config" name="FormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CURRENT_FORM" logicalName="currentForm" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="CURRENT_INSTITUTION" logicalName="currentInstitution" type="String"   />
+			<item name="CURRENT_DATE" logicalName="currentDate" type="String"   />
+			<item name="CURRENT_TIME" logicalName="currentTime" type="String"   />
+			<item name="CURRENT_USER" logicalName="currentUser" type="String"   />
+			<item name="CALLED_FORM" logicalName="calledForm" type="Integer"   />
+			<item name="CALLING_FORM" logicalName="callingForm" type="String"   />
+			<item name="CHECK_KEYS" logicalName="checkKeys" type="String"   />
+			<item name="COMMIT_COMPLETED" logicalName="commitCompleted" type="String"   />
+			<item name="DO_TAB_NAVIGATION" logicalName="doTabNavigation" type="String"   />
+			<item name="HOLD_BLK_ITEM" logicalName="holdBlkItem" type="String"   />
+			<item name="MATCH_PIDM" logicalName="matchPidm" type="java.math.BigDecimal"   />
+			<item name="QUERIED_DETAIL" logicalName="queriedDetail" type="String"   />
+			<item name="READ_IMAGES" logicalName="readImages" type="String"   />
+			<item name="SKIP_SAVE" logicalName="skipSave" type="String"   />
+			<item name="ALLOW_UPDATES" logicalName="allowUpdates" type="String"   >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+			<item name="ALLOW_CLEAR_FORM" logicalName="allowClearForm" type="String"   >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+			<item name="ALLOW_CLEAR_BLOCK" logicalName="allowClearBlock" type="String"   >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+			<item name="DETAILS_EXIST" logicalName="detailsExist" type="String"   >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+			<item name="MATCH_STATUS" logicalName="matchStatus" type="String"   >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+			<item name="API_FAILURE" logicalName="apiFailure" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="ADDR_FAILED_LIT" logicalName="addrFailedLit" type="String"   />
+			<item name="F_CREATE_ADDRESS_ERR" logicalName="FCreateAddressErr" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="F_CREATE_BIO_ERR" logicalName="FCreateBioErr" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="F_CREATE_EMAIL_ERR" logicalName="FCreateEmailErr" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="F_CREATE_ADDID_ERR" logicalName="FCreateAddidErr" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="F_CREATE_TELEPHONE_ERR" logicalName="FCreateTelephoneErr" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GREEN_DATA_BAR_1" logicalName="greenDataBar1" type="String"   />
+			<item name="DATA_SEPARATOR_LINE_2" logicalName="dataSeparatorLine2" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Goamtch.model.FormHeader</managerClass>
+
+	</manager>
+</b:beans>

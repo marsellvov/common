@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRBGRNT.Manager.Config" name="FRBGRNT">
+		
+		<items>
+			<item name="FRBGRNT_AGENCY_CODE_2" logicalName="frbgrntAgencyCode2" type="String"  virtual="true">
+				<value>
+					<item name="FRBGRNT_AGENCY_CODE" businessObject="FRBGRNT" />
+				</value>
+			</item>
+			
+			
+			<item name="FRBGRNT_AGENCY_NAME_2" logicalName="frbgrntAgencyName2" type="String"  virtual="true">
+				<value>
+					<item name="FRBGRNT_AGENCY_NAME" businessObject="FRBGRNT" />
+				</value>
+			</item>
+			
+			
+			<item name="FRBGRNT_COAS_CODE" logicalName="frbgrntCoasCode" type="String" physicalName="FRBGRNT_COAS_CODE"  >
+				<value>
+					<globalVariable name="COAS_CODE" />
+				</value>	
+			</item>
+			<item name="FRBGRNT_ORGN_CODE_RESP_OFFICE" logicalName="frbgrntOrgnCodeRespOffice" type="String" physicalName="FRBGRNT_ORGN_CODE_RESP_OFFICE"  />
+			<item name="ORGN_CODE_DESCR" logicalName="orgnCodeDescr" type="String"  virtual="true" />
+			<item name="FRBGRNT_LONG_TITLE" logicalName="frbgrntLongTitle" type="String" physicalName="FRBGRNT_LONG_TITLE"  />
+			<item name="FRBGRNT_TITLE" logicalName="frbgrntTitle" type="String" physicalName="FRBGRNT_TITLE"  />
+			<item name="FRBGRNT_EFF_CERT_REQUIRED_IND" logicalName="frbgrntEffCertRequiredInd" type="String" physicalName="FRBGRNT_EFF_CERT_REQUIRED_IND"  >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+			<item name="FRBGRNT_AGENCY_CODE" logicalName="frbgrntAgencyCode" type="String"  virtual="true" />
+			<item name="FRBGRNT_AGENCY_NAME" logicalName="frbgrntAgencyName" type="String"  virtual="true" />
+			<item name="FRBGRNT_PI_ID_CODE" logicalName="frbgrntPiIdCode" type="String"  virtual="true" />
+			<item name="FRBGRNT_PI_ID_NAME" logicalName="frbgrntPiIdName" type="String"  virtual="true" />
+			<item name="FRBGRNT_PROJECT_START_DATE" logicalName="frbgrntProjectStartDate" type="java.util.Date" physicalName="FRBGRNT_PROJECT_START_DATE"  />
+			<item name="FRBGRNT_PROJECT_END_DATE" logicalName="frbgrntProjectEndDate" type="java.util.Date" physicalName="FRBGRNT_PROJECT_END_DATE"  />
+			<item name="FRBGRNT_PROP_CODE" logicalName="frbgrntPropCode" type="String" physicalName="FRBGRNT_PROP_CODE"  />
+			<item name="FRBGRNT_TERM_DATE" logicalName="frbgrntTermDate" type="java.util.Date" physicalName="FRBGRNT_TERM_DATE"  />
+			<item name="HOLD_END_DATE" logicalName="holdEndDate" type="java.util.Date"  virtual="true" />
+			<item name="HOLD_START_DATE" logicalName="holdStartDate" type="java.util.Date"  virtual="true" />
+			<item name="FRBGRNT_EXPEND_END_DATE" logicalName="frbgrntExpendEndDate" type="java.util.Date" physicalName="FRBGRNT_EXPEND_END_DATE"  />
+			<item name="FRBGRNT_STATUS_CODE" logicalName="frbgrntStatusCode" type="String" physicalName="FRBGRNT_STATUS_CODE"  />
+			<item name="STATUS_DESCR" logicalName="statusDescr" type="String"  virtual="true" />
+			<item name="DISPLAY_PASS_THRU_IND" logicalName="displayPassThruInd" type="String"  virtual="true" >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="FRBGRNT_ALTERNATE_STATUS_DESC" logicalName="frbgrntAlternateStatusDesc" type="String" physicalName="FRBGRNT_ALTERNATE_STATUS_DESC"  />
+			<item name="FRBGRNT_STATUS_DATE" logicalName="frbgrntStatusDate" type="java.util.Date" physicalName="FRBGRNT_STATUS_DATE"  />
+			<item name="FRBGRNT_CODE" logicalName="frbgrntCode" type="String" physicalName="FRBGRNT_CODE"  >
+				<value>
+					<item name="DISPLAY_FRBGRNT_CODE" businessObject="KEY_BLOCK"/>
+				</value>	
+			</item>
+			<item name="FRBGRNT_GRNT_CODE_RELATED" logicalName="frbgrntGrntCodeRelated" type="String" physicalName="FRBGRNT_GRNT_CODE_RELATED"  />
+			<item name="RELATED_GRNT_DESCR" logicalName="relatedGrntDescr" type="String"  virtual="true" />
+			<item name="FRBGRNT_CURRENT_FUNDING_AMT" logicalName="frbgrntCurrentFundingAmt" type="java.math.BigDecimal" physicalName="FRBGRNT_CURRENT_FUNDING_AMT"  />
+			<item name="FRBGRNT_CUM_FUNDING_AMT" logicalName="frbgrntCumFundingAmt" type="java.math.BigDecimal" physicalName="FRBGRNT_CUM_FUNDING_AMT"  />
+			<item name="FRBGRNT_MAX_FUNDING_AMT" logicalName="frbgrntMaxFundingAmt" type="java.math.BigDecimal" physicalName="FRBGRNT_MAX_FUNDING_AMT"  />
+			<item name="FRBGRNT_RCPT_SHARE_TOTAL" logicalName="frbgrntRcptShareTotal" type="java.math.BigDecimal" physicalName="FRBGRNT_RCPT_SHARE_TOTAL"  />
+			<item name="FRBGRNT_GRANT_TYPE" logicalName="frbgrntGrantType" type="String" physicalName="FRBGRNT_GRANT_TYPE"  />
+			<item name="FRBGRNT_GRANT_DESC" logicalName="frbgrntGrantDesc" type="String"  virtual="true" />
+			<item name="FRBGRNT_CATEGORY" logicalName="frbgrntCategory" type="String" physicalName="FRBGRNT_CATEGORY"  />
+			<item name="FRBGRNT_CATEGORY_DESC" logicalName="frbgrntCategoryDesc" type="String"  virtual="true" />
+			<item name="FRBGRNT_SUB_CATEGORY" logicalName="frbgrntSubCategory" type="String" physicalName="FRBGRNT_SUB_CATEGORY"  />
+			<item name="FRBGRNT_SUB_CAT_DESC" logicalName="frbgrntSubCatDesc" type="String"  virtual="true" />
+			<item name="FRBGRNT_CFDA_CODE" logicalName="frbgrntCfdaCode" type="String"  virtual="true" />
+			<item name="FRBGRNT_SPONSOR_ID" logicalName="frbgrntSponsorId" type="String" physicalName="FRBGRNT_SPONSOR_ID"  />
+			<item name="FRBGRNT_AGENCY_CONTACT" logicalName="frbgrntAgencyContact" type="String" physicalName="FRBGRNT_AGENCY_CONTACT"  />
+			<item name="FRBGRNT_AGENCY_ADDR_CODE" logicalName="frbgrntAgencyAddrCode" type="String" physicalName="FRBGRNT_AGENCY_ADDR_CODE"  />
+			<item name="FRBGRNT_AGENCY_ADDR_SEQ_NUM" logicalName="frbgrntAgencyAddrSeqNum" type="java.math.BigDecimal" physicalName="FRBGRNT_AGENCY_ADDR_SEQ_NUM"  />
+			<item name="HOUSE_NUMBER" logicalName="houseNumber" type="String"  virtual="true" />
+			<item name="ADDRESS_LINE_1" logicalName="addressLine1" type="String"  virtual="true" />
+			<item name="ADDRESS_LINE_2" logicalName="addressLine2" type="String"  virtual="true" />
+			<item name="ADDRESS_LINE_3" logicalName="addressLine3" type="String"  virtual="true" />
+			<item name="ADDRESS_LINE_4" logicalName="addressLine4" type="String"  virtual="true" />
+			<item name="CITY" logicalName="city" type="String"  virtual="true" />
+			<item name="STATE" logicalName="state" type="String"  virtual="true" />
+			<item name="ZIP_CODE" logicalName="zipCode" type="String"  virtual="true" />
+			<item name="FRBGRNT_AGENCY_EMAIL" logicalName="frbgrntAgencyEmail" type="String" physicalName="FRBGRNT_AGENCY_EMAIL"  />
+			<item name="PHONE_EXISTS" logicalName="phoneExists" type="String"  virtual="true" />
+			<item name="FRBGRNT_AGENCY_PHONE_TYPE" logicalName="frbgrntAgencyPhoneType" type="String" physicalName="FRBGRNT_AGENCY_PHONE_TYPE"  />
+			<item name="CTRY_CODE_PHONE" logicalName="ctryCodePhone" type="String"  virtual="true" />
+			<item name="AREA_CODE" logicalName="areaCode" type="String"  virtual="true" />
+			<item name="PHONE_NUMBER" logicalName="phoneNumber" type="String"  virtual="true" />
+			<item name="EXTENSION" logicalName="extension" type="String"  virtual="true" />
+			<item name="FRBGRNT_AGENCY_TELE_SEQNO" logicalName="frbgrntAgencyTeleSeqno" type="java.math.BigDecimal" physicalName="FRBGRNT_AGENCY_TELE_SEQNO"  />
+			<item name="FRBGRNT_IDC_ENC_IND" logicalName="frbgrntIdcEncInd" type="String" physicalName="FRBGRNT_IDC_ENC_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="FRBGRNT_COAS_CODE_IC_CS" logicalName="frbgrntCoasCodeIcCs" type="String" physicalName="FRBGRNT_COAS_CODE_IC_CS"  />
+			<item name="FRBGRNT_BASI_CODE_IC" logicalName="frbgrntBasiCodeIc" type="String" physicalName="FRBGRNT_BASI_CODE_IC"  />
+			<item name="FRBGRNT_BASI_CODE_IC_NAME" logicalName="frbgrntBasiCodeIcName" type="String"  virtual="true" />
+			<item name="FRBGRNT_INDR_CODE_RATE" logicalName="frbgrntIndrCodeRate" type="String" physicalName="FRBGRNT_INDR_CODE_RATE"  />
+			<item name="FRBGRNT_INDR_CODE_RATE_NAME" logicalName="frbgrntIndrCodeRateName" type="String"  virtual="true" />
+			<item name="FRBGRNT_INDA_CODE_CHARGE" logicalName="frbgrntIndaCodeCharge" type="String" physicalName="FRBGRNT_INDA_CODE_CHARGE"  />
+			<item name="FRBGRNT_INDA_CODE_CHARGE_NAME" logicalName="frbgrntIndaCodeChargeName" type="String"  virtual="true" />
+			<item name="FRBGRNT_INDD_CODE_DISTR" logicalName="frbgrntInddCodeDistr" type="String" physicalName="FRBGRNT_INDD_CODE_DISTR"  />
+			<item name="FRBGRNT_INDD_CODE_DISTR_NAME" logicalName="frbgrntInddCodeDistrName" type="String"  virtual="true" />
+			<item name="FRBGRNT_BASI_CODE_CS" logicalName="frbgrntBasiCodeCs" type="String" physicalName="FRBGRNT_BASI_CODE_CS"  />
+			<item name="FRBGRNT_BASI_CODE_CS_NAME" logicalName="frbgrntBasiCodeCsName" type="String"  virtual="true" />
+			<item name="FRBGRNT_CSTR_CODE_RATE" logicalName="frbgrntCstrCodeRate" type="String" physicalName="FRBGRNT_CSTR_CODE_RATE"  />
+			<item name="FRBGRNT_CSTR_CODE_RATE_NAME" logicalName="frbgrntCstrCodeRateName" type="String"  virtual="true" />
+			<item name="FRBGRNT_CSTA_CODE_CHARGE" logicalName="frbgrntCstaCodeCharge" type="String" physicalName="FRBGRNT_CSTA_CODE_CHARGE"  />
+			<item name="FRBGRNT_CSTA_CODE_CHARGE_NAME" logicalName="frbgrntCstaCodeChargeName" type="String"  virtual="true" />
+			<item name="FRBGRNT_CSTD_CODE_DISTR" logicalName="frbgrntCstdCodeDistr" type="String" physicalName="FRBGRNT_CSTD_CODE_DISTR"  />
+			<item name="FRBGRNT_CSTD_CODE_DISTR_NAME" logicalName="frbgrntCstdCodeDistrName" type="String"  virtual="true" />
+			<item name="FRBGRNT_AGENCY_PIDM" logicalName="frbgrntAgencyPidm" type="java.math.BigDecimal" physicalName="FRBGRNT_AGENCY_PIDM"  />
+			<item name="FRBGRNT_AGENCY_PRED_PIDM" logicalName="frbgrntAgencyPredPidm" type="java.math.BigDecimal"  virtual="true" />
+			<item name="FRBGRNT_CFDA_INTERNAL_ID_NO" logicalName="frbgrntCfdaInternalIdNo" type="java.math.BigDecimal" physicalName="FRBGRNT_CFDA_INTERNAL_ID_NO"  />
+			<item name="FRBGRNT_ACTIVITY_DATE" logicalName="frbgrntActivityDate" type="java.util.Date" physicalName="FRBGRNT_ACTIVITY_DATE"  />
+			<item name="FRBGRNT_PI_PIDM" logicalName="frbgrntPiPidm" type="java.math.BigDecimal" physicalName="FRBGRNT_PI_PIDM"  />
+			<item name="FRBGRNT_USER_ID" logicalName="frbgrntUserId" type="String" physicalName="FRBGRNT_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fragrnt.model.FrbgrntAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE frbgrnt_code = :KEY_BLOCK_DISPLAY_FRBGRNT_CODE AND :KEY_BLOCK_DISPLAY_FRBGRNT_CODE <> :FORM_HEADER_NEXT_DOC_NUM]]></defaultWhereClause>	
+
+	</manager>
+</b:beans>

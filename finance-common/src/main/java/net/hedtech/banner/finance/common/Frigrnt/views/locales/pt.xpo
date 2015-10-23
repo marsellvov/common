@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="formHeader.queryAgencyName.hint">Name; Enter a name Last, First, Middle and press enter or tab. Use the wildcard "%" if needed.</msg>
+  <msg id="frbgrnt.frbgrntCode.prompt">Grant</msg>
+  <msg id="frbgrnt.piId.prompt">Principal Investigator ID</msg>
+  <msg id="frbgrnt.piLastName.hint">Principal Investigator Last Name</msg>
+  <msg id="frbgrnt.piFirstName.hint">Principal Investigator First Name</msg>
+  <msg id="frbgrnt.agencyId.prompt">Agency</msg>
+  <msg id="frbgrnt.frbgrntCurrentFundingAmt.prompt">Current Amount</msg>
+  <msg id="frbgrnt.frbgrntCumFundingAmt.prompt">Cumulative Amount</msg>
+  <msg id="frbgrnt.frbgrntMaxFundingAmt.prompt">Maximum Amount</msg>
+  <msg id="frbgrnt.frbgrntStatusCode.prompt">Status</msg>
+  <msg id="frbgrnt.frbgrntStatusDate.prompt">Status Date</msg>
+  <msg id="frbgrnt.frbgrntProjectStartDate.prompt">Project Start Date</msg>
+  <msg id="frbgrnt.frbgrntProjectEndDate.prompt">Project End Date</msg>
+  <msg id="frbgrnt.frbgrntSponsorId.prompt">Sponsor ID</msg>
+  <msg id="frbgrnt.frbgrntCoasCode.prompt">Responsible Organization</msg>
+  <msg id="buttonControlBlock.frbgrnt1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.frbgrnt1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.frbgrnt1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Grant Code Inquiry Form </msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

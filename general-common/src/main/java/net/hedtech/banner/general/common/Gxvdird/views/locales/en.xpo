@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="gxvdird.gxvdirdCodeBankRoutNum.prompt">Bank Routing Number</msg>
+  <msg id="gxvdird.gxvdirdCodeBankRoutNum.hint">Bank Routing Number; Enter Bank Routing Number for your Institution. </msg>
+  <msg id="gxvdird.gxvdirdDesc.prompt">Bank Name</msg>
+  <msg id="gxvdird.gxvdirdDesc.hint">Bank Name.</msg>
+  <msg id="gxvdird.gxvdirdActivityDate.prompt">Activity Date</msg>
+  <msg id="gxvdird.gxvdirdUser.prompt">User</msg>
+  <msg id="mainWindow.title">Bank Routing Number Validation</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

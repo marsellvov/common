@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guahelp/model/DISPLAY_HELP.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guahelp/model/SHOW_HELP.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guahelp/model/BUTTON_CONTROL_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guahelp/model/GUAHELP.ValueSet.Config.xml"/>
+
+	
+	<formModel id="GUAHELP.Model.Config" name="GUAHELP">
+		<modelClass>net.hedtech.banner.general.common.Guahelp.model.GuahelpModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="DISPLAY_HELP" manager="DISPLAY_HELP.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SHOW_HELP" manager="SHOW_HELP.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="BUTTON_CONTROL_BLOCK" manager="BUTTON_CONTROL_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="HELPFLD_RG.ValueSet.Config"/>
+				<valueSet config="HELPBLK_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

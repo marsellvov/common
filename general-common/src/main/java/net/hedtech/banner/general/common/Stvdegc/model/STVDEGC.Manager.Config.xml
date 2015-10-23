@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="STVDEGC.Manager.Config" name="STVDEGC">
+		
+		<items>
+			<item name="STVDEGC_CODE" logicalName="stvdegcCode" type="String" physicalName="STVDEGC_CODE"  />
+			<item name="STVDEGC_DESC" logicalName="stvdegcDesc" type="String" physicalName="STVDEGC_DESC"  />
+			<item name="STVDEGC_FA_COUNT_IND" logicalName="stvdegcFaCountInd" type="String" physicalName="STVDEGC_FA_COUNT_IND"  />
+			<item name="STVDEGC_DLEV_CODE" logicalName="stvdegcDlevCode" type="String" physicalName="STVDEGC_DLEV_CODE"  />
+			<item name="STVDEGC_ACAT_CODE" logicalName="stvdegcAcatCode" type="String" physicalName="STVDEGC_ACAT_CODE"  />
+			<item name="STVDEGC_VR_MSG_NO" logicalName="stvdegcVrMsgNo" type="java.math.BigDecimal" physicalName="STVDEGC_VR_MSG_NO"  />
+			<item name="STVDEGC_DISP_WEB_IND" logicalName="stvdegcDispWebInd" type="String" physicalName="STVDEGC_DISP_WEB_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="STVDEGC_SYSTEM_REQ_IND" logicalName="stvdegcSystemReqInd" type="String" physicalName="STVDEGC_SYSTEM_REQ_IND"  />
+			<item name="STVDEGC_ACTIVITY_DATE" logicalName="stvdegcActivityDate" type="java.util.Date" physicalName="STVDEGC_ACTIVITY_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Stvdegc.model.StvdegcAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[stvdegc_code]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

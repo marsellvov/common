@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRRAGPT.Manager.Config" name="FRRAGPT">
+		
+		<items>
+			<item name="FRRAGPT_GRNT_CODE" logicalName="frragptGrntCode" type="String" physicalName="FRRAGPT_GRNT_CODE">
+				<value>						
+					<item name="DISPLAY_FRBGRNT_CODE" businessObject="KEY_BLOCK" />
+				</value>
+			</item>
+			
+			<item name="FRRAGPT_AGENCY_CODE" logicalName="frragptAgencyCode" type="String"  virtual="true" />
+			<item name="FRRAGPT_AGCY_PIDM" logicalName="frragptAgcyPidm" type="java.math.BigDecimal" physicalName="FRRAGPT_AGCY_PIDM"  />
+			<item name="FRRAGPT_AGCY_NAME" logicalName="frragptAgcyName" type="String"  virtual="true" />
+			<item name="FRRAGPT_FEDERAL_FUND_PERCENT" logicalName="frragptFederalFundPercent" type="java.math.BigDecimal" physicalName="FRRAGPT_FEDERAL_FUND_PERCENT"  />
+			<item name="FRRAGPT_SPONSOR_ID" logicalName="frragptSponsorId" type="String" physicalName="FRRAGPT_SPONSOR_ID"  />
+			<item name="FRRAGPT_ACTIVITY_DATE" logicalName="frragptActivityDate" type="java.util.Date" physicalName="FRRAGPT_ACTIVITY_DATE"  />
+			<item name="FRRAGPT_USER_ID" logicalName="frragptUserId" type="String" physicalName="FRRAGPT_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fragrnt.model.FrragptAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE FRRAGPT_GRNT_CODE = :KEY_BLOCK_DISPLAY_FRBGRNT_CODE]]></defaultWhereClause>	
+
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="18" enabled="true"/>
+
+	</manager>
+</b:beans>

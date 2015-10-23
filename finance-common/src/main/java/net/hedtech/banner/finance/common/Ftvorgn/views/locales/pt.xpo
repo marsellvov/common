@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="ftvorgn.ftvorgnCoasCode.prompt">Chart of Accounts</msg>
+  <msg id="ftvorgn.ftvorgnOrgnCode.prompt">Organization Code</msg>
+  <msg id="ftvorgn.ftvorgnTitle.prompt">Title</msg>
+  <msg id="ftvorgn.ftvorgnDataEntryInd.prompt">Data Entry</msg>
+  <msg id="ftvorgn.ftvorgnStatusInd.prompt">Status</msg>
+  <msg id="ftvorgn.ftvorgnEffDate.prompt">Effective Date</msg>
+  <msg id="ftvorgn.ftvorgnTermDate.prompt">Termination Date</msg>
+  <msg id="buttonControlBlock.ftvorgn1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.ftvorgn1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.ftvorgn1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Organization Code Validation Form</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+  <msg id="gNavCanvas.titOCVFF.title">Organization Code Validation Form - Finance</msg>
+</messages>

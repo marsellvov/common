@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GOTCMME.Manager.Config" name="GOTCMME">
+		
+		<items>
+			<item name="LAST_NAME" logicalName="lastName" type="String"  virtual="true" />
+			<item name="GOTCMME_FIRST_NAME" logicalName="gotcmmeFirstName" type="String" physicalName="GOTCMME_FIRST_NAME"  />
+			<item name="GOTCMME_MI" logicalName="gotcmmeMi" type="String" physicalName="GOTCMME_MI"  />
+			<item name="GOTCMME_ATYP_CODE" logicalName="gotcmmeAtypCode" type="String" physicalName="GOTCMME_ATYP_CODE"  />
+			<item name="ATYP_DESCRIPTION" logicalName="atypDescription" type="String"  virtual="true" />
+			<item name="GOTCMME_STREET_LINE1" logicalName="gotcmmeStreetLine1" type="String" physicalName="GOTCMME_STREET_LINE1"  />
+			<item name="GOTCMME_STREET_LINE2" logicalName="gotcmmeStreetLine2" type="String" physicalName="GOTCMME_STREET_LINE2"  />
+			<item name="GOTCMME_STREET_LINE3" logicalName="gotcmmeStreetLine3" type="String" physicalName="GOTCMME_STREET_LINE3"  />
+			<item name="GOTCMME_CITY" logicalName="gotcmmeCity" type="String" physicalName="GOTCMME_CITY"  />
+			<item name="GOTCMME_STAT_CODE" logicalName="gotcmmeStatCode" type="String" physicalName="GOTCMME_STAT_CODE"  />
+			<item name="STAT_DESCRIPTION" logicalName="statDescription" type="String"  virtual="true" />
+			<item name="GOTCMME_ZIP" logicalName="gotcmmeZip" type="String" physicalName="GOTCMME_ZIP"  />
+			<item name="GOTCMME_CNTY_CODE" logicalName="gotcmmeCntyCode" type="String" physicalName="GOTCMME_CNTY_CODE"  />
+			<item name="CNTY_DESCRIPTION" logicalName="cntyDescription" type="String"  virtual="true" />
+			<item name="GOTCMME_NATN_CODE" logicalName="gotcmmeNatnCode" type="String" physicalName="GOTCMME_NATN_CODE"  />
+			<item name="NATN_DESCRIPTION" logicalName="natnDescription" type="String"  virtual="true" />
+			<item name="NONPERSON_NAME" logicalName="nonpersonName" type="String"  virtual="true" />
+			<item name="GOTCMME_SSN" logicalName="gotcmmeSsn" type="String" physicalName="GOTCMME_SSN"  />
+			<item name="HOLD_GOTCMME_SSN" logicalName="holdGotcmmeSsn" type="String"  virtual="true" />
+			<item name="GOTCMME_BIRTH_DAY" logicalName="gotcmmeBirthDay" type="String" physicalName="GOTCMME_BIRTH_DAY"  />
+			<item name="GOTCMME_BIRTH_MON" logicalName="gotcmmeBirthMon" type="String" physicalName="GOTCMME_BIRTH_MON"  />
+			<item name="GOTCMME_BIRTH_YEAR" logicalName="gotcmmeBirthYear" type="String" physicalName="GOTCMME_BIRTH_YEAR"  />
+			<item name="GOTCMME_SEX" logicalName="gotcmmeSex" type="String" physicalName="GOTCMME_SEX"  />
+			<item name="GOTCMME_TELE_CODE" logicalName="gotcmmeTeleCode" type="String" physicalName="GOTCMME_TELE_CODE"  />
+			<item name="TELE_DESCRIPTION" logicalName="teleDescription" type="String"  virtual="true" />
+			<item name="GOTCMME_PHONE_AREA" logicalName="gotcmmePhoneArea" type="String" physicalName="GOTCMME_PHONE_AREA"  />
+			<item name="GOTCMME_PHONE_NUMBER" logicalName="gotcmmePhoneNumber" type="String" physicalName="GOTCMME_PHONE_NUMBER"  />
+			<item name="GOTCMME_PHONE_EXT" logicalName="gotcmmePhoneExt" type="String" physicalName="GOTCMME_PHONE_EXT"  />
+			<item name="GOTCMME_EMAL_CODE" logicalName="gotcmmeEmalCode" type="String" physicalName="GOTCMME_EMAL_CODE"  />
+			<item name="EMAL_DESCRIPTION" logicalName="emalDescription" type="String"  virtual="true" />
+			<item name="GOTCMME_EMAIL_ADDRESS" logicalName="gotcmmeEmailAddress" type="String" physicalName="GOTCMME_EMAIL_ADDRESS"  />
+			<item name="GOTCMME_ADID_CODE" logicalName="gotcmmeAdidCode" type="String" physicalName="GOTCMME_ADID_CODE"  />
+			<item name="ADID_DESC" logicalName="adidDesc" type="String"  virtual="true" />
+			<item name="GOTCMME_ADDITIONAL_ID" logicalName="gotcmmeAdditionalId" type="String" physicalName="GOTCMME_ADDITIONAL_ID"  />
+			<item name="GREEN_DATA_BAR_1" logicalName="greenDataBar1" type="String"  virtual="true" />
+			<item name="GOTCMME_ID" logicalName="gotcmmeId" type="String" physicalName="GOTCMME_ID"  />
+			<item name="GOTCMME_LAST_NAME" logicalName="gotcmmeLastName" type="String" physicalName="GOTCMME_LAST_NAME"  />
+			<item name="GOTCMME_ENTITY_CDE" logicalName="gotcmmeEntityCde" type="String" physicalName="GOTCMME_ENTITY_CDE"  />
+			<item name="GOTCMME_ASRC_CODE" logicalName="gotcmmeAsrcCode" type="String" physicalName="GOTCMME_ASRC_CODE"  />
+			<item name="GOTCMME_PIDM" logicalName="gotcmmePidm" type="java.math.BigDecimal"  virtual="true" />
+			<item name="NO_ADDR_INFO" logicalName="noAddrInfo" type="java.math.BigDecimal"  virtual="true" />
+			<item name="SOURCE_COMMENT" logicalName="sourceComment" type="String"  virtual="true" >
+				<value>
+					<item name="KEYBLOCK_SOURCE_COMMENT" businessObject="KEY_BLOCK" />					
+				</value>
+			</item>
+			
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Goamtch.model.GotcmmeAdapter</adapterClass>
+
+	</manager>
+</b:beans>

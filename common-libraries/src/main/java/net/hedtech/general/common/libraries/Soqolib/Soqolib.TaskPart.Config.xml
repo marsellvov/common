@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="urn:schemas:morphis:foundations:task" xmlns:b="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SOQOLIB.Model.Config.xml"/>
+	<task id="SOQOLIB.TaskPart.Config" name="SOQOLIB">
+		<taskParts>
+			<taskPartConfiguration config="GOQOLIB.TaskPart.Config" name="GOQOLIB"/>
+		</taskParts>
+		<taskClass>net.hedtech.general.common.libraries.Soqolib.SoqolibTaskPart</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/general/common/libraries/Soqolib/SoqolibStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.general.common.libraries.Soqolib.services.SoqolibServices</services>
+			<!-- Package Beans-->
+			<packages>
+				<package name="G$_SDKEY">net.hedtech.general.common.libraries.Soqolib.controller.GSdkeyController</package>
+				<package name="G$_SDISP">net.hedtech.general.common.libraries.Soqolib.controller.GSdispController</package>
+				<package name="G$_OPT_BLOCK">net.hedtech.general.common.libraries.Soqolib.controller.GOptBlockController</package>
+				<package name="DUMMY">net.hedtech.general.common.libraries.Soqolib.controller.DummyController</package>
+				<package name="S$_SOBCTRL_BLOCK">net.hedtech.general.common.libraries.Soqolib.controller.SSobctrlBlockController</package>
+				<package name="S$_CURRICULUM_HOLD_ITEMS">net.hedtech.general.common.libraries.Soqolib.controller.SCurriculumHoldItemsController</package>
+				<package name="S$_CURRICULUM_CHANGE">net.hedtech.general.common.libraries.Soqolib.controller.SCurriculumChangeController</package>
+				<package name="S$_CURR_PROC_BLOCK">net.hedtech.general.common.libraries.Soqolib.controller.SCurrProcBlockController</package>
+				<package name="SOBCPLN">net.hedtech.general.common.libraries.Soqolib.controller.SobcplnController</package>
+				<package name="S$_CURRICULUM_FIELDS">net.hedtech.general.common.libraries.Soqolib.controller.SCurriculumFieldsController</package>
+				<package name="S$_COMM_PLAN_BLOCK">net.hedtech.general.common.libraries.Soqolib.controller.SCommPlanBlockController</package>
+				<package name="SORAINF">net.hedtech.general.common.libraries.Soqolib.controller.SorainfController</package>
+				<package name="S$_CURRICULA">net.hedtech.general.common.libraries.Soqolib.controller.SCurriculaController</package>
+				<package name="S$_CURRICULA_TRADITIONAL">net.hedtech.general.common.libraries.Soqolib.controller.SCurriculaTraditionalController</package>
+				<package name="SORLCUR">net.hedtech.general.common.libraries.Soqolib.controller.SorlcurController</package>
+				<package name="SORLFOS">net.hedtech.general.common.libraries.Soqolib.controller.SorlfosController</package>
+				<package name="SORLCUR_LITE">net.hedtech.general.common.libraries.Soqolib.controller.SorlcurLiteController</package>
+				<package name="SORLFOS_LITE">net.hedtech.general.common.libraries.Soqolib.controller.SorlfosLiteController</package>
+				<package name="S$_ADMIN_ASSIGN">net.hedtech.general.common.libraries.Soqolib.controller.SAdminAssignController</package>
+				<package name="G$_EXTENDED_SEARCH_BLOCK">net.hedtech.general.common.libraries.Soqolib.controller.GExtendedSearchBlockController</package>
+				<package name="S$_CURRICULA_SUMMARY">net.hedtech.general.common.libraries.Soqolib.controller.SCurriculaSummaryController</package>
+				<package name="S$_CURRICULA_LITE">net.hedtech.general.common.libraries.Soqolib.controller.SCurriculaLiteController</package>
+				<package name="SOVLCUR">net.hedtech.general.common.libraries.Soqolib.controller.SovlcurController</package>
+				<package name="SOVLFOS">net.hedtech.general.common.libraries.Soqolib.controller.SovlfosController</package>
+				<package name="SGRSTSP">net.hedtech.general.common.libraries.Soqolib.controller.SgrstspController</package>
+				<package name="S$_STUDYPATH">net.hedtech.general.common.libraries.Soqolib.controller.SStudypathController</package>
+			</packages>
+			<attachedLibraries>
+				<!-- Attached Libs -->
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+		<!-- model -->
+		<formModelConfiguration config="SOQOLIB.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.general.common.libraries.Soqolib.controller.SoqolibFormController</formController>
+		<blockControllers/>
+		<!-- <menuControllers><menu name="G$_DEFAULT_PM">net.hedtech.general.common.libraries.Soqolib.controller.GDefaultPmContextController</menu></menuControllers>-->
+	</task>
+</b:beans>

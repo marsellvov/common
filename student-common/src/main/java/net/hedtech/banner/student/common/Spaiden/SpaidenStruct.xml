@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/student/common/Spaiden/SpaidenAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/student/common/Spaiden/SpaidenLovs.xml" Name="SPAIDEN">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/student/common/Spaiden/views/ViewMainWindow">
+      <StackedCanvas Id="SPRIDEN_CURRENT_1_CANVAS" />
+      <ContentCanvas Id="KEY_BLOCK_CANVAS" />
+      <TabPageCanvas Id="G$_IDEN_TAB_CANVAS">
+        <Page Id="CURRENT_ID_TAB" />
+        <Page Id="ALTERNATE_ID_TAB" />
+        <Page Id="ADDRESS_TAB" />
+        <Page Id="TELEPHONE_TAB" />
+        <Page Id="BIO_TAB" />
+        <Page Id="EMAIL_TAB" />
+        <Page Id="EMERGENCY_CONTACT_TAB" />
+        <Page Id="ADDITIONAL_ID_TAB" />
+      </TabPageCanvas>
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false" />
+    </Window>
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/student/common/Spaiden/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="FORM_HEADER">
+      <Item Enabled="false" Id="EMAIL_IND" MaxLength="30" Type="TextItem" />
+      <Item Enabled="false" Id="CMT_RESULT" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Enabled="false" Id="WHICH_NAME_SEARCH" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DisplayAsPassword="true" Enabled="false" Id="MATERIAL_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_BLOCK" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_FIELD" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_BLOCK_FIELD" MaxLength="61" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_USER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="KEY_BLOCK">
+      <Item AutoSkip="true" CanvasName="KEY_BLOCK_CANVAS" Id="ID" MaxLength="9" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="FULL_NAME" MaxLength="230" Navigable="false" Type="TextItem" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="GENERATE_BTN" MaxLength="11" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="CONFID_IND" MaxLength="14" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="DCSD_IND" MaxLength="11" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="PIDM" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="ENTITY_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" MaxLength="30" Type="Button" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" MaxLength="30" Type="Button" Visible="false" />
+    </Block>
+    <Block Id="SPRIDEN_CURRENT">
+    </Block>
+    <Block Id="SPRIDEN_PREVIOUS">
+    </Block>
+    <Block Id="SPRADDR">
+    </Block>
+    <Block Id="SPRTELE">
+    </Block>
+    <Block Id="SPBPERS">
+    </Block>
+    <Block Id="GOREMAL">
+    </Block>
+    <Block Id="SPREMRG">
+    </Block>
+    <Block Id="GORADID">
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="TEMP_CANVAS" Id="SPRICURR_NTYP_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="ADDRESS_BTN" MaxLength="11" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="PREVIOUS_NAME_BTN" MaxLength="11" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SOURCE_BTN" MaxLength="11" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="LEGAL_NAME_BTN" MaxLength="11" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="LEGAL_NAME_RETURN_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="LEGAL_NAME_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="LEGAL_NAME_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="LEGAL_NAME_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="PREVIOUS_SOURCE_BTN" MaxLength="11" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_6_RETURN_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_6_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_6_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_6_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_5_RETURN_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_5_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_5_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_5_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="SPRIDEN_CURRENT_1_CANVAS" Id="ID_LBT" MaxLength="11" Navigable="false" Type="Button" />
+<!--       <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_STAT_CODE_LBT" MaxLength="6" Navigable="false" Type="Button" /> -->
+<!--       <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_NATN_CODE_LBT" MaxLength="7" Navigable="false" Type="Button" /> -->
+<!--       <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_CNTY_CODE_LBT" MaxLength="7" Navigable="false" Type="Button" /> -->
+<!--       <Item CanvasName="TEMP_CANVAS" Id="TELE_CODE_LBT" MaxLength="7" Navigable="false" Type="Button" /> -->
+<!--       MORPHIS TODO MP comment to solve bug ELLBHR-20328 -->
+<!--       <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_ATYP_CODE_LBT" MaxLength="11" Navigable="false" Type="Button" /> -->
+<!--       <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_ASRC_CODE_LBT" MaxLength="7" Navigable="false" Type="Button" /> -->
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_CURRENT_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_CURRENT_1_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_CURRENT_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item Id="SPRIDEN_CURRENT_2_RETURN_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_CURRENT_2_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_CURRENT_2_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item Id="SPRIDEN_PREV_4_RETURN_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREV_4_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREV_4_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREVIOUS_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREVIOUS_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREVIOUS_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREVIOUS_3_RETURN_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+  </Logic>
+</FormStructure>

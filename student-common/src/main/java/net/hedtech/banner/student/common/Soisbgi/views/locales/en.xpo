@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas:morphis:frames:messages">
+  <msg id="sovsbgv.sovsbgvActivityDate.hint">Activity Date.</msg>
+  <msg id="sovsbgv.sovsbgvTypeInd.prompt">Type</msg>
+  <msg id="sovsbgv.sovsbgvTypeInd.hint">Source or Background Institution Type;  Press HELP for Detail Information.</msg>
+  <msg id="sovsbgv.sovsbgvCode.prompt">Code</msg>
+  <msg id="sovsbgv.sovsbgvCode.hint">Source or Background Institution Code.</msg>
+  <msg id="sovsbgv.sovsbgvDesc.prompt">Name</msg>
+  <msg id="sovsbgv.sovsbgvDesc.hint">Source or Background Institution Code Description.</msg>
+  <msg id="sovsbgv.sovsbgvCity.prompt">City</msg>
+  <msg id="sovsbgv.sovsbgvCity.hint">City.</msg>
+  <msg id="sovsbgv.sovsbgvStatCode.prompt">State or
+Province</msg>
+  <msg id="sovsbgv.sovsbgvStatCode.hint">State or Province Code.</msg>
+  <msg id="sovsbgv.sovsbgvAdmrCode.prompt">Admission
+Request Code</msg>
+  <msg id="sovsbgv.sovsbgvTitleCombo.prompt">Institution Type</msg>
+  <msg id="sovsbgv.sovsbgvHS.prompt">HS</msg>
+  <msg id="sovsbgv.sovsbgvCollege.prompt">College</msg>
+  <msg id="sovsbgv.sovsbgvSource.prompt">Source</msg>
+  <msg id="sovsbgv.sovsbgvNone.prompt">None</msg>
+  <msg id="sovsbgv.sovsbgvAdmrCode.hint">Admissions Request Code.</msg>
+  <msg id="buttonControlBlock.stvsbgi1ExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.stvsbgi1SoasbgiBtn.label">Source Information</msg>
+  <msg id="buttonControlBlock.stvsbgi1EntqryBtn.label">Enter Query</msg>
+  <msg id="buttonControlBlock.displayStatCodeLbt.label">State/Prov</msg>
+  <msg id="buttonControlBlock.stvsbgiAdmrCodeLbt.label">Request</msg>
+  <msg id="buttonControlBlock.stvsbgi1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.stvsbgi1ExeqryBtn.label">Search</msg>
+  <msg id="buttonControlBlock.stvsbgi1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.sovsbgvStatCodeLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.sovsbgvAdmrCodeLbt.tooltip">Search</msg>
+  <msg id="mainWindow.title">Source/Background Institution Query-Only Form</msg>
+  <msg id="sovsbgv1Canvas.text19.text">Source or Background Institution</msg>
+  <msg id="gCautionAlert.title">Banner</msg>
+  <msg id="gCautionAlert.btn1.label">OK</msg>
+  <msg id="gCautionAlert.btn2.label">Cancel</msg>
+  <msg id="gCautionOkAlert.title">Banner</msg>
+  <msg id="gCautionOkAlert.btn1.label">OK</msg>
+  <msg id="gInfoAlert.title">Banner</msg>
+  <msg id="gInfoAlert.btn1.label">OK</msg>
+  <msg id="gWarningAlert.title">Banner</msg>
+  <msg id="gWarningAlert.btn1.label">OK</msg>
+  <msg id="gExtendSolutAlert.title">Message from Banner Document Management...</msg>
+  <msg id="gExtendSolutAlert.btn1.label">OK</msg>
+  <msg id="gExtendSolut2Alert.title">Message from Banner Document Management...</msg>
+  <msg id="gExtendSolut2Alert.btn1.label">Yes</msg>
+  <msg id="gExtendSolut2Alert.btn2.label">No</msg>
+  <msg id="gExtendSolut2Alert.btn3.label">Cancel</msg>
+  <msg id="gExitFormAlert.title">Banner</msg>
+  <msg id="gExitFormAlert.text">Do you want to save the changes you have made?</msg>
+  <msg id="gExitFormAlert.btn1.label">Yes</msg>
+  <msg id="gExitFormAlert.btn2.label">No</msg>
+  <msg id="gExitFormAlert.btn3.label">Cancel</msg>
+  <msg id="gCloseFormAlert.title">Banner</msg>
+  <msg id="gCloseFormAlert.text">Your changes could not be saved, close form?</msg>
+  <msg id="gCloseFormAlert.btn1.label">Yes</msg>
+  <msg id="gCloseFormAlert.btn2.label">No</msg>
+  <msg id="gPipeMessageAlert.title">Banner</msg>
+  <msg id="gPipeMessageAlert.btn1.label">Yes</msg>
+  <msg id="gPipeMessageAlert.btn2.label">No</msg>
+</messages>

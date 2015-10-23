@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="ftvfsyr.ftvfsyrCoasCode.prompt">COA</msg>
+  <msg id="ftvfsyr.ftvfsyrFsyrCode.prompt">Fiscal Year</msg>
+  <msg id="ftvfsyr.ftvfsyrStartDate.prompt">Start Date</msg>
+  <msg id="ftvfsyr.ftvfsyrEndDate.prompt">End Date</msg>
+  <msg id="ftvfsyr.currentPeriod.prompt">Periods</msg>
+  <msg id="ftvfsyr.currentPeriodStartDate.prompt">Start Date</msg>
+  <msg id="ftvfsyr.currentPeriodEndDate.prompt">End Date</msg>
+  <msg id="ftvfsyr.earliestOpenPeriod.prompt">First Open Period</msg>
+  <msg id="ftvfsyr.ftvfsyrEoyAccrStatusInd.prompt">Accrual Period Status</msg>
+  <msg id="ftvfsyr.ftvfsyrActivityDate.prompt">Last Activity</msg>
+  <msg id="buttonControlBlock.ftvfsyr1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.ftvfsyr1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.ftvfsyr1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">System Control Fiscal Year Validation</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+  <msg id="ftvcoasLov.title">Chart of Accounts List (FTVCOAS)</msg>
+  <msg id="ftvcoasLov.ftvcoasCoasCode.title">COA</msg>
+  <msg id="ftvcoasLov.ftvcoasTitle.title">Chart of Account Title</msg>
+  <msg id="ftvcoasLov.ftvcoasStatusInd.title">Status</msg>
+  <msg id="ftvcoasLov.icrggq0.title">Eff Date</msg>
+  <msg id="ftvcoasLov.icrggq1.title">Term Date</msg>
+  <msg id="ftvfsyrLov.title">System Control Fiscal Year List</msg>
+  <msg id="ftvfsyrLov.ftvfsyrCoasCode.title">COA</msg>
+  <msg id="ftvfsyrLov.ftvfsyrFsyrCode.title">FY</msg>
+  <msg id="ftvfsyrLov.ftvfsyrStartDate.title">Start Date</msg>
+  <msg id="ftvfsyrLov.ftvfsyrEndDate.title">End Date</msg>
+  <msg id="ftvfsyrLov.ftvfspdFspdCode.title">Periods</msg>
+  <msg id="ftvfsyrLov.ftvfsyrEoyAccrStatusInd.title">Accrual Status</msg>
+  <msg id="ftvfsyrLov.ftvfsyrActivityDate.title">Last Activity Date</msg>
+</messages>

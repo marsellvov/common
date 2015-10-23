@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" title="mainWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<formpanel name="mainWindow" width="100%">
+		<include src="net/hedtech/banner/general/common/Guagmnu/views/PanelMenuCanvas"/>
+		<include src="net/hedtech/banner/general/common/Guagmnu/views/PanelGoCanvas"/>
+		<include src="net/hedtech/banner/general/common/Guagmnu/views/PanelTreeCanvas"/>
+		<include src="net/hedtech/banner/general/common/Guagmnu/views/PanelMessagesCanvas"/>
+		<include src="net/hedtech/banner/general/common/Guagmnu/views/PanelLinksCanvas"/>
+		<include src="net/hedtech/banner/general/common/Guagmnu/views/PanelSitemap"/>
+		<include src="net/hedtech/general/common/libraries/Goqolib/views/PanelGWelcomeCanvas"/>
+	</formpanel>
+</config>

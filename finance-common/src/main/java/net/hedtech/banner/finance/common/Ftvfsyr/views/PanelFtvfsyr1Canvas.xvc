@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVFSYR"/>
+	<panel class="ContentCanvas" id="pnlFtvfsyr1Canvas" menu="G$_DEFAULT_PM" name="FTVFSYR_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="FTVFSYR" name="grdFtvfsyr" width="100%">
+						<viewheader>
+							<viewcolumn block="FTVFSYR" case="upper" datatype="String" label="ftvfsyr.ftvfsyrCoasCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVFSYR_COAS_CODE" name="ftvfsyrCoasCode" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVFSYR" datatype="String" enabled="false" label="ftvfsyr.ftvfsyrFsyrCode.prompt" labelstyle="DEFAULT" maxlength="2" member="FTVFSYR_FSYR_CODE" name="ftvfsyrFsyrCode" width="80px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVFSYR" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvfsyr.ftvfsyrStartDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVFSYR_START_DATE" name="ftvfsyrStartDate" width="70px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVFSYR" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvfsyr.ftvfsyrEndDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVFSYR_END_DATE" name="ftvfsyrEndDate" width="70px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVFSYR" datatype="String" enabled="false" label="ftvfsyr.currentPeriod.prompt" labelstyle="DEFAULT" maxlength="2" member="CURRENT_PERIOD" name="currentPeriod" width="60px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVFSYR" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvfsyr.currentPeriodStartDate.prompt" labelstyle="DEFAULT" maxlength="11" member="CURRENT_PERIOD_START_DATE" name="currentPeriodStartDate" width="70px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVFSYR" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvfsyr.currentPeriodEndDate.prompt" labelstyle="DEFAULT" maxlength="11" member="CURRENT_PERIOD_END_DATE" name="currentPeriodEndDate" width="70px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVFSYR" datatype="String" enabled="false" label="ftvfsyr.earliestOpenPeriod.prompt" labelstyle="DEFAULT" maxlength="2" member="EARLIEST_OPEN_PERIOD" name="earliestOpenPeriod" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVFSYR" case="upper" datatype="String" enabled="false" label="ftvfsyr.ftvfsyrEoyAccrStatusInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVFSYR_EOY_ACCR_STATUS_IND" name="ftvfsyrEoyAccrStatusInd" width="120px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

@@ -1,0 +1,426 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/DUMMY.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___SOBCTRL_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___CURRICULUM_HOLD_ITEMS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___CURRICULUM_CHANGE.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___CURR_PROC_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SOBCPLN.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___CURRICULUM_FIELDS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___COMM_PLAN_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SORAINF.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___CURRICULA.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___CURRICULA_TRADITIONAL.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SORLCUR.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SORLFOS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SORLCUR_LITE.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SORLFOS_LITE.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___ADMIN_ASSIGN.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/G___EXTENDED_SEARCH_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___CURRICULA_SUMMARY.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___CURRICULA_LITE.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SOVLCUR.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SOVLFOS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SGRSTSP.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/S___STUDYPATH.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Soqolib/model/SOQOLIB.ValueSet.Config.xml"/>
+
+	
+	<formModel id="SOQOLIB.Model.Config" name="SOQOLIB">
+		<modelClass>net.hedtech.general.common.libraries.Soqolib.model.SoqolibModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="DUMMY" manager="DUMMY.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_SOBCTRL_BLOCK" manager="S___SOBCTRL_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_CURRICULUM_HOLD_ITEMS" manager="S___CURRICULUM_HOLD_ITEMS.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_CURRICULUM_CHANGE" manager="S___CURRICULUM_CHANGE.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_CURR_PROC_BLOCK" manager="S___CURR_PROC_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SOBCPLN" manager="SOBCPLN.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_CURRICULUM_FIELDS" manager="S___CURRICULUM_FIELDS.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_COMM_PLAN_BLOCK" manager="S___COMM_PLAN_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SORAINF" manager="SORAINF.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_CURRICULA" manager="S___CURRICULA.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_CURRICULA_TRADITIONAL" manager="S___CURRICULA_TRADITIONAL.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SORLCUR" manager="SORLCUR.Manager.Config">
+				<associations>
+					<association child ="SORLFOS"  preventParentlessOperations="true" deleteParentBehavior="Cascading" >
+						<mapping parent="SOVLCUR_PIDM" child="SOVLFOS_PIDM"/>
+
+						<mapping parent="SOVLCUR_SEQNO" child="SOVLFOS_LCUR_SEQNO"/>
+					</association>
+				</associations>
+		
+		
+			</businessObject>
+			<businessObject name="SORLFOS" manager="SORLFOS.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SORLCUR_LITE" manager="SORLCUR_LITE.Manager.Config">
+				<associations>
+					<association child ="SORLFOS_LITE"  preventParentlessOperations="true" deleteParentBehavior="Cascading" >
+						<mapping parent="SOVLCUR_PIDM" child="SOVLFOS_PIDM"/>
+
+						<mapping parent="SOVLCUR_SEQNO" child="SOVLFOS_LCUR_SEQNO"/>
+					</association>
+				</associations>
+		
+		
+			</businessObject>
+			<businessObject name="SORLFOS_LITE" manager="SORLFOS_LITE.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_ADMIN_ASSIGN" manager="S___ADMIN_ASSIGN.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="G$_EXTENDED_SEARCH_BLOCK" manager="G___EXTENDED_SEARCH_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_CURRICULA_SUMMARY" manager="S___CURRICULA_SUMMARY.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_CURRICULA_LITE" manager="S___CURRICULA_LITE.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SOVLCUR" manager="SOVLCUR.Manager.Config">
+				<associations>
+					<association child ="SOVLFOS"  preventParentlessOperations="true" deleteParentBehavior="Cascading" >
+						<mapping parent="SOVLCUR_PIDM" child="SOVLFOS_PIDM"/>
+
+						<mapping parent="SOVLCUR_SEQNO" child="SOVLFOS_LCUR_SEQNO"/>
+					</association>
+				</associations>
+		
+		
+			</businessObject>
+			<businessObject name="SOVLFOS" manager="SOVLFOS.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SGRSTSP" manager="SGRSTSP.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="S$_STUDYPATH" manager="S___STUDYPATH.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="SGVSTSP_RG.ValueSet.Config"/>
+				<valueSet config="STVACCL_RG.ValueSet.Config"/>
+				<valueSet config="STVACCT_RG.ValueSet.Config"/>
+				<valueSet config="STVACPR_RG.ValueSet.Config"/>
+				<valueSet config="STVACST_RG.ValueSet.Config"/>
+				<valueSet config="STVACTC_RG.ValueSet.Config"/>
+				<valueSet config="STVACTN_RG.ValueSet.Config"/>
+				<valueSet config="STVADDA_RG.ValueSet.Config"/>
+				<valueSet config="STVADMT_RG.ValueSet.Config"/>
+				<valueSet config="STVADVR_RG.ValueSet.Config"/>
+				<valueSet config="STVAFCT_RG.ValueSet.Config"/>
+				<valueSet config="STVAPDC_RG.ValueSet.Config"/>
+				<valueSet config="STVAPLS_RG.ValueSet.Config"/>
+				<valueSet config="STVAPRN_RG.ValueSet.Config"/>
+				<valueSet config="STVAPRV_RG.ValueSet.Config"/>
+				<valueSet config="STVAPST_RG.ValueSet.Config"/>
+				<valueSet config="STVAREA_RG.ValueSet.Config"/>
+				<valueSet config="STVARTP_RG.ValueSet.Config"/>
+				<valueSet config="STVASTD_RG.ValueSet.Config"/>
+				<valueSet config="STVASTY_RG.ValueSet.Config"/>
+				<valueSet config="STVATRA_RG.ValueSet.Config"/>
+				<valueSet config="STVATRB_RG.ValueSet.Config"/>
+				<valueSet config="STVATRD_RG.ValueSet.Config"/>
+				<valueSet config="STVATRC_RG.ValueSet.Config"/>
+				<valueSet config="STVATRE_RG.ValueSet.Config"/>
+				<valueSet config="STVATTR_RG.ValueSet.Config"/>
+				<valueSet config="STVATTS_RG.ValueSet.Config"/>
+				<valueSet config="STVBLCK_RG.ValueSet.Config"/>
+				<valueSet config="STVBSKL_RG.ValueSet.Config"/>
+				<valueSet config="STVCACT_RG.ValueSet.Config"/>
+				<valueSet config="STVCALD_RG.ValueSet.Config"/>
+				<valueSet config="STVCAPL_RG.ValueSet.Config"/>
+				<valueSet config="STVCAST_RG.ValueSet.Config"/>
+				<valueSet config="STVCCSL_RG.ValueSet.Config"/>
+				<valueSet config="STVCERT_RG.ValueSet.Config"/>
+				<valueSet config="STVCPRT_RG.ValueSet.Config"/>
+				<valueSet config="STVCHRT_RG.ValueSet.Config"/>
+				<valueSet config="STVCGRP_RG.ValueSet.Config"/>
+				<valueSet config="STVCKSR_RG.ValueSet.Config"/>
+				<valueSet config="STVCKST_RG.ValueSet.Config"/>
+				<valueSet config="STVCLAS_RG.ValueSet.Config"/>
+				<valueSet config="STVCMTT_RG.ValueSet.Config"/>
+				<valueSet config="STVCNTR_RG.ValueSet.Config"/>
+				<valueSet config="STVCOMF_RG.ValueSet.Config"/>
+				<valueSet config="STVCOMS_RG.ValueSet.Config"/>
+				<valueSet config="STVCOMT_RG.ValueSet.Config"/>
+				<valueSet config="STVCOPC_RG.ValueSet.Config"/>
+				<valueSet config="STVCPLN_RG.ValueSet.Config"/>
+				<valueSet config="STVCREA_RG.ValueSet.Config"/>
+				<valueSet config="STVCSTA_RG.ValueSet.Config"/>
+				<valueSet config="STVCSTS_RG.ValueSet.Config"/>
+				<valueSet config="STVCTYP_RG.ValueSet.Config"/>
+				<valueSet config="STVCUDA_RG.ValueSet.Config"/>
+				<valueSet config="STVCUDB_RG.ValueSet.Config"/>
+				<valueSet config="STVCUDC_RG.ValueSet.Config"/>
+				<valueSet config="STVCUDD_RG.ValueSet.Config"/>
+				<valueSet config="STVCUDE_RG.ValueSet.Config"/>
+				<valueSet config="STVCUDF_RG.ValueSet.Config"/>
+				<valueSet config="STVDAYT_RG.ValueSet.Config"/>
+				<valueSet config="STVDCPR_RG.ValueSet.Config"/>
+				<valueSet config="STVDEGS_RG.ValueSet.Config"/>
+				<valueSet config="STVDIVS_RG.ValueSet.Config"/>
+				<valueSet config="STVDPMR_RG.ValueSet.Config"/>
+				<valueSet config="STVDRES_RG.ValueSet.Config"/>
+				<valueSet config="STVEAPL_RG.ValueSet.Config"/>
+				<valueSet config="STVEDIS_RG.ValueSet.Config"/>
+				<valueSet config="STVEDLV_RG.ValueSet.Config"/>
+				<valueSet config="STVEGOL_RG.ValueSet.Config"/>
+				<valueSet config="STVELIG_RG.ValueSet.Config"/>
+				<valueSet config="STVELMT_RG.ValueSet.Config"/>
+				<valueSet config="STVEMEX_RG.ValueSet.Config"/>
+				<valueSet config="STVEMPL_RG.ValueSet.Config"/>
+				<valueSet config="STVEOPS_RG.ValueSet.Config"/>
+				<valueSet config="STVEPRT_RG.ValueSet.Config"/>
+				<valueSet config="STVEPSC_RG.ValueSet.Config"/>
+				<valueSet config="STVESEL_RG.ValueSet.Config"/>
+				<valueSet config="STVESTS_RG.ValueSet.Config"/>
+				<valueSet config="STVEVAL_RG.ValueSet.Config"/>
+				<valueSet config="STVEVEN_RG.ValueSet.Config"/>
+				<valueSet config="STVEXAM_RG.ValueSet.Config"/>
+				<valueSet config="STVFATT_RG.ValueSet.Config"/>
+				<valueSet config="STVFCST_RG.ValueSet.Config"/>
+				<valueSet config="STVFCTG_RG.ValueSet.Config"/>
+				<valueSet config="STVFSTP_RG.ValueSet.Config"/>
+				<valueSet config="STVFTYP_RG.ValueSet.Config"/>
+				<valueSet config="STVGADR_RG.ValueSet.Config"/>
+				<valueSet config="STVGAIN_RG.ValueSet.Config"/>
+				<valueSet config="STVGAST_RG.ValueSet.Config"/>
+				<valueSet config="STVGATT_RG.ValueSet.Config"/>
+				<valueSet config="STVGCHG_RG.ValueSet.Config"/>
+				<valueSet config="STVGMOD_RG.ValueSet.Config"/>
+				<valueSet config="STVGOAL_RG.ValueSet.Config"/>
+				<valueSet config="STVGRST_RG.ValueSet.Config"/>
+				<valueSet config="STVGSTA_RG.ValueSet.Config"/>
+				<valueSet config="STVGTYP_RG.ValueSet.Config"/>
+				<valueSet config="STVHAPS_RG.ValueSet.Config"/>
+				<valueSet config="STVHLWK_RG.ValueSet.Config"/>
+				<valueSet config="STVHOND_RG.ValueSet.Config"/>
+				<valueSet config="STVINCM_RG.ValueSet.Config"/>
+				<valueSet config="STVINFC_RG.ValueSet.Config"/>
+				<valueSet config="STVINNM_RG.ValueSet.Config"/>
+				<valueSet config="STVINTS_RG.ValueSet.Config"/>
+				<valueSet config="STVINTV_RG.ValueSet.Config"/>
+				<valueSet config="STVLEAV_RG.ValueSet.Config"/>
+				<valueSet config="STVLEND_RG.ValueSet.Config"/>
+				<valueSet config="STVLMOD_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_RG.ValueSet.Config"/>
+				<valueSet config="STVMEAS_RG.ValueSet.Config"/>
+				<valueSet config="STVMECL_RG.ValueSet.Config"/>
+				<valueSet config="STVMEET_RG.ValueSet.Config"/>
+				<valueSet config="STVMRCD_RG.ValueSet.Config"/>
+				<valueSet config="STVMSCD_RG.ValueSet.Config"/>
+				<valueSet config="STVNATT_RG.ValueSet.Config"/>
+				<valueSet config="STVNCRQ_RG.ValueSet.Config"/>
+				<valueSet config="STVNCST_RG.ValueSet.Config"/>
+				<valueSet config="STVNDRF_RG.ValueSet.Config"/>
+				<valueSet config="STVNEED_RG.ValueSet.Config"/>
+				<valueSet config="STVNIST_RG.ValueSet.Config"/>
+				<valueSet config="STVOCCS_RG.ValueSet.Config"/>
+				<valueSet config="STVORSN_RG.ValueSet.Config"/>
+				<valueSet config="STVPRAC_RG.ValueSet.Config"/>
+				<valueSet config="STVPREL_RG.ValueSet.Config"/>
+				<valueSet config="STVPREV_RG.ValueSet.Config"/>
+				<valueSet config="STVPRGA_RG.ValueSet.Config"/>
+				<valueSet config="STVPRNT_RG.ValueSet.Config"/>
+				<valueSet config="STVPSCD_RG.ValueSet.Config"/>
+				<valueSet config="STVPTRM_RG.ValueSet.Config"/>
+				<valueSet config="STVPWAV_RG.ValueSet.Config"/>
+				<valueSet config="STVQPTP_RG.ValueSet.Config"/>
+				<valueSet config="STVRADM_RG.ValueSet.Config"/>
+				<valueSet config="STVRATP_RG.ValueSet.Config"/>
+				<valueSet config="STVRESD_RG.ValueSet.Config"/>
+				<valueSet config="STVRGRE_RG.ValueSet.Config"/>
+				<valueSet config="STVRATE_RG.ValueSet.Config"/>
+				<valueSet config="STVREAS_RG.ValueSet.Config"/>
+				<valueSet config="STVRECR_RG.ValueSet.Config"/>
+				<valueSet config="STVREPS_RG.ValueSet.Config"/>
+				<valueSet config="STVRSLT_RG.ValueSet.Config"/>
+				<valueSet config="STVRSTA_RG.ValueSet.Config"/>
+				<valueSet config="STVRTRM_RG.ValueSet.Config"/>
+				<valueSet config="STVRTYP_RG.ValueSet.Config"/>
+				<valueSet config="STVSAAT_RG.ValueSet.Config"/>
+				<valueSet config="STVSAEL_RG.ValueSet.Config"/>
+				<valueSet config="STVSAPR_RG.ValueSet.Config"/>
+				<valueSet config="STVSAQS_RG.ValueSet.Config"/>
+				<valueSet config="STVSARE_RG.ValueSet.Config"/>
+				<valueSet config="STVSARX_RG.ValueSet.Config"/>
+				<valueSet config="STVSATR_RG.ValueSet.Config"/>
+				<valueSet config="STVSATT_RG.ValueSet.Config"/>
+				<valueSet config="STVSBGI_RG.ValueSet.Config"/>
+				<valueSet config="STVSBJC_RG.ValueSet.Config"/>
+				<valueSet config="STVSCCD_RG.ValueSet.Config"/>
+				<valueSet config="STVSCHD_RG.ValueSet.Config"/>
+				<valueSet config="STVSCPC_RG.ValueSet.Config"/>
+				<valueSet config="STVSEPR_RG.ValueSet.Config"/>
+				<valueSet config="STVSESS_RG.ValueSet.Config"/>
+				<valueSet config="STVSFAE_RG.ValueSet.Config"/>
+				<valueSet config="STVSIZE_RG.ValueSet.Config"/>
+				<valueSet config="STVSOFF_RG.ValueSet.Config"/>
+				<valueSet config="STVSPST_RG.ValueSet.Config"/>
+				<valueSet config="STVSPRV_RG.ValueSet.Config"/>
+				<valueSet config="STVSSEP_RG.ValueSet.Config"/>
+				<valueSet config="STVSSER_RG.ValueSet.Config"/>
+				<valueSet config="STVSSGP_RG.ValueSet.Config"/>
+				<valueSet config="STVSSST_RG.ValueSet.Config"/>
+				<valueSet config="STVSSTS_RG.ValueSet.Config"/>
+				<valueSet config="STVSSRS_RG.ValueSet.Config"/>
+				<valueSet config="STVSTAT_RG.ValueSet.Config"/>
+				<valueSet config="STVSTSP_RG.ValueSet.Config"/>
+				<valueSet config="STVSTST_RG.ValueSet.Config"/>
+				<valueSet config="STVSTYP_RG.ValueSet.Config"/>
+				<valueSet config="STVSUDA_RG.ValueSet.Config"/>
+				<valueSet config="STVSUDB_RG.ValueSet.Config"/>
+				<valueSet config="STVSUDC_RG.ValueSet.Config"/>
+				<valueSet config="STVSUDD_RG.ValueSet.Config"/>
+				<valueSet config="STVSUDE_RG.ValueSet.Config"/>
+				<valueSet config="STVSUDF_RG.ValueSet.Config"/>
+				<valueSet config="STVSUDG_RG.ValueSet.Config"/>
+				<valueSet config="STVSUDH_RG.ValueSet.Config"/>
+				<valueSet config="STVSUDI_RG.ValueSet.Config"/>
+				<valueSet config="STVSUDJ_RG.ValueSet.Config"/>
+				<valueSet config="STVTAAU_RG.ValueSet.Config"/>
+				<valueSet config="STVTADM_RG.ValueSet.Config"/>
+				<valueSet config="STVTAPE_RG.ValueSet.Config"/>
+				<valueSet config="STVTAST_RG.ValueSet.Config"/>
+				<valueSet config="STVTASK_RG.ValueSet.Config"/>
+				<valueSet config="STVTEAC_RG.ValueSet.Config"/>
+				<valueSet config="STVTEFR_RG.ValueSet.Config"/>
+				<valueSet config="STVTEPR_RG.ValueSet.Config"/>
+				<valueSet config="STVTEIN_RG.ValueSet.Config"/>
+				<valueSet config="STVTESC_RG.ValueSet.Config"/>
+				<valueSet config="STVTLVL_RG.ValueSet.Config"/>
+				<valueSet config="STVETME_RG.ValueSet.Config"/>
+				<valueSet config="STVETPU_RG.ValueSet.Config"/>
+				<valueSet config="STVETTP_RG.ValueSet.Config"/>
+				<valueSet config="STVETST_RG.ValueSet.Config"/>
+				<valueSet config="STVTMST_RG.ValueSet.Config"/>
+				<valueSet config="STVTOPS_RG.ValueSet.Config"/>
+				<valueSet config="STVTPRT_RG.ValueSet.Config"/>
+				<valueSet config="STVTRAC_RG.ValueSet.Config"/>
+				<valueSet config="STVTRCN_RG.ValueSet.Config"/>
+				<valueSet config="STVTRNS_RG.ValueSet.Config"/>
+				<valueSet config="STVTREQ_RG.ValueSet.Config"/>
+				<valueSet config="STVTRMT_RG.ValueSet.Config"/>
+				<valueSet config="STVRSTS_RG.ValueSet.Config"/>
+				<valueSet config="STVTSPT_RG.ValueSet.Config"/>
+				<valueSet config="STVTSRC_RG.ValueSet.Config"/>
+				<valueSet config="STVTYPE_RG.ValueSet.Config"/>
+				<valueSet config="STVVTYP_LOV.ValueSet.Config"/>
+				<valueSet config="STVVTAB_RG.ValueSet.Config"/>
+				<valueSet config="STVVETC_RG.ValueSet.Config"/>
+				<valueSet config="STVVOED_RG.ValueSet.Config"/>
+				<valueSet config="STVVTYP_RG.ValueSet.Config"/>
+				<valueSet config="STVWACK_RG.ValueSet.Config"/>
+				<valueSet config="STVWAIV_RG.ValueSet.Config"/>
+				<valueSet config="STVWAPP_RG.ValueSet.Config"/>
+				<valueSet config="STVWDRL_RG.ValueSet.Config"/>
+				<valueSet config="STVWKLD_RG.ValueSet.Config"/>
+				<valueSet config="STVWLTT_RG.ValueSet.Config"/>
+				<valueSet config="STVWRSN_RG.ValueSet.Config"/>
+				<valueSet config="STVWSSO_RG.ValueSet.Config"/>
+				<valueSet config="STVWPIC_RG.ValueSet.Config"/>
+				<valueSet config="STVWPYO_RG.ValueSet.Config"/>
+				<valueSet config="ADJ_TERM_RG.ValueSet.Config"/>
+				<valueSet config="ADJ_PROG_RG.ValueSet.Config"/>
+				<valueSet config="ADJ_GROUP_RG.ValueSet.Config"/>
+				<valueSet config="ADJ_AREA_RG.ValueSet.Config"/>
+				<valueSet config="GTVLFST_RG.ValueSet.Config"/>
+				<valueSet config="SARRRCT_TERM_RG.ValueSet.Config"/>
+				<valueSet config="SHRGRDE_INCMP_RG.ValueSet.Config"/>
+				<valueSet config="SMBAOGN_AREA_RG.ValueSet.Config"/>
+				<valueSet config="SMBPOGN_ID_RG.ValueSet.Config"/>
+				<valueSet config="SMBPOGN_REQ_RG.ValueSet.Config"/>
+				<valueSet config="SMRPRLE_PROGRAM_RG.ValueSet.Config"/>
+				<valueSet config="SMRPRLE_PROG_RG.ValueSet.Config"/>
+				<valueSet config="SOBCURR_CAMP_RG.ValueSet.Config"/>
+				<valueSet config="SOBCURR_COLL_RG.ValueSet.Config"/>
+				<valueSet config="SOBCURR_DEGC_RG.ValueSet.Config"/>
+				<valueSet config="SOBCURR_LEVL_RG.ValueSet.Config"/>
+				<valueSet config="SOBCURR_PROGRAM_RG.ValueSet.Config"/>
+				<valueSet config="SOBCURR_TERM_RG.ValueSet.Config"/>
+				<valueSet config="SORAROL_RG.ValueSet.Config"/>
+				<valueSet config="SORLFOS_MAJR_RG.ValueSet.Config"/>
+				<valueSet config="STVACTN_SUB_RG.ValueSet.Config"/>
+				<valueSet config="STVACTN_WAV_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_CURR_CONC_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_LFOS_CONC_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_MAJR_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_CONC_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_MINR_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_CURRMAJR_RG.ValueSet.Config"/>
+				<valueSet config="STVDEPT_CURRDEPT_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_CURRMINR_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_CURRCONC_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_PROGMAJR_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_CONCBASE_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_CRESCONC_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_CRESMAJR_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_CRESMINR_RG.ValueSet.Config"/>
+				<valueSet config="STVPREL_WEB_RG.ValueSet.Config"/>
+				<valueSet config="STVTERM_CTLG_RG.ValueSet.Config"/>
+				<valueSet config="STVTERM_CATALOG_RG.ValueSet.Config"/>
+				<valueSet config="SOBCACT_RG.ValueSet.Config"/>
+				<valueSet config="SORELTL_RG.ValueSet.Config"/>
+				<valueSet config="SORLFOS_ATTACH_MAJR_RG.ValueSet.Config"/>
+				<valueSet config="SOVLFOS_ATTACH_MAJR_RG.ValueSet.Config"/>
+				<valueSet config="SOTLCUR_RG.ValueSet.Config"/>
+				<valueSet config="SOTLFOS_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

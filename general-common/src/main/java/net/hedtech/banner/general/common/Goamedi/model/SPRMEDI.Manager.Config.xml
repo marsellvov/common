@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPRMEDI.Manager.Config" name="SPRMEDI">
+		
+		<items>
+			<item name="SPRMEDI_PIDM" logicalName="sprmediPidm" type="java.math.BigDecimal" physicalName="SPRMEDI_PIDM"  >
+				<value>
+					<item name = "PIDM" businessObject = "KEY_BLOCK" />
+				</value>
+			</item>
+			<item name="COMMIT_SW" logicalName="commitSw" type="String"  virtual="true" />
+			<item name="SPRMEDI_MEDI_CODE" logicalName="sprmediMediCode" type="String" physicalName="SPRMEDI_MEDI_CODE"  />
+			<item name="HOLD_MEDI_CODE" logicalName="holdMediCode" type="String"  virtual="true" />
+			<item name="MEDI_DESCRIPTION" logicalName="mediDescription" type="String"  virtual="true" />
+			<item name="SPRMEDI_MEDI_CODE_DATE" logicalName="sprmediMediCodeDate" type="java.util.Date" physicalName="SPRMEDI_MEDI_CODE_DATE"  />
+			<item name="SPRMEDI_DISA_CODE" logicalName="sprmediDisaCode" type="String" physicalName="SPRMEDI_DISA_CODE"  />
+			<item name="DISA_DESCRIPTION" logicalName="disaDescription" type="String"  virtual="true" />
+			<item name="SPRMEDI_ONSET_AGE" logicalName="sprmediOnsetAge" type="java.math.BigDecimal" physicalName="SPRMEDI_ONSET_AGE"  />
+			<item name="SPRMEDI_DISB_IND" logicalName="sprmediDisbInd" type="String" physicalName="SPRMEDI_DISB_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="SPRMEDI_MDEQ_CODE" logicalName="sprmediMdeqCode" type="String" physicalName="SPRMEDI_MDEQ_CODE"  />
+			<item name="MDEQ_DESCRIPTION" logicalName="mdeqDescription" type="String"  virtual="true" />
+			<item name="SPRMEDI_SPSR_CODE" logicalName="sprmediSpsrCode" type="String" physicalName="SPRMEDI_SPSR_CODE"  />
+			<item name="SPSR_DESCRIPTION" logicalName="spsrDescription" type="String"  virtual="true" />
+			<item name="SPRMEDI_COMMENT" logicalName="sprmediComment" type="String" physicalName="SPRMEDI_COMMENT"  />
+			<item name="SPRMEDI_USER_ID" logicalName="sprmediUserId" type="String" physicalName="SPRMEDI_USER_ID"  />
+			<item name="SPRMEDI_ACTIVITY_DATE" logicalName="sprmediActivityDate" type="java.util.Date" physicalName="SPRMEDI_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>
+			</item>
+			<item name="CNT_PRIMARY" logicalName="cntPrimary" type="java.math.BigDecimal"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Goamedi.model.SprmediAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE SPRMEDI_PIDM  = :PIDM  ]]></defaultWhereClause> 
+		<defaultOrderByClause><![CDATA[sprmedi_activity_date desc, sprmedi_medi_code]]></defaultOrderByClause>
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="1" enabled="true"/>
+
+	</manager>
+</b:beans>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Lovs>
+	<Lov Height="267" Name="HELPFLD_LOV" RecordGroup="HELPFLD_RG" Title="Field Names" Width="575">
+		<Columns>
+			<Column DataMember="GUBBHLP_FIELD_NAME" ReturnItem="GLOBAL.VALUE" Title="Field Name" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="HELPBLK_LOV" RecordGroup="HELPBLK_RG" Title="Block Names" Width="575">
+		<Columns>
+			<Column DataMember="GUBBHLP_BLOCK_NAME" ReturnItem="GLOBAL.VALUE" Title="Block Name" Width="247"/>
+		</Columns>
+	</Lov>
+</Lovs>

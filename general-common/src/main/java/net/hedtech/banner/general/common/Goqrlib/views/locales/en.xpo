@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas:morphis:frames:messages">
+  <msg id="gBannerReportHeader.orepName.prompt">Report Name:</msg>
+  <msg id="gBannerReportHeader.orepServerName.prompt">Report Server:</msg>
+  <msg id="gBannerReportHeader.orepService.prompt">Report Service:</msg>
+  <msg id="gBannerReportBlock.orepDesformat.prompt">Destination Format:</msg>
+  <msg id="gBannerReportBlock.orepDesformat.hint">Select Destination Format to specify the format for the Report output.</msg>
+  <msg id="gBannerReportBlock.orepDestype.prompt">Destination Type:</msg>
+  <msg id="gBannerReportBlock.orepDestype.hint">Select Destination Type to specify the type of device that will receive the Report output.</msg>
+  <msg id="gBannerReportBlock.orepDesname.prompt">Destination Name:</msg>
+  <msg id="gBannerReportBlock.orepDesname.hint">Enter Destination Name to indicate any valid cache destination, file name, printer name or e-mail ID.</msg>
+  <msg id="gBannerReportBlock.orepExecutionMode.prompt">Execution Mode:</msg>
+  <msg id="gBannerReportBlock.orepExecutionMode.hint">Select the Execution Mode to be used for processing this Report.</msg>
+  <msg id="gBannerReportBlock.orepCommMode.prompt">Communication Mode:</msg>
+  <msg id="gBannerReportBlock.orepCommMode.hint">Select the Communication Mode to be used for processing this Report.</msg>
+  <msg id="gBannerReportBlock.orepParamformDesignation.prompt">Parameter Form:</msg>
+  <msg id="gBannerReportBlock.orepParamformDesignation.hint">Select as to whether the Report Parameter form is to display or not when processing the Report.</msg>
+  <msg id="gBannerReportBlock.orepSubmitBtn.label">Run Report</msg>
+  <msg id="gBannerReportBlock.orepSubmitBtn.hint">Select to process the Report.</msg>
+  <msg id="gBannerReportBlock.orepCancelBtn.label">Cancel</msg>
+  <msg id="gBannerReportBlock.orepCancelBtn.hint">Select to not process the Report and return to the prior location in the Form.</msg>
+  <msg id="gBannerReportWindow.title">Banner Oracle Report Values</msg>
+  <msg id="gBannerReportBlock.orepDesformat.item0.label">DELIMITED</msg>
+  <msg id="gBannerReportBlock.orepDesformat.item1.label">DELIMITEDDATA</msg>
+  <msg id="gBannerReportBlock.orepDesformat.item2.label">HTML</msg>
+  <msg id="gBannerReportBlock.orepDesformat.item3.label">HTMLCSS</msg>
+  <msg id="gBannerReportBlock.orepDesformat.item4.label">PDF</msg>
+  <msg id="gBannerReportBlock.orepDesformat.item5.label">POSTSCRIPT</msg>
+  <msg id="gBannerReportBlock.orepDesformat.item6.label">PRINTER DEFINITION</msg>
+  <msg id="gBannerReportBlock.orepDesformat.item7.label">RTF</msg>
+  <msg id="gBannerReportBlock.orepDesformat.item8.label">XML</msg>
+  <msg id="gBannerReportBlock.orepDestype.item0.label">Cache</msg>
+  <msg id="gBannerReportBlock.orepDestype.item1.label">File</msg>
+  <msg id="gBannerReportBlock.orepDestype.item2.label">Mail</msg>
+  <msg id="gBannerReportBlock.orepDestype.item3.label">Printer</msg>
+  <msg id="gBannerReportBlock.orepExecutionMode.item0.label">Batch</msg>
+  <msg id="gBannerReportBlock.orepExecutionMode.item1.label">Runtime</msg>
+  <msg id="gBannerReportBlock.orepCommMode.item0.label">Asynchronous</msg>
+  <msg id="gBannerReportBlock.orepCommMode.item1.label">Synchronous</msg>
+  <msg id="gBannerReportBlock.orepParamformDesignation.item0.label">No</msg>
+  <msg id="gBannerReportBlock.orepParamformDesignation.item1.label">Yes</msg>
+</messages>

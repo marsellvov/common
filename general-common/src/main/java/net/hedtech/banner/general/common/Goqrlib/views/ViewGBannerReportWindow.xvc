@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" title="gBannerReportWindow.title">
+  <include src="net/hedtech/banner/general/common/Goqrlib/views/PanelGBannerReportCanvas" xmlns:xv="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic"  xmlns:xc="urn:schemas:morphis:frames:control">
+  </include>
+</window>

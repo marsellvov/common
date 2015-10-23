@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="STVSTAT.Manager.Config" name="STVSTAT">
+		
+		<items>
+			<item name="STVSTAT_CODE" logicalName="stvstatCode" type="String" physicalName="STVSTAT_CODE"  />
+			<item name="STVSTAT_DESC" logicalName="stvstatDesc" type="String" physicalName="STVSTAT_DESC"  />
+			<item name="STVSTAT_EDI_EQUIV" logicalName="stvstatEdiEquiv" type="String" physicalName="STVSTAT_EDI_EQUIV"  />
+			<item name="STVSTAT_IPEDS_CDE" logicalName="stvstatIpedsCde" type="String" physicalName="STVSTAT_IPEDS_CDE"  />
+			<item name="STVSTAT_STATSCAN_CDE" logicalName="stvstatStatscanCde" type="String" physicalName="STVSTAT_STATSCAN_CDE"  />
+			<item name="STVSTAT_ACTIVITY_DATE" logicalName="stvstatActivityDate" type="java.util.Date" physicalName="STVSTAT_ACTIVITY_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Stvstat.model.StvstatAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[stvstat_code]]></defaultOrderByClause>
+		<pagination maximumRows="20" enabled="true"/>
+
+	</manager>
+</b:beans>

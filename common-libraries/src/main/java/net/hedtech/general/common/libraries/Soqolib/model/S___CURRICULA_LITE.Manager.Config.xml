@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___CURRICULA_LITE.Manager.Config" name="SCurriculaLite">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="SORLCUR_LITE_RESD_CODE" logicalName="sorlcurLiteResdCode" type="String"   />
+			<item name="SORLCUR_LITE_STYP_CODE" logicalName="sorlcurLiteStypCode" type="String"   />
+			<item name="SORLCUR_LITE_FULL_PART_IND" logicalName="sorlcurLiteFullPartInd" type="String"   />
+			<item name="SORLCUR_LITE_RATE_CODE" logicalName="sorlcurLiteRateCode" type="String"   />
+			<item name="SORLCUR_LITE_EGOL_CODE" logicalName="sorlcurLiteEgolCode" type="String"   />
+			<item name="SORLCUR_LITE_EDLV_CODE" logicalName="sorlcurLiteEdlvCode" type="String"   />
+			<item name="DEFAULT_USED" logicalName="defaultUsed" type="String"   />
+			<item name="LFOS_REC_NUM" logicalName="lfosRecNum" type="Integer"   />
+			<item name="LCUR_REC_NUM" logicalName="lcurRecNum" type="Integer"   />
+			<item name="LCUR_REC_CNT" logicalName="lcurRecCnt" type="Integer"   />
+			<item name="DATA_SEPARATOR_LINE_LITE_1" logicalName="dataSeparatorLineLite1" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SCurriculaLite</managerClass>
+
+	</manager>
+</b:beans>

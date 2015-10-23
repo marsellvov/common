@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Guainst/GuainstAlerts.xml" FirstNavigationBlock="GUBINST" LovDataPath="/net/hedtech/banner/general/common/Guainst/GuainstLovs.xml" Name="GUAINST">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Guainst/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="GUBINST_1_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="QRY_CHG_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="EFFDATE_EFF_DATE_TIME" MaxLength="14" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="WORK_DATETIME" MaxLength="14" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="HOLD_CONV_RATE" MaxLength="17" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="SAVE_ITEM" MaxLength="40" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_0" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_1" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+    </Block>
+    <Block Id="GUBINST">
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstName.hint" Id="GUBINST_NAME" MaxLength="60" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstHouseNumber.hint" Id="GUBINST_HOUSE_NUMBER" MaxLength="10" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstStreetLine1.hint" Id="GUBINST_STREET_LINE1" MaxLength="75" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstStreetLine2.hint" Id="GUBINST_STREET_LINE2" MaxLength="75" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstStreetLine3.hint" Id="GUBINST_STREET_LINE3" MaxLength="75" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstStreetLine4.hint" Id="GUBINST_STREET_LINE4" MaxLength="75" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstCity.hint" Id="GUBINST_CITY" MaxLength="50" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstStatCode.hint" Id="GUBINST_STAT_CODE" Lov="STVSTAT_LOV" MaxLength="3" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstZip.hint" Id="GUBINST_ZIP" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstNatnCode.hint" Id="GUBINST_NATN_CODE" Lov="STVNATN_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.natnDescription.hint" Id="NATN_DESCRIPTION" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstCtryCodePhone.hint" Id="GUBINST_CTRY_CODE_PHONE" MaxLength="4" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstPhoneArea.hint" Id="GUBINST_PHONE_AREA" MaxLength="6" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstPhone.hint" Id="GUBINST_PHONE" MaxLength="12" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstPhoneExt.hint" Id="GUBINST_PHONE_EXT" MaxLength="10" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstOperatingSystemInd.hint" Id="GUBINST_OPERATING_SYSTEM_IND" MaxLength="3" Required="true" Type="List" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstHighedGovtInd.hint" Id="GUBINST_HIGHED_GOVT_IND" MaxLength="1" Required="true" Type="List" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstInstanceName.hint" Id="GUBINST_INSTANCE_NAME" MaxLength="8" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="Number" Enabled="true" Hint="gubinst.gubinstZipDefaultLength.hint" Id="GUBINST_ZIP_DEFAULT_LENGTH" MaxLength="2" MaxValue="10" MinValue="0" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="Number" Enabled="true" Hint="gubinst.gubinstMaxOpenForms.hint" Id="GUBINST_MAX_OPEN_FORMS" MaxLength="3" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstBaseCurrCode.hint" Id="GUBINST_BASE_CURR_CODE" Lov="GTVCURR_LOV" MaxLength="30" Required="true" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.currTitle.hint" Id="CURR_TITLE" MaxLength="35" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="Number" Enabled="true" Hint="gubinst.gubinstSsnMaxLength.hint" Id="GUBINST_SSN_MAX_LENGTH" MaxLength="2" MaxValue="15" MinValue="9" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="Number" Enabled="false" Hint="gubinst.gubinstCenturyPivot.hint" Id="GUBINST_CENTURY_PIVOT" MaxLength="2" Navigable="false" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="Number" Enabled="true" Hint="gubinst.gubinstDateDefaultFormat.hint" Id="GUBINST_DATE_DEFAULT_FORMAT" MaxLength="1" Type="RadioGroup" Visible="true">
+        <Item Id="MDY" Type="RadioButton" />
+        <Item Id="DMY" Type="RadioButton" />
+        <Item Id="YMD" Type="RadioButton" />
+      </Item>
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstOnlineMatchInd.hint" Id="GUBINST_ONLINE_MATCH_IND" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Hint="gubinst.gubinstWfEnabledInd.hint" Id="GUBINST_WF_ENABLED_IND" MaxLength="1" Type="Checkbox" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstSqltraceEnabledInd.hint" Id="GUBINST_SQLTRACE_ENABLED_IND" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstMessageEnabledInd.hint" Id="GUBINST_MESSAGE_ENABLED_IND" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstSsnSearchEnabledInd.hint" Id="GUBINST_SSN_SEARCH_ENABLED_IND" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstGeneralInstalled.hint" Id="GUBINST_GENERAL_INSTALLED" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="false" Id="GENERAL_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="Date" Enabled="false" Id="GENERAL_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <!--<Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="Date" Enabled="false" Id="GUBINST_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />-->
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="GUBINST_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true"  CanvasName="GUBINST_1_CANVAS" >
+      	<Extension Name="ViewMode" Value="None"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE"/>
+      </Item>
+      <Item DataType="String" Enabled="false" Hint="gubinst.gubinstCharmodeGurjobsInd.hint" Id="GUBINST_CHARMODE_GURJOBS_IND" MaxLength="1" Navigable="false" Type="Checkbox" Visible="false" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstAlumniInstalled.hint" Id="GUBINST_ALUMNI_INSTALLED" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="false" Id="ALUMNI_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="Date" Enabled="false" Id="ALUMNI_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item DataType="String" Enabled="true" Hint="gubinst.gubinstCourtsInstalled.hint" Id="GUBINST_COURTS_INSTALLED" MaxLength="1" Navigable="false" Type="Checkbox" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COURTS_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="COURTS_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstBilcshInstalled.hint" Id="GUBINST_BILCSH_INSTALLED" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="false" Id="BILCSH_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="Date" Enabled="false" Id="BILCSH_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item DataType="String" Enabled="true" Hint="gubinst.gubinstCashrecInstalled.hint" Id="GUBINST_CASHREC_INSTALLED" MaxLength="1" Navigable="false" Type="Checkbox" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CASHREC_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="CASHREC_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstFinaidInstalled.hint" Id="GUBINST_FINAID_INSTALLED" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="false" Id="FINAID_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="Date" Enabled="false" Id="FINAID_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item DataType="String" Enabled="true" Hint="gubinst.gubinstRecordsInstalled.hint" Id="GUBINST_RECORDS_INSTALLED" MaxLength="1" Navigable="false" Type="Checkbox" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="RECORDS_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="RECORDS_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstFinaidInd.hint" Id="GUBINST_FINAID_IND" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item DataType="String" Enabled="true" Hint="gubinst.gubinstPtaxInstalled.hint" Id="GUBINST_PTAX_INSTALLED" MaxLength="1" Navigable="false" Type="Checkbox" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="PTAX_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="PTAX_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstFinanceInstalled.hint" Id="GUBINST_FINANCE_INSTALLED" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="false" Id="FINANCE_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="Date" Enabled="false" Id="FINANCE_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item DataType="String" Enabled="true" Hint="gubinst.gubinstOcctaxInstalled.hint" Id="GUBINST_OCCTAX_INSTALLED" MaxLength="1" Navigable="false" Type="Checkbox" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="OCCTAX_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="OCCTAX_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstHumanreInstalled.hint" Id="GUBINST_HUMANRE_INSTALLED" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="false" Id="HUMANRE_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="Date" Enabled="false" Id="HUMANRE_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstPosbudInstalled.hint" Id="GUBINST_POSBUD_INSTALLED" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="false" Id="POSBUD_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="Date" Enabled="false" Id="POSBUD_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="true" Hint="gubinst.gubinstStudentInstalled.hint" Id="GUBINST_STUDENT_INSTALLED" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="String" Enabled="false" Id="STUDENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GUBINST_1_CANVAS" DataType="Date" Enabled="false" Id="STUDENT_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item DataType="String" Enabled="true" Hint="gubinst.gubinstUtilitiesInstalled.hint" Id="GUBINST_UTILITIES_INSTALLED" MaxLength="1" Navigable="false" Type="Checkbox" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="UTILITIES_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="UTILITIES_STAGE_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Hint="gubinst.gubinstKey.hint" Id="GUBINST_KEY" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="DISPLAY_BILCSH_RELEASE" MaxLength="5" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="GUBINST_1_CANVAS" Enabled="true" Id="GUBINST_BASE_CURR_CODE_LBT" MaxLength="7" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="GUBINST_1_CANVAS" Enabled="true" Id="GUBINST_NATN_CODE_LBT" MaxLength="7" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" CanvasName="GUBINST_1_CANVAS" Enabled="true" Hint="buttonControlBlock.patchesBtn.hint" Id="PATCHES_BTN" MaxLength="0" Type="Button" Visible="true" />
+    </Block>
+  </Logic>
+</FormStructure>

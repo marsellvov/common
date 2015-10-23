@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<window layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<include src="net/hedtech/general/common/libraries/Aoqclib/views/PanelAGiftPledgeCanvas" xmlns:xc="urn:schemas:morphis:frames:control" xmlns:xl="urn:schemas:morphis:frames:logic" xmlns:xv="urn:schemas:morphis:frames:view"/>
+	<include src="net/hedtech/general/common/libraries/Aoqclib/views/PanelAContactsCanvas" xmlns:xc="urn:schemas:morphis:frames:control" xmlns:xl="urn:schemas:morphis:frames:logic" xmlns:xv="urn:schemas:morphis:frames:view"/>
+</window>

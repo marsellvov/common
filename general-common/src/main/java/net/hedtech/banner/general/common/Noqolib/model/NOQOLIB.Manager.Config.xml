@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="NOQOLIB.Manager.Config" name="Noqolib">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="N$_ACCI_CODE" logicalName="nAcciCode" type="String"   />
+			<item name="N$_ACCI_FUND_CODE" logicalName="nAcciFundCode" type="String"   />
+			<item name="N$_ACCI_ORGN_CODE" logicalName="nAcciOrgnCode" type="String"   />
+			<item name="N$_ACCI_ACCT_CODE" logicalName="nAcciAcctCode" type="String"   />
+			<item name="N$_ACCI_PROG_CODE" logicalName="nAcciProgCode" type="String"   />
+			<item name="N$_ACCI_ACTV_CODE" logicalName="nAcciActvCode" type="String"   />
+			<item name="N$_ACCI_LOCN_CODE" logicalName="nAcciLocnCode" type="String"   />
+			<item name="N$_ACCI_FUND_OVER" logicalName="nAcciFundOver" type="String"   />
+			<item name="N$_ACCI_ORGN_OVER" logicalName="nAcciOrgnOver" type="String"   />
+			<item name="N$_ACCI_ACCT_OVER" logicalName="nAcciAcctOver" type="String"   />
+			<item name="N$_ACCI_PROG_OVER" logicalName="nAcciProgOver" type="String"   />
+			<item name="N$_ACCI_ACTV_OVER" logicalName="nAcciActvOver" type="String"   />
+			<item name="N$_ACCI_LOCN_OVER" logicalName="nAcciLocnOver" type="String"   />
+			<item name="N$_FOAPAL_FIELD" logicalName="nFoapalField" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Noqolib.model.Noqolib</managerClass>
+
+	</manager>
+</b:beans>

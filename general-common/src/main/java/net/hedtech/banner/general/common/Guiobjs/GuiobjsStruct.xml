@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Guiobjs/GuiobjsAlerts.xml" FirstNavigationBlock="GUBOBJS" Name="GUIOBJS">
+	<Visual>
+		<Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Guiobjs/views/ViewMainWindow">
+			<ContentCanvas Id="TEMP_CANVAS" Visible="false"/>
+			<ContentCanvas Id="GUBOBJS_1_CANVAS"/>
+		</Window>
+	</Visual>
+	<Logic>
+		
+		
+		<Block Id="FORM_HEADER">
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true"/>
+		</Block>
+		<Block AllowDelete="false" AllowInsert="false" AllowUpdate="false" Id="GUBOBJS" MultiRecord="true">
+			<Item AllowInsert="false" AllowUpdate="false" CanvasName="GUBOBJS_1_CANVAS" DataType="String" Enabled="true" Hint="gubobjs.gubobjsName.hint" Id="GUBOBJS_NAME" MaxLength="30" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowUpdate="false" CanvasName="GUBOBJS_1_CANVAS" DataType="String" Enabled="true" Hint="gubobjs.gubobjsDesc.hint" Id="GUBOBJS_DESC" MaxLength="80" Type="TextItem"/>
+			<Item AllowInsert="false" AllowUpdate="false" CanvasName="GUBOBJS_1_CANVAS" DataType="String" Enabled="true" Hint="gubobjs.gubobjsObjtCode.hint" Id="GUBOBJS_OBJT_CODE" MaxLength="10" NextItem="GUBOBJS_NAME" PreviousItem="GUBOBJS_DESC" Type="List" Visible="true"/>
+		</Block>
+		<Block Id="BUTTON_CONTROL_BLOCK">
+			<Item CanvasName="GUBOBJS_1_CANVAS" Enabled="true" Id="GUBOBJS_1_START_BTN" MaxLength="30" Navigable="false" Type="Button" Visible="true"/>
+			<Item CanvasName="GUBOBJS_1_CANVAS" Enabled="true" Id="GUBOBJS_1_ROLLBACK_BTN" MaxLength="30" Navigable="false" Type="Button" Visible="true"/>
+			<Item CanvasName="GUBOBJS_1_CANVAS" Enabled="true" Id="GUBOBJS_1_EXIT_BTN" MaxLength="30" Navigable="false" Type="Button" Visible="true"/>
+			<Item CanvasName="TEMP_CANVAS" Enabled="true" Id="GUBOBJS_1_EXITVALUE_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+		</Block>
+	</Logic>
+</FormStructure>

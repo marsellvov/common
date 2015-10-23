@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GORADID"/>
+	<panel width="100%">
+		<accordion width="100%">
+			<panel label="generalaccordion.details.text">
+				<panel width="100%">
+					<gridview block="GORADID" name="grdGoradid" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="GORADID" case="upper" keyactions="NEXT_ITEM" label="goradid.goradidAdidCode.prompt" labelstyle="DEFAULT" maxlength="4" member="GORADID_ADID_CODE" name="goradidAdidCode" validation="server" width="90px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="GORADID" label="goradid.adidDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="ADID_DESC" name="adidDesc" width="200px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="GORADID" label="goradid.goradidAdditionalId.prompt" labelstyle="DEFAULT" maxlength="50" member="GORADID_ADDITIONAL_ID" name="goradidAdditionalId" validation="server" width="300px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+<!-- 							<viewcolumn block="GORADID" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="goradid.goradidActivityDate.prompt" labelstyle="DEFAULT" maxlength="26" member="GORADID_ACTIVITY_DATE" name="goradidActivityDate" width="120px"> -->
+<!-- 								<editor> -->
+<!-- 									<calendar> -->
+<!-- 										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/> -->
+<!-- 									</calendar> -->
+<!-- 								</editor> -->
+<!-- 							</viewcolumn> -->
+<!-- 							<viewcolumn block="GORADID" case="upper" enabled="false" label="goradid.goradidUserId.prompt" labelstyle="DEFAULT" maxlength="30" member="GORADID_USER_ID" name="goradidUserId" width="140px"> -->
+<!-- 								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/> -->
+<!-- 							</viewcolumn> -->
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

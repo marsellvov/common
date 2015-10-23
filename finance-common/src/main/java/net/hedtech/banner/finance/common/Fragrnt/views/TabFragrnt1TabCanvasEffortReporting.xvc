@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <interactionblock name="FRRGREC" />
+  <panel width="100%">
+    <accordion width="100%">
+      <panel label="effortReporting.label">
+        <panel width="100%">
+          <gridview block="FRRGREC" name="grdFrrgrec" width="100%">
+            <viewheader>
+              <viewcolumn block="FRRGREC" datatype="String" label="frrgrec.frrgrecAcctElement.prompt" labelstyle="DEFAULT" maxlength="1" member="FRRGREC_ACCT_ELEMENT" name="frrgrecAcctElement" required="true" width="180px">
+                <editor>
+                  <combobox action="WHEN-LIST-CHANGED">
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                    <model>
+                      <item label="frrgrec.frrgrecAcctElement.item0.label" value="F" />
+                      <item label="frrgrec.frrgrecAcctElement.item1.label" value="O" />
+                      <item label="frrgrec.frrgrecAcctElement.item2.label" value="P" />
+                      <item label="frrgrec.frrgrecAcctElement.item3.label" value="A" />
+                      <item label="frrgrec.frrgrecAcctElement.item4.label" value="L" />
+                      <item label="frrgrec.frrgrecAcctElement.item5.label" />
+                    </model>
+                  </combobox>
+                </editor>
+              </viewcolumn>
+              <viewcolumn allowupdate="false" block="FRRGREC" datatype="String" label="frrgrec.frrgrecCoasCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FRRGREC_COAS_CODE" name="frrgrecCoasCode" required="true" navigable="false" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn block="FRRGREC" case="upper" datatype="String" label="frrgrec.frrgrecAcctElementValue.prompt" labelstyle="DEFAULT" maxlength="6" member="FRRGREC_ACCT_ELEMENT_VALUE" name="frrgrecAcctElementValue" validation="server" width="80px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <editor>
+                  <lovbox action="WHEN-BUTTON-PRESSED"/>
+                </editor>
+              </viewcolumn>
+              <viewcolumn block="FRRGREC" datatype="String" label="frrgrec.frrgrecAcctElementValueDescription.prompt" labelstyle="DEFAULT" maxlength="35" member="FRRGREC_ACCT_ELEMENT_VALUE_DES" name="frrgrecAcctElementValueDes" width="110px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn autoskip="true" block="FRRGREC" case="upper" datatype="String" keyactions="NEXT_ITEM" label="frrgrec.frrgrecEccgCode.prompt" labelstyle="DEFAULT" maxlength="30" member="FRRGREC_ECCG_CODE" name="frrgrecEccgCode" validatefromlist="true" width="130px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <editor>
+                  <lovbox />
+                </editor>
+              </viewcolumn>
+              <viewcolumn block="FRRGREC" datatype="String" label="frrgrec.frrgrecReportSection.prompt" labelstyle="DEFAULT" maxlength="1" member="FRRGREC_REPORT_SECTION" name="frrgrecReportSection">
+                <editor>
+                  <combobox action="WHEN-LIST-CHANGED">
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                    <model>
+                      <item label="frrgrec.frrgrecReportSection.item0.label" value="S" />
+                      <item label="frrgrec.frrgrecReportSection.item1.label" value="N" />
+                      <item label="frrgrec.frrgrecReportSection.item2.label" value="A" />
+                      <item label="frrgrec.frrgrecReportSection.item3.label" />
+                    </model>
+                  </combobox>
+                </editor>
+              </viewcolumn>
+              <viewcolumn block="FRRGREC" datatype="String" label="frrgrec.frrgrecChargeType.prompt" labelstyle="DEFAULT" maxlength="1" member="FRRGREC_CHARGE_TYPE" name="frrgrecChargeType">
+                <editor>
+                  <combobox>
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                    <model>
+                      <item label="frrgrec.frrgrecChargeType.item0.label" value="C" />
+                      <item label="frrgrec.frrgrecChargeType.item1.label" value="D" />
+                      <item label="frrgrec.frrgrecChargeType.item2.label" />
+                    </model>
+                  </combobox>
+                </editor>
+              </viewcolumn>
+            </viewheader>
+          </gridview>
+        </panel>
+      </panel>
+    </accordion>
+  </panel>
+</config>

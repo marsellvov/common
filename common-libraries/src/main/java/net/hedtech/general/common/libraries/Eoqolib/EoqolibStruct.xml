@@ -1,0 +1,14 @@
+<FormStructure Name="EOQOLIB" LovDataPath="/net/hedtech/general/common/libraries/Eoqolib/EoqolibLovs.xml">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/general/common/libraries/Eoqolib/views/ViewMainWindow">
+      <ContentCanvas Id="EQQOLIB_1_CANVAS">
+      </ContentCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="FORM_HEADER">
+      <Item Id="CURRENT_RELEASE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="10" Enabled="false" Type="TextItem">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

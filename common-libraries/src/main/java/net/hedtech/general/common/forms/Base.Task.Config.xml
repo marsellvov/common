@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+
+	<b:import resource="classpath:/net/hedtech/general/common/forms/Base.Menu.Config.xml"/>
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/general/common/forms/model/BASE.Model.Config.xml"/>
+	
+	
+	<task id="BASE.Task.Config" name="BASE">
+		<taskClass>net.hedtech.general.common.forms.BaseTask</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/general/common/forms/BaseStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			
+				<!-- Package Beans-->
+			<packages>
+				<package name="MENU_SERVICES">net.hedtech.general.common.forms.services.MenuServices</package>
+			</packages>
+		</supportCodeConfiguration>
+		
+		<menuConfiguration config="Base.Menu.Config"/>
+
+		<!-- model -->
+		<formModelConfiguration config="BASE.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.general.common.forms.controller.DefaultFormController</formController>
+		<menuControllers>
+			<menu name="GoTo">net.hedtech.general.common.forms.controller.GoToMenuController</menu>
+		</menuControllers>
+	</task>
+</b:beans>
+
+ 

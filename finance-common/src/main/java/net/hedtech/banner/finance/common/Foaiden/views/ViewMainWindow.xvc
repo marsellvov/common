@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" name="mainWindow" title="mainWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<formpanel width="100%">
+			<include src="net/hedtech/banner/finance/common/Foaiden/views/PanelGNavCanvas"/>
+			<include src="net/hedtech/banner/finance/common/Foaiden/views/PanelSpridenCurrent1Canvas"/>
+			<include src="net/hedtech/banner/finance/common/Foaiden/views/PanelGIdenTabCanvas"/>
+			<include src="net/hedtech/general/common/libraries/Goqolib/views/PanelGWelcomeCanvas"/>
+	</formpanel>
+</config>

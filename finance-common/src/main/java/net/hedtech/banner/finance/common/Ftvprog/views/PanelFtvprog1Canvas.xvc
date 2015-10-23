@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVPROG"/>
+	<panel class="ContentCanvas" id="pnlFtvprog1Canvas" menu="G$_DEFAULT_PM" name="FTVPROG_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="ftvprog.accordion.title">
+				<panel width="100%">
+					<gridview block="FTVPROG" name="grdFtvprog" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="FTVPROG" case="upper" datatype="String" label="ftvprog.ftvprogCoasCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVPROG_COAS_CODE" name="ftvprogCoasCode" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVPROG" case="upper" datatype="String" enabled="false" label="ftvprog.ftvprogProgCode.prompt" labelstyle="DEFAULT" maxlength="6" member="FTVPROG_PROG_CODE" name="ftvprogProgCode" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVPROG" datatype="String" label="ftvprog.ftvprogTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FTVPROG_TITLE" name="ftvprogTitle" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVPROG" case="upper" datatype="String" enabled="false" label="ftvprog.ftvprogDataEntryInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVPROG_DATA_ENTRY_IND" name="ftvprogDataEntryInd" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVPROG" case="upper" datatype="String" enabled="false" label="ftvprog.ftvprogStatusInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVPROG_STATUS_IND" name="ftvprogStatusInd" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVPROG" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvprog.ftvprogEffDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVPROG_EFF_DATE" name="ftvprogEffDate" width="100px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVPROG" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvprog.ftvprogTermDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVPROG_TERM_DATE" name="ftvprogTermDate" width="100px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

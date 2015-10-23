@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SPRADDR"/>
+	<interactionblock name="FORM_HEADER"/>
+	<panel class="StackedCanvas" id="pnlSpraddr1Canvas" menu="G$_DEFAULT_PM" name="SPRADDR_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="soaddrq.accordion.title">
+				<repeater block="SPRADDR" width="100%">
+					<panel width="100%">
+						<gridlayout cols="2" orientation="vertical">
+							<gridcell>
+								<textfield  case="upper" datatype="String" height="23px" label="spraddr.spraddrAtypCode.prompt" maxlength="2" member="SPRADDR_ATYP_CODE" name="spraddrAtypCode" style="ui-buttoninput" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="flashlit" member="SPRADDR_ATYP_CODE_LBT" name="spraddrAtypCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spraddr.spraddrAtypCodeLbt.tooltip" width="23px"/>
+							</gridcell>
+							<gridcell>
+								<textfield  datatype="Number" height="23px" label="spraddr.spraddrSeqno.prompt" maxlength="4" member="SPRADDR_SEQNO" name="spraddrSeqno" textalign="right" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield  case="upper" datatype="String" enabled="false" height="23px" label="spraddr.spraddrAsrcCode.prompt" maxlength="4" member="SPRADDR_ASRC_CODE" name="spraddrAsrcCode" style="ui-buttoninput" width="51px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="flashlit" member="SPRADDR_ASRC_CODE_LBT" name="spraddrAsrcCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spraddr.spraddrAsrcCodeLbt.tooltip" width="23px"/>
+							</gridcell>
+							<gridcell>
+								<textfield  datatype="String" height="23px" label="spraddr.spraddrHouseNumber.prompt" maxlength="10" member="SPRADDR_HOUSE_NUMBER" name="spraddrHouseNumber" width="223px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield  datatype="String" height="23px" label="spraddr.spraddrStreetLine1.prompt" maxlength="75" member="SPRADDR_STREET_LINE1" name="spraddrStreetLine1" width="223px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield  datatype="String" enabled="false" height="23px" label="spraddr.spraddrStreetLine2.prompt" maxlength="75" member="SPRADDR_STREET_LINE2" name="spraddrStreetLine2" width="223px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield  datatype="String" enabled="false" height="23px" label="spraddr.spraddrStreetLine3.prompt" maxlength="75" member="SPRADDR_STREET_LINE3" name="spraddrStreetLine3" width="223px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield  datatype="String" enabled="false" height="23px" label="spraddr.spraddrStreetLine4.prompt" maxlength="75" member="SPRADDR_STREET_LINE4" name="spraddrStreetLine4" width="223px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield  datatype="String" enabled="false" height="23px" label="spraddr.spraddrCity.prompt" maxlength="50" member="SPRADDR_CITY" name="spraddrCity" width="160px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<checkbox  height="23px" label="spraddr.spraddrStatusInd.label" member="SPRADDR_STATUS_IND" name="spraddrStatusInd" navigable="false" othervaluestate="unchecked" value="I" width="78px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</checkbox>
+							</gridcell>
+							<gridcell>
+								<calendar  case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spraddr.spraddrFromDate.prompt" maxlength="11" member="SPRADDR_FROM_DATE" name="spraddrFromDate" width="140px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</calendar>
+							</gridcell>
+							<gridcell>
+								<calendar  case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spraddr.spraddrToDate.prompt" maxlength="11" member="SPRADDR_TO_DATE" name="spraddrToDate" width="140px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</calendar>
+							</gridcell>
+							<gridcell>
+								<textfield  case="upper" datatype="String" enabled="false" height="23px" label="spraddr.spraddrStatCode.prompt" maxlength="3" member="SPRADDR_STAT_CODE" name="spraddrStatCode" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield  datatype="String" enabled="false" height="23px" label="spraddr.spraddrZip.prompt" maxlength="30" member="SPRADDR_ZIP" name="spraddrZip" width="80px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield  datatype="String" enabled="false" height="23px" label="spraddr.spraddrNatnCode.prompt" maxlength="5" member="SPRADDR_NATN_CODE" name="spraddrNatnCode" width="61px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+								<textfield  datatype="String" height="23px" maxlength="30" member="NATN_DESC" name="natnDesc" width="250px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+						</gridlayout>
+					</panel>
+				</repeater>
+			</panel>
+		</accordion>
+	</panel>
+</config>

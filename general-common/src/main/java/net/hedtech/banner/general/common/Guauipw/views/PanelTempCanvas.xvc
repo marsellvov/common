@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="CURRENT_VALUES"/>
+	<panel class="ContentCanvas" id="pnlTempCanvas" menu="G$_DEFAULT_PM" name="TEMP_CANVAS" visible="false" width="100%">
+		<button action="WHEN-BUTTON-PRESSED" block="CURRENT_VALUES" height="23px" label="currentValues.t1ExitBtn.label" member="T_1_EXIT_BTN" name="t1ExitBtn" width="80px"/>
+	</panel>
+</config>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GORPRAC.Manager.Config" name="gorprac">
+		
+		<items>
+			<item name="GORPRAC_RACE_CDE" logicalName="gorpracRaceCde" type="String" physicalName="GORPRAC_RACE_CDE"  />
+			<item name="RACE_DESC" logicalName="raceDesc" type="String"  virtual="true" />
+			<item name="GORPRAC_USER_ID" logicalName="gorpracUserId" type="String" physicalName="GORPRAC_USER_ID"  />
+			<item name="GORPRAC_ACTIVITY_DATE" logicalName="gorpracActivityDate" type="java.util.Date" physicalName="GORPRAC_ACTIVITY_DATE"  />
+			<item name="GORPRAC_PIDM" logicalName="gorpracPidm" type="java.math.BigDecimal" physicalName="GORPRAC_PIDM"  />
+			<item name="GORPRAC_DATA_ORIGIN" logicalName="gorpracDataOrigin" type="String" physicalName="GORPRAC_DATA_ORIGIN"  />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqclib.model.GorpracAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE GORPRAC_PIDM = :KEY_BLOCK_PIDM]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[GORPRAC_RACE_CDE]]></defaultOrderByClause>	
+		<pagination maximumRows="3" enabled="true"/>
+	</manager>
+</b:beans>

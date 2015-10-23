@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<window layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SPRTELE"/>
+	<collapsiblepanel label="telephoneTab.label" name="grdSprtele" width="100%">
+		<repeater block="SPRTELE" width="100%">
+			<panel width="100%" style="ui-section">
+				<gridlayout cols="2" orientation="vertical">
+					<gridcell name="Tele-1">
+						<component label="sprtele.sprteleTeleCode.prompt">
+							<textbox autoskip="true" case="upper" height="23px" keyactions="NEXT_ITEM" label="sprtele.sprteleTeleCode.prompt" maxlength="30" member="SPRTELE_TELE_CODE" name="sprteleTeleCode" required="true" style="ui-buttoninput ui-hidelabel" width="51px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="SPRTELE_TELE_CODE_LBT" name="sprteleTeleCodeLbt" navigable="false" style="ui-buttoninput" tooltip="sprtele.sprteleTeleCodeLbt.tooltip" width="23px"/>
+							<textfield height="23px" maxlength="30" member="TELE_DESCRIPTION" name="teleDescription" width="141px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</component>
+					</gridcell>
+					<gridcell name="Tele-5">
+						<textbox autoskip="true" case="upper" height="23px" label="spraddr.phoneCtry.prompt" maxlength="4" member="SPRTELE_CTRY_CODE_PHONE" name="sprteleCtryCodePhone" tooltip="sprtele.sprteleCtryCodePhone.prompt" width="73px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" case="upper" height="23px" label="spremrg.spremrgPhoneArea.prompt" maxlength="6" member="SPRTELE_PHONE_AREA" name="sprtelePhoneArea" tooltip="sprtele.sprtelePhoneArea.prompt" width="73px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" case="upper" height="23px" label="sprtele.sprtelePhoneNumber.prompt" maxlength="12" member="SPRTELE_PHONE_NUMBER" name="sprtelePhoneNumber" tooltip="sprtele.sprtelePhoneNumber.prompt" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" case="upper" height="23px" label="spraddr.phoneExt.prompt" maxlength="10" member="SPRTELE_PHONE_EXT" name="sprtelePhoneExt" tooltip="sprtele.sprtelePhoneExt.prompt" width="120px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell name="Tele-2">
+						<textbox autoskip="true" case="upper" height="23px" label="sprtele.sprteleIntlAccess.prompt" maxlength="16" member="SPRTELE_INTL_ACCESS" name="sprteleIntlAccess" width="128px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell name="Tele-8">
+						<component>
+							<checkbox action="WHEN-CHECKBOX-CHANGED" height="23px" label="sprtele.sprtelePrimaryInd.label" member="SPRTELE_PRIMARY_IND" name="sprtelePrimaryInd" othervaluestate="unchecked" value="Y" width="80px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+							<checkbox height="23px" label="sprtele.sprteleUnlistInd.label" member="SPRTELE_UNLIST_IND" name="sprteleUnlistInd" othervaluestate="unchecked" value="Y" width="81px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+							<checkbox action="WHEN-CHECKBOX-CHANGED" height="23px" label="sprtele.sprteleStatusInd.label" member="SPRTELE_STATUS_IND" name="sprteleStatusInd" othervaluestate="unchecked" value="I" width="89px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</component>
+					</gridcell>
+					<gridcell name="Tele-3">
+						<textbox autoskip="true" height="23px" label="sprtele.sprteleComment.prompt" maxlength="60" member="SPRTELE_COMMENT" name="sprteleComment" width="367px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell name="Tele-4">
+						<component label="sprtele.sprteleAtypCode.prompt">
+							<textbox autoskip="true" case="upper" height="23px" label="sprtele.sprteleAtypCode.prompt" maxlength="30" member="SPRTELE_ATYP_CODE" name="sprteleAtypCode" style="ui-buttoninput ui-hidelabel" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" height="23px" icon="flashlit" member="SPRTELE_ATYP_CODE_BTN" name="sprteleAtypCodeBtn" navigable="false" style="ui-buttoninput" tooltip="sprtele.sprteleAtypCodeBtn.tooltip" width="23px"/>
+							<textfield height="23px" maxlength="30" member="ATYP_DESCRIPTION" name="atypDescription" width="350px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</component>
+					</gridcell>
+					<gridcell>
+						<component label="sprtele.sprteleAddrSeqno.prompt">
+							<textbox autoskip="true" case="upper" height="23px" keyactions="NEXT_ITEM" label="sprtele.sprteleAddrSeqno.prompt" maxlength="2" member="SPRTELE_ADDR_SEQNO" name="sprteleAddrSeqno" style="ui-buttoninput ui-hidelabel" validation="server" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" height="23px" icon="flashlit" member="SPRTELE_ADDR_SEQNO_BTN" name="sprteleAddrSeqnoBtn" navigable="false" style="ui-buttoninput" tooltip="sprtele.sprteleAddrSeqnoBtn.tooltip" width="23px"/>
+						</component>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</repeater>
+	</collapsiblepanel>
+</window>

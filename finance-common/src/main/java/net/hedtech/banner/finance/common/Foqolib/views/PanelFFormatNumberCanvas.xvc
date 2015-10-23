@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="F$_FORMAT_NUMBERS"/>
+	<panel class="ContentCanvas" id="pnlFFormatNumberCanvas" name="F$_FORMAT_NUMBER_CANVAS" width="100%">
+		<radiogroup action="WHEN-RADIO-CHANGED" block="F$_FORMAT_NUMBERS" id="fSignificantCommas" member="F$_SIGNIFICANT_COMMAS" name="fSignificantCommas">
+			<radiobox group="fSignificantCommas" height="23px" label="fFormatNumbers.fSignificantCommas.fSigComma4.label" labelalign="end" labelalignoffset="-81px" labeloffset="5" labelposition="top" name="rb_FSignificantCommas_FSigComma4" value="4" width="33px"/>
+			<radiobox group="fSignificantCommas" height="23px" label="fFormatNumbers.fSignificantCommas.fSigComma3.label" labelalign="end" labelposition="top" name="rb_FSignificantCommas_FSigComma3" value="3" width="33px"/>
+			<radiobox group="fSignificantCommas" height="23px" label="fFormatNumbers.fSignificantCommas.fSigComma2.label" labelalign="start" labelposition="left" name="rb_FSignificantCommas_FSigComma2" value="2" width="33px"/>
+			<radiobox group="fSignificantCommas" height="23px" label="fFormatNumbers.fSignificantCommas.fSigComma1.label" labelalign="start" labelposition="left" name="rb_FSignificantCommas_FSigComma1" value="1" width="33px"/>
+			<radiobox group="fSignificantCommas" height="23px" label="fFormatNumbers.fSignificantCommas.fSigComma0.label" labelalign="start" labelposition="left" name="rb_FSignificantCommas_FSigComma0" value="0" width="33px"/>
+		</radiogroup>
+		<radiogroup action="WHEN-RADIO-CHANGED" block="F$_FORMAT_NUMBERS" id="fDecimalDigits" member="F$_DECIMAL_DIGITS" name="fDecimalDigits">
+			<radiobox group="fDecimalDigits" height="23px" label="fFormatNumbers.fDecimalDigits.fDecDigit2.label" labelalign="end" labelalignoffset="-60px" labeloffset="5" labelposition="top" name="rb_FDecimalDigits_FDecDigit2" value="2" width="33px"/>
+			<radiobox group="fDecimalDigits" height="23px" label="fFormatNumbers.fDecimalDigits.fDecDigit1.label" labelalign="start" labelposition="left" name="rb_FDecimalDigits_FDecDigit1" value="1" width="33px"/>
+			<radiobox group="fDecimalDigits" height="23px" label="fFormatNumbers.fDecimalDigits.fDecDigit0.label" labelalign="start" labelposition="left" name="rb_FDecimalDigits_FDecDigit0" value="0" width="33px"/>
+		</radiogroup>
+		<button action="WHEN-BUTTON-PRESSED" block="F$_FORMAT_NUMBERS" height="23px" label="fFormatNumbers.fOkBtn.label" member="F$_OK_BTN" name="fOkBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="F$_FORMAT_NUMBERS" enabled="false" height="23px" label="fFormatNumbers.fCancelBtn.label" member="F$_CANCEL_BTN" name="fCancelBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="F$_FORMAT_NUMBERS" enabled="false" height="23px" label="fFormatNumbers.fApplyBtn.label" member="F$_APPLY_BTN" name="fApplyBtn" navigable="false" width="80px"/>
+	</panel>
+</config>

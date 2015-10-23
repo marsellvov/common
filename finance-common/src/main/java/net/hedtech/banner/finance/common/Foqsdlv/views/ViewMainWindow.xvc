@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" title="mainWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<formpanel name="mainWindow" width="100%">
+		<include src="net/hedtech/banner/finance/common/Foqsdlv/views/PanelGNavCanvas"/>
+		<include src="net/hedtech/banner/finance/common/Foqsdlv/views/PanelFtvsdat1Canvas"/>
+	</formpanel>
+</config>

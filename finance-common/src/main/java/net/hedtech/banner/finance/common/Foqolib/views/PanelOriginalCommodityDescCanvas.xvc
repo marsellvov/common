@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="ORIGINAL_COMMODITY_DESC_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlOriginalCommodityDescCanvas" name="ORIGINAL_COMMODITY_DESC_CANVAS" width="100%">
+		<textbox block="ORIGINAL_COMMODITY_DESC_BLOCK" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="50" member="ORIGINAL_COMMODITY_DESC_ITEM" name="originalCommodityDescItem" width="399px"/>
+	</panel>
+</config>

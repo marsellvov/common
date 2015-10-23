@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="LIB__FORM_HEADER.Manager.Config" name="LibFormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CURRENT_FORM" logicalName="currentForm" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="CURRENT_INSTITUTION" logicalName="currentInstitution" type="String"   />
+			<item name="CURRENT_DATE" logicalName="currentDate" type="String"   />
+			<item name="CURRENT_TIME" logicalName="currentTime" type="String"   />
+			<item name="WORKDATE" logicalName="workdate" type="String"   />
+			<item name="WORKUSER" logicalName="workuser" type="String"   />
+			<item name="WORKYEAR" logicalName="workyear" type="java.math.BigDecimal"   />
+			<item name="PIVOT_YEAR" logicalName="pivotYear" type="java.math.BigDecimal"   />
+			<item name="CHARDATE" logicalName="chardate" type="String"   />
+			<item name="DATEDATE" logicalName="datedate" type="java.util.Date"   />
+			<item name="VARLENGTH" logicalName="varlength" type="java.math.BigDecimal"   />
+			<item name="CALLFLD" logicalName="callfld" type="String"   />
+			<item name="CURRENT_USER" logicalName="currentUser" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.finance.common.Foqolib.model.LibFormHeader</managerClass>
+
+	</manager>
+</b:beans>

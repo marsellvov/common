@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" >
+  <interactionblock name="SORLFOS_LITE" />
+  <interactionblock name="S$_CURRICULA_LITE" />
+  <interactionblock name="SORLCUR_LITE" />
+  <panel width="1001px" height="196px" top="367px" left="13px" id="pnlCurriculaLiteCanvas" name="CURRICULA_LITE_CANVAS" class="StackedCanvas" menu="G$_DEFAULT_PM">
+    <slider name="sorlfosLitescrollbar" block="" top="138px" left="946px" width="16px" height="45px" />
+    <textfield labelposition="left" labelalign="start" name="dataSeparatorLineLite1" style="GNvaDataSeparatorLinegDataSeparatorLineClass" left="4px" top="3px" width="971px" height="5px" enabled="false" wrapStyle="none" bordertype="none" member="DATA_SEPARATOR_LINE_LITE_1" block="S$_CURRICULA_LITE" maxlength="24" datatype="" case="upper" />
+    <framepanel width="972px" height="181px" top="9px" left="3px" name="rect785">
+      <textbox label="sorlcurLite.sorlcurTermCode.prompt" labelposition="right" labeloffset="-172" labelalign="center" name="sorlcurTermCode" style="GNvaTextItem" left="118px" top="31px" width="63px" height="23px" enabled="false" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_TERM_CODE" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcurLite.sorlcurTermCodeCtlg.prompt" labelposition="right" labeloffset="-172" labelalign="center" name="sorlcurTermCodeCtlg" style="GNvaTextItem" left="118px" top="54px" width="63px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_TERM_CODE_CTLG" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcurLite.sorlcurPriorityNo.prompt" labelposition="right" labeloffset="-164" labelalign="center" name="sorlcurPriorityNo" style="GNvaTextItem" left="118px" top="76px" width="55px" height="23px" member="SORLCUR_PRIORITY_NO" block="SORLCUR_LITE" validation="server" maxlength="5" minvalue="0" maxvalue="999" datatype="" case="mixed" />
+      <textbox label="sorlcurLite.sorlcurProgram.prompt" labelposition="right" labeloffset="-194" labelalign="center" name="sorlcurProgram" style="GNvaTextItem" left="381px" top="31px" width="117px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_PROGRAM" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcurLite.sorlcurLevlCode.prompt" labelposition="right" labeloffset="-106" labelalign="center" name="sorlcurLevlCode" style="GNvaTextItem" left="381px" top="54px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_LEVL_CODE" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcurLite.sorlcurCampCode.prompt" labelposition="right" labeloffset="-113" labelalign="center" name="sorlcurCampCode" style="GNvaTextItem" left="381px" top="76px" width="36px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_CAMP_CODE" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcurLite.sorlcurCollCode.prompt" labelposition="right" labeloffset="-94" labelalign="center" name="sorlcurCollCode" style="GNvaTextItem" left="713px" top="31px" width="27px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_COLL_CODE" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcurLite.sorlcurDegcCode.prompt" labelposition="right" labeloffset="-130" labelalign="center" name="sorlcurDegcCode" style="GNvaTextItem" left="713px" top="54px" width="63px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_DEGC_CODE" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcurLite.sorlcurKeySeqno.prompt" labelposition="right" labeloffset="-128" labelalign="center" name="sorlcurKeySeqno" style="GNvaTextItem" left="713px" top="76px" width="36px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_KEY_SEQNO" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <button labelposition="right" labeloffset="-222" labelalign="center" name="sorlcurKeySeqnoLbt" style="GIconBtnClass" left="750px" top="77px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcurLite.sorlcurKeySeqnoLbt.tooltip" member="SORLCUR_KEY_SEQNO_LBT" block="SORLCUR_LITE" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcurLite.sorlcurTermCodeLbt.label" name="sorlcurTermCodeLbt" style="GIconBtnClass" left="181px" top="32px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcurLite.sorlcurTermCodeLbt.tooltip" member="SORLCUR_TERM_CODE_LBT" block="SORLCUR_LITE" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcurLite.sorlcurTermCodeCtlgLbt.label" name="sorlcurTermCodeCtlgLbt" style="GIconBtnClass" left="181px" top="54px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcurLite.sorlcurTermCodeCtlgLbt.tooltip" member="SORLCUR_TERM_CODE_CTLG_LBT" block="SORLCUR_LITE" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcurLite.sorlcurProgramLbt.label" name="sorlcurProgramLbt" style="GIconBtnClass" left="498px" top="32px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcurLite.sorlcurProgramLbt.tooltip" member="SORLCUR_PROGRAM_LBT" block="SORLCUR_LITE" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcurLite.sorlcurLevlCodeLbt.label" name="sorlcurLevlCodeLbt" style="GIconBtnClass" left="411px" top="55px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcurLite.sorlcurLevlCodeLbt.tooltip" member="SORLCUR_LEVL_CODE_LBT" block="SORLCUR_LITE" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcurLite.sorlcurCollCodeLbt.label" name="sorlcurCollCodeLbt" style="GIconBtnClass" left="739px" top="32px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcurLite.sorlcurCollCodeLbt.tooltip" member="SORLCUR_COLL_CODE_LBT" block="SORLCUR_LITE" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcurLite.sorlcurDegcCodeLbt.label" name="sorlcurDegcCodeLbt" style="GIconBtnClass" left="776px" top="55px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcurLite.sorlcurDegcCodeLbt.tooltip" member="SORLCUR_DEGC_CODE_LBT" block="SORLCUR_LITE" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcurLite.sorlcurCampCodeLbt.label" name="sorlcurCampCodeLbt" style="GIconBtnClass" left="417px" top="79px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcurLite.sorlcurCampCodeLbt.tooltip" member="SORLCUR_CAMP_CODE_LBT" block="SORLCUR_LITE" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <textfield labelposition="left" labelalign="start" name="sorlcurLevlDesc" style="GDescClass" left="432px" top="54px" width="164px" height="23px" bordertype="none" member="SORLCUR_LEVL_DESC" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurCampDesc" style="GDescClass" left="437px" top="76px" width="122px" height="17px" bordertype="none" member="SORLCUR_CAMP_DESC" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurCollDesc" style="GDescClass" left="759px" top="31px" width="196px" height="20px" bordertype="none" member="SORLCUR_COLL_DESC" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurDegcDesc" style="GDescClass" left="799px" top="54px" width="157px" height="20px" bordertype="none" member="SORLCUR_DEGC_DESC" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurTermDesc" style="GDescClass" left="203px" top="31px" width="98px" height="20px" bordertype="none" member="SORLCUR_TERM_DESC" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurCatlgTermDesc" style="GDescClass" left="203px" top="54px" width="98px" height="23px" bordertype="none" member="SORLCUR_CATLG_TERM_DESC" block="SORLCUR_LITE" validation="server" maxlength="30" datatype="" case="mixed" />
+      <button labelposition="left" labelalign="start" label="sorlcurLite.nextRecBtn.label" name="nextRecBtn" style="GIconBtnClass" left="939px" top="7px" width="20px" height="20px" navigable="false" icon="right_arw" tooltip="sorlcurLite.nextRecBtn.tooltip" member="NEXT_REC_BTN" block="SORLCUR_LITE" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcurLite.prevRecordBtn.label" name="prevRecordBtn" style="GIconBtnClass" left="917px" top="7px" width="20px" height="20px" navigable="false" icon="left_arw" tooltip="sorlcurLite.prevRecordBtn.tooltip" member="PREV_RECORD_BTN" block="SORLCUR_LITE" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <textbox label="sorlfosLite.sorlfosLfstCode.prompt" labelposition="right" labeloffset="-182" labelalign="center" name="sorlfosLfstCode" style="GNvaTextItem" left="78px" top="129px" width="112px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLFOS_LFST_CODE" block="SORLFOS_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlfosLite.sorlfosPriorityNo.prompt" labelposition="right" labeloffset="-125" labelalign="center" name="sorlfosPriorityNo" style="GNvaTextItem" left="78px" top="152px" width="55px" height="23px" member="SORLFOS_PRIORITY_NO" block="SORLFOS_LITE" validation="server" maxlength="5" minvalue="0" maxvalue="999" datatype="" case="mixed" />
+      <textbox label="sorlfosLite.sorlfosMajrCode.prompt" labelposition="right" labeloffset="-154" labelalign="center" name="sorlfosMajrCode" style="GNvaTextItem" left="356px" top="129px" width="45px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLFOS_MAJR_CODE" block="SORLFOS_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlfosLite.sorlfosCstsCode.prompt" labelposition="right" labeloffset="-221" labelalign="center" name="sorlfosCstsCode" style="GNvaTextItem" left="356px" top="152px" width="112px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLFOS_CSTS_CODE" block="SORLFOS_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlfosLite.sorlfosDeptCode.prompt" labelposition="right" labeloffset="-182" labelalign="center" name="sorlfosDeptCode" style="GNvaTextItem" left="718px" top="129px" width="45px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLFOS_DEPT_CODE" block="SORLFOS_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlfosLite.sorlfosMajrCodeAttach.prompt" labelposition="right" labeloffset="-182" labelalign="center" name="sorlfosMajrCodeAttach" style="GNvaTextItem" left="718px" top="152px" width="45px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLFOS_MAJR_CODE_ATTACH" block="SORLFOS_LITE" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <button labelposition="left" labelalign="start" label="sorlfosLite.sorlfosDeptCodeLbt.label" name="sorlfosDeptCodeLbt" style="GIconBtnClass" left="763px" top="131px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlfosLite.sorlfosDeptCodeLbt.tooltip" member="SORLFOS_DEPT_CODE_LBT" block="SORLFOS_LITE" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlfosLite.sorlfosCstsCodeLbt.label" name="sorlfosCstsCodeLbt" style="GIconBtnClass" left="468px" top="153px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlfosLite.sorlfosCstsCodeLbt.tooltip" member="SORLFOS_CSTS_CODE_LBT" block="SORLFOS_LITE" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlfosLite.sorlfosMajrCodeLbt.label" name="sorlfosMajrCodeLbt" style="GIconBtnClass" left="401px" top="131px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlfosLite.sorlfosMajrCodeLbt.tooltip" member="SORLFOS_MAJR_CODE_LBT" block="SORLFOS_LITE" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlfosLite.sorlfosMajrCodeAttachLbt.label" name="sorlfosMajrCodeAttachLbt" style="GIconBtnClass" left="763px" top="153px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlfosLite.sorlfosMajrCodeAttachLbt.tooltip" member="SORLFOS_MAJR_CODE_ATTACH_LBT" block="SORLFOS_LITE" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlfosLite.sorlfosLfstCodeLbt.label" name="sorlfosLfstCodeLbt" style="GIconBtnClass" left="190px" top="131px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlfosLite.sorlfosLfstCodeLbt.tooltip" member="SORLFOS_LFST_CODE_LBT" block="SORLFOS_LITE" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <textfield labelposition="left" labelalign="start" name="sorlfosMajrDesc" style="GDescClass" left="421px" top="129px" width="152px" height="23px" bordertype="none" member="SORLFOS_MAJR_DESC" block="SORLFOS_LITE" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlfosAttachConcDesc" style="GDescClass" left="784px" top="152px" width="150px" height="23px" bordertype="none" member="SORLFOS_ATTACH_CONC_DESC" block="SORLFOS_LITE" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlfosDeptDesc" style="GDescClass" left="784px" top="129px" width="150px" height="23px" bordertype="none" member="SORLFOS_DEPT_DESC" block="SORLFOS_LITE" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sCurriculaLite.lcurRecNum.prompt" labelposition="right" labeloffset="-101" labelalign="center" name="lcurRecNum" style="GNvaTextItem" left="803px" top="6px" width="31px" height="23px" enabled="false" member="LCUR_REC_NUM" block="S$_CURRICULA_LITE" maxlength="3" datatype="" case="mixed" />
+      <textbox label="sCurriculaLite.lcurRecCnt.prompt" labelposition="right" labeloffset="-59" labelalign="center" name="lcurRecCnt" style="GNvaTextItem" left="871px" top="6px" width="31px" height="23px" enabled="false" member="LCUR_REC_CNT" block="S$_CURRICULA_LITE" maxlength="3" datatype="" case="mixed" />
+      <framepanel width="971px" height="0px" top="103px" left="0px" name="graphic840" />
+    </framepanel>
+    <text fontfamily="Verdana" fontsize="11pt" fontcolor="Black" name="text781" left="11px" top="13px" bordertype="none">curriculaLiteCanvas.text781.text</text>
+    <text fontfamily="Verdana" fontsize="11pt" fontcolor="Black" name="text820" left="11px" top="114px" bordertype="none">curriculaLiteCanvas.text820.text</text>
+  </panel>
+</config>

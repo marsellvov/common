@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="GOBINTL"/>
+	<accordion width="100%">
+		<panel label="nationalityWindow.title">
+			<framepanel label="goaintl4Canvas.text42.text" width="100%">
+				<gridlayout cols="2" orientation="vertical" width="100%">
+					<gridcell>
+						<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM,PREVIOUS_BLOCK,NEXT_BLOCK" label="gobintl.gobintlNatnCodeBirth.prompt" maxlength="30" member="GOBINTL_NATN_CODE_BIRTH" name="gobintlNatnCodeBirth" style="ui-buttoninput" width="65px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GOBINTL_NATN_CODE_BIRTH_LBT" name="gobintlNatnCodeBirthLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gobintlNatnCodeBirthLbt.tooltip" width="23px"/>
+						<textfield block="GOBINTL" datatype="String" height="23px" maxlength="30" member="BIRTH_NATN_DESC" name="birthNatnDesc" width="233px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+					<gridcell>
+						<component label="gobintl.gobintlNatnCodeLegal.prompt">
+							<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlNatnCodeLegal.prompt" maxlength="30" member="GOBINTL_NATN_CODE_LEGAL" name="gobintlNatnCodeLegal" style="ui-buttoninput ui-hidelabel" width="65px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GOBINTL_NATN_CODE_LEGAL_LBT" name="gobintlNatnCodeLegalLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gobintlNatnCodeLegalLbt.tooltip" width="23px"/>
+							<textfield block="GOBINTL" datatype="String" height="23px" maxlength="30" member="LEGAL_NATN_DESC" name="legalNatnDesc" width="233px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</component>
+					</gridcell>
+					<gridcell>
+						<component label="gobintl.gobintlLangCode.prompt">
+							<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlLangCode.prompt" maxlength="3" member="GOBINTL_LANG_CODE" name="gobintlLangCode" style="ui-buttoninput ui-hidelabel" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GOBINTL_LANG_CODE_LBT" name="gobintlLangCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gobintlLangCodeLbt.tooltip" width="23px"/>
+							<textfield block="GOBINTL" datatype="String" height="23px" maxlength="30" member="LANG_DESC" name="langDesc" width="257px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</component>
+					</gridcell>
+					<gridcell>
+						<component  label="gobintl.gobintlSponCode.prompt">
+							<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlSponCode.prompt" maxlength="3" member="GOBINTL_SPON_CODE" name="gobintlSponCode" style="ui-buttoninput ui-hidelabel" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GOBINTL_SPON_CODE_LBT" name="gobintlSponCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gobintlSponCodeLbt.tooltip" width="23px"/>
+							<textfield block="GOBINTL" datatype="String" height="23px" maxlength="30" member="SPON_DESC" name="sponDesc" width="257px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</component>
+					</gridcell>
+					<gridcell>
+						<component label="gobintl.gobintlEmptCode.prompt">
+							<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlEmptCode.prompt" maxlength="3" member="GOBINTL_EMPT_CODE" name="gobintlEmptCode" style="ui-buttoninput ui-hidelabel" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GOBINTL_EMPT_CODE_LBT" name="gobintlEmptCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gobintlEmptCodeLbt.tooltip" width="23px"/>
+							<textfield block="GOBINTL" datatype="String" height="23px" maxlength="30" member="EMPT_DESC" name="emptDesc" width="257px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</component>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlForeignSsn.prompt" maxlength="15" member="GOBINTL_FOREIGN_SSN" name="gobintlForeignSsn" validation="server" width="178px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+				</gridlayout>
+			</framepanel>
+			<framepanel label="goaintl4Canvas.graphic210.text" width="100%">
+				<gridlayout cols="1" orientation="vertical">
+					<gridcell>
+						<combobox block="GOBINTL" height="23px" keyactions="NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlSpouseInd.prompt" member="GOBINTL_SPOUSE_IND" name="gobintlSpouseInd" othervalue="T" required="true" width="133px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<model>
+								<item label="gobintl.Combo.Not.label" value="T"/>
+								<item label="gobintl.Combo.Yes.label" value="Y"/>
+								<item label="gobintl.Combo.No.label" value="N"/>
+							</model>
+						</combobox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="GOBINTL" case="upper" datatype="Number" height="23px" keyactions="NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlChildNumber.prompt" maxlength="2" member="GOBINTL_CHILD_NUMBER" name="gobintlChildNumber" validation="server" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<combobox block="GOBINTL" height="23px" keyactions="NEXT_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlSignatureInd.prompt" member="GOBINTL_SIGNATURE_IND" name="gobintlSignatureInd" othervalue="T" required="true" width="133px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<model>
+								<item label="gobintl.Combo.Not.label" value="T"/>
+								<item label="gobintl.Combo.Yes.label" value="Y"/>
+								<item label="gobintl.Combo.No.label" value="N"/>
+							</model>
+						</combobox>
+					</gridcell>
+				</gridlayout>
+			</framepanel>
+		</panel>
+	</accordion>
+</config>

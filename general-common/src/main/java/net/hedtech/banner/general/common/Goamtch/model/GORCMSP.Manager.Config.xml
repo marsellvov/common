@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GORCMSP.Manager.Config" name="GORCMSP">
+		
+		<items>
+			<item name="GORCMSP_CMSC_CODE" logicalName="gorcmspCmscCode" type="String" physicalName="GORCMSP_CMSC_CODE"  />
+			<item name="GORCMSP_PRIORITY_NO" logicalName="gorcmspPriorityNo" type="java.math.BigDecimal" physicalName="GORCMSP_PRIORITY_NO"  />
+			<item name="GORCMSP_DESC" logicalName="gorcmspDesc" type="String" physicalName="GORCMSP_DESC"  />
+			<item name="GORCMSP_LONG_DESC" logicalName="gorcmspLongDesc" type="String" physicalName="GORCMSP_LONG_DESC"  />
+			<item name="LONG_DESC" logicalName="longDesc" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Goamtch.model.GorcmspAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE GORCMSP_CMSC_CODE = :GTVCMSC_GTVCMSC_CODE]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[GORCMSP_PRIORITY_NO]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

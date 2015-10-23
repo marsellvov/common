@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="PDRBENE.Manager.Config" name="PDRBENE">
+		
+		<items>
+			<item name="PDRBENE_PIDM" logicalName="pdrbenePidm" type="java.math.BigDecimal" physicalName="PDRBENE_PIDM" >
+				<value>
+        			<item name="PIDM" businessObject="KEY_BLOCK"/>
+    			</value>
+    		</item> 
+			<item name="PDRBENE_SEQ_NO" logicalName="pdrbeneSeqNo" type="java.math.BigDecimal" physicalName="PDRBENE_SEQ_NO"   /> 
+			<item name="PDRBENE_BENE_PIDM" logicalName="pdrbeneBenePidm" type="java.math.BigDecimal" physicalName="PDRBENE_BENE_PIDM"   /> 
+			<item name="PDRBENE_BENE_LAST_NAME" logicalName="pdrbeneBeneLastName" type="String"  virtual="true" /> 
+			<item name="PDRBENE_BENE_FIRST_NAME" logicalName="pdrbeneBeneFirstName" type="String"  virtual="true"  /> 
+			<item name="PDRBENE_AGE" logicalName="pdrbeneAge" type="java.math.BigDecimal"  virtual="true"  /> 
+			<item name="MARTL_CODE" logicalName="martlCode" type="String"  virtual="true"  /> 
+			<item name="BIRTH_NATN" logicalName="birthNatn" type="String"  virtual="true"  /> 
+			<item name="NATN_CODE" logicalName="natnCode" type="String"  virtual="true"  /> 
+			<item name="PDRBENE_SEX_IND" logicalName="pdrbeneSexInd" type="String"  virtual="true"  > 
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="PDRBENE_BREL_CODE" logicalName="pdrbeneBrelCode" type="String" physicalName="PDRBENE_BREL_CODE"   /> 
+			<item name="PDRBENE_BREL_DESC" logicalName="pdrbeneBrelDesc" type="String"  virtual="true"  />
+			<item name="PDRBENE_BREL_TYPE" logicalName="pdrbeneBrelType" type="String"  virtual="true"  />  
+			<item name="PDRBENE_MARTL_CODE" logicalName="pdrbeneMartlCode" type="String" physicalName="PDRBENE_MARTL_CODE"   /> 
+			<item name="PDRBENE_MARTL_DESC" logicalName="pdrbeneMartlDesc" type="String"  virtual="true"  /> 
+			<item name="PDRBENE_NATN_CODE" logicalName="pdrbeneNatnCode" type="String" physicalName="PDRBENE_NATN_CODE"   /> 
+			<item name="PDRBENE_NATN_DESC" logicalName="pdrbeneNatnDesc" type="String"  virtual="true"  /> 
+			<item name="PDRBENE_BIRTH_NATN" logicalName="pdrbeneBirthNatn" type="String" physicalName="PDRBENE_BIRTH_NATN"   /> 
+			<item name="PDRBENE_BIRTH_NATN_DESC" logicalName="pdrbeneBirthNatnDesc" type="String"  virtual="true"  /> 
+			<item name="PDRBENE_TKT_ELGBTY" logicalName="pdrbeneTktElgbty" type="String" physicalName="PDRBENE_TKT_ELGBTY" defaultValue="N" > 
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="PDRBENE_AIRFARE_CODE" logicalName="pdrbeneAirfareCode" type="String" physicalName="PDRBENE_AIRFARE_CODE"   /> 
+			<item name="PDRBENE_AIRFARE_DESC" logicalName="pdrbeneAirfareDesc" type="String"  virtual="true"  /> 
+			<item name="PDRBENE_HOME_AIRPORT" logicalName="pdrbeneHomeAirport" type="String" physicalName="PDRBENE_HOME_AIRPORT"   /> 
+			<item name="PDRBENE_HOME_AIRPORT_DESC" logicalName="pdrbeneHomeAirportDesc" type="String"  virtual="true"  /> 
+			<item name="PDRBENE_HOME_NATN" logicalName="pdrbeneHomeNatn" type="String" physicalName="PDRBENE_HOME_NATN"   /> 
+			<item name="PDRBENE_HOME_NATN_DESC" logicalName="pdrbeneHomeNatnDesc" type="String"  virtual="true"  /> 
+			<item name="PDRBENE_ELGBTY_REASON" logicalName="pdrbeneElgbtyReason" type="String" physicalName="PDRBENE_ELGBTY_REASON"   /> 
+			<item name="PDRBENE_ELGBTY_REASON_DESC" logicalName="pdrbeneElgbtyReasonDesc" type="String"  virtual="true"  /> 
+			<item name="PDRBENE_REASON_DATE" logicalName="pdrbeneReasonDate" type="java.util.Date" physicalName="PDRBENE_REASON_DATE"   /> 
+			<item name="PDRBENE_ACTIVITY_DATE" logicalName="pdrbeneActivityDate" type="java.util.Date" physicalName="PDRBENE_ACTIVITY_DATE"   > 
+				<value>
+					<systemVariable name="DBDATETIME"/>
+				</value>	
+			</item>
+			<item name="PDRBENE_EDUFEE_ELGBTY" logicalName="pdrbeneEdufeeElgbty" type="String" physicalName="PDRBENE_EDUFEE_ELGBTY"   > 
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="PDRBENE_SPLFEE_ELGBTY" logicalName="pdrbeneSplfeeElgbty" type="String" physicalName="PDRBENE_SPLFEE_ELGBTY"   > 
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.mesc.common.banner.payroll.Pyabene.model.PdrbeneAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[pdrbene_seq_no]]></defaultOrderByClause>	
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="1" enabled="true"/>
+
+	</manager>
+</b:beans>

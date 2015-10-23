@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<window layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SPRADDR"/>
+	<interactionblock name="SPRIDEN"/>
+	<interactionblock name="SFBETRM"/>
+	<interactionblock name="SGBSTDN"/>
+	<interactionblock name="SOUNDEX"/>
+	<interactionblock name="FORM_HEADER"/>
+	<panel class="ContentCanvas" id="pnlSpriden1Canvas" menu="G$_DEFAULT_PM" name="SPRIDEN_1_CANVAS" width="100%">
+		<collapsiblepanel label="mainWindow.title" name="rect26" width="100%">
+			<panel width="100%">
+				<gridview block="SPRIDEN" name="grdSpriden" width="100%">
+					<viewheader>
+						<viewcolumn autoskip="true" block="SPRIDEN" case="upper" datatype="String" label="spriden.spridenId.prompt" labelstyle="DEFAULT" maxlength="9" member="SPRIDEN_ID" name="spridenId" width="40px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="SPRIDEN" datatype="String" label="spriden.spridenLastName.prompt" labelstyle="DEFAULT" maxlength="60" member="SPRIDEN_LAST_NAME" name="spridenLastName" width="60px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="SPRIDEN" datatype="String" label="spriden.spridenFirstName.prompt" labelstyle="DEFAULT" maxlength="60" member="SPRIDEN_FIRST_NAME" name="spridenFirstName" width="70px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="SPRIDEN" datatype="String" label="spriden.spridenMi.prompt" labelstyle="DEFAULT" maxlength="60" member="SPRIDEN_MI" name="spridenMi" width="60px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SPRIDEN" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="spriden.birthdate.prompt" labelstyle="DEFAULT" maxlength="11" member="BIRTHDATE" name="birthdate" width="40px">
+							<editor>
+								<calendar>
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</calendar>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="SPRIDEN" datatype="String" enabled="false" label="spriden.sex.prompt" labelstyle="DEFAULT" maxlength="1" member="SEX" name="sex" width="17px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="SPRIDEN" case="upper" datatype="String" label="spriden.spridenChangeInd.prompt" labelstyle="DEFAULT" maxlength="1" member="SPRIDEN_CHANGE_IND" name="spridenChangeInd" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</collapsiblepanel>
+		<collapsiblepanel label="spriden1Canvas.text34.text" name="rect28" width="100%">
+			<panel width="100%">
+				<gridlayout cols="2" orientation="vertical">
+					<gridcell>
+						<textbox autoskip="true" block="SOUNDEX" datatype="String" height="23px" label="soundex.soundexLastName.prompt" maxlength="25" member="SOUNDEX_LAST_NAME" name="soundexLastName" width="176px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="SOUNDEX" datatype="String" height="23px" label="soundex.soundexFirstName.prompt" maxlength="60" member="SOUNDEX_FIRST_NAME" name="soundexFirstName" width="96px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</collapsiblepanel>
+		<collapsiblepanel label="spriden1Canvas.text12.text" name="rect88" width="100%">
+			<panel width="100%">
+				<gridview block="SPRADDR" name="grdSpraddr" width="100%">
+					<viewheader>
+						<viewcolumn block="SPRADDR" datatype="String" label="spraddr.spraddrAtypCode.prompt" labelstyle="DEFAULT" maxlength="2" member="SPRADDR_ATYP_CODE" name="spraddrAtypCode" width="40px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SPRADDR" datatype="String" label="spraddr.spraddrStreetLine1.prompt" labelstyle="DEFAULT" maxlength="75" member="SPRADDR_STREET_LINE1" name="spraddrStreetLine1" width="100px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SPRADDR" datatype="String" label="spraddr.spraddrCity.prompt" labelstyle="DEFAULT" maxlength="50" member="SPRADDR_CITY" name="spraddrCity" width="100px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SPRADDR" datatype="String" enabled="false" label="spraddr.spraddrStatCode.prompt" labelstyle="DEFAULT" maxlength="3" member="SPRADDR_STAT_CODE" name="spraddrStatCode" width="90px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SPRADDR" datatype="String" label="spraddr.spraddrZip.prompt" labelstyle="DEFAULT" maxlength="30" member="SPRADDR_ZIP" name="spraddrZip" width="100px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SPRADDR" datatype="String" label="spraddr.phoneAreaC.prompt" labelstyle="DEFAULT" maxlength="6" member="PHONE_AREA" name="phoneArea" width="60px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SPRADDR" datatype="String" enabled="false" label="spraddr.phoneNumber.prompt" labelstyle="DEFAULT" maxlength="12" member="PHONE_NUMBER" name="phoneNumber" width="70px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SPRADDR" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="spraddr.spraddrFromDate.prompt" labelstyle="DEFAULT" maxlength="11" member="SPRADDR_FROM_DATE" name="spraddrFromDate" width="60px">
+							<editor>
+								<calendar>
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</calendar>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="SPRADDR" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="spraddr.spraddrToDate.prompt" labelstyle="DEFAULT" maxlength="11" member="SPRADDR_TO_DATE" name="spraddrToDate" width="60px">
+							<editor>
+								<calendar>
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</calendar>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="SPRADDR" datatype="String" label="spraddr.spraddrStatusInd.prompt" labelstyle="DEFAULT" maxlength="1" member="SPRADDR_STATUS_IND" name="spraddrStatusInd" width="90px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</collapsiblepanel>
+		<collapsiblepanel label="spriden1Canvas.text8.text" name="rect87" width="100%">
+			<panel width="100%">
+				<gridview block="SGBSTDN" name="sgbstdngrd" width="100%">
+					<viewheader>
+						<viewcolumn block="SGBSTDN" datatype="String" height="23px" label="sgbstdn.sgbstdnTermCodeEff.prompt" maxlength="6" member="SGBSTDN_TERM_CODE_EFF" name="sgbstdnTermCodeEff" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SGBSTDN" datatype="String" height="23px" label="sgbstdn.statusDesc.prompt" maxlength="30" member="STATUS_DESC" name="statusDesc" width="60px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SGBSTDN" datatype="String" height="23px" label="sgbstdn.residenceDesc.prompt" maxlength="30" member="RESIDENCE_DESC" name="residenceDesc" width="126px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SGBSTDN" datatype="String" height="23px" label="sgbstdn.stvclasDesc.prompt" maxlength="30" member="STVCLAS_DESC" name="stvclasDesc" width="126px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SGBSTDN" datatype="String" height="23px" label="sgbstdn.fullPartDesc.prompt" maxlength="9" member="FULL_PART_DESC" name="fullPartDesc" width="84px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</collapsiblepanel>
+		<collapsiblepanel label="spriden1Canvas.text15.text" name="rect86" width="100%">
+			<panel width="100%">
+				<gridview block="SFBETRM" name="grdsfbetrm" width="100%">
+					<viewheader>
+						<viewcolumn block="SFBETRM" datatype="String"  label="sfbetrm.sfbetrmTermCode.prompt" maxlength="6" member="SFBETRM_TERM_CODE" name="sfbetrmTermCode" width="56px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SFBETRM" datatype="String"  label="sfbetrm.sfbetrmTermCodeDescription.prompt" maxlength="30" member="BETRM_DESC" name="betrmDesc" width="203px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</collapsiblepanel>
+		<accordion width="100%">
+			<panel label="curriculaSummaryTab.text782.text" >
+				<repeater block="SOVLCUR"  name="grdsovlcur" width="100%">
+					<panel width="100%">
+					<!-- 	<framepanel label="curriculaSummaryTab.text782.text" width="100%"> -->
+							<gridlayout cols="2" orientation="vertical">
+								<gridcell>
+									<textbox  case="upper" height="23px" label="sovlcur.sovlcurPriorityNo.prompt" maxlength="5" member="SOVLCUR_PRIORITY_NO" name="sovlcurPriorityNo" width="50px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+								</gridcell>
+								<gridcell>
+									<textbox  case="upper" height="23px" label="sovlcur.sovlcurTermCode.prompt" maxlength="30" member="SOVLCUR_TERM_CODE" name="sovlcurTermCode" width="64px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+									<textfield  height="23px" label="sovlcur.sovlcurProgramDesc.prompt" maxlength="30" member="SOVLCUR_PROGRAM_DESC" name="sovlcurProgramDesc" width="125px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textfield>
+								</gridcell>
+								<gridcell>
+									<textbox  case="upper" height="23px" label="sovlcur.sovlcurTermCodeCtlg.prompt" maxlength="6" member="SOVLCUR_TERM_CODE_CTLG" name="sovlcurTermCodeCtlg" width="63px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+									<textfield  height="23px" label="sovlcur.stvlevlDesc.prompt" maxlength="30" member="STVLEVL_DESC" name="stvlevlDesc" width="136px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textfield>
+								</gridcell>
+								<gridcell>
+									<textfield  height="23px" label="sovlcur.stvcampDesc.prompt" maxlength="30" member="STVCAMP_DESC" name="stvcampDesc" width="126px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textfield>
+								</gridcell>
+								<gridcell>
+									<textfield  height="23px" label="sovlcur.stvcollDesc.prompt" maxlength="30" member="STVCOLL_DESC" name="stvcollDesc" width="144px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textfield>
+								</gridcell>
+								<gridcell>
+									<textfield  height="23px" label="sovlcur.stvdegcDesc.prompt" maxlength="30" member="STVDEGC_DESC" name="stvdegcDesc" width="120px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textfield>
+								</gridcell>
+								<gridcell>
+									<textbox  case="upper" height="23px" label="sovlcur.sovlcurTermCodeEnd.prompt" maxlength="30" member="SOVLCUR_TERM_CODE_END" name="sovlcurTermCodeEnd" width="64px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+								</gridcell>
+								<gridcell>
+									<textbox  height="23px" label="sovlcur.sovlcurDgmrSeqno.prompt" maxlength="4" member="SOVLCUR_DGMR_SEQNO" name="sovlcurDgmrSeqno" width="50px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+								</gridcell>
+								<gridcell>
+									<textfield  height="23px" label="sovlcur.sovlcurStvadmtDesc.prompt" maxlength="30" member="SOVLCUR_STVADMT_DESC" name="sovlcurStvadmtDesc" width="166px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textfield>
+								</gridcell>
+								<gridcell>
+									<textbox  height="23px" label="sovlcur.sovlcurTermCodeAdmit.prompt" maxlength="30" member="SOVLCUR_TERM_CODE_ADMIT" name="sovlcurTermCodeAdmit" width="64px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+								</gridcell>
+								<gridcell>
+									<textbox  height="21px" label="sovlcur.sovlcurTermCodeMatric.prompt" maxlength="30" member="SOVLCUR_TERM_CODE_MATRIC" name="sovlcurTermCodeMatric" width="64px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+								</gridcell>
+								<gridcell>
+									<textfield  height="21px" label="sovlcur.sovlcurStvstypDesc.prompt" maxlength="30" member="SOVLCUR_STVSTYP_DESC" name="sovlcurStvstypDesc" width="190px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textfield>
+								</gridcell>
+								<gridcell>
+									<textfield  height="23px" label="sovlcur.sovlcurStvrateDesc.prompt" maxlength="30" member="SOVLCUR_STVRATE_DESC" name="sovlcurStvrateDesc" width="246px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textfield>
+									<textbox  height="21px" label="sovlcur.sovlcurKeySeqno.prompt" maxlength="30" member="SOVLCUR_KEY_SEQNO" name="sovlcurKeySeqno" visible="false" width="50px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+								</gridcell>
+							</gridlayout>
+						<!-- </framepanel> -->
+					</panel>
+				</repeater>
+			</panel>
+		</accordion>	
+		<accordion width="100%">
+			<panel label="curriculaSummaryTab.text820.text" >
+				<panel width="100%">
+					<!-- <framepanel label="curriculaSummaryTab.text820.text" width="100%">
+						<panel width="100%"> -->
+							<gridview block="SOVLFOS" name="grdSovlfos" width="100%">
+								<viewheader>
+									<viewcolumn block="SOVLFOS" case="upper" label="sovlfos.sovlfosPriorityNo.prompt" labelstyle="DEFAULT" maxlength="5" member="SOVLFOS_PRIORITY_NO" name="sovlfosPriorityNo" width="100px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</viewcolumn>
+									<viewcolumn block="SOVLFOS" case="upper" label="sovlfos.sovlfosTermCode.prompt" labelstyle="DEFAULT" maxlength="30" member="SOVLFOS_TERM_CODE" name="sovlfosTermCode" width="66px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</viewcolumn>
+									<viewcolumn block="SOVLFOS" label="sovlfos.gtvlfstDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="GTVLFST_DESC" name="gtvlfstDesc" width="144px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</viewcolumn>
+									<viewcolumn block="SOVLFOS" label="sovlfos.stvmajrDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVMAJR_DESC" name="stvmajrDesc" width="219px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</viewcolumn>
+									<viewcolumn block="SOVLFOS" label="sovlfos.stvdeptDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVDEPT_DESC" name="stvdeptDesc" width="211px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</viewcolumn>
+									<viewcolumn action="WHEN-MOUSE-DOUBLECLICK" block="SOVLFOS" label="sovlfos.stvconcDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVCONC_DESC" name="stvconcDesc" width="166px">
+										<editor>
+											<lovbox/>
+										</editor>
+									</viewcolumn>
+								</viewheader>
+							</gridview>
+						<!-- </panel>
+					</framepanel> -->
+				</panel>
+			</panel>
+		</accordion>
+		<panel width="100%">
+			<textbox block="SGBSTDN" datatype="String" enabled="false" height="23px" maxlength="1" member="SGBSTDN_STYP_CODE" name="sgbstdnStypCode" visible="false" width="50px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textbox>
+			<textbox block="SGBSTDN" datatype="String" enabled="false" height="23px" maxlength="6" member="SGBSTDN_DEGC_CODE_1" name="sgbstdnDegcCode1" visible="false" width="50px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textbox>
+			<textbox block="SGBSTDN" datatype="String" enabled="false" height="23px" maxlength="2" member="SGBSTDN_COLL_CODE_1" name="sgbstdnCollCode1" visible="false" width="50px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textbox>
+			<textbox block="SGBSTDN" datatype="String" enabled="false" height="23px" maxlength="4" member="SGBSTDN_MAJR_CODE_1" name="sgbstdnMajrCode1" visible="false" width="50px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textbox>
+			<textbox block="SGBSTDN" datatype="String" enabled="false" height="23px" maxlength="2" member="SGBSTDN_ADMT_CODE" name="sgbstdnAdmtCode" visible="false" width="50px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textbox>
+			<textbox block="SGBSTDN" datatype="String" enabled="false" height="23px" maxlength="6" member="SGBSTDN_TERM_CODE_ADMIT" name="sgbstdnTermCodeAdmit" visible="false" width="50px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textbox>
+		</panel>
+	</panel>
+</window>

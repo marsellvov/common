@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="STVMRTL_RG.ValueSet.Config" name="STVMRTL_RG">
+    <columns>
+		<column name="STVMRTL_CODE" type="String" size="1"/>
+		<column name="STVMRTL_DESC" type="String" size="30"/>
+		<column name="STVMRTL_FA_CONV_CODE" type="String" size="1"/>
+		<column name="STVMRTL_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvmrtl_code, stvmrtl_desc, stvmrtl_fa_conv_code, TO_CHAR(stvmrtl_activity_date, g$_date.get_nls_date_format) stvmrtl_activity_date  FROM stvmrtl  ORDER BY stvmrtl_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVNATN_RG.ValueSet.Config" name="STVNATN_RG">
+    <columns>
+		<column name="STVNATN_CODE" type="String" size="5"/>
+		<column name="STVNATN_NATION" type="String" size="30"/>
+		<column name="STVNATN_EDI_EQUIV" type="String" size="2"/>
+		<column name="STVNATN_LMS_EQUIV" type="String" size="2"/>
+		<column name="STVNATN_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvnatn_code, stvnatn_nation, stvnatn_edi_equiv, stvnatn_lms_equiv, to_char(stvnatn_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvnatn_activity_date  FROM stvnatn  ORDER BY stvnatn_nation
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GYVTYP1_RG.ValueSet.Config" name="GYVTYP1_RG">
+    <columns>
+		<column name="GYVCODE_CODE" type="String" size="8"/>
+		<column name="GYVCODE_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gyvcode_code, gyvcode_desc  FROM gyvcode, gyvtype  WHERE gyvtype_type_code = gyvcode_type_code AND gyvtype_type_code = 'TYPE1' AND gyvcode_ind = 'A'  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GYVTYP2_RG.ValueSet.Config" name="GYVTYP2_RG">
+    <columns>
+		<column name="GYVCODE_CODE" type="String" size="8"/>
+		<column name="GYVCODE_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gyvcode_code, gyvcode_desc  FROM gyvcode, gyvtype  WHERE gyvtype_type_code = gyvcode_type_code AND gyvtype_type_code = 'TYPE7' AND gyvcode_ind = 'A'  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GYVTYP3_RG.ValueSet.Config" name="GYVTYP3_RG">
+    <columns>
+		<column name="GYVCODE_CODE" type="String" size="8"/>
+		<column name="GYVCODE_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gyvcode_code, gyvcode_desc  FROM gyvcode, gyvtype  WHERE gyvtype_type_code = gyvcode_type_code AND gyvtype_type_code = 'TYPE3' AND gyvcode_ind = 'A'  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

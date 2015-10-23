@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GOBINTL.Manager.Config" name="GOBINTL">
+		
+		<items>
+			<item name="GOBINTL_PIDM" logicalName="gobintlPidm" type="java.math.BigDecimal" physicalName="GOBINTL_PIDM"  >
+				<value>
+			  		<item name="PIDM" businessObject="KEY_BLOCK"/>
+			 	</value>
+			</item>
+			<item name="GOBINTL_PASSPORT_ID" logicalName="gobintlPassportId" type="String" physicalName="GOBINTL_PASSPORT_ID"  />
+			<item name="GOBINTL_NATN_CODE_ISSUE" logicalName="gobintlNatnCodeIssue" type="String" physicalName="GOBINTL_NATN_CODE_ISSUE"  />
+			<item name="ISSUE_NATN_DESC" logicalName="issueNatnDesc" type="String"  virtual="true" />
+			<item name="GOBINTL_PASSPORT_EXP_DATE" logicalName="gobintlPassportExpDate" type="java.util.Date" physicalName="GOBINTL_PASSPORT_EXP_DATE"  />
+			<item name="GOBINTL_I94_STATUS" logicalName="gobintlI94Status" type="String" physicalName="GOBINTL_I94_STATUS"  />
+			<item name="GOBINTL_I94_DATE" logicalName="gobintlI94Date" type="java.util.Date" physicalName="GOBINTL_I94_DATE"  />
+			<item name="GOBINTL_REG_NUMBER" logicalName="gobintlRegNumber" type="String" physicalName="GOBINTL_REG_NUMBER"  />
+			<item name="GOBINTL_DURATION" logicalName="gobintlDuration" type="String" physicalName="GOBINTL_DURATION"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GOBINTL_CELG_CODE" logicalName="gobintlCelgCode" type="String" physicalName="GOBINTL_CELG_CODE"  />
+			<item name="CELG_DESC" logicalName="celgDesc" type="String"  virtual="true" />
+			<item name="GOBINTL_CERT_NUMBER" logicalName="gobintlCertNumber" type="String" physicalName="GOBINTL_CERT_NUMBER"  />
+			<item name="GOBINTL_CERT_DATE_ISSUE" logicalName="gobintlCertDateIssue" type="java.util.Date" physicalName="GOBINTL_CERT_DATE_ISSUE"  />
+			<item name="GOBINTL_CERT_DATE_RECEIPT" logicalName="gobintlCertDateReceipt" type="java.util.Date" physicalName="GOBINTL_CERT_DATE_RECEIPT"  />
+			<item name="GOBINTL_ADMR_CODE" logicalName="gobintlAdmrCode" type="String" physicalName="GOBINTL_ADMR_CODE"  />
+			<item name="ADMR_DESC" logicalName="admrDesc" type="String"  virtual="true" />
+			<item name="GOBINTL_NATN_CODE_BIRTH" logicalName="gobintlNatnCodeBirth" type="String" physicalName="GOBINTL_NATN_CODE_BIRTH"  />
+			<item name="BIRTH_NATN_DESC" logicalName="birthNatnDesc" type="String"  virtual="true" />
+			<item name="GOBINTL_NATN_CODE_LEGAL" logicalName="gobintlNatnCodeLegal" type="String" physicalName="GOBINTL_NATN_CODE_LEGAL"  />
+			<item name="LEGAL_NATN_DESC" logicalName="legalNatnDesc" type="String"  virtual="true" />
+			<item name="GOBINTL_LANG_CODE" logicalName="gobintlLangCode" type="String" physicalName="GOBINTL_LANG_CODE"  />
+			<item name="LANG_DESC" logicalName="langDesc" type="String"  virtual="true" />
+			<item name="GOBINTL_SPON_CODE" logicalName="gobintlSponCode" type="String" physicalName="GOBINTL_SPON_CODE"  />
+			<item name="SPON_DESC" logicalName="sponDesc" type="String"  virtual="true" />
+			<item name="GOBINTL_EMPT_CODE" logicalName="gobintlEmptCode" type="String" physicalName="GOBINTL_EMPT_CODE"  />
+			<item name="EMPT_DESC" logicalName="emptDesc" type="String"  virtual="true" />
+			<item name="GOBINTL_FOREIGN_SSN" logicalName="gobintlForeignSsn" type="String" physicalName="GOBINTL_FOREIGN_SSN"  />
+			<item name="GOBINTL_SPOUSE_IND" logicalName="gobintlSpouseInd" type="String" physicalName="GOBINTL_SPOUSE_IND"  >
+				<value>
+					<constant>T</constant>
+				</value>	
+			</item>
+			<item name="GOBINTL_CHILD_NUMBER" logicalName="gobintlChildNumber" type="java.math.BigDecimal" physicalName="GOBINTL_CHILD_NUMBER"  />
+			<item name="GOBINTL_SIGNATURE_IND" logicalName="gobintlSignatureInd" type="String" physicalName="GOBINTL_SIGNATURE_IND"  >
+				<value>
+					<constant>T</constant>
+				</value>	
+			</item>
+			<item name="GOBINTL_USER_ID" logicalName="gobintlUserId" type="String" physicalName="GOBINTL_USER_ID"  />
+			<item name="GOBINTL_ACTIVITY_DATE" logicalName="gobintlActivityDate" type="java.util.Date" physicalName="GOBINTL_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATETIME"/>
+				</value>	
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Goaintl.model.GobintlAdapter</adapterClass>
+
+	</manager>
+</b:beans>

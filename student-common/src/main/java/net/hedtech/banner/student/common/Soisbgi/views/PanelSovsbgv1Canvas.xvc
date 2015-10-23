@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="SOVSBGV"/>
+	<panel class="ContentCanvas" id="pnlSovsbgv1Canvas" menu="G$_DEFAULT_PM" name="SOVSBGV_1_CANVAS" width="100%">
+		<collapsiblepanel label="sovsbgv1Canvas.text19.text" name="grdSovsbgv" width="100%">
+			<panel width="100%">
+				<gridview block="SOVSBGV" width="100%">
+					<viewheader>
+						<viewcolumn block="SOVSBGV" datatype="String" id="sovsbgvTypeInd" member="SOVSBGV_TYPE_IND" name="sovsbgvTypeInd"  label="sovsbgv.sovsbgvTitleCombo.prompt" height="23px" width="120px">
+							<editor>
+								<combobox>
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+									<model>
+										<item label="sovsbgv.sovsbgvHS.prompt"		value="H" />
+										<item label="sovsbgv.sovsbgvCollege.prompt" value="C" />
+										<item label="sovsbgv.sovsbgvSource.prompt" 	value="S" />
+										<item label="sovsbgv.sovsbgvNone.prompt"  			  />
+									</model>
+								</combobox>
+							</editor>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="SOVSBGV" case="upper" datatype="String" label="sovsbgv.sovsbgvCode.prompt" labelstyle="DEFAULT" maxlength="7" member="SOVSBGV_CODE" name="sovsbgvCode" width="56px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="SOVSBGV" datatype="String" enabled="false" label="sovsbgv.sovsbgvDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="SOVSBGV_DESC" name="sovsbgvDesc" width="207px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="SOVSBGV" datatype="String" enabled="false" label="sovsbgv.sovsbgvCity.prompt" labelstyle="DEFAULT" maxlength="50" member="SOVSBGV_CITY" name="sovsbgvCity" width="306px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="SOVSBGV" case="upper" datatype="String" enabled="false" keyactions="NEXT_ITEM" label="sovsbgv.sovsbgvStatCode.prompt" labelstyle="DEFAULT" maxlength="30" member="SOVSBGV_STAT_CODE" name="sovsbgvStatCode" width="150px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="SOVSBGV" case="upper" datatype="String" enabled="false" keyactions="NEXT_ITEM" label="sovsbgv.sovsbgvAdmrCode.prompt" labelstyle="DEFAULT" maxlength="30" member="SOVSBGV_ADMR_CODE" name="sovsbgvAdmrCode" width="150px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+				<!-- <panel width="100%">
+					<gridlayout>
+						<gridcell>
+							<radiogroup block="SOVSBGV" datatype="String" id="sovsbgvTypeInd" member="SOVSBGV_TYPE_IND" name="sovsbgvTypeInd">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<radiobox group="sovsbgvTypeInd" height="23px" labelalign="center" labelalignoffset="-4px" labeloffset="19" labelposition="top" name="rb_SovsbgvTypeInd_None" width="23px"/>
+								<radiobox group="sovsbgvTypeInd" height="23px" labelalign="center" labelalignoffset="-4px" labeloffset="19" labelposition="top" name="rb_SovsbgvTypeInd_Hs" value="H" width="23px"/>
+								<radiobox group="sovsbgvTypeInd" height="23px" labelalign="center" labelalignoffset="-4px" labeloffset="19" labelposition="top" name="rb_SovsbgvTypeInd_College" value="C" width="23px"/>
+								<radiobox group="sovsbgvTypeInd" height="23px" labelalign="center" labelalignoffset="-4px" labeloffset="19" labelposition="top" name="rb_SovsbgvTypeInd_Source" value="S" width="23px"/>
+							</radiogroup>
+						</gridcell>
+					</gridlayout>
+				</panel> -->
+				
+			</panel>
+		</collapsiblepanel>
+	</panel>
+</config>
+<!-- 					<gridcell> -->
+<!-- 						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="20px" icon="search" label="sovsbgv1Canvas.text19.text" member="SOVSBGV_STAT_CODE_LBT" name="sovsbgvStatCodeLbt" navigable="false" tooltip="buttonControlBlock.sovsbgvStatCodeLbt.tooltip" width="20px"> -->
+<!-- 							<xl:event action="WHEN-MOUSE-CLICK" name="click"/> -->
+<!-- 						</button> -->
+<!-- 					</gridcell> -->
+<!-- 					<gridcell> -->
+<!-- 						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="20px" icon="search" member="SOVSBGV_ADMR_CODE_LBT" name="sovsbgvAdmrCodeLbt" navigable="false" tooltip="buttonControlBlock.sovsbgvAdmrCodeLbt.tooltip" width="20px"> -->
+<!-- 							<xl:event action="WHEN-MOUSE-CLICK" name="click"/> -->
+<!-- 						</button> -->
+<!-- 					</gridcell> --> 					

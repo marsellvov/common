@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="CP___BLOCK.Manager.Config" name="CpBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CP$_CALL_MODE" logicalName="cpCallMode" type="String"    /> 
+			<item name="CP$_EXIT_MODE" logicalName="cpExitMode" type="String"    /> 
+			<item name="CP$_FORM_NAME" logicalName="cpFormName" type="String"    /> 
+			<item name="CP$_POST_DONE" logicalName="cpPostDone" type="String"    > 
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Aoqolib.model.CpBlock</managerClass>
+
+	</manager>
+</b:beans>

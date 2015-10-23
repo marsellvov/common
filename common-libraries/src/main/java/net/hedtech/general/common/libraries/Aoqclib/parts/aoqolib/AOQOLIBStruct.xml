@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FormStructure AlertDataPath="net/hedtech/general/common/libraries/Aoqclib/parts/aoqolib/AOQOLIBAlerts.xml" LovDataPath="net/hedtech/general/common/libraries/Aoqclib/parts/aoqolib/AOQOLIBLovs.xml" Name="AOQOLIB">
+	<Visual>
+	</Visual>
+	<Logic>
+	</Logic>
+</FormStructure>
+ 

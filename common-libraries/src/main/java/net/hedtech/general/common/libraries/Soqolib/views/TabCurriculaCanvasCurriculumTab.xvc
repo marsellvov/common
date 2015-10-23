@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" >
+  <interactionblock name="S$_CURRICULA_TRADITIONAL" />
+  <interactionblock name="SORLCUR" />
+  <panel>
+    <textfield labelposition="left" labelalign="start" name="dataSeparatorLine1" style="GNvaDataSeparatorLinegDataSeparatorLineClass" left="3px" top="5px" width="983px" height="5px" enabled="false" wrapStyle="none" bordertype="none" member="DATA_SEPARATOR_LINE_1" block="S$_CURRICULA_TRADITIONAL" maxlength="24" datatype="" case="upper" />
+    <framepanel width="983px" height="428px" top="12px" left="3px" name="rect596">
+      <button labelposition="right" labeloffset="-222" labelalign="center" name="sorlcurKeySeqnoLbt" style="GIconBtnClass" left="186px" top="84px" width="20px" height="20px" navigable="false" icon="search" tooltip="sCurriculaTraditional.sorlcurKeySeqnoLbt.tooltip" member="SORLCUR_KEY_SEQNO_LBT" block="S$_CURRICULA_TRADITIONAL" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <textbox label="sCurriculaTraditional.lcurRecNum.prompt" labelposition="right" labeloffset="-92" labelalign="center" name="lcurRecNum" style="GNvaTextItem" left="816px" top="7px" width="31px" height="23px" enabled="false" member="LCUR_REC_NUM" block="S$_CURRICULA_TRADITIONAL" maxlength="3" datatype="" case="mixed" />
+      <textbox label="sCurriculaTraditional.lcurRecCnt.prompt" labelposition="right" labeloffset="-59" labelalign="center" name="lcurRecCnt" style="GNvaTextItem" left="885px" top="7px" width="31px" height="23px" enabled="false" member="LCUR_REC_CNT" block="S$_CURRICULA_TRADITIONAL" maxlength="3" datatype="" case="mixed" />
+      <checkbox label="sorlcur.sovlcurCurrentInd.prompt" labelposition="right" labeloffset="-144" labelalign="center" othervaluestate="unchecked" value="Y" falsevalue="N" name="sovlcurCurrentInd" style="GNvaCheckBox" left="147px" top="37px" width="15px" height="23px" enabled="false" member="SOVLCUR_CURRENT_IND" block="SORLCUR" validation="server" maxlength="1" datatype="" case="upper" />
+      <textbox label="sorlcur.sorlcurSeqno.prompt" labelposition="right" labeloffset="-98" labelalign="center" name="sorlcurSeqno" style="GNvaTextItem" left="251px" top="37px" width="28px" height="23px" enabled="false" member="SORLCUR_SEQNO" block="SORLCUR" validation="server" maxlength="5" datatype="" case="mixed" />
+      <textbox label="sorlcur.sorlcurCactCode.prompt" labelposition="right" labeloffset="-275" labelalign="center" name="sorlcurCactCode" style="GNvaTextItem" left="147px" top="60px" width="146px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_CACT_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurKeySeqno.prompt" labelposition="right" labeloffset="-165" labelalign="center" name="sorlcurKeySeqno" style="GNvaTextItem" left="147px" top="82px" width="36px" height="23px" enabled="false" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_KEY_SEQNO" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurTermCode.prompt" labelposition="right" labeloffset="-192" labelalign="center" name="sorlcurTermCode" style="GNvaTextItem" left="147px" top="105px" width="63px" height="23px" enabled="false" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_TERM_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurTermCodeEnd.prompt" labelposition="right" labeloffset="-192" labelalign="center" name="sorlcurTermCodeEnd" style="GNvaTextItem" left="147px" top="128px" width="63px" height="23px" enabled="false" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_TERM_CODE_END" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurTermCodeCtlg.prompt" labelposition="right" labeloffset="-192" labelalign="center" name="sorlcurTermCodeCtlg" style="GNvaTextItem" left="147px" top="150px" width="63px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_TERM_CODE_CTLG" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurPriorityNo.prompt" labelposition="right" labeloffset="-177" labelalign="center" name="sorlcurPriorityNo" style="GNvaTextItem" left="147px" top="173px" width="48px" height="23px" member="SORLCUR_PRIORITY_NO" block="SORLCUR" validation="server" maxlength="5" minvalue="0" maxvalue="999" datatype="" case="mixed" />
+      <textbox label="sorlcur.sorlcurProgram.prompt" labelposition="right" labeloffset="-246" labelalign="center" name="sorlcurProgram" style="GNvaTextItem" left="147px" top="195px" width="117px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_PROGRAM" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurLevlCode.prompt" labelposition="right" labeloffset="-158" labelalign="center" name="sorlcurLevlCode" style="GNvaTextItem" left="147px" top="218px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_LEVL_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurCampCode.prompt" labelposition="right" labeloffset="-165" labelalign="center" name="sorlcurCampCode" style="GNvaTextItem" left="147px" top="241px" width="36px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_CAMP_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurCollCode.prompt" labelposition="right" labeloffset="-156" labelalign="center" name="sorlcurCollCode" style="GNvaTextItem" left="147px" top="263px" width="27px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_COLL_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurDegcCode.prompt" labelposition="right" labeloffset="-192" labelalign="center" name="sorlcurDegcCode" style="GNvaTextItem" left="147px" top="286px" width="63px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_DEGC_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurAdmtCode.prompt" labelposition="right" labeloffset="-156" labelalign="center" name="sorlcurAdmtCode" style="GNvaTextItem" left="147px" top="331px" width="27px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_ADMT_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurTermCodeAdmit.prompt" labelposition="right" labeloffset="-192" labelalign="center" name="sorlcurTermCodeAdmit" style="GNvaTextItem" left="147px" top="354px" width="63px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_TERM_CODE_ADMIT" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sovlcurApplKeySeqno.prompt" labelposition="right" labeloffset="-161" labelalign="center" name="sovlcurApplKeySeqno" style="GNvaTextItem" left="147px" top="376px" width="32px" height="23px" enabled="false" tooltip="sorlcur.sovlcurApplKeySeqno.tooltip" member="SOVLCUR_APPL_KEY_SEQNO" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sorlcur.sorlcurTermCodeMatric.prompt" labelposition="right" labeloffset="-192" labelalign="center" name="sorlcurTermCodeMatric" style="GNvaTextItem" left="147px" top="399px" width="63px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_TERM_CODE_MATRIC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurLmodCode.prompt" labelposition="right" labeloffset="-213" labelalign="center" name="sorlcurLmodCode" style="GNvaTextItem" left="365px" top="7px" width="144px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_LMOD_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <radiogroup id="sorlcurRollInd" name="sorlcurRollInd" style="DEFAULT" member="SORLCUR_ROLL_IND" block="SORLCUR" validation="server" maxlength="1" datatype="" case="mixed">
+        <radiobox group="sorlcurRollInd" labelposition="right" labeloffset="-145" labelalign="center" label="sorlcur.sorlcurRollInd.yesRoll.label" value="Y" name="rb_SorlcurRollInd_YesRoll" style="G$_NVA_RADIO_BUTTON" left="634px" top="37px" width="44px" height="23px" />
+        <radiobox group="sorlcurRollInd" labelposition="left" labelalign="start" label="sorlcur.sorlcurRollInd.noRoll.label" value="N" name="rb_SorlcurRollInd_NoRoll" style="G$_NVA_RADIO_BUTTON" left="690px" top="37px" width="43px" height="23px" />
+        <radiobox group="sorlcurRollInd" labelposition="left" labelalign="start" label="sorlcur.sorlcurRollInd.defaultRoll.label" value="D" name="rb_SorlcurRollInd_DefaultRoll" style="G$_NVA_RADIO_BUTTON" left="739px" top="37px" width="74px" height="23px" />
+      </radiogroup>
+      <textbox label="sorlcur.sorlcurGappSeqno.prompt" labelposition="right" labeloffset="-219" labelalign="center" name="sorlcurGappSeqno" style="GNvaTextItem" left="718px" top="60px" width="35px" height="23px" enabled="false" member="SORLCUR_GAPP_SEQNO" block="SORLCUR" validation="server" maxlength="4" datatype="" case="mixed" />
+      <textbox label="sorlcur.lcurRolledKeySeqno.prompt" labelposition="right" labeloffset="-157" labelalign="center" name="lcurRolledKeySeqno" style="GNvaTextItem" left="951px" top="61px" width="21px" height="23px" enabled="false" member="LCUR_ROLLED_KEY_SEQNO" block="SORLCUR" validation="server" maxlength="4" datatype="" case="mixed" />
+      <calendar label="sorlcur.sorlcurStartDate.prompt" labelposition="right" labeloffset="-286" labelalign="center" name="sorlcurStartDate" style="GNvaTextItemgDateClass" left="718px" top="128px" width="101px" height="23px" wrapStyle="none" keyactions="NEXT_ITEM" member="SORLCUR_START_DATE" block="SORLCUR" validation="server" maxlength="11" datatype="" formatmask="DD-MON-YYYY" case="upper" />
+      <calendar label="sorlcur.sorlcurEndDate.prompt" labelposition="right" labeloffset="-286" labelalign="center" name="sorlcurEndDate" style="GNvaTextItemgDateClass" left="718px" top="150px" width="101px" height="23px" wrapStyle="none" keyactions="NEXT_ITEM" member="SORLCUR_END_DATE" block="SORLCUR" validation="server" maxlength="11" datatype="" formatmask="DD-MON-YYYY" case="upper" />
+      <textbox label="sorlcur.sorlcurStypCode.prompt" labelposition="right" labeloffset="-205" labelalign="center" name="sorlcurStypCode" style="GNvaTextItem" left="718px" top="218px" width="20px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_STYP_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurSiteCode.prompt" labelposition="right" labeloffset="-223" labelalign="center" name="sorlcurSiteCode" style="GNvaTextItem" left="718px" top="241px" width="39px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_SITE_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurRateCode.prompt" labelposition="right" labeloffset="-246" labelalign="center" name="sorlcurRateCode" style="GNvaTextItem" left="718px" top="263px" width="61px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_RATE_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurLeavCode.prompt" labelposition="right" labeloffset="-205" labelalign="center" name="sorlcurLeavCode" style="GNvaTextItem" left="718px" top="286px" width="20px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_LEAV_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <calendar label="sorlcur.sorlcurLeavFromDate.prompt" labelposition="right" labeloffset="-286" labelalign="center" labelfontsize="9pt" labelfontfamily="Verdana" name="sorlcurLeavFromDate" style="GNvaTextItemgDateClass" left="718px" top="309px" width="101px" height="23px" wrapStyle="none" keyactions="NEXT_ITEM" member="SORLCUR_LEAV_FROM_DATE" block="SORLCUR" validation="server" maxlength="11" datatype="" formatmask="DD-MON-YYYY" case="upper" />
+      <calendar label="sorlcur.sorlcurLeavToDate.prompt" labelposition="right" labeloffset="-286" labelalign="center" name="sorlcurLeavToDate" style="GNvaTextItemgDateClass" left="718px" top="331px" width="101px" height="23px" wrapStyle="none" keyactions="NEXT_ITEM" member="SORLCUR_LEAV_TO_DATE" block="SORLCUR" validation="server" maxlength="11" datatype="" formatmask="DD-MON-YYYY" case="upper" />
+      <calendar label="sorlcur.sorlcurExpGradDate.prompt" labelposition="right" labeloffset="-286" labelalign="center" name="sorlcurExpGradDate" style="GNvaTextItemgDateClass" left="718px" top="354px" width="101px" height="23px" wrapStyle="none" keyactions="NEXT_ITEM" member="SORLCUR_EXP_GRAD_DATE" block="SORLCUR" validation="server" maxlength="11" datatype="" formatmask="DD-MON-YYYY" case="upper" />
+      <textbox label="sorlcur.sorlcurTermCodeGrad.prompt" labelposition="right" labeloffset="-241" labelalign="center" name="sorlcurTermCodeGrad" style="GNvaTextItem" left="718px" top="376px" width="56px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_TERM_CODE_GRAD" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sorlcur.sorlcurAcyrCode.prompt" labelposition="right" labeloffset="-227" labelalign="center" name="sorlcurAcyrCode" style="GNvaTextItem" left="718px" top="399px" width="43px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORLCUR_ACYR_CODE" block="SORLCUR" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurCactCodeLbt.label" name="sorlcurCactCodeLbt" style="GIconBtnClass" left="295px" top="61px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurCactCodeLbt.tooltip" member="SORLCUR_CACT_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurTermCodeLbt.label" name="sorlcurTermCodeLbt" style="GIconBtnClass" left="210px" top="106px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurTermCodeLbt.tooltip" member="SORLCUR_TERM_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurLmodCodeLbt.label" name="sorlcurLmodCodeLbt" style="GIconBtnClass" left="509px" top="7px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurLmodCodeLbt.tooltip" member="SORLCUR_LMOD_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurTermCodeCtlgLbt.label" name="sorlcurTermCodeCtlgLbt" style="GIconBtnClass" left="210px" top="152px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurTermCodeCtlgLbt.tooltip" member="SORLCUR_TERM_CODE_CTLG_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurProgramLbt.label" name="sorlcurProgramLbt" style="GIconBtnClass" left="264px" top="197px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurProgramLbt.tooltip" member="SORLCUR_PROGRAM_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurLevlCodeLbt.label" name="sorlcurLevlCodeLbt" style="GIconBtnClass" left="177px" top="219px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurLevlCodeLbt.tooltip" member="SORLCUR_LEVL_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurCollCodeLbt.label" name="sorlcurCollCodeLbt" style="GIconBtnClass" left="174px" top="265px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurCollCodeLbt.tooltip" member="SORLCUR_COLL_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurDegcCodeLbt.label" name="sorlcurDegcCodeLbt" style="GIconBtnClass" left="210px" top="287px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurDegcCodeLbt.tooltip" member="SORLCUR_DEGC_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurCampCodeLbt.label" name="sorlcurCampCodeLbt" style="GIconBtnClass" left="183px" top="242px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurCampCodeLbt.tooltip" member="SORLCUR_CAMP_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurAdmtCodeLbt.label" name="sorlcurAdmtCodeLbt" style="GIconBtnClass" left="174px" top="332px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurAdmtCodeLbt.tooltip" member="SORLCUR_ADMT_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurTermCodeAdmitLbt.label" name="sorlcurTermCodeAdmitLbt" style="GIconBtnClass" left="210px" top="356px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurTermCodeAdmitLbt.tooltip" member="SORLCUR_TERM_CODE_ADMIT_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurTermCodeMatricLbt.label" name="sorlcurTermCodeMatricLbt" style="GIconBtnClass" left="210px" top="400px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurTermCodeMatricLbt.tooltip" member="SORLCUR_TERM_CODE_MATRIC_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurTermCodeEndLbt.label" name="sorlcurTermCodeEndLbt" style="GIconBtnClass" left="210px" top="128px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurTermCodeEndLbt.tooltip" member="SORLCUR_TERM_CODE_END_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurStartDateDbt.label" name="sorlcurStartDateDbt" style="GCalendarBtnClass" left="819px" top="129px" width="20px" height="20px" navigable="false" icon="calendar" tooltip="sorlcur.sorlcurStartDateDbt.tooltip" member="SORLCUR_START_DATE_DBT" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurEndDateDbt.label" name="sorlcurEndDateDbt" style="GCalendarBtnClass" left="819px" top="152px" width="20px" height="20px" navigable="false" icon="calendar" tooltip="sorlcur.sorlcurEndDateDbt.tooltip" member="SORLCUR_END_DATE_DBT" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurStypCodeLbt.label" name="sorlcurStypCodeLbt" style="GIconBtnClass" left="739px" top="219px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurStypCodeLbt.tooltip" member="SORLCUR_STYP_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurSiteCodeLbt.label" name="sorlcurSiteCodeLbt" style="GIconBtnClass" left="756px" top="242px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurSiteCodeLbt.tooltip" member="SORLCUR_SITE_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurRateCodeLbt.label" name="sorlcurRateCodeLbt" style="GIconBtnClass" left="779px" top="265px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurRateCodeLbt.tooltip" member="SORLCUR_RATE_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurLeavCodeLbt.label" name="sorlcurLeavCodeLbt" style="GIconBtnClass" left="738px" top="287px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurLeavCodeLbt.tooltip" member="SORLCUR_LEAV_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurLeavFromDateDbt.label" name="sorlcurLeavFromDateDbt" style="GCalendarBtnClass" left="819px" top="310px" width="20px" height="20px" navigable="false" icon="calendar" tooltip="sorlcur.sorlcurLeavFromDateDbt.tooltip" member="SORLCUR_LEAV_FROM_DATE_DBT" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurLeavToDateDbt.label" name="sorlcurLeavToDateDbt" style="GCalendarBtnClass" left="819px" top="332px" width="20px" height="20px" navigable="false" icon="calendar" tooltip="sorlcur.sorlcurLeavToDateDbt.tooltip" member="SORLCUR_LEAV_TO_DATE_DBT" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurExpGradDateDbt.label" name="sorlcurExpGradDateDbt" style="GCalendarBtnClass" left="819px" top="355px" width="20px" height="20px" navigable="false" icon="calendar" tooltip="sorlcur.sorlcurExpGradDateDbt.tooltip" member="SORLCUR_EXP_GRAD_DATE_DBT" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurTermCodeGradLbt.label" name="sorlcurTermCodeGradLbt" style="GIconBtnClass" left="774px" top="378px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurTermCodeGradLbt.tooltip" member="SORLCUR_TERM_CODE_GRAD_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.sorlcurAcyrCodeLbt.label" name="sorlcurAcyrCodeLbt" style="GIconBtnClass" left="759px" top="400px" width="20px" height="20px" navigable="false" icon="search" tooltip="sorlcur.sorlcurAcyrCodeLbt.tooltip" member="SORLCUR_ACYR_CODE_LBT" block="SORLCUR" validation="server" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <textfield labelposition="left" labelalign="start" name="sorlcurTermDesc" style="GDescClass" left="234px" top="105px" width="289px" height="23px" bordertype="none" member="SORLCUR_TERM_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurCatlgTermDesc" style="GDescClass" left="230px" top="150px" width="291px" height="21px" bordertype="none" member="SORLCUR_CATLG_TERM_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurLevlDesc" style="GDescClass" left="197px" top="218px" width="310px" height="23px" bordertype="none" member="SORLCUR_LEVL_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurCampDesc" style="GDescClass" left="203px" top="241px" width="295px" height="23px" bordertype="none" member="SORLCUR_CAMP_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurCollDesc" style="GDescClass" left="195px" top="263px" width="319px" height="23px" bordertype="none" member="SORLCUR_COLL_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurDegcDesc" style="GDescClass" left="231px" top="286px" width="299px" height="23px" bordertype="none" member="SORLCUR_DEGC_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurAdmtDesc" style="GDescClass" left="198px" top="331px" width="286px" height="23px" bordertype="none" member="SORLCUR_ADMT_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurProgramDesc" style="GDescClass" left="287px" top="197px" width="237px" height="23px" bordertype="none" member="SORLCUR_PROGRAM_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurAdmtTermDesc" style="GDescClass" left="235px" top="354px" width="273px" height="23px" bordertype="none" member="SORLCUR_ADMT_TERM_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurMatricTermDesc" style="GDescClass" left="235px" top="399px" width="266px" height="23px" bordertype="none" member="SORLCUR_MATRIC_TERM_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurEndTermDesc" style="GDescClass" left="231px" top="128px" width="165px" height="23px" bordertype="none" member="SORLCUR_END_TERM_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurStypCodeDesc" style="GDescClass" left="760px" top="218px" width="215px" height="23px" bordertype="none" member="SORLCUR_STYP_CODE_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurSiteCodeDesc" style="GDescClass" left="778px" top="241px" width="197px" height="21px" bordertype="none" member="SORLCUR_SITE_CODE_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurRateCodeDesc" style="GDescClass" left="804px" top="263px" width="172px" height="23px" bordertype="none" member="SORLCUR_RATE_CODE_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurLeavCodeDesc" style="GDescClass" left="760px" top="286px" width="218px" height="23px" bordertype="none" member="SORLCUR_LEAV_CODE_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurTermCodeGradDesc" style="GDescClass" left="796px" top="376px" width="184px" height="23px" bordertype="none" member="SORLCUR_TERM_CODE_GRAD_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurAcyrCodeDesc" style="GDescClass" left="782px" top="399px" width="197px" height="23px" bordertype="none" member="SORLCUR_ACYR_CODE_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sorlcurLmodCodeDesc" style="GDescClass" left="532px" top="7px" width="215px" height="24px" bordertype="none" member="SORLCUR_LMOD_CODE_DESC" block="SORLCUR" validation="server" maxlength="30" datatype="" case="mixed" />
+      <button labelposition="left" labelalign="start" label="sorlcur.nextRecBtn.label" name="nextRecBtn" style="GIconBtnClass" left="949px" top="8px" width="20px" height="20px" navigable="false" icon="right_arw" tooltip="sorlcur.nextRecBtn.tooltip" member="NEXT_REC_BTN" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sorlcur.prevRecordBtn.label" name="prevRecordBtn" style="GIconBtnClass" left="924px" top="8px" width="20px" height="20px" navigable="false" icon="left_arw" tooltip="sorlcur.prevRecordBtn.tooltip" member="PREV_RECORD_BTN" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="right" labeloffset="-82" labelalign="center" label="sorlcur.deactiveBtn.label" name="deactiveBtn" style="GIconBtnClass" left="243px" top="37px" width="20px" height="20px" navigable="false" icon="maintenance" tooltip="sorlcur.deactiveBtn.tooltip" member="DEACTIVE_BTN" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="right" labeloffset="-78" labelalign="center" label="sorlcur.deactiveDuplicateBtn.label" name="deactiveDuplicateBtn" style="GIconBtnClass" left="359px" top="37px" width="20px" height="20px" navigable="false" icon="maintenance" tooltip="sorlcur.deactiveDuplicateBtn.tooltip" member="DEACTIVE_DUPLICATE_BTN" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="right" labeloffset="-93" labelalign="center" labelfontsize="9pt" labelfontfamily="Verdana" label="sorlcur.duplicateBtn.label" name="duplicateBtn" style="GIconBtnClass" left="488px" top="37px" width="20px" height="20px" navigable="false" icon="maintenance" tooltip="sorlcur.duplicateBtn.tooltip" member="DUPLICATE_BTN" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button label="sorlcur.applyToGraduateBtn.prompt" labelposition="right" labeloffset="-154" labelalign="center" name="applyToGraduateBtn" style="GIconBtnClass" left="488px" top="61px" width="20px" height="20px" navigable="false" icon="maintenance" tooltip="sorlcur.applyToGraduateBtn.tooltip" member="APPLY_TO_GRADUATE_BTN" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button label="sorlcur.rollToOutcomeBtn.prompt" labelposition="right" labeloffset="-156" labelalign="center" name="rollToOutcomeBtn" style="GIconBtnClass" left="951px" top="39px" width="20px" height="20px" navigable="false" icon="maintenance" tooltip="sorlcur.rollToOutcomeBtn.tooltip" member="ROLL_TO_OUTCOME_BTN" block="SORLCUR" validation="server" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+    </framepanel>
+    <text fontfamily="Verdana" fontsize="11pt" fontcolor="Black" name="text5441" left="21px" top="23px" bordertype="none">curriculumTab.text544.text</text>
+  </panel>
+</config>

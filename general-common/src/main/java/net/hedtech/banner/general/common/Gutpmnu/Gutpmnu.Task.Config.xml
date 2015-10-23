@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqgmnu/GOQGMNU.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	
+	
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/general/common/Gutpmnu/model/GUTPMNU.Model.Config.xml"/>
+	
+	<task id="GUTPMNU.Task.Config" name="GUTPMNU">
+		<baseTaskConfiguration config="BASE.Task.Config"/>
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.general.common.Gutpmnu.GutpmnuTask</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/general/common/Gutpmnu/GutpmnuStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.general.common.Gutpmnu.services.GutpmnuServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+
+				<package  name="SUBMENU_MAINTENANCE">net.hedtech.banner.general.common.Gutpmnu.services.SubmenuMaintenance</package> 
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQGMNU.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="GUTPMNU.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.banner.general.common.Gutpmnu.controller.GutpmnuFormController</formController>
+		<blockControllers>
+			
+			
+			<block  name="G$_VPDI_BLOCK">net.hedtech.banner.general.common.Gutpmnu.controller.GVpdiBlockController</block>
+			<block  name="G$_NAV_BLOCK">net.hedtech.banner.general.common.Gutpmnu.controller.GNavBlockController</block>
+			<block  name="FORM_HEADER">net.hedtech.banner.general.common.Gutpmnu.controller.FormHeaderController</block>
+			<block  name="GUBOBJS">net.hedtech.banner.general.common.Gutpmnu.controller.GubobjsController</block>
+			<block  name="GURMENU">net.hedtech.banner.general.common.Gutpmnu.controller.GurmenuController</block>
+			<block  name="GURMENU2">net.hedtech.banner.general.common.Gutpmnu.controller.Gurmenu2Controller</block>
+			<block  name="ALL_USERS_BLOCK">net.hedtech.banner.general.common.Gutpmnu.controller.AllUsersBlockController</block>
+			<block  name="BUTTON_CONTROL_BLOCK">net.hedtech.banner.general.common.Gutpmnu.controller.ButtonControlBlockController</block>
+			<block  name="QK_FLOW">net.hedtech.banner.general.common.Gutpmnu.controller.QkFlowController</block>
+			<block  name="QK_MENU">net.hedtech.banner.general.common.Gutpmnu.controller.QkMenuController</block>
+		</blockControllers>
+		<menuControllers>
+			<menu  name="G$_DEFAULT_PM">net.hedtech.banner.general.common.Gutpmnu.controller.GDefaultPmContextController</menu>
+		</menuControllers>
+
+	</task>
+</b:beans>
+
+ 

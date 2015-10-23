@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/alumni/common/Apcaddr/ApcaddrAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/alumni/common/Apcaddr/ApcaddrLovs.xml" Name="APCADDR">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/alumni/common/Apcaddr/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <StackedCanvas Id="SPRADDR_1_CANVAS" />
+      <ContentCanvas Id="KEY_BLOCK_CANVAS" />
+      <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false" />
+    </Window>
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/alumni/common/Apcaddr/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="WORKFLD" MaxLength="12" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALLFLD" MaxLength="17" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="WORKDATE" MaxLength="21" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="SPRADDR_1_CANVAS" Enabled="false" Id="DATA_SEPARATOR_LINE_0" MaxLength="24" Navigable="false" Type="DisplayItem" />
+    </Block>
+    <Block Id="KEY_BLOCK">
+      <Item AutoSkip="true" CanvasName="KEY_BLOCK_CANVAS" Id="ID" MaxLength="9" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="FULL_NAME" MaxLength="230" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="ENTITY_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SPS_PIDM" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="KEY_PIDM" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="PIDM" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="CONFID_IND" MaxLength="14" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_DECEASED_IND" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Id="DONR_CAT" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="DECEASED_IND" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="SPS_IDNO_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="ID_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_IDNO" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_NAME" MaxLength="230" Navigable="false" Type="TextItem" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="DONR_CAT_LBT" MaxLength="30" Navigable="true" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_DONR_CAT" MaxLength="4" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="PREF_CLASS" MaxLength="4" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_PREF_CLASS" MaxLength="4" Navigable="false" Type="DisplayItem" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" MaxLength="30" Type="Button" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" MaxLength="30" Type="Button" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowInsert="false" AllowUpdate="false" Id="SPRADDR" MultiRecord="true">
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SPRADDR_PIDM" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AutoSkip="true" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_ATYP_CODE" Lov="STVATYP_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Enabled="false" Id="SPRADDR_SEQNO" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AutoSkip="true" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_ASRC_CODE" Lov="STVASRC_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_HOUSE_NUMBER" MaxLength="10" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_STREET_LINE1" MaxLength="75" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_STREET_LINE2" MaxLength="75" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_STREET_LINE3" MaxLength="75" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_STREET_LINE4" MaxLength="75" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_CITY" MaxLength="50" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_STAT_CODE" Lov="STVSTAT_LOV" MaxLength="3" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_ZIP" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_ASRC_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_NATN_CODE" Lov="STVNATN_LOV" MaxLength="5" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="NATN_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_FROM_DATE" MaxLength="11" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Enabled="false" Id="SPRADDR_STATUS_IND" MaxLength="1" Navigable="false" Type="Checkbox" />
+      <Item CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_ATYP_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowUpdate="false" CanvasName="SPRADDR_1_CANVAS" Id="SPRADDR_TO_DATE" MaxLength="11" Type="TextItem" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="TEMP_CANVAS" Enabled="false" Id="EMAL_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_1_EXITVALUE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+  </Logic>
+</FormStructure>

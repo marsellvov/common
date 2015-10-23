@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Guahelp/GuahelpAlerts.xml" FirstNavigationBlock="DISPLAY_HELP" LovDataPath="/net/hedtech/banner/general/common/Guahelp/GuahelpLovs.xml" Name="GUAHELP">
+	<Visual>
+		
+		<Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Guahelp/views/ViewMainWindow">
+			<ContentCanvas Id="TEMP_CANVAS" Visible="false"/>
+		</Window>
+		<Window Id="GUAHELP_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Guahelp/views/ViewGuahelpWindow">
+			<ContentCanvas Id="GUAHELP_1_CANVAS"/>
+		</Window>
+	</Visual>
+	<Logic>
+		
+		
+		<Block Id="DISPLAY_HELP">
+			<Item AllowSearch="false" CanvasName="GUAHELP_1_CANVAS" DataType="String" Enabled="true" Hint="displayHelp.helpForm.hint" Id="HELP_FORM" MaxLength="30" Required="true" Type="TextItem" Visible="true"/>
+			<Item CanvasName="GUAHELP_1_CANVAS" DataType="String" Hint="displayHelp.helpBlock.hint" Id="HELP_BLOCK" Lov="HELPBLK_LOV" MaxLength="30" Type="TextItem"/>
+			<Item CanvasName="GUAHELP_1_CANVAS" DataType="String" Hint="displayHelp.helpField.hint" Id="HELP_FIELD" Lov="HELPFLD_LOV" MaxLength="30" Type="TextItem"/>
+			<Item AllowSearch="false" CanvasName="GUAHELP_1_CANVAS" DataType="String" Enabled="true" Hint="displayHelp.helpType.hint" Id="HELP_TYPE" MaxLength="2" Type="RadioGroup" Visible="true">
+				<Item Id="HELP_TYPE_RBT1" Type="RadioButton"/>
+				<Item Id="HELP_TYPE_RBT2" Type="RadioButton"/>
+			</Item>
+			<Item AllowSearch="false" CanvasName="GUAHELP_1_CANVAS" DataType="String" Enabled="true" Hint="displayHelp.helpSel.hint" Id="HELP_SEL" MaxLength="2" Type="RadioGroup" Visible="true">
+				<Item Id="HELP_SEL_RBT1" Type="RadioButton"/>
+				<Item Id="HELP_SEL_RBT2" Type="RadioButton"/>
+				<Item Id="HELP_SEL_RBT3" Type="RadioButton"/>
+			</Item>
+			<Item CanvasName="GUAHELP_1_CANVAS" Enabled="true" Id="GUAHELP_FIND_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+			<Item CanvasName="GUAHELP_1_CANVAS" Enabled="true" Id="GUAHELP_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+			<Item Enabled="true" Id="GUAHELP_1_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+			<Item CanvasName="GUAHELP_1_CANVAS" Enabled="true" Id="GUAHELP_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+		<Block Id="SHOW_HELP">
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="GUAHELP_1_CANVAS" DataType="String" Enabled="true" Id="HELP_COMMENT" MaxLength="30000" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="GUAHELP_1_CANVAS" DataType="String" Enabled="false" Id="HELP_IND" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HELP_CHG" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_COMMENT" MaxLength="30000" Navigable="false" Type="TextItem" Visible="true"/>
+		</Block>
+		<Block Id="BUTTON_CONTROL_BLOCK">
+			<Item CanvasName="GUAHELP_1_CANVAS" Id="HELP_BLOCK_LBT" MaxLength="14" Navigable="false" Type="Button"/>
+			<Item CanvasName="GUAHELP_1_CANVAS" Id="HELP_FIELD_LBT" MaxLength="14" Navigable="false" Type="Button"/>
+			<Item Enabled="true" Id="GUAHELP_2_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+			<Item Enabled="true" Id="GUAHELP_2_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+			<Item Enabled="true" Id="GUAHELP_2_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+	</Logic>
+</FormStructure>

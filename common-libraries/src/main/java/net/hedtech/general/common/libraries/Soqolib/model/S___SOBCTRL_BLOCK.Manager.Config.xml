@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___SOBCTRL_BLOCK.Manager.Config" name="SSobctrlBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="TABLEMODULE" logicalName="tablemodule" type="String"   />
+			<item name="HOLD_DEGREE" logicalName="holdDegree" type="String"   />
+			<item name="HOLD_PROGRAM" logicalName="holdProgram" type="String"   />
+			<item name="HOLD_LEVEL" logicalName="holdLevel" type="String"   />
+			<item name="HOLD_CAMPUS" logicalName="holdCampus" type="String"   />
+			<item name="HOLD_COLLEGE" logicalName="holdCollege" type="String"   />
+			<item name="CAI" logicalName="cai" type="String"   />
+			<item name="SOBCTRL_CURR_RULE_IND" logicalName="sobctrlCurrRuleInd" type="String"   />
+			<item name="HOLD_CURR_RULE_IND" logicalName="holdCurrRuleInd" type="String"   />
+			<item name="SECD_MAJR_ERROR" logicalName="secdMajrError" type="String"   />
+			<item name="RETURN_ERROR_ITEM" logicalName="returnErrorItem" type="String"   />
+			<item name="CONC1_ATTACH_IND" logicalName="conc1AttachInd" type="String"   />
+			<item name="CONC2_ATTACH_IND" logicalName="conc2AttachInd" type="String"   />
+			<item name="CCONMAJR_ATTACH_IND" logicalName="cconmajrAttachInd" type="String"   />
+			<item name="CCONBASE1_ATTACH_IND" logicalName="cconbase1AttachInd" type="String"   />
+			<item name="CCONBASE2_ATTACH_IND" logicalName="cconbase2AttachInd" type="String"   />
+			<item name="CCONMAJR2_ATTACH_IND" logicalName="cconmajr2AttachInd" type="String"   />
+			<item name="SOBCTRL_PROGRAM_IND" logicalName="sobctrlProgramInd" type="String"   />
+			<item name="SOBCTRL_CONC_IND" logicalName="sobctrlConcInd" type="String"   />
+			<item name="SOBCTRL_PRIM_ROLL_IND" logicalName="sobctrlPrimRollInd" type="String"   />
+			<item name="SOBCTRL_SECD_ROLL_IND" logicalName="sobctrlSecdRollInd" type="String"   />
+			<item name="SOBCTRL_REC_ERRLVL_IND" logicalName="sobctrlRecErrlvlInd" type="String"   />
+			<item name="SOBCTRL_ADM_ERRLVL_IND" logicalName="sobctrlAdmErrlvlInd" type="String"   />
+			<item name="SOBCTRL_STU_ERRLVL_IND" logicalName="sobctrlStuErrlvlInd" type="String"   />
+			<item name="SOBCTRL_HIS_ERRLVL_IND" logicalName="sobctrlHisErrlvlInd" type="String"   />
+			<item name="SOBCTRL_DAU_ERRLVL_IND" logicalName="sobctrlDauErrlvlInd" type="String"   />
+			<item name="HOLD_PRIM_ROLL_IND" logicalName="holdPrimRollInd" type="String"   />
+			<item name="HOLD_SECD_ROLL_IND" logicalName="holdSecdRollInd" type="String"   />
+			<item name="CURR_CHANGE_IND" logicalName="currChangeInd" type="String"   />
+			<item name="CURR_IND" logicalName="currInd" type="String"   />
+			<item name="CURR_ERROR_IND" logicalName="currErrorInd" type="String"   />
+			<item name="CONC11_ATTACH_IND" logicalName="conc11AttachInd" type="String"   />
+			<item name="CCON1_ATTACH_IND" logicalName="ccon1AttachInd" type="String"   />
+			<item name="CCON2_ATTACH_IND" logicalName="ccon2AttachInd" type="String"   />
+			<item name="CONC12_ATTACH_IND" logicalName="conc12AttachInd" type="String"   />
+			<item name="CONC21_ATTACH_IND" logicalName="conc21AttachInd" type="String"   />
+			<item name="CONC22_ATTACH_IND" logicalName="conc22AttachInd" type="String"   />
+			<item name="MINR1_ATTACH_IND" logicalName="minr1AttachInd" type="String"   />
+			<item name="MINR2_ATTACH_IND" logicalName="minr2AttachInd" type="String"   />
+			<item name="MAJR1_ATTACH_IND" logicalName="majr1AttachInd" type="String"   />
+			<item name="MAJR2_ATTACH_IND" logicalName="majr2AttachInd" type="String"   />
+			<item name="CURR_INIT_TERM" logicalName="currInitTerm" type="String"   />
+			<item name="CURR_INIT_TERM_2" logicalName="currInitTerm2" type="String"   />
+			<item name="DEPT" logicalName="dept" type="String"   />
+			<item name="MAJOR" logicalName="major" type="String"   />
+			<item name="CHECK_BASE2_IND" logicalName="checkBase2Ind" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SSobctrlBlock</managerClass>
+
+	</manager>
+</b:beans>

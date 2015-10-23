@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="DISPLAY_HELP"/>
+	<interactionblock name="SHOW_HELP"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlGuahelp1Canvas" menu="G$_DEFAULT_PM" name="GUAHELP_1_CANVAS" width="450px">
+		
+		 <!-- NÃO APAGAR ESTE ITEM PORQUE É NECESSÁRIO PARA O EDIT -->
+		 <textbox block="SHOW_HELP" datatype="String" height="23px" maxlength="30" member="HELP_COMMENT" name="helpComment" visible="false" width="0px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</textbox> 
+		
+		<flowlayout cols="1" orientation="horizontal">
+			<component>
+				<!-- NAO SEPARAR RADIOGROUP DEIXA DE FUNCIONAR   -->
+				<radiogroup action="WHEN-RADIO-CHANGED" block="DISPLAY_HELP" datatype="String" id="helpSel" member="HELP_SEL" name="helpSel" orientation="vertical">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					<radiobox  name="rb_HelpSel_HelpSelRbt1" value="F" group="helpSel" label="displayHelp.helpSel.helpSelRbt1.label"/>
+					<radiobox  name="rb_HelpSel_HelpSelRbt2" value="B" group="helpSel" label="displayHelp.helpSel.helpSelRbt2.label"/>
+					<radiobox  name="rb_HelpSel_HelpSelRbt3" value="I" group="helpSel" label="displayHelp.helpSel.helpSelRbt3.label"/>
+				</radiogroup>
+				<panel>
+					<flowlayout>
+						<panel>
+							<textbox block="DISPLAY_HELP" case="upper" datatype="String" height="23px" maxlength="30" member="HELP_FORM" name="helpForm" required="true" validation="server" width="239px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</panel>
+						<panel>
+							<textbox block="DISPLAY_HELP" datatype="String" height="23px" maxlength="30" member="HELP_BLOCK" name="helpBlock" style="ui-buttoninput" validation="server" width="239px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="HELP_BLOCK_LBT" name="helpBlockLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.helpBlockLbt.tooltip" width="23px"/>
+						</panel>
+						<panel>
+							<textbox block="DISPLAY_HELP" datatype="String" height="23px" maxlength="30" member="HELP_FIELD" name="helpField" style="ui-buttoninput" validation="server" width="239px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="HELP_FIELD_LBT" name="helpFieldLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.helpFieldLbt.tooltip" width="23px"/>
+						</panel>
+					</flowlayout>
+				</panel>
+			</component>
+		</flowlayout>
+		<flowlayout cols="1" orientation="horizontal">
+				<component>
+					<radiogroup action="WHEN-RADIO-CHANGED" block="DISPLAY_HELP" datatype="String" id="helpType" member="HELP_TYPE" name="helpType" orientation="horizontal">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						<radiobox group="helpType" label="displayHelp.helpType.helpTypeRbt1.label" name="rb_HelpType_HelpTypeRbt1" value="B"/>
+						<radiobox group="helpType" height="23px" label="displayHelp.helpType.helpTypeRbt2.label" labelalign="start" labelposition="left" name="rb_HelpType_HelpTypeRbt2" value="L" width="80px"/>
+					</radiogroup>
+					<checkbox block="SHOW_HELP" enabled="false" height="23px" label="showHelp.helpInd.label" member="HELP_IND" name="helpInd" navigable="false" othervaluestate="unchecked" value="Y" width="128px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</checkbox>
+				</component>
+		</flowlayout>
+		
+	</panel>
+	
+	
+	<panel style="alert-footer">
+		<flowlayout orientation="horizontal">
+			<button action="WHEN-BUTTON-PRESSED" block="DISPLAY_HELP" label="buttonControlBlock.guahelp2EditBtn.label" member="GUAHELP_FIND_BTN" name="guahelpFindBtn" navigable="false"/>
+			<button action="WHEN-BUTTON-PRESSED" block="DISPLAY_HELP" label="displayHelp.guahelp1RollbackBtn.label" member="GUAHELP_1_ROLLBACK_BTN" name="guahelp1RollbackBtn" navigable="false"/>
+			<button action="WHEN-BUTTON-PRESSED" block="DISPLAY_HELP" label="displayHelp.guahelp1ExitBtn.label" member="GUAHELP_1_EXIT_BTN" name="guahelp1ExitBtn" navigable="false"/>
+		</flowlayout>
+	</panel>
+</config>

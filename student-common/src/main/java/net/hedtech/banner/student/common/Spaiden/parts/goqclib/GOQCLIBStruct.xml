@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<FormStructure AlertDataPath="net/hedtech/banner/student/common/Spaiden/parts/goqclib/GOQCLIBAlerts.xml" LovDataPath="net/hedtech/banner/student/common/Spaiden/parts/goqclib/GOQCLIBLovs.xml" Name="GOQCLIB">
+  <Visual>
+  </Visual>
+  <Logic>
+    <Block Id="SPRIDEN_CURRENT" />
+    <Block Id="SPRIDEN_PREVIOUS" />
+    <Block Id="SPRADDR" />
+    <Block Id="SPRTELE" />
+    <Block Id="SPBPERS" />
+    <Block Id="GORPRAC" />
+    <Block Id="GOREMAL" />
+    <Block Id="SPREMRG" />
+    <Block Id="GORADID" />
+  </Logic>
+</FormStructure>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="DISPLAY_HELP.Manager.Config" name="DisplayHelp">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="HELP_FORM" logicalName="helpForm" type="String"   />
+			<item name="HELP_BLOCK" logicalName="helpBlock" type="String"   />
+			<item name="HELP_FIELD" logicalName="helpField" type="String"   />
+			<item name="HELP_TYPE" logicalName="helpType" type="String"   >
+				<value>
+					<constant>L</constant>
+				</value>	
+			</item>
+			<item name="HELP_SEL" logicalName="helpSel" type="String"   >
+				<value>
+					<constant>I</constant>
+				</value>	
+			</item>
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Guahelp.model.DisplayHelp</managerClass>
+
+	</manager>
+</b:beans>

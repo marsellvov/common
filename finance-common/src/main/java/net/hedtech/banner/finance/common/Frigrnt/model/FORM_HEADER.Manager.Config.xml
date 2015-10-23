@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FORM_HEADER.Manager.Config" name="FormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="QUERY_PI_FIRST_NAME" logicalName="queryPiFirstName" type="String"   />
+			<item name="QUERY_AGENCY_ID" logicalName="queryAgencyId" type="String"   />
+			<item name="QUERY_AGENCY_NAME" logicalName="queryAgencyName" type="String"   />
+			<item name="QUERY_ORGN_DESC" logicalName="queryOrgnDesc" type="String"   />
+			<item name="QUERY_PI_LAST_NAME" logicalName="queryPiLastName" type="String"   />
+			<item name="QUERY_PI_ID" logicalName="queryPiId" type="String"   />
+			<item name="QUERY_STATUS_DESC" logicalName="queryStatusDesc" type="String"   />
+			<item name="CURRENT_USER" logicalName="currentUser" type="String"   />
+			<item name="CURRENT_FORM" logicalName="currentForm" type="String"   />
+			<item name="CURRENT_INSTITUTION" logicalName="currentInstitution" type="String"   />
+			<item name="CURRENT_DATE" logicalName="currentDate" type="String"   />
+			<item name="CURRENT_TIME" logicalName="currentTime" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="HEADER_FLAG" logicalName="headerFlag" type="String"   />
+			<item name="WORKFLD" logicalName="workfld" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.finance.common.Frigrnt.model.FormHeader</managerClass>
+
+	</manager>
+</b:beans>

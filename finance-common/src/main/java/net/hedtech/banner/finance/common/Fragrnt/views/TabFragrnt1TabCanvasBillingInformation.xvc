@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <interactionblock name="BLOCK3" />
+  <interactionblock name="FORM_HEADER" />
+  <interactionblock name="FRBGBIL" />
+  <panel width="100%">
+    <accordion width="100%">
+      <panel label="billingInformation.label">
+      	<panel style="ui-section" width="100%">
+      	<gridlayout cols="1" orientation="vertical">
+            <gridcell>
+              <textbox block="BLOCK3" datatype="String" height="23px" label="block3.agencyCode1.prompt" maxlength="9" member="AGENCY_CODE_1" name="agencyCode1" width="80px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <textfield block="BLOCK3" datatype="String" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="AGENCY_NAME_1" name="agencyName1" width="279px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+           </gridlayout>
+      	</panel>
+        <panel style="ui-section" width="100%">
+          <gridlayout cols="2" orientation="vertical">
+          	<gridcell>
+              <lovbox autoskip="true" block="FRBGBIL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgbil.frbgbilPmscCode.prompt" maxlength="30" member="FRBGBIL_PMSC_CODE" name="frbgbilPmscCode" style="ui-buttoninput" width="103px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGBIL_PMSC_CODE_LBT" name="frbgbilPmscCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgbilPmscCodeLbt.tooltip" width="23px" /> -->
+              <textfield block="FRBGBIL" datatype="String" height="23px" maxlength="35" member="PMSC_NAME" name="pmscName" width="306px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+          	<gridcell>
+              <lovbox autoskip="true" block="FRBGBIL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgbil.frbgbilBeclCode.prompt" maxlength="30" member="FRBGBIL_BECL_CODE" name="frbgbilBeclCode" style="ui-buttoninput" width="103px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGBIL_BECL_CODE_LBT" name="frbgbilBeclCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgbilBeclCodeLbt.tooltip" width="23px" /> -->
+              <textfield block="FRBGBIL" datatype="String" height="23px" maxlength="35" member="BECL_NAME" name="beclName" width="306px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+          	<gridcell>
+              <combobox action="WHEN-LIST-CHANGED" block="FRBGBIL" height="23px" label="frbgbil.frbgbilBudgetLimitInd.prompt" member="FRBGBIL_BUDGET_LIMIT_IND" name="frbgbilBudgetLimitInd" width="210px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <model>
+                  <item label="frbgbil.frbgbilBudgetLimitInd.item0.label" value="T" />
+                  <item label="frbgbil.frbgbilBudgetLimitInd.item1.label" value="L" />
+                  <item label="frbgbil.frbgbilBudgetLimitInd.item2.label" value="N" />
+                </model>
+              </combobox>
+            </gridcell>
+          	<gridcell>
+              <lovbox autoskip="true" block="FRBGBIL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgbil.frbgbilPaymentFundCode.prompt" maxlength="30" member="FRBGBIL_PAYMENT_FUND_CODE" name="frbgbilPaymentFundCode" style="ui-buttoninput" width="79px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGBIL_PAYMENT_FUND_CODE_LBT" name="frbgbilPaymentFundCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgbilPaymentFundCodeLbt.tooltip" width="23px" /> -->
+              <textfield block="FRBGBIL" datatype="String" height="23px" maxlength="35" member="PAYMENT_FUND_NAME" name="paymentFundName" width="330px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+          	<gridcell>
+              <lovbox autoskip="true" block="FRBGBIL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgbil.frbgbilPaymentAcctCode.prompt" maxlength="30" member="FRBGBIL_PAYMENT_ACCT_CODE" name="frbgbilPaymentAcctCode" style="ui-buttoninput" width="79px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="FORM_HEADER" height="23px" icon="search" member="FRBGBIL_PAYMENT_ACCT_CODE_LBT" name="frbgbilPaymentAcctCodeLbt" navigable="false" style="ui-buttoninput" tooltip="formHeader.frbgbilPaymentAcctCodeLbt.tooltip" width="23px" /> -->
+              <textfield block="FRBGBIL" datatype="String" height="23px" maxlength="35" member="PAYMENT_ACCT_NAME" name="paymentAcctName" width="330px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+          	<gridcell>
+              <lovbox autoskip="true" block="FRBGBIL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgbil.frbgbilClearingAcctCode.prompt" maxlength="30" member="FRBGBIL_CLEARING_ACCT_CODE" name="frbgbilClearingAcctCode" style="ui-buttoninput" width="79px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGBIL_CLEARING_ACCT_CODE_LBT" name="frbgbilClearingAcctCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgbilClearingAcctCodeLbt.tooltip" width="23px" /> -->
+              <textfield block="FRBGBIL" datatype="String" height="23px" maxlength="35" member="CLEARING_ACCT_NAME" name="clearingAcctName" width="330px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+          	<gridcell>
+              <lovbox block="FRBGBIL" case="upper" datatype="String" height="23px" label="frbgbil.frbgbilAddrType.prompt" maxlength="2" member="FRBGBIL_ADDR_TYPE" name="frbgbilAddrType" style="ui-buttoninput" width="79px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGBIL_ADDR_TYPE_LBT" name="frbgbilAddrTypeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgbilAddrTypeLbt.tooltip" width="23px" /> -->
+            </gridcell>
+          	<gridcell>
+              <lovbox block="FRBGBIL" datatype="Number" height="23px" keyactions="NEXT_ITEM" label="frbgbil.frbgbilAddrSeqno.prompt" maxlength="2" member="FRBGBIL_ADDR_SEQNO" name="frbgbilAddrSeqno" style="ui-buttoninput" width="73px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGBIL_ADDR_SEQNO_LBT" name="frbgbilAddrSeqnoLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgbilAddrSeqnoLbt.tooltip" width="23px" /> -->
+            </gridcell>
+          	<gridcell>
+              <textbox block="FRBGBIL" datatype="Number" height="23px" label="frbgbil.frbgbilLastInvSeqNo.prompt" maxlength="5" member="FRBGBIL_LAST_INV_SEQ_NO" name="frbgbilLastInvSeqNo" width="61px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+          	<gridcell>
+              <lovbox autoskip="true" block="FRBGBIL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgbil.frbgbilBfrmCode1034Ext.prompt" maxlength="30" member="FRBGBIL_BFRM_CODE_1034_EXT" name="frbgbilBfrmCode1034Ext" style="ui-buttoninput" width="74px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGBIL_BFRM_CODE_1034_EXT_LBT" name="frbgbilBfrmCode1034ExtLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgbilBfrmCode1034ExtLbt.tooltip" width="23px" /> -->
+            </gridcell>
+          	<gridcell>
+              <textbox block="FRBGBIL" case="upper" datatype="String" height="23px" label="frbgbil.frbgbilBudLineExceedInd.prompt" maxlength="1" member="FRBGBIL_BUD_LINE_EXCEED_IND" name="frbgbilBudLineExceedInd" validation="server" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+          	<gridcell>
+              <textbox block="FRBGBIL" case="upper" datatype="String" height="23px" label="frbgbil.frbgbilMinNotReachedInd.prompt" maxlength="1" member="FRBGBIL_MIN_NOT_REACHED_IND" name="frbgbilMinNotReachedInd" validation="server" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+          	<gridcell>
+              <textbox block="FRBGBIL" case="upper" datatype="String" height="23px" label="frbgbil.frbgbilBudTotalExceedInd.prompt" maxlength="1" member="FRBGBIL_BUD_TOTAL_EXCEED_IND" name="frbgbilBudTotalExceedInd" validation="server" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+          	<gridcell>
+              <combobox block="FRBGBIL" height="23px" label="frbgbil.frbgbilBudCheckSourceInd.prompt" member="FRBGBIL_BUD_CHECK_SOURCE_IND" name="frbgbilBudCheckSourceInd" width="204px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <model>
+                  <item label="frbgbil.frbgbilBudCheckSourceInd.item0.label" value="G" />
+                  <item label="frbgbil.frbgbilBudCheckSourceInd.item1.label" />
+                </model>
+              </combobox>
+            </gridcell>
+          	<gridcell>
+              <calendar block="FRBGBIL" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbgbil.frbgbilBillingStartDate.prompt" maxlength="11" member="FRBGBIL_BILLING_START_DATE" name="frbgbilBillingStartDate" width="140px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </calendar>
+            </gridcell>
+          	<gridcell>
+              <calendar block="FRBGBIL" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbgbil.frbgbilBillingEndDate.prompt" maxlength="11" member="FRBGBIL_BILLING_END_DATE" name="frbgbilBillingEndDate" width="140px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </calendar>
+            </gridcell>
+          </gridlayout>
+        </panel>
+        <framepanel label="frbgbil.frbgbilBilling.prompt" width="100%">
+          <gridlayout cols="2" orientation="horizontal">
+          	<gridcell>
+              <textbox block="FRBGBIL" datatype="Number" formatmask="999G999G999G999G990D99" height="23px" label="frbgbil.frbgbilBillingMinAmt.prompt" maxlength="25" member="FRBGBIL_BILLING_MIN_AMT" minvalue="0.0" name="frbgbilBillingMinAmt" textalign="right" width="164px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+          	<gridcell>
+              <textbox block="FRBGBIL" datatype="Number" formatmask="999G999G999G999G990D99" height="23px" label="frbgbil.frbgbilBillingMaxAmt.prompt" maxlength="25" member="FRBGBIL_BILLING_MAX_AMT" minvalue="0.0" name="frbgbilBillingMaxAmt" textalign="right" width="164px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+          	<gridcell>
+              <textbox block="FRBGBIL" datatype="Number" formatmask="999G999G999G999G990D99" height="23px" label="frbgbil.frbgbilCumulativeBilledAmt.prompt" maxlength="25" member="FRBGBIL_CUMULATIVE_BILLED_AMT" minvalue="0.0" name="frbgbilCumulativeBilledAmt" textalign="right" width="164px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+          	<gridcell>
+              <lovbox autoskip="true" block="FRBGBIL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgbil.frbgbilDeferredAcctCode.prompt" maxlength="30" member="FRBGBIL_DEFERRED_ACCT_CODE" name="frbgbilDeferredAcctCode" style="ui-buttoninput" width="86px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGBIL_DEFERRED_ACCT_CODE_LBT" name="frbgbilDeferredAcctCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgbilDeferredAcctCodeLbt.tooltip" width="23px" /> -->
+              <textfield block="FRBGBIL" datatype="String" height="23px" maxlength="35" member="DEFFERED_ACCT_NAME" name="defferedAcctName" width="319px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+          </gridlayout>
+        </framepanel>
+      </panel>
+    </accordion>
+  </panel>
+</config>

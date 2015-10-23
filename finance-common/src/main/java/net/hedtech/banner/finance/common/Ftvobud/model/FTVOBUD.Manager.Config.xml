@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVOBUD.Manager.Config" name="FTVOBUD">
+		
+		<items>
+			<item name="FTVOBUD_COAS_CODE" logicalName="ftvobudCoasCode" type="String" physicalName="FTVOBUD_COAS_CODE"  />
+			<item name="FTVOBUD_OBUD_CODE" logicalName="ftvobudObudCode" type="String" physicalName="FTVOBUD_OBUD_CODE"  />
+			<item name="FTVOBUD_BUDG_TITLE" logicalName="ftvobudBudgTitle" type="String" physicalName="FTVOBUD_BUDG_TITLE"  />
+			<item name="FTVOBUD_YRS_BUDGETED" logicalName="ftvobudYrsBudgeted" type="java.math.BigDecimal" physicalName="FTVOBUD_YRS_BUDGETED"  />
+			<item name="FTVOBUD_BUDG_PRD_TYPE" logicalName="ftvobudBudgPrdType" type="String" physicalName="FTVOBUD_BUDG_PRD_TYPE"  />
+			<item name="FTVOBUD_ACTIVITY_DATE" logicalName="ftvobudActivityDate" type="java.util.Date" physicalName="FTVOBUD_ACTIVITY_DATE"  />
+			<item name="FTVOBUD_USER_ID" logicalName="ftvobudUserId" type="String" physicalName="FTVOBUD_USER_ID"  />
+			<item name="FTVOBUD_BUDG_SHORT_TITLE" logicalName="ftvobudBudgShortTitle" type="String" physicalName="FTVOBUD_BUDG_SHORT_TITLE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvobud.model.FtvobudAdapter</adapterClass>
+<!-- 		<defaultWhereClause><![CDATA[WHERE (ftvobud_coas_code = :HOLD_COAS_CODE OR ftvobud_coas_code = :FTVOBUD_COAS_CODE)]]></defaultWhereClause> -->
+		<defaultWhereClause><![CDATA[WHERE (ftvobud_coas_code = NVL(:HOLD_COAS_CODE, ftvobud_coas_code))]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by ftvobud_coas_code,ftvobud_obud_code]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

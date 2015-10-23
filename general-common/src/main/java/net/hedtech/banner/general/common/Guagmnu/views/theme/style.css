@@ -1,0 +1,251 @@
+﻿@import "../style.css";
+		.G$_NVA_SEPARATOR_LINE
+		{
+			
+      background-color: #e0e0e0;
+      font-family: Verdana;
+      font-size:9pt;
+		}
+	
+		.G$_NVA_SEPARATOR_LINEPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_CODE_DESC
+		{
+			
+      font-family: Verdana;
+      font-size:8pt;
+		}
+	
+		.G$_NVA_CODE_DESCPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_SITEMAP_WDTL
+		{
+			
+      font-family: Verdana;
+      font-size:8pt;
+      color: #000000;
+		}
+	
+		.G$_NVA_SITEMAP_WDTLPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_SITEMAP_WDTL_HILITE
+		{
+			
+      font-family: Verdana;
+      font-size:8pt;
+      color: #000000;
+		}
+	
+		.G$_NVA_SITEMAP_WDTL_HILITEPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_SITEMAP_WHDR
+		{
+			
+      font-family: Verdana;
+      font-size:10pt;
+      color: #000000;
+		}
+	
+		.G$_NVA_SITEMAP_WHDRPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_SITEMAP_WHDR_HILITE
+		{
+			
+      font-family: Verdana;
+      font-size:10pt;
+      color: #000000;
+		}
+	
+		.G$_NVA_SITEMAP_WHDR_HILITEPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_SITEMAP_BHDR
+		{
+			
+      font-family: Verdana;
+      font-size:10pt;
+		}
+	
+		.G$_NVA_SITEMAP_BHDRPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_SITEMAP_BHDR_HILITE
+		{
+			
+      font-family: Verdana;
+      font-size:10pt;
+      color: #000000;
+		}
+	
+		.G$_NVA_SITEMAP_BHDR_HILITEPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_SITEMAP_BDTL
+		{
+			
+      font-family: Verdana;
+      font-size:8pt;
+      color: #000000;
+		}
+	
+		.G$_NVA_SITEMAP_BDTLPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_SITEMAP_BDTL_HILITE
+		{
+			
+      font-family: Verdana;
+      font-size:8pt;
+      color: #000000;
+		}
+	
+		.G$_NVA_SITEMAP_BDTL_HILITEPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_TEXT_ITEM
+		{
+			
+      font-family: Verdana;
+      font-size:10pt;
+		}
+	
+		.G$_NVA_TEXT_ITEMPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_NVA_TREE
+		{
+			
+      font-family: Verdana;
+      font-size:10pt;
+		}
+	
+		.G$_NVA_TREEPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.LOCAL_HIGHLITE_TEXT
+		{
+			
+      background-color: #ffffd8;
+      font-family: Verdana;
+      font-size:10pt;
+      color: #0000d8;
+		}
+	
+		.LOCAL_HIGHLITE_TEXTPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.LOCAL_TEXT
+		{
+			
+      background-color: #b8b8b8;
+      font-family: Verdana;
+      font-size:8pt;
+		}
+	
+		.LOCAL_TEXTPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.SELECTED_ITEM
+		{
+			
+      background-color: White;
+		}
+	
+		.SELECTED_ITEMPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_DATA_SEPARATOR_LINE_CLASS
+		{
+			
+      font-size:8pt;
+      width: 1001px;
+      height: 5px;
+		}
+	
+		.G$_DATA_SEPARATOR_LINE_CLASSPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_ICON_BTN_CLASS
+		{
+			
+      font-size:8pt;
+      width: 20px;
+      height: 20px;
+		}
+	
+		.G$_ICON_BTN_CLASSPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	

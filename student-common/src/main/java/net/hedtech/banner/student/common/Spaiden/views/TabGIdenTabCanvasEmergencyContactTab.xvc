@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SPREMRG"/>
+	<panel width="100%">
+		<accordion width="100%">
+			<panel label="emergencyContactTab.Info.label" width="100%">
+				<repeater block="SPREMRG"  name="spremrgRepeater" width="100%">
+					<panel width="100%">
+						<gridlayout cols="2" orientation="vertical">
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgPriority.prompt" member="SPREMRG_PRIORITY" name="spremrgPriority" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spremrg.spremrgReltCode.prompt" member="SPREMRG_RELT_CODE" name="spremrgReltCode" style="ui-buttoninput" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="SPREMRG_RELT_CODE_LBT" name="spremrgReltCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spremrg.spremrgReltCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+								<textfield  datatype="String" height="23px" member="RELT_DESCRIPTION" name="reltDescription" width="239px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgSurnamePrefix.prompt" member="SPREMRG_SURNAME_PREFIX" name="spremrgSurnamePrefix" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgLastName.prompt" member="SPREMRG_LAST_NAME" name="spremrgLastName" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgFirstName.prompt" member="SPREMRG_FIRST_NAME" name="spremrgFirstName" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgMi.prompt" member="SPREMRG_MI" name="spremrgMi" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spremrg.spremrgAtypCode.prompt" member="SPREMRG_ATYP_CODE" name="spremrgAtypCode" style="ui-buttoninput" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="SPREMRG_ATYP_CODE_LBT" name="spremrgAtypCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spremrg.spremrgAtypCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+								<textfield  datatype="String" height="23px" member="ATYP_DESCRIPTION" name="atypDescription" width="239px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgHouseNumber.prompt" member="SPREMRG_HOUSE_NUMBER" name="spremrgHouseNumber" width="120px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgStreetLine1.prompt" member="SPREMRG_STREET_LINE1" name="spremrgStreetLine1" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgStreetLine2.prompt" member="SPREMRG_STREET_LINE2" name="spremrgStreetLine2" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgStreetLine3.prompt" member="SPREMRG_STREET_LINE3" name="spremrgStreetLine3" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgStreetLine4.prompt" member="SPREMRG_STREET_LINE4" name="spremrgStreetLine4" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spremrg.spremrgCity.prompt" member="SPREMRG_CITY" name="spremrgCity" width="239px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spremrg.spremrgStatCode.prompt" member="SPREMRG_STAT_CODE" name="spremrgStatCode" style="ui-buttoninput" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="SPREMRG_STAT_CODE_LBT" name="spremrgStatCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spremrg.spremrgStatCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+								<textfield  datatype="String" height="20px" member="STATE_DESCRIPTION" name="stateDescription" width="239px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="spremrg.spremrgZip.prompt" member="SPREMRG_ZIP" name="spremrgZip" style="ui-buttoninput" width="239px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="SPREMRG_ZIP_LBT" name="spremrgZipLbt" navigable="false" style="ui-buttoninput" tooltip="spremrg.spremrgZipLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spremrg.spremrgNatnCode.prompt" member="SPREMRG_NATN_CODE" name="spremrgNatnCode" style="ui-buttoninput" width="61px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="SPREMRG_NATN_CODE_LBT" name="spremrgNatnCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spremrg.spremrgNatnCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+								<textfield  datatype="String" height="23px" member="NATN_DESCRIPTION" name="natnDescription" width="239px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" label="spremrg.spremrgCtryCodePhone.prompt" member="SPREMRG_CTRY_CODE_PHONE" name="spremrgCtryCodePhone" width="73px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" label="spremrg.spremrgPhoneArea.prompt" member="SPREMRG_PHONE_AREA" name="spremrgPhoneArea" width="73px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" datatype="String" height="23px" label="spremrg.spremrgPhoneNumber.prompt" member="SPREMRG_PHONE_NUMBER" name="spremrgPhoneNumber" width="140px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" datatype="String" height="23px" label="spremrg.spremrgPhoneExt.prompt" member="SPREMRG_PHONE_EXT" name="spremrgPhoneExt" style="ui-buttoninput" width="117px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED" height="20px" icon="flashlit" label="spremrg.phoneBtn.label" member="PHONE_BTN" name="phoneBtn" navigable="false" style="ui-buttoninput" tooltip="spremrg.phoneBtn.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+							</gridcell>
+						</gridlayout>
+					</panel>
+				</repeater>
+			</panel>
+		</accordion>
+<!-- 		<collapsiblepanel label="emergencyContactTab.text300.text" name="roundrect306" width="100%"> -->
+<!-- 			<panel width="100%"> -->
+<!-- 				<gridlayout cols="2" orientation="vertical"> -->
+<!-- 					<gridcell> -->
+<!-- 						<textbox block="SPREMRG" case="upper" datatype="String" enabled="false" height="23px" label="spremrg.spremrgUserId.prompt" member="SPREMRG_USER_ID" name="spremrgUserId" width="160px"> -->
+<!-- 							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/> -->
+<!-- 						</textbox> -->
+<!-- 					</gridcell> -->
+<!-- 					<gridcell> -->
+<!-- 						<calendar block="SPREMRG" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spremrg.spremrgActivityDate.prompt" member="SPREMRG_ACTIVITY_DATE" name="spremrgActivityDate" width="140px"> -->
+<!-- 							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/> -->
+<!-- 						</calendar> -->
+<!-- 					</gridcell> -->
+<!-- 				</gridlayout> -->
+<!-- 			</panel> -->
+<!-- 		</collapsiblepanel> -->
+	</panel>
+</config>

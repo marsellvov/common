@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="keyBlock.title.prompt">Search Value</msg>
+  <msg id="keyBlock.title.hint">Enter search value.</msg>
+  <msg id="frbgrnt.frbgrntCode.prompt">Grant</msg>
+  <msg id="frbgrnt.frbgrntCode.hint">Press duplicate record to see Grants.</msg>
+  <msg id="frbgrnt.frbgrntPropCode.prompt">Proposal Code</msg>
+  <msg id="frbgrnt.frbgrntPropCode.hint">Press duplicate item to see Proposals.</msg>
+  <msg id="frbgrnt.frbgrntStatusCode.prompt">Status</msg>
+  <msg id="frbgrnt.frbgrntTitle.prompt">Title</msg>
+  <msg id="frbgrnt.frbgrntStatusDate.prompt">Status Date</msg>
+  <msg id="buttonControlBlock.frbgrntGrantBtn.label">Grant</msg>
+  <msg id="buttonControlBlock.frbgrntProposalBtn.label">Proposal</msg>
+  <msg id="buttonControlBlock.frbgrnt1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.frbgrnt1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.frbgrnt1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Grant Title Search</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

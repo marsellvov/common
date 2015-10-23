@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SGBSTDN.Manager.Config" name="SGBSTDN">
+		
+		<items>
+			<item name="STVCLAS_DESC" logicalName="stvclasDesc" type="String"  virtual="true" />
+			<item name="TERM_EFF_END" logicalName="termEffEnd" type="String"  virtual="true" />
+			<item name="REQ_TERM" logicalName="reqTerm" type="String"  virtual="true" />
+			<item name="SHRTTRM_CLAS_CODE" logicalName="shrttrmClasCode" type="String"  virtual="true" />
+			<item name="STVSTST_DESC" logicalName="stvststDesc" type="String"  virtual="true" />
+			<item name="SGBSTDN_RESD_CODE" logicalName="sgbstdnResdCode" type="String" physicalName="SGBSTDN_RESD_CODE"  />
+			<item name="SGBSTDN_TERM_CODE_EFF" logicalName="sgbstdnTermCodeEff" type="String" physicalName="SGBSTDN_TERM_CODE_EFF"  />
+			<item name="SGBSTDN_STST_CODE" logicalName="sgbstdnStstCode" type="String" physicalName="SGBSTDN_STST_CODE"  />
+			<item name="SGBSTDN_LEVL_CODE" logicalName="sgbstdnLevlCode" type="String" physicalName="SGBSTDN_LEVL_CODE"  />
+			<item name="SGBSTDN_STYP_CODE" logicalName="sgbstdnStypCode" type="String" physicalName="SGBSTDN_STYP_CODE"  />
+			<item name="SGBSTDN_DEGC_CODE_1" logicalName="sgbstdnDegcCode1" type="String" physicalName="SGBSTDN_DEGC_CODE_1"  />
+			<item name="SGBSTDN_COLL_CODE_1" logicalName="sgbstdnCollCode1" type="String" physicalName="SGBSTDN_COLL_CODE_1"  />
+			<item name="SGBSTDN_MAJR_CODE_1" logicalName="sgbstdnMajrCode1" type="String" physicalName="SGBSTDN_MAJR_CODE_1"  />
+			<item name="SGBSTDN_ADMT_CODE" logicalName="sgbstdnAdmtCode" type="String" physicalName="SGBSTDN_ADMT_CODE"  />
+			<item name="SGBSTDN_ACTIVITY_DATE" logicalName="sgbstdnActivityDate" type="java.util.Date" physicalName="SGBSTDN_ACTIVITY_DATE"  />
+			<item name="SGBSTDN_TERM_CODE_ADMIT" logicalName="sgbstdnTermCodeAdmit" type="String" physicalName="SGBSTDN_TERM_CODE_ADMIT"  />
+			<item name="SGBSTDN_FULL_PART_IND" logicalName="sgbstdnFullPartInd" type="String" physicalName="SGBSTDN_FULL_PART_IND"  />
+			<item name="STATUS_DESC" logicalName="statusDesc" type="String"  virtual="true" />
+			<item name="RESIDENCE_DESC" logicalName="residenceDesc" type="String"  virtual="true" />
+			<item name="FULL_PART_DESC" logicalName="fullPartDesc" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Soaidns.model.SgbstdnAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE sgbstdn_pidm = :SPRIDEN_SPRIDEN_PIDM]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by sgbstdn_term_code_eff desc]]></defaultOrderByClause>	
+		
+		<pagination maximumRows="1" enabled="true"/>
+
+	</manager>
+</b:beans>

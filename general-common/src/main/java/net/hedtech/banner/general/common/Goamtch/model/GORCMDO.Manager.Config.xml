@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GORCMDO.Manager.Config" name="Gorcmdo">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="OBJS_NAME1" logicalName="objsName1" type="String"   />
+			<item name="OBJS_NAME2" logicalName="objsName2" type="String"   />
+			<item name="OBJS_NAME3" logicalName="objsName3" type="String"   />
+			<item name="OBJS_NAME4" logicalName="objsName4" type="String"   />
+			<item name="OBJS_NAME5" logicalName="objsName5" type="String"   />
+			<item name="OBJS_NAME6" logicalName="objsName6" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Goamtch.model.Gorcmdo</managerClass>
+
+	</manager>
+</b:beans>

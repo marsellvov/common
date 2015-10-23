@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?> 
+<config>
+	<menu name="G$_DEFAULT_PM">
+		<menuitem label="Rollback" name="ROLLBACK"/>
+		<menuitem label="Save" name="SAVE"/>
+		<menuitem label="Exit" name="EXIT"/>
+		<menuitem label="Print" name="PRINT"/>
+		<menuitem name="SEP1" type="separator"/>
+		<menuitem label="Add to Personal Menu" name="ADD_FORM"/>
+		<menuitem name="SEP2" type="separator"/>
+		<menuitem name="SUB_MENU_01"/>
+		<menuitem name="SUB_MENU_02"/>
+		<menuitem name="SUB_MENU_03"/>
+		<menuitem name="SUB_MENU_04"/>
+		<menuitem name="SUB_MENU_05"/>
+		<menuitem name="SUB_MENU_06"/>
+		<menuitem name="SUB_MENU_07"/>
+		<menuitem name="SUB_MENU_08"/>
+		<menuitem name="SUB_MENU_09"/>
+		<menuitem name="SUB_MENU_10"/>
+		<menuitem name="SUB_MENU_11"/>
+		<menuitem name="SUB_MENU_12"/>
+		<menuitem name="SUB_MENU_13"/>
+		<menuitem name="SUB_MENU_14"/>
+		<menuitem name="SUB_MENU_15"/>
+		<menuitem name="SUB_MENU_16"/>
+		<menuitem name="SUB_MENU_17"/>
+		<menuitem name="SUB_MENU_18"/>
+		<menuitem name="SUB_MENU_19"/>
+		<menuitem name="SUB_MENU_20"/>
+		<menuitem name="SUB_MENU_21"/>
+		<menuitem name="SUB_MENU_22"/>
+		<menuitem name="SUB_MENU_23"/>
+		<menuitem name="SUB_MENU_24"/>
+	</menu>
+</config>
+

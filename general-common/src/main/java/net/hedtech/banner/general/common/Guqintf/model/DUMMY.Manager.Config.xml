@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="DUMMY.Manager.Config" name="Dummy">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CURRENT_TIME" logicalName="currentTime" type="String"   />
+			<item name="CURRENT_DATE" logicalName="currentDate" type="String"   />
+			<item name="PROCESS_MSG" logicalName="processMsg" type="String"   />
+			<item name="PROCESS_STATUS" logicalName="processStatus" type="String"   />
+			<item name="PROCESS_IND" logicalName="processInd" type="String"   />
+			<item name="HOST_PREFIX" logicalName="hostPrefix" type="String"   />
+			<item name="COMMAND_NAME" logicalName="commandName" type="String"   />
+			<item name="JOB_ID" logicalName="jobId" type="String"   />
+			<item name="PRNT_CODE" logicalName="prntCode" type="String"   />
+			<item name="STATUS_IND" logicalName="statusInd" type="String"   />
+			<item name="ONE_UP_NO" logicalName="oneUpNo" type="java.math.BigDecimal"   />
+			<item name="HOLD_TERM_CODE" logicalName="holdTermCode" type="String"   />
+			<item name="HOLD_JOB_ID" logicalName="holdJobId" type="String"   />
+			<item name="HOLD_CALL_FORM" logicalName="holdCallForm" type="String"   />
+			<item name="HOLD_ONE_UP_NO" logicalName="holdOneUpNo" type="java.math.BigDecimal"   />
+			<item name="HOLD_DISPLAY_MSG" logicalName="holdDisplayMsg" type="String"   />
+			<item name="MESSAGE_TEXT" logicalName="messageText" type="String"   />
+			<item name="IS_AUTO_LOGIN" logicalName="isAutoLogin" type="String"   />
+			<item name="HOLD_ID_REQUEST_NO" logicalName="holdIdRequestNo" type="String"   />
+			<item name="HOLD_ID" logicalName="holdId" type="String"   />
+			<item name="HOLD_AIDY_CODE" logicalName="holdAidyCode" type="String"   />
+			<item name="HOLD_PERIOD" logicalName="holdPeriod" type="String"   />
+			<item name="ALT_USER_ID" logicalName="altUserId" type="String"   />
+			<item name="ALT_PASSWORD" logicalName="altPassword" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="COMMAND_STRING" logicalName="commandString" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Guqintf.model.Dummy</managerClass>
+
+	</manager>
+</b:beans>

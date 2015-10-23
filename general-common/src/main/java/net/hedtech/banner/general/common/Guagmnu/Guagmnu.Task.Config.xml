@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>		
+	
+	
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/general/common/Guagmnu/model/GUAGMNU.Model.Config.xml"/>
+	
+	<task id="GUAGMNU.Task.Config" name="GUAGMNU">
+		<baseTaskConfiguration config="BASE.Task.Config"/>
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.general.common.Guagmnu.GuagmnuTask</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/general/common/Guagmnu/GuagmnuStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.general.common.Guagmnu.services.GuagmnuServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+
+				<package  name="MENU_SEQ">net.hedtech.banner.general.common.Guagmnu.services.MenuSeq</package> 
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="GUAGMNU.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.banner.general.common.Guagmnu.controller.GuagmnuFormController</formController>
+		<blockControllers>
+			<block  name="FORM_HEADER">net.hedtech.banner.general.common.Guagmnu.controller.FormHeaderController</block>
+			<block  name="KEY_BLOCK">net.hedtech.banner.general.common.Guagmnu.controller.KeyBlockController</block>
+			<block  name="TREE">net.hedtech.banner.general.common.Guagmnu.controller.TreeController</block>
+			<block  name="MESSAGES">net.hedtech.banner.general.common.Guagmnu.controller.MessagesController</block>
+			<block  name="MY_LINKS">net.hedtech.banner.general.common.Guagmnu.controller.MyLinksController</block>
+			<block  name="SITE_MAP1">net.hedtech.banner.general.common.Guagmnu.controller.SiteMap1Controller</block>
+			<block  name="SITE_MAP2">net.hedtech.banner.general.common.Guagmnu.controller.SiteMap2Controller</block>
+			<block  name="SITE_MAP3">net.hedtech.banner.general.common.Guagmnu.controller.SiteMap3Controller</block>
+			<block  name="SITE_MAP4">net.hedtech.banner.general.common.Guagmnu.controller.SiteMap4Controller</block>
+			<block  name="BUTTON_CONTROL_BLOCK">net.hedtech.banner.general.common.Guagmnu.controller.ButtonControlBlockController</block>
+		</blockControllers>
+
+	</task>
+</b:beans>
+
+ 

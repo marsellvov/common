@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel width="100%">
+		<tabpanel id="tabGIdenTabCanvas" name="G$_IDEN_TAB_CANVAS">
+			<xl:event action="WHEN-TAB-PAGE-CHANGED" name="change"/>
+			<tab id="page_emailTab" label="goremal.emailtab.title" name="EMAIL_TAB">
+				<include src="net/hedtech/banner/general/common/Goaemal/views/TabGIdenTabCanvasEmailTab"/>
+			</tab>
+		</tabpanel>
+	</panel>
+</config>

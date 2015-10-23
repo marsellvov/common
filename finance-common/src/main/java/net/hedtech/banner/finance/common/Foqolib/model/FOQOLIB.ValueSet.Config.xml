@@ -1,0 +1,2332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="FTVFATV_RG.ValueSet.Config" name="FTVFATV_RG">
+    <columns>
+		<column name="FTVFATV_COAS_CODE" type="String" size="1"/>
+		<column name="FTVFATV_ATTV_CODE" type="String" size="8"/>
+		<column name="FTVFATV_ATTT_CODE" type="String" size="8"/>
+		<column name="FTVFATV_ATTV_DESC" type="String" size="50"/>
+		<column name="FTVFATV_ATTT_DESC" type="String" size="50"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvfatv_coas_code, ftvfatv_attv_code, ftvfatv_attt_code, ftvfatv_attv_desc, ftvfatv_attt_desc  FROM ftvfatv  WHERE ftvfatv_coas_code = :GLOBAL_COAS_CODE AND ftvfatv_foapal_type = :GLOBAL_FOAPAL_TYPE AND ftvfatv_foapal_code = :GLOBAL_FOAPAL_CODE AND nvl(ftvfatv_set_code, 'NULL') = :GLOBAL_ATTS_CODE AND ftvfatv_attv_code IS NOT NULL  ORDER BY ftvfatv_attv_code, ftvfatv_attt_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_TYPE">
+			<value>
+				<globalVariable name="FOAPAL_TYPE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_CODE">
+			<value>
+				<globalVariable name="FOAPAL_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_ATTS_CODE">
+			<value>
+				<globalVariable name="ATTS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVSATV_ALL_RG.ValueSet.Config" name="FTVSATV_ALL_RG">
+    <columns>
+		<column name="FTVSATV_COAS_CODE" type="String" size="1"/>
+		<column name="FTVSATV_ATTT_CODE" type="String" size="8"/>
+		<column name="FTVSATV_ATTT_DESC" type="String" size="50"/>
+		<column name="FTVSATV_ATTT_STATUS_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT ftvsatv_coas_code, ftvsatv_attt_code, ftvsatv_attt_desc, ftvsatv_attt_status_ind  FROM ftvsatv  WHERE ftvsatv_coas_code = :GLOBAL_COAS_CODE AND ftvsatv_foapal_type = :GLOBAL_FOAPAL_TYPE  ORDER BY ftvsatv_attt_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_TYPE">
+			<value>
+				<globalVariable name="FOAPAL_TYPE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVFATV_ALL_RG.ValueSet.Config" name="FTVFATV_ALL_RG">
+    <columns>
+		<column name="FTVFATV_COAS_CODE" type="String" size="1"/>
+		<column name="FTVFATV_ATTV_CODE" type="String" size="8"/>
+		<column name="FTVFATV_ATTT_CODE" type="String" size="8"/>
+		<column name="FTVFATV_ATTV_DESC" type="String" size="50"/>
+		<column name="FTVFATV_ATTT_DESC" type="String" size="50"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT ftvfatv_coas_code, ftvfatv_attv_code, ftvfatv_attt_code, ftvfatv_attv_desc, ftvfatv_attt_desc  FROM ftvfatv  WHERE ftvfatv_coas_code = :GLOBAL_COAS_CODE AND ftvfatv_foapal_type = :GLOBAL_FOAPAL_TYPE AND ftvfatv_attv_code IS NOT NULL  ORDER BY ftvfatv_attv_code, ftvfatv_attt_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_TYPE">
+			<value>
+				<globalVariable name="FOAPAL_TYPE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVFSET_RG.ValueSet.Config" name="FTVFSET_RG">
+    <columns>
+		<column name="FTVATTS_COAS_CODE" type="String" size="1"/>
+		<column name="FTVATTS_CODE" type="String" size="8"/>
+		<column name="FTVATTS_DESC" type="String" size="50"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvatts_coas_code, ftvatts_code, ftvatts_desc  FROM ftvatts  WHERE (ftvatts_code) IN ((SELECT DISTINCT ftvfset_set_code  FROM ftvfset  WHERE ftvfset_coas_code = :GLOBAL_COAS_CODE AND ftvfset_foapal_type = :GLOBAL_FOAPAL_TYPE )) AND ftvatts_coas_code = :GLOBAL_COAS_CODE AND (ftvatts_valid_foapal) IN (decode(:GLOBAL_FOAPAL_IND, 'ATYP', 'ACCT', 'FTYP', 'FUND', :GLOBAL_FOAPAL_IND), 'ALL')  ORDER BY ftvatts_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_TYPE">
+			<value>
+				<globalVariable name="FOAPAL_TYPE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_IND">
+			<value>
+				<globalVariable name="FOAPAL_IND"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVATTS_FTMFATA_RG.ValueSet.Config" name="FTVATTS_FTMFATA_RG">
+    <columns>
+		<column name="FTVATTS_COAS_CODE" type="String" size="1"/>
+		<column name="FTVATTS_CODE" type="String" size="8"/>
+		<column name="FTVATTS_DESC" type="String" size="50"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvatts_coas_code, ftvatts_code, ftvatts_desc  FROM ftvatts  WHERE ftvatts_coas_code = :GLOBAL_COAS_CODE AND (ftvatts_valid_foapal) IN (decode(:GLOBAL_FOAPAL_IND, 'ATYP', 'ACCT', 'FTYP', 'FUND', :GLOBAL_FOAPAL_IND), 'ALL')  ORDER BY ftvatts_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_IND">
+			<value>
+				<globalVariable name="FOAPAL_IND"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVFATA_RG.ValueSet.Config" name="FTVFATA_RG">
+    <columns>
+		<column name="FTVFATA_COAS_CODE" type="String" size="1"/>
+		<column name="FTVFATA_FOAPAL_CODE" type="String" size="6"/>
+		<column name="FTVFATA_ATTT_CODE" type="String" size="8"/>
+		<column name="FTVFATA_ATTV_CODE" type="String" size="8"/>
+		<column name="FTVFATA_SET_CODE" type="String" size="8"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvfata_coas_code, ftvfata_foapal_code, ftvfata_attt_code, ftvfata_attv_code, ftvfata_set_code  FROM ftvfata  WHERE ftvfata_coas_code = :GLOBAL_COAS_CODE AND ftvfata_foapal_type = :GLOBAL_FOAPAL_TYPE  ORDER BY ftvfata_attt_code, ftvfata_attv_code, ftvfata_foapal_code, ftvfata_set_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_TYPE">
+			<value>
+				<globalVariable name="FOAPAL_TYPE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTRATTV_RG.ValueSet.Config" name="FTRATTV_RG">
+    <columns>
+		<column name="FTRATTV_COAS_CODE" type="String" size="1"/>
+		<column name="FTRATTV_ATTT_CODE" type="String" size="8"/>
+		<column name="FTRATTV_CODE" type="String" size="8"/>
+		<column name="FTRATTV_DESC" type="String" size="50"/>
+		<column name="FTRATTV_BEGIN_DATE" type="Date" size="7"/>
+		<column name="FTRATTV_END_DATE" type="Date" size="7"/>
+		<column name="FTRATTV_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftrattv_coas_code, ftrattv_attt_code, ftrattv_code, ftrattv_desc, ftrattv_begin_date, ftrattv_end_date, ftrattv_activity_date  FROM ftrattv  WHERE ftrattv_coas_code = :GLOBAL_COAS_CODE AND ftrattv_attt_code = :GLOBAL_ATTT_CODE AND nvl(ftrattv_end_date, sysdate) >= sysdate AND ((:GLOBAL_FOAPAL_TYPE = 'F' AND ftrattv_valid_fund_ind = 'Y') OR (:GLOBAL_FOAPAL_TYPE = 'O' AND ftrattv_valid_orgn_ind = 'Y') OR (:GLOBAL_FOAPAL_TYPE = 'A' AND ftrattv_valid_acct_ind = 'Y') OR (:GLOBAL_FOAPAL_TYPE = 'P' AND ftrattv_valid_prog_ind = 'Y') OR (:GLOBAL_FOAPAL_TYPE = 'Y' AND ftrattv_valid_actv_ind = 'Y') OR (:GLOBAL_FOAPAL_TYPE = 'L' AND ftrattv_valid_locn_ind = 'Y') OR (:GLOBAL_FOAPAL_TYPE = 'T' AND ftrattv_valid_acct_ind = 'Y') OR (:GLOBAL_FOAPAL_TYPE = 'N' AND ftrattv_valid_fund_ind = 'Y'))  ORDER BY ftrattv_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_ATTT_CODE">
+			<value>
+				<globalVariable name="ATTT_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_TYPE">
+			<value>
+				<globalVariable name="FOAPAL_TYPE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVSATV_RG.ValueSet.Config" name="FTVSATV_RG">
+    <columns>
+		<column name="FTVSATV_COAS_CODE" type="String" size="1"/>
+		<column name="FTVSATV_ATTT_CODE" type="String" size="8"/>
+		<column name="FTVSATV_ATTT_DESC" type="String" size="50"/>
+		<column name="FTVSATV_ATTT_STATUS_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvsatv_coas_code, ftvsatv_attt_code, ftvsatv_attt_desc, ftvsatv_attt_status_ind  FROM ftvsatv  WHERE ftvsatv_coas_code = :GLOBAL_COAS_CODE AND ftvsatv_foapal_type = :GLOBAL_FOAPAL_TYPE AND ftvsatv_foapal_code = :GLOBAL_FOAPAL_CODE AND nvl(ftvsatv_set_code, 'NULL') = :GLOBAL_ATTS_CODE  ORDER BY ftvsatv_attt_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_TYPE">
+			<value>
+				<globalVariable name="FOAPAL_TYPE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FOAPAL_CODE">
+			<value>
+				<globalVariable name="FOAPAL_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_ATTS_CODE">
+			<value>
+				<globalVariable name="ATTS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCOAS_RG.ValueSet.Config" name="FTVCOAS_RG">
+    <columns>
+		<column name="FTVCOAS_COAS_CODE" type="String" size="1"/>
+		<column name="FTVCOAS_TITLE" type="String" size="35"/>
+		<column name="FTVCOAS_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvcoas_coas_code, ftvcoas_title, ftvcoas_status_ind, to_char(ftvcoas_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvcoas_term_date, 'DD-MON--YYYY') "ICRGGQ_1"  FROM ftvcoas  ORDER BY decode(ftvcoas_coas_code, :GLOBAL_COAS_CODE, ' ', ftvcoas_coas_code), ftvcoas_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVATTT_RG.ValueSet.Config" name="FTVATTT_RG">
+    <columns>
+		<column name="FTVATTT_COAS_CODE" type="String" size="1"/>
+		<column name="FTVATTT_CODE" type="String" size="8"/>
+		<column name="FTVATTT_DESC" type="String" size="50"/>
+		<column name="FTVATTT_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvattt_coas_code, ftvattt_code, ftvattt_desc, ftvattt_status_ind, to_char(ftvattt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0"  FROM ftvattt  WHERE nvl(ftvattt_status_ind, 'I') = 'A'  ORDER BY decode(ftvattt_coas_code, :GLOBAL_COAS_CODE, ' ', ftvattt_coas_code), ftvattt_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVATTS_RG.ValueSet.Config" name="FTVATTS_RG">
+    <columns>
+		<column name="FTVATTS_COAS_CODE" type="String" size="1"/>
+		<column name="FTVATTS_CODE" type="String" size="8"/>
+		<column name="FTVATTS_DESC" type="String" size="50"/>
+		<column name="FTVATTS_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvatts_coas_code, ftvatts_code, ftvatts_desc, ftvatts_activity_date  FROM ftvatts  WHERE ftvatts_coas_code = :GLOBAL_COAS_CODE  ORDER BY decode(ftvatts_coas_code, :GLOBAL_COAS_CODE, '  ', ftvatts_coas_code), ftvatts_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVVENT_RG.ValueSet.Config" name="FTVVENT_RG">
+    <columns>
+		<column name="FTVVENT_PIDM" type="Number" size="23"/>
+		<column name="FTVVENT_VTYP_CODE" type="String" size="2"/>
+		<column name="FTVVENT_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVVENT_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvvent  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVVEND_RG.ValueSet.Config" name="FTVVEND_RG">
+    <columns>
+		<column name="FTVVEND_PIDM" type="Number" size="23"/>
+		<column name="FTVVEND_EFF_DATE" type="Date" size="7"/>
+		<column name="FTVVEND_TERM_DATE" type="Date" size="7"/>
+		<column name="FTVVEND_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVVEND_USER_ID" type="String" size="30"/>
+		<column name="FTVVEND_ITYP_SEQ_CODE" type="Number" size="23"/>
+		<column name="FTVVEND_DISC_CODE" type="String" size="2"/>
+		<column name="FTVVEND_1099_RPT_ID" type="String" size="9"/>
+		<column name="FTVVEND_TRAT_CODE" type="String" size="3"/>
+		<column name="FTVVEND_IN_ST_IND" type="String" size="1"/>
+		<column name="FTVVEND_GROUPING_IND" type="String" size="1"/>
+		<column name="FTVVEND_CARRIER_IND" type="String" size="1"/>
+		<column name="FTVVEND_CONTACT" type="String" size="35"/>
+		<column name="FTVVEND_PHONE_AREA" type="String" size="3"/>
+		<column name="FTVVEND_PHONE_NUMBER" type="String" size="7"/>
+		<column name="FTVVEND_PHONE_EXT" type="String" size="4"/>
+		<column name="FTVVEND_ATYP_CODE" type="String" size="2"/>
+		<column name="FTVVEND_ADDR_SEQNO" type="Number" size="23"/>
+		<column name="FTVVEND_FED_WHOLD_PCT" type="Number" size="23"/>
+		<column name="FTVVEND_ST_WHOLD_PCT" type="Number" size="23"/>
+		<column name="FTVVEND_STATUS_IND" type="String" size="1"/>
+		<column name="FTVVEND_COMBINED_FED_ST_FILER" type="String" size="1"/>
+		<column name="FTVVEND_COLLECT_TAX" type="String" size="1"/>
+		<column name="FTVVEND_VEND_CHECK_PIDM" type="Number" size="23"/>
+		<column name="FTVVEND_VEND_CHECK_ATYP_CODE" type="String" size="2"/>
+		<column name="FTVVEND_VEND_CHECK_ADDR_SEQNO" type="Number" size="23"/>
+		<column name="FTVVEND_CURR_CODE" type="String" size="4"/>
+		<column name="FTVVEND_ENTITY_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvvend  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVSTKL_RG.ValueSet.Config" name="FTVSTKL_RG">
+    <columns>
+		<column name="FTVSTKL_COMM_CODE" type="String" size="10"/>
+		<column name="FTVSTKL_SHIP_CODE" type="String" size="6"/>
+		<column name="FTVSTKL_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVSTKL_USER_ID" type="String" size="30"/>
+		<column name="FTVSTKL_SUB_LOCN" type="String" size="15"/>
+		<column name="FTVSTKL_STOCK_QTY" type="Number" size="23"/>
+		<column name="FTVSTKL_INVTRY_CNT_QTY" type="Number" size="23"/>
+		<column name="FTVSTKL_ADJ_STATUS" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvstkl  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRULP_RG.ValueSet.Config" name="FTVRULP_RG">
+    <columns>
+		<column name="FTVRULP_RUCL_CODE" type="String" size="4"/>
+		<column name="FTVRULP_RULP_CODE" type="Number" size="23"/>
+		<column name="FTVRULP_EFF_DATE" type="Date" size="7"/>
+		<column name="FTVRULP_PROC_CODE" type="String" size="4"/>
+		<column name="FTVRULP_POSTING_ACTION" type="String" size="1"/>
+		<column name="FTVRULP_ACCRUAL_IMPACT" type="String" size="1"/>
+		<column name="FTVRULP_COAS_CODE_OVERRIDE" type="String" size="1"/>
+		<column name="FTVRULP_ACCI_CODE_OVERRIDE" type="String" size="6"/>
+		<column name="FTVRULP_FUND_CODE_OVERRIDE" type="String" size="6"/>
+		<column name="FTVRULP_ORGN_CODE_OVERRIDE" type="String" size="6"/>
+		<column name="FTVRULP_ACCT_CODE_OVERRIDE" type="String" size="6"/>
+		<column name="FTVRULP_PROG_CODE_OVERRIDE" type="String" size="6"/>
+		<column name="FTVRULP_ACTV_CODE_OVERRIDE" type="String" size="6"/>
+		<column name="FTVRULP_LOCN_CODE_OVERRIDE" type="String" size="6"/>
+		<column name="FTVRULP_AMT_IND" type="String" size="1"/>
+		<column name="FTVRULP_POST_ZERO_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvrulp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRTCT_RG.ValueSet.Config" name="FTVRTCT_RG">
+    <columns>
+		<column name="FTVRTCT_COAS_CODE" type="String" size="1"/>
+		<column name="FTVRTCT_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVRTCT_CTYP_CODE" type="String" size="4"/>
+		<column name="FTVRTCT_INRT_CODE" type="String" size="4"/>
+		<column name="FTVRTCT_EFF_DATE" type="Date" size="7"/>
+		<column name="FTVRTCT_TERM_DATE" type="Date" size="7"/>
+		<column name="FTVRTCT_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVRTCT_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvrtct  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRTCL_RG.ValueSet.Config" name="FTVRTCL_RG">
+    <columns>
+		<column name="FTVRTCL_COAS_CODE" type="String" size="1"/>
+		<column name="FTVRTCL_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVRTCL_INRT_CODE" type="String" size="4"/>
+		<column name="FTVRTCL_CLAS_CODE" type="String" size="4"/>
+		<column name="FTVRTCL_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVRTCL_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvrtcl  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRRGH_RG.ValueSet.Config" name="FTVRRGH_RG">
+    <columns>
+		<column name="FTVRRGH_RUCL_CODE" type="String" size="4"/>
+		<column name="FTVRRGH_RULE_GROUP" type="String" size="4"/>
+		<column name="FTVRRGH_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVRRGH_USER_ID" type="String" size="30"/>
+		<column name="FTVRRGH_END_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvrrgh  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRQPO_RG.ValueSet.Config" name="FTVRQPO_RG">
+    <columns>
+		<column name="FTVRQPO_REQD_CODE" type="String" size="8"/>
+		<column name="FTVRQPO_REQD_ITEM" type="Number" size="23"/>
+		<column name="FTVRQPO_REQD_SEQ_NUM" type="Number" size="23"/>
+		<column name="FTVRQPO_POHD_CODE" type="String" size="8"/>
+		<column name="FTVRQPO_POHD_ITEM" type="Number" size="23"/>
+		<column name="FTVRQPO_POHD_SEQ_NUM" type="Number" size="23"/>
+		<column name="FTVRQPO_SINGLE_ACCTG_AMT" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvrqpo  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRQBD_RG.ValueSet.Config" name="FTVRQBD_RG">
+    <columns>
+		<column name="FTVRQBD_REQH_CODE" type="String" size="8"/>
+		<column name="FTVRQBD_REQH_ITEM" type="Number" size="23"/>
+		<column name="FTVRQBD_REQH_SEQ_NUM" type="Number" size="23"/>
+		<column name="FTVRQBD_BIDS_CODE" type="String" size="8"/>
+		<column name="FTVRQBD_BIDS_ITEM" type="Number" size="23"/>
+		<column name="FTVRQBD_BIDS_SEQ_NUM" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvrqbd  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRGUS_RG.ValueSet.Config" name="FTVRGUS_RG">
+    <columns>
+		<column name="FTVRGUS_ENTERED_USER_ID" type="String" size="30"/>
+		<column name="FTVRGUS_RUCL_GROUP" type="String" size="4"/>
+		<column name="FTVRGUS_EFF_DATE" type="Date" size="7"/>
+		<column name="FTVRGUS_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvrgus  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRGRC_RG.ValueSet.Config" name="FTVRGRC_RG">
+    <columns>
+		<column name="FTVRGRC_RUCL_CODE" type="String" size="4"/>
+		<column name="FTVRGRC_RULE_GROUP" type="String" size="4"/>
+		<column name="FTVRGRC_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVRGRC_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvrgrc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRECP_RG.ValueSet.Config" name="FTVRECP_RG">
+    <columns>
+		<column name="FTVRECP_RECP_CODE_PIDM" type="Number" size="23"/>
+		<column name="FTVRECP_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVRECP_USER_ID" type="String" size="30"/>
+		<column name="FTVRECP_STATUS_IND" type="String" size="1"/>
+		<column name="FTVRECP_RECIPIENT_NAME" type="String" size="35"/>
+		<column name="FTVRECP_RECIPIENT_TITLE" type="String" size="35"/>
+		<column name="FTVRECP_RECIPIENT_LOCN_CODE" type="String" size="6"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvrecp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVPRCE_RG.ValueSet.Config" name="FTVPRCE_RG">
+    <columns>
+		<column name="FTVPRCE_VEND_PIDM" type="Number" size="23"/>
+		<column name="FTVPRCE_COMM_CODE" type="String" size="10"/>
+		<column name="FTVPRCE_UOMS_CODE" type="String" size="3"/>
+		<column name="FTVPRCE_EFF_DATE" type="Date" size="7"/>
+		<column name="FTVPRCE_NCHG_DATE" type="Date" size="7"/>
+		<column name="FTVPRCE_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVPRCE_TERM_DATE" type="Date" size="7"/>
+		<column name="FTVPRCE_USER_ID" type="String" size="30"/>
+		<column name="FTVPRCE_VEND_REF_NUM" type="String" size="15"/>
+		<column name="FTVPRCE_UNIT_PRICE" type="Number" size="23"/>
+		<column name="FTVPRCE_AGRE_CODE" type="String" size="15"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvprce  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVPOOL_RG.ValueSet.Config" name="FTVPOOL_RG">
+    <columns>
+		<column name="FTVPOOL_COAS_CODE" type="String" size="1"/>
+		<column name="FTVPOOL_FUND_CODE" type="String" size="6"/>
+		<column name="FTVPOOL_ACCT_CODE" type="String" size="6"/>
+		<column name="FTVPOOL_EFF_DATE" type="Date" size="7"/>
+		<column name="FTVPOOL_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVPOOL_USER_ID" type="String" size="30"/>
+		<column name="FTVPOOL_NCHG_DATE" type="Date" size="7"/>
+		<column name="FTVPOOL_TERM_DATE" type="Date" size="7"/>
+		<column name="FTVPOOL_ACCT_CODE_POOL" type="String" size="6"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvpool  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVIMGR_RG.ValueSet.Config" name="FTVIMGR_RG">
+    <columns>
+		<column name="FTVIMGR_IMGR_CODE_PIDM" type="Number" size="23"/>
+		<column name="FTVIMGR_EFF_DATE" type="Date" size="7"/>
+		<column name="FTVIMGR_NCHG_DATE" type="Date" size="7"/>
+		<column name="FTVIMGR_TITLE" type="String" size="35"/>
+		<column name="FTVIMGR_STATUS_IND" type="String" size="1"/>
+		<column name="FTVIMGR_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVIMGR_USER_ID" type="String" size="30"/>
+		<column name="FTVIMGR_TERM_DATE" type="Date" size="7"/>
+		<column name="FTVIMGR_VEND_CODE_PIDM" type="Number" size="23"/>
+		<column name="FTVIMGR_ADDR_TYPE" type="String" size="2"/>
+		<column name="FTVIMGR_ADDR_SEQNO" type="Number" size="23"/>
+		<column name="FTVIMGR_COAS_CODE_POOL" type="String" size="1"/>
+		<column name="FTVIMGR_FUND_CODE_POOL" type="String" size="6"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvimgr  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVFSPD_RG.ValueSet.Config" name="FTVFSPD_RG">
+    <columns>
+		<column name="FTVFSPD_COAS_CODE" type="String" size="1"/>
+		<column name="FTVFSPD_FSYR_CODE" type="String" size="2"/>
+		<column name="FTVFSPD_FSPD_CODE" type="String" size="2"/>
+		<column name="FTVFSPD_PRD_START_DATE" type="String" size="11"/>
+		<column name="FTVFSPD_PRD_END_DATE" type="String" size="11"/>
+		<column name="FTVFSPD_PRD_STATUS_IND" type="String" size="1"/>
+		<column name="FTVFSPD_EOQ_IND" type="String" size="1"/>
+		<column name="FTVFSPD_ACTIVITY_DATE" type="String" size="11"/>
+		<column name="FTVFSPD_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvfspd_coas_code, ftvfspd_fsyr_code, ftvfspd_fspd_code, to_char(ftvfspd_prd_start_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvfspd_prd_start_date, to_char(ftvfspd_prd_end_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvfspd_prd_end_date, ftvfspd_prd_status_ind, ftvfspd_eoq_ind, to_char(ftvfspd_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvfspd_activity_date, ftvfspd_user_id  FROM ftvfspd  ORDER BY decode(ftvfspd_coas_Code, :GLOBAL_COAS_CODE, ' ', ftvfspd_coas_code), decode(ftvfspd_fsyr_code, :GLOBAL_FSYR, ' ', fofycnv(ftvfspd_fsyr_code)), ftvfspd_fspd_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FSYR">
+			<value>
+				<globalVariable name="FSYR"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVFBAL_RG.ValueSet.Config" name="FTVFBAL_RG">
+    <columns>
+		<column name="FTVFBAL_COAS_CODE" type="String" size="1"/>
+		<column name="FTVFBAL_ACCT_CODE_FBAL" type="String" size="6"/>
+		<column name="FTVFBAL_EFF_DATE" type="String" size="75"/>
+		<column name="FTVFBAL_NCHG_DATE" type="String" size="75"/>
+		<column name="FTVFBAL_ACTIVITY_DATE" type="String" size="75"/>
+		<column name="FTVFBAL_USER_ID" type="String" size="30"/>
+		<column name="FTVFBAL_TERM_DATE" type="String" size="75"/>
+		<column name="FTVFBAL_FUND_CODE" type="String" size="6"/>
+		<column name="FTVFBAL_FTYP_CODE" type="String" size="2"/>
+		<column name="FTVFBAL_ACCT_CODE" type="String" size="6"/>
+		<column name="FTVFBAL_REST_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvfbal_coas_code, ftvfbal_acct_code_fbal, to_char(ftvfbal_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvfbal_eff_date, to_char(ftvfbal_nchg_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvfbal_nchg_date, to_char(ftvfbal_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvfbal_activity_date, ftvfbal_user_id, to_char(ftvfbal_term_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvfbal_term_date, ftvfbal_fund_code, ftvfbal_ftyp_code, ftvfbal_acct_code, ftvfbal_rest_ind  FROM ftvfbal  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVEDIT_RG.ValueSet.Config" name="FTVEDIT_RG">
+    <columns>
+		<column name="FTVEDIT_RUCL_CODE" type="String" size="4"/>
+		<column name="FTVEDIT_EDIT_SEQ_NUM" type="Number" size="23"/>
+		<column name="FTVEDIT_EFF_DATE" type="String" size="75"/>
+		<column name="FTVEDIT_FIELD" type="String" size="30"/>
+		<column name="FTVEDIT_EDIT_CODE" type="String" size="4"/>
+		<column name="FTVEDIT_CONTINUE_ON_ERROR" type="String" size="1"/>
+		<column name="FTVEDIT_ERROR_SEVERITY" type="String" size="1"/>
+		<column name="FTVEDIT_OPERAND_1_ENTITY" type="String" size="7"/>
+		<column name="FTVEDIT_OPERAND_1_ELEMENT" type="String" size="30"/>
+		<column name="FTVEDIT_OPERATOR" type="String" size="3"/>
+		<column name="FTVEDIT_OPERAND_2_ENTITY" type="String" size="7"/>
+		<column name="FTVEDIT_OPERAND_2_ELEMENT" type="String" size="30"/>
+		<column name="FTVEDIT_LITERAL_1" type="String" size="15"/>
+		<column name="FTVEDIT_LITERAL_2" type="String" size="15"/>
+		<column name="FTVEDIT_ERROR_MESSAGE" type="String" size="80"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvedit_rucl_code, ftvedit_edit_seq_num, to_char(ftvedit_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvedit_eff_date, ftvedit_field, ftvedit_edit_code, ftvedit_continue_on_error, ftvedit_error_severity, ftvedit_operand_1_entity, ftvedit_operand_1_element, ftvedit_operator, ftvedit_operand_2_entity, ftvedit_operand_2_element, ftvedit_literal_1, ftvedit_literal_2, ftvedit_error_message  FROM ftvedit  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCRAT_RG.ValueSet.Config" name="FTVCRAT_RG">
+    <columns>
+		<column name="FTVCRAT_PROJ_CODE" type="String" size="8"/>
+		<column name="FTVCRAT_CUST_PIDM" type="Number" size="23"/>
+		<column name="FTVCRAT_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVCRAT_USER_ID" type="String" size="30"/>
+		<column name="FTVCRAT_INRT_CODE" type="String" size="4"/>
+		<column name="FTVCRAT_INVT_CODE" type="String" size="8"/>
+		<column name="FTVCRAT_EQPT_CODE" type="String" size="9"/>
+		<column name="FTVCRAT_EXRT_CODE" type="String" size="3"/>
+		<column name="FTVCRAT_EFF_DATE" type="Date" size="7"/>
+		<column name="FTVCRAT_TERM_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvcrat  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCHRG_RG.ValueSet.Config" name="FTVCHRG_RG">
+    <columns>
+		<column name="FTVCHRG_PROJ_CODE" type="String" size="8"/>
+		<column name="FTVCHRG_SEQ_NUM" type="Number" size="23"/>
+		<column name="FTVCHRG_CUST_PIDM" type="Number" size="23"/>
+		<column name="FTVCHRG_COAS_CODE" type="String" size="1"/>
+		<column name="FTVCHRG_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVCHRG_USER_ID" type="String" size="30"/>
+		<column name="FTVCHRG_TRANS_DATE" type="Date" size="7"/>
+		<column name="FTVCHRG_ENCB_IND" type="String" size="1"/>
+		<column name="FTVCHRG_ACCI_CODE" type="String" size="6"/>
+		<column name="FTVCHRG_FUND_CODE" type="String" size="6"/>
+		<column name="FTVCHRG_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVCHRG_ACCT_CODE" type="String" size="6"/>
+		<column name="FTVCHRG_PROG_CODE" type="String" size="6"/>
+		<column name="FTVCHRG_ACTV_CODE" type="String" size="6"/>
+		<column name="FTVCHRG_LOCN_CODE" type="String" size="6"/>
+		<column name="FTVCHRG_NSF_RESULT" type="String" size="1"/>
+		<column name="FTVCHRG_NSF_OVERRIDE" type="String" size="1"/>
+		<column name="FTVCHRG_BILLED_AMT" type="Number" size="23"/>
+		<column name="FTVCHRG_MAX_BILL" type="Number" size="23"/>
+		<column name="FTVCHRG_FSYR_CODE" type="String" size="2"/>
+		<column name="FTVCHRG_PERIOD" type="String" size="2"/>
+		<column name="FTVCHRG_POSTED_IND" type="String" size="1"/>
+		<column name="FTVCHRG_PCT" type="Number" size="23"/>
+		<column name="FTVCHRG_COMPLETE_IND" type="String" size="1"/>
+		<column name="FTVCHRG_RUCL_CODE" type="String" size="4"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvchrg  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVBUYO_RG.ValueSet.Config" name="FTVBUYO_RG">
+    <columns>
+		<column name="FTVBUYO_CODE" type="String" size="4"/>
+		<column name="FTVBUYO_COAS_CODE" type="String" size="1"/>
+		<column name="FTVBUYO_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVBUYO_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVBUYO_USER_ID" type="String" size="30"/>
+		<column name="FTVBUYO_DOLLAR_LIMIT" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvbuyo  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVBUYC_RG.ValueSet.Config" name="FTVBUYC_RG">
+    <columns>
+		<column name="FTVBUYC_CODE" type="String" size="4"/>
+		<column name="FTVBUYC_COMM_CODE" type="String" size="10"/>
+		<column name="FTVBUYC_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVBUYC_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvbuyc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVBDPO_RG.ValueSet.Config" name="FTVBDPO_RG">
+    <columns>
+		<column name="FTVBDPO_BIDS_CODE" type="String" size="8"/>
+		<column name="FTVBDPO_BIDS_ITEM" type="Number" size="23"/>
+		<column name="FTVBDPO_BIDS_SEQ_NUM" type="Number" size="23"/>
+		<column name="FTVBDPO_POHD_CODE" type="String" size="8"/>
+		<column name="FTVBDPO_POHD_ITEM" type="Number" size="23"/>
+		<column name="FTVBDPO_POHD_SEQ_NUM" type="Number" size="23"/>
+		<column name="FTVBDPO_POHD_VEND_PIDM" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvbdpo  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVARAT_RG.ValueSet.Config" name="FTVARAT_RG">
+    <columns>
+		<column name="FTVARAT_COAS_CODE" type="String" size="1"/>
+		<column name="FTVARAT_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVARAT_ACCT_CODE" type="String" size="6"/>
+		<column name="FTVARAT_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVARAT_USER_ID" type="String" size="30"/>
+		<column name="FTVARAT_IH_RATE_CALC_IND" type="String" size="1"/>
+		<column name="FTVARAT_MM_RATE_CALC_IND" type="String" size="1"/>
+		<column name="FTVARAT_EQ_RATE_CALC_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvarat  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVACTL_RG.ValueSet.Config" name="FTVACTL_RG">
+    <columns>
+		<column name="FTVACTL_COAS_CODE" type="String" size="1"/>
+		<column name="FTVACTL_ATYP_CODE" type="String" size="2"/>
+		<column name="FTVACTL_SEQ_NUM" type="String" size="2"/>
+		<column name="FTVACTL_ACCT_CODE_CONTROL" type="String" size="6"/>
+		<column name="FTVACCT_TITLE" type="String" size="35"/>
+		<column name="FTVACTL_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvactl_coas_code, ftvactl_atyp_code, ftvactl_seq_num, ftvactl_acct_code_control, ftvacct_title, ftvactl_status_ind, to_char(ftvactl_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvactl_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvactl, ftvacct  WHERE ftvacct_acct_code = ftvactl_acct_code_control  ORDER BY decode(ftvactl_coas_code, :GLOBAL_COAS_CODE, ' ', ftvactl_coas_code), ftvactl_atyp_code, ftvactl_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVACIV_RG.ValueSet.Config" name="FTVACIV_RG">
+    <columns>
+		<column name="FTVACIV_COAS_CODE" type="String" size="1"/>
+		<column name="FTVACIV_ACCT_CODE" type="String" size="6"/>
+		<column name="FTVACIV_IVTP_CATEGORY" type="String" size="1"/>
+		<column name="FTVACIV_IVTP_CODE" type="String" size="2"/>
+		<column name="FTVACIV_EFF_DATE" type="Date" size="7"/>
+		<column name="FTVACIV_NCHG_DATE" type="Date" size="7"/>
+		<column name="FTVACIV_TERM_DATE" type="Date" size="7"/>
+		<column name="FTVACIV_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvaciv  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVADJT_RG.ValueSet.Config" name="FTVADJT_RG">
+    <columns>
+		<column name="FTVADJT_CODE" type="String" size="2"/>
+		<column name="FTVADJT_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvadjt_code, ftvadjt_desc, to_char(ftvadjt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT), to_char(ftvadjt_term_date, G$_DATE.GET_NLS_DATE_FORMAT), to_char(ftvadjt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT)  FROM ftvadjt  ORDER BY ftvadjt_code, ftvadjt_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVACCI_RG.ValueSet.Config" name="FTVACCI_RG">
+    <columns>
+		<column name="FTVACCI_COAS_CODE" type="String" size="1"/>
+		<column name="FTVACCI_ACCI_CODE" type="String" size="6"/>
+		<column name="FTVACCI_TITLE" type="String" size="35"/>
+		<column name="FTVACCI_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvacci_coas_code, ftvacci_acci_code, ftvacci_title, ftvacci_status_ind, to_char(ftvacci_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvacci_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvacci  ORDER BY decode(ftvacci_coas_code, :GLOBAL_COAS_CODE, ' ', ftvacci_coas_code), ftvacci_acci_code, ftvacci_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVAUSE_RG.ValueSet.Config" name="FTVAUSE_RG">
+    <columns>
+		<column name="FTVAUSE_AUSE_CODE" type="String" size="2"/>
+		<column name="FTVAUSE_TITLE" type="String" size="35"/>
+		<column name="FTVAUSE_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvause_ause_code, ftvause_title, ftvause_status_ind, to_char(ftvause_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvause_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvause  ORDER BY ftvause_ause_code, ftvause_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVAPPQ_RG.ValueSet.Config" name="FTVAPPQ_RG">
+    <columns>
+		<column name="FTVAPPQ_QUEUE_ID" type="String" size="4"/>
+		<column name="FTVAPPQ_DESCRIPTION" type="String" size="35"/>
+		<column name="FTVAPPQ_NEXT_QUEUE_ID" type="String" size="4"/>
+		<column name="ICRGGQ_0" type="String" size="16"/>
+		<column name="FTVAPPQ_APPROVAL_REQ" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvappq_queue_id, ftvappq_description, ftvappq_next_queue_id, to_char(ftvappq_queue_limit, '999999999999D99') "ICRGGQ_0", ftvappq_approval_req  FROM ftvappq  ORDER BY ftvappq_queue_id
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVASTY_RG.ValueSet.Config" name="FTVASTY_RG">
+    <columns>
+		<column name="FTVASTY_ASTY_CODE" type="String" size="2"/>
+		<column name="FTVASTY_TITLE" type="String" size="35"/>
+		<column name="FTVASTY_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvasty_asty_code, ftvasty_title, ftvasty_status_ind, to_char(ftvasty_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvasty_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvasty  ORDER BY ftvasty_asty_code, ftvasty_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCLAS_RG.ValueSet.Config" name="FTVCLAS_RG">
+    <columns>
+		<column name="FTVCLAS_CODE" type="String" size="4"/>
+		<column name="FTVCLAS_SHORT_DESC" type="String" size="10"/>
+		<column name="FTVCLAS_LONG_DESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvclas_code, ftvclas_short_desc, ftvclas_long_desc  FROM ftvclas  ORDER BY ftvclas_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVATYP_RG.ValueSet.Config" name="FTVATYP_RG">
+    <columns>
+		<column name="FTVATYP_COAS_CODE" type="String" size="1"/>
+		<column name="FTVATYP_ATYP_CODE" type="String" size="2"/>
+		<column name="FTVATYP_TITLE" type="String" size="35"/>
+		<column name="FTVATYP_ATYP_CODE_PRED" type="String" size="2"/>
+		<column name="FTVATYP_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvatyp_coas_code, ftvatyp_atyp_code, ftvatyp_title, ftvatyp_atyp_code_pred, ftvatyp_status_ind, to_char(ftvatyp_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvatyp_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvatyp  ORDER BY decode(ftvatyp_coas_code, :GLOBAL_COAS_CODE, ' ', ftvatyp_coas_code), ftvatyp_atyp_code, ftvatyp_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVEELI_RG.ValueSet.Config" name="FTVEELI_RG">
+    <columns>
+		<column name="FTVEELI_COAS_CODE" type="String" size="1"/>
+		<column name="FTVEELI_EENT_CODE" type="String" size="4"/>
+		<column name="FTVEELI_EELC_CODE" type="String" size="4"/>
+		<column name="FTVEELI_EELI_CODE" type="String" size="10"/>
+		<column name="FTVEELI_TITLE" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="FTVEELI_STATUS_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftveeli_coas_code, ftveeli_eent_code, ftveeli_eelc_code, ftveeli_eeli_code, ftveeli_title, to_char(ftveeli_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", ftveeli_status_ind  FROM ftveeli  ORDER BY decode(ftveeli_coas_code, :GLOBAL_COAS_CODE, ' ', ftveeli_coas_code), ftveeli_eent_code, ftveeli_eelc_code, ftveeli_eeli_code, ftveeli_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVEELC_RG.ValueSet.Config" name="FTVEELC_RG">
+    <columns>
+		<column name="FTVEELC_COAS_CODE" type="String" size="1"/>
+		<column name="FTVEELC_EELC_CODE" type="String" size="4"/>
+		<column name="FTVEELC_TITLE" type="String" size="35"/>
+		<column name="FTVEELC_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftveelc_coas_code, ftveelc_eelc_code, ftveelc_title, ftveelc_status_ind, to_char(ftveelc_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftveelc_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftveelc  ORDER BY decode(ftveelc_coas_code, :GLOBAL_COAS_CODE, ' ', ftveelc_coas_code), ftveelc_eelc_code, ftveelc_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVECLS_RG.ValueSet.Config" name="FTVECLS_RG">
+    <columns>
+		<column name="FTVECLS_ECLS_CODE" type="String" size="2"/>
+		<column name="FTVECLS_DESC" type="String" size="30"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvecls_ecls_code, ftvecls_desc, to_char(ftvecls_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0"  FROM ftvecls  ORDER BY ftvecls_ecls_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVDTYP_RG.ValueSet.Config" name="FTVDTYP_RG">
+    <columns>
+		<column name="FTVDTYP_CODE" type="String" size="3"/>
+		<column name="FTVDTYP_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvdtyp_code, ftvdtyp_desc, to_char(ftvdtyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0"  FROM ftvdtyp  ORDER BY ftvdtyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVDISC_RG.ValueSet.Config" name="FTVDISC_RG">
+    <columns>
+		<column name="FTVDISC_CODE" type="String" size="2"/>
+		<column name="FTVDISC_DESC" type="String" size="35"/>
+		<column name="FTVDISC_END_OF_MONTH_IND" type="String" size="1"/>
+		<column name="FTVDISC_DAYS" type="Number" size="23"/>
+		<column name="ICRGGQ_0" type="String" size="11"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvdisc_code, ftvdisc_desc, ftvdisc_end_of_month_ind, ftvdisc_days, to_char(ftvdisc_pct, '999999D999') "ICRGGQ_0" , to_char(ftvdisc_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvdisc_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2" FROM ftvdisc  ORDER BY ftvdisc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVDEPR_RG.ValueSet.Config" name="FTVDEPR_RG">
+    <columns>
+		<column name="FTVDEPR_DEPR_CODE" type="String" size="2"/>
+		<column name="FTVDEPR_TITLE" type="String" size="35"/>
+		<column name="FTVDEPR_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvdepr_depr_code, ftvdepr_title, ftvdepr_status_ind, to_char(ftvdepr_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvdepr_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvdepr  ORDER BY ftvdepr_depr_code, ftvdepr_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCTYP_RG.ValueSet.Config" name="FTVCTYP_RG">
+    <columns>
+		<column name="FTVCTYP_CODE" type="String" size="2"/>
+		<column name="FTVCTYP_SHORT_DESC" type="String" size="10"/>
+		<column name="FTVCTYP_LONG_DESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvctyp_code, ftvctyp_short_desc, ftvctyp_long_desc  FROM ftvctyp  ORDER BY ftvctyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVFTYP_RG.ValueSet.Config" name="FTVFTYP_RG">
+    <columns>
+		<column name="FTVFTYP_COAS_CODE" type="String" size="1"/>
+		<column name="FTVFTYP_FTYP_CODE" type="String" size="2"/>
+		<column name="FTVFTYP_TITLE" type="String" size="35"/>
+		<column name="FTVFTYP_FTYP_CODE_PRED" type="String" size="2"/>
+		<column name="FTVFTYP_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvftyp_coas_code, ftvftyp_ftyp_code, ftvftyp_title, ftvftyp_ftyp_code_pred, ftvftyp_status_ind, to_char(ftvftyp_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvftyp_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvftyp  ORDER BY decode(ftvftyp_coas_code, :GLOBAL_COAS_CODE, ' ', ftvftyp_coas_code), ftvftyp_ftyp_code, ftvftyp_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVFOBS_RG.ValueSet.Config" name="FTVFOBS_RG">
+    <columns>
+		<column name="FTVFOBS_CODE" type="String" size="2"/>
+		<column name="FTVFOBS_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvfobs_code, ftvfobs_desc, to_char(ftvfobs_activity_date, G$_DATE.GET_NLS_DATE_FORMAT)  FROM ftvfobs  ORDER BY ftvfobs_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVEXRT_RG.ValueSet.Config" name="FTVEXRT_RG">
+    <columns>
+		<column name="FTVEXRT_CODE" type="String" size="3"/>
+		<column name="FTVEXRT_LONG_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvexrt_code, ftvexrt_long_desc, to_char(ftvexrt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvexrt_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1" FROM ftvexrt  ORDER BY ftvexrt_code, ftvexrt_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVEENT_RG.ValueSet.Config" name="FTVEENT_RG">
+    <columns>
+		<column name="FTVEENT_COAS_CODE" type="String" size="1"/>
+		<column name="FTVEENT_EENT_CODE" type="String" size="4"/>
+		<column name="FTVEENT_TITLE" type="String" size="35"/>
+		<column name="FTVEENT_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftveent_coas_code, ftveent_eent_code, ftveent_title, ftveent_status_ind, to_char(ftveent_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftveent_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftveent  ORDER BY decode(ftveent_coas_code, :GLOBAL_COAS_CODE, ' ', ftveent_coas_code), ftveent_eent_code, ftveent_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVIVTP_RG.ValueSet.Config" name="FTVIVTP_RG">
+    <columns>
+		<column name="FTVIVTP_IVTP_CODE" type="String" size="2"/>
+		<column name="FTVIVTP_INVESTMENT_TYPE_DESC" type="String" size="30"/>
+		<column name="FTVIVTP_CATEGORY" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvivtp_ivtp_code, ftvivtp_investment_type_desc, ftvivtp_category, to_char(ftvivtp_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvivtp_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvivtp  ORDER BY ftvivtp_ivtp_code, ftvivtp_category, ftvivtp_eff_date DESC
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVINTS_RG.ValueSet.Config" name="FTVINTS_RG">
+    <columns>
+		<column name="FTVINTS_INTS_CODE" type="String" size="10"/>
+		<column name="FTVINTS_INTEREST_SCHED_DESC" type="String" size="30"/>
+		<column name="FTVINTS_AT_MATURITY_IND" type="String" size="1"/>
+		<column name="FTVINTS_INTEREST_PERIOD" type="String" size="1"/>
+		<column name="FTVINTS_INTEREST_MONTH_START" type="String" size="3"/>
+		<column name="FTVINTS_INTEREST_MONTH_END" type="String" size="3"/>
+		<column name="FTVINTS_INTEREST_DAY" type="String" size="2"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvints_ints_code, ftvints_interest_sched_desc, ftvints_at_maturity_ind, ftvints_interest_period, ftvints_interest_month_start, ftvints_interest_month_end, ftvints_interest_day, to_char(ftvints_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0"  FROM ftvints  ORDER BY ftvints_ints_code, ftvints_eff_date, ftvints_nchg_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVINRT_RG.ValueSet.Config" name="FTVINRT_RG">
+    <columns>
+		<column name="FTVINRT_CODE" type="String" size="4"/>
+		<column name="FTVINRT_SHORT_DESC" type="String" size="10"/>
+		<column name="FTVINRT_LONG_DESC" type="String" size="35"/>
+		<column name="FTVRTYP_CODE" type="String" size="2"/>
+		<column name="FTVRTYP_SHORT_DESC" type="String" size="10"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvinrt_code, ftvinrt_short_desc, ftvinrt_long_desc, ftvrtyp_code, ftvrtyp_short_desc  FROM ftvinrt, ftvrtyp  WHERE ftvinrt_rtyp_seqno = ftvrtyp_seqno  ORDER BY ftvinrt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVOBPH_RG.ValueSet.Config" name="FTVOBPH_RG">
+    <columns>
+		<column name="FTVOBPH_COAS_CODE" type="String" size="1"/>
+		<column name="FTVOBPH_OBUD_CODE" type="String" size="6"/>
+		<column name="FTVOBPH_OBPH_CODE" type="String" size="6"/>
+		<column name="FTVOBPH_BUDG_PHASE_SHORT_TITLE" type="String" size="20"/>
+		<column name="FTVOBPH_BUDG_PHASE_STATUS" type="String" size="1"/>
+		<column name="DESC" type="String" size="6"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="FTVOBPH_BUDG_MEAS_TYPE" type="String" size="1"/>
+		<column name="FTVOBPH_OBUD_CODE_BASE" type="String" size="6"/>
+		<column name="FTVOBPH_OBPH_CODE_BASE" type="String" size="6"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvobph_coas_code, ftvobph_obud_code, ftvobph_obph_code, ftvobph_budg_phase_short_title, ftvobph_budg_phase_status, decode(ftvobph_budg_phase_status, 'O', 'Open', 'C', 'Closed', 'A', 'Active') "DESC", to_char(ftvobph_budg_activation_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", ftvobph_budg_meas_type, ftvobph_obud_code_base, ftvobph_obph_code_base  FROM ftvobph  ORDER BY decode(ftvobph_coas_code, :GLOBAL_COAS_CODE, ' ', ftvobph_coas_code), ftvobph_obud_code, ftvobph_seq_display_num
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVOBUD_RG.ValueSet.Config" name="FTVOBUD_RG">
+    <columns>
+		<column name="FTVOBUD_COAS_CODE" type="String" size="1"/>
+		<column name="FTVOBUD_OBUD_CODE" type="String" size="6"/>
+		<column name="FTVOBUD_BUDG_TITLE" type="String" size="35"/>
+		<column name="FTVOBUD_YRS_BUDGETED" type="Number" size="23"/>
+		<column name="FTVOBUD_BUDG_PRD_TYPE" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvobud_coas_code, ftvobud_obud_code, ftvobud_budg_title, ftvobud_yrs_budgeted, ftvobud_budg_prd_type  FROM ftvobud  ORDER BY decode(ftvobud_coas_code, :GLOBAL_COAS_CODE, ' ', ftvobud_coas_code), ftvobud_obud_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVPAYM_RG.ValueSet.Config" name="FTVPAYM_RG">
+    <columns>
+		<column name="FTVPAYM_PAYM_CODE" type="String" size="4"/>
+		<column name="FTVPAYM_TITLE" type="String" size="35"/>
+		<column name="FTVPAYM_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvpaym_paym_code, ftvpaym_title, ftvpaym_status_ind, to_char(ftvpaym_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvpaym_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1" FROM ftvpaym  ORDER BY ftvpaym_paym_code, ftvpaym_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVPCLS_RG.ValueSet.Config" name="FTVPCLS_RG">
+    <columns>
+		<column name="FTVPCLS_CODE" type="String" size="1"/>
+		<column name="FTVPCLS_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvpcls_code, ftvpcls_desc, to_char(ftvpcls_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvpcls_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvpcls_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2" FROM ftvpcls  ORDER BY ftvpcls_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVPROJ_RG.ValueSet.Config" name="FTVPROJ_RG">
+    <columns>
+		<column name="FTVPROJ_CODE" type="String" size="8"/>
+		<column name="FTVPROJ_LONG_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvproj_code, ftvproj_long_desc, to_char(ftvproj_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvproj_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvproj  ORDER BY ftvproj_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRCMT_RG.ValueSet.Config" name="FTVRCMT_RG">
+    <columns>
+		<column name="FTVRCMT_CODE" type="String" size="4"/>
+		<column name="FTVRCMT_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvrcmt_code, ftvrcmt_desc, to_char(ftvrcmt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvrcmt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvrcmt  ORDER BY ftvrcmt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRRSN_RG.ValueSet.Config" name="FTVRRSN_RG">
+    <columns>
+		<column name="FTVRRSN_CODE" type="String" size="4"/>
+		<column name="FTVRRSN_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvrrsn_code, ftvrrsn_desc, to_char(ftvrrsn_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvrrsn_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvrrsn_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2"  FROM ftvrrsn  ORDER BY ftvrrsn_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRSNC_RG.ValueSet.Config" name="FTVRSNC_RG">
+    <columns>
+		<column name="FTVRSNC_RSNC_CODE" type="String" size="2"/>
+		<column name="FTVRSNC_REASON_DESCRIPTION" type="String" size="30"/>
+		<column name="FTVRSNC_AFFECT_TO_TOTAL" type="String" size="1"/>
+		<column name="FTVRSNC_INCOME_EXPENSE_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvrsnc_rsnc_code, ftvrsnc_reason_description, ftvrsnc_affect_to_total, ftvrsnc_income_expense_ind, to_char(ftvrsnc_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvrsnc_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvrsnc  ORDER BY ftvrsnc_rsnc_code, ftvrsnc_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRTYP_RG.ValueSet.Config" name="FTVRTYP_RG">
+    <columns>
+		<column name="FTVRTYP_CODE" type="String" size="2"/>
+		<column name="FTVRTYP_SHORT_DESC" type="String" size="10"/>
+		<column name="FTVRTYP_LONG_DESC" type="String" size="35"/>
+		<column name="FTVRTYP_SEQNO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvrtyp_code, ftvrtyp_short_desc, ftvrtyp_long_desc, ftvrtyp_seqno  FROM ftvrtyp  ORDER BY ftvrtyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRUGR_RG.ValueSet.Config" name="FTVRUGR_RG">
+    <columns>
+		<column name="FTVRUGR_RULE_GROUP" type="String" size="4"/>
+		<column name="FTVRUGR_TITLE" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvrugr_rule_group, ftvrugr_title, to_char(ftvrugr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0"  FROM ftvrugr  ORDER BY ftvrugr_rule_group
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRUCL_RG.ValueSet.Config" name="FTVRUCL_RG">
+    <columns>
+		<column name="FTVRUCL_RUCL_CODE" type="String" size="4"/>
+		<column name="FTVRUCL_CLASS_TITLE" type="String" size="35"/>
+		<column name="FTVRUCL_CLASS_TYPE" type="String" size="1"/>
+		<column name="FTVRUCL_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvrucl_rucl_code, ftvrucl_class_title, ftvrucl_class_type, ftvrucl_status_ind, to_char(ftvrucl_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvrucl_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvrucl  ORDER BY ftvrucl_rucl_code, ftvrucl_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVTRSK_RG.ValueSet.Config" name="FTVTRSK_RG">
+    <columns>
+		<column name="FTVTRSK_CODE" type="String" size="2"/>
+		<column name="FTVTRSK_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvtrsk_code, ftvtrsk_desc, to_char(ftvtrsk_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvtrsk_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvtrsk_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2" FROM ftvtrsk  ORDER BY ftvtrsk_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVTRAT_RG.ValueSet.Config" name="FTVTRAT_RG">
+    <columns>
+		<column name="FTVTRAT_CODE" type="String" size="3"/>
+		<column name="FTVTRAT_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="11"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvtrat_code, ftvtrat_desc, to_char(ftvtrat_rate, '999999D999') "ICRGGQ_0", to_char(ftvtrat_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvtrat_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2" FROM ftvtrat  ORDER BY ftvtrat_code, ftvtrat_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVUOMS_RG.ValueSet.Config" name="FTVUOMS_RG">
+    <columns>
+		<column name="FTVUOMS_CODE" type="String" size="3"/>
+		<column name="FTVUOMS_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvuoms_code, ftvuoms_desc, to_char(ftvuoms_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvuoms_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvuoms_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2"  FROM ftvuoms  ORDER BY ftvuoms_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVVTYP_RG.ValueSet.Config" name="FTVVTYP_RG">
+    <columns>
+		<column name="FTVVTYP_CODE" type="String" size="2"/>
+		<column name="FTVVTYP_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvvtyp_code, ftvvtyp_desc, to_char(ftvvtyp_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvvtyp_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvvtyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2" FROM ftvvtyp  ORDER BY ftvvtyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVUVMS_RG.ValueSet.Config" name="FTVUVMS_RG">
+    <columns>
+		<column name="FTVUVMS_UVMS_CODE" type="String" size="4"/>
+		<column name="FTVUVMS_UNIT_VALUE_MEAS_DESC" type="String" size="30"/>
+		<column name="FTVUVMS_UNIT_VALUE_BASE_CURR" type="Number" size="23"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvuvms_uvms_code, ftvuvms_unit_value_meas_desc, ftvuvms_unit_value_base_curr, to_char(ftvuvms_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvuvms_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1" FROM ftvuvms  ORDER BY ftvuvms_uvms_code, ftvuvms_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVAGCY_RG.ValueSet.Config" name="FTVAGCY_RG">
+    <columns>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="NAME" type="String" size="79"/>
+		<column name="FTVAGCY_STATUS_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT spriden_id, decode(spriden_entity_ind, 'C', substr(spriden_last_name, 1, 44), spriden_last_name || ', ' || spriden_first_name || ' ' || substr(spriden_mi, 1, 1)) "NAME", ftvagcy_status_ind  FROM ftvagcy, spriden  WHERE spriden_pidm = ftvagcy_agcy_code_pidm AND spriden_change_ind IS NULL  ORDER BY spriden_id ASC
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVFMGR_RG.ValueSet.Config" name="FTVFMGR_RG">
+    <columns>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="NAME" type="String" size="77"/>
+		<column name="FTVFMGR_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT spriden_id, spriden_last_name || ', ' || spriden_first_name "NAME", ftvfmgr_status_ind, to_char(ftvfmgr_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvfmgr_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM spriden, ftvfmgr  WHERE ftvfmgr_fmgr_code_pidm = spriden_pidm AND spriden_change_ind IS NULL  ORDER BY ftvfmgr_fmgr_code_pidm, ftvfmgr_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCUST_RG.ValueSet.Config" name="FTVCUST_RG">
+    <columns>
+		<column name="FCVCUST_ID" type="String" size="9"/>
+		<column name="NAME" type="String" size="94"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT fcvcust_id, decode(fcvcust_entity_ind, 'C', fcvcust_last_name, 'P', fcvcust_last_name || ', ' || fcvcust_first_name || ' ' || fcvcust_mi || '.') "NAME", to_char(fcvcust_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(fcvcust_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM fcvcust  ORDER BY fcvcust_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVBIDH_RG.ValueSet.Config" name="FTVBIDH_RG">
+    <columns>
+		<column name="FPBBIDH_CODE" type="String" size="8"/>
+		<column name="FPBBIDH_DESC" type="String" size="35"/>
+		<column name="FPBBIDH_BUYR_CODE" type="String" size="4"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="FPBBIDH_APPR_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT fpbbidh_code, fpbbidh_desc, fpbbidh_buyr_code, to_char(fpbbidh_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(fpbbidh_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", fpbbidh_appr_ind  FROM fpbbidh  ORDER BY fpbbidh_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVAGRH_RG.ValueSet.Config" name="FTVAGRH_RG">
+    <columns>
+		<column name="FPBAGRH_CODE" type="String" size="15"/>
+		<column name="FPBAGRH_DESC" type="String" size="35"/>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="ICRGGQ_0" type="String" size="80"/>
+		<column name="FTVBUYR_NAME" type="String" size="35"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT fpbagrh_code, fpbagrh_desc, spriden_id, decode(spriden_mi, '', (spriden_last_name || ', ' || spriden_first_name), (spriden_last_name || ', ' || spriden_first_name || ' ' || substr(spriden_mi, 1, 1) || '.')) "ICRGGQ_0", ftvbuyr_name, to_char(fpbagrh_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(fpbagrh_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2"  FROM fpbagrh, ftvbuyr, spriden  WHERE spriden_pidm = fpbagrh_vend_pidm AND fpbagrh_vend_pidm IS NOT NULL AND ftvbuyr_code = fpbagrh_buyr_code AND fpbagrh_buyr_code IS NOT NULL AND spriden_change_ind IS NULL  ORDER BY fpbagrh_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCARR_RG.ValueSet.Config" name="FTVCARR_RG">
+    <columns>
+		<column name="FAVCARR_ID" type="String" size="9"/>
+		<column name="NAME" type="String" size="92"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="FAVCARR_CONTACT" type="String" size="35"/>
+		<column name="FAVCARR_CARRIER_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT favcarr_id, decode(favcarr_entity_ind, 'C', favcarr_last_name, decode(favcarr_mi, '', favcarr_first_name || ' ' || favcarr_last_name, ' ', favcarr_first_name || ' ' || favcarr_last_name, favcarr_first_name || ' ' || favcarr_mi || '.' || favcarr_last_name)) "NAME", to_char(favcarr_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", favcarr_contact, favcarr_carrier_ind  FROM favcarr  ORDER BY favcarr_id
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVBOND_RG.ValueSet.Config" name="FTVBOND_RG">
+    <columns>
+		<column name="FIRBOND_DOC_NUM" type="String" size="8"/>
+		<column name="FIRBOND_INDUSTRY_SYMBOL" type="String" size="10"/>
+		<column name="FIRBOND_CUSIP_NUMBER" type="String" size="12"/>
+		<column name="FIBCUSP_CUSIP_DESCRIPTION" type="String" size="30"/>
+		<column name="FIRBOND_COAS_CODE" type="String" size="1"/>
+		<column name="FIRBOND_FUND_CODE" type="String" size="6"/>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="FIRBOND_COMPLETE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT firbond_doc_num, firbond_industry_symbol, firbond_cusip_number, fibcusp_cusip_description, firbond_coas_code, firbond_fund_code, spriden_id, to_char(firbond_trans_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", firbond_complete_ind  FROM firbond, fibcusp, spriden  WHERE fibcusp_cusip_number = firbond_cusip_number AND fibcusp_eff_date <= sysdate AND fibcusp_nchg_date > sysdate AND spriden_pidm = firbond_imgr_code_pidm  ORDER BY decode(firbond_coas_code, :GLOBAL_COAS_CODE, ' ', firbond_coas_code), firbond_doc_num, firbond_trans_date DESC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCONP_RG.ValueSet.Config" name="FTVCONP_RG">
+    <columns>
+		<column name="FTVFUND_COAS_CODE" type="String" size="1"/>
+		<column name="FTVFUND_FUND_CODE" type="String" size="6"/>
+		<column name="FTVFUND_TITLE" type="String" size="35"/>
+		<column name="FTVFUND_CONP_PROJ_NUM" type="String" size="15"/>
+		<column name="FTVFUND_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvfund_coas_code, ftvfund_fund_code, ftvfund_title, ftvfund_conp_proj_num, ftvfund_status_ind, to_char(ftvfund_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvfund_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvfund  WHERE ftvfund_conp_proj_num IS NOT NULL  ORDER BY decode(ftvfund_coas_code, :GLOBAL_COAS_CODE, ' ', ftvfund_coas_code), ftvfund_fund_code, ftvfund_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCERD_RG.ValueSet.Config" name="FTVCERD_RG">
+    <columns>
+		<column name="FIRCERD_DOC_NUM" type="String" size="8"/>
+		<column name="FIRCERD_INDUSTRY_SYMBOL" type="String" size="10"/>
+		<column name="FIRCERD_CUSIP_NUMBER" type="String" size="12"/>
+		<column name="FIBCUSP_CUSIP_DESCRIPTION" type="String" size="30"/>
+		<column name="FIRCERD_COAS_CODE" type="String" size="1"/>
+		<column name="FIRCERD_FUND_CODE" type="String" size="6"/>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="FIRCERD_COMPLETE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT fircerd_doc_num, fircerd_industry_symbol, fircerd_cusip_number, fibcusp_cusip_description, fircerd_coas_code, fircerd_fund_code, spriden_id, to_char(fircerd_trans_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", fircerd_complete_ind  FROM fircerd, fibcusp, spriden  WHERE fibcusp_cusip_number = fircerd_cusip_number AND fibcusp_eff_date <= sysdate AND fibcusp_nchg_date > sysdate AND spriden_pidm = fircerd_imgr_code_pidm  ORDER BY decode(fircerd_coas_code, :GLOBAL_COAS_CODE, ' ', fircerd_coas_code), fircerd_doc_num, fircerd_trans_date DESC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVMMKT_RG.ValueSet.Config" name="FTVMMKT_RG">
+    <columns>
+		<column name="FIRMMKT_DOC_NUM" type="String" size="8"/>
+		<column name="FIRMMKT_INDUSTRY_SYMBOL" type="String" size="10"/>
+		<column name="FIRMMKT_CUSIP_NUMBER" type="String" size="12"/>
+		<column name="FIBCUSP_CUSIP_DESCRIPTION" type="String" size="30"/>
+		<column name="FIRMMKT_COAS_CODE" type="String" size="1"/>
+		<column name="FIRMMKT_FUND_CODE" type="String" size="6"/>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="FIRMMKT_COMPLETE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT firmmkt_doc_num, firmmkt_industry_symbol, firmmkt_cusip_number, fibcusp_cusip_description, firmmkt_coas_code, firmmkt_fund_code, spriden_id, to_char(firmmkt_trans_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", firmmkt_complete_ind  FROM firmmkt, fibcusp, spriden  WHERE fibcusp_cusip_number = firmmkt_cusip_number AND fibcusp_eff_date <= sysdate AND fibcusp_nchg_date > sysdate AND spriden_pidm = firmmkt_imgr_code_pidm  ORDER BY decode(firmmkt_coas_code, :GLOBAL_COAS_CODE, ' ', firmmkt_coas_code), firmmkt_doc_num, firmmkt_trans_date DESC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVPRTY_RG.ValueSet.Config" name="FTVPRTY_RG">
+    <columns>
+		<column name="FIRPRTY_DOC_NUM" type="String" size="8"/>
+		<column name="FIRPRTY_INDUSTRY_SYMBOL" type="String" size="10"/>
+		<column name="FIRPRTY_CUSIP_NUMBER" type="String" size="12"/>
+		<column name="FIBCUSP_CUSIP_DESCRIPTION" type="String" size="30"/>
+		<column name="FIRPRTY_COAS_CODE" type="String" size="1"/>
+		<column name="FIRPRTY_FUND_CODE" type="String" size="6"/>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="FIRPRTY_COMPLETE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT firprty_doc_num, firprty_industry_symbol, firprty_cusip_number, fibcusp_cusip_description, firprty_coas_code, firprty_fund_code, spriden_id, to_char(firprty_trans_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", firprty_complete_ind  FROM firprty, fibcusp, spriden  WHERE fibcusp_cusip_number = firprty_cusip_number AND fibcusp_eff_date <= sysdate AND fibcusp_nchg_date > sysdate AND spriden_pidm = firprty_imgr_code_pidm  ORDER BY decode(firprty_coas_code, :GLOBAL_COAS_CODE, ' ', firprty_coas_code), firprty_doc_num, firprty_trans_date DESC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRRUL_RG.ValueSet.Config" name="FTVRRUL_RG">
+    <columns>
+		<column name="FTVRTYP_CODE" type="String" size="2"/>
+		<column name="FTVRTYP_SHORT_DESC" type="String" size="10"/>
+		<column name="FTVRTYP_DL_RATE_CALC_IND" type="String" size="1"/>
+		<column name="FTVRTYP_IL_RATE_CALC_IND" type="String" size="1"/>
+		<column name="FTVRTYP_IH_RATE_CALC_IND" type="String" size="1"/>
+		<column name="FTVRTYP_MM_RATE_CALC_IND" type="String" size="1"/>
+		<column name="FTVRTYP_EQ_RATE_CALC_IND" type="String" size="1"/>
+		<column name="FTVRTYP_EMPL_REQ_IND" type="String" size="1"/>
+		<column name="FTVRTYP_INVT_REQ_IND" type="String" size="1"/>
+		<column name="FTVRTYP_EQPT_REQ_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvrtyp_code, ftvrtyp_short_desc, ftvrtyp_dl_rate_calc_ind, ftvrtyp_il_rate_calc_ind, ftvrtyp_ih_rate_calc_ind, ftvrtyp_mm_rate_calc_ind, ftvrtyp_eq_rate_calc_ind, ftvrtyp_empl_req_ind, ftvrtyp_invt_req_ind, ftvrtyp_eqpt_req_ind  FROM ftvrtyp  ORDER BY ftvrtyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVPKSL_RG.ValueSet.Config" name="FTVPKSL_RG">
+    <columns>
+		<column name="FPBRCDT_RCHD_CODE" type="String" size="8"/>
+		<column name="FPBRCDT_PACKING_SLIP" type="String" size="15"/>
+		<column name="FPBRCDT_POHD_CODE" type="String" size="8"/>
+		<column name="ICRGGQ_0" type="String" size="80"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT fpbrcdt_rchd_code, fpbrcdt_packing_slip, fpbrcdt_pohd_code, decode(spriden_entity_ind, 'C', spriden_last_name, 'P', decode(spriden_mi, '', (spriden_last_name || ', ' || spriden_first_name), (spriden_last_name || ', ' || spriden_first_name || ' ' || substr(spriden_mi, 1, 1) || '.'))) "ICRGGQ_0", to_char(fpbrchd_rcvd_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM fpbrchd, fpbrcdt, fpbpohd, spriden  WHERE fpbpohd_code = fpbrcdt_pohd_code AND fpbrchd_code = fpbrcdt_rchd_code AND spriden_pidm = fpbpohd_vend_pidm AND spriden_change_ind IS NULL  ORDER BY fpbrcdt_rchd_code, fpbrcdt_packing_slip, fpbrcdt_pohd_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVRORD_RG.ValueSet.Config" name="FTVRORD_RG">
+    <columns>
+		<column name="FPBPOHD_CODE" type="String" size="8"/>
+		<column name="FPBPOHD_BUYR_CODE" type="String" size="4"/>
+		<column name="FTVBUYR_NAME" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="80"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+		<column name="ICRGGQ_3" type="String" size="75"/>
+		<column name="FPBPOHD_COMPLETE_IND" type="String" size="1"/>
+		<column name="FPBPOHD_APPR_IND" type="String" size="1"/>
+		<column name="FPBPOHD_CANCEL_IND" type="String" size="1"/>
+		<column name="ICRGGQ_4" type="String" size="16"/>
+	</columns>
+	<query><![CDATA[
+	SELECT fpbpohd_code, fpbpohd_buyr_code, ftvbuyr_name, decode(spriden_entity_ind, 'C', spriden_last_name, 'P', decode(spriden_mi, '', (spriden_last_name || ', ' || spriden_first_name), (spriden_last_name || ', ' || spriden_first_name || ' ' || substr(spriden_mi, 1, 1) || '.'))) "ICRGGQ_0", to_char(fpbpohd_reqd_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(fpbpohd_po_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2", to_char(fpbpohd_rexp_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_3", fpbpohd_complete_ind, fpbpohd_appr_ind, fpbpohd_cancel_ind, to_char(fpbpohd_rush_amt, '999999999999D99') "ICRGGQ_4"  FROM fpbpohd, ftvbuyr, spriden  WHERE fpbpohd_rush_ind = 'Y' AND ftvbuyr_code = fpbpohd_buyr_code AND spriden_pidm = fpbpohd_vend_pidm AND spriden_change_ind IS NULL  ORDER BY fpbpohd_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVSTOP_RG.ValueSet.Config" name="FTVSTOP_RG">
+    <columns>
+		<column name="FIRSTOP_DOC_NUM" type="String" size="8"/>
+		<column name="FIRSTOP_INDUSTRY_SYMBOL" type="String" size="10"/>
+		<column name="FIRSTOP_CUSIP_NUMBER" type="String" size="12"/>
+		<column name="FIBCUSP_CUSIP_DESCRIPTION" type="String" size="30"/>
+		<column name="FIRSTOP_COAS_CODE" type="String" size="1"/>
+		<column name="FIRSTOP_FUND_CODE" type="String" size="6"/>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="FIRSTOP_COMPLETE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT firstop_doc_num, firstop_industry_symbol, firstop_cusip_number, fibcusp_cusip_description, firstop_coas_code, firstop_fund_code, spriden_id, to_char(firstop_trans_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", firstop_complete_ind  FROM firstop, fibcusp, spriden  WHERE fibcusp_cusip_number = firstop_cusip_number AND fibcusp_eff_date <= sysdate AND fibcusp_nchg_date > sysdate AND spriden_pidm = firstop_imgr_code_pidm  ORDER BY decode(firstop_coas_code, :GLOBAL_COAS_CODE, ' ', firstop_coas_code), firstop_doc_num, firstop_trans_date DESC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVSTCK_RG.ValueSet.Config" name="FTVSTCK_RG">
+    <columns>
+		<column name="FIRSTCK_DOC_NUM" type="String" size="8"/>
+		<column name="FIRSTCK_INDUSTRY_SYMBOL" type="String" size="10"/>
+		<column name="FIRSTCK_CUSIP_NUMBER" type="String" size="12"/>
+		<column name="FIBCUSP_CUSIP_DESCRIPTION" type="String" size="30"/>
+		<column name="FIRSTCK_COAS_CODE" type="String" size="1"/>
+		<column name="FIRSTCK_FUND_CODE" type="String" size="6"/>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="FIRSTCK_COMPLETE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT firstck_doc_num, firstck_industry_symbol, firstck_cusip_number, fibcusp_cusip_description, firstck_coas_code, firstck_fund_code, spriden_id, to_char(firstck_trans_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", firstck_complete_ind  FROM firstck, fibcusp, spriden  WHERE fibcusp_cusip_number = firstck_cusip_number AND fibcusp_eff_date <= sysdate AND fibcusp_nchg_date > sysdate AND spriden_pidm = firstck_imgr_code_pidm  ORDER BY decode(firstck_coas_code, :GLOBAL_COAS_CODE, ' ', firstck_coas_code), firstck_doc_num, firstck_trans_date DESC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVINVT_RG.ValueSet.Config" name="FTVINVT_RG">
+    <columns>
+		<column name="FTVINVT_COAS_CODE" type="String" size="1"/>
+		<column name="FTVINVT_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVINVT_CODE" type="String" size="8"/>
+		<column name="FTVINVT_LONG_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvinvt_coas_code, ftvinvt_orgn_code, ftvinvt_code, ftvinvt_long_desc, to_char(ftvinvt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvinvt_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM ftvinvt  WHERE (ftvinvt_coas_code) IN ((SELECT ftvcoas_coas_code  FROM ftvcoas  WHERE ftvcoas_eff_date <= sysdate AND ftvcoas_nchg_date > sysdate AND (ftvcoas_term_date >= sysdate OR ftvcoas_term_date IS NULL) AND ftvcoas_status_ind = 'A' )) AND (ftvinvt_coas_code, ftvinvt_orgn_code) IN ((SELECT ftvorgn_coas_code, ftvorgn_orgn_code  FROM ftvorgn  WHERE ftvorgn_eff_date <= sysdate AND ftvorgn_nchg_date > sysdate AND (ftvorgn_term_date >= sysdate OR ftvorgn_term_date IS NULL) AND ftvorgn_status_ind = 'A' ))  ORDER BY ftvinvt_coas_code, ftvinvt_orgn_code, ftvinvt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVHBUD_RG.ValueSet.Config" name="FTVHBUD_RG">
+    <columns>
+		<column name="FTVHBUD_COAS_CODE" type="String" size="1"/>
+		<column name="FTVHBUD_FUND_CODE" type="String" size="6"/>
+		<column name="FTVHBUD_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVHBUD_FUND_CODE_BAVL" type="String" size="6"/>
+		<column name="FTVHBUD_ORGN_CODE_BAVL" type="String" size="6"/>
+		<column name="FTVHBUD_BAVL_PERIOD" type="String" size="1"/>
+		<column name="FTVHBUD_BAVL_SEVERITY" type="String" size="1"/>
+		<column name="FTVHBUD_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvhbud_coas_code, ftvhbud_fund_code, ftvhbud_orgn_code, ftvhbud_fund_code_bavl, ftvhbud_orgn_code_bavl, ftvhbud_bavl_period, ftvhbud_bavl_severity, ftvhbud_status_ind, to_char(ftvhbud_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvhbud_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1" FROM ftvhbud  ORDER BY decode(ftvhbud_coas_code, :GLOBAL_COAS_CODE, ' ', ftvhbud_coas_code), ftvhbud_fund_code, ftvhbud_orgn_code, ftvhbud_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVBUYR_RG.ValueSet.Config" name="FTVBUYR_RG">
+    <columns>
+		<column name="FTVBUYR_CODE" type="String" size="4"/>
+		<column name="FTVBUYR_NAME" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="21"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+		<column name="FTVBUYR_LVPO_IND" type="String" size="1"/>
+		<column name="ICRGGQ_3" type="String" size="16"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvbuyr_code, ftvbuyr_name, '(' || ftvbuyr_phone_area || ') ' || substr(ftvbuyr_phone_number, 1, 3) || '-' || substr(ftvbuyr_phone_number, 4, 7) || decode(ftvbuyr_phone_ext, '', '', ' [' || ftvbuyr_phone_ext || ']') "ICRGGQ_0", to_char(ftvbuyr_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvbuyr_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2", ftvbuyr_lvpo_ind, to_char(ftvbuyr_lvpo_dollar_limit, '999999999999D99') "ICRGGQ_3" FROM ftvbuyr  ORDER BY ftvbuyr_code, ftvbuyr_name
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVSHIP_RG.ValueSet.Config" name="FTVSHIP_RG">
+    <columns>
+		<column name="FTVSHIP_CODE" type="String" size="6"/>
+		<column name="FTVSHIP_CONTACT" type="String" size="35"/>
+		<column name="FTVSHIP_BUILDING" type="String" size="15"/>
+		<column name="FTVSHIP_FLOOR" type="String" size="10"/>
+		<column name="ICRGGQ_0" type="String" size="20"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvship_code, ftvship_contact, ftvship_building, ftvship_floor, '(' || ftvship_phone_area || ') ' || substr(ftvship_phone_num, 1, 3) || '_' || substr(ftvship_phone_num, 4, 4) || decode(ftvship_phone_ext, '', '', ' #' || ftvship_phone_ext) "ICRGGQ_0", to_char(ftvship_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvship_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2"  FROM ftvship  ORDER BY ftvship_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVITYP_RG.ValueSet.Config" name="FTVITYP_RG">
+    <columns>
+		<column name="FTVITYP_CODE" type="String" size="2"/>
+		<column name="FTVITYP_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvityp_code, ftvityp_desc, to_char(ftvityp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0" FROM ftvityp  ORDER BY ftvityp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVEQPT_RG.ValueSet.Config" name="FTVEQPT_RG">
+    <columns>
+		<column name="FTVEQPT_COAS_CODE" type="String" size="1"/>
+		<column name="FTVEQPT_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVEQPT_CODE" type="String" size="9"/>
+		<column name="FTVEQPT_LONG_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftveqpt_coas_code, ftveqpt_orgn_code, ftveqpt_code, ftveqpt_long_desc, to_char(ftveqpt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftveqpt_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1" FROM ftveqpt  WHERE (ftveqpt_coas_code) IN ((SELECT ftvcoas_coas_code  FROM ftvcoas  WHERE ftvcoas_eff_date <= sysdate AND ftvcoas_nchg_date > sysdate AND (ftvcoas_term_date >= sysdate OR ftvcoas_term_date IS NULL) AND ftvcoas_status_ind = 'A' )) AND (ftveqpt_coas_code, ftveqpt_orgn_code) IN ((SELECT ftvorgn_coas_code, ftvorgn_orgn_code  FROM ftvorgn  WHERE ftvorgn_eff_date <= sysdate AND ftvorgn_nchg_date > sysdate AND (ftvorgn_term_date >= sysdate OR ftvorgn_term_date IS NULL) AND ftvorgn_status_ind = 'A' ))  ORDER BY ftveqpt_coas_code, ftveqpt_orgn_code, ftveqpt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FUVPROF_RG.ValueSet.Config" name="FUVPROF_RG">
+    <columns>
+		<column name="FOBPROF_COAS_CODE" type="String" size="1"/>
+		<column name="FOBPROF_USER_ID" type="String" size="30"/>
+		<column name="FOBPROF_USER_NAME" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT fobprof_coas_code, fobprof_user_id, fobprof_user_name, to_char(fobprof_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0"  FROM fobprof  ORDER BY fobprof_coas_code, fobprof_user_id, fobprof_user_name
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVEQUL_RG.ValueSet.Config" name="FTVEQUL_RG">
+    <columns>
+		<column name="FTVEQUL_UOMS_CODE" type="String" size="3"/>
+		<column name="FTVEQUL_UOMS_CODE_CONV" type="String" size="3"/>
+		<column name="ICRGGQ_0" type="String" size="16"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvequl_uoms_code, ftvequl_uoms_code_conv, to_char(ftvequl_units, '9999999999D9999') "ICRGGQ_0" FROM ftvequl  ORDER BY ftvequl_uoms_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVEELT_RG.ValueSet.Config" name="FTVEELT_RG">
+    <columns>
+		<column name="FTVEELT_COAS_CODE" type="String" size="1"/>
+		<column name="FTVEELT_EENT_CODE" type="String" size="4"/>
+		<column name="FTVEELT_EELC_CODE" type="String" size="4"/>
+		<column name="FTVEELT_EELI_CODE" type="String" size="10"/>
+		<column name="FTVEELT_EELT_CODE" type="String" size="6"/>
+		<column name="FTVORGN_TITLE" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="FTVEELT_STATUS_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftveelt_coas_code, ftveelt_eent_code, ftveelt_eelc_code, ftveelt_eeli_code, ftveelt_eelt_code, ftvorgn_title, to_char(ftveelt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftveelt_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", ftveelt_status_ind  FROM ftveelt, ftvorgn  WHERE ftvorgn_orgn_code = ftveelt_eelt_code AND ftveelt_coas_code = ftvorgn_coas_code AND ftveelt_eelc_code = 'ORGN' AND to_char(ftveelt_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(ftvorgn_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvorgn_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvorgn_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') UNION SELECT ftveelt_coas_code, ftveelt_eent_code, ftveelt_eelc_code, ftveelt_eeli_code, ftveelt_eelt_code, ftvacct_title, to_char(ftveelt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftveelt_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", ftveelt_status_ind  FROM ftveelt, ftvacct  WHERE ftvacct_acct_code = ftveelt_eelt_code AND ftveelt_coas_code = ftvacct_coas_code AND ftveelt_eelc_code = 'ACCT' AND to_char(ftveelt_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(ftvacct_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvacct_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvacct_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') UNION SELECT ftveelt_coas_code, ftveelt_eent_code, ftveelt_eelc_code, ftveelt_eeli_code, ftveelt_eelt_code, ftvactv_title, to_char(ftveelt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftveelt_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", ftveelt_status_ind  FROM ftveelt, ftvactv  WHERE ftvactv_actv_code = ftveelt_eelt_code AND ftveelt_coas_code = ftvactv_coas_code AND ftveelt_eelc_code = 'ACTV' AND to_char(ftveelt_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(ftvactv_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvactv_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvactv_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') UNION SELECT ftveelt_coas_code, ftveelt_eent_code, ftveelt_eelc_code, ftveelt_eeli_code, ftveelt_eelt_code, ftvlocn_title, to_char(ftveelt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftveelt_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", ftveelt_status_ind  FROM ftveelt, ftvlocn  WHERE ftvlocn_locn_code = ftveelt_eelt_code AND ftveelt_coas_code = ftvlocn_coas_code AND ftveelt_eelc_code = 'LOCN' AND to_char(ftveelt_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(ftvlocn_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvlocn_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvlocn_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') UNION SELECT ftveelt_coas_code, ftveelt_eent_code, ftveelt_eelc_code, ftveelt_eeli_code, ftveelt_eelt_code, ftvprog_title, to_char(ftveelt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftveelt_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", ftveelt_status_ind  FROM ftveelt, ftvprog  WHERE ftvprog_prog_code = ftveelt_eelt_code AND ftveelt_coas_code = ftvprog_coas_code AND ftveelt_eelc_code = 'PROG' AND to_char(ftveelt_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(ftvprog_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvprog_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvprog_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') UNION SELECT ftveelt_coas_code, ftveelt_eent_code, ftveelt_eelc_code, ftveelt_eeli_code, ftveelt_eelt_code, ftvfund_title, to_char(ftveelt_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftveelt_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", ftveelt_status_ind  FROM ftveelt, ftvfund  WHERE ftvfund_fund_code = ftveelt_eelt_code AND ftveelt_coas_code = ftvfund_coas_code AND ftveelt_eelc_code = 'FUND' AND to_char(ftveelt_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftveelt_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(ftvfund_eff_date, 'YYYYMMDDHH24MISS') <= to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvfund_nchg_date, to_date('20991231235959', 'YYYYMMDDHH24MISS')), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') AND to_char(nvl(ftvfund_term_date, (sysdate + 1)), 'YYYYMMDDHH24MISS') > to_char(sysdate, 'YYYYMMDDHH24MISS') 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVFSYR_RG.ValueSet.Config" name="FTVFSYR_RG">
+    <columns>
+		<column name="FTVFSYR_COAS_CODE" type="String" size="1"/>
+		<column name="FTVFSYR_FSYR_CODE" type="String" size="2"/>
+		<column name="FTVFSYR_START_DATE" type="String" size="75"/>
+		<column name="FTVFSYR_END_DATE" type="String" size="75"/>
+		<column name="FTVFSPD_FSPD_CODE" type="String" size="2"/>
+		<column name="FTVFSYR_EOY_ACCR_STATUS_IND" type="String" size="1"/>
+		<column name="FTVFSYR_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvfsyr_coas_code, ftvfsyr_fsyr_code, to_char(ftvfsyr_start_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvfsyr_start_date, to_char(ftvfsyr_end_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvfsyr_end_date, y.ftvfspd_fspd_code, ftvfsyr_eoy_accr_status_ind, to_char(ftvfsyr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) ftvfsyr_activity_date  FROM ftvfspd y, ftvfsyr  WHERE ftvfsyr_fsyr_code = y.ftvfspd_fsyr_code AND ftvfsyr_coas_code = y.ftvfspd_coas_code AND y.ftvfspd_fspd_code = (SELECT max(ftvfspd_fspd_code)  FROM ftvfspd c  WHERE y.ftvfspd_fsyr_code = c.ftvfspd_fsyr_code AND y.ftvfspd_coas_code = c.ftvfspd_coas_code )  ORDER BY decode(ftvfsyr_coas_code, :GLOBAL_COAS_CODE, ' ', ftvfsyr_coas_code), fofycnv(ftvfsyr_fsyr_code)
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVTGRP_RG.ValueSet.Config" name="FTVTGRP_RG">
+    <columns>
+		<column name="FTVTGRP_TGRP_CODE" type="String" size="4"/>
+		<column name="FTVTGRP_TITLE" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="Number" size="23"/>
+		<column name="FTVTGRP_COAS_CODE_VALID" type="String" size="1"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvtgrp_tgrp_code, ftvtgrp_title, sum(ftvtrat_rate) "ICRGGQ_0", ftvtgrp_coas_code_valid, to_char(ftvtgrp_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvtgrp_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2" FROM ftvtrat, ftvtgrp  WHERE (ftvtrat_code) IN ((SELECT ftrtgtr_trat_code  FROM ftrtgtr  WHERE ftrtgtr_tgtr_code = ftvtgrp_tgrp_code AND ftrtgtr_eff_date = ftvtgrp_eff_date AND ftvtrat_eff_date <= ftvtgrp_eff_date AND (ftvtrat_nchg_date IS NULL OR ftvtrat_nchg_date > ftvtgrp_eff_date) AND (ftvtrat_term_date IS NULL OR ftvtrat_term_date > ftvtgrp_eff_date) AND ftvtrat_status_ind = 'A' ))  GROUP BY ftvtgrp_tgrp_code, ftvtgrp_title, ftvtgrp_coas_code_valid, ftvtgrp_eff_date, ftvtgrp_term_date UNION SELECT ftvtgrp_tgrp_code, ftvtgrp_title, 0 "ICRGGQ_0", ftvtgrp_coas_code_valid, to_char(ftvtgrp_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(ftvtgrp_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2"  FROM ftvtgrp  WHERE ftvtgrp_non_taxable = 'Y'  GROUP BY ftvtgrp_tgrp_code, ftvtgrp_title, ftvtgrp_coas_code_valid, ftvtgrp_eff_date, ftvtgrp_term_date 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCHKS_RG.ValueSet.Config" name="FTVCHKS_RG">
+    <columns>
+		<column name="FABCHKS_CHECK_NUM" type="String" size="8"/>
+		<column name="FABCHKS_BANK_CODE" type="String" size="2"/>
+		<column name="GXVBANK_ACCT_NAME" type="String" size="35"/>
+		<column name="FABCHKS_CANCEL_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="16"/>
+		<column name="FABCHKS_CHECK_TYPE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT fabchks_check_num, fabchks_bank_code, gxvbank_acct_name, fabchks_cancel_ind, to_char(fabchks_check_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(fabchks_check_amt, '999999999999D99') "ICRGGQ_1", fabchks_check_type_ind  FROM fabchks, gxvbank  WHERE gxvbank_bank_code = fabchks_bank_code AND (gxvbank_nchg_date > fabchks_check_date OR gxvbank_nchg_date IS NULL) AND (gxvbank_eff_date <= fabchks_check_date)  ORDER BY fabchks_bank_code, fabchks_check_num
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVIRTO_RG.ValueSet.Config" name="FTVIRTO_RG">
+    <columns>
+		<column name="FTVIRTO_COAS_CODE" type="String" size="1"/>
+		<column name="FTVIRTO_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVIRTO_INRT_CODE" type="String" size="4"/>
+		<column name="FTVINRT_LONG_DESC" type="String" size="35"/>
+		<column name="FTVIRTO_INVT_CODE" type="String" size="8"/>
+		<column name="FTVIRTO_EQPT_CODE" type="String" size="9"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvirto_coas_code, ftvirto_orgn_code, ftvirto_inrt_code, ftvinrt_long_desc, ftvirto_invt_code, ftvirto_eqpt_code  FROM ftvirto, ftvinrt  WHERE ftvinrt_code(+) = ftvirto_inrt_code  ORDER BY decode(ftvirto_coas_code, :GLOBAL_COAS_CODE, ' ', ftvirto_coas_code), ftvirto_orgn_code, ftvirto_inrt_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCSTO_RG.ValueSet.Config" name="FTVCSTO_RG">
+    <columns>
+		<column name="FTVCSTO_COAS_CODE" type="String" size="1"/>
+		<column name="FTVCSTO_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVCSTO_CTYP_CODE" type="String" size="2"/>
+		<column name="FTVCTYP_LONG_DESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvcsto_coas_code, ftvcsto_orgn_code, ftvcsto_ctyp_code, ftvctyp_long_desc  FROM ftvcsto, ftvctyp  WHERE ftvctyp_code(+) = ftvcsto_ctyp_code  ORDER BY decode(ftvcsto_coas_code, :GLOBAL_COAS_CODE, ' ', ftvcsto_coas_code), ftvcsto_orgn_code, ftvcsto_ctyp_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_COAS_CODE">
+			<value>
+				<globalVariable name="COAS_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVSDAT_RG.ValueSet.Config" name="FTVSDAT_RG">
+    <columns>
+		<column name="FTVSDAT_COAS_CODE" type="String" size="1"/>
+		<column name="FTVSDAT_SDAT_CODE_ENTITY" type="String" size="8"/>
+		<column name="FTVSDAT_SDAT_CODE_OPT_1" type="String" size="8"/>
+		<column name="FTVSDAT_SDAT_CODE_ATTR" type="String" size="30"/>
+		<column name="FTVSDAT_SDAT_CODE_OPT_2" type="String" size="8"/>
+		<column name="FTVSDAT_SHORT_TITLE" type="String" size="20"/>
+		<column name="FTVSDAT_CODE_LEVEL" type="Number" size="23"/>
+		<column name="FTVSDAT_DATA" type="String" size="15"/>
+		<column name="FTVSDAT_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvsdat_coas_code, ftvsdat_sdat_code_entity, ftvsdat_sdat_code_opt_1, ftvsdat_sdat_code_attr, ftvsdat_sdat_code_opt_2, ftvsdat_short_title, ftvsdat_code_level, ftvsdat_data, ftvsdat_status_ind, to_char(ftvsdat_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvsdat_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1" FROM ftvsdat  ORDER BY ftvsdat_sdat_code_entity, ftvsdat_sdat_code_attr, ftvsdat_sdat_code_opt_1, ftvsdat_sdat_code_opt_2, ftvsdat_code_level, ftvsdat_coas_code, ftvsdat_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVBLCS_RG.ValueSet.Config" name="FTVBLCS_RG">
+    <columns>
+		<column name="FTVBCLS_CODE" type="String" size="1"/>
+		<column name="FTVBCLS_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvbcls_code, ftvbcls_desc, to_char(ftvbcls_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(ftvbcls_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1" FROM ftvbcls  ORDER BY ftvbcls_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FRVEGRP_RG.ValueSet.Config" name="FRVEGRP_RG">
+    <columns>
+		<column name="FRVEGRP_CODE" type="String" size="6"/>
+		<column name="FRVEGRP_DESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT frvegrp_code, frvegrp_desc  FROM frvegrp  ORDER BY frvegrp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FRRCSTR_RG.ValueSet.Config" name="FRRCSTR_RG">
+    <columns>
+		<column name="FRRCSTR_CODE" type="String" size="6"/>
+		<column name="FRVCSTR_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="FRRCSTR_RATE" type="Number" size="23"/>
+		<column name="FRRCSTR_MEMO_RATE" type="Number" size="23"/>
+		<column name="FRRCSTR_MAX_AMT" type="Number" size="23"/>
+		<column name="FRRCSTR_MEMO_MAX_AMT" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT frrcstr_code, frvcstr_desc, to_char(frrcstr_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(frrcstr_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", frrcstr_rate, frrcstr_memo_rate, frrcstr_max_amt, frrcstr_memo_max_amt  FROM frrcstr, frvcstr  WHERE frvcstr_code = frrcstr_code  ORDER BY frrcstr_code, frrcstr_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FRBCSTA_RG.ValueSet.Config" name="FRBCSTA_RG">
+    <columns>
+		<column name="FRBCSTA_CODE" type="String" size="6"/>
+		<column name="FRBCSTA_COAS_CODE" type="String" size="1"/>
+		<column name="FRVCSTA_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT frbcsta_code, frbcsta_coas_code, frvcsta_desc, to_char(frbcsta_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(frbcsta_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1" FROM frbcsta, frvcsta  WHERE frvcsta_code = frbcsta_code  ORDER BY frbcsta_coas_code, frbcsta_code, frbcsta_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FRBCSTD_RG.ValueSet.Config" name="FRBCSTD_RG">
+    <columns>
+		<column name="FRBCSTD_CODE" type="String" size="6"/>
+		<column name="FRBCSTD_COAS_CODE" type="String" size="6"/>
+		<column name="FRVCSTD_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT frbcstd_code, frbcstd_coas_code, frvcstd_desc, to_char(frbcstd_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(frbcstd_term_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1"  FROM frbcstd, frvcstd  WHERE frvcstd_code = frbcstd_code  ORDER BY frbcstd_coas_code, frbcstd_code, frbcstd_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FRBBUDG_RG.ValueSet.Config" name="FRBBUDG_RG">
+    <columns>
+		<column name="FRBBUDG_GRNT_BUDG_CODE" type="String" size="8"/>
+		<column name="FRBBUDG_TYPE_CODE" type="String" size="1"/>
+		<column name="FRBBUDG_GRNT_BUDG_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT frbbudg_grnt_budg_code, frbbudg_type_code, frbbudg_grnt_budg_desc, to_char(frbbudg_beg_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(frbbudg_end_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(frbbudg_sub_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2"  FROM frbbudg  WHERE frbbudg_grnt_code = :GLOBAL_GRNT_CODE  ORDER BY frbbudg_grnt_budg_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_GRNT_CODE">
+			<value>
+				<globalVariable name="GRNT_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FRBBUDP_RG.ValueSet.Config" name="FRBBUDP_RG">
+    <columns>
+		<column name="FRBBUDP_BUDGET_CODE" type="String" size="8"/>
+		<column name="FRBBUDP_TYPE_CODE" type="String" size="1"/>
+		<column name="FRBBUDP_BUDGET_DESC" type="String" size="35"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+		<column name="ICRGGQ_2" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT frbbudp_budget_code, frbbudp_type_code, frbbudp_budget_desc, to_char(frbbudp_beg_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_0", to_char(frbbudp_end_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_1", to_char(frbbudp_sub_date, G$_DATE.GET_NLS_DATE_FORMAT) "ICRGGQ_2"  FROM frbbudp  WHERE frbbudp_prop_code = :GLOBAL_PROP_CODE  ORDER BY frbbudp_budget_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_PROP_CODE">
+			<value>
+				<globalVariable name="PROP_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FFVDISP_RG.ValueSet.Config" name="FFVDISP_RG">
+    <columns>
+		<column name="FFVDISP_CODE" type="String" size="2"/>
+		<column name="FFVDISP_DESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ffvdisp_code, ffvdisp_desc  FROM ffvdisp  ORDER BY ffvdisp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FFVACON_RG.ValueSet.Config" name="FFVACON_RG">
+    <columns>
+		<column name="FFVACON_CODE" type="String" size="3"/>
+		<column name="FFVACON_DESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ffvacon_code, ffvacon_desc  FROM ffvacon  ORDER BY ffvacon_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FFVACQM_RG.ValueSet.Config" name="FFVACQM_RG">
+    <columns>
+		<column name="FFVACQM_CODE" type="String" size="2"/>
+		<column name="FFVACQM_DESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ffvacqm_code, ffvacqm_desc  FROM ffvacqm  ORDER BY ffvacqm_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FFVTTST_RG.ValueSet.Config" name="FFVTTST_RG">
+    <columns>
+		<column name="FFVTTST_CODE" type="String" size="2"/>
+		<column name="FFVTTST_DESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ffvttst_code, ffvttst_desc  FROM ffvttst  ORDER BY ffvttst_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVORGN_RG.ValueSet.Config" name="FTVORGN_RG">
+    <columns>
+		<column name="FTVORGN_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVORGN_TITLE" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvorgn_orgn_code, ftvorgn_title  FROM ftvorgn 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVFTRM_RG.ValueSet.Config" name="FTVFTRM_RG">
+    <columns>
+		<column name="FTVFTRM_CODE" type="String" size="2"/>
+		<column name="FTVFTRM_DESC" type="String" size="30"/>
+		<column name="FTVFTRM_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVFTRM_USER_ID" type="String" size="30"/>
+		<column name="FTVFTRM_SCOD_CODE_X12" type="String" size="2"/>
+		<column name="FTVFTRM_SCOD_CODE_EDIFACT" type="String" size="3"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM ftvftrm 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCRSN_RG.ValueSet.Config" name="FTVCRSN_RG">
+    <columns>
+		<column name="FTVCRSN_CODE" type="String" size="4"/>
+		<column name="FTVCRSN_DESC" type="String" size="35"/>
+		<column name="FTVCRSN_START_DATE" type="Date" size="7"/>
+		<column name="FTVCRSN_TERM_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvcrsn_code, ftvcrsn_desc, ftvcrsn_start_date, ftvcrsn_term_date  FROM ftvcrsn  ORDER BY ftvcrsn_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FGBRCLE_RG.ValueSet.Config" name="FGBRCLE_RG">
+    <columns>
+		<column name="FGBRCLE_DOC_CODE" type="String" size="8"/>
+		<column name="FGBRCLE_COAS_CODE" type="String" size="1"/>
+		<column name="FGBRCLE_FSYR_CODE" type="String" size="2"/>
+		<column name="FGBRCLE_COMPLETE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT fgbrcle_doc_code, fgbrcle_coas_code, fgbrcle_fsyr_code, fgbrcle_complete_ind  FROM fgbrcle  ORDER BY fgbrcle_doc_code, fgbrcle_coas_code, fgbrcle_fsyr_code, fgbrcle_complete_ind
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

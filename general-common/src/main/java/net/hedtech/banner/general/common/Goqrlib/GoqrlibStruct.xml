@@ -1,0 +1,66 @@
+<FormStructure Name="GOQRLIB" LovDataPath="">
+  <Visual>
+    <Window Id="MAIN" Url="net/hedtech/banner/general/common/Goqrlib/views/ViewMain">
+    </Window>
+    <Window Id="G$_BANNER_REPORT_WINDOW" Url="net/hedtech/banner/general/common/Goqrlib/views/ViewGBannerReportWindow" Modal="true">
+      <ContentCanvas Id="G$_BANNER_REPORT_CANVAS">
+      </ContentCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="FORM_HEADER">
+      <Item Id="CURRENT_RELEASE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="10" Enabled="false" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="G$_BANNER_REPORT_HEADER">
+      <Item Id="OREP_NAME" CanvasName="G$_BANNER_REPORT_CANVAS" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="30" Enabled="false" Type="DisplayItem">
+      </Item>
+      <Item Id="OREP_REPORT_DESCRIPTION" CanvasName="G$_BANNER_REPORT_CANVAS" MaxLength="80" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="OREP_SERVER_NAME" CanvasName="G$_BANNER_REPORT_CANVAS" MaxLength="200" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="OREP_SERVICE" CanvasName="G$_BANNER_REPORT_CANVAS" MaxLength="80" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="WORK_OREP_RETURN_ITEM" CanvasName="" Navigable="false" MaxLength="61" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="DEFAULT_DESFORMAT" CanvasName="" Navigable="false" MaxLength="30" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="DEFAULT_DESTYPE" CanvasName="" Navigable="false" MaxLength="30" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="DEFAULT_DESNAME" CanvasName="" Navigable="false" MaxLength="500" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="DEFAULT_EXECUTION_MODE" CanvasName="" Navigable="false" MaxLength="30" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="DEFAULT_COMM_MODE" CanvasName="" Navigable="false" MaxLength="5" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="DEFAULT_PARAMFORM_DESIG" CanvasName="" Navigable="false" MaxLength="3" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="DATA_SEPARATOR_LINE_1" CanvasName="G$_BANNER_REPORT_CANVAS" AllowInsert="false" Navigable="false" MaxLength="24" Enabled="false" Type="DisplayItem">
+      </Item>
+      <Item Id="DATA_SEPARATOR_LINE_2" CanvasName="G$_BANNER_REPORT_CANVAS" AllowInsert="false" Navigable="false" MaxLength="24" Enabled="false" Type="DisplayItem">
+      </Item>
+      <Item Id="LIST_PARAM_NAMES" CanvasName="" MaxLength="2000" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="REPORT_BEAN" CanvasName="G$_BANNER_REPORT_CANVAS" Navigable="false" MaxLength="30">
+      </Item>
+    </Block>
+    <Block Id="G$_BANNER_REPORT_BLOCK">
+      <Item Id="OREP_DESFORMAT" CanvasName="G$_BANNER_REPORT_CANVAS" Navigable="false" Required="true" MaxLength="30" Enabled="false" Type="List">
+      </Item>
+      <Item Id="OREP_DESTYPE" CanvasName="G$_BANNER_REPORT_CANVAS" Navigable="false" Required="true" MaxLength="30" Enabled="false" Type="List">
+      </Item>
+      <Item Id="OREP_DESNAME" CanvasName="G$_BANNER_REPORT_CANVAS" Navigable="false" MaxLength="500" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="OREP_EXECUTION_MODE" CanvasName="G$_BANNER_REPORT_CANVAS" Navigable="false" Required="true" MaxLength="30" Enabled="false" Type="List">
+      </Item>
+      <Item Id="OREP_COMM_MODE" CanvasName="G$_BANNER_REPORT_CANVAS" Navigable="false" Required="true" MaxLength="5" Enabled="false" Type="List">
+      </Item>
+      <Item Id="OREP_PARAMFORM_DESIGNATION" CanvasName="G$_BANNER_REPORT_CANVAS" Navigable="false" Required="true" MaxLength="3" Enabled="false" Type="List">
+      </Item>
+      <Item Id="OREP_SUBMIT_BTN" CanvasName="G$_BANNER_REPORT_CANVAS" Navigable="false" MaxLength="30" Enabled="false" Type="Button">
+      </Item>
+      <Item Id="OREP_CANCEL_BTN" CanvasName="G$_BANNER_REPORT_CANVAS" Navigable="false" MaxLength="30" Enabled="false" Type="Button">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

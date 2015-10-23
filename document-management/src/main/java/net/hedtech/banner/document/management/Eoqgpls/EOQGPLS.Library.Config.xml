@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:library"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:library http://www.morphis-tech.com/schema/foundations/library.xsd">
+	<!-- Attached Libs -->
+
+	<library id="EOQGPLS.Lib.Config" name="EOQGPLS">
+		<libraryClass>net.hedtech.banner.document.management.Eoqgpls.EoqgplsServices</libraryClass>
+		<!-- support code -->
+		<supportCodeConfiguration>
+				<!-- Packages -->
+				<packages>
+					<package  name="E$_IMG_UTIL">net.hedtech.banner.document.management.Eoqgpls.EImgUtil</package> 	
+					<package  name="E$_IMG_DRIVER2">net.hedtech.banner.document.management.Eoqgpls.EImgDriver2</package> 	
+				</packages>
+				<attachedLibraries>
+	<!-- Attached Libs -->
+				</attachedLibraries>
+		</supportCodeConfiguration>
+		
+	</library>
+</b:beans>
+
+ 

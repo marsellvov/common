@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SOBCPLN.Manager.Config" name="SOBCPLN">
+		
+		<items>
+			<item name="SOBCPLN_PIDM" logicalName="sobcplnPidm" type="java.math.BigDecimal" physicalName="SOBCPLN_PIDM"  />
+			<item name="SOBCPLN_CPLN_CODE" logicalName="sobcplnCplnCode" type="String" physicalName="SOBCPLN_CPLN_CODE"  />
+			<item name="STVCPLN_DESC" logicalName="stvcplnDesc" type="String"  virtual="true" />
+			<item name="SOBCPLN_TYPE_IND" logicalName="sobcplnTypeInd" type="String" physicalName="SOBCPLN_TYPE_IND"  >
+				<value>
+					<constant>R</constant>
+				</value>	
+			</item>
+			<item name="SOBCPLN_TERM_CODE" logicalName="sobcplnTermCode" type="String" physicalName="SOBCPLN_TERM_CODE"  />
+			<item name="SOBCPLN_SEQNO" logicalName="sobcplnSeqno" type="java.math.BigDecimal" physicalName="SOBCPLN_SEQNO"  />
+			<item name="SOBCPLN_ACTIVE_IND" logicalName="sobcplnActiveInd" type="String" physicalName="SOBCPLN_ACTIVE_IND"  />
+			<item name="UNSENT_MAIL" logicalName="unsentMail" type="String"  virtual="true" />
+			<item name="DELETE_MAIL" logicalName="deleteMail" type="String"  virtual="true" />
+			<item name="SOBCPLN_ACTIVITY_DATE" logicalName="sobcplnActivityDate" type="java.util.Date" physicalName="SOBCPLN_ACTIVITY_DATE"  />
+			<item name="DELETE_PLAN" logicalName="deletePlan" type="String"  virtual="true" />
+			<item name="CPLN_MESSAGE" logicalName="cplnMessage" type="String"  virtual="true" />
+			<item name="INSERT_FLAG" logicalName="insertFlag" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Soqolib.model.SobcplnAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE sobcpln_pidm = :CPLN_PIDM AND sobcpln_active_ind = 'Y']]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[sobcpln_type_ind, sobcpln_term_code desc, sobcpln_seqno desc, sobcpln_cpln_code]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

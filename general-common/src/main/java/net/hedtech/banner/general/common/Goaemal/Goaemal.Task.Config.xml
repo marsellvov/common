@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>		
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/general/common/Goaemal/model/GOAEMAL.Model.Config.xml"/>
+	
+	<task id="GOAEMAL.Task.Config" name="GOAEMAL">
+		<baseTaskConfiguration config="BASE.Task.Config"/>
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+			<taskPartConfiguration name="GOQCLIB" config="GOQCLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.general.common.Goaemal.GoaemalTask</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/general/common/Goaemal/GoaemalStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.general.common.Goaemal.services.GoaemalServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="GOAEMAL.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.banner.general.common.Goaemal.controller.GoaemalFormController</formController>
+		<blockControllers>
+			
+			
+			<block  name="G$_VPDI_BLOCK">net.hedtech.banner.general.common.Goaemal.controller.GVpdiBlockController</block>
+			<block  name="G$_NAV_BLOCK">net.hedtech.banner.general.common.Goaemal.controller.GNavBlockController</block>
+			<block  name="FORM_HEADER">net.hedtech.banner.general.common.Goaemal.controller.FormHeaderController</block>
+			<block  name="KEY_BLOCK">net.hedtech.banner.general.common.Goaemal.controller.KeyBlockController</block>
+			<block  name="GOREMAL">net.hedtech.banner.general.common.Goaemal.controller.GoremalController</block>
+			<block  name="BUTTON_CONTROL_BLOCK">net.hedtech.banner.general.common.Goaemal.controller.ButtonControlBlockController</block>
+			<block  name="G$_EXTENDED_SEARCH_BLOCK">net.hedtech.banner.general.common.Goaemal.controller.GExtendedSearchBlockController</block>
+			<block  name="G$_OPT_BLOCK">net.hedtech.banner.general.common.Goaemal.controller.GOptBlockController</block>
+		
+		</blockControllers>
+		<menuControllers>
+			<menu  name="G$_DEFAULT_PM">net.hedtech.banner.general.common.Goaemal.controller.GDefaultPmContextController</menu>
+		</menuControllers>
+
+	</task>
+</b:beans>
+
+ 

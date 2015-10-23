@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPRIDEN.Manager.Config" name="SPRIDEN">
+		
+		<items>
+			<item name="SPRIDEN_PIDM" logicalName="spridenPidm" type="java.math.BigDecimal" physicalName="SPRIDEN_PIDM"  />
+			<item name="SPRIDEN_ID" logicalName="spridenId" type="String" physicalName="SPRIDEN_ID"  />
+			<item name="SPRIDEN_LAST_NAME" logicalName="spridenLastName" type="String" physicalName="SPRIDEN_LAST_NAME"  >
+			 <value>
+ 				 <item name="LAST_NAME" businessObject="FORM_HEADER"/>
+ 			</value>
+			</item>
+			<item name="SPRIDEN_FIRST_NAME" logicalName="spridenFirstName" type="String" physicalName="SPRIDEN_FIRST_NAME"  >
+			<value>
+  				<item name="FIRST_NAME" businessObject="FORM_HEADER"/>
+			 </value>
+			</item>
+			<item name="SPRIDEN_MI" logicalName="spridenMi" type="String" physicalName="SPRIDEN_MI"  />
+			<item name="BIRTHDATE" logicalName="birthdate" type="java.util.Date"  virtual="true" />
+			<item name="SEX" logicalName="sex" type="String"  virtual="true" />
+			<item name="SPRIDEN_CHANGE_IND" logicalName="spridenChangeInd" type="String" physicalName="SPRIDEN_CHANGE_IND"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Soaidns.model.SpridenAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE (((soundex(spriden_last_name) = soundex(:SOUNDEX_LAST_NAME)) AND :SOUNDEX_LAST_NAME IS NOT NULL) OR :SOUNDEX_LAST_NAME IS NULL) AND (((soundex(spriden_first_name) = soundex(:SOUNDEX_FIRST_NAME)) AND :SOUNDEX_FIRST_NAME IS NOT NULL) OR :SOUNDEX_FIRST_NAME IS NULL) AND spriden_entity_ind = 'P']]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by spriden_last_name, spriden_first_name, spriden_mi, spriden_id, spriden_change_ind, spriden_activity_date]]></defaultOrderByClause>	
+		<pagination maximumRows="3" enabled="true"/>
+	</manager>
+</b:beans>

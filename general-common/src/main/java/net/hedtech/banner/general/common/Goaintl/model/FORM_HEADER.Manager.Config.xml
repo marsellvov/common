@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FORM_HEADER.Manager.Config" name="FormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="GOBINTL_EXISTS" logicalName="gobintlExists" type="String"   />
+			<item name="CURRENT_INSTITUTION" logicalName="currentInstitution" type="String"   />
+			<item name="CALLFLD" logicalName="callfld" type="String"   />
+			<item name="WORKDATE" logicalName="workdate" type="String"   />
+			<item name="CURRENT_USER" logicalName="currentUser" type="String"   />
+			<item name="CURRENT_FORM" logicalName="currentForm" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="CURRENT_DATE" logicalName="currentDate" type="String"   />
+			<item name="CURRENT_TIME" logicalName="currentTime" type="String"   />
+			<item name="CONVERTED_DATE" logicalName="convertedDate" type="String"   />
+			<item name="DATE_TO_CONVERT" logicalName="dateToConvert" type="String"   />
+			<item name="YEAR" logicalName="year" type="java.math.BigDecimal"   />
+			<item name="HOLD_DATE_TO_CONVERT" logicalName="holdDateToConvert" type="String"   />
+			<item name="MAX_SEQNO" logicalName="maxSeqno" type="java.math.BigDecimal"   />
+			<item name="RECORD_NUMBER" logicalName="recordNumber" type="java.math.BigDecimal"   />
+			<item name="DELETION_FLAG" logicalName="deletionFlag" type="String"   />
+			<item name="ERROR_ITEM" logicalName="errorItem" type="String"   />
+			<item name="PREVIOUS_BLOCK" logicalName="previousBlock" type="String"   />
+			<item name="GTVSDAX_VISANTNDEF_VALUE" logicalName="gtvsdaxVisantndefValue" type="String"   />
+			<item name="GTVSDAX_VISAISSDEF_VALUE" logicalName="gtvsdaxVisaissdefValue" type="String"   />
+			<item name="GTVSDAX_VISANBRDEF_VALUE" logicalName="gtvsdaxVisanbrdefValue" type="String"   />
+			<item name="GTVSDAX_VISADATEDEF_VALUE" logicalName="gtvsdaxVisadatedefValue" type="java.util.Date"   />
+			<item name="FORM_ACTION" logicalName="formAction" type="String"   />
+			<item name="DATA_SEPARATOR_LINE_0" logicalName="dataSeparatorLine0" type="String"   />
+			<item name="DATA_SEPARATOR_LINE_1" logicalName="dataSeparatorLine1" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Goaintl.model.FormHeader</managerClass>
+
+	</manager>
+</b:beans>

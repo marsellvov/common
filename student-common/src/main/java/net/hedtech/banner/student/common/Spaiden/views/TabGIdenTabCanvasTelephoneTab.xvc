@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SPRTELE"/>
+	<panel width="100%">
+		<accordion name="grdSprtele" width="100%">
+			<panel width="100%" label="sprtele.sprteleTeleInfo.prompt">
+				<repeater block="SPRTELE"  name="sprteleEepeater" width="100%">
+					<panel width="100%">
+						<gridlayout cols="2" orientation="vertical">
+							<gridcell>
+								<textbox autoskip="true" case="upper" datatype="String" keyactions="NEXT_ITEM" label="sprtele.sprteleTeleCode.prompt" style="ui-buttoninput" labelstyle="DEFAULT" member="SPRTELE_TELE_CODE" name="sprteleTeleCode" width="51px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button icon="search" labelstyle="DEFAULT" action="WHEN-BUTTON-PRESSED" label="sprtele.sprteleTeleCodeLbt.label" style="ui-buttoninput" member="SPRTELE_TELE_CODE_LBT" name="sprteleTeleCodeLbt" navigable="false" tooltip="sprtele.sprteleTeleCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+								<textfield datatype="String" labelstyle="DEFAULT" member="TELE_DESCRIPTION" name="teleDescription" width="141px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" datatype="String" label="sprtele.sprteleCtryCodePhone.prompt" labelstyle="DEFAULT" member="SPRTELE_CTRY_CODE_PHONE" name="sprteleCtryCodePhone" width="73px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" datatype="String" label="sprtele.sprtelePhoneArea.prompt" labelstyle="DEFAULT" member="SPRTELE_PHONE_AREA" name="sprtelePhoneArea" width="73px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" datatype="String" label="sprtele.sprtelePhoneNumber.prompt" labelstyle="DEFAULT" member="SPRTELE_PHONE_NUMBER" name="sprtelePhoneNumber" width="140px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" datatype="String" label="sprtele.sprtelePhoneExt.prompt" labelstyle="DEFAULT" member="SPRTELE_PHONE_EXT" name="sprtelePhoneExt" width="120px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" label="sprtele.sprteleIntlAccess.prompt" labelstyle="DEFAULT" member="SPRTELE_INTL_ACCESS" name="sprteleIntlAccess" width="128px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<checkbox label="sprtele.sprtelePrimaryInd.label" action="WHEN-CHECKBOX-CHANGED" othervaluestate="unchecked" value="Y" labelstyle="DEFAULT" member="SPRTELE_PRIMARY_IND" name="sprtelePrimaryInd" width="80px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</checkbox>
+							</gridcell>
+							<gridcell>
+								<checkbox label="sprtele.sprteleUnlistInd.label" othervaluestate="unchecked" value="Y" labelstyle="DEFAULT" member="SPRTELE_UNLIST_IND" name="sprteleUnlistInd" width="81px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</checkbox>
+							</gridcell>
+							<gridcell>
+								<checkbox label="sprtele.sprteleStatusInd.label" action="WHEN-CHECKBOX-CHANGED" othervaluestate="unchecked" value="I" labelstyle="DEFAULT" member="SPRTELE_STATUS_IND" name="sprteleStatusInd" width="89px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</checkbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" datatype="String" label="sprtele.sprteleComment.prompt" labelstyle="DEFAULT" member="SPRTELE_COMMENT" name="sprteleComment" width="367px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" datatype="String" label="sprtele.sprteleAtypCode.prompt" style="ui-buttoninput" labelstyle="DEFAULT" member="SPRTELE_ATYP_CODE" name="sprteleAtypCode" width="37px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button icon="flashlit" action="WHEN-BUTTON-PRESSED" label="sprtele.sprteleAtypCodeBtn.label" style="ui-buttoninput" labelstyle="DEFAULT" member="SPRTELE_ATYP_CODE_BTN" name="sprteleAtypCodeBtn" navigable="false" tooltip="sprtele.sprteleAtypCodeBtn.tooltip" width="20px">
+<!-- 									<xl:event action="WHEN-MOUSE-CLICK" name="click" /> -->
+								</button>
+								<textfield datatype="String" labelstyle="DEFAULT" member="ATYP_DESCRIPTION" name="atypDescription" width="154px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" datatype="Number" keyactions="NEXT_ITEM" label="sprtele.sprteleAddrSeqno.prompt" style="ui-buttoninput" labelstyle="DEFAULT" member="SPRTELE_ADDR_SEQNO" name="sprteleAddrSeqno" width="29px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button  icon="flashlit" labelstyle="DEFAULT" action="WHEN-BUTTON-PRESSED" label="sprtele.sprteleAddrSeqnoBtn.label" style="ui-buttoninput" member="SPRTELE_ADDR_SEQNO_BTN" name="sprteleAddrSeqnoBtn" navigable="false" tooltip="sprtele.sprteleAddrSeqnoBtn.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+							</gridcell>
+						</gridlayout>
+					</panel>
+				</repeater>
+			</panel>
+		</accordion>
+	</panel>
+</config>

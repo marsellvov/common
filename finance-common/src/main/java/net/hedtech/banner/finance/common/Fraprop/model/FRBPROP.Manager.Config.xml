@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRBPROP.Manager.Config" name="FRBPROP">
+		
+		<items>
+			<item name="FRBPROP_COAS_CODE" logicalName="frbpropCoasCode" type="String" physicalName="FRBPROP_COAS_CODE"  >
+				<value>
+					<globalVariable name="COAS_CODE" />
+				</value>	
+			</item>
+			<item name="FRBPROP_ORGN_CODE_RESP_OFFICE" logicalName="frbpropOrgnCodeRespOffice" type="String" physicalName="FRBPROP_ORGN_CODE_RESP_OFFICE"  />
+			<item name="ORGN_CODE_DESCR" logicalName="orgnCodeDescr" type="String"  virtual="true" />
+			<item name="FRBPROP_LONG_TITLE" logicalName="frbpropLongTitle" type="String" physicalName="FRBPROP_LONG_TITLE"  />
+			<item name="FRBPROP_TITLE" logicalName="frbpropTitle" type="String" physicalName="FRBPROP_TITLE"  />
+			<item name="FRBPROP_AGENCY_CODE" logicalName="frbpropAgencyCode" type="String"  virtual="true" />
+			<item name="FRBPROP_AGENCY_NAME" logicalName="frbpropAgencyName" type="String"  virtual="true" />
+			<item name="FRBPROP_PI_ID_CODE" logicalName="frbpropPiIdCode" type="String"  virtual="true" />
+			<item name="FRBPROP_PI_ID_NAME" logicalName="frbpropPiIdName" type="String"  virtual="true" />
+			<item name="FRBPROP_REQUESTED_AMT" logicalName="frbpropRequestedAmt" type="java.math.BigDecimal" physicalName="FRBPROP_REQUESTED_AMT"  />
+			<item name="DISPLAY_PASS_THRU_IND" logicalName="displayPassThruInd" type="String"  virtual="true" >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="FRBPROP_ORIG_PREP_DATE" logicalName="frbpropOrigPrepDate" type="java.util.Date" physicalName="FRBPROP_ORIG_PREP_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+			<item name="FRBPROP_DUE_DATE" logicalName="frbpropDueDate" type="java.util.Date" physicalName="FRBPROP_DUE_DATE"  />
+			<item name="FRBPROP_SUBMITTED_DATE" logicalName="frbpropSubmittedDate" type="java.util.Date" physicalName="FRBPROP_SUBMITTED_DATE"  />
+			<item name="FRBPROP_STATUS_CODE" logicalName="frbpropStatusCode" type="String" physicalName="FRBPROP_STATUS_CODE"  />
+			<item name="STATUS_DESCR" logicalName="statusDescr" type="String"  virtual="true" />
+			<item name="FRBPROP_ALTERNATE_STATUS_DESC" logicalName="frbpropAlternateStatusDesc" type="String" physicalName="FRBPROP_ALTERNATE_STATUS_DESC"  />
+			<item name="FRBPROP_STATUS_DATE" logicalName="frbpropStatusDate" type="java.util.Date" physicalName="FRBPROP_STATUS_DATE"  />
+			<item name="FRBPROP_AGENCY_PRED_PIDM" logicalName="frbpropAgencyPredPidm" type="java.math.BigDecimal"  virtual="true" />
+			<item name="FRBPROP_PROJECT_START_DATE" logicalName="frbpropProjectStartDate" type="java.util.Date" physicalName="FRBPROP_PROJECT_START_DATE"  />
+			<item name="FRBPROP_PROJECT_END_DATE" logicalName="frbpropProjectEndDate" type="java.util.Date" physicalName="FRBPROP_PROJECT_END_DATE"  />
+			<item name="FRBPROP_GRNT_CODE" logicalName="frbpropGrntCode" type="String" physicalName="FRBPROP_GRNT_CODE"  />
+			<item name="FRBPROP_BUDG_PRD_START_DAT" logicalName="frbpropBudgPrdStartDat" type="java.util.Date" physicalName="FRBPROP_BUDG_PRD_START_DATE"  />
+			<item name="FRBPROP_BUDG_PRD_END_DATE" logicalName="frbpropBudgPrdEndDate" type="java.util.Date" physicalName="FRBPROP_BUDG_PRD_END_DATE"  />
+			<item name="FRBPROP_EXPECTED_GRANT_DAT" logicalName="frbpropExpectedGrantDat" type="java.util.Date" physicalName="FRBPROP_EXPECTED_GRANT_DATE"  />
+			<item name="FRBPROP_PROP_CODE_RELATED" logicalName="frbpropPropCodeRelated" type="String" physicalName="FRBPROP_PROP_CODE_RELATED"  />
+			<item name="RELATED_PROP_DESCR" logicalName="relatedPropDescr" type="String"  virtual="true" />
+			<item name="FRBPROP_PROBABILITY_RATE" logicalName="frbpropProbabilityRate" type="java.math.BigDecimal" physicalName="FRBPROP_PROBABILITY_RATE"  />
+			<item name="FRBPROP_PROPOSAL_TYPE" logicalName="frbpropProposalType" type="String" physicalName="FRBPROP_PROPOSAL_TYPE"  />
+			<item name="FRBPROP_PROPOSAL_DESC" logicalName="frbpropProposalDesc" type="String"  virtual="true" />
+			<item name="FRBPROP_CATEGORY" logicalName="frbpropCategory" type="String" physicalName="FRBPROP_CATEGORY"  />
+			<item name="FRBPROP_CATEGORY_DESC" logicalName="frbpropCategoryDesc" type="String"  virtual="true" />
+			<item name="FRBPROP_SUB_CATEGORY" logicalName="frbpropSubCategory" type="String" physicalName="FRBPROP_SUB_CATEGORY"  />
+			<item name="FRBPROP_SUB_CAT_DESC" logicalName="frbpropSubCatDesc" type="String"  virtual="true" />
+			<item name="FRBPROP_CFDA_CODE" logicalName="frbpropCfdaCode" type="String"  virtual="true" />
+			<item name="FRBPROP_SPONSOR_ID" logicalName="frbpropSponsorId" type="String" physicalName="FRBPROP_SPONSOR_ID"  />
+			<item name="FRBPROP_AGENCY_CONTACT" logicalName="frbpropAgencyContact" type="String" physicalName="FRBPROP_AGENCY_CONTACT"  />
+			<item name="FRBPROP_AGENCY_PRED_CODE" logicalName="frbpropAgencyPredCode" type="String"  virtual="true" />
+			<item name="FRBPROP_AGENCY_PRED_NAME" logicalName="frbpropAgencyPredName" type="String"  virtual="true" />
+			<item name="FRBPROP_AGENCY_ADDR_CODE" logicalName="frbpropAgencyAddrCode" type="String" physicalName="FRBPROP_AGENCY_ADDR_CODE"  />
+			<item name="FRBPROP_AGENCY_ADDR_SEQ_NUM" logicalName="frbpropAgencyAddrSeqNum" type="java.math.BigDecimal" physicalName="FRBPROP_AGENCY_ADDR_SEQ_NUM"  />
+			<item name="ADDRESS_HOUSE_NUMBER" logicalName="addressHouseNumber" type="String"  virtual="true" />
+			<item name="ADDRESS_LINE_1" logicalName="addressLine1" type="String"  virtual="true" />
+			<item name="ADDRESS_LINE_2" logicalName="addressLine2" type="String"  virtual="true" />
+			<item name="ADDRESS_LINE_3" logicalName="addressLine3" type="String"  virtual="true" />
+			<item name="ADDRESS_LINE_4" logicalName="addressLine4" type="String"  virtual="true" />
+			<item name="CITY" logicalName="city" type="String"  virtual="true" />
+			<item name="STATE" logicalName="state" type="String"  virtual="true" />
+			<item name="ZIP_CODE" logicalName="zipCode" type="String"  virtual="true" />
+			<item name="PHONE_EXISTS" logicalName="phoneExists" type="String"  virtual="true" />
+			<item name="PHONE_TYPE" logicalName="phoneType" type="String"  virtual="true" />
+			<item name="CTRY_CODE_PHONE" logicalName="ctryCodePhone" type="String"  virtual="true" />
+			<item name="AREA_CODE" logicalName="areaCode" type="String"  virtual="true" />
+			<item name="PHONE_NUMBER" logicalName="phoneNumber" type="String"  virtual="true" />
+			<item name="EXTENSION" logicalName="extension" type="String"  virtual="true" />
+			<item name="FRBPROP_COAS_CODE_IC_CS" logicalName="frbpropCoasCodeIcCs" type="String" physicalName="FRBPROP_COAS_CODE_IC_CS"  />
+			<item name="FRBPROP_BASI_CODE_IC" logicalName="frbpropBasiCodeIc" type="String" physicalName="FRBPROP_BASI_CODE_IC"  />
+			<item name="FRBPROP_BASI_CODE_IC_NAME" logicalName="frbpropBasiCodeIcName" type="String"  virtual="true" />
+			<item name="FRBPROP_INDR_CODE_RATE" logicalName="frbpropIndrCodeRate" type="String" physicalName="FRBPROP_INDR_CODE_RATE"  />
+			<item name="FRBPROP_INDR_CODE_RATE_NAME" logicalName="frbpropIndrCodeRateName" type="String"  virtual="true" />
+			<item name="FRBPROP_INDA_CODE_CHARGE" logicalName="frbpropIndaCodeCharge" type="String" physicalName="FRBPROP_INDA_CODE_CHARGE"  />
+			<item name="FRBPROP_INDA_CODE_CHARGE_NAME" logicalName="frbpropIndaCodeChargeName" type="String"  virtual="true" />
+			<item name="FRBPROP_INDD_CODE_DISTR" logicalName="frbpropInddCodeDistr" type="String" physicalName="FRBPROP_INDD_CODE_DISTR"  />
+			<item name="FRBPROP_INDD_CODE_DISTR_NAME" logicalName="frbpropInddCodeDistrName" type="String"  virtual="true" />
+			<item name="FRBPROP_BASI_CODE_CS" logicalName="frbpropBasiCodeCs" type="String" physicalName="FRBPROP_BASI_CODE_CS"  />
+			<item name="FRBPROP_BASI_CODE_CS_NAME" logicalName="frbpropBasiCodeCsName" type="String"  virtual="true" />
+			<item name="FRBPROP_CSTR_CODE_RATE" logicalName="frbpropCstrCodeRate" type="String" physicalName="FRBPROP_CSTR_CODE_RATE"  />
+			<item name="FRBPROP_CSTR_CODE_RATE_NAME" logicalName="frbpropCstrCodeRateName" type="String"  virtual="true" />
+			<item name="FRBPROP_CSTA_CODE_CHARGE" logicalName="frbpropCstaCodeCharge" type="String" physicalName="FRBPROP_CSTA_CODE_CHARGE"  />
+			<item name="FRBPROP_CSTA_CODE_CHARGE_NAME" logicalName="frbpropCstaCodeChargeName" type="String"  virtual="true" />
+			<item name="FRBPROP_CSTD_CODE_DISTR" logicalName="frbpropCstdCodeDistr" type="String" physicalName="FRBPROP_CSTD_CODE_DISTR"  />
+			<item name="FRBPROP_CSTD_CODE_DISTR_NAME" logicalName="frbpropCstdCodeDistrName" type="String"  virtual="true" />
+			<item name="FRBPROP_FRINGE_RATE" logicalName="frbpropFringeRate" type="java.math.BigDecimal" physicalName="FRBPROP_FRINGE_RATE"  />
+			<item name="FRBPROP_CODE" logicalName="frbpropCode" type="String" physicalName="FRBPROP_CODE"  >
+				<value>
+					<item name="DISPLAY_FRBPROP_CODE" businessObject="KEY_BLOCK"/>
+				</value>	
+			</item>
+			<item name="FRBPROP_AGENCY_PIDM" logicalName="frbpropAgencyPidm" type="java.math.BigDecimal" physicalName="FRBPROP_AGENCY_PIDM"  />
+			<item name="FRBPROP_CFDA_INTERNAL_ID_NO" logicalName="frbpropCfdaInternalIdNo" type="java.math.BigDecimal" physicalName="FRBPROP_CFDA_INTERNAL_ID_NO"  />
+			<item name="FRBPROP_ACTIVITY_DATE" logicalName="frbpropActivityDate" type="java.util.Date" physicalName="FRBPROP_ACTIVITY_DATE"  />
+			<item name="FRBPROP_PI_PIDM" logicalName="frbpropPiPidm" type="java.math.BigDecimal" physicalName="FRBPROP_PI_PIDM"  />
+			<item name="FRBPROP_USER_ID" logicalName="frbpropUserId" type="String" physicalName="FRBPROP_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fraprop.model.FrbpropAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE frbprop_code = :KEY_BLOCK_DISPLAY_FRBPROP_CODE AND :KEY_BLOCK_DISPLAY_FRBPROP_CODE <> :FORM_HEADER_NEXT_DOC_NUM]]></defaultWhereClause>	
+
+	</manager>
+</b:beans>

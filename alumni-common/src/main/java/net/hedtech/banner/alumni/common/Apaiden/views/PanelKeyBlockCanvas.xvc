@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="KEY_BLOCK"/>
+	<interactionblock name="AURALRT"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" name="KEY_BLOCK_CANVAS" style="keyblock" width="100%">
+		<gridflowlayout cols="2" orientation="horizontal" style="ui-layout-responsive">
+			<component label="keyBlock.id.prompt">
+				<textbox autoskip="true" block="KEY_BLOCK" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" maxlength="9" member="ID" name="id" style="ui-buttoninput" validation="server">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<button action="WHEN-BUTTON-PRESSED" block="KEY_BLOCK" height="23px" icon="flashlit" member="ID_LBT" name="idLbt" navigable="false" style="ui-buttoninput ui-corner-flat" tooltip="keyBlock.idLbt.tooltip" width="23px">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+				</button>
+				<button action="WHEN-BUTTON-PRESSED" block="KEY_BLOCK" height="23px" icon="fa fa-plus" member="GENERATE_BTN" name="generateBtn" style="ui-buttoninput" tooltip="buttonControlBlock.generateBtn.tooltip" width="23px">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</button>
+				<textbox block="KEY_BLOCK" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="FULL_NAME" name="fullName" style="ui-description">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+			</component>
+			<component label="keyBlock.donrCatId.prompt">
+				<textbox block="KEY_BLOCK" datatype="String" enabled="true" height="23px" style="ui-buttoninput" maxlength="30" member="DONR_CAT" name="donrCat">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<button action="WHEN-BUTTON-PRESSED" block="KEY_BLOCK" height="23px" style="ui-buttoninput" icon="search" member="DONR_CAT_LBT" name="donrCatLbt" navigable="true" tooltip="keyBlock.donrCatLbt.tooltip" width="23px">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+				</button>
+			</component>
+			<component label="keyBlock.prefClassId.prompt">
+				<textfield block="KEY_BLOCK" datatype="String" enabled="false" height="23px" maxlength="30" member="PREF_CLASS" name="prefClass">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textfield>
+				<textbox block="KEY_BLOCK" datatype="String" enabled="false" height="23px" maxlength="30" member="DECEASED_IND" name="deceasedInd" visible="false">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+			</component>
+			<component label="keyBlock.spsIdno.prompt">
+				<textbox block="KEY_BLOCK" datatype="String" enabled="false" height="23px" maxlength="30" member="SPS_IDNO" name="spsIdno">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<button action="WHEN-BUTTON-PRESSED" block="KEY_BLOCK" enabled="false" height="23px" icon="ui-icon-search" member="SPS_IDNO_LBT" name="spsIdnoLbt" navigable="false" tooltip="keyBlock.spsIdnoLbt.tooltip" width="20px">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+				</button>
+				<textbox block="KEY_BLOCK" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="SPS_NAME" name="spsName" style="ui-description">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+			</component>
+			<component label="keyBlock.donrCatSpouse.prompt">
+				<textfield block="KEY_BLOCK" datatype="String" enabled="false" height="23px" maxlength="30" member="SPS_DONR_CAT" name="spsDonrCat">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textfield>
+			</component>
+			<component label="keyBlock.prefClassSpouse.prompt">
+				<textfield block="KEY_BLOCK" datatype="String" enabled="false" height="23px" maxlength="30" member="SPS_PREF_CLASS" name="spsPrefClass">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textfield>
+				<textbox block="KEY_BLOCK" datatype="String" enabled="false" height="23px" maxlength="9" member="SPS_DECEASED_IND" name="spsDeceasedInd" visible="false">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+			</component>
+			<component>
+				<button action="WHEN-BUTTON-PRESSED" block="AURALRT" enabled="false" label="auralrt.userAlertsBtn.label" member="USER_ALERTS_BTN" name="userAlertsBtn" navigable="false" tooltip="auralrt.userAlertsBtn.tooltip">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+				</button>
+			</component>
+			<component>
+				<textbox block="KEY_BLOCK" datatype="String" enabled="false" height="23px" maxlength="14" member="CONFID_IND" name="confidInd" visible="false">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+			</component>
+		</gridflowlayout>
+	</panel>
+	<panel style="keyblock-button-container">
+		<button accesskey="ALT+PAGE_DOWN" action="NEXT_BLOCK" block="KEY_BLOCK" label="keyBlock.executeBtn.label" member="EXECUTE_BTN" tooltip="keyBlock.executeBtn.tooltip"/>
+		<button accesskey="F5" action="CLEAR-FORM" block="KEY_BLOCK" label="keyBlock.keyClrfrmBtn.label" member="KEY-CLRFRM_BTN" tooltip="keyBlock.keyClrfrmBtn.tooltip" visible="false"/>
+	</panel>
+</config>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="KEY_BLOCK.Manager.Config" name="KeyBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="HR_EMPL" logicalName="hrEmpl" type="String"   />
+			<item name="HR_BENE" logicalName="hrBene" type="String"   />
+			<item name="FIN_AGENCY" logicalName="finAgency" type="String"   />
+			<item name="FIN_BANK" logicalName="finBank" type="String"   />
+			<item name="FIN_CUST" logicalName="finCust" type="String"   />
+			<item name="FIN_EMPL" logicalName="finEmpl" type="String"   />
+			<item name="FIN_MAGR" logicalName="finMagr" type="String"   />
+			<item name="ALU_CONST" logicalName="aluConst" type="String"   />
+			<item name="ADV_INDIV_DONR_CATG" logicalName="advIndivDonrCatg" type="String"   />
+			<item name="ADV_INDIV_PREF_CLAS" logicalName="advIndivPrefClas" type="String"   />
+			<item name="STD_RECR" logicalName="stdRecr" type="String"   />
+			<item name="STD_ADM" logicalName="stdAdm" type="String"   />
+			<item name="FIN_AID_APPL" logicalName="finAidAppl" type="String"   />
+			<item name="STD_GENR" logicalName="stdGenr" type="String"   />
+			<item name="STD_REGR" logicalName="stdRegr" type="String"   />
+			<item name="STD_TRAN" logicalName="stdTran" type="String"   />
+			<item name="ID" logicalName="id" type="String"   />
+			<item name="NAME" logicalName="nname" type="String"   />
+			<item name="PIDM" logicalName="pidm" type="java.math.BigDecimal"   />
+			<item name="STD_HOUS" logicalName="stdHous" type="String"   />
+			<item name="AR" logicalName="ar" type="String"   />
+			<item name="ALU_CONST_LIT" logicalName="aluConstLit" type="String"   />
+			<item name="ALU_ORGN_LIT" logicalName="aluOrgnLit" type="String"   />
+			<item name="ALU_ORGN" logicalName="aluOrgn" type="String"   />
+			<item name="ADV_ORGN_DONR_CATG" logicalName="advOrgnDonrCatg" type="String"   />
+			<item name="STD_HEADING" logicalName="stdHeading" type="String"   />
+			<item name="HR_HEADING" logicalName="hrHeading" type="String"   />
+			<item name="ALU_HEADING" logicalName="aluHeading" type="String"   />
+			<item name="FIN_AID_HEADING" logicalName="finAidHeading" type="String"   />
+			<item name="FIN_HEADING" logicalName="finHeading" type="String"   />
+			<item name="AR_HEADING_1" logicalName="arHeading1" type="String"   />
+			<item name="AR_HEADING_2" logicalName="arHeading2" type="String"   />
+			<item name="FIN_VEND" logicalName="finVend" type="String"   />
+			<item name="HR_COBRA" logicalName="hrCobra" type="String"   />
+			<item name="STD_FACU" logicalName="stdFacu" type="String"   />
+			<item name="FIN_AID_APPL_LIT" logicalName="finAidApplLit" type="String"   />
+			<item name="HR_EMPL_LIT" logicalName="hrEmplLit" type="String"   />
+			<item name="HR_BENE_LIT" logicalName="hrBeneLit" type="String"   />
+			<item name="HR_COBRA_LIT" logicalName="hrCobraLit" type="String"   />
+			<item name="FIN_AGENCY_LIT" logicalName="finAgencyLit" type="String"   />
+			<item name="FIN_BANK_LIT" logicalName="finBankLit" type="String"   />
+			<item name="FIN_CUST_LIT" logicalName="finCustLit" type="String"   />
+			<item name="FIN_EMPL_LIT" logicalName="finEmplLit" type="String"   />
+			<item name="FIN_MAGR_LIT" logicalName="finMagrLit" type="String"   />
+			<item name="FIN_VEND_LIT" logicalName="finVendLit" type="String"   />
+			<item name="STD_RECR_LIT" logicalName="stdRecrLit" type="String"   />
+			<item name="STD_ADM_LIT" logicalName="stdAdmLit" type="String"   />
+			<item name="STD_TRAN_LIT" logicalName="stdTranLit" type="String"   />
+			<item name="STD_GENR_LIT" logicalName="stdGenrLit" type="String"   />
+			<item name="STD_REGR_LIT" logicalName="stdRegrLit" type="String"   />
+			<item name="STD_HOUS_LIT" logicalName="stdHousLit" type="String"   />
+			<item name="STD_FACU_LIT" logicalName="stdFacuLit" type="String"   />
+			<item name="HR_APPL" logicalName="hrAppl" type="String"   />
+			<item name="HR_APPL_LIT" logicalName="hrApplLit" type="String"   />
+			<item name="COURT_JUDGE_LIT" logicalName="courtJudgeLit" type="String"   />
+			<item name="COURT_LITIGANT_LIT" logicalName="courtLitigantLit" type="String"   />
+			<item name="COURT_ATTORNEY_LIT" logicalName="courtAttorneyLit" type="String"   />
+			<item name="HOLD_PTYP_CODE" logicalName="holdPtypCode" type="String"   />
+			<item name="CONFID_MSG" logicalName="confidMsg" type="String"   />
+			<item name="DCSD_MSG" logicalName="dcsdMsg" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Guasyst.model.KeyBlock</managerClass>
+
+	</manager>
+</b:beans>

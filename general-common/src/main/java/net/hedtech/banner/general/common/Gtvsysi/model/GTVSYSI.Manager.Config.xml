@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GTVSYSI.Manager.Config" name="GTVSYSI">
+		
+		<items>
+			<item name="GTVSYSI_CODE" logicalName="gtvsysiCode" type="String" physicalName="GTVSYSI_CODE"  />
+			<item name="GTVSYSI_DESC" logicalName="gtvsysiDesc" type="String" physicalName="GTVSYSI_DESC"  />
+			<item name="GTVSYSI_ACTIVITY_DATE" logicalName="gtvsysiActivityDate" type="java.util.Date" physicalName="GTVSYSI_ACTIVITY_DATE"  >
+				<value>
+                    <systemVariable name="DBDATE"/>
+                </value>
+      		</item>   
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Gtvsysi.model.GtvsysiAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[gtvsysi_code]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVPROJ"/>
+	<panel class="ContentCanvas" id="pnlFtvproj1Canvas" menu="G$_DEFAULT_PM" name="FTVPROJ_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title.panel">
+				<panel width="100%">
+					<gridview block="FTVPROJ" name="grdFtvproj" width="100%">
+						<viewheader>
+							<viewcolumn block="FTVPROJ" case="upper" datatype="String" label="ftvproj.ftvprojCoasCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVPROJ_COAS_CODE" name="ftvprojCoasCode" width="70px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVPROJ" case="upper" datatype="String" label="ftvproj.ftvprojCode.prompt" labelstyle="DEFAULT" maxlength="8" member="FTVPROJ_CODE" name="ftvprojCode" width="70px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVPROJ" datatype="String" enabled="false" label="ftvproj.ftvprojLongDesc.prompt" labelstyle="DEFAULT" maxlength="35" member="FTVPROJ_LONG_DESC" name="ftvprojLongDesc">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVPROJ" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvproj.ftvprojEffDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVPROJ_EFF_DATE" name="ftvprojEffDate" width="60px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVPROJ" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvproj.ftvprojTermDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVPROJ_TERM_DATE" name="ftvprojTermDate" width="60px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

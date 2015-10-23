@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRRGREC.Manager.Config" name="FRRGREC">
+		
+		<items>
+			<item name="FRRGREC_ACCT_ELEMENT" logicalName="frrgrecAcctElement" type="String" physicalName="FRRGREC_ACCT_ELEMENT"  />
+			<item name="FRRGREC_COAS_CODE" logicalName="frrgrecCoasCode" type="String" physicalName="FRRGREC_COAS_CODE"  >
+				<value>
+					<item name="FRBGRNT_COAS_CODE" businessObject="FRBGRNT"/>
+				</value>	
+			</item>
+			<item name="FRRGREC_ACCT_ELEMENT_VALUE" logicalName="frrgrecAcctElementValue" type="String" physicalName="FRRGREC_ACCT_ELEMENT_VALUE"  />
+			<item name="FRRGREC_ACCT_ELEMENT_VALUE_DES" logicalName="frrgrecAcctElementValueDes" type="String"  virtual="true" />
+			<item name="FRRGREC_ECCG_CODE" logicalName="frrgrecEccgCode" type="String" physicalName="FRRGREC_ECCG_CODE"  />
+			<item name="FRRGREC_REPORT_SECTION" logicalName="frrgrecReportSection" type="String" physicalName="FRRGREC_REPORT_SECTION"  />
+			<item name="FRRGREC_CHARGE_TYPE" logicalName="frrgrecChargeType" type="String" physicalName="FRRGREC_CHARGE_TYPE"  />
+			
+			<item name="FRRGREC_GRNT_CODE" logicalName="frrgrecGrntCode" type="String" physicalName="FRRGREC_GRNT_CODE">
+				<value>				
+					<item name="FRBGRNT_CODE" businessObject="FRBGRNT" />
+				</value>
+			</item>
+			
+			
+			<item name="FRRGREC_ACTIVITY_DATE" logicalName="frrgrecActivityDate" type="java.util.Date" physicalName="FRRGREC_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATETIME"/>
+				</value>	
+			</item>
+			<item name="FRRGREC_ID" logicalName="frrgrecId" type="java.math.BigDecimal" physicalName="FRRGREC_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fragrnt.model.FrrgrecAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE FRRGREC_GRNT_CODE = :DISPLAY_FRBGRNT_CODE]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[FRRGREC_ACCT_ELEMENT,FRRGREC_ACCT_ELEMENT_VALUE]]></defaultOrderByClause>	
+
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="18" enabled="true"/>
+
+	</manager>
+</b:beans>

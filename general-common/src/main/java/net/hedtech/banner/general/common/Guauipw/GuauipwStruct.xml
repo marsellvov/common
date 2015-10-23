@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Guauipw/GuauipwAlerts.xml" FirstNavigationBlock="CURRENT_VALUES" Name="GUAUIPW">
+	<Visual>
+		
+		<Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Guauipw/views/ViewMainWindow">
+			<ContentCanvas Id="TEMP_CANVAS" Visible="false"/>
+		</Window>
+		<Window Id="GUAUIPW_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Guauipw/views/ViewGuauipwWindow">
+			<ContentCanvas Id="GUAUIPW_1_CANVAS"/>
+		</Window>
+	</Visual>
+	<Logic>
+		
+		
+		<Block Id="FORM_HEADER">
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="UIPW_VALIDATED" MaxLength="1" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_ALT_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_ALT_PASSWORD" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="ONE_UP_NO" MaxLength="8" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+		<Block Id="CURRENT_VALUES">
+			<Item AllowSearch="false" CanvasName="GUAUIPW_1_CANVAS" DataType="String" Enabled="true" Hint="currentValues.currAltUserId.hint" Id="CURR_ALT_USER_ID" MaxLength="30" NextItem="CURR_ALT_PASSWORD" PreviousItem="VERIFY_1_SAVE_BTN" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" CanvasName="GUAUIPW_1_CANVAS" DataType="String" Enabled="true" Hint="currentValues.currAltPassword.hint" Id="CURR_ALT_PASSWORD" MaxLength="30" NextItem="VERIFY_1_SAVE_BTN" PreviousItem="CURR_ALT_USER_ID" Type="TextItem" Visible="true"/>
+			<Item CanvasName="GUAUIPW_1_CANVAS" Enabled="true" Hint="currentValues.verify1SaveBtn.hint" Id="VERIFY_1_SAVE_BTN" MaxLength="14" NextItem="CURR_ALT_USER_ID" PreviousItem="CURR_ALT_PASSWORD" Type="Button" Visible="true"/>
+			<Item CanvasName="TEMP_CANVAS" Enabled="true" Hint="currentValues.t1ExitBtn.hint" Id="T_1_EXIT_BTN" MaxLength="14" Type="Button" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_VALUES_MSG" MaxLength="78" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+		<Block Id="BUTTON_CONTROL_BLOCK">
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+	</Logic>
+</FormStructure>

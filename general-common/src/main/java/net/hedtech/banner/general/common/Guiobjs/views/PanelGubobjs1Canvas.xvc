@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="GUBOBJS" />
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <panel class="ContentCanvas" id="pnlGubobjs1Canvas" menu="G$_DEFAULT_PM" name="GUBOBJS_1_CANVAS" width="100%">
+    <accordion width="100%">
+      <panel label="mainWindow.title">
+        <panel width="100%">
+          <gridview block="GUBOBJS" name="grdGubobjs" width="100%">
+            <viewheader>
+              <viewcolumn autoskip="true" block="GUBOBJS" case="upper" datatype="String" label="gubobjs.gubobjsName.prompt" labelstyle="DEFAULT" maxlength="30" member="GUBOBJS_NAME" name="gubobjsName" width="160px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn block="GUBOBJS" datatype="String" label="gubobjs.gubobjsDesc.prompt" labelstyle="DEFAULT" maxlength="80" member="GUBOBJS_DESC" name="gubobjsDesc" width="495px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn block="GUBOBJS" case="upper" datatype="String" label="gubobjs.gubobjsObjtCode.prompt" labelstyle="DEFAULT" maxlength="10" member="GUBOBJS_OBJT_CODE" name="gubobjsObjtCode" width="120px">
+                <editor>
+                  <combobox>
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                    <model>
+                      <item label="gubobjs.gubobjsObjtCode.item0.label" value="%" />
+                      <item label="gubobjs.gubobjsObjtCode.item1.label" value="QUICKFLOW" />
+                      <item label="gubobjs.gubobjsObjtCode.item2.label" value="FORM" />
+                      <item label="gubobjs.gubobjsObjtCode.item3.label" value="JOBS" />
+                      <item label="gubobjs.gubobjsObjtCode.item4.label" value="MENU" />
+                      <item label="gubobjs.gubobjsObjtCode.item5.label" value="MESSAGE" />
+                    </model>
+                  </combobox>
+                </editor>
+              </viewcolumn>
+            </viewheader>
+          </gridview>
+        </panel>
+      </panel>
+    </accordion>
+  </panel>
+  <panel style="ui-button-panel">
+    <flowlayout orientation="horizontal">
+      <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.gubobjs1StartBtn.label" member="GUBOBJS_1_START_BTN" name="gubobjs1StartBtn" navigable="false" />
+      <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.gubobjs1RollbackBtn.label" member="GUBOBJS_1_ROLLBACK_BTN" name="gubobjs1RollbackBtn" navigable="false" />
+      <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.gubobjs1ExitBtn.label" member="GUBOBJS_1_EXIT_BTN" name="gubobjs1ExitBtn" navigable="false" />
+    </flowlayout>
+  </panel>
+</config>

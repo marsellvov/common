@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="AURALRT.Manager.Config" name="AURALRT">
+		
+		<items>
+			<item name="ALRT_PARK_SPOT" logicalName="alrtParkSpot" type="String"  virtual="true"  /> 
+			<item name="AURALRT_MESSAGE" logicalName="auralrtMessage" type="String" physicalName="AURALRT_MESSAGE"   /> 
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Aoqclib.model.AuralrtAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE AURALRT_PIDM = :KEY_BLOCK_PIDM AND AURALRT_ACTIVE_IND = '1' AND SYSDATE BETWEEN NVL(AURALRT_START_DATE, SYSDATE) AND NVL(AURALRT_END_DATE, SYSDATE) AND (AURALRT_ALRT_CODE) IN ((SELECT ATVALRT_CODE  FROM ATVALRT  WHERE (ATVALRT_SUPER_IND = '0' OR ('1') IN ((SELECT '1'  FROM AABCTRL  WHERE AABCTRL_SUPER_ID = :GLOBAL_CURRENT_USER ))) AND (ATVALRT_ACAT_CODE IS NULL OR (:CURRENT_FORM) IN ((SELECT AARACAT_OBJECT  FROM AARACAT  WHERE AARACAT_ACAT_CODE = ATVALRT_ACAT_CODE ))) ))]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[AURALRT_START_DATE DESC]]></defaultOrderByClause>	
+		<pagination maximumRows="1" enabled="true"/>
+	</manager>
+</b:beans>

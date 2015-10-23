@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas:morphis:frames:messages">
+  <msg id="menuControl.selectBt.tooltip">Select</msg>
+  <msg id="gWelcome.message.text">Get Started: Fill out the fields above and press Go.</msg>
+  <msg id="keyBlock.executeBtn.tooltip">Go</msg>
+  <msg id="keyBlock.keyClrfrmBtn.tooltip">Start Over</msg>
+  <msg id="keyBlock.executeBtn.label">Go</msg>
+  <msg id="keyBlock.keyClrfrmBtn.label">Start Over</msg>
+</messages>

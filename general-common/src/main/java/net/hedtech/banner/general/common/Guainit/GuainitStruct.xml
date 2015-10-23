@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Guainit/GuainitAlerts.xml" Name="GUAINIT">
+	<Visual>
+		<Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Guainit/views/ViewMainWindow">
+			<ContentCanvas Id="DESKTOP_CANVAS"/>
+		</Window>
+	</Visual>
+	<Logic>
+		<Block Id="DISPLAY">
+			<Item CanvasName="DESKTOP_CANVAS" DataType="String" Id="DESKTOP" MaxLength="30" Type="TextItem"/>
+			<Item CanvasName="DESKTOP_CANVAS" DataType="String" Id="LOGO_IMAGE" MaxLength="30"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="STARTUP_MENU" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" DataType="String" Enabled="false" Id="DATE_TIME" MaxLength="22" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" DataType="Number" Enabled="false" Id="TIME1" MaxLength="20" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" DataType="Number" Enabled="false" Id="TIME2" MaxLength="20" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" DataType="Number" Enabled="false" Id="TIME3" MaxLength="20" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" DataType="Number" Enabled="false" Id="TIME4" MaxLength="20" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+	</Logic>
+</FormStructure>

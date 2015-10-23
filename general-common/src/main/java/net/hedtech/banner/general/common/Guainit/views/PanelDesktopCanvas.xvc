@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="DISPLAY"/>
+	<panel class="ContentCanvas" id="pnlDesktopCanvas" name="DESKTOP_CANVAS" width="100%">
+		<textbox backgroundcolor="White" block="DISPLAY" datatype="String" foregroundcolor="Black" height="23px" maxlength="30" member="DESKTOP" name="display_desktop" width="50px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+		</textbox>
+		<image backgroundcolor="White" block="DISPLAY" foregroundcolor="Black" height="577px" maxlength="30" member="LOGO_IMAGE" name="display_logoImage" width="1004px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+		</image>
+	</panel>
+</config>

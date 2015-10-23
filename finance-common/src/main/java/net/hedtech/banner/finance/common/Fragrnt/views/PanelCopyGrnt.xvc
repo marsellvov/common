@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="COPY_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlCopyGrnt" menu="G$_DEFAULT_PM" name="COPY_GRNT" width="330px">
+		<textbox autoskip="true" block="COPY_BLOCK" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" style="ui-buttoninput" maxlength="30" member="COPY_GRNT_CODE" label="copyGrnt.text385.text" name="copyGrntCode" validation="server" width="72px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</textbox>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="20px" icon="search" member="COPY_GRNT_CODE_LBT" style="ui-buttoninput" name="copyGrntCodeLbt" navigable="false" tooltip="buttonControlBlock.copyGrntCodeLbt.tooltip" width="20px"/>
+	</panel>
+		<panel style="alert-footer">
+		<flowlayout orientation="horizontal">
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.cancelCopyBtn.label" member="CANCEL_COPY_BTN" name="cancelCopyBtn" navigable="false"/>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.okCopyBtn.label" member="OK_COPY_BTN" name="okCopyBtn" navigable="false"/>
+		</flowlayout>
+	</panel>
+</config>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<window layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GOREMAL"/>
+	<collapsiblepanel label="emailTab.label" name="grdGoremal" width="100%">
+			<repeater block="GOREMAL" width="100%">
+			<panel width="100%" style="ui-section">
+				<gridlayout cols="1" orientation="vertical">
+					<gridcell>
+						<component label="goremal.goremalEmalCode.prompt">
+							<textbox autoskip="true" case="upper" height="23px" keyactions="NEXT_ITEM" label="goremal.goremalEmalCode.prompt" maxlength="30" member="GOREMAL_EMAL_CODE" name="goremalEmalCode" style="ui-buttoninput ui-hidelabel" validation="server" width="51px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="GOREMAL_EMAL_CODE_LBT" name="goremalEmalCodeLbt" navigable="false" style="ui-buttoninput" tooltip="goremal.goremalEmalCodeLbt.tooltip" width="23px"/>
+							<textfield height="23px" maxlength="60" member="EMAIL_DESC" name="emailDesc" width="379px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</component>
+					</gridcell>
+					<gridcell>
+						<textbox height="23px" label="goremal.goremalEmailAddress.prompt" maxlength="128" member="GOREMAL_EMAIL_ADDRESS" name="goremalEmailAddress" validation="server" width="718px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<component>
+							<checkbox action="WHEN-CHECKBOX-CHANGED" falsevalue="N" height="23px" label="goremal.goremalPreferredInd.label" member="GOREMAL_PREFERRED_IND" name="goremalPreferredInd" othervaluestate="unchecked" validation="server" value="Y" width="89px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+							<checkbox action="WHEN-CHECKBOX-CHANGED" falsevalue="A" height="23px" label="goremal.goremalStatusInd.label" member="GOREMAL_STATUS_IND" name="goremalStatusInd" othervaluestate="unchecked" validation="server" value="I" width="92px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+							<checkbox falsevalue="N" height="23px" label="goremal.goremalDispWebInd.label" member="GOREMAL_DISP_WEB_IND" name="goremalDispWebInd" othervaluestate="unchecked" value="Y" width="126px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+							<checkbox enabled="false" falsevalue="N" height="23px" label="goremal.urlInd.label" member="URL_IND" name="urlInd" navigable="false" othervaluestate="unchecked" value="Y" width="53px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</component>
+					</gridcell>
+					<gridcell>
+						<textbox height="23px" label="goremal.goremalComment.prompt" maxlength="60" member="GOREMAL_COMMENT" name="goremalComment" width="367px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</repeater>
+	</collapsiblepanel>
+</window>

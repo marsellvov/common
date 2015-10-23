@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="KEY_BLOCK.Manager.Config" name="KeyBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="NEXT_SELECTION" logicalName="nextSelection" type="String"   />
+			<item name="SELECTION_LIST" logicalName="selectionList" type="String"   />
+			<item name="CALLFLD" logicalName="callfld" type="String"   />
+			<item name="FORM_LEADING_EDGE" logicalName="formLeadingEdge" type="String"   />
+			<item name="FORM_TYPE_IND" logicalName="formTypeInd" type="String"   />
+			<item name="FORM_INIT_IND" logicalName="formInitInd" type="String"   />
+			<item name="LAST_MENU_ITEM" logicalName="lastMenuItem" type="long"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Guagmnu.model.KeyBlock</managerClass>
+
+	</manager>
+</b:beans>

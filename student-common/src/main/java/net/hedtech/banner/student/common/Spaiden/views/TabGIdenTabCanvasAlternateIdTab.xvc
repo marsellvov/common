@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="SPRIDEN_PREVIOUS" />
+  <panel width="100%">
+    <accordion name="grdSpridenPrevious" width="100%">
+      <panel label="alternateIdTab.text28.text" width="100%">
+        <repeater block="SPRIDEN_PREVIOUS" name="grdSpridenRepeater" width="100%">
+          <panel width="100%">
+            <gridlayout cols="2" orientation="vertical">
+              <gridcell>
+                <textbox autoskip="true" case="upper" datatype="String" style="ui-buttoninput" keyactions="NEXT_ITEM" label="spridenPrevious.spridenNtypCode.prompt" labelstyle="DEFAULT" member="SPRIDEN_NTYP_CODE" name="spridenNtypCode" width="51px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <button icon="search" action="WHEN-BUTTON-PRESSED" style="ui-buttoninput" labelstyle="DEFAULT" member="SPRIDEN_NTYP_CODE_LBT" name="spridenNtypCodeLbt" navigable="false" tooltip="spridenPrevious.spridenNtypCodeLbt.tooltip" width="20px">
+                  <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+                </button>
+                <textbox datatype="String" labelstyle="DEFAULT" member="PREVIOUS_NTYP_DESC" name="previousNtypDesc" width="239px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <combobox action="WHEN-LIST-CHANGED" label="spridenPrevious.spridenChangeInd.prompt" labelstyle="DEFAULT" member="SPRIDEN_CHANGE_IND" name="spridenChangeInd" textalign="center" width="72px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                  <model>
+                    <item label="spridenPrevious.spridenChangeInd.item0.label" value="N" />
+                    <item label="spridenPrevious.spridenChangeInd.item1.label" value="I" />
+                  </model>
+                </combobox>
+              </gridcell>
+              <gridcell>
+                <textbox case="upper" datatype="String" label="spridenPrevious.spridenId.prompt" labelstyle="DEFAULT" member="SPRIDEN_ID" name="spridenId" width="82px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox datatype="String" label="spridenPrevious.spridenSurnamePrefix.prompt" labelstyle="DEFAULT" member="SPRIDEN_SURNAME_PREFIX" name="spridenSurnamePrefix" width="489px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox datatype="String" keyactions="NEXT_ITEM" label="spridenPrevious.spridenLastName.prompt" labelstyle="DEFAULT" member="SPRIDEN_LAST_NAME" name="spridenLastName" width="489px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox datatype="String" label="spridenPrevious.spridenFirstName.prompt" labelstyle="DEFAULT" member="SPRIDEN_FIRST_NAME" name="spridenFirstName" width="489px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox datatype="String" label="spridenPrevious.spridenMi.prompt" labelstyle="DEFAULT" member="SPRIDEN_MI" name="spridenMi" width="489px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox case="upper" datatype="String" enabled="false" keyactions="NEXT_ITEM" label="spridenPrevious.spridenOrigin.prompt" labelstyle="DEFAULT" member="SPRIDEN_ORIGIN" name="spridenOrigin" width="133px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+<!--               <gridcell> -->
+<!--                 <textbox case="upper" datatype="String" enabled="false" keyactions="PREVIOUS_ITEM" label="spridenPrevious.spridenUser.prompt" labelstyle="DEFAULT" member="SPRIDEN_USER" name="spridenUser" width="133px"> -->
+<!--                   <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" /> -->
+<!--                 </textbox> -->
+<!--               </gridcell> -->
+<!--               <gridcell> -->
+<!--                 <calendar case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="spridenPrevious.spridenActivityDate.prompt" labelstyle="DEFAULT" member="SPRIDEN_ACTIVITY_DATE" name="spridenActivityDate" width="110px"> -->
+<!--                   <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" /> -->
+<!--                 </calendar> -->
+<!--               </gridcell> -->
+              <gridcell>
+                <textbox case="upper" datatype="String" enabled="false" label="spridenPrevious.spridenCreateUser.prompt" labelstyle="DEFAULT" member="SPRIDEN_CREATE_USER" name="spridenCreateUser" width="133px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <calendar case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="spridenPrevious.spridenCreateDate.prompt" labelstyle="DEFAULT" member="SPRIDEN_CREATE_DATE" name="spridenCreateDate" width="110px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </calendar>
+              </gridcell>
+            </gridlayout>
+          </panel>
+        </repeater>
+      </panel>
+    </accordion>
+  </panel>
+</config>

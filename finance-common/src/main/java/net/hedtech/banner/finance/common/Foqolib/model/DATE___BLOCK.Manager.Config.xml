@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="DATE___BLOCK.Manager.Config" name="DateBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="DATE$_CENTURY_PIVOT" logicalName="dateCenturyPivot" type="java.math.BigDecimal"   />
+			<item name="DATE$_DEFAULT_FORMAT" logicalName="dateDefaultFormat" type="String"   />
+			<item name="DATE$_VALUE" logicalName="dateValue" type="String"   />
+			<item name="DATE$_FORMAT" logicalName="dateFormat" type="String"   />
+			<item name="DATE$_FIELD_NAME" logicalName="dateFieldName" type="String"   />
+			<item name="DATE$_CURRENT_MON" logicalName="dateCurrentMon" type="String"   />
+			<item name="DATE$_CURRENT_YY" logicalName="dateCurrentYy" type="String"   />
+			<item name="DATE$_CURRENT_CENT" logicalName="dateCurrentCent" type="String"   />
+			<item name="DATE$_CURRENT_MM" logicalName="dateCurrentMm" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.finance.common.Foqolib.model.DateBlock</managerClass>
+
+	</manager>
+</b:beans>

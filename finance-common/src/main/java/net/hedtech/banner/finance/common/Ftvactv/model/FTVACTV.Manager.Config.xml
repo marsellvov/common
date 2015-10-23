@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVACTV.Manager.Config" name="FTVACTV">
+		
+		<items>
+			<item name="FTVACTV_COAS_CODE" logicalName="ftvactvCoasCode" type="String" physicalName="FTVACTV_COAS_CODE"  />
+			<item name="FTVACTV_ACTV_CODE" logicalName="ftvactvActvCode" type="String" physicalName="FTVACTV_ACTV_CODE"  />
+			<item name="FTVACTV_TITLE" logicalName="ftvactvTitle" type="String" physicalName="FTVACTV_TITLE"  />
+			<item name="FTVACTV_STATUS_IND" logicalName="ftvactvStatusInd" type="String" physicalName="FTVACTV_STATUS_IND"  />
+			<item name="FTVACTV_EFF_DATE" logicalName="ftvactvEffDate" type="java.util.Date" physicalName="FTVACTV_EFF_DATE"  />
+			<item name="FTVACTV_TERM_DATE" logicalName="ftvactvTermDate" type="java.util.Date" physicalName="FTVACTV_TERM_DATE"  />
+			<item name="FTVACTV_ACTIVITY_DATE" logicalName="ftvactvActivityDate" type="java.util.Date" physicalName="FTVACTV_ACTIVITY_DATE"  />
+			<item name="FTVACTV_USER_ID" logicalName="ftvactvUserId" type="String" physicalName="FTVACTV_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvactv.model.FtvactvAdapter</adapterClass>
+<!-- 		<defaultWhereClause><![CDATA[WHERE (ftvactv_coas_code = :HOLD_COAS_CODE OR ftvactv_coas_code = :FTVACTV_COAS_CODE)]]></defaultWhereClause>	 -->
+		<defaultWhereClause><![CDATA[WHERE (ftvactv_coas_code = NVL(:HOLD_COAS_CODE, ftvactv_coas_code))]]></defaultWhereClause>
+		<defaultOrderByClause><![CDATA[order by ftvactv_coas_code, ftvactv_actv_code, ftvactv_eff_date]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+
+	</manager>
+</b:beans>

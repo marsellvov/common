@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <interactionblock name="FRRPLOC" />
+  <accordion width="100%">
+    <panel label="Location Information">
+      <panel width="100%">
+        <gridview block="FRRPLOC" name="grdFrrploc" width="100%">
+          <viewheader>
+            <viewcolumn autoskip="true" block="FRRPLOC" case="upper" datatype="String" keyactions="NEXT_ITEM" label="frrploc.frrplocLocnCode.prompt" labelstyle="DEFAULT" maxlength="30" member="FRRPLOC_LOCN_CODE" name="frrplocLocnCode" required="true">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              <editor>
+                <lovbox />
+              </editor>
+            </viewcolumn>
+            <viewcolumn block="FRRPLOC" datatype="String" label="frrploc.frrplocLocnTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FRRPLOC_LOCN_TITLE" name="frrplocLocnTitle" width="350px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </viewcolumn>
+            <viewcolumn autoskip="true" block="FRRPLOC" datatype="String" label="frrploc.frrplocLocnResearchInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FRRPLOC_LOCN_RESEARCH_IND" name="frrplocLocnResearchInd" required="true" width="120px">
+              <editor>
+                <combobox>
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                  <model>
+                    <item label="frrploc.frrplocLocnResearchInd.item0.label" value="C" />
+                    <item label="frrploc.frrplocLocnResearchInd.item1.label" value="O" />
+                  </model>
+                </combobox>
+              </editor>
+            </viewcolumn>
+          </viewheader>
+        </gridview>
+      </panel>
+    </panel>
+  </accordion>
+</config>

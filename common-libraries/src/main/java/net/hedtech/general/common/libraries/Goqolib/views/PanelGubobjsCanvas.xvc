@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="FORM_HEADER" />
+  <interactionblock name="GUBOBJS" />
+  <panel width="336px" height="556px" top="33px" left="0px" id="pnlGubobjsCanvas" name="GUBOBJS_CANVAS" class="StackedCanvas">
+    <combobox label="formHeader.objectType.prompt" labelposition="right" labeloffset="-239" labelalign="center" name="form_header_objectType" style="GNvaList" left="55px" top="5px" width="200px" height="23px" keyactions="PREVIOUS_BLOCK" member="OBJECT_TYPE" block="FORM_HEADER" required="true" maxlength="30" datatype="String" case="mixed" action="WHEN-LIST-CHANGED">
+      <model>
+        <item label="formHeader.form_header_objectType.item0.label" value="" />
+      </model>
+    </combobox>
+    <textbox label="gubobjs.gubobjsName.prompt" labelposition="top" labeloffset="4" labelalign="center" name="gubobjs_gubobjsName" style="GNvaTextItem" left="3px" top="57px" width="64px" height="23px" visible="false" member="GUBOBJS_NAME" block="GUBOBJS" required="true" maxlength="30" datatype="String" case="upper" />
+  </panel>
+</config>

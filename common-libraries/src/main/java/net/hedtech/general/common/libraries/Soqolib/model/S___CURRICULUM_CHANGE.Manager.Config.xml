@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___CURRICULUM_CHANGE.Manager.Config" name="SCurriculumChange">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CURR_MINR11_CHANGE" logicalName="currMinr11Change" type="String"   />
+			<item name="CURR_TERM_CTLG_1_CHANGE" logicalName="currTermCtlg1Change" type="String"   />
+			<item name="CURR_ERR_CTRL" logicalName="currErrCtrl" type="java.math.BigDecimal"   />
+			<item name="SMRPRLE_CURR_IND" logicalName="smrprleCurrInd" type="String"   />
+			<item name="SMRPRLE_CURR_2_IND" logicalName="smrprleCurr2Ind" type="String"   />
+			<item name="CURR_BASE1_CTRL" logicalName="currBase1Ctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_MAJR1_CTRL" logicalName="currMajr1Ctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_MINR1_CTRL" logicalName="currMinr1Ctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_CONC1_CTRL" logicalName="currConc1Ctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_BASE2_CTRL" logicalName="currBase2Ctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_MAJR2_CTRL" logicalName="currMajr2Ctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_MINR2_CTRL" logicalName="currMinr2Ctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_CONC2_CTRL" logicalName="currConc2Ctrl" type="java.math.BigDecimal"   />
+			<item name="HOLD_CTRL_NUMB" logicalName="holdCtrlNumb" type="java.math.BigDecimal"   />
+			<item name="BASE1_CHKIND" logicalName="base1Chkind" type="String"   />
+			<item name="BASE2_CHKIND" logicalName="base2Chkind" type="String"   />
+			<item name="MAJR1_CHKIND" logicalName="majr1Chkind" type="String"   />
+			<item name="MAJR2_CHKIND" logicalName="majr2Chkind" type="String"   />
+			<item name="CURR_BASE1_ERROR" logicalName="currBase1Error" type="String"   />
+			<item name="CURR_BASE2_ERROR" logicalName="currBase2Error" type="String"   />
+			<item name="CURR_MAJR1_ERROR" logicalName="currMajr1Error" type="String"   />
+			<item name="CURR_MAJR2_ERROR" logicalName="currMajr2Error" type="String"   />
+			<item name="CURR_CONC1_ERROR" logicalName="currConc1Error" type="String"   />
+			<item name="CURR_CONC2_ERROR" logicalName="currConc2Error" type="String"   />
+			<item name="CURR_MINR1_ERROR" logicalName="currMinr1Error" type="String"   />
+			<item name="CURR_MINR2_ERROR" logicalName="currMinr2Error" type="String"   />
+			<item name="CURR_BASE1_ERRCTRL" logicalName="currBase1Errctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_BASE2_ERRCTRL" logicalName="currBase2Errctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_MAJR1_ERRCTRL" logicalName="currMajr1Errctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_MINR1_ERRCTRL" logicalName="currMinr1Errctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_CONC1_ERRCTRL" logicalName="currConc1Errctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_MAJR2_ERRCTRL" logicalName="currMajr2Errctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_MINR2_ERRCTRL" logicalName="currMinr2Errctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_CONC2_ERRCTRL" logicalName="currConc2Errctrl" type="java.math.BigDecimal"   />
+			<item name="CURR_UPD_CONC111" logicalName="currUpdConc111" type="String"   />
+			<item name="CURR_UPD_CONC112" logicalName="currUpdConc112" type="String"   />
+			<item name="CURR_UPD_CONC113" logicalName="currUpdConc113" type="String"   />
+			<item name="CURR_UPD_CONC121" logicalName="currUpdConc121" type="String"   />
+			<item name="CURR_UPD_CONC122" logicalName="currUpdConc122" type="String"   />
+			<item name="CURR_UPD_CONC123" logicalName="currUpdConc123" type="String"   />
+			<item name="CURR_UPD_CONC211" logicalName="currUpdConc211" type="String"   />
+			<item name="CURR_UPD_CONC212" logicalName="currUpdConc212" type="String"   />
+			<item name="CURR_UPD_CONC213" logicalName="currUpdConc213" type="String"   />
+			<item name="CURR_UPD_CONC221" logicalName="currUpdConc221" type="String"   />
+			<item name="CURR_UPD_CONC222" logicalName="currUpdConc222" type="String"   />
+			<item name="CURR_UPD_CONC223" logicalName="currUpdConc223" type="String"   />
+			<item name="CURR_UPD_MINR11" logicalName="currUpdMinr11" type="String"   />
+			<item name="CURR_UPD_MINR12" logicalName="currUpdMinr12" type="String"   />
+			<item name="CURR_UPD_MINR21" logicalName="currUpdMinr21" type="String"   />
+			<item name="CURR_UPD_MINR22" logicalName="currUpdMinr22" type="String"   />
+			<item name="CEM_MSG" logicalName="cemMsg" type="String"   />
+			<item name="CURR_UPD_BASE1" logicalName="currUpdBase1" type="String"   />
+			<item name="CURR_UPD_BASE2" logicalName="currUpdBase2" type="String"   />
+			<item name="CURR_UPD_MAJR11" logicalName="currUpdMajr11" type="String"   />
+			<item name="CURR_UPD_MAJR12" logicalName="currUpdMajr12" type="String"   />
+			<item name="CURR_UPD_MAJR21" logicalName="currUpdMajr21" type="String"   />
+			<item name="CURR_UPD_MAJR22" logicalName="currUpdMajr22" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SCurriculumChange</managerClass>
+
+	</manager>
+</b:beans>

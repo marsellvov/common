@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GUBINST.Manager.Config" name="GUBINST">
+		
+		<items>
+			<item name="GUBINST_NAME" logicalName="gubinstName" type="String" physicalName="GUBINST_NAME"  />
+			<item name="GUBINST_HOUSE_NUMBER" logicalName="gubinstHouseNumber" type="String" physicalName="GUBINST_HOUSE_NUMBER"  />
+			<item name="GUBINST_STREET_LINE1" logicalName="gubinstStreetLine1" type="String" physicalName="GUBINST_STREET_LINE1"  />
+			<item name="GUBINST_STREET_LINE2" logicalName="gubinstStreetLine2" type="String" physicalName="GUBINST_STREET_LINE2"  />
+			<item name="GUBINST_STREET_LINE3" logicalName="gubinstStreetLine3" type="String" physicalName="GUBINST_STREET_LINE3"  />
+			<item name="GUBINST_STREET_LINE4" logicalName="gubinstStreetLine4" type="String" physicalName="GUBINST_STREET_LINE4"  />
+			<item name="GUBINST_CITY" logicalName="gubinstCity" type="String" physicalName="GUBINST_CITY"  />
+			<item name="GUBINST_STAT_CODE" logicalName="gubinstStatCode" type="String" physicalName="GUBINST_STAT_CODE"  />
+			<item name="GUBINST_ZIP" logicalName="gubinstZip" type="String" physicalName="GUBINST_ZIP"  />
+			<item name="GUBINST_NATN_CODE" logicalName="gubinstNatnCode" type="String" physicalName="GUBINST_NATN_CODE"  />
+			<item name="NATN_DESCRIPTION" logicalName="natnDescription" type="String"  virtual="true" />
+			<item name="GUBINST_CTRY_CODE_PHONE" logicalName="gubinstCtryCodePhone" type="String" physicalName="GUBINST_CTRY_CODE_PHONE"  />
+			<item name="GUBINST_PHONE_AREA" logicalName="gubinstPhoneArea" type="String" physicalName="GUBINST_PHONE_AREA"  />
+			<item name="GUBINST_PHONE" logicalName="gubinstPhone" type="String" physicalName="GUBINST_PHONE"  />
+			<item name="GUBINST_PHONE_EXT" logicalName="gubinstPhoneExt" type="String" physicalName="GUBINST_PHONE_EXT"  />
+			<item name="GUBINST_OPERATING_SYSTEM_IND" logicalName="gubinstOperatingSystemInd" type="String" physicalName="GUBINST_OPERATING_SYSTEM_IND"  >
+				<value>
+					<constant>UNX</constant>
+				</value>	
+			</item>
+			<item name="GUBINST_HIGHED_GOVT_IND" logicalName="gubinstHighedGovtInd" type="String" physicalName="GUBINST_HIGHED_GOVT_IND"  >
+				<value>
+					<constant>G</constant>
+				</value>	
+			</item>
+			<item name="GUBINST_INSTANCE_NAME" logicalName="gubinstInstanceName" type="String" physicalName="GUBINST_INSTANCE_NAME"  />
+			<item name="GUBINST_ZIP_DEFAULT_LENGTH" logicalName="gubinstZipDefaultLength" type="java.math.BigDecimal" physicalName="GUBINST_ZIP_DEFAULT_LENGTH"  />
+			<item name="GUBINST_MAX_OPEN_FORMS" logicalName="gubinstMaxOpenForms" type="java.math.BigDecimal" physicalName="GUBINST_MAX_OPEN_FORMS"  />
+			<item name="GUBINST_BASE_CURR_CODE" logicalName="gubinstBaseCurrCode" type="String" physicalName="GUBINST_BASE_CURR_CODE"  />
+			<item name="CURR_TITLE" logicalName="currTitle" type="String"  virtual="true" />
+			<item name="GUBINST_SSN_MAX_LENGTH" logicalName="gubinstSsnMaxLength" type="java.math.BigDecimal" physicalName="GUBINST_SSN_MAX_LENGTH"  />
+			<item name="GUBINST_CENTURY_PIVOT" logicalName="gubinstCenturyPivot" type="java.math.BigDecimal" physicalName="GUBINST_CENTURY_PIVOT"  />
+			<item name="GUBINST_DATE_DEFAULT_FORMAT" logicalName="gubinstDateDefaultFormat" type="java.math.BigDecimal" physicalName="GUBINST_DATE_DEFAULT_FORMAT"  >
+				<value>
+					<constant>2</constant>
+				</value>	
+			</item>
+			<item name="GUBINST_ONLINE_MATCH_IND" logicalName="gubinstOnlineMatchInd" type="String" physicalName="GUBINST_ONLINE_MATCH_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GUBINST_WF_ENABLED_IND" logicalName="gubinstWfEnabledInd" type="String" physicalName="GUBINST_WF_ENABLED_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GUBINST_SQLTRACE_ENABLED_IND" logicalName="gubinstSqltraceEnabledInd" type="String" physicalName="GUBINST_SQLTRACE_ENABLED_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GUBINST_MESSAGE_ENABLED_IND" logicalName="gubinstMessageEnabledInd" type="String" physicalName="GUBINST_MESSAGE_ENABLED_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GUBINST_SSN_SEARCH_ENABLED_IND" logicalName="gubinstSsnSearchEnabledInd" type="String" physicalName="GUBINST_SSN_SEARCH_ENABLED_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GUBINST_GENERAL_INSTALLED" logicalName="gubinstGeneralInstalled" type="String"  virtual="true" />
+			<item name="GENERAL_RELEASE" logicalName="generalRelease" type="String"  virtual="true" />
+			<item name="GENERAL_STAGE_DATE" logicalName="generalStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_ACTIVITY_DATE" logicalName="gubinstActivityDate" type="java.util.Date" physicalName="GUBINST_ACTIVITY_DATE"  />
+			<item name="GUBINST_CHARMODE_GURJOBS_IND" logicalName="gubinstCharmodeGurjobsInd" type="String" physicalName="GUBINST_CHARMODE_GURJOBS_IND"  />
+			<item name="GUBINST_ALUMNI_INSTALLED" logicalName="gubinstAlumniInstalled" type="String" physicalName="GUBINST_ALUMNI_INSTALLED"  />
+			<item name="ALUMNI_RELEASE" logicalName="alumniRelease" type="String"  virtual="true" />
+			<item name="ALUMNI_STAGE_DATE" logicalName="alumniStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_COURTS_INSTALLED" logicalName="gubinstCourtsInstalled" type="String" physicalName="GUBINST_COURTS_INSTALLED"  />
+			<item name="COURTS_RELEASE" logicalName="courtsRelease" type="String"  virtual="true" />
+			<item name="COURTS_STAGE_DATE" logicalName="courtsStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_BILCSH_INSTALLED" logicalName="gubinstBilcshInstalled" type="String" physicalName="GUBINST_BILCSH_INSTALLED"  />
+			<item name="BILCSH_RELEASE" logicalName="bilcshRelease" type="String"  virtual="true" />
+			<item name="BILCSH_STAGE_DATE" logicalName="bilcshStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_CASHREC_INSTALLED" logicalName="gubinstCashrecInstalled" type="String" physicalName="GUBINST_CASHREC_INSTALLED"  />
+			<item name="CASHREC_RELEASE" logicalName="cashrecRelease" type="String"  virtual="true" />
+			<item name="CASHREC_STAGE_DATE" logicalName="cashrecStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_FINAID_INSTALLED" logicalName="gubinstFinaidInstalled" type="String" physicalName="GUBINST_FINAID_INSTALLED"  />
+			<item name="FINAID_RELEASE" logicalName="finaidRelease" type="String"  virtual="true" />
+			<item name="FINAID_STAGE_DATE" logicalName="finaidStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_RECORDS_INSTALLED" logicalName="gubinstRecordsInstalled" type="String" physicalName="GUBINST_RECORDS_INSTALLED"  />
+			<item name="RECORDS_RELEASE" logicalName="recordsRelease" type="String"  virtual="true" />
+			<item name="RECORDS_STAGE_DATE" logicalName="recordsStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_FINAID_IND" logicalName="gubinstFinaidInd" type="String" physicalName="GUBINST_FINAID_IND"  />
+			<item name="GUBINST_PTAX_INSTALLED" logicalName="gubinstPtaxInstalled" type="String" physicalName="GUBINST_PTAX_INSTALLED"  />
+			<item name="PTAX_RELEASE" logicalName="ptaxRelease" type="String"  virtual="true" />
+			<item name="PTAX_STAGE_DATE" logicalName="ptaxStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_FINANCE_INSTALLED" logicalName="gubinstFinanceInstalled" type="String" physicalName="GUBINST_FINANCE_INSTALLED"  />
+			<item name="FINANCE_RELEASE" logicalName="financeRelease" type="String"  virtual="true" />
+			<item name="FINANCE_STAGE_DATE" logicalName="financeStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_OCCTAX_INSTALLED" logicalName="gubinstOcctaxInstalled" type="String" physicalName="GUBINST_OCCTAX_INSTALLED"  />
+			<item name="OCCTAX_RELEASE" logicalName="occtaxRelease" type="String"  virtual="true" />
+			<item name="OCCTAX_STAGE_DATE" logicalName="occtaxStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_HUMANRE_INSTALLED" logicalName="gubinstHumanreInstalled" type="String" physicalName="GUBINST_HUMANRE_INSTALLED"  />
+			<item name="HUMANRE_RELEASE" logicalName="humanreRelease" type="String"  virtual="true" />
+			<item name="HUMANRE_STAGE_DATE" logicalName="humanreStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_POSBUD_INSTALLED" logicalName="gubinstPosbudInstalled" type="String" physicalName="GUBINST_POSBUD_INSTALLED"  />
+			<item name="POSBUD_RELEASE" logicalName="posbudRelease" type="String"  virtual="true" />
+			<item name="POSBUD_STAGE_DATE" logicalName="posbudStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_STUDENT_INSTALLED" logicalName="gubinstStudentInstalled" type="String" physicalName="GUBINST_STUDENT_INSTALLED"  />
+			<item name="STUDENT_RELEASE" logicalName="studentRelease" type="String"  virtual="true" />
+			<item name="STUDENT_STAGE_DATE" logicalName="studentStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_UTILITIES_INSTALLED" logicalName="gubinstUtilitiesInstalled" type="String" physicalName="GUBINST_UTILITIES_INSTALLED"  />
+			<item name="UTILITIES_RELEASE" logicalName="utilitiesRelease" type="String"  virtual="true" />
+			<item name="UTILITIES_STAGE_DATE" logicalName="utilitiesStageDate" type="java.util.Date"  virtual="true" />
+			<item name="GUBINST_KEY" logicalName="gubinstKey" type="String" physicalName="GUBINST_KEY"  />
+			<item name="DISPLAY_BILCSH_RELEASE" logicalName="displayBilcshRelease" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Guainst.model.GubinstAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE gubinst_key = 'INST']]></defaultWhereClause>	
+
+	</manager>
+</b:beans>

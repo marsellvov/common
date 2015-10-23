@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" >
+  <interactionblock name="G$_SDISP" />
+  <interactionblock name="G$_SDKEY" />
+  <panel width="565px" height="202px" top="0px" left="0px" id="pnlGSdspCanvas" name="G$_SDSP_CANVAS" class="ContentCanvas" menu="G$_DEFAULT_PM">
+    <textfield labelposition="left" labelalign="start" name="countReqdIsNull" style="DEFAULT" left="160px" top="0px" width="90px" height="24px" visible="false" enabled="false" member="COUNT_REQD_IS_NULL" block="G$_SDKEY" maxlength="30" datatype="" case="mixed" />
+    <button labelposition="left" labelalign="start" labelcolor="Black" labelfontsize="9pt" labelfontfamily="Verdana" label="gSdkey.govsdavValueAsCharLbt.label" name="govsdavValueAsCharLbt" style="DEFAULT" left="359px" top="3px" width="20px" height="20px" navigable="false" bordertype="raised" icon="flashlit" tooltip="gSdkey.govsdavValueAsCharLbt.tooltip" member="GOVSDAV_VALUE_AS_CHAR_LBT" block="G$_SDKEY" maxlength="30" case="mixed">
+      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+    </button>
+    <button labelposition="left" labelalign="start" label="gSdkey.govsdavValueAsCharDbt.label" name="govsdavValueAsCharDbt" style="DEFAULT" left="390px" top="3px" width="20px" height="20px" navigable="false" icon="calendar" tooltip="gSdkey.govsdavValueAsCharDbt.tooltip" member="GOVSDAV_VALUE_AS_CHAR_DBT" block="G$_SDKEY" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+    </button>
+    <button labelposition="right" labeloffset="-178" labelalign="center" labelcolor="Black" labelfontsize="9pt" labelfontfamily="Verdana" label="gSdkey.sdeCloseBtn.label" name="sdeCloseBtn" style="DEFAULT" left="516px" top="3px" width="20px" height="20px" navigable="false" icon="exit" tooltip="gSdkey.sdeCloseBtn.tooltip" member="SDE_CLOSE_BTN" block="G$_SDKEY" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+    </button>
+    <textbox labelposition="left" labelalign="start" name="govsdavAttrInfo" style="GNvaSdePrompt" left="7px" top="148px" width="549px" height="40px" enabled="false" multiline="true" bordertype="none" member="GOVSDAV_ATTR_INFO" block="G$_SDISP" validation="server" maxlength="1024" datatype="" case="mixed" />
+    <slider name="gSdispscrollbar" block="" top="24px" left="540px" width="19px" height="114px" />
+    <gridview top="6px" left="8px" width="528px" name="grdGSdisp" block="G$_SDISP">
+      <viewheader>
+        <viewcolumn width="262px" label="gSdisp.govsdavAttrPromptDisp.prompt" labelposition="top" labeloffset="7" labelalign="start" name="govsdavAttrPromptDisp" style="GNvaSdePrompt" labelstyle="DEFAULT" enabled="false" bordertype="none" member="GOVSDAV_ATTR_PROMPT_DISP" block="G$_SDISP" required="true" validation="server" maxlength="100" datatype="" case="mixed" />
+        <viewcolumn width="262px" label="" labelposition="left" labelalign="start" name="govsdavValueAsChar" style="DEFAULT" labelstyle="DEFAULT" enabled="false" member="GOVSDAV_VALUE_AS_CHAR" block="G$_SDISP" validation="server" maxlength="2000" datatype="" case="mixed" />
+      </viewheader>
+    </gridview>
+  </panel>
+</config>

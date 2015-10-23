@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="GXRDIRD" />
+  <interactionblock name="FORM_HEADER" />
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <panel class="StackedCanvas" id="pnlGxadird1Canvas" menu="G$_DEFAULT_PM" name="GXADIRD_1_CANVAS" width="100%">
+    <accordion width="100%">
+      <panel label="mainWindow.title">
+        <repeater block="GXRDIRD" name="grdGxrdird" width="100%">
+          <panel width="100%">
+            <gridlayout cols="2" orientation="vertical">
+              <gridcell>
+                <textbox autoskip="true" case="upper" height="23px" keyactions="NEXT_ITEM" label="gxrdird.gxrdirdBankRoutNum.prompt" maxlength="30" member="GXRDIRD_BANK_ROUT_NUM" name="gxrdirdBankRoutNum" required="true" style="ui-buttoninput" width="80px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="GXRDIRD_BANK_ROUT_NUM_LBT" name="gxrdirdBankRoutNumLbt" navigable="false" style="ui-buttoninput" tooltip="gxrdird.gxrdirdBankRoutNumLbt.tooltip" width="23px" />
+                <textfield height="23px" maxlength="60" member="BANK_DESC" name="bankDesc" width="300px" />
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" case="upper" height="23px" keyactions="NEXT_ITEM" label="gxrdird.gxrdirdAtypCode.prompt" maxlength="30" member="GXRDIRD_ATYP_CODE" name="gxrdirdAtypCode" style="ui-buttoninput" validation="server" width="72px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="GXRDIRD_ATYP_CODE_LBT" name="gxrdirdAtypCodeLbt" navigable="false" style="ui-buttoninput" tooltip="gxrdird.gxrdirdAtypCodeLbt.tooltip" width="23px" />
+              </gridcell>
+              <gridcell>
+                <textbox height="23px" label="gxrdird.gxrdirdAddrSeqno.prompt" maxlength="2" member="GXRDIRD_ADDR_SEQNO" name="gxrdirdAddrSeqno" validation="server" width="50px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <checkbox falsevalue="I" height="23px" label="gxrdird.gxrdirdApInd.label" member="GXRDIRD_AP_IND" name="gxrdirdApInd" othervaluestate="unchecked" value="A" width="160px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </checkbox>
+                <checkbox falsevalue="I" height="23px" label="gxrdird.gxrdirdHrInd.label" member="GXRDIRD_HR_IND" name="gxrdirdHrInd" othervaluestate="unchecked" value="A" width="160px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </checkbox>
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" case="upper" height="23px" keyactions="NEXT_ITEM" label="gxrdird.gxrdirdBankAcctNum.prompt" maxlength="17" member="GXRDIRD_BANK_ACCT_NUM" name="gxrdirdBankAcctNum" width="210px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <radiogroup id="gxrdirdAcctType" label="gxrdird.gxrdirdAcctType.hint" keyactions="NEXT_ITEM" member="GXRDIRD_ACCT_TYPE" name="gxrdirdAcctType" othervalue="C">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                  <radiobox group="gxrdirdAcctType" height="23px" label="gxrdird.gxrdirdAcctType.checking.label" labelalign="start" labelposition="left" name="rb_GxrdirdAcctType_Checking" value="C" width="133px" />
+                  <radiobox group="gxrdirdAcctType" height="23px" label="gxrdird.gxrdirdAcctType.savings.label" labelalign="center" labelposition="right" name="rb_GxrdirdAcctType_Savings" value="S" width="133px" />
+                </radiogroup>
+              </gridcell>
+              <gridcell>
+                <combobox autoskip="true" height="23px" label="gxrdird.gxrdirdStatus.prompt" member="GXRDIRD_STATUS" name="gxrdirdStatus" required="true" validation="server" width="100px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                  <model>
+                    <item label="gxrdird.gxrdirdStatus.item0.label" value="A" />
+                    <item label="gxrdird.gxrdirdStatus.item1.label" value="P" />
+                    <item label="gxrdird.gxrdirdStatus.item2.label" value="I" />
+                  </model>
+                </combobox>
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" datatype="Number" height="23px" label="gxrdird.gxrdirdPriority.prompt" maxlength="2" member="GXRDIRD_PRIORITY" minvalue="0" name="gxrdirdPriority" textalign="right" width="50px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" datatype="Number" formatmask="999G999G999G999G990D99" height="23px" label="gxrdird.gxrdirdAmount.prompt" maxlength="25" member="GXRDIRD_AMOUNT" name="gxrdirdAmount" textalign="right" width="133px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" datatype="Number" formatmask="999D99" height="23px" keyactions="NEXT_ITEM" label="gxrdird.gxrdirdPercent.prompt" maxlength="6" maxvalue="100" member="GXRDIRD_PERCENT" minvalue="0" name="gxrdirdPercent" textalign="right" width="60px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <checkbox falsevalue="N" height="23px" label="gxrdird.gxrdirdAchIatInd.label" member="GXRDIRD_ACH_IAT_IND" name="gxrdirdAchIatInd" othervaluestate="unchecked" value="Y" width="53px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </checkbox>
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gxrdird.gxrdirdScodCodeIso.prompt" maxlength="30" member="GXRDIRD_SCOD_CODE_ISO" name="gxrdirdScodCodeIso" style="ui-buttoninput" validation="server" width="50px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="GXRDIRD_SCOD_CODE_ISO_LBT" name="gxrdirdScodCodeIsoLbt" navigable="false" style="ui-buttoninput" tooltip="gxrdird.gxrdirdScodCodeIsoLbt.tooltip" width="23px" />
+                <textfield datatype="String" height="23px" maxlength="80" member="SCOD_CODE_DESC" name="scodCodeDesc" width="120px" />
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gxrdird.gxrdirdAchtCode.prompt" maxlength="30" member="GXRDIRD_ACHT_CODE" name="gxrdirdAchtCode" style="ui-buttoninput" width="50px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="GXRDIRD_ACHT_CODE_LBT" name="gxrdirdAchtCodeLbt" navigable="false" style="ui-buttoninput" tooltip="gxrdird.gxrdirdAchtCodeLbt.tooltip" width="23px" />
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" case="upper" height="23px" keyactions="NEXT_ITEM" label="gxrdird.gxrdirdAtypCodeIat.prompt" maxlength="30" member="GXRDIRD_ATYP_CODE_IAT" name="gxrdirdAtypCodeIat" style="ui-buttoninput" validation="server" width="66px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="GXRDIRD_ATYP_CODE_IAT_LBT" name="gxrdirdAtypCodeIatLbt" navigable="false" style="ui-buttoninput" tooltip="gxrdird.gxrdirdAtypCodeIatLbt.tooltip" width="23px" />
+              </gridcell>
+              <gridcell>
+                <textbox height="23px" label="gxrdird.gxrdirdAddrSeqnoIat.prompt" maxlength="2" member="GXRDIRD_ADDR_SEQNO_IAT" name="gxrdirdAddrSeqnoIat" validation="server" width="50px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+            </gridlayout>
+          </panel>
+        </repeater>
+      </panel>
+    </accordion>
+  </panel>
+</config>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Foqrpls/FOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	
+	
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/finance/common/Fraprop/model/FRAPROP.Model.Config.xml"/>
+	
+	<task id="FRAPROP.Task.Config" name="FRAPROP">
+		<baseTaskConfiguration config="BASE.Task.Config"/>
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+			<taskPartConfiguration name="FOQOLIB" config="FOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.finance.common.Fraprop.FrapropTask</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/finance/common/Fraprop/FrapropStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.finance.common.Fraprop.services.FrapropServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+
+				<package  name="COPY_INSERT_FRBPROP">net.hedtech.banner.finance.common.Fraprop.services.CopyInsertFrbprop</package> 
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="FOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="FRAPROP.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.banner.finance.common.Fraprop.controller.FrapropFormController</formController>
+		<blockControllers>
+			
+			
+			<block  name="G$_VPDI_BLOCK">net.hedtech.banner.finance.common.Fraprop.controller.GVpdiBlockController</block>
+			<block  name="G$_NAV_BLOCK">net.hedtech.banner.finance.common.Fraprop.controller.GNavBlockController</block>
+			<block  name="FORM_HEADER">net.hedtech.banner.finance.common.Fraprop.controller.FormHeaderController</block>
+			<block  name="KEY_BLOCK">net.hedtech.banner.finance.common.Fraprop.controller.KeyBlockController</block>
+			<block  name="FRBPROP">net.hedtech.banner.finance.common.Fraprop.controller.FrbpropController</block>
+			<block  name="FRRPRPT">net.hedtech.banner.finance.common.Fraprop.controller.FrrprptController</block>
+			<block  name="FRRPUSN">net.hedtech.banner.finance.common.Fraprop.controller.FrrpusnController</block>
+			<block  name="FRRPLOC">net.hedtech.banner.finance.common.Fraprop.controller.FrrplocController</block>
+			<block  name="FRRPRPI">net.hedtech.banner.finance.common.Fraprop.controller.FrrprpiController</block>
+			<block  name="G$_EXTENDED_SEARCH_BLOCK">net.hedtech.banner.finance.common.Fraprop.controller.GExtendedSearchBlockController</block>
+			<block  name="BLOCK5">net.hedtech.banner.finance.common.Fraprop.controller.Block5Controller</block>
+			<block  name="BUTTON_CONTROL_BLOCK">net.hedtech.banner.finance.common.Fraprop.controller.ButtonControlBlockController</block>
+			<block  name="NAVIGATE_TO">net.hedtech.banner.finance.common.Fraprop.controller.NavigateToController</block>
+			<block  name="COPY_BLOCK">net.hedtech.banner.finance.common.Fraprop.controller.CopyBlockController</block>
+			<block  name="G$_OPT_BLOCK">net.hedtech.banner.finance.common.Fraprop.controller.GOptBlockController</block>
+		</blockControllers>
+		<menuControllers>
+			<menu  name="G$_DEFAULT_PM">net.hedtech.banner.finance.common.Fraprop.controller.GDefaultPmContextController</menu>
+		</menuControllers>
+
+	</task>
+</b:beans>

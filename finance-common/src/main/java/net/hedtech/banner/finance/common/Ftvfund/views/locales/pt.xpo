@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="ftvfund.ftvfundCoasCode.prompt">Chart of Accounts</msg>
+  <msg id="ftvfund.ftvfundFundCode.prompt">Fund Code</msg>
+  <msg id="ftvfund.ftvfundFtypCode.prompt">Fund Type</msg>
+  <msg id="ftvfund.ftvfundTitle.prompt">Title</msg>
+  <msg id="ftvfund.ftvfundDataEntryInd.prompt">Data Entry</msg>
+  <msg id="ftvfund.ftvfundStatusInd.prompt">Status</msg>
+  <msg id="ftvfund.ftvfundEffDate.prompt">Effective Date</msg>
+  <msg id="ftvfund.ftvfundTermDate.prompt">Termination Date</msg>
+  <msg id="ftvfund.ftvfundGrntCode.prompt">Grant Code</msg>
+  <msg id="ftvfund.grntDesc.prompt">Title</msg>
+  <msg id="buttonControlBlock.ftvfund1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.ftvfund1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.ftvfund1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Fund Code Validation Form</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

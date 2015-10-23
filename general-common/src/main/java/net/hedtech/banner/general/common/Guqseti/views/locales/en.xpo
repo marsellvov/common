@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas:morphis:frames:messages">
+  <msg id="guiseti.vpdiCode.prompt">Code</msg>
+  <msg id="guiseti.vpdiCode.hint">Institution Code.</msg>
+  <msg id="guiseti.primaryInd.prompt">Primary Ind</msg>
+  <msg id="guiseti.codeDesc.prompt">Description</msg>
+  <msg id="guiseti.codeDesc.hint">Institution Description.</msg>
+  <msg id="gExtendedSearchBlock.personDetailBtn.prompt">Person Search Detail:</msg>
+  <msg id="gExtendedSearchBlock.npersonDetailBtn.prompt">Non-Person Search Detail:</msg>
+  <msg id="gExtendedSearchBlock.srSpraddrCity.prompt">City:</msg>
+  <msg id="gExtendedSearchBlock.srSpraddrStatCode.prompt">State or Province:</msg>
+  <msg id="gExtendedSearchBlock.srSpraddrZip.prompt">ZIP or Postal Code:</msg>
+  <msg id="gExtendedSearchBlock.srSpridenNtypCode.prompt">Name Type:</msg>
+  <msg id="gExtendedSearchBlock.srSpbpersSsn.prompt">SSN/SIN/TIN:</msg>
+  <msg id="gExtendedSearchBlock.srSpbpersBirthDate.prompt">Birth Date:</msg>
+  <msg id="gExtendedSearchBlock.srSpbpersSex.prompt">Gender:</msg>
+  <msg id="gExtendedSearchBlock.extsearchCount.prompt">Person/Non-Person Count:</msg>
+  <msg id="mainWindow.title">Set Institution Code</msg>
+  <msg id="gCautionOkAlert.title">Banner</msg>
+  <msg id="gCautionOkAlert.btn1.label">OK</msg>
+  <msg id="gInfoAlert.title">Banner</msg>
+  <msg id="gInfoAlert.btn1.label">OK</msg>
+  <msg id="gExtendSolutAlert.title">Message from Banner Document Management...</msg>
+  <msg id="gExtendSolutAlert.btn1.label">OK</msg>
+  <msg id="gExtendSolut2Alert.title">Message from Banner Document Management...</msg>
+  <msg id="gExtendSolut2Alert.btn1.label">Yes</msg>
+  <msg id="gExtendSolut2Alert.btn2.label">No</msg>
+  <msg id="gExtendSolut2Alert.btn3.label">Cancel</msg>
+  <msg id="gExitFormAlert.title">Banner</msg>
+  <msg id="gExitFormAlert.text">Do you want to save the changes you have made?</msg>
+  <msg id="gExitFormAlert.btn1.label">Yes</msg>
+  <msg id="gExitFormAlert.btn2.label">No</msg>
+  <msg id="gExitFormAlert.btn3.label">Cancel</msg>
+  <msg id="gCloseFormAlert.title">Banner</msg>
+  <msg id="gCloseFormAlert.text">Your changes could not be saved, close form?</msg>
+  <msg id="gCloseFormAlert.btn1.label">Yes</msg>
+  <msg id="gCloseFormAlert.btn2.label">No</msg>
+  <msg id="gPipeMessageAlert.title">Banner</msg>
+  <msg id="gPipeMessageAlert.btn1.label">Yes</msg>
+  <msg id="gPipeMessageAlert.btn2.label">No</msg>
+  <msg id="gWarningAlert.title">Banner</msg>
+  <msg id="gWarningAlert.btn1.label">OK</msg>
+  <msg id="gCautionAlert.title">Banner</msg>
+  <msg id="gCautionAlert.btn1.label">OK</msg>
+  <msg id="gCautionAlert.btn2.label">Cancel</msg>
+</messages>

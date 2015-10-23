@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Guasyst/GuasystAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/general/common/Guasyst/GuasystLovs.xml" Name="GUASYST">
+	<Visual>
+		<Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Guasyst/views/ViewMainWindow">
+			<StackedCanvas Id="G$_NAV_CANVAS" Visible="false"/>
+			<ContentCanvas Id="TEMP_CANVAS" Visible="false"/>
+			<ContentCanvas Id="GUASYST_1_CANVAS"/>
+			<StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false"/>
+		</Window>
+		<Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Guasyst/views/ViewGOptWindow">
+			<ContentCanvas Id="G$_OPT_CANVAS"/>
+		</Window>
+	</Visual>
+	<Logic>
+		<Block Id="G$_VPDI_BLOCK">
+			<Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true"/>
+			<Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+		
+		
+		<Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+			<Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true"/>
+			<Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button"/>
+			<Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+		<Block Id="FORM_HEADER">
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_0" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true"/>
+		</Block>
+		<Block Id="KEY_BLOCK">
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="HR_EMPL" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="HR_BENE" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="FIN_AGENCY" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="FIN_BANK" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="FIN_CUST" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="FIN_EMPL" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="FIN_MAGR" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="ALU_CONST" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Id="ADV_INDIV_DONR_CATG" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Id="ADV_INDIV_PREF_CLAS" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="STD_RECR" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="STD_ADM" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="FIN_AID_APPL" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="STD_GENR" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="STD_REGR" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="STD_TRAN" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Hint="keyBlock.id.hint" Id="ID" MaxLength="9" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="false" Hint="keyBlock.nname.hint" Id="NAME" MaxLength="230" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="STD_HOUS" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="AR" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="ALU_CONST_LIT" MaxLength="13" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="ALU_ORGN_LIT" MaxLength="13" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="ALU_ORGN" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Id="ADV_ORGN_DONR_CATG" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="STD_HEADING" MaxLength="16" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="HR_HEADING" MaxLength="16" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="ALU_HEADING" MaxLength="16" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="FIN_AID_HEADING" MaxLength="16" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="FIN_HEADING" MaxLength="16" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="AR_HEADING_1" MaxLength="15" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="AR_HEADING_2" MaxLength="15" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="FIN_VEND" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="HR_COBRA" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="STD_FACU" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="FIN_AID_APPL_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="HR_EMPL_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="HR_BENE_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="HR_COBRA_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="FIN_AGENCY_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="FIN_BANK_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="FIN_CUST_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="FIN_EMPL_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="FIN_MAGR_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="FIN_VEND_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="STD_RECR_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="STD_ADM_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="STD_TRAN_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="STD_GENR_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="STD_REGR_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="STD_HOUS_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="STD_FACU_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="true" Id="HR_APPL" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="HR_APPL_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="COURT_JUDGE_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="COURT_LITIGANT_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COURT_ATTORNEY_LIT" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_PTYP_CODE" MaxLength="4" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="false" Id="CONFID_MSG" MaxLength="30" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="GUASYST_1_CANVAS" DataType="String" Enabled="false" Id="DCSD_MSG" MaxLength="30" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item CanvasName="GUASYST_1_CANVAS" Id="EXECUTE_BTN" Navigable="true" Type="Button"/>
+			<Item CanvasName="GUASYST_1_CANVAS" Id="KEY-CLRFRM_BTN" Navigable="true" Type="Button" Visible="false"/>
+		</Block>
+		<Block Id="BUTTON_CONTROL_BLOCK">
+			<Item CanvasName="GUASYST_1_CANVAS" Id="ID_LBT" MaxLength="14" Navigable="false" Type="Button"/>
+			<Item CanvasName="TEMP_CANVAS" Enabled="true" Id="GUASYST_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+			<Item CanvasName="TEMP_CANVAS" Enabled="true" Id="GUASYST_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+		<Block Id="G$_OPT_BLOCK">
+			<Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_SEL" MaxLength="30" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true"/>
+		</Block>
+	</Logic>
+</FormStructure>

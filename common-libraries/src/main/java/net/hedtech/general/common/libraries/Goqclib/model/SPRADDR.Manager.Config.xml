@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPRADDR.Manager.Config" name="SPRADDR">
+		
+		<items>
+			<item name="SPRADDR_FROM_DATE" logicalName="spraddrFromDate" type="java.util.Date" physicalName="SPRADDR_FROM_DATE"  />
+			<item name="SPRADDR_TO_DATE" logicalName="spraddrToDate" type="java.util.Date" physicalName="SPRADDR_TO_DATE"  />
+			<item name="SPRADDR_ATYP_CODE" logicalName="spraddrAtypCode" type="String" physicalName="SPRADDR_ATYP_CODE"  />
+			<item name="ATYP_DESCRIPTION" logicalName="atypDescription" type="String"  virtual="true" />
+			<item name="SPRADDR_SEQNO" logicalName="spraddrSeqno" type="java.math.BigDecimal" physicalName="SPRADDR_SEQNO"  />
+			<item name="SPRADDR_HOUSE_NUMBER" logicalName="spraddrHouseNumber" type="String" physicalName="SPRADDR_HOUSE_NUMBER"  />
+			<item name="SPRADDR_STREET_LINE1" logicalName="spraddrStreetLine1" type="String" physicalName="SPRADDR_STREET_LINE1"  />
+			<item name="SPRADDR_STREET_LINE2" logicalName="spraddrStreetLine2" type="String" physicalName="SPRADDR_STREET_LINE2"  />
+			<item name="SPRADDR_STREET_LINE3" logicalName="spraddrStreetLine3" type="String" physicalName="SPRADDR_STREET_LINE3"  />
+			<item name="SPRADDR_STREET_LINE4" logicalName="spraddrStreetLine4" type="String" physicalName="SPRADDR_STREET_LINE4"  />
+			<item name="SPRADDR_CITY" logicalName="spraddrCity" type="String" physicalName="SPRADDR_CITY"  />
+			<item name="SPRADDR_STAT_CODE" logicalName="spraddrStatCode" type="String" physicalName="SPRADDR_STAT_CODE"  />
+			<item name="STAT_DESCRIPTION" logicalName="statDescription" type="String"  virtual="true" />
+			<item name="SPRADDR_ZIP" logicalName="spraddrZip" type="String" physicalName="SPRADDR_ZIP"  />
+			<item name="SPRADDR_CNTY_CODE" logicalName="spraddrCntyCode" type="String" physicalName="SPRADDR_CNTY_CODE"  />
+			<item name="CNTY_DESCRIPTION" logicalName="cntyDescription" type="String"  virtual="true" />
+			<item name="SPRADDR_NATN_CODE" logicalName="spraddrNatnCode" type="String" physicalName="SPRADDR_NATN_CODE"  />
+			<item name="NATN_DESCRIPTION" logicalName="natnDescription" type="String"  virtual="true" />
+			<item name="TELE_CODE" logicalName="teleCode" type="String"  virtual="true" />
+			<item name="TELE_DESCRIPTION" logicalName="teleDescription" type="String"  virtual="true" />
+			<item name="PHONE_CTRY" logicalName="phoneCtry" type="String"  virtual="true" />
+			<item name="PHONE_AREA" logicalName="phoneArea" type="String"  virtual="true" />
+			<item name="PHONE_NUMBER" logicalName="phoneNumber" type="String"  virtual="true" />
+			<item name="PHONE_EXT" logicalName="phoneExt" type="String"  virtual="true" />
+			<item name="FAX_CTRY" logicalName="faxCtry" type="String"  virtual="true" />
+			<item name="FAX_AREA" logicalName="faxArea" type="String"  virtual="true" />
+			<item name="FAX_NUMBER" logicalName="faxNumber" type="String"  virtual="true" />
+			<item name="FAX_EXT" logicalName="faxExt" type="String"  virtual="true" />
+			<item name="PREFERRED_ADDR" logicalName="preferredAddr" type="String"  virtual="true" />
+			<item name="PREFERRED_REGION" logicalName="preferredRegion" type="String"  virtual="true" />
+			<item name="COMBINED_MAILING" logicalName="combinedMailing" type="String"  virtual="true" />
+			<item name="SPRADDR_STATUS_IND" logicalName="spraddrStatusInd" type="String" physicalName="SPRADDR_STATUS_IND"  />
+			<item name="SPRADDR_ASRC_CODE" logicalName="spraddrAsrcCode" type="String" physicalName="SPRADDR_ASRC_CODE"  />
+			<item name="SPRADDR_DELIVERY_POINT" logicalName="spraddrDeliveryPoint" type="java.math.BigDecimal" physicalName="SPRADDR_DELIVERY_POINT"  />
+			<item name="SPRADDR_CORRECTION_DIGIT" logicalName="spraddrCorrectionDigit" type="java.math.BigDecimal" physicalName="SPRADDR_CORRECTION_DIGIT"  />
+			<item name="SPRADDR_CARRIER_ROUTE" logicalName="spraddrCarrierRoute" type="String" physicalName="SPRADDR_CARRIER_ROUTE"  />
+			<item name="SPRADDR_GST_TAX_ID" logicalName="spraddrGstTaxId" type="String" physicalName="SPRADDR_GST_TAX_ID"  />
+			<item name="SPRADDR_USER" logicalName="spraddrUser" type="String" physicalName="SPRADDR_USER"  />
+			<item name="SPRADDR_ACTIVITY_DATE" logicalName="spraddrActivityDate" type="java.util.Date" physicalName="SPRADDR_ACTIVITY_DATE"  />
+			<item name="SPRADDR_PIDM" logicalName="spraddrPidm" type="java.math.BigDecimal" physicalName="SPRADDR_PIDM"  />
+			<item name="SPRTELE_SEQNO" logicalName="sprteleSeqno" type="java.math.BigDecimal"  virtual="true" />
+			<item name="CHANGE_FAX" logicalName="changeFax" type="String"  virtual="true" />
+			<item name="CHANGE_PHONE" logicalName="changePhone" type="String"  virtual="true" />
+			<item name="CHANGE_STATUS" logicalName="changeStatus" type="String"  virtual="true" />
+			<item name="HOLD_ADDR_TELE_SEQNO" logicalName="holdAddrTeleSeqno" type="java.math.BigDecimal"  virtual="true" />
+			<item name="HOLD_PHONE_CTRY" logicalName="holdPhoneCtry" type="String"  virtual="true" />
+			<item name="HOLD_PHONE_AREA" logicalName="holdPhoneArea" type="String"  virtual="true" />
+			<item name="HOLD_PHONE_NUMBER" logicalName="holdPhoneNumber" type="String"  virtual="true" />
+			<item name="HOLD_PHONE_EXT" logicalName="holdPhoneExt" type="String"  virtual="true" />
+			<item name="HOLD_FAX_AREA" logicalName="holdFaxArea" type="String"  virtual="true" />
+			<item name="HOLD_FAX_NUMBER" logicalName="holdFaxNumber" type="String"  virtual="true" />
+			<item name="HOLD_FAX_EXT" logicalName="holdFaxExt" type="String"  virtual="true" />
+			<item name="HOLD_SEQNO" logicalName="holdSeqno" type="java.math.BigDecimal"  virtual="true" />
+			<item name="HOLD_STAT_CODE" logicalName="holdStatCode" type="String"  virtual="true" />
+			<item name="HOLD_STATUS" logicalName="holdStatus" type="String"  virtual="true" />
+			<item name="HOLD_TELE_CODE" logicalName="holdTeleCode" type="String"  virtual="true" />
+			<item name="NO_ADDR_INFO" logicalName="noAddrInfo" type="java.math.BigDecimal"  virtual="true" />
+			<item name="PHONE_EXISTS" logicalName="phoneExists" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqclib.model.SpraddrAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE SPRADDR_PIDM = :KEY_BLOCK_PIDM]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[decode(spraddr_status_ind, 'I',-2, decode(to_number(to_char(nvl(spraddr_to_date,
+   GREATEST(nvl(spraddr_from_date+1,sysdate+1),sysdate+1)),'J')) - to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')),0,1, (to_number(to_char(nvl(spraddr_to_date,
+   GREATEST(nvl(spraddr_from_date+1,sysdate+1),sysdate+1)),'J')) - to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')))) / decode(abs(to_number(to_char(nvl(spraddr_to_date,
+   GREATEST(nvl(spraddr_from_date+1,sysdate+1),sysdate+1)),'J')) - to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J'))),0,1, (abs(to_number(to_char(nvl(spraddr_to_date,
+   GREATEST(nvl(spraddr_from_date+1,sysdate+1),sysdate+1)),'J')) - to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')))))) * (decode(to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')) - to_number(to_char(nvl(spraddr_from_date,sysdate-1),'J')),0,1, (to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')) - to_number(to_char(nvl(spraddr_from_date,sysdate-1),'J')))) / decode(abs(to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')) - to_number(to_char(nvl(spraddr_from_date,sysdate-1),'J'))),0,1, (abs(to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')) - to_number(to_char(nvl(spraddr_from_date,sysdate-1),'J')))))) desc, spraddr_atyp_code, spraddr_to_date desc, spraddr_from_date desc, spraddr_seqno]]></defaultOrderByClause>	
+	<pagination maximumRows="1" enabled="true"/>
+	</manager>
+</b:beans>

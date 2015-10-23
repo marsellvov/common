@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel class="ContentCanvas" id="pnlEqqolib1Canvas" label="eqqolib1Canvas.text1.text" name="EQQOLIB_1_CANVAS" width="100%"/>
+</config>

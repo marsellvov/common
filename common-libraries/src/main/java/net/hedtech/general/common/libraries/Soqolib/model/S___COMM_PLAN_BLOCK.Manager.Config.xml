@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___COMM_PLAN_BLOCK.Manager.Config" name="SCommPlanBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="HOLD_PROGRAM" logicalName="holdProgram" type="String"   />
+			<item name="HOLD_LEVEL" logicalName="holdLevel" type="String"   />
+			<item name="HOLD_CAMPUS" logicalName="holdCampus" type="String"   />
+			<item name="HOLD_COLLEGE" logicalName="holdCollege" type="String"   />
+			<item name="HOLD_DEGREE" logicalName="holdDegree" type="String"   />
+			<item name="MODULE_IND" logicalName="moduleInd" type="String"   />
+			<item name="HOLD_DEPT" logicalName="holdDept" type="String"   />
+			<item name="COMM_PLAN_IND" logicalName="commPlanInd" type="String"   />
+			<item name="CREREC_IND" logicalName="crerecInd" type="String"   />
+			<item name="DUPREC_IND" logicalName="duprecInd" type="String"   />
+			<item name="DATA_SEPARATOR_LINE_C1" logicalName="dataSeparatorLineC1" type="String"   />
+			<item name="SOBCPLN_RETURN_OBJECT" logicalName="sobcplnReturnObject" type="String"   />
+			<item name="SOBCPLN_RETURN_ITEM" logicalName="sobcplnReturnItem" type="String"   />
+			<item name="CALL_COMMPLAN" logicalName="callCommplan" type="String"   />
+			<item name="COMM_RECORD_PLACE" logicalName="commRecordPlace" type="java.math.BigDecimal"   />
+			<item name="COMMIT_FORM_MESSAGE" logicalName="commitFormMessage" type="String"   />
+			<item name="INSERT_COMPLETE" logicalName="insertComplete" type="String"   />
+			<item name="COMM_KEY_FLAG" logicalName="commKeyFlag" type="String"   />
+			<item name="COMM_ADMIT_EXISTS" logicalName="commAdmitExists" type="String"   />
+			<item name="COMM_STUDENT_EXISTS" logicalName="commStudentExists" type="String"   />
+			<item name="COMM_RECRUIT_EXISTS" logicalName="commRecruitExists" type="String"   />
+			<item name="COMM_CAMP_CODE" logicalName="commCampCode" type="String"   />
+			<item name="COMM_RESULT" logicalName="commResult" type="String"   />
+			<item name="COMM_ACTION" logicalName="commAction" type="String"   />
+			<item name="COMM_COLL_CODE" logicalName="commCollCode" type="String"   />
+			<item name="COMM_LEVL_CODE" logicalName="commLevlCode" type="String"   />
+			<item name="COMM_DEGC_CODE" logicalName="commDegcCode" type="String"   />
+			<item name="COMM_PROGRAM" logicalName="commProgram" type="String"   />
+			<item name="COMM_MAJR_CODE" logicalName="commMajrCode" type="String"   />
+			<item name="COMM_DEPT_CODE" logicalName="commDeptCode" type="String"   />
+			<item name="OLD_CPLN_CODE" logicalName="oldCplnCode" type="String"   />
+			<item name="KEY_FUNCTION" logicalName="keyFunction" type="String"   />
+			<item name="OLD_CPLN_DESC" logicalName="oldCplnDesc" type="String"   />
+			<item name="NEW_CPLN_CODE" logicalName="newCplnCode" type="String"   />
+			<item name="NEW_CPLN_DESC" logicalName="newCplnDesc" type="String"   />
+			<item name="COMM_SAVE_FIELD_NAME" logicalName="commSaveFieldName" type="String"   />
+			<item name="CPLN_PIDM" logicalName="cplnPidm" type="java.math.BigDecimal"   />
+			<item name="CPLN_ACTION" logicalName="cplnAction" type="String"   />
+			<item name="CPLN_TYPE_IND" logicalName="cplnTypeInd" type="String"   />
+			<item name="CPLN_TERM_CODE" logicalName="cplnTermCode" type="String"   />
+			<item name="OLD_TERM_CODE" logicalName="oldTermCode" type="String"   />
+			<item name="CPLN_SEQNO" logicalName="cplnSeqno" type="java.math.BigDecimal"   />
+			<item name="OLD_SEQNO" logicalName="oldSeqno" type="java.math.BigDecimal"   />
+			<item name="COMMIT_IND" logicalName="commitInd" type="String"   />
+			<item name="ADD_PLAN" logicalName="addPlan" type="String"   />
+			<item name="PENDING_MAIL" logicalName="pendingMail" type="String"   />
+			<item name="DELETE_PLAN_COMM" logicalName="deletePlanComm" type="String"   />
+			<item name="DELETE_MAIL_COMM" logicalName="deleteMailComm" type="String"   />
+			<item name="SAVE_FIELD_NAME" logicalName="saveFieldName" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SCommPlanBlock</managerClass>
+
+	</manager>
+</b:beans>

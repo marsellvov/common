@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/finance/common/Foiiden/FoiidenAlerts.xml" LovDataPath="/net/hedtech/banner/finance/common/Foiiden/FoiidenLovs.xml" Name="FOIIDEN">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/finance/common/Foiiden/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="SPRIDEN_1_CANVAS" />
+    </Window>
+    <Window Id="SOUNDEX_WINDOW" Url="net/hedtech/banner/finance/common/Foiiden/views/ViewSoundexWindow">
+      <ContentCanvas Id="SOUNDEX_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item CanvasName="TEMP_CANVAS" DataType="String" Id="DISP_QUERY_STATUS" MaxLength="100" Type="DisplayItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_FORM" MaxLength="7" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKFLD" MaxLength="12" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD" MaxLength="17" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="21" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="SPRIDEN" MultiRecord="true">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="SPRIDEN_PIDM" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenId.hint" Id="SPRIDEN_ID" MaxLength="9" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenSurnamePrefix.hint" Id="SPRIDEN_SURNAME_PREFIX" MaxLength="60" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenLastName.hint" Id="SPRIDEN_LAST_NAME" MaxLength="60" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenFirstName.hint" Id="SPRIDEN_FIRST_NAME" MaxLength="60" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenMi.hint" Id="SPRIDEN_MI" MaxLength="60" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Hint="spriden.spridenChangeInd.hint" Id="SPRIDEN_CHANGE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="Date" Enabled="false" Hint="spriden.birthdate.hint" Id="BIRTHDATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" AllowInsert="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenNtypCode.hint" Id="SPRIDEN_NTYP_CODE" Lov="GTVNTYP_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="SOUNDEX">
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SOUNDEX_CANVAS" DataType="String" Enabled="true" Hint="soundex.soundexLastName.hint" Id="SOUNDEX_LAST_NAME" MaxLength="25" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SOUNDEX_CANVAS" DataType="String" Enabled="true" Hint="soundex.soundexFirstName.hint" Id="SOUNDEX_FIRST_NAME" MaxLength="60" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SPRIDEN_NTYP_LBT" MaxLength="30" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SEARCH_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SOUNDEX_SEARCH_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SPRIDEN_1_EXITVALUE_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SPRIDEN_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SOUNDEX_ROLLBACK_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SPRIDEN_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SOUNDEX_EXIT_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SOUNDEX_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="SPRIDEN_1_CANVAS" Id="SPRIDEN_NTYP_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+  </Logic>
+</FormStructure>

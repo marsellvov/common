@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/alumni/common/Apcaddr/parts/aoqolib/model/AOQOLIB.Model.Config.xml"/>
+	
+	<task id="AOQOLIB.TaskPart.Import" name="AOQOLIB">
+		<taskResources>/net/hedtech/banner/alumni/common/Apcaddr/parts/aoqolib/AOQOLIBStruct.xml</taskResources>
+		<supportCodeConfiguration>
+			<packages>
+			</packages>
+		</supportCodeConfiguration>
+
+		<formModelConfiguration config="AOQOLIB.Model.Config"/>
+		
+		<blockControllers>
+		</blockControllers>
+	</task>
+</b:beans>
+
+ 

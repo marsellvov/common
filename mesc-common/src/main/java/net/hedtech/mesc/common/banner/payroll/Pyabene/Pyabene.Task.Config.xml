@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Noqjpls/NOQJPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Poqrpls/POQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	
+	
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/mesc/common/banner/payroll/Pyabene/model/PYABENE.Model.Config.xml"/>
+	
+	<task id="PYABENE.Task.Config" name="PYABENE">
+		<baseTaskConfiguration config="BASE.Task.Config"/>
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+			<taskPartConfiguration name="NOQLIBR" config="NOQLIBR.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.mesc.common.banner.payroll.Pyabene.PyabeneTask</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/mesc/common/banner/payroll/Pyabene/PyabeneStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.mesc.common.banner.payroll.Pyabene.services.PyabeneServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="NOQJPLS.Lib.Config"/>
+				<libraryConfiguration config="POQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="PYABENE.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.mesc.common.banner.payroll.Pyabene.controller.PyabeneFormController</formController>
+		<blockControllers>
+			<block  name="G$_VPDI_BLOCK">net.hedtech.mesc.common.banner.payroll.Pyabene.controller.GVpdiBlockController</block>
+			<block  name="G$_NAV_BLOCK">net.hedtech.mesc.common.banner.payroll.Pyabene.controller.GNavBlockController</block>
+			<block  name="FORM_HEADER">net.hedtech.mesc.common.banner.payroll.Pyabene.controller.FormHeaderController</block>
+			<block  name="KEY_BLOCK">net.hedtech.mesc.common.banner.payroll.Pyabene.controller.KeyBlockController</block>
+			<block  name="PDRBENE">net.hedtech.mesc.common.banner.payroll.Pyabene.controller.PdrbeneController</block>
+			<block  name="BUTTON_CONTROL_BLOCK">net.hedtech.mesc.common.banner.payroll.Pyabene.controller.ButtonControlBlockController</block>
+			<block  name="G$_OPT_BLOCK">net.hedtech.mesc.common.banner.payroll.Pyabene.controller.GOptBlockController</block>
+			<block  name="G$_EXTENDED_SEARCH_BLOCK">net.hedtech.mesc.common.banner.payroll.Pyabene.controller.GExtendedSearchBlockController</block>
+		</blockControllers>
+		<menuControllers>
+			<menu  name="G$_DEFAULT_PM">net.hedtech.mesc.common.banner.payroll.Pyabene.controller.GDefaultPmContextController</menu>
+		</menuControllers>
+
+	</task>
+</b:beans>
+
+ 

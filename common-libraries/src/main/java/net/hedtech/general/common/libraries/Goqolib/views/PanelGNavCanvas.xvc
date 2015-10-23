@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="G$_NAV_BLOCK" />
+  <panel width="1007px" height="28px" top="0px" left="0px" id="pnlGNavCanvas" name="G$_NAV_CANVAS" class="StackedCanvas" visible="false">
+    <textbox label="gNavBlock.goItem.prompt" labelposition="right" labeloffset="-172" labelalign="center" labelfontsize="9pt" labelfontfamily="Verdana" name="g$_nav_block_goItem" style="GNvaTextItem" left="60px" top="1px" width="118px" height="23px" enabled="false" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="GO_ITEM" block="G$_NAV_BLOCK" maxlength="30" datatype="String" case="upper">
+      <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+    </textbox>
+    <button labelposition="left" labelalign="start" name="g$_nav_block_goItemBtn" style="GIconBtnClass" left="178px" top="3px" width="20px" height="20px" navigable="false" icon="search" tooltip="gNavBlock.goItemBtn.tooltip" member="GO_ITEM_BTN" block="G$_NAV_BLOCK" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+    </button>
+    <button labelposition="left" labelalign="start" name="g$_nav_block_urlMyInstitution" style="DEFAULT" left="346px" top="0px" width="427px" height="23px" enabled="false" bordertype="none" member="URL_MY_INSTITUTION" block="G$_NAV_BLOCK" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED" />
+    <text fontfamily="Verdana" fontsize="9pt" fontcolor="Black" name="text262" left="339px" top="5px" bordertype="none">gNavCanvas.text262.text</text>
+  </panel>
+</config>

@@ -1,0 +1,262 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Goamtch/GoamtchAlerts.xml" LovDataPath="/net/hedtech/banner/general/common/Goamtch/GoamtchLovs.xml" Name="GOAMTCH">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Goamtch/views/ViewMainWindow">
+      <ContentCanvas Id="KEY_BLOCK_CANVAS" />
+      <StackedCanvas Id="GOAMTCH_1_CANVAS" />
+      <TabPageCanvas Id="GOAMTCH_TAB_CANVAS">
+        <Page Id="MATCH_TAB" />
+        <Page Id="GOVCMID" />
+      </TabPageCanvas>
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false" />
+    </Window>
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Goamtch/views/ViewGOptWindow">
+      <StackedCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+    <Window Id="DETAILS_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Goamtch/views/ViewDetailsWindow">
+      <StackedCanvas Id="DETAILS_CANVAS" />
+    </Window>
+    <Window Id="COMMENTS_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Goamtch/views/ViewCommentsWindow">
+      <StackedCanvas Id="COMMENTS_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_USER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="true" Id="CALLED_FORM" MaxLength="7" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" DataType="String" Enabled="true" Id="CALLING_FORM" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="COMMIT_COMPLETED" MaxLength="7" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="DO_TAB_NAVIGATION" MaxLength="7" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_BLK_ITEM" MaxLength="70" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="MATCH_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="QUERIED_DETAIL" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="READ_IMAGES" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="SKIP_SAVE" MaxLength="70" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ALLOW_UPDATES" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ALLOW_CLEAR_FORM" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ALLOW_CLEAR_BLOCK" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="DETAILS_EXIST" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="MATCH_STATUS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="API_FAILURE" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ADDR_FAILED_LIT" MaxLength="100" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="F_CREATE_ADDRESS_ERR" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="F_CREATE_BIO_ERR" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="F_CREATE_EMAIL_ERR" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="F_CREATE_ADDID_ERR" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="F_CREATE_TELEPHONE_ERR" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="false" Id="GREEN_DATA_BAR_1" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" CanvasName="COMMENTS_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_2" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+    </Block>
+    <Block Id="KEY_BLOCK">
+      <Item CanvasName="KEY_BLOCK_CANVAS" DataType="String" Hint="keyBlock.id.hint" Id="ID" MaxLength="9" Type="TextItem" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="GENERATE_BTN" MaxLength="11" Type="Button" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" DataType="String" Enabled="true" Hint="keyBlock.keyblockSourceCode.hint" Id="KEYBLOCK_SOURCE_CODE" Lov="GTVCMSC_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEYBLOCK_SOURCE_CODE_LBT" MaxLength="14" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" DataType="String" Enabled="true" Hint="keyBlock.keyblockSourceDesc.hint" Id="KEYBLOCK_SOURCE_DESC" MaxLength="60" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Hint="keyBlock.keyblockSourceCommentBtn.hint" Id="KEYBLOCK_SOURCE_COMMENT_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" CanvasName="KEY_BLOCK_CANVAS" DataType="String" Enabled="true" Hint="keyBlock.keyblockSourceComment.hint" Id="KEYBLOCK_SOURCE_COMMENT" MaxLength="24765" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" DataType="String" Enabled="true" Id="KEYBLOCK_ATYP_CODE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Enabled="true" Id="KEYBLOCK_EMAL_CODE" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" DataType="String" Enabled="true" Id="KEYBLOCK_TELE_CODE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Enabled="true" Id="KEYBLOCK_ENTITY_CDE" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Enabled="true" Id="KEYBLOCK_API_FAILURE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" Navigable="true" Type="Button" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" Navigable="true" Type="Button" Visible="false" />
+    </Block>
+    <Block Id="GOTCMME">
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.lastName.hint" Id="LAST_NAME" MaxLength="60" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeFirstName.hint" Id="GOTCMME_FIRST_NAME" MaxLength="60" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeMi.hint" Id="GOTCMME_MI" MaxLength="60" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.gotcmmeAtypCode.hint" Id="GOTCMME_ATYP_CODE" Lov="STVATYP_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Id="GOTCMME_ATYP_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.atypDescription.hint" Id="ATYP_DESCRIPTION" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeStreetLine1.hint" Id="GOTCMME_STREET_LINE1" MaxLength="75" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeStreetLine2.hint" Id="GOTCMME_STREET_LINE2" MaxLength="75" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeStreetLine3.hint" Id="GOTCMME_STREET_LINE3" MaxLength="75" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeCity.hint" Id="GOTCMME_CITY" MaxLength="50" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.gotcmmeStatCode.hint" Id="GOTCMME_STAT_CODE" Lov="STVSTAT_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Id="GOTCMME_STAT_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.statDescription.hint" Id="STAT_DESCRIPTION" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeZip.hint" Id="GOTCMME_ZIP" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Id="GOTCMME_ZIP_LBT" MaxLength="6" Navigable="false" Type="Button" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.gotcmmeCntyCode.hint" Id="GOTCMME_CNTY_CODE" Lov="STVCNTY_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Id="GOTCMME_CNTY_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.cntyDescription.hint" Id="CNTY_DESCRIPTION" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.gotcmmeNatnCode.hint" Id="GOTCMME_NATN_CODE" Lov="STVNATN_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Id="GOTCMME_NATN_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.natnDescription.hint" Id="NATN_DESCRIPTION" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.nonpersonName.hint" Id="NONPERSON_NAME" MaxLength="60" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.gotcmmeSsn.hint" Id="GOTCMME_SSN" MaxLength="15" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_GOTCMME_SSN" MaxLength="15" Navigable="false" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeBirthDay.hint" Id="GOTCMME_BIRTH_DAY" MaxLength="2" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeBirthMon.hint" Id="GOTCMME_BIRTH_MON" MaxLength="2" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeBirthYear.hint" Id="GOTCMME_BIRTH_YEAR" MaxLength="4" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeSex.hint" Id="GOTCMME_SEX" MaxLength="1" Type="List" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.gotcmmeTeleCode.hint" Id="GOTCMME_TELE_CODE" Lov="STVTELE_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Id="GOTCMME_TELE_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.teleDescription.hint" Id="TELE_DESCRIPTION" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmePhoneArea.hint" Id="GOTCMME_PHONE_AREA" MaxLength="6" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmePhoneNumber.hint" Id="GOTCMME_PHONE_NUMBER" MaxLength="12" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmePhoneExt.hint" Id="GOTCMME_PHONE_EXT" MaxLength="10" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.gotcmmeEmalCode.hint" Id="GOTCMME_EMAL_CODE" Lov="GTVEMAL_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Id="GOTCMME_EMAL_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.emalDescription.hint" Id="EMAL_DESCRIPTION" MaxLength="60" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeEmailAddress.hint" Id="GOTCMME_EMAIL_ADDRESS" MaxLength="128" Type="TextItem" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.gotcmmeAdidCode.hint" Id="GOTCMME_ADID_CODE" Lov="GTVADID_LOV" MaxLength="4" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Id="GOTCMME_ADID_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.adidDesc.hint" Id="ADID_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" DataType="String" Hint="gotcmme.gotcmmeAdditionalId.hint" Id="GOTCMME_ADDITIONAL_ID" MaxLength="50" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="GOAMTCH_1_CANVAS" DataType="String" Enabled="false" Id="GREEN_DATA_BAR_1" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item DataType="String" Enabled="false" Id="GOTCMME_ID" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="GOTCMME_LAST_NAME" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="GOTCMME_ENTITY_CDE" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="GOTCMME_ASRC_CODE" MaxLength="4" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="GOTCMME_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="NO_ADDR_INFO" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" CanvasName="KEY_BLOCK_CANVAS" DataType="String" Enabled="true" Hint="gotcmme.sourceComment.hint" Id="SOURCE_COMMENT" MaxLength="24765" Navigable="false" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="GOVCMRT_MATCH">
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmrtMatch.matchId.hint" Id="MATCH_ID" MaxLength="9" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmrtMatch.matchName.hint" Id="MATCH_NAME" MaxLength="230" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmrtMatch.matchSsn.hint" Id="MATCH_SSN" MaxLength="15" PageName="MATCH_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="Date" Enabled="true" Hint="govcmrtMatch.matchBirthDate.hint" Id="MATCH_BIRTH_DATE" MaxLength="11" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmrtMatch.matchSex.hint" Id="MATCH_SEX" MaxLength="1" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Hint="govcmrtMatch.matchAtypDescription.hint" Id="MATCH_ATYP_DESCRIPTION" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Hint="govcmrtMatch.matchAddressStatusInd.hint" Id="MATCH_ADDRESS_STATUS_IND" MaxLength="1" Navigable="false" Type="Checkbox" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmrtMatch.matchStreetLine1.hint" Id="MATCH_STREET_LINE1" MaxLength="90" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmrtMatch.matchStreetLine2.hint" Id="MATCH_STREET_LINE2" MaxLength="75" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmrtMatch.matchStreetLine3.hint" Id="MATCH_STREET_LINE3" MaxLength="75" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmrtMatch.matchCityStateZip.hint" Id="MATCH_CITY_STATE_ZIP" MaxLength="100" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Hint="govcmrtMatch.matchCounty.hint" Id="MATCH_COUNTY" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmrtMatch.matchCountyNation.hint" Id="MATCH_COUNTY_NATION" MaxLength="60" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Hint="govcmrtMatch.matchNation.hint" Id="MATCH_NATION" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmrtMatch.matchPhone.hint" Id="MATCH_PHONE" MaxLength="30" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmrtMatch.matchEmail.hint" Id="MATCH_EMAIL" MaxLength="140" PageName="MATCH_TAB" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" DataType="String" Enabled="true" Hint="govcmrtMatch.matchAdidCode.hint" Id="MATCH_ADID_CODE" MaxLength="4" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmrtMatch.matchAdditionalId.hint" Id="MATCH_ADDITIONAL_ID" MaxLength="80" PageName="MATCH_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmrtMatch.addressList.hint" Id="ADDRESS_LIST" MaxLength="176" PageName="MATCH_TAB" Type="List" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmrtMatch.phoneList.hint" Id="PHONE_LIST" MaxLength="30" PageName="MATCH_TAB" Type="List" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmrtMatch.emailList.hint" Id="EMAIL_LIST" MaxLength="90" PageName="MATCH_TAB" Type="List" />
+      <Item AllowInsert="false" AllowSearch="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmrtMatch.matchList.hint" Id="MATCH_LIST" MaxLength="3000" PageName="MATCH_TAB" Type="List" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Number" Hint="govcmrtMatch.govcmrtCmsrPriorityNo.hint" Id="GOVCMRT_CMSR_PRIORITY_NO" MaxLength="3" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Hint="govcmrtMatch.govcmrtMessage.hint" Id="GOVCMRT_MESSAGE" MaxLength="250" Navigable="false" Type="TextItem" />
+      <Item DataType="Number" Id="GOVCMRT_PIDM" MaxLength="9" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="GOVCMRT_SPRIDEN_ID_ROWID" MaxLength="18" Navigable="false" Type="TextItem" />
+      <Item DataType="String" Id="GOVCMRT_SPRIDEN_NAME_ROWID" MaxLength="18" Navigable="false" Type="TextItem" />
+      <Item DataType="String" Id="GOVCMRT_SPRADDR_ROWID" MaxLength="18" Navigable="false" Type="TextItem" />
+      <Item DataType="String" Id="GOVCMRT_SPRTELE_ROWID" MaxLength="18" Navigable="false" Type="TextItem" />
+      <Item DataType="String" Id="GOVCMRT_GOREMAL_ROWID" MaxLength="18" Navigable="false" Type="TextItem" />
+      <Item DataType="String" Id="GOVCMRT_GORADID_ROWID" MaxLength="18" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" DataType="String" Id="GOVCMRT_ID" MaxLength="10" Navigable="false" Type="TextItem" />
+      <Item DataType="String" Id="GOVCMRT_NAME" MaxLength="126" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block Id="GOVCMID" MultiRecord="true">
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="Number" Enabled="false" Hint="govcmid.govcmidPidm.hint" Id="GOVCMID_PIDM" MaxLength="8" Navigable="false" PageName="GOVCMID" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSort="true" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.govcmidId.hint" Id="GOVCMID_ID" MaxLength="10" PageName="GOVCMID" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSort="true" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.govcmidName.hint" Id="GOVCMID_NAME" MaxLength="230" PageName="GOVCMID" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.matchId.hint" Id="MATCH_ID" MaxLength="10" Navigable="false" PageName="GOVCMID" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.matchSsn.hint" Id="MATCH_SSN" MaxLength="15" PageName="GOVCMID" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="Date" Enabled="true" Hint="govcmid.matchBirthDate.hint" Id="MATCH_BIRTH_DATE" MaxLength="11" PageName="GOVCMID" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Hint="govcmid.matchSex.hint" Id="MATCH_SEX" MaxLength="1" PageName="GOVCMID" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.addressHierarchyMatch.hint" Id="ADDRESS_HIERARCHY_MATCH" MaxLength="200" PageName="GOVCMID" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.telephoneHierarchyMatch.hint" Id="TELEPHONE_HIERARCHY_MATCH" MaxLength="200" PageName="GOVCMID" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.emailHierarchyMatch.hint" Id="EMAIL_HIERARCHY_MATCH" MaxLength="200" PageName="GOVCMID" Type="TextItem" />
+      <Item DataType="String" Id="MATCH_ADD_CODE" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.matchAddId.hint" Id="MATCH_ADD_ID" MaxLength="80" PageName="GOVCMID" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.matchPriorityList.hint" Id="MATCH_PRIORITY_LIST" MaxLength="3000" PageName="GOVCMID" Type="List" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.addressList.hint" Id="ADDRESS_LIST" MaxLength="90" PageName="GOVCMID" Type="List" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.phoneList.hint" Id="PHONE_LIST" MaxLength="30" PageName="GOVCMID" Type="List" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Hint="govcmid.emailList.hint" Id="EMAIL_LIST" MaxLength="90" PageName="GOVCMID" Type="List" Visible="true" />
+      <Item DataType="String" Id="GOVCMRT_SPRADDR_ROWID" MaxLength="18" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="GOVCMRT_SPRTELE_ROWID" MaxLength="18" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="GOVCMRT_GOREMAL_ROWID" MaxLength="18" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="GOVCMRT_GORADID_ROWID" MaxLength="18" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="GORCMDO">
+      <Item AllowSearch="false" DataType="String" Id="OBJS_NAME1" MaxLength="30" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Id="OBJS_NAME2" MaxLength="30" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Id="OBJS_NAME3" MaxLength="30" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Id="OBJS_NAME4" MaxLength="30" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Id="OBJS_NAME5" MaxLength="30" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Id="OBJS_NAME6" MaxLength="30" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowUpdate="false" CanvasName="DETAILS_CANVAS" Id="OBJS_DESC1" MaxLength="30" Type="Button" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="DETAILS_CANVAS" Id="OBJS_DESC2" MaxLength="30" Type="Button" Visible="false" />
+      <Item AllowUpdate="false" CanvasName="DETAILS_CANVAS" Id="OBJS_DESC3" MaxLength="30" Type="Button" Visible="false" />
+      <Item AllowUpdate="false" CanvasName="DETAILS_CANVAS" Id="OBJS_DESC4" MaxLength="30" Type="Button" Visible="false" />
+      <Item AllowUpdate="false" CanvasName="DETAILS_CANVAS" Id="OBJS_DESC5" MaxLength="30" Type="Button" Visible="false" />
+      <Item AllowUpdate="false" CanvasName="DETAILS_CANVAS" Id="OBJS_DESC6" MaxLength="30" Type="Button" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" Id="GTVCMSC" NextBlock="GORCMSP" PreviousBlock="GORCMSP">
+      <Item DataType="String" Enabled="false" Id="GTVCMSC_CODE" MaxLength="20" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="GTVCMSC_DESC" MaxLength="60" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="COMMENTS_CANVAS" DataType="String" Id="GTVCMSC_LONG_DESC" MaxLength="4000" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="COMMENTS_CANVAS" DataType="String" Id="LONG_DESC" MaxLength="4000" Type="TextItem" />
+    </Block>
+    <Block AllowDelete="false" AllowInsert="false" Id="GORCMSP" MultiRecord="true" NextBlock="GTVCMSC" PreviousBlock="GTVCMSC">
+      <Item DataType="String" Enabled="false" Id="GORCMSP_CMSC_CODE" MaxLength="20" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="COMMENTS_CANVAS" DataType="Number" Id="GORCMSP_PRIORITY_NO" MaxLength="3" Required="true" Type="TextItem" />
+      <Item DataType="String" Enabled="false" Id="GORCMSP_DESC" MaxLength="60" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="COMMENTS_CANVAS" DataType="String" Id="GORCMSP_LONG_DESC" MaxLength="4000" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="COMMENTS_CANVAS" DataType="String" Id="LONG_DESC" MaxLength="4000" Type="TextItem" />
+      <Item CanvasName="COMMENTS_CANVAS" Id="COMMENTS_CLOSE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" CanvasName="G$_NAV_CANVAS" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="GOAMTCH_1_CANVAS" Enabled="false" Id="CREATE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Enabled="false" Id="SELECT_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Enabled="false" Id="UPDATE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Enabled="false" Id="DETAILS_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Enabled="false" Id="CHECK_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GOAMTCH_1_CANVAS" Enabled="false" Hint="buttonControlBlock.sourceCommentBtn.hint" Id="SOURCE_COMMENT_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GOAMTCH_TAB_CANVAS" Enabled="false" Id="CLEAR_MATCH_BTN" MaxLength="30" Navigable="false" PageName="MATCH_TAB" Type="Button" />
+      <Item CanvasName="GOAMTCH_TAB_CANVAS" Enabled="false" Id="CLEAR_SUSPENSE_BTN" MaxLength="30" Navigable="false" PageName="GOVCMID" Type="Button" />
+      <Item CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Id="SORT_ID_BTN" MaxLength="30" Navigable="false" PageName="GOVCMID" Visible="true" />
+      <Item CanvasName="GOAMTCH_TAB_CANVAS" DataType="String" Enabled="true" Id="SORT_NAME_BTN" MaxLength="30" Navigable="false" PageName="GOVCMID" Visible="true" />
+    </Block>
+    <Block Id="G$_OPT_BLOCK">
+      <Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_SEL" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+    </Block>
+  </Logic>
+</FormStructure>

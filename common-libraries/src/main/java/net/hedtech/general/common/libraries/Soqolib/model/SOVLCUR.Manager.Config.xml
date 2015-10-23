@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SOVLCUR.Manager.Config" name="sovlcur">
+		<kind>View</kind>
+		<items>
+			<item name="SOVLCUR_ROLLED_SEQNO" logicalName="sovlcurRolledSeqno" type="java.math.BigDecimal" physicalName="SOVLCUR_ROLLED_SEQNO"  />
+			<item name="SOVLCUR_RPT_CURRENT_IND" logicalName="sovlcurRptCurrentInd" type="String" physicalName="sovlcur_current_ind"  />
+			<item name="SUMMARY_ROWID" logicalName="summaryRowid" type="String" physicalName="sovlcur_rowid"  />
+			<item name="SOVLCUR_PIDM" logicalName="sovlcurPidm" type="java.math.BigDecimal" physicalName="SOVLCUR_PIDM"  />
+			<item name="SOVLCUR_SEQNO" logicalName="sovlcurSeqno" type="java.math.BigDecimal" physicalName="sovlcur_seqno"  />
+			<item name="SOVLCUR_GAPP_SEQNO" logicalName="sovlcurGappSeqno" type="java.math.BigDecimal" physicalName="SOVLCUR_GAPP_SEQNO"  />
+			<item name="SOVLCUR_PRIORITY_NO" logicalName="sovlcurPriorityNo" type="java.math.BigDecimal" physicalName="SOVLCUR_PRIORITY_NO"  />
+			<item name="SOVLCUR_TERM_CODE" logicalName="sovlcurTermCode" type="String" physicalName="SOVLCUR_TERM_CODE"  />
+			<item name="SOVLCUR_PROGRAM" logicalName="sovlcurProgram" type="String" physicalName="SOVLCUR_PROGRAM"  />
+			<item name="SOVLCUR_TERM_CODE_CTLG" logicalName="sovlcurTermCodeCtlg" type="String" physicalName="SOVLCUR_TERM_CODE_CTLG"  />
+			<item name="SOVLCUR_KEY_SEQNO" logicalName="sovlcurKeySeqno" type="java.math.BigDecimal" physicalName="SOVLCUR_KEY_SEQNO"  />
+			<item name="SOVLCUR_PROGRAM_DESC" logicalName="sovlcurProgramDesc" type="String"  virtual="true" />
+			<item name="STVLEVL_DESC" logicalName="stvlevlDesc" type="String"  virtual="true" />
+			<item name="STVCAMP_DESC" logicalName="stvcampDesc" type="String"  virtual="true" />
+			<item name="STVCOLL_DESC" logicalName="stvcollDesc" type="String"  virtual="true" />
+			<item name="STVDEGC_DESC" logicalName="stvdegcDesc" type="String"  virtual="true" />
+			<item name="SOVLCUR_TERM_CODE_END" logicalName="sovlcurTermCodeEnd" type="String" physicalName="SOVLCUR_TERM_CODE_END"  />
+			<item name="SOVLCUR_STVSTYP_DESC" logicalName="sovlcurStvstypDesc" type="String"  virtual="true" />
+			<item name="SOVLCUR_STVRATE_DESC" logicalName="sovlcurStvrateDesc" type="String"  virtual="true" />
+			<item name="SOVLCUR_STYP_CODE" logicalName="sovlcurStypCode" type="String" physicalName="SOVLCUR_STYP_CODE"  />
+			<item name="SOVLCUR_LEVL_CODE" logicalName="sovlcurLevlCode" type="String" physicalName="SOVLCUR_LEVL_CODE"  />
+			<item name="SOVLCUR_CAMP_CODE" logicalName="sovlcurCampCode" type="String" physicalName="SOVLCUR_CAMP_CODE"  />
+			<item name="SOVLCUR_RATE_CODE" logicalName="sovlcurRateCode" type="String" physicalName="SOVLCUR_RATE_CODE"  />
+			<item name="SOVLCUR_COLL_CODE" logicalName="sovlcurCollCode" type="String" physicalName="SOVLCUR_COLL_CODE"  />
+			<item name="SOVLCUR_DEGC_CODE" logicalName="sovlcurDegcCode" type="String" physicalName="SOVLCUR_DEGC_CODE"  />
+			<item name="SOVLCUR_ADMT_CODE" logicalName="sovlcurAdmtCode" type="String" physicalName="SOVLCUR_admt_CODE"  />
+			<item name="SOVLCUR_DGMR_SEQNO" logicalName="sovlcurDgmrSeqno" type="java.math.BigDecimal"  virtual="true" />
+			<item name="SOVLCUR_STVADMT_DESC" logicalName="sovlcurStvadmtDesc" type="String"  virtual="true" />
+			<item name="SOVLCUR_TERM_CODE_ADMIT" logicalName="sovlcurTermCodeAdmit" type="String" physicalName="SOVLCUR_TERM_CODE_ADMIT"  />
+			<item name="SOVLCUR_TERM_CODE_MATRIC" logicalName="sovlcurTermCodeMatric" type="String" physicalName="SOVLCUR_TERM_CODE_MATRIC"  />
+			<item name="PRIMARY_DESC" logicalName="primaryDesc" type="String"  virtual="true" />
+			<item name="SOVLCUR_LMOD_CODE" logicalName="sovlcurLmodCode" type="String" physicalName="SOVLCUR_LMOD_CODE"  />
+			<item name="SOVLCUR_LMOD_DESC" logicalName="sovlcurLmodDesc" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Soqolib.model.SovlcurAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE (:S___CURRICULA_SUMMARY_SUMMARY_CODE IS NULL OR sovlcur_lmod_code = :S___CURRICULA_SUMMARY_SUMMARY_CODE) AND (:S___CURRICULA_SUMMARY_SUMMARY_KEY_SEQNO IS NULL OR sovlcur_key_seqno = :S___CURRICULA_SUMMARY_SUMMARY_KEY_SEQNO) AND ((:S___CURRICULA_SUMMARY_SUMMARY_TERM_CODE IS NOT NULL AND ((sovlcur_term_code = :S___CURRICULA_SUMMARY_SUMMARY_TERM_CODE AND (sovlcur_lmod_code) IN (sb_curriculum_str.f_recruit, sb_curriculum_str.f_admissions)) OR (sovlcur_lmod_code = sb_curriculum_str.f_outcome) OR (sovlcur_lmod_code = sb_curriculum_str.f_learner AND sovlcur_term_code < :S___CURRICULA_SUMMARY_SUMMARY_END_TERM))) OR :S___CURRICULA_SUMMARY_SUMMARY_TERM_CODE IS NULL) AND sovlcur_current_ind = 'Y' AND sovlcur_active_ind = 'Y']]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by  decode(sovlcur_lmod_code, sb_curriculum_str.f_learner,99,sovlcur_key_seqno), 
+sovlcur_priority_no, sovlcur_seqno desc    ]]></defaultOrderByClause>	
+
+		<pagination maximumRows="1" enabled="true"/>
+
+	</manager>
+</b:beans>

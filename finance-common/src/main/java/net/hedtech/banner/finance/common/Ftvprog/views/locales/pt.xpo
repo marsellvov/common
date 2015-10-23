@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="ftvprog.ftvprogCoasCode.prompt">Chart of Accounts</msg>
+  <msg id="ftvprog.ftvprogProgCode.prompt">Program Code</msg>
+  <msg id="ftvprog.ftvprogTitle.prompt">Title</msg>
+  <msg id="ftvprog.ftvprogDataEntryInd.prompt">Data Entry</msg>
+  <msg id="ftvprog.ftvprogStatusInd.prompt">Status</msg>
+  <msg id="ftvprog.ftvprogEffDate.prompt">Effective Date</msg>
+  <msg id="ftvprog.ftvprogTermDate.prompt">Termination Date</msg>
+  <msg id="buttonControlBlock.ftvprog1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.ftvprog1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.ftvprog1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Program Code Validation Form</msg>
+  <msg id="ftvprog.accordion.title">Program Code Validation</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

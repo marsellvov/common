@@ -1,0 +1,458 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/finance/common/Fragrnt/FragrntAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/finance/common/Fragrnt/FragrntLovs.xml" Name="FRAGRNT">
+  <Visual>
+    <Window Id="PASS_THRU_IND_INFO" Modal="true" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewPassThruIndInfo" />
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <StackedCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="FRAGRNT_1_CANVAS" />
+      <TabPageCanvas Id="FRAGRNT_1_TAB_CANVAS">
+        <Page Id="HEADER_INFORMATION" />
+        <Page Id="GRANT_AGENCY_INFORMATION" />
+        <Page Id="LOCATION_INFORMATION" />
+        <Page Id="COST_CODE_INFORMATION" />
+        <Page Id="PERSONNEL_INFORMATION" />
+        <Page Id="BILLING_INFORMATION" />
+        <Page Id="USER_DEFINED_DATA" />
+        <Page Id="EFFORT_REPORTING" />
+        <Page Id="PASSTHROUGH_AGENCY" />
+      </TabPageCanvas>
+      <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false" />
+    </Window>
+    <Window Id="BILLING_INFO" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewBillingInfo" />
+    <Window Id="AGENCY_INFO" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewAgencyInfo" />
+    <Window Id="USER_CODES_INFO" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewUserCodesInfo" />
+    <Window Id="COST_SHARE_INFO" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewCostShareInfo" />
+    <Window Id="PERSONNEL_INFO" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewPersonnelInfo" />
+    <Window Id="NAVIGATE_TO" Modal="true" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewNavigateTo">
+      <ContentCanvas Id="NAVIGATE_TO" />
+    </Window>
+    <Window Id="LOCATION_INFO" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewLocationInfo" />
+    <Window Id="COPY_GRNT" Modal="true" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewCopyGrnt">
+      <ContentCanvas Id="COPY_GRNT" />
+    </Window>
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/finance/common/Fragrnt/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item DataType="String" Id="ORG_VALIDATE_FLAG" MaxLength="1" Type="TextItem" />
+      <Item DataType="String" Id="ORG_P_VALIDATE_FLAG" MaxLength="1" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FROM_NEW_ITEM" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="HOLD_DESC" MaxLength="35" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_ORGN" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_PAYMENT_ACCT_CODE_LBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBGRNT_AGENCY_PRED_CODE" MaxLength="9" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_PRED" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GOT_PIDM" MaxLength="9" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="formHeader.frbgrntAgencyPredName.hint" Id="FRBGRNT_AGENCY_PRED_NAME" MaxLength="230" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORK_STATUS_DESC" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COMMIT_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_PRESS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURR_BLOCK" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_FORM" MaxLength="7" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKUSER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_USER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHANGED_DATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ERR_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_BOX_DEFLT" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ROLLBACK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="RECLR_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COPY_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="BLOCK_STATUS_F" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="BLOCK_STATUS_S" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKFLD" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORK_STATUS_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="RETRIEVED_ORGN_CODE" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_FOBSEQN_TYPE" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="POST_QUERY_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="BYPASS_REFORMAT" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_STATUS_CODE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_ALT_STATUS_DESC" MaxLength="35" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="HOLD_STATUS_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="LOCN_ERROR_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_ITEM_NAME" MaxLength="40" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_PI_ID_CODE" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="SECOND_HOLD" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_PI_ID_CODE_FRRGRPI" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COPY_FUNCT_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COPY_FUNCT_PROCESS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COPY_FROM_PROP" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRGRPI_FRBGRNT_COPY_ID" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="CURRENT_AGENCY_CODE" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Enabled="true" Id="TOTAL" MaxLength="25" MaxValue="100.0" MinValue="0.0" Navigable="false" PageName="PASSTHROUGH_AGENCY" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="true" Id="PRE_TOTAL" MaxLength="25" MaxValue=" 999,999,999,999,999.99" MinValue="0.0" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FROM_EXECUTE_QUERY" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="STORE_ORG_STATUS_DESC" MaxLength="70" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_0" MaxLength="24" Navigable="false" PageName="BILLING_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_3" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item DataType="String" Id="DEL_READY" MaxLength="30" Type="TextItem" />
+      <Item DataType="String" Id="HOLD_FRRGREC_FIELDS" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item DataType="Number" Id="HOLD_FRRGREC_CURRREC" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="HOLD_FRRGREC_CURITEM" MaxLength="100" Type="TextItem" Visible="false" />
+      <Item DataType="Number" Id="CALLED_FROM_INQUIRY" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="NEXT_DOC_NUM" MaxLength="8" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block Id="KEY_BLOCK">
+      <Item CanvasName="FRAGRNT_1_CANVAS" DataType="String" Id="DISPLAY_FRBGRNT_CODE" MaxLength="9" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="FRAGRNT_1_CANVAS" DataType="String" Enabled="true" Hint="keyBlock.displayPropCode.hint" Id="DISPLAY_PROP_CODE" MaxLength="9" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_CANVAS" DataType="String" Enabled="false" Id="DISPLAY_TEXT_IND" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_CANVAS" Id="EXECUTE_BTN" Navigable="true" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_CANVAS" Id="KEY-CLRFRM_BTN" Navigable="true" Type="Button" Visible="false" />
+    </Block>
+    <Block Id="FRBGRNT">
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbgrnt.frbgrntAgencyCode2.hint" Id="FRBGRNT_AGENCY_CODE_2" MaxLength="9" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbgrnt.frbgrntAgencyName2.hint" Id="FRBGRNT_AGENCY_NAME_2" MaxLength="230" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntCoasCode.hint" Id="FRBGRNT_COAS_CODE" Lov="FTVCOAS_LOV" MaxLength="30" PageName="HEADER_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frbgrnt.frbgrntOrgnCodeRespOffice.hint" Id="FRBGRNT_ORGN_CODE_RESP_OFFICE" MaxLength="30" PageName="HEADER_INFORMATION" Required="true" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.orgnCodeDescr.hint" Id="ORGN_CODE_DESCR" MaxLength="35" Navigable="false" PageName="HEADER_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntLongTitle.hint" Id="FRBGRNT_LONG_TITLE" MaxLength="256" PageName="HEADER_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntTitle.hint" Id="FRBGRNT_TITLE" MaxLength="35" PageName="HEADER_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntEffCertRequiredInd.hint" Id="FRBGRNT_EFF_CERT_REQUIRED_IND" MaxLength="1" PageName="HEADER_INFORMATION" Type="Checkbox" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntAgencyCode.hint" Id="FRBGRNT_AGENCY_CODE" MaxLength="9" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbgrnt.frbgrntAgencyName.hint" Id="FRBGRNT_AGENCY_NAME" MaxLength="230" Navigable="false" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntPiIdCode.hint" Id="FRBGRNT_PI_ID_CODE" MaxLength="9" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbgrnt.frbgrntPiIdName.hint" Id="FRBGRNT_PI_ID_NAME" MaxLength="230" Navigable="false" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbgrnt.frbgrntProjectStartDate.hint" Id="FRBGRNT_PROJECT_START_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbgrnt.frbgrntProjectEndDate.hint" Id="FRBGRNT_PROJECT_END_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntPropCode.hint" Id="FRBGRNT_PROP_CODE" MaxLength="30" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbgrnt.frbgrntTermDate.hint" Id="FRBGRNT_TERM_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" DataType="Date" Enabled="false" Id="HOLD_END_DATE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="Date" Enabled="false" Id="HOLD_START_DATE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbgrnt.frbgrntExpendEndDate.hint" Id="FRBGRNT_EXPEND_END_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntStatusCode.hint" Id="FRBGRNT_STATUS_CODE" MaxLength="2" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.statusDescr.hint" Id="STATUS_DESCR" MaxLength="70" Navigable="false" PageName="HEADER_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbgrnt.displayPassThruInd.hint" Id="DISPLAY_PASS_THRU_IND" MaxLength="1" PageName="HEADER_INFORMATION" Type="Checkbox" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntAlternateStatusDesc.hint" Id="FRBGRNT_ALTERNATE_STATUS_DESC" MaxLength="35" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbgrnt.frbgrntStatusDate.hint" Id="FRBGRNT_STATUS_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Hint="frbgrnt.frbgrntCode.hint" Id="FRBGRNT_CODE" MaxLength="9" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbgrnt.frbgrntGrntCodeRelated.hint" Id="FRBGRNT_GRNT_CODE_RELATED" MaxLength="9" Navigable="false" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="RELATED_GRNT_DESCR" MaxLength="35" Navigable="false" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frbgrnt.frbgrntCurrentFundingAmt.hint" Id="FRBGRNT_CURRENT_FUNDING_AMT" MaxLength="25" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frbgrnt.frbgrntCumFundingAmt.hint" Id="FRBGRNT_CUM_FUNDING_AMT" MaxLength="25" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frbgrnt.frbgrntMaxFundingAmt.hint" Id="FRBGRNT_MAX_FUNDING_AMT" MaxLength="25" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frbgrnt.frbgrntRcptShareTotal.hint" Id="FRBGRNT_RCPT_SHARE_TOTAL" MaxLength="16" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntGrantType.hint" Id="FRBGRNT_GRANT_TYPE" MaxLength="2" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntGrantDesc.hint" Id="FRBGRNT_GRANT_DESC" MaxLength="70" Navigable="false" PageName="HEADER_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntCategory.hint" Id="FRBGRNT_CATEGORY" MaxLength="1" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntCategoryDesc.hint" Id="FRBGRNT_CATEGORY_DESC" MaxLength="70" Navigable="false" PageName="HEADER_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntSubCategory.hint" Id="FRBGRNT_SUB_CATEGORY" MaxLength="4" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntSubCatDesc.hint" Id="FRBGRNT_SUB_CAT_DESC" MaxLength="70" Navigable="false" PageName="HEADER_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntCfdaCode.hint" Id="FRBGRNT_CFDA_CODE" MaxLength="30" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntSponsorId.hint" Id="FRBGRNT_SPONSOR_ID" MaxLength="30" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntAgencyContact.hint" Id="FRBGRNT_AGENCY_CONTACT" MaxLength="35" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntAgencyAddrCode.hint" Id="FRBGRNT_AGENCY_ADDR_CODE" MaxLength="2" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frbgrnt.frbgrntAgencyAddrSeqNum.hint" Id="FRBGRNT_AGENCY_ADDR_SEQ_NUM" MaxLength="2" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="HOUSE_NUMBER" MaxLength="75" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="ADDRESS_LINE_1" MaxLength="75" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="ADDRESS_LINE_2" MaxLength="75" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="ADDRESS_LINE_3" MaxLength="75" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="ADDRESS_LINE_4" MaxLength="75" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="CITY" MaxLength="50" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="STATE" MaxLength="30" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="ZIP_CODE" MaxLength="30" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Id="FRBGRNT_AGENCY_EMAIL" MaxLength="128" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="PHONE_EXISTS" MaxLength="1" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntAgencyPhoneType.hint" Id="FRBGRNT_AGENCY_PHONE_TYPE" MaxLength="4" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="CTRY_CODE_PHONE" MaxLength="4" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="AREA_CODE" MaxLength="6" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="PHONE_NUMBER" MaxLength="12" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="EXTENSION" MaxLength="10" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Id="FRBGRNT_AGENCY_TELE_SEQNO" MaxLength="2" PageName="GRANT_AGENCY_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frbgrnt.frbgrntIdcEncInd.hint" Id="FRBGRNT_IDC_ENC_IND" MaxLength="1" PageName="COST_CODE_INFORMATION" Type="Checkbox" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntCoasCodeIcCs.hint" Id="FRBGRNT_COAS_CODE_IC_CS" Lov="FTVCOAS_LOV" MaxLength="30" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntBasiCodeIc.hint" Id="FRBGRNT_BASI_CODE_IC" MaxLength="6" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBGRNT_BASI_CODE_IC_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntIndrCodeRate.hint" Id="FRBGRNT_INDR_CODE_RATE" MaxLength="6" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBGRNT_INDR_CODE_RATE_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntIndaCodeCharge.hint" Id="FRBGRNT_INDA_CODE_CHARGE" MaxLength="6" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBGRNT_INDA_CODE_CHARGE_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntInddCodeDistr.hint" Id="FRBGRNT_INDD_CODE_DISTR" MaxLength="6" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBGRNT_INDD_CODE_DISTR_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntBasiCodeCs.hint" Id="FRBGRNT_BASI_CODE_CS" MaxLength="6" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBGRNT_BASI_CODE_CS_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntCstrCodeRate.hint" Id="FRBGRNT_CSTR_CODE_RATE" Lov="FRRCSTR_LOV" MaxLength="6" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBGRNT_CSTR_CODE_RATE_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntCstaCodeCharge.hint" Id="FRBGRNT_CSTA_CODE_CHARGE" Lov="FRBCSTA_LOV" MaxLength="6" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBGRNT_CSTA_CODE_CHARGE_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgrnt.frbgrntCstdCodeDistr.hint" Id="FRBGRNT_CSTD_CODE_DISTR" Lov="FRBCSTD_LOV" MaxLength="6" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBGRNT_CSTD_CODE_DISTR_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="FRBGRNT_AGENCY_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="FRBGRNT_AGENCY_PRED_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="Number" Enabled="false" Id="FRBGRNT_CFDA_INTERNAL_ID_NO" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <!--<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_CANVAS" DataType="Date" Enabled="false" Id="FRBGRNT_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />-->
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="FRBGRNT_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" CanvasName="FRAGRNT_1_CANVAS">
+        <Extension Name="ViewMode" Value="None" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE" />
+      </Item>
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="FRBGRNT_PI_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <!--<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_CANVAS" DataType="String" Enabled="false" Id="FRBGRNT_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />-->
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRBGRNT_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" CanvasName="FRAGRNT_1_CANVAS">
+        <Extension Name="ViewMode" Value="None" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID" />
+      </Item>
+    </Block>
+    <Block Id="FRRAGPT" MultiRecord="true" NavigationStyle="ChangeRecord">
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Hint="frragpt.frragptGrntCode.hint" Id="FRRAGPT_GRNT_CODE" MaxLength="9" Navigable="false" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frragpt.frragptAgencyCode.hint" Id="FRRAGPT_AGENCY_CODE" Lov="FTVAGCY_LOV" MaxLength="9" PageName="PASSTHROUGH_AGENCY" Type="TextItem" Visible="true" />
+      <Item DataType="Number" Enabled="true" Hint="frragpt.frragptAgcyPidm.hint" Id="FRRAGPT_AGCY_PIDM" MaxLength="8" Required="true" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frragpt.frragptAgcyName.hint" Id="FRRAGPT_AGCY_NAME" MaxLength="230" Navigable="false" PageName="PASSTHROUGH_AGENCY" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Hint="frragpt.frragptFederalFundPercent.hint" Id="FRRAGPT_FEDERAL_FUND_PERCENT" MaxLength="6" MaxValue="100.0" MinValue="0.0" PageName="PASSTHROUGH_AGENCY" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frragpt.frragptSponsorId.hint" Id="FRRAGPT_SPONSOR_ID" MaxLength="40" PageName="PASSTHROUGH_AGENCY" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="FRRAGPT_ACTIVITY_DATE" MaxLength="11" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRAGPT_USER_ID" MaxLength="30" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FRRGUSN" MultiRecord="true">
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgusn.frrgusnSdatCodeAttr.hint" Id="FRRGUSN_SDAT_CODE_ATTR" MaxLength="35" PageName="USER_DEFINED_DATA" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgusn.frrgusnSdatCodeOpt1.hint" Id="FRRGUSN_SDAT_CODE_OPT_1" MaxLength="8" PageName="USER_DEFINED_DATA" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Id="FRRGUSN_DESC" MaxLength="35" PageName="USER_DEFINED_DATA" Type="TextItem" Visible="true" />
+      <Item DataType="Date" Enabled="false" Id="FRRGUSN_ACTIVITY_DATE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRGUSN_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRGUSN_GRNT_CODE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FRRGLOC" MultiRecord="true">
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgloc.frrglocLocnCode.hint" Id="FRRGLOC_LOCN_CODE" MaxLength="30" PageName="LOCATION_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgloc.frrglocLocnResearchInd.hint" Id="FRRGLOC_LOCN_RESEARCH_IND" MaxLength="1" PageName="LOCATION_INFORMATION" Required="true" Type="List" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgloc.frrglocLocnTitle.hint" Id="FRRGLOC_LOCN_TITLE" MaxLength="35" Navigable="false" PageName="LOCATION_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRGLOC_GRNT_CODE" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="FRRGLOC_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRGLOC_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FRBGBIL">
+      <Item DataType="String" Id="FRBGBIL_COAS_CODE" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Hint="frbgbil.frbgbilGrntCode.hint" Id="FRBGBIL_GRNT_CODE" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Hint="frbgbil.frbgbilUserId.hint" Id="FRBGBIL_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Hint="frbgbil.frbgbilActivityDate.hint" Id="FRBGBIL_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Id="FRBGBIL_PMSC_CODE" Lov="FRVPMSC_LOV" MaxLength="30" PageName="BILLING_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.pmscName.hint" Id="PMSC_NAME" MaxLength="35" Navigable="false" PageName="BILLING_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.frbgbilBeclCode.hint" Id="FRBGBIL_BECL_CODE" MaxLength="30" PageName="BILLING_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.beclName.hint" Id="BECL_NAME" MaxLength="35" Navigable="false" PageName="BILLING_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frbgbil.frbgbilBudgetLimitInd.hint" Id="FRBGBIL_BUDGET_LIMIT_IND" MaxLength="1" PageName="BILLING_INFORMATION" Type="List" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.frbgbilPaymentFundCode.hint" Id="FRBGBIL_PAYMENT_FUND_CODE" MaxLength="30" PageName="BILLING_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.paymentFundName.hint" Id="PAYMENT_FUND_NAME" MaxLength="35" Navigable="false" PageName="BILLING_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Id="FRBGBIL_PAYMENT_ACCT_CODE" MaxLength="30" PageName="BILLING_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.paymentAcctName.hint" Id="PAYMENT_ACCT_NAME" MaxLength="35" Navigable="false" PageName="BILLING_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.frbgbilClearingAcctCode.hint" Id="FRBGBIL_CLEARING_ACCT_CODE" MaxLength="30" PageName="BILLING_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.clearingAcctName.hint" Id="CLEARING_ACCT_NAME" MaxLength="35" Navigable="false" PageName="BILLING_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frbgbil.frbgbilAddrType.hint" Id="FRBGBIL_ADDR_TYPE" Lov="STVATYP_LOV" MaxLength="2" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Hint="frbgbil.frbgbilAddrSeqno.hint" Id="FRBGBIL_ADDR_SEQNO" MaxLength="2" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Hint="frbgbil.frbgbilLastInvSeqNo.hint" Id="FRBGBIL_LAST_INV_SEQ_NO" MaxLength="5" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.frbgbilBfrmCode1034Ext.hint" Id="FRBGBIL_BFRM_CODE_1034_EXT" MaxLength="30" PageName="BILLING_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.frbgbilBudLineExceedInd.hint" Id="FRBGBIL_BUD_LINE_EXCEED_IND" MaxLength="1" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frbgbil.frbgbilMinNotReachedInd.hint" Id="FRBGBIL_MIN_NOT_REACHED_IND" MaxLength="1" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frbgbil.frbgbilBudTotalExceedInd.hint" Id="FRBGBIL_BUD_TOTAL_EXCEED_IND" MaxLength="1" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frbgbil.frbgbilBudCheckSourceInd.hint" Id="FRBGBIL_BUD_CHECK_SOURCE_IND" MaxLength="1" PageName="BILLING_INFORMATION" Type="List" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Date" Hint="frbgbil.frbgbilBillingStartDate.hint" Id="FRBGBIL_BILLING_START_DATE" MaxLength="11" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Date" Hint="frbgbil.frbgbilBillingEndDate.hint" Id="FRBGBIL_BILLING_END_DATE" MaxLength="11" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Hint="frbgbil.frbgbilBillingMinAmt.hint" Id="FRBGBIL_BILLING_MIN_AMT" MaxLength="25" MinValue="0.0" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Hint="frbgbil.frbgbilCumulativeBilledAmt.hint" Id="FRBGBIL_CUMULATIVE_BILLED_AMT" MaxLength="25" MinValue="0.0" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Hint="frbgbil.frbgbilBillingMaxAmt.hint" Id="FRBGBIL_BILLING_MAX_AMT" MaxLength="25" MinValue="0.0" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.frbgbilDeferredAcctCode.hint" Id="FRBGBIL_DEFERRED_ACCT_CODE" MaxLength="30" PageName="BILLING_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbgbil.defferedAcctName.hint" Id="DEFFERED_ACCT_NAME" MaxLength="35" Navigable="false" PageName="BILLING_INFORMATION" Type="DisplayItem" Visible="true" />
+    </Block>
+    <Block Id="FRRGRPI">
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="TEXT_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrpi.frrgrpiId.hint" Id="FRRGRPI_ID" MaxLength="9" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frrgrpi.frrgrpiIdName.hint" Id="FRRGRPI_ID_NAME" MaxLength="230" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="EVENTS_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrpi.frrgrpiIdInd.hint" Id="FRRGRPI_ID_IND" MaxLength="30" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRRGRPI_COAS" MaxLength="30" PageName="PERSONNEL_INFORMATION" Type="TextItem" AllowUpdate="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrpi.frrgrpiIdIndName.hint" Id="FRRGRPI_ID_IND_NAME" MaxLength="35" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frrgrpi.frrgrpiOrgnCode.hint" Id="FRRGRPI_ORGN_CODE" MaxLength="30" PageName="PERSONNEL_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrpi.frrgrpiOrgnCodeName.hint" Id="FRRGRPI_ORGN_CODE_NAME" MaxLength="35" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrpi.frrgrpiSalutation.hint" Id="FRRGRPI_SALUTATION" MaxLength="35" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrpi.frrgrpiTitle.hint" Id="FRRGRPI_TITLE" MaxLength="35" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frrgrpi.frrgrpiAddrType.hint" Id="FRRGRPI_ADDR_TYPE" MaxLength="30" PageName="PERSONNEL_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Hint="frrgrpi.frrgrpiAddrSeqno.hint" Id="FRRGRPI_ADDR_SEQNO" MaxLength="2" PageName="PERSONNEL_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frrgrpi.frrgrpiPhoneType.hint" Id="FRRGRPI_PHONE_TYPE" MaxLength="4" PageName="PERSONNEL_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Hint="frrgrpi.frrgrpiTeleSeqno.hint" Id="FRRGRPI_TELE_SEQNO" MaxLength="2" PageName="PERSONNEL_INFORMATION" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrpi.frrgrpiEmail.hint" Id="FRRGRPI_EMAIL" MaxLength="128" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Id="FRRGRPI_BFRM_CODE" MaxLength="30" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrpi.bfrmName.hint" Id="BFRM_NAME" MaxLength="35" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frrgrpi.frrgrpiFte.hint" Id="FRRGRPI_FTE" MaxLength="4" MaxValue="1.0" MinValue="0.0" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrpi.frrgrpiEmployeeInd.hint" Id="FRRGRPI_EMPLOYEE_IND" MaxLength="1" PageName="PERSONNEL_INFORMATION" Type="List" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRGRPI_GRNT_CODE" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="FRRGRPI_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Enabled="true" Id="FRRGRPI_ORGN_CODE_LBT" MaxLength="14" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="FRRGRPI_ID_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRRGRPI_ID_LBT" MaxLength="14" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRRGRPI_ID_IND_LBT" MaxLength="0" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" />
+      <Item DataType="String" Enabled="true" Id="FRRGRPI_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FRRGREC" MultiRecord="true">
+      <Item AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frrgrec.frrgrecAcctElement.hint" Id="FRRGREC_ACCT_ELEMENT" MaxLength="1" PageName="EFFORT_REPORTING" Required="true" Type="List" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frrgrec.frrgrecCoasCode.hint" Id="FRRGREC_COAS_CODE" MaxLength="1" PageName="EFFORT_REPORTING" Required="true" Navigable="false" Type="DisplayItem" />
+      <Item AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrec.frrgrecAcctElementValue.hint" Id="FRRGREC_ACCT_ELEMENT_VALUE" MaxLength="6" PageName="EFFORT_REPORTING" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Id="FRRGREC_ACCT_ELEMENT_VALUE_DES" MaxLength="35" Navigable="false" Navugable="false" PageName="EFFORT_REPORTING" Type="TextItem" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrgrec.frrgrecEccgCode.hint" Id="FRRGREC_ECCG_CODE" MaxLength="30" PageName="EFFORT_REPORTING" Type="TextItem" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frrgrec.frrgrecReportSection.hint" Id="FRRGREC_REPORT_SECTION" MaxLength="1" PageName="EFFORT_REPORTING" Type="List" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Hint="frrgrec.frrgrecChargeType.hint" Id="FRRGREC_CHARGE_TYPE" MaxLength="1" PageName="EFFORT_REPORTING" Type="List" />
+      <Item DataType="String" Enabled="true" Id="FRRGREC_GRNT_CODE" MaxLength="30" Required="true" Type="TextItem" Visible="false" />
+      <!--<Item AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="Date" Enabled="false" Id="FRRGREC_ACTIVITY_DATE" MaxLength="26" Navigable="false" PageName="EFFORT_REPORTING" Required="true" Type="TextItem" Visible="true" />-->
+      <Item AllowUpdate="false" DataType="Date" Enabled="false" Id="FRRGREC_ACTIVITY_DATE" MaxLength="26" Navigable="false" PageName="EFFORT_REPORTING" Required="true" Type="TextItem" Visible="true" CanvasName="FRAGRNT_1_TAB_CANVAS">
+        <Extension Name="ViewMode" Value="Filter" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE" />
+      </Item>
+      <Item DataType="Number" Id="FRRGREC_ID" MaxLength="19" Type="TextItem" />
+    </Block>
+    <Block Id="BLOCK3">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GRNT_CODE_DISPLAY_1" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GRNT_TITLE_DISPLAY_2" MaxLength="35" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="block3.agencyName1.hint" Id="AGENCY_NAME_1" MaxLength="230" Navigable="false" PageName="BILLING_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GRNT_TITLE_DISPLAY_4" MaxLength="35" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="FRAGRNT_1_TAB_CANVAS" DataType="String" Enabled="false" Id="AGENCY_CODE_1" MaxLength="9" Navigable="false" PageName="BILLING_INFORMATION" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GRNT_TITLE_DISPLAY_5" MaxLength="35" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GRNT_CODE_DISPLAY_4" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GRNT_TITLE_DISPLAY_1" MaxLength="35" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GRNT_CODE_DISPLAY_5" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GRNT_CODE_DISPLAY_2" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="BLOCK5">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="TEXT_ITEM_99" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="true" Hint="block5.frbgrntOrgnCode.hint" Id="FRBGRNT_ORGN_CODE" MaxLength="6" Type="TextItem" Visible="true" />
+      <Item DataType="String" Enabled="true" Id="TEXT_ITEM16" MaxLength="35" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="NAVIGATE_TO">
+      <Item CanvasName="NAVIGATE_TO" DataType="String" Enabled="true" Id="NAVIGATE_TO_LIST" MaxLength="45" Required="true" Type="List" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="NAVIGATE_TO" DataType="String" Enabled="true" Id="DUMMY_LIST" MaxLength="1" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="COPY_BLOCK">
+      <Item CanvasName="COPY_grnt" DataType="String" Enabled="true" Hint="copyBlock.copyGrntCode.hint" Id="COPY_GRNT_CODE" MaxLength="30" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="G$_OPT_BLOCK">
+      <Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Id="OPT_SEL" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Hint="buttonControlBlock.frragptAgencyCodeLbt.hint" Id="FRRAGPT_AGENCY_CODE_LBT" MaxLength="30" Navigable="false" PageName="PASSTHROUGH_AGENCY" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="CALL_FRAEVGA_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_PROP_CODE_LBT" MaxLength="30" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRRGRPI_TELE_SEQNO_LBT" MaxLength="30" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_AGENCY_TELE_SEQNO_LBT" MaxLength="30" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRRGRPI_ADDR_SEQNO_LBT" MaxLength="30" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRRGRPI_BFRM_CODE_LBT" MaxLength="30" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_AGENCY_PHONE_TYPE_LBT" MaxLength="30" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_BFRM_CODE_1034_EXT_LBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_CLEARING_ACCT_CODE_LBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRRGRPI_ADDR_TYPE_LBT" MaxLength="30" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_ADDR_SEQNO_LBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRRGRPI_PHONE_TYPE_LBT" MaxLength="30" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_PAYMENT_FUND_CODE_LBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_BECL_CODE_LBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_ADDR_TYPE_LBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_DEFERRED_ACCT_CODE_LBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_PMSC_CODE_LBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="VIEW_HIER_BTN" MaxLength="30" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_CANVAS" Id="DISPLAY_PROP_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRRGUSN_SDAT_CODE_ATTR_LBT" MaxLength="0" Navigable="false" PageName="USER_DEFINED_DATA" Type="Button" />
+      <Item CanvasName="COPY_grnt" Enabled="true" Id="CANCEL_COPY_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="COPY_grnt" Enabled="true" Id="OK_COPY_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="COPY_grnt" Id="COPY_GRNT_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="PUSH_BUTTON314" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_6_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="AGENCY_ADDR_SEQ_NUM" MaxLength="0" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_5_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRRGUSN_SDAT_CODE_OPT_1_LBT" MaxLength="0" Navigable="false" PageName="USER_DEFINED_DATA" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_4_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_3_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_EXIT_1_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_ROLLBACK_1_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_SAVE_1_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Enabled="true" Id="FRBGRNT_STATUS_CODE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Enabled="true" Id="FRBGRNT_ORGN_CODE_RESP_OFF" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Enabled="true" Id="FRBGRNT_GRANT_TYPE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_CANVAS" Id="DISPLAY_FRBGRNT_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Enabled="true" Id="FRBGRNT_CATEGORY_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Enabled="true" Id="FRBGRNT_SUB_CATEGORY_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Enabled="true" Id="FRBGRNT_CFDA_CODE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Enabled="true" Id="FRRGLOC_LOCN_CODE_LBT" MaxLength="0" Navigable="false" PageName="LOCATION_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="COPY_GRNT" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_1_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="NAVIGATE_TO" Enabled="true" Id="CANCEL_NAVIGATE_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_EXIT_2_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_SAVE_2_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_ROLLBACK_2_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_ROLLBACK_5_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_SAVE_5_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="EXIT_6_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SAVE_6_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="ROLLBACK_6_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_EXIT_5_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_EXIT_3_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_SAVE_3_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_EXIT_4_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_ROLLBACK_3_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_INDR_CODE_RATE_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_BASI_CODE_IC_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Enabled="true" Id="FRBGRNT_COAS_CODE_IC_CS_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_INDA_CODE_CHARGE_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_SAVE_4_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBGRNT_ROLLBACK_4_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_INDD_CODE_DISTR_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_BASI_CODE_CS_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_CSTR_CODE_RATE_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_CSTD_CODE_DISTR_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_CSTA_CODE_CHARGE_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="TBRRRAS_1_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="TBRRRAS_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="TBRRRAS_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_PI_ID_CODE_LBT" MaxLength="30" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Enabled="true" Id="FRBGRNT_COAS_CODE_LBT" MaxLength="30" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_AGENCY_CODE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_AGENCY_ADDR_CODE_LBT" MaxLength="0" Navigable="false" PageName="GRANT_AGENCY_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_PROJECT_START_DATE_DBT" MaxLength="30" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_PROJECT_END_DATE_DBT" MaxLength="30" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_TERM_DATE_DBT" MaxLength="30" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_EXPEND_END_DATE_DBT" MaxLength="30" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGRNT_STATUS_DATE_DBT" MaxLength="30" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_BILLING_START_DATE_DBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Id="FRBGBIL_BILLING_END_DATE_DBT" MaxLength="30" Navigable="false" PageName="BILLING_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Hint="buttonControlBlock.frbgreccEccgCodeLbt.hint" Id="FRBGRECC_ECCG_CODE_LBT" MaxLength="30" Navigable="false" PageName="EFFORT_REPORTING" Type="Button" />
+      <Item CanvasName="FRAGRNT_1_TAB_CANVAS" Hint="buttonControlBlock.frrgrecAcctElementValueLbt.hint" Id="FRRGREC_ACCT_ELEMENT_VALUE_LBT" MaxLength="30" Navigable="false" PageName="EFFORT_REPORTING" Type="Button" />
+    </Block>
+  </Logic>
+</FormStructure>

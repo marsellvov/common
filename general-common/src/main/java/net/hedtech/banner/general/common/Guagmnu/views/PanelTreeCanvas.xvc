@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="TREE"/>
+	<panel class="StackedCanvas" id="pnlTreeCanvas" name="TREE_CANVAS" width="100%">
+		<treeview block="TREE" height="436px" maxlength="80" member="GURMENU_DESC" name="gurmenuDesc" width="100px">
+			<xl:event action="WHEN-TREE-NODE-ACTIVATED" name="itemActivated"/>
+			<xl:event action="WHEN-TREE-NODE-EXPANDED" name="itemOpen"/>
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</treeview>
+	</panel>
+</config>

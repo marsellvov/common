@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<window layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="GORVISA"/>
+	<interactionblock name="FORM_HEADER"/>
+	<interactionblock name="GORDOCM"/>
+	<panel width="100%">
+		<collapsiblepanel label="goaintl1Canvas.text42.text" name="rect121" width="100%">
+			<panel width="100%">
+				<gridlayout cols="2" orientation="vertical" width="100%">
+					<gridcell>
+						<textbox autoskip="true" block="GORVISA" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gorvisa.gorvisaVtypCode.prompt" maxlength="30" member="GORVISA_VTYP_CODE" name="gorvisaVtypCode" style="ui-buttoninput" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GORVISA_VTYP_CODE_LBT" name="gorvisaVtypCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gorvisaVtypCodeLbt.tooltip" width="23px"/>
+						<textfield block="GORVISA" datatype="String" height="23px" maxlength="30" member="VTYP_DESC" name="vtypDesc" width="253px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="GORVISA" datatype="String" height="23px" label="gorvisa.gorvisaVisaNumber.prompt" maxlength="18" member="GORVISA_VISA_NUMBER" name="gorvisaVisaNumber" width="221px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="GORVISA" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gorvisa.gorvisaNatnCodeIssue.prompt" maxlength="30" member="GORVISA_NATN_CODE_ISSUE" name="gorvisaNatnCodeIssue" style="ui-buttoninput" width="65px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GORVISA_NATN_CODE_ISSUE_LBT" name="gorvisaNatnCodeIssueLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gorvisaNatnCodeIssueLbt.tooltip" width="23px"/>
+						<textfield block="GORVISA" datatype="String" height="23px" maxlength="30" member="ISSUE_NATN_DESC" name="issueNatnDesc" width="217px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="GORVISA" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gorvisa.gorvisaVissCode.prompt" maxlength="30" member="GORVISA_VISS_CODE" name="gorvisaVissCode" style="ui-buttoninput" validation="server" width="72px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GORVISA_VISS_CODE_LBT" name="gorvisaVissCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gorvisaVissCodeLbt.tooltip" width="23px"/>
+						<textfield block="GORVISA" datatype="String" height="23px" maxlength="30" member="VISS_DESC" name="vissDesc" width="209px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="GORVISA" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gorvisa.gorvisaPentCode.prompt" maxlength="3" member="GORVISA_PENT_CODE" name="gorvisaPentCode" style="ui-buttoninput" validation="server" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GORVISA_PENT_CODE_LBT" name="gorvisaPentCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gorvisaPentCodeLbt.tooltip" width="23px"/>
+						<textfield block="GORVISA" datatype="String" height="23px" maxlength="30" member="PENT_DESC" name="pentDesc" width="242px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+					<gridcell style="empty"/>
+					<gridcell>
+						<textfield block="GORVISA" datatype="Number" height="23px" label="gorvisa.gorvisaSeqNo.prompt" maxlength="3" member="GORVISA_SEQ_NO" name="gorvisaSeqNo" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+						<checkbox action="WHEN-CHECKBOX-CHANGED" block="GORVISA" falsevalue="N" height="23px" label="gorvisa.gorvisaEntryInd.label" member="GORVISA_ENTRY_IND" name="gorvisaEntryInd" othervaluestate="unchecked" value="Y" width="92px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</checkbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="GORVISA" datatype="String" height="23px" label="gorvisa.gorvisaNoEntries.prompt" maxlength="2" member="GORVISA_NO_ENTRIES" name="gorvisaNoEntries" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<calendar autoskip="true" block="GORVISA" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="gorvisa.gorvisaVisaReqDate.prompt" maxlength="11" member="GORVISA_VISA_REQ_DATE" name="gorvisaVisaReqDate" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+					<gridcell>
+						<calendar autoskip="true" block="GORVISA" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="gorvisa.gorvisaVisaIssueDate.prompt" maxlength="11" member="GORVISA_VISA_ISSUE_DATE" name="gorvisaVisaIssueDate" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+					<gridcell>
+						<calendar autoskip="true" block="GORVISA" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="gorvisa.gorvisaVisaStartDate.prompt" maxlength="11" member="GORVISA_VISA_START_DATE" name="gorvisaVisaStartDate" validation="server" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+					<gridcell>
+						<calendar autoskip="true" block="GORVISA" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="gorvisa.gorvisaVisaExpireDate.prompt" maxlength="11" member="GORVISA_VISA_EXPIRE_DATE" name="gorvisaVisaExpireDate" validation="server" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</collapsiblepanel>
+		<collapsiblepanel label="goaintl1Canvas.graphic220.text" name="rect122" width="100%">
+			<panel width="100%">
+				<gridview block="GORDOCM" name="grdGordocm" width="100%">
+					<viewheader>
+						<viewcolumn autoskip="true" block="GORDOCM" case="upper" datatype="String" keyactions="NEXT_ITEM" label="gordocm.gordocmDocmCode.prompt" labelstyle="DEFAULT" maxlength="30" member="GORDOCM_DOCM_CODE" name="gordocmDocmCode" width="72px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="GORDOCM" datatype="String" label="gordocm.docmDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="DOCM_DESC" name="docmDesc" width="215px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="GORDOCM" case="upper" datatype="String" keyactions="NEXT_ITEM" label="gordocm.gordocmSrceCode.prompt" labelstyle="DEFAULT" maxlength="6" member="GORDOCM_SRCE_CODE" name="gordocmSrceCode" width="72px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="GORDOCM" datatype="String" label="gordocm.srceDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="SRCE_DESC" name="srceDesc" width="226px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="GORDOCM" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="gordocm.gordocmRequestDate.prompt" labelstyle="DEFAULT" maxlength="11" member="GORDOCM_REQUEST_DATE" name="gordocmRequestDate" width="88px">
+							<editor>
+								<calendar>
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</calendar>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="GORDOCM" case="upper" datatype="String" label="gordocm.gordocmDisposition.prompt" labelstyle="DEFAULT" maxlength="1" member="GORDOCM_DISPOSITION" name="gordocmDisposition" required="true" width="86px">
+							<editor>
+								<combobox action="WHEN-LIST-CHANGED">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									<model>
+										<item label="gordocm.Combo.P.label" value="P"/>
+										<item label="gordocm.Combo.R.label" value="R"/>
+										<item label="gordocm.Combo.A.label" value="A"/>
+									</model>
+								</combobox>
+							</editor>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="GORDOCM" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="PREVIOUS_ITEM,NEXT_ITEM" label="gordocm.gordocmReceivedDate.prompt" labelstyle="DEFAULT" maxlength="11" member="GORDOCM_RECEIVED_DATE" name="gordocmReceivedDate" width="88px">
+							<editor>
+								<calendar>
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</calendar>
+							</editor>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</collapsiblepanel>
+	</panel>
+</window>

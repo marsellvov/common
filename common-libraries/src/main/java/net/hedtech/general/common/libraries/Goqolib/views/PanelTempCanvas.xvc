@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <panel width="1007px" height="591px" top="0px" left="0px" id="pnlTempCanvas" name="TEMP_CANVAS" class="ContentCanvas" visible="false" menu="G$_DEFAULT_PM" />
+</config>

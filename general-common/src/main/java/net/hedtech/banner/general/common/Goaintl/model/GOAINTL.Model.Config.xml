@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goaintl/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goaintl/model/KEY_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goaintl/model/GORVISA.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goaintl/model/GORDOCM.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goaintl/model/GOBINTL.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goaintl/model/BUTTON_CONTROL_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goaintl/model/GOAINTL.ValueSet.Config.xml"/>
+
+	
+	<formModel id="GOAINTL.Model.Config" name="GOAINTL">
+		<modelClass>net.hedtech.banner.general.common.Goaintl.model.GoaintlModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="KEY_BLOCK" manager="KEY_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GORVISA" manager="GORVISA.Manager.Config">
+				<associations>
+					<association child ="GORDOCM"  preventParentlessOperations="false" deleteParentBehavior="NonIsolated" >
+						<mapping parent="GORVISA_PIDM" child="GORDOCM_PIDM"/>
+						<mapping parent="GORVISA_SEQ_NO" child="GORDOCM_SEQ_NO"/>
+						<mapping parent="GORVISA_VTYP_CODE" child="GORDOCM_VTYP_CODE"/>
+					</association>
+				</associations>
+			</businessObject>
+			<businessObject name="GORDOCM" manager="GORDOCM.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GOBINTL" manager="GOBINTL.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="BUTTON_CONTROL_BLOCK" manager="BUTTON_CONTROL_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="STVNATN_RG.ValueSet.Config"/>
+				<valueSet config="STVVTYP_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

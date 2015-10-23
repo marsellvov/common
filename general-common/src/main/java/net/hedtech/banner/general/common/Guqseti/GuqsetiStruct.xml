@@ -1,0 +1,54 @@
+<FormStructure Name="GUQSETI" LovDataPath="/net/hedtech/banner/general/common/Guqseti/GuqsetiLovs.xml" AlertDataPath="/net/hedtech/banner/general/common/Guqseti/GuqsetiAlerts.xml">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Modal="true" CloseButton="true" Url="net/hedtech/banner/general/common/Guqseti/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false">
+      </StackedCanvas>
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false">
+      </ContentCanvas>
+      <ContentCanvas Id="MAIN_CANVAS">
+      </ContentCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+    </Block>
+    <Block Id="G$_SDKEY">
+    </Block>
+    <Block Id="G$_SDISP">
+    </Block>
+    <Block Id="G$_NAV_BLOCK">
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item Id="CURRENT_INSTITUTION" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="30" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="CURRENT_DATE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="11" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="CURRENT_TIME" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="8" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="WORKDATE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" DisplayAsPassword="true" MaxLength="21" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="CURRENT_FORM" CanvasName="" AllowSearch="false" AllowUpdate="false" MaxLength="7" Type="TextItem">
+      </Item>
+      <Item Id="CURRENT_RELEASE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="10" Enabled="false" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="GUISETI" MultiRecord="true" AllowInsert="false" AllowDelete="false" AllowUpdate="false">
+      <Item Id="VPDI_CODE" CanvasName="MAIN_CANVAS" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="PRIMARY_IND" CanvasName="" Navigable="false" MaxLength="1" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="CODE_DESC" CanvasName="MAIN_CANVAS" MaxLength="30" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="G$_EXTENDED_SEARCH_BLOCK">
+    </Block>
+    <Block Id="G$_OPT_BLOCK">
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item Id="CHECK_FLAG" CanvasName="" Navigable="false" MaxLength="1" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="CHECK_KEYS" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

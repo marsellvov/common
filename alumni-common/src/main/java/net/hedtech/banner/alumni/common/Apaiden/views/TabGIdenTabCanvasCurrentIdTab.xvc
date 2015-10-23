@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SPRIDEN_CURRENT"/>
+	<panel width="100%">
+		<collapsiblepanel width="100%" label="currentIdTabIdentification.label">
+			<panel width="100%">
+				<gridlayout cols="2" orientation="vertical">
+					<gridcell>
+						<textbox autoskip="true" block="SPRIDEN_CURRENT" case="upper" datatype="String" height="23px" keyactions="PREVIOUS_ITEM" label="spridenCurrent.spridenId.prompt" member="SPRIDEN_ID" name="spridenId" width="100px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="SPRIDEN_CURRENT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spridenCurrent.spridenNtypCode.prompt" member="SPRIDEN_NTYP_CODE" name="spridenNtypCode" style="ui-buttoninput" width="51px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="SPRIDEN_CURRENT" height="23px" icon="search" member="SPRIDEN_NTYP_CODE_LBT" name="spridenNtypCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spridenCurrent.spridenNtypCodeLbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+						<textfield block="SPRIDEN_CURRENT" datatype="String" height="23px"  member="CURRENT_NTYP_DESC" name="currentNtypDesc" width="239px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="SPRIDEN_CURRENT" case="upper" datatype="String" height="23px"  keyactions="NEXT_ITEM" label="spridenCurrent.persSsn.prompt" member="PERS_SSN" name="persSsn" visible="false" width="178px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</collapsiblepanel>
+		<collapsiblepanel label="currentIdTab.text28.text" name="rect346" width="100%">
+			<panel width="100%">
+				<gridlayout cols="2" orientation="vertical">
+					<gridcell>
+						<textbox autoskip="true" block="SPRIDEN_CURRENT" datatype="String" height="23px" label="spridenCurrent.persSurnamePrefix.prompt" member="PERS_SURNAME_PREFIX" name="persSurnamePrefix" width="300px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>	
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="SPRIDEN_CURRENT" datatype="String" height="23px" style="ui-buttoninput" keyactions="PREVIOUS_ITEM" label="spridenCurrent.persLastName.prompt" member="PERS_LAST_NAME" name="persLastName" width="300px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="SPRIDEN_CURRENT" height="23px" icon="flashlit" style="ui-buttoninput" label="spridenCurrent.lastNameSrchBtn.label" member="LAST_NAME_SRCH_BTN" name="lastNameSrchBtn" navigable="false" tooltip="spridenCurrent.lastNameSrchBtn.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="SPRIDEN_CURRENT" datatype="String" height="23px" style="ui-buttoninput" label="spridenCurrent.persFirstName.prompt" member="PERS_FIRST_NAME" name="persFirstName" width="300px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="SPRIDEN_CURRENT" height="23px" style="ui-buttoninput" icon="flashlit" label="spridenCurrent.firstNameSrchBtn.label" member="FIRST_NAME_SRCH_BTN" name="firstNameSrchBtn" navigable="false" tooltip="spridenCurrent.firstNameSrchBtn.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="SPRIDEN_CURRENT" datatype="String" height="23px" label="spridenCurrent.persMi.prompt" member="PERS_MI" name="persMi" width="300px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="SPRIDEN_CURRENT" datatype="String" height="23px" label="spridenCurrent.persPrefix.prompt" member="PERS_PREFIX" name="persPrefix" width="160px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="SPRIDEN_CURRENT" datatype="String" height="23px" label="spridenCurrent.persSuffix.prompt" member="PERS_SUFFIX" name="persSuffix" width="160px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="SPRIDEN_CURRENT" datatype="String" height="23px" label="spridenCurrent.persPrefFname.prompt" member="PERS_PREF_FNAME" name="persPrefFname" width="300px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="SPRIDEN_CURRENT" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spridenCurrent.persLegalName.prompt" member="PERS_LEGAL_NAME" name="persLegalName" width="300px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="SPRIDEN_CURRENT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spridenCurrent.persMrtlCode.prompt" member="PERS_MRTL_CODE" name="persMrtlCode" style="ui-buttoninput" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="SPRIDEN_CURRENT" height="23px" icon="search" member="PERS_MRTL_CODE_LBT" name="persMrtlCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spridenCurrent.persMrtlCodeLbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+						<textfield block="SPRIDEN_CURRENT" datatype="String" height="23px" member="MRTL_DESC" name="mrtlDesc" width="238px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</collapsiblepanel>
+		<collapsiblepanel label="currentIdTab.text353.text" name="rect351" width="100%">
+			<panel width="100%">
+				<framepanel label="currentIdTab.text358.text" width="100%">
+					<gridlayout cols="2" orientation="vertical">
+						<gridcell>
+							<textbox block="SPRIDEN_CURRENT" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" label="spridenCurrent.spridenOrigin.prompt" member="SPRIDEN_ORIGIN" name="spridenOrigin" width="209px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+					</gridlayout>
+				</framepanel>
+			</panel>
+			<panel width="100%" style="ui-section">
+				<framepanel label="currentIdTab.text363.text" width="100%" >
+					<gridlayout cols="2" orientation="vertical">		
+						<gridcell>
+							<textbox block="SPRIDEN_CURRENT" datatype="String" enabled="false" height="23px" label="spridenCurrent.spridenCreateUser.prompt" member="SPRIDEN_CREATE_USER" name="spridenCreateUser" width="209px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>	
+							<calendar block="SPRIDEN_CURRENT" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spridenCurrent.spridenCreateDate.prompt" member="SPRIDEN_CREATE_DATE" name="spridenCreateDate" width="140px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</calendar>
+						</gridcell>
+					</gridlayout>
+				</framepanel>
+			</panel>
+		</collapsiblepanel>
+		<collapsiblepanel label="currentIdTab.text31.text" name="graphic349" width="100%">
+			<panel width="100%">
+				<gridlayout cols="2" orientation="vertical">
+					<gridcell>
+						<textbox block="SPRIDEN_CURRENT" datatype="String" height="23px" style="ui-buttoninput" keyactions="PREVIOUS_ITEM,NEXT_ITEM" label="spridenCurrent.nonPersName.prompt" member="NON_PERS_NAME" name="nonPersName" width="479px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="SPRIDEN_CURRENT" height="23px" icon="flashlit" style="ui-buttoninput" label="spridenCurrent.orgNameSrchBtn.label" member="ORG_NAME_SRCH_BTN" name="orgNameSrchBtn" navigable="false" tooltip="spridenCurrent.orgNameSrchBtn.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</collapsiblepanel>
+	</panel>
+</config>

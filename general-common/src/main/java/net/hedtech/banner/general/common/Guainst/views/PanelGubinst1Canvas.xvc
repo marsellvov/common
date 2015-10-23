@@ -1,0 +1,321 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="GUBINST" />
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <interactionblock name="FORM_HEADER" />
+  <accordion width="100%">
+    <panel class="ContentCanvas" id="pnlGubinst1Canvas" label="gubinst1Canvas.text77.text" menu="G$_DEFAULT_PM" name="GUBINST_1_CANVAS" width="100%">
+      <panel name="rect40" width="100%">
+        <gridlayout cols="2" orientation="vertical">
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstName.prompt" maxlength="60" member="GUBINST_NAME" name="gubinstName" required="true">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstHouseNumber.prompt" maxlength="10" member="GUBINST_HOUSE_NUMBER" name="gubinstHouseNumber" width="100px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstStreetLine1.prompt" maxlength="75" member="GUBINST_STREET_LINE1" name="gubinstStreetLine1" width="425px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstStreetLine2.prompt" maxlength="75" member="GUBINST_STREET_LINE2" name="gubinstStreetLine2" width="425px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstStreetLine3.prompt" maxlength="75" member="GUBINST_STREET_LINE3" name="gubinstStreetLine3" width="425px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstStreetLine4.prompt" maxlength="75" member="GUBINST_STREET_LINE4" name="gubinstStreetLine4" width="332px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <component label="gubinst.gubinstCity.prompt">
+              <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" maxlength="50" member="GUBINST_CITY" name="gubinstCity" required="true" style="ui-buttoninput" width="160px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <textbox autoskip="true" block="GUBINST" case="upper" datatype="String" height="23px" maxlength="3" member="GUBINST_STAT_CODE" name="gubinstStatCode" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" maxlength="30" member="GUBINST_ZIP" name="gubinstZip" width="80px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </component>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gubinst.gubinstNatnCode.prompt" maxlength="30" member="GUBINST_NATN_CODE" name="gubinstNatnCode" style="ui-buttoninput" width="61px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+            <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GUBINST_NATN_CODE_LBT" name="gubinstNatnCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gubinstNatnCodeLbt.tooltip" width="23px" />
+            <textfield block="GUBINST" datatype="String" height="23px" maxlength="30" member="NATN_DESCRIPTION" name="natnDescription" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstCtryCodePhone.prompt" maxlength="4" member="GUBINST_CTRY_CODE_PHONE" name="gubinstCtryCodePhone" tooltip="gubinst.gubinstCtryCodePhone.prompt" width="65px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstPhoneArea.prompt" maxlength="6" member="GUBINST_PHONE_AREA" name="gubinstPhoneArea" tooltip="gubinst.gubinstPhoneArea.prompt" width="73px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstPhone.prompt" maxlength="12" member="GUBINST_PHONE" name="gubinstPhone" tooltip="gubinst.gubinstPhone.prompt" width="120px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstPhoneExt.prompt" maxlength="10" member="GUBINST_PHONE_EXT" name="gubinstPhoneExt" tooltip="gubinst.gubinstPhoneExt.prompt" width="100px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <combobox autoskip="true" block="GUBINST" height="23px" label="gubinst.gubinstOperatingSystemInd.prompt" member="GUBINST_OPERATING_SYSTEM_IND" name="gubinstOperatingSystemInd" required="true" width="105px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              <model>
+                <item label="gubinst.gubinstOperatingSystemInd.item0.label" value="VMS" />
+                <item label="gubinst.gubinstOperatingSystemInd.item1.label" value="CMS" />
+                <item label="gubinst.gubinstOperatingSystemInd.item2.label" value="UNX" />
+                <item label="gubinst.gubinstOperatingSystemInd.item3.label" value="AOS" />
+                <item label="gubinst.gubinstOperatingSystemInd.item4.label" value="MPE" />
+                <item label="gubinst.gubinstOperatingSystemInd.item5.label" value="MVE" />
+                <item label="gubinst.gubinstOperatingSystemInd.item6.label" value="MVS" />
+                <item label="gubinst.gubinstOperatingSystemInd.item7.label" value="WNT" />
+              </model>
+            </combobox>
+          </gridcell>
+          <gridcell>
+            <combobox autoskip="true" block="GUBINST" height="23px" label="gubinst.gubinstHighedGovtInd.prompt" member="GUBINST_HIGHED_GOVT_IND" name="gubinstHighedGovtInd" required="true" width="160px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              <model>
+                <item label="gubinst.gubinstHighedGovtInd.item0.label" value="H" />
+                <item label="gubinst.gubinstHighedGovtInd.item1.label" value="G" />
+                <item label="gubinst.gubinstHighedGovtInd.item2.label" value="K" />
+                <item label="gubinst.gubinstHighedGovtInd.item3.label" value="C" />
+              </model>
+            </combobox>
+          </gridcell>
+          <gridcell>
+            <textbox block="GUBINST" datatype="String" height="23px" label="gubinst.gubinstInstanceName.prompt" maxlength="8" member="GUBINST_INSTANCE_NAME" name="gubinstInstanceName" width="64px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="Number" height="23px" label="gubinst.gubinstZipDefaultLength.prompt" maxlength="2" maxvalue="10" member="GUBINST_ZIP_DEFAULT_LENGTH" minvalue="0" name="gubinstZipDefaultLength" width="50px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="Number" height="23px" label="gubinst.gubinstMaxOpenForms.prompt" maxlength="3" member="GUBINST_MAX_OPEN_FORMS" name="gubinstMaxOpenForms" textalign="right" width="50px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gubinst.gubinstBaseCurrCode.prompt" maxlength="30" member="GUBINST_BASE_CURR_CODE" name="gubinstBaseCurrCode" required="true" style="ui-buttoninput" width="51px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+            <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GUBINST_BASE_CURR_CODE_LBT" name="gubinstBaseCurrCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gubinstBaseCurrCodeLbt.tooltip" width="23px" />
+            <textfield block="GUBINST" datatype="String" height="23px" maxlength="35" member="CURR_TITLE" name="currTitle" width="231px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="Number" height="23px" label="gubinst.gubinstSsnMaxLength.prompt" maxlength="2" maxvalue="15" member="GUBINST_SSN_MAX_LENGTH" minvalue="9" name="gubinstSsnMaxLength" required="true" textalign="right" width="50px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="GUBINST" datatype="Number" enabled="false" height="23px" label="gubinst.gubinstCenturyPivot.prompt" maxlength="2" member="GUBINST_CENTURY_PIVOT" name="gubinstCenturyPivot" width="50px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <radiogroup block="GUBINST" datatype="Number" id="gubinstDateDefaultFormat" label="gubinst.currTitle.prompt" member="GUBINST_DATE_DEFAULT_FORMAT" name="gubinstDateDefaultFormat" orientation="horizontal">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              <radiobox group="gubinstDateDefaultFormat" height="23px" label="gubinst.gubinstDateDefaultFormat.mdy.label" labelalign="start" labelposition="left" name="rb_GubinstDateDefaultFormat_Mdy" value="1" width="56px" />
+              <radiobox group="gubinstDateDefaultFormat" height="23px" label="gubinst.gubinstDateDefaultFormat.dmy.label" labelalign="start" labelposition="left" name="rb_GubinstDateDefaultFormat_Dmy" value="2" width="56px" />
+              <radiobox group="gubinstDateDefaultFormat" height="23px" label="gubinst.gubinstDateDefaultFormat.ymd.label" labelalign="start" labelposition="left" name="rb_GubinstDateDefaultFormat_Ymd" value="3" width="56px" />
+            </radiogroup>
+          </gridcell>
+        </gridlayout>
+      </panel>
+    </panel>
+  </accordion>
+  <accordion width="100%">
+    <panel class="ContentCanvas" label="gubinst.gubinstOnlineMatchInd.prompt" name="graphic75" width="100%">
+      <panel width="100%">
+        <gridlayout cols="2" orientation="vertical">
+          <gridcell>
+            <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstOnlineMatchInd.label" member="GUBINST_ONLINE_MATCH_IND" name="gubinstOnlineMatchInd" textalign="right" value="Y" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </checkbox>
+          </gridcell>
+          <gridcell>
+            <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstWfEnabledInd.label" member="GUBINST_WF_ENABLED_IND" name="gubinstWfEnabledInd" value="Y" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </checkbox>
+          </gridcell>
+          <gridcell>
+            <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstSqltraceEnabledInd.label" member="GUBINST_SQLTRACE_ENABLED_IND" name="gubinstSqltraceEnabledInd" textalign="right" value="Y" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </checkbox>
+          </gridcell>
+          <gridcell>
+            <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstMessageEnabledInd.label" member="GUBINST_MESSAGE_ENABLED_IND" name="gubinstMessageEnabledInd" textalign="right" value="Y" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </checkbox>
+          </gridcell>
+          <gridcell>
+            <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstSsnSearchEnabledInd.label" member="GUBINST_SSN_SEARCH_ENABLED_IND" name="gubinstSsnSearchEnabledInd" textalign="right" value="Y" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </checkbox>
+          </gridcell>
+        </gridlayout>
+      </panel>
+    </panel>
+  </accordion>
+  <accordion width="100%">
+    <panel class="ContentCanvas" id="yyy" label="gubinst1Canvas.text77.text" width="100%">
+      <panel name="graphic75" style="ui-table-matrix" width="100%">
+        <gridflowlayout cols="4" orientation="horizontal">
+          <text></text>
+          <text></text>
+          <text style="ui-table-header">gubinst.alumniRelease.prompt</text>
+          <text style="ui-table-header">gubinst.alumniStageDate.prompt</text>
+          <text></text>
+          <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstAlumniInstalled.label" member="GUBINST_ALUMNI_INSTALLED" name="gubinstAlumniInstalled" othervaluestate="unchecked" value="Y" width="105px">
+            <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+          </checkbox>
+          <component>
+            <textfield block="GUBINST" datatype="String" enabled="false" height="23px" maxlength="10" member="ALUMNI_RELEASE" name="alumniRelease" width="80px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <component>
+            <textfield block="GUBINST" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" maxlength="11" member="ALUMNI_STAGE_DATE" name="alumniStageDate" width="110px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <text></text>
+          <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstBilcshInstalled.label" member="GUBINST_BILCSH_INSTALLED" name="gubinstBilcshInstalled" othervaluestate="unchecked" value="Y" width="160px">
+            <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+          </checkbox>
+          <component>
+            <textfield block="GUBINST" datatype="String" enabled="false" height="23px" maxlength="10" member="BILCSH_RELEASE" name="bilcshRelease" width="80px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <component>
+            <textfield block="GUBINST" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" maxlength="11" member="BILCSH_STAGE_DATE" name="bilcshStageDate" width="110px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <text></text>
+          <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstFinaidInstalled.label" member="GUBINST_FINAID_INSTALLED" name="gubinstFinaidInstalled" othervaluestate="unchecked" value="Y" width="160px">
+            <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+          </checkbox>
+          <component>
+            <textfield block="GUBINST" datatype="String" enabled="false" height="23px" maxlength="10" member="FINAID_RELEASE" name="finaidRelease" width="78px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <component>
+            <textfield block="GUBINST" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" maxlength="11" member="FINAID_STAGE_DATE" name="finaidStageDate" width="110px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <text></text>
+          <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstFinaidInd.label" member="GUBINST_FINAID_IND" name="gubinstFinaidInd" othervaluestate="unchecked" value="Y" width="160px">
+            <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+          </checkbox>
+          <text></text>
+          <text></text>
+          <text></text>
+          <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstGeneralInstalled.label" member="GUBINST_GENERAL_INSTALLED" name="gubinstGeneralInstalled" navigable="false" value="Y" width="160px">
+            <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+          </checkbox>
+          <component>
+            <textfield block="GUBINST" datatype="String" enabled="false" height="23px" maxlength="10" member="GENERAL_RELEASE" name="generalRelease" width="80px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <component>
+            <textfield block="GUBINST" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" maxlength="11" member="GENERAL_STAGE_DATE" name="generalStageDate" width="110px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <text></text>
+          <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstFinanceInstalled.label" member="GUBINST_FINANCE_INSTALLED" name="gubinstFinanceInstalled" othervaluestate="unchecked" value="Y" width="158px">
+            <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+          </checkbox>
+          <component>
+            <textfield block="GUBINST" datatype="String" enabled="false" height="23px" maxlength="10" member="FINANCE_RELEASE" name="financeRelease" width="80px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <component>
+            <textfield block="GUBINST" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" maxlength="11" member="FINANCE_STAGE_DATE" name="financeStageDate" width="110px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <text></text>
+          <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstHumanreInstalled.label" member="GUBINST_HUMANRE_INSTALLED" name="gubinstHumanreInstalled" othervaluestate="unchecked" value="Y" width="160px">
+            <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+          </checkbox>
+          <component>
+            <textfield block="GUBINST" datatype="String" enabled="false" height="23px" maxlength="10" member="HUMANRE_RELEASE" name="humanreRelease" width="80px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <component>
+            <textfield block="GUBINST" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" maxlength="11" member="HUMANRE_STAGE_DATE" name="humanreStageDate" width="110px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <text></text>
+          <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="23px" label="gubinst.gubinstPosbudInstalled.label" member="GUBINST_POSBUD_INSTALLED" name="gubinstPosbudInstalled" othervaluestate="unchecked" value="Y" width="160px">
+            <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+          </checkbox>
+          <component>
+            <textfield block="GUBINST" datatype="String" enabled="false" height="23px" maxlength="10" member="POSBUD_RELEASE" name="posbudRelease" width="78px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <component>
+            <textfield block="GUBINST" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" maxlength="11" member="POSBUD_STAGE_DATE" name="posbudStageDate" width="110px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <text></text>
+          <checkbox action="WHEN-CHECKBOX-CHANGED" block="GUBINST" falsevalue="N" height="24px" label="gubinst.gubinstStudentInstalled.label" member="GUBINST_STUDENT_INSTALLED" name="gubinstStudentInstalled" othervaluestate="unchecked" value="Y" width="160px">
+            <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+          </checkbox>
+          <component>
+            <textfield block="GUBINST" datatype="String" enabled="false" height="23px" maxlength="10" member="STUDENT_RELEASE" name="studentRelease" width="80px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+          <component>
+            <textfield block="GUBINST" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" maxlength="11" member="STUDENT_STAGE_DATE" name="studentStageDate" width="110px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </component>
+        </gridflowlayout>
+        <panel style="ui-section ui-button-container-right" width="100%">
+			 <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="24px" label="buttonControlBlock.patchesDisplayPatch.label" member="PATCHES_BTN" name="patchesBtn" tooltip="buttonControlBlock.patchesBtn.tooltip" />
+		</panel>
+      </panel>
+      
+    </panel>
+  </accordion>
+</config>

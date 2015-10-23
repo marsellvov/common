@@ -1,0 +1,1094 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FormStructure AlertDataPath="/net/hedtech/general/common/libraries/Soqolib/SoqolibAlerts.xml" LovDataPath="/net/hedtech/general/common/libraries/Soqolib/SoqolibLovs.xml" Name="SOQOLIB">
+  <Visual>
+    <Window Id="G$_SDSP_WINDOW" Url="net/hedtech/general/common/libraries/Soqolib/views/ViewGSdspWindow">
+      <ContentCanvas Id="G$_SDSP_CANVAS" />
+    </Window>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/general/common/libraries/Soqolib/views/ViewMainWindow">
+      <TabPageCanvas Id="STUDYPATH">
+        <Page Id="STUDY_PATH" />
+      </TabPageCanvas>
+      <StackedCanvas Id="CURRICULA_SUMMARY_TAB" />
+      <StackedCanvas Id="CURRICULA_LITE_CANVAS" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <TabPageCanvas Id="CURRICULA_CANVAS">
+        <Page Id="CURRICULUM_TAB" />
+        <Page Id="FIELDOFSTUDY_TAB" />
+      </TabPageCanvas>
+    </Window>
+    <Window Id="ADMIN_ASSIGN_WINDOW" Url="net/hedtech/general/common/libraries/Soqolib/views/ViewAdminAssignWindow">
+      <ContentCanvas Id="ADMIN_ASSIGN_CANVAS" />
+    </Window>
+    <Window Id="COMM_PLAN_WINDOW" Url="net/hedtech/general/common/libraries/Soqolib/views/ViewCommPlanWindow">
+      <ContentCanvas Id="COMM_PLAN_CANVAS" />
+    </Window>
+    <Window Id="CURRICULA_WINDOW" Url="net/hedtech/general/common/libraries/Soqolib/views/ViewCurriculaWindow" />
+    <Window Id="PAGE_50" Url="net/hedtech/general/common/libraries/Soqolib/views/ViewPage50" />
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/general/common/libraries/Soqolib/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+    <Window Id="G$_EXTENDED_SEARCH_WINDOW" Modal="true" Url="net/hedtech/general/common/libraries/Soqolib/views/ViewGExtendedSearchWindow">
+      <ContentCanvas Id="G$_EXTENDED_SEARCH_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_SDKEY">
+      <Item Id="SD_BLOCK" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item Id="SD_DISPBLOCK" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item Id="SD_BANTAB" MaxLength="512" Navigable="false" Type="TextItem" />
+      <Item Id="SD_KEY" MaxLength="512" Navigable="false" Type="TextItem" />
+      <Item Id="SD_ROWID" MaxLength="18" Navigable="false" Type="TextItem" />
+      <Item Id="SD_DISPROWID" MaxLength="18" Type="TextItem" />
+      <Item Id="SD_EXISTS" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item Id="ENABLE_ATTR_INS" MaxLength="1" Type="DisplayItem" />
+      <Item Id="TRIG_ENA" MaxLength="1" Type="DisplayItem" />
+      <Item Id="RENUM_SD_REC" MaxLength="1" Type="DisplayItem" />
+      <Item Id="COUNT_NOT_NULL" MaxLength="30" Type="DisplayItem" />
+      <Item CanvasName="G$_SDSP_CANVAS" Id="COUNT_REQD_IS_NULL" MaxLength="30" Type="DisplayItem" />
+      <Item CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_VALUE_AS_CHAR_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_VALUE_AS_CHAR_DBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="G$_SDSP_CANVAS" Id="SDE_CLOSE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+    <Block Id="G$_SDISP" MultiRecord="true">
+      <Item CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_VALUE_AS_CHAR" MaxLength="2000" Type="TextItem" />
+      <Item Id="GOVSDAV_TABLE_NAME" MaxLength="30" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_ATTR_NAME" MaxLength="30" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_ATTR_TYPE" MaxLength="1" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_ATTR_ORDER" MaxLength="4" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_ATTR_REQD_IND" MaxLength="1" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_ATTR_DATA_TYPE" MaxLength="30" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_ATTR_DATA_LEN" MaxLength="9" Type="DisplayItem" />
+      <Item Id="GOVSDAV_ATTR_DATA_SCALE" MaxLength="3" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_ATTR_INFO" MaxLength="1024" Navigable="false" Type="TextItem" />
+      <Item Id="GOVSDAV_ATTR_BASE_COL" MaxLength="30" Type="DisplayItem" />
+      <Item Id="GOVSDAV_DISC_TYPE" MaxLength="1" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_DISC_METHOD" MaxLength="1" Type="DisplayItem" />
+      <Item Id="GOVSDAV_DISC_VALIDATION" MaxLength="1024" Type="DisplayItem" />
+      <Item Id="GOVSDAV_PK_PARENTTAB" MaxLength="512" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_ATTR_PROMPT_DISP" MaxLength="100" Required="true" Type="TextItem" />
+      <Item Id="GOVSDAV_ATTR_PROMPT" MaxLength="50" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_DISC" MaxLength="64" Type="DisplayItem" />
+      <Item Id="GOVSDAV_DESC" MaxLength="64" Type="DisplayItem" />
+      <Item Id="GOVSDAV_ROWID" MaxLength="18" Type="DisplayItem" />
+      <Item Id="REQD_IS_NULL" MaxLength="1" Type="DisplayItem" />
+      <Item Id="IS_LAST_IDX" MaxLength="1" Type="DisplayItem" />
+      <Item Id="GOVSDAV_SDDC_CODE" MaxLength="10" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_LOV_FORM" MaxLength="30" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_LOV_TABLE_OVRD" MaxLength="30" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_LOV_ATTR_OVRD" MaxLength="30" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_LOV_CODE_TITLE" MaxLength="255" Required="true" Type="DisplayItem" />
+      <Item Id="GOVSDAV_LOV_DESC_TITLE" MaxLength="255" Required="true" Type="DisplayItem" />
+    </Block>
+    <Block Id="G$_OPT_BLOCK">
+      <Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Id="OPT_SEL" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" />
+      <Item CanvasName="G$_OPT_CANVAS" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" />
+    </Block>
+    <Block Id="DUMMY">
+      <Item Id="CHECK_KEYS" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURRENT_RELEASE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item Id="ITEM201" MaxLength="0" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="SGBSTDN_ADVR_ID" MaxLength="9" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="SGBSTDN_ADVR_NAME" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="SGBSTDN_ADVR_CODE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="SGBSTDN_PIDM" MaxLength="10" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="SGBSTDN_TERM_CODE_EFF" MaxLength="6" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block Id="S$_SOBCTRL_BLOCK">
+      <Item Id="TABLEMODULE" MaxLength="100" Type="TextItem" />
+      <Item Id="HOLD_DEGREE" MaxLength="30" Type="TextItem" />
+      <Item Id="HOLD_PROGRAM" MaxLength="30" Type="TextItem" />
+      <Item Id="HOLD_LEVEL" MaxLength="30" Type="TextItem" />
+      <Item Id="HOLD_CAMPUS" MaxLength="30" Type="TextItem" />
+      <Item Id="HOLD_COLLEGE" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CAI" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="SOBCTRL_CURR_RULE_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_CURR_RULE_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="SECD_MAJR_ERROR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="RETURN_ERROR_ITEM" MaxLength="40" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CONC1_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CONC2_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CCONMAJR_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CCONBASE1_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CCONBASE2_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CCONMAJR2_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="SOBCTRL_PROGRAM_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="SOBCTRL_CONC_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="SOBCTRL_PRIM_ROLL_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="SOBCTRL_SECD_ROLL_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="SOBCTRL_REC_ERRLVL_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="SOBCTRL_ADM_ERRLVL_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="SOBCTRL_STU_ERRLVL_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="SOBCTRL_HIS_ERRLVL_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="SOBCTRL_DAU_ERRLVL_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="HOLD_PRIM_ROLL_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="HOLD_SECD_ROLL_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CHANGE_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_ERROR_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CONC11_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CCON1_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CCON2_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CONC12_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CONC21_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CONC22_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="MINR1_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="MINR2_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="MAJR1_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="MAJR2_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_INIT_TERM" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_INIT_TERM_2" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="DEPT" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="MAJOR" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CHECK_BASE2_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block Id="S$_CURRICULUM_HOLD_ITEMS">
+      <Item Id="CURR_LOCK_IND" MaxLength="1" Type="TextItem" />
+      <Item Id="ERR_NUMBERT" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_PROGRAM_1_CHANGE" MaxLength="12" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_LEVL_1_CHANGE" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CAMP_1_CHANGE" MaxLength="3" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_COLL_1_CHANGE" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_DEGC_1_CHANGE" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CTLG_TERM_1_CHANGE" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MAJR11_CHANGE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_DEPT11_CHANGE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MAJR12_CHANGE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_DEPT12_CHANGE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_PROGRAM_2_CHANGE" MaxLength="12" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_LEVL_2_CHANGE" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CAMP_2_CHANGE" MaxLength="3" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_COLL_2_CHANGE" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_DEGC_2_CHANGE" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CTLG_TERM_2_CHANGE" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MAJR21_CHANGE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_DEPT21_CHANGE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MAJR22_CHANGE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_DEPT22_CHANGE" MaxLength="4" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block Id="S$_CURRICULUM_CHANGE">
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MINR11_CHANGE" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_TERM_CTLG_1_CHANGE" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_ERR_CTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="SMRPRLE_CURR_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="SMRPRLE_CURR_2_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_BASE1_CTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MAJR1_CTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MINR1_CTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CONC1_CTRL" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_BASE2_CTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MAJR2_CTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MINR2_CTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CONC2_CTRL" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_CTRL_NUMB" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="BASE1_CHKIND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="BASE2_CHKIND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="MAJR1_CHKIND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="MAJR2_CHKIND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_BASE1_ERROR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_BASE2_ERROR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MAJR1_ERROR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MAJR2_ERROR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CONC1_ERROR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CONC2_ERROR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MINR1_ERROR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MINR2_ERROR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_BASE1_ERRCTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_BASE2_ERRCTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MAJR1_ERRCTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MINR1_ERRCTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CONC1_ERRCTRL" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MAJR2_ERRCTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_MINR2_ERRCTRL" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_CONC2_ERRCTRL" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC111" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC112" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC113" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC121" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC122" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC123" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC211" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC212" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC213" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC221" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC222" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_CONC223" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_MINR11" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_MINR12" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_MINR21" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_MINR22" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CEM_MSG" MaxLength="80" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_UPD_BASE1" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_UPD_BASE2" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_UPD_MAJR11" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_UPD_MAJR12" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_UPD_MAJR21" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_UPD_MAJR22" MaxLength="1" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block Id="S$_CURR_PROC_BLOCK">
+      <Item Id="ERR_NUMBER" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="DELREC_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item Id="CURRENT_RECORD" MaxLength="3" Navigable="false" Type="TextItem" />
+      <Item Id="NEXT_RECORD" MaxLength="3" Navigable="false" Type="TextItem" />
+      <Item Id="OPT_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item Id="HOLD_DEPT_ATTACH" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CONC_ATTACH_NUM" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="COMM_PLAN_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="CREREC_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="DUPREC_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="MODULE_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_EFF_TERM" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="HOLD_MAJR_RULE" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="HOLD_CURR_RULE" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="HOLD_TERM_CTLG" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="HOLD_DEPT" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="HOLD_MINR_RULE" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_CONC_RULE" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_PROGMAJR_LOV" MaxLength="40" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_CRES_LOV" MaxLength="40" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_ATTACH_LOV" MaxLength="40" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_ITEM_LOV" MaxLength="40" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" Id="FND_LIT" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" Id="HELP_ITEM_TYPE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" Id="HOLD_HELP_ITEM" MaxLength="40" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HELP_BASE_KEY" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CCON_ATTACH_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CCNG_CAMP_CODE" MaxLength="3" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CCNG_COLL_CODE" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CCNG_DEGC_CODE" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CCNG_LEVL_CODE" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CCNG_PROGRAM" MaxLength="12" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="MAJOR_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CURR_UPD_BASE" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_CTLG_TERM" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_EFF_TERM" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_PROGRAM" MaxLength="12" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_LEVL_CODE" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_CAMP_CODE" MaxLength="3" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_COLL_CODE" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="CURR_DEGC_CODE" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item Id="CURR_MAJR_CODE" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="TEMP_RULE_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="TEMP_RULE_2_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block Id="SOBCPLN" MultiRecord="true">
+      <Item Hint="sobcpln.sobcplnPidm.hint" Id="SOBCPLN_PIDM" MaxLength="10" Required="true" Type="TextItem" />
+      <Item CanvasName="COMM_PLAN_CANVAS" Hint="sobcpln.sobcplnCplnCode.hint" Id="SOBCPLN_CPLN_CODE" Lov="STVCPLN_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="COMM_PLAN_CANVAS" Hint="sobcpln.stvcplnDesc.hint" Id="STVCPLN_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowUpdate="false" CanvasName="COMM_PLAN_CANVAS" Hint="sobcpln.sobcplnTypeInd.hint" Id="SOBCPLN_TYPE_IND" MaxLength="1" Type="RadioGroup">
+        <Item Id="RECRUIT" Type="RadioButton" />
+        <Item Id="ADMIT" Type="RadioButton" />
+        <Item Id="STUDENT" Type="RadioButton" />
+      </Item>
+      <Item CanvasName="COMM_PLAN_CANVAS" Hint="sobcpln.sobcplnTermCode.hint" Id="SOBCPLN_TERM_CODE" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="COMM_PLAN_CANVAS" Hint="sobcpln.sobcplnSeqno.hint" Id="SOBCPLN_SEQNO" MaxLength="4" Type="TextItem" />
+      <Item CanvasName="COMM_PLAN_CANVAS" Hint="sobcpln.sobcplnActiveInd.hint" Id="SOBCPLN_ACTIVE_IND" MaxLength="1" Type="Checkbox" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="COMM_PLAN_CANVAS" Id="UNSENT_MAIL" MaxLength="1" Navigable="false" Type="Checkbox" />
+      <Item AllowSearch="false" CanvasName="COMM_PLAN_CANVAS" Hint="sobcpln.deleteMail.hint" Id="DELETE_MAIL" MaxLength="1" Type="Checkbox" />
+      <Item Hint="sobcpln.sobcplnActivityDate.hint" Id="SOBCPLN_ACTIVITY_DATE" MaxLength="11" Type="TextItem" />
+      <Item AllowSearch="false" Hint="sobcpln.deletePlan.hint" Id="DELETE_PLAN" MaxLength="1" Type="TextItem" />
+      <Item Id="CPLN_MESSAGE" MaxLength="200" Type="TextItem" />
+      <Item Id="INSERT_FLAG" MaxLength="30" Type="TextItem" />
+    </Block>
+    <Block Id="S$_CURRICULUM_FIELDS">
+      <Item Id="CURR_OPTION_TITLE1" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_OPTION_TITLE2" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_OPTION_KEY1" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_OPTION_KEY2" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEPT_DESC" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MAJR_DESC" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_PIDM" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_PROGRAM_PROCESS" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_LOV" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_SAVE_LOV" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_PROCESS" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_BASE_CHECK" MaxLength="30" Type="TextItem" />
+      <Item Id="CURR_UPD_BASE_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_UPD_BASE_FIELD_2" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_UPD_MAJR_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_UPD_MAJR_FIELD_2" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_TERM_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_TERM_CATLG_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_TERM_CATLG_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_LEVL_DESC" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_LEVL_2_DESC" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEGC_DESC" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEGC_2_DESC" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CAMP_DESC" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CAMP_2_DESC" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_COLL_DESC" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_COLL_2_DESC" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_LEVL_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CAMP_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEGC_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_COLL_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_PROGRAM_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MAJR_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEPT_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_1_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_1_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_1_3_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MAJR_1_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEPT_1_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_121_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_122_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_123_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MINR_1_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MINR_1_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_TERM_CATLG_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_LEVL_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CAMP_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_COLL_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEGC_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_PROGRAM_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MAJR_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEPT_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_2_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_2_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_2_3_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MAJR_2_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEPT_2_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_221_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_222_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_223_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MINR_2_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MINR_2_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CONC_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_PROGRAM_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEPT_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_DEPT_FIELD_2" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MAJR_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MINR_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_MAJR_FIELD_2" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_RULE_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_RULE_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_RULE_2_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CMJR_RULE_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CMJR_RULE_FIELD_2" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CMJR_RULE_1_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CMJR_RULE_2_1_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CMNR_RULE_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="CURR_CCON_RULE_FIELD" MaxLength="100" Type="TextItem" />
+    </Block>
+    <Block Id="S$_COMM_PLAN_BLOCK">
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_PROGRAM" MaxLength="12" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_LEVEL" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_CAMPUS" MaxLength="3" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_COLLEGE" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="HOLD_DEGREE" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="MODULE_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Id="HOLD_DEPT" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="COMM_PLAN_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="CREREC_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="DUPREC_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="COMM_PLAN_CANVAS" Id="DATA_SEPARATOR_LINE_C1" MaxLength="24" Navigable="false" Type="DisplayItem" />
+      <Item Id="SOBCPLN_RETURN_OBJECT" MaxLength="100" Type="TextItem" />
+      <Item Id="SOBCPLN_RETURN_ITEM" MaxLength="30" Type="TextItem" />
+      <Item Id="CALL_COMMPLAN" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_RECORD_PLACE" MaxLength="30" Type="TextItem" />
+      <Item Id="COMMIT_FORM_MESSAGE" MaxLength="200" Type="TextItem" />
+      <Item Id="INSERT_COMPLETE" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_KEY_FLAG" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_ADMIT_EXISTS" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_STUDENT_EXISTS" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_RECRUIT_EXISTS" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="COMM_PLAN_CANVAS" Id="SOBCPLN_TERM_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="COMM_CAMP_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_RESULT" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_ACTION" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="COMM_PLAN_CANVAS" Id="COMM_PLAN_CANVAS_RETURN_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="COMM_COLL_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_LEVL_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_DEGC_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_PROGRAM" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_MAJR_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="COMM_DEPT_CODE" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="COMM_PLAN_CANVAS" Id="SOBCPLN_CPLN_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="COMM_PLAN_MAIL_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="COMM_PLAN_CANVAS_ROLLBACK_BTN" MaxLength="14" Type="Button" />
+      <Item Id="COMM_PLAN_CANVAS_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item Id="COMM_PLAN_CANVAS_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item Id="COMM_PLAN_PLAN_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="OLD_CPLN_CODE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="KEY_FUNCTION" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="OLD_CPLN_DESC" MaxLength="120" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="NEW_CPLN_CODE" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="NEW_CPLN_DESC" MaxLength="60" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="COMM_SAVE_FIELD_NAME" MaxLength="50" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CPLN_PIDM" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CPLN_ACTION" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CPLN_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CPLN_TERM_CODE" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="OLD_TERM_CODE" MaxLength="6" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="CPLN_SEQNO" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="OLD_SEQNO" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="COMMIT_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Hint="sCommPlanBlock.addPlan.hint" Id="ADD_PLAN" MaxLength="1" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="PENDING_MAIL" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" Hint="sCommPlanBlock.deletePlanComm.hint" Id="DELETE_PLAN_COMM" MaxLength="1" Type="TextItem" />
+      <Item AllowSearch="false" Hint="sCommPlanBlock.deleteMailComm.hint" Id="DELETE_MAIL_COMM" MaxLength="1" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="SAVE_FIELD_NAME" MaxLength="50" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block Id="SORAINF" MultiRecord="true">
+      <Item Id="ADMIN_AROL_PIDM" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="ADMIN_ASSIGN_CANVAS" Hint="sorainf.adminId.hint" Id="ADMIN_ID" MaxLength="9" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="ADMIN_ASSIGN_CANVAS" Hint="sorainf.adminName.hint" Id="ADMIN_NAME" MaxLength="230" Navigable="false" Type="TextItem" />
+      <Item CanvasName="ADMIN_ASSIGN_CANVAS" Hint="sorainf.sorainfRadmCode.hint" Id="SORAINF_RADM_CODE" Lov="SORAROL_LOV" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="ADMIN_ASSIGN_CANVAS" Hint="sorainf.sorainfModule.hint" Id="SORAINF_MODULE" MaxLength="30" Type="RadioGroup">
+        <Item Id="RECRUIT" Type="RadioButton" />
+        <Item Id="APPLICANT" Type="RadioButton" />
+      </Item>
+      <Item CanvasName="ADMIN_ASSIGN_CANVAS" Hint="sorainf.sorainfTermCode.hint" Id="SORAINF_TERM_CODE" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="ADMIN_ASSIGN_CANVAS" Hint="sorainf.sorainfSourceInd.hint" Id="SORAINF_SOURCE_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item Hint="sorainf.sorainfArolPidm.hint" Id="SORAINF_AROL_PIDM" MaxLength="42" Required="true" Type="TextItem" />
+      <Item Hint="sorainf.sorainfPidm.hint" Id="SORAINF_PIDM" MaxLength="42" Required="true" Type="TextItem" />
+      <Item Hint="sorainf.sorainfActivityDate.hint" Id="SORAINF_ACTIVITY_DATE" MaxLength="11" Required="true" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="ADMIN_CONFID_IND" MaxLength="14" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="ADMIN_DCSD_IND" MaxLength="11" Navigable="false" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="ADMIN_ASSIGN_CANVAS" Hint="sorainf.sorainfSeqno.hint" Id="SORAINF_SEQNO" MaxLength="42" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="ADMIN_ASSIGN_CANVAS" Hint="sorainf.adminSourceDesc.hint" Id="ADMIN_SOURCE_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+    </Block>
+    <Block Id="S$_CURRICULA">
+      <Item Id="COMMPLAN_DELETE_TRIGGER" MaxLength="30" Type="TextItem" />
+      <Item Id="CURRENT_ROLE" MaxLength="100" Type="TextItem" />
+      <Item Id="CURRENT_OBJ" MaxLength="100" Type="TextItem" />
+      <Item Id="COMMIT_INPROGRESS" MaxLength="30" Type="TextItem" />
+      <Item Id="CREATE_RECR" MaxLength="30" Type="TextItem" />
+      <Item Id="CREATE_ADM" MaxLength="30" Type="TextItem" />
+      <Item Id="SAVE_ERROR_ITEM" MaxLength="100" Type="TextItem" />
+      <Item Id="LEARNER_EFF_TERM" MaxLength="6" Type="TextItem" />
+      <Item Id="OPTIONS_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="EVALUATE_COURSES" MaxLength="30" Type="TextItem" />
+      <Item Id="ORIGINAL_SORLCUR_COUNT" MaxLength="30" Type="TextItem" />
+      <Item Id="CURRIC_COMMIT_ERROR_MSG" MaxLength="100" Type="TextItem" />
+      <Item Id="CURRICULA_UPDATED" MaxLength="30" Type="TextItem" />
+      <Item Id="CURRICULA_DUP_INPROGRESS" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_OPTIONS_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="SORLCUR_DEL_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="DUP_CREATE_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="SORLFOS_DEL_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="HOLD_CURR_RULE" MaxLength="30" Type="TextItem" />
+      <Item Id="HOLD_TERM_CTLG" MaxLength="30" Type="TextItem" />
+      <Item Id="HOLD_DEPT" MaxLength="30" Type="TextItem" />
+      <Item Id="HOLD_MAJR_RULE" MaxLength="30" Type="TextItem" />
+      <Item Id="SORLCUR_BLOCK_STATUS" MaxLength="30" Type="TextItem" />
+      <Item Id="CURR_PROGRAM" MaxLength="30" Type="TextItem" />
+      <Item Id="CURR_LEVL_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="CURR_CAMP_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="CURR_DEGC_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="CURR_COLL_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="CURR_CTLG_TERM" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_CACT" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_CSTS" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_MAJOR" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_CMJR_RULE" MaxLength="4" Type="TextItem" />
+      <Item Id="DEFAULT_DEPT" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_LEVEL" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_CAMPUS" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_PROGRAM" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_COLLEGE" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_DEGREE" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_ADMT" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_CURRIC_TERM_CTLG" MaxLength="30" Type="TextItem" />
+      <Item Id="HOST_BLOCK_FIELD" MaxLength="100" Type="TextItem" />
+      <Item Id="LCUR_PROCESS" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_LOV" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_PROGRAM_FIELD" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_LEVL_FIELD" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_COLL_FIELD" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_CAMP_FIELD" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_DEGC_FIELD" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_SOBCTRL_CURR_RULE_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_ORIGINAL_CURR_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_TEMP_RULE_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_SOBCTRL_PROGRAM_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_SOBCTRL_CONC_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_LEVL_DESC" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_CAMP_DESC" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_COLL_DESC" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_DEGC_DESC" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_CHANGE_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="RETURN_FROM_SORLCUR" MaxLength="100" Type="TextItem" />
+      <Item Id="NEXT_BLOCK_SORLFOS" MaxLength="100" Type="TextItem" />
+      <Item Id="SORLFOS_NEXT_BLOCK_NAV" MaxLength="100" Type="TextItem" />
+      <Item Id="EXIT_FROM_SORLCUR" MaxLength="100" Type="TextItem" />
+      <Item Id="MODULE_KEY_SEQNO" MaxLength="30" Type="TextItem" />
+      <Item Id="MODULE_TERM_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="MODULE_END_TERM" MaxLength="30" Type="TextItem" />
+      <Item Id="MODULE_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="MODULE_DEGS_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="MODULE_STST_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="MODULE_INSERT_WARNING" MaxLength="100" Type="TextItem" />
+      <Item Id="MODULE_INSERT_RESTRICTION" MaxLength="100" Type="TextItem" />
+      <Item Id="LCUR_LOCK_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_PROGRAM_PROCESS" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_LEVL_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_CAMP_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_DEGC_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_PROGRAM" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_COLL_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_EFF_TERM" MaxLength="30" Type="TextItem" />
+      <Item Id="LCUR_CTLG_TERM" MaxLength="30" Type="TextItem" />
+      <Item Id="CHANGE_LEVL_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="CHANGE_PROGRAM" MaxLength="30" Type="TextItem" />
+      <Item Id="CHANGE_COLL_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="CHANGE_DEGC_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="CHANGE_CAMP_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="ERR_NUMBER" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="DELREC_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item Id="DELETE_INPROGRESS" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULTINSERT_INPROGRESS" MaxLength="30" Type="TextItem" />
+      <Item Id="CURRENT_RECORD" MaxLength="3" Navigable="false" Type="TextItem" />
+      <Item Id="NEXT_RECORD" MaxLength="3" Navigable="false" Type="TextItem" />
+      <Item Id="OPT_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item Id="MODULE_PIDM" MaxLength="30" Type="TextItem" />
+      <Item Id="SAVE_ADMIT_TERM" MaxLength="30" Type="TextItem" />
+      <Item Id="SAVE_MATRIC_TERM" MaxLength="30" Type="TextItem" />
+      <Item Id="SAVE_ADMIT_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="SAVE_CATLG_TERM" MaxLength="30" Type="TextItem" />
+      <Item Id="SAVE_PRIORITY_NO" MaxLength="30" Type="TextItem" />
+    </Block>
+    <Block Id="S$_CURRICULA_TRADITIONAL">
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_KEY_SEQNO_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_CONC_CODE_BTN" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_REC_NUM" MaxLength="3" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item Id="LFOS_REC_NUM" MaxLength="3" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_REC_NUM_LFOS" MaxLength="3" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_REC_CNT" MaxLength="3" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_REC_CNT_LFOS" MaxLength="3" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_PRIORITY_DISPLAY" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_PROGRAM_DISPLAY" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_LEVEL_DISPLAY" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_COLLEGE_DISPLAY" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_CAMPUS_DISPLAY" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_DEGREE_DISPLAY" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="LCUR_CATLG_DISPLAY" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sCurriculaTraditional.lcurCurrentIndDisplay.hint" Id="LCUR_CURRENT_IND_DISPLAY" MaxLength="1" PageName="FIELDOFSTUDY_TAB" Type="Checkbox" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sCurriculaTraditional.lcurSeqnoDisplay.hint" Id="LCUR_SEQNO_DISPLAY" MaxLength="5" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sCurriculaTraditional.lcurCactCodeDisplay.hint" Id="LCUR_CACT_CODE_DISPLAY" Lov="SOBCACT_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sCurriculaTraditional.lcurKeySeqnoDisplay.hint" Id="LCUR_KEY_SEQNO_DISPLAY" MaxLength="3" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sCurriculaTraditional.lcurTermCodeDisplay.hint" Id="LCUR_TERM_CODE_DISPLAY" Lov="STVTERM_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sCurriculaTraditional.lcurTermCodeEndDisplay.hint" Id="LCUR_TERM_CODE_END_DISPLAY" Lov="STVTERM_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sCurriculaTraditional.lcurLmodCodeDisplay.hint" Id="LCUR_LMOD_CODE_DISPLAY" Lov="STVLMOD_LOV" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="DisplayItem" />
+      <Item AllowInsert="false" CanvasName="CURRICULA_CANVAS" Id="DATA_SEPARATOR_LINE_1" MaxLength="24" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowInsert="false" CanvasName="CURRICULA_CANVAS" Id="DATA_SEPARATOR_LINE_2" MaxLength="24" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="DisplayItem" />
+      <Item AllowInsert="false" CanvasName="CURRICULA_CANVAS" Id="DATA_SEPARATOR_LINE_2A" MaxLength="24" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="DisplayItem" />
+      <Item Id="RETURN_FROM_CURR" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sCurriculaTraditional.lcurPrevRecordBtn.hint" Id="LCUR_PREV_RECORD_BTN" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sCurriculaTraditional.lcurNextRecBtn.hint" Id="LCUR_NEXT_REC_BTN" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sCurriculaTraditional.lfosDeactiveBtn.hint" Id="LFOS_DEACTIVE_BTN" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="PROMPT_LCUR_COMMIT" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="LCUR_DELETE_ERROR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item Id="ACTIVE_REG_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block AllowUpdate="false" Id="SORLCUR">
+      <Item Id="SAVE_TERM" MaxLength="30" Type="TextItem" />
+      <Item Id="SORLCUR_DUPLICATE_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="SORLFOS_SEQNO_CNT" MaxLength="30" Type="TextItem" />
+      <Item Id="SORLCUR_QUERY_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_MAJR_ATTACH_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_MINR_ATTACH_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_CONCMAJR_ATTACH_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_CONCBASE_ATTACH_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="CURRIC_WARNING" MaxLength="30" Type="TextItem" />
+      <Item Id="SEVERITY_OUT" MaxLength="30" Type="TextItem" />
+      <Item Id="CURR_ERROR" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLCUR_PIDM" MaxLength="9" Required="true" Type="TextItem" />
+      <Item Id="SOVLCUR_ROWID" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLCUR_CURR_RULE" MaxLength="9" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sovlcurCurrentInd.hint" Id="SOVLCUR_CURRENT_IND" MaxLength="1" PageName="CURRICULUM_TAB" Type="Checkbox" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurSeqno.hint" Id="SORLCUR_SEQNO" MaxLength="5" Navigable="false" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurCactCode.hint" Id="SORLCUR_CACT_CODE" Lov="SOBCACT_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurKeySeqno.hint" Id="SORLCUR_KEY_SEQNO" Lov="SGVSTSP_LOV" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurTermCode.hint" Id="SORLCUR_TERM_CODE" Lov="STVTERM_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurTermCodeEnd.hint" Id="SORLCUR_TERM_CODE_END" Lov="STVTERM_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurTermCodeCtlg.hint" Id="SORLCUR_TERM_CODE_CTLG" Lov="STVTERM_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurPriorityNo.hint" Id="SORLCUR_PRIORITY_NO" MaxLength="5" MaxValue="999" MinValue="0" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurProgram.hint" Id="SORLCUR_PROGRAM" Lov="SMRPRLE_PROGRAM_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurLevlCode.hint" Id="SORLCUR_LEVL_CODE" Lov="STVLEVL_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurCampCode.hint" Id="SORLCUR_CAMP_CODE" Lov="STVCAMP_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurCollCode.hint" Id="SORLCUR_COLL_CODE" Lov="STVCOLL_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurDegcCode.hint" Id="SORLCUR_DEGC_CODE" Lov="STVDEGC_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurAdmtCode.hint" Id="SORLCUR_ADMT_CODE" Lov="STVADMT_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurTermCodeAdmit.hint" Id="SORLCUR_TERM_CODE_ADMIT" Lov="STVTERM_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sovlcurApplKeySeqno.hint" Id="SOVLCUR_APPL_KEY_SEQNO" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item Id="SOVLCUR_APPL_SEQNO" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurTermCodeMatric.hint" Id="SORLCUR_TERM_CODE_MATRIC" Lov="STVTERM_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurLmodCode.hint" Id="SORLCUR_LMOD_CODE" Lov="STVLMOD_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurRollInd.hint" Id="SORLCUR_ROLL_IND" MaxLength="1" PageName="CURRICULUM_TAB" Type="RadioGroup">
+        <Item Id="YES_ROLL" Type="RadioButton" />
+        <Item Id="NO_ROLL" Type="RadioButton" />
+        <Item Id="DEFAULT_ROLL" Type="RadioButton" />
+      </Item>
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurGappSeqno.hint" Id="SORLCUR_GAPP_SEQNO" MaxLength="4" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.lcurRolledKeySeqno.hint" Id="LCUR_ROLLED_KEY_SEQNO" MaxLength="4" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <!--<Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Id="SORLCUR_USER_ID" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />-->
+      <Item Navigable="false"  AllowUpdate="false" Id="SORLCUR_USER_ID" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem"  CanvasName="CURRICULA_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID"/>
+      </Item>
+      <!--<Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Id="SORLCUR_ACTIVITY_DATE" MaxLength="26" PageName="CURRICULUM_TAB" Type="TextItem" />-->
+      <Item Navigable="false"  AllowUpdate="false" Id="SORLCUR_ACTIVITY_DATE" MaxLength="26" PageName="CURRICULUM_TAB" Type="TextItem"  CanvasName="CURRICULA_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE"/>
+      </Item>
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurStartDate.hint" Id="SORLCUR_START_DATE" MaxLength="11" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurEndDate.hint" Id="SORLCUR_END_DATE" MaxLength="11" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurStypCode.hint" Id="SORLCUR_STYP_CODE" Lov="STVSTYP_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurSiteCode.hint" Id="SORLCUR_SITE_CODE" Lov="STVSITE_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurRateCode.hint" Id="SORLCUR_RATE_CODE" Lov="STVRATE_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurLeavCode.hint" Id="SORLCUR_LEAV_CODE" Lov="STVLEAV_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurLeavFromDate.hint" Id="SORLCUR_LEAV_FROM_DATE" MaxLength="11" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurLeavToDate.hint" Id="SORLCUR_LEAV_TO_DATE" MaxLength="11" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurExpGradDate.hint" Id="SORLCUR_EXP_GRAD_DATE" MaxLength="11" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurTermCodeGrad.hint" Id="SORLCUR_TERM_CODE_GRAD" Lov="STVTERM_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurAcyrCode.hint" Id="SORLCUR_ACYR_CODE" Lov="STVACYR_LOV" MaxLength="30" PageName="CURRICULUM_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLCUR_ROLLED_SEQNO" MaxLength="5" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_CACT_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_TERM_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_LMOD_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_TERM_CODE_CTLG_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_PROGRAM_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_LEVL_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_COLL_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_DEGC_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_CAMP_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_ADMT_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_TERM_CODE_ADMIT_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_TERM_CODE_MATRIC_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_TERM_CODE_END_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_START_DATE_DBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_END_DATE_DBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_STYP_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_SITE_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_RATE_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_LEAV_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_LEAV_FROM_DATE_DBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_LEAV_TO_DATE_DBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_EXP_GRAD_DATE_DBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_TERM_CODE_GRAD_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLCUR_ACYR_CODE_LBT" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurTermDesc.hint" Id="SORLCUR_TERM_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurCatlgTermDesc.hint" Id="SORLCUR_CATLG_TERM_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurLevlDesc.hint" Id="SORLCUR_LEVL_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurCampDesc.hint" Id="SORLCUR_CAMP_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurCollDesc.hint" Id="SORLCUR_COLL_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurDegcDesc.hint" Id="SORLCUR_DEGC_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurAdmtDesc.hint" Id="SORLCUR_ADMT_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurProgramDesc.hint" Id="SORLCUR_PROGRAM_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurAdmtTermDesc.hint" Id="SORLCUR_ADMT_TERM_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurMatricTermDesc.hint" Id="SORLCUR_MATRIC_TERM_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurEndTermDesc.hint" Id="SORLCUR_END_TERM_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurStypCodeDesc.hint" Id="SORLCUR_STYP_CODE_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurSiteCodeDesc.hint" Id="SORLCUR_SITE_CODE_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurRateCodeDesc.hint" Id="SORLCUR_RATE_CODE_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurLeavCodeDesc.hint" Id="SORLCUR_LEAV_CODE_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurTermCodeGradDesc.hint" Id="SORLCUR_TERM_CODE_GRAD_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurAcyrCodeDesc.hint" Id="SORLCUR_ACYR_CODE_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlcur.sorlcurLmodCodeDesc.hint" Id="SORLCUR_LMOD_CODE_DESC" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="DisplayItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.nextRecBtn.hint" Id="NEXT_REC_BTN" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.prevRecordBtn.hint" Id="PREV_RECORD_BTN" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.deactiveBtn.hint" Id="DEACTIVE_BTN" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.deactiveDuplicateBtn.hint" Id="DEACTIVE_DUPLICATE_BTN" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlcur.duplicateBtn.hint" Id="DUPLICATE_BTN" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item Id="DEACTIVATE_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="TEMP_SORLCUR_CURR_RULE" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="APPLY_TO_GRADUATE_BTN" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="ROLL_TO_OUTCOME_BTN" MaxLength="30" Navigable="false" PageName="CURRICULUM_TAB" Type="Button" />
+    </Block>
+    <Block AllowUpdate="false" Id="SORLFOS" MultiRecord="true">
+      <Item CanvasName="CURRICULA_CANVAS" Id="LFOS_ROLLED_IND" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="Checkbox" />
+      <Item Id="LFOS_DEACTIVATE_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_ERROR_ITEM" MaxLength="100" Type="TextItem" />
+      <Item Id="LFOS_ERROR_FLAG" MaxLength="100" Type="TextItem" />
+      <Item Id="LFOS_DELETE_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_OPTION_KEY1" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_OPTION_KEY2" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_OPTION_KEY3" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_OPTION_TITLE1" MaxLength="36" Type="TextItem" />
+      <Item Id="LFOS_OPTION_TITLE2" MaxLength="36" Type="TextItem" />
+      <Item Id="LFOS_OPTION_TITLE3" MaxLength="36" Type="TextItem" />
+      <Item Id="HOLD_DEPT_ATTACH" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_WARNING" MaxLength="30" Type="TextItem" />
+      <Item Id="SEVERITY_OUT" MaxLength="30" Type="TextItem" />
+      <Item Id="CURR_ERROR" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_PIDM" MaxLength="9" Required="true" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SOVLFOS_ROWID" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_LCUR_SEQNO" MaxLength="5" Required="true" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosCurrentInd.hint" Id="SORLFOS_CURRENT_IND" MaxLength="1" PageName="FIELDOFSTUDY_TAB" Type="Checkbox" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosSeqno.hint" Id="SORLFOS_SEQNO" MaxLength="5" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosCactCode.hint" Id="SORLFOS_CACT_CODE" Lov="SOBCACT_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosCstsCode.hint" Id="SORLFOS_CSTS_CODE" Lov="STVCSTS_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosLfstCode.hint" Id="SORLFOS_LFST_CODE" Lov="GTVLFST_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosPriorityNo.hint" Id="SORLFOS_PRIORITY_NO" MaxLength="5" MaxValue="999" MinValue="0" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosTermCode.hint" Id="SORLFOS_TERM_CODE" Lov="STVTERM_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosTermCodeCtlg.hint" Id="SORLFOS_TERM_CODE_CTLG" Lov="STVTERM_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosTermCodeEnd.hint" Id="SORLFOS_TERM_CODE_END" Lov="STVTERM_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosMajrCode.hint" Id="SORLFOS_MAJR_CODE" Lov="SORLFOS_MAJR_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosDeptCode.hint" Id="SORLFOS_DEPT_CODE" Lov="STVDEPT_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosMajrCodeAttach.hint" Id="SORLFOS_MAJR_CODE_ATTACH" Lov="SOTLFOS_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosTmstCode.hint" Id="SORLFOS_TMST_CODE" Lov="STVTMST_LOV" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosStartDate.hint" Id="SORLFOS_START_DATE" MaxLength="11" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosEndDate.hint" Id="SORLFOS_END_DATE" MaxLength="11" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_LFOS_RULE" MaxLength="9" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_CONC_ATTACH_RULE" MaxLength="9" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_ROLLED_SEQNO" MaxLength="5" Type="TextItem" />
+      <!--<Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_USER_ID" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />-->
+      <Item Navigable="false"  Id="SORLFOS_USER_ID" MaxLength="30" PageName="FIELDOFSTUDY_TAB" Type="TextItem"  CanvasName="CURRICULA_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID"/>
+      </Item>
+      <!--<Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_ACTIVITY_DATE" MaxLength="26" PageName="FIELDOFSTUDY_TAB" Type="TextItem" />-->
+      <Item Navigable="false"  Id="SORLFOS_ACTIVITY_DATE" MaxLength="26" PageName="FIELDOFSTUDY_TAB" Type="TextItem"  CanvasName="CURRICULA_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE"/>
+      </Item>
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_CACT_CODE_LBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_START_DATE_DBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_END_DATE_DBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_DEPT_CODE_LBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_TERM_CODE_CTLG_LBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_TERM_CODE_END_LBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_CSTS_CODE_LBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_TERM_CODE_LBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_TMST_CODE_LBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_MAJR_CODE_LBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_MAJR_CODE_ATTACH_LBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item CanvasName="CURRICULA_CANVAS" Id="SORLFOS_LFST_CODE_LBT" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosMajrDesc.hint" Id="SORLFOS_MAJR_DESC" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosAttachConcDesc.hint" Id="SORLFOS_ATTACH_CONC_DESC" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosTmstDesc.hint" Id="SORLFOS_TMST_DESC" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosDeptDesc.hint" Id="SORLFOS_DEPT_DESC" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_CANVAS" Hint="sorlfos.sorlfosLfstCodeDesc.hint" Id="SORLFOS_LFST_CODE_DESC" MaxLength="30" Navigable="false" PageName="FIELDOFSTUDY_TAB" Type="DisplayItem" />
+    </Block>
+    <Block AllowUpdate="false" Id="SORLCUR_LITE">
+      <Item AllowUpdate="false" Id="SORLCUR_GAPP_SEQNO" MaxLength="5" Navigable="false" Type="TextItem" />
+      <Item Id="SORLFOS_SEQNO_CNT" MaxLength="30" Type="TextItem" />
+      <Item Id="SORLCUR_DUPLICATE_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="SORLCUR_QUERY_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_MAJR_ATTACH_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_MINR_ATTACH_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_CONCMAJR_ATTACH_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_CONCBASE_ATTACH_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="CURRIC_WARNING" MaxLength="30" Type="TextItem" />
+      <Item Id="SEVERITY_OUT" MaxLength="30" Type="TextItem" />
+      <Item Id="CURR_ERROR" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLCUR_PIDM" MaxLength="9" Required="true" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SOVLCUR_ROWID" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLCUR_CURR_RULE" MaxLength="9" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sorlcurLite.sovlcurCurrentInd.hint" Id="SOVLCUR_CURRENT_IND" MaxLength="1" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLCUR_LMOD_CODE" MaxLength="15" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlcurLite.sorlcurSeqno.hint" Id="SORLCUR_SEQNO" MaxLength="5" Navigable="false" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurTermCode.hint" Id="SORLCUR_TERM_CODE" Lov="STVTERM_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurTermCodeCtlg.hint" Id="SORLCUR_TERM_CODE_CTLG" Lov="STVTERM_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurPriorityNo.hint" Id="SORLCUR_PRIORITY_NO" MaxLength="5" MaxValue="999" MinValue="0" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurProgram.hint" Id="SORLCUR_PROGRAM" Lov="SMRPRLE_PROGRAM_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurLevlCode.hint" Id="SORLCUR_LEVL_CODE" Lov="STVLEVL_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurCampCode.hint" Id="SORLCUR_CAMP_CODE" Lov="STVCAMP_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurCollCode.hint" Id="SORLCUR_COLL_CODE" Lov="STVCOLL_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurDegcCode.hint" Id="SORLCUR_DEGC_CODE" Lov="STVDEGC_LOV" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurKeySeqno.hint" Id="SORLCUR_KEY_SEQNO" Lov="SGVSTSP_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlcurLite.sorlcurCactCode.hint" Id="SORLCUR_CACT_CODE" Lov="SOBCACT_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlcurLite.sorlcurStartDate.hint" Id="SORLCUR_START_DATE" MaxLength="11" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlcurLite.sorlcurEndDate.hint" Id="SORLCUR_END_DATE" MaxLength="11" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlcurLite.sorlcurRollInd.hint" Id="SORLCUR_ROLL_IND" MaxLength="1" Required="true" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLCUR_USER_ID" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLCUR_ACTIVITY_DATE" MaxLength="26" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlcurLite.sorlcurAdmtCode.hint" Id="SORLCUR_ADMT_CODE" Lov="STVADMT_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlcurLite.sorlcurTermCodeAdmit.hint" Id="SORLCUR_TERM_CODE_ADMIT" Lov="STVTERM_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlcurLite.sorlcurTermCodeMatric.hint" Id="SORLCUR_TERM_CODE_MATRIC" Lov="STVTERM_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlcurLite.sorlcurTermCodeEnd.hint" Id="SORLCUR_TERM_CODE_END" Lov="STVTERM_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLCUR_ROLLED_SEQNO" MaxLength="5" Type="TextItem" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLCUR_KEY_SEQNO_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLCUR_TERM_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLCUR_TERM_CODE_CTLG_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLCUR_PROGRAM_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLCUR_LEVL_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLCUR_COLL_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLCUR_DEGC_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLCUR_CAMP_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLCUR_TERM_CODE_ADMT_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLCUR_TERM_CODE_MATRIC_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLCUR_TERM_CODE_END_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLCUR_START_DATE_DBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLCUR_END_DATE_DBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLCUR_ADMT_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLCUR_CACT_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurLevlDesc.hint" Id="SORLCUR_LEVL_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurCampDesc.hint" Id="SORLCUR_CAMP_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurCollDesc.hint" Id="SORLCUR_COLL_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurDegcDesc.hint" Id="SORLCUR_DEGC_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Hint="sorlcurLite.sorlcurAdmtDesc.hint" Id="SORLCUR_ADMT_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurTermDesc.hint" Id="SORLCUR_TERM_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.sorlcurCatlgTermDesc.hint" Id="SORLCUR_CATLG_TERM_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.nextRecBtn.hint" Id="NEXT_REC_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlcurLite.prevRecordBtn.hint" Id="PREV_RECORD_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="TEMP_SORLCUR_CURR_RULE" MaxLength="30" Type="TextItem" />
+    </Block>
+    <Block AllowUpdate="false" Id="SORLFOS_LITE">
+      <Item Id="LFOS_DELETE_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_OPTION_KEY1" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_OPTION_KEY2" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_OPTION_KEY3" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_OPTION_TITLE1" MaxLength="36" Type="TextItem" />
+      <Item Id="LFOS_OPTION_TITLE2" MaxLength="36" Type="TextItem" />
+      <Item Id="LFOS_OPTION_TITLE3" MaxLength="36" Type="TextItem" />
+      <Item Id="HOLD_DEPT_ATTACH" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_WARNING" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_SEVERITY_OUT" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_CURR_ERROR" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_PIDM" MaxLength="9" Required="true" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SOVLFOS_ROWID" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_LCUR_SEQNO" MaxLength="5" Required="true" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_DATA_ORIGIN" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_USER_ID" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_ACTIVITY_DATE" MaxLength="11" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sorlfosLite.sorlfosCurrentInd.hint" Id="SORLFOS_CURRENT_IND" MaxLength="1" Type="TextItem" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlfosLite.sorlfosLfstCode.hint" Id="SORLFOS_LFST_CODE" Lov="GTVLFST_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlfosLite.sorlfosPriorityNo.hint" Id="SORLFOS_PRIORITY_NO" MaxLength="5" MaxValue="999" MinValue="0" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlfosLite.sorlfosCactCode.hint" Id="SORLFOS_CACT_CODE" Lov="SOBCACT_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlfosLite.sorlfosStartDate.hint" Id="SORLFOS_START_DATE" MaxLength="11" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlfosLite.sorlfosTermCode.hint" Id="SORLFOS_TERM_CODE" Lov="STVTERM_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlfosLite.sorlfosEndDate.hint" Id="SORLFOS_END_DATE" MaxLength="11" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlfosLite.sorlfosMajrCode.hint" Id="SORLFOS_MAJR_CODE" Lov="SORLFOS_MAJR_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlfosLite.sorlfosCstsCode.hint" Id="SORLFOS_CSTS_CODE" Lov="STVCSTS_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlfosLite.sorlfosDeptCode.hint" Id="SORLFOS_DEPT_CODE" Lov="STVDEPT_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlfosLite.sorlfosMajrCodeAttach.hint" Id="SORLFOS_MAJR_CODE_ATTACH" Lov="SOTLFOS_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlfosLite.sorlfosTmstCode.hint" Id="SORLFOS_TMST_CODE" Lov="STVTMST_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlfosLite.sorlfosTermCodeCtlg.hint" Id="SORLFOS_TERM_CODE_CTLG" Lov="STVTERM_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Hint="sorlfosLite.sorlfosTermCodeEnd.hint" Id="SORLFOS_TERM_CODE_END" Lov="STVTERM_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_LFOS_RULE" MaxLength="9" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_CONC_ATTACH_RULE" MaxLength="9" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_ROLLED_SEQNO" MaxLength="5" Type="TextItem" />
+      <Item AllowUpdate="false" Id="SORLFOS_SEQNO" MaxLength="5" Type="TextItem" />
+      <Item Id="SORLFOS_START_DATE_DBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLFOS_END_DATE_DBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLFOS_CACT_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLFOS_DEPT_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLFOS_TERM_CODE_CTLG_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLFOS_TERM_CODE_END_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLFOS_CSTS_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLFOS_TERM_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORLFOS_TMST_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLFOS_MAJR_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLFOS_MAJR_CODE_ATTACH_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="SORLFOS_LFST_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlfosLite.sorlfosMajrDesc.hint" Id="SORLFOS_MAJR_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlfosLite.sorlfosAttachConcDesc.hint" Id="SORLFOS_ATTACH_CONC_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Hint="sorlfosLite.sorlfosTmstDesc.hint" Id="SORLFOS_TMST_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_LITE_CANVAS" Hint="sorlfosLite.sorlfosDeptDesc.hint" Id="SORLFOS_DEPT_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Hint="sorlfosLite.sorlfosLfstCodeDesc.hint" Id="SORLFOS_LFST_CODE_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+    </Block>
+    <Block Id="S$_ADMIN_ASSIGN">
+      <Item Id="SORAINF_DELETE_IND" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="ADMIN_ASSIGN_CANVAS" Id="SORAINF_RADM_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SORAINF_RETURN_ITEM" MaxLength="30" Type="TextItem" />
+      <Item Id="SORAINF_RETURN_OBJECT" MaxLength="100" Type="TextItem" />
+      <Item Id="CALL_ADMIN" MaxLength="30" Type="TextItem" />
+      <Item Id="ADMIN_ASSIGN_MODULE" MaxLength="30" Type="TextItem" />
+      <Item Id="ADMIN_ASSIGN_SEQNO" MaxLength="30" Type="TextItem" />
+      <Item Id="ADMIN_ASSIGN_TERM_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="ADMIN_QUERY_MODE" MaxLength="30" Type="TextItem" />
+      <Item Id="ADMIN_PIDM" MaxLength="30" Type="TextItem" />
+      <Item Id="ADMIN_COMMIT_IND" MaxLength="30" Type="TextItem" />
+      <Item Id="ADMIN_ASSIGN_SAVE_FIELD" MaxLength="30" Type="TextItem" />
+      <Item Id="ADMIN_ASSIGN_OPTION_IND" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="ADMIN_ASSIGN_CANVAS" Id="ADMIN_ASSIGN_CANVAS_TERM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="ADMIN_ASSIGN_CANVAS_ASSIGN_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="ADMIN_ASSIGN_CANVAS_ROLE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="ADMIN_ASSIGN_CANVAS_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item Id="ADMIN_ASSIGN_CAN_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item Id="ADMIN_ASSIGN_CANVAS_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="ADMIN_ASSIGN_CANVAS" Id="ADMIN_ASSIGN_CANVAS_RETURN_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="ADMIN_ASSIGN_CANVAS" Id="ADMIN_ID_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" CanvasName="ADMIN_ASSIGN_CANVAS" Id="DATA_SEPARATOR_LINE" MaxLength="24" Navigable="false" Type="DisplayItem" />
+      <Item CanvasName="ADMIN_ASSIGN_CANVAS" Id="ADMIN_ASSIGN_CANVAS_SEQNO_BTN" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+    <Block Id="G$_EXTENDED_SEARCH_BLOCK">
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="IDNAME_EXTSEARCH_LIST" MaxLength="100" Navigable="false" Type="List" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="PERSON_DETAIL_BTN" MaxLength="30" Type="Button" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="NPERSON_DETAIL_BTN" MaxLength="30" Type="Button" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.searchGroup.hint" Id="SEARCH_GROUP" MaxLength="1" Navigable="false" Type="RadioGroup">
+        <Item Id="PERSON" Type="RadioButton" />
+        <Item Id="NONPERSON" Type="RadioButton" />
+        <Item Id="BOTH" Type="RadioButton" />
+      </Item>
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpraddrCity.hint" Id="SR_SPRADDR_CITY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpraddrStatCode.hint" Id="SR_SPRADDR_STAT_CODE" Lov="STVSTAT_LOV_IDNAME" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpraddrZip.hint" Id="SR_SPRADDR_ZIP" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpridenNtypCode.hint" Id="SR_SPRIDEN_NTYP_CODE" Lov="GTVNTYP_LOV_IDNAME" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpbpersSsn.hint" Id="SR_SPBPERS_SSN" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpbpersBirthDate.hint" Id="SR_SPBPERS_BIRTH_DATE" MaxLength="13" Navigable="false" Type="TextItem" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpbpersSex.hint" Id="SR_SPBPERS_SEX" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="SR_SPRADDR_ZIP_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="SR_SPRADDR_STAT_CODE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="SR_SPRIDEN_NTYP_CODE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="EXTSEARCH_CLEAR_BTN" MaxLength="30" Type="Button" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="NARROW_SEARCH_BTN" MaxLength="30" Type="Button" />
+      <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="EXTSEARCH_COUNT" MaxLength="5" Type="DisplayItem" />
+      <Item AllowInsert="false" Id="DATA_SEPARATOR_LINE_2" MaxLength="24" Navigable="false" PageName="S$_SORLCUR_SORLFOS" Type="DisplayItem" />
+    </Block>
+    <Block Id="S$_CURRICULA_SUMMARY">
+      <Item Id="QUERY_SUMMARY" MaxLength="30" Type="TextItem" />
+      <Item Id="PRIMARY_ROWID" MaxLength="30" Type="TextItem" />
+      <Item Id="SECONDARY_ROWID" MaxLength="30" Type="TextItem" />
+      <Item Id="RETURN_FROM_SOVLCUR" MaxLength="100" Type="TextItem" />
+      <Item Id="SUMMARY_END_TERM" MaxLength="30" Type="TextItem" />
+      <Item Id="SUMMARY_KEY_SEQNO" MaxLength="30" Type="TextItem" />
+      <Item Id="SUMMARY_TERM_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="SUMMARY_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="SUMMARY_PIDM" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="CURRICULA_SUMMARY_TAB" Id="DATA_SEPARATOR_LINE_SOVLCUR_1" MaxLength="24" Navigable="false" Type="DisplayItem" />
+      <Item CanvasName="CURRICULA_SUMMARY_TAB" Id="SOVLFOS_CONC_CODE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+    <Block Id="S$_CURRICULA_LITE">
+      <Item Hint="sCurriculaLite.sorlcurLiteResdCode.hint" Id="SORLCUR_LITE_RESD_CODE" MaxLength="30" Type="TextItem" />
+      <Item Hint="sCurriculaLite.sorlcurLiteStypCode.hint" Id="SORLCUR_LITE_STYP_CODE" MaxLength="30" Type="TextItem" />
+      <Item Hint="sCurriculaLite.sorlcurLiteFullPartInd.hint" Id="SORLCUR_LITE_FULL_PART_IND" MaxLength="1" Type="TextItem" />
+      <Item Hint="sCurriculaLite.sorlcurLiteRateCode.hint" Id="SORLCUR_LITE_RATE_CODE" MaxLength="30" Type="TextItem" />
+      <Item Hint="sCurriculaLite.sorlcurLiteEgolCode.hint" Id="SORLCUR_LITE_EGOL_CODE" MaxLength="30" Type="TextItem" />
+      <Item Hint="sCurriculaLite.sorlcurLiteEdlvCode.hint" Id="SORLCUR_LITE_EDLV_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="DEFAULT_USED" MaxLength="30" Type="TextItem" />
+      <Item Id="LFOS_REC_NUM" MaxLength="3" Type="TextItem" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="LCUR_REC_NUM" MaxLength="3" Type="TextItem" />
+      <Item CanvasName="CURRICULA_LITE_CANVAS" Id="LCUR_REC_CNT" MaxLength="3" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="CURRICULA_LITE_CANVAS" Id="DATA_SEPARATOR_LINE_LITE_1" MaxLength="24" Navigable="false" Type="DisplayItem" />
+    </Block>
+    <Block AllowDelete="false" AllowInsert="false" Id="SOVLCUR">
+      <Item Id="SOVLCUR_ROLLED_SEQNO" MaxLength="30" Type="TextItem" />
+      <Item Id="SOVLCUR_RPT_CURRENT_IND" MaxLength="1" Type="TextItem" />
+      <Item Id="SUMMARY_ROWID" MaxLength="30" Type="TextItem" />
+      <Item Id="SOVLCUR_PIDM" MaxLength="9" Type="TextItem" />
+      <Item Id="SOVLCUR_SEQNO" MaxLength="30" Type="TextItem" />
+      <Item Id="SOVLCUR_GAPP_SEQNO" MaxLength="4" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurPriorityNo.hint" Id="SOVLCUR_PRIORITY_NO" MaxLength="5" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurTermCode.hint" Id="SOVLCUR_TERM_CODE" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurProgram.hint" Id="SOVLCUR_PROGRAM" MaxLength="12" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurTermCodeCtlg.hint" Id="SOVLCUR_TERM_CODE_CTLG" MaxLength="6" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurKeySeqno.hint" Id="SOVLCUR_KEY_SEQNO" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurProgramDesc.hint" Id="SOVLCUR_PROGRAM_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.stvlevlDesc.hint" Id="STVLEVL_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.stvcampDesc.hint" Id="STVCAMP_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.stvcollDesc.hint" Id="STVCOLL_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.stvdegcDesc.hint" Id="STVDEGC_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurTermCodeEnd.hint" Id="SOVLCUR_TERM_CODE_END" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurStvstypDesc.hint" Id="SOVLCUR_STVSTYP_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurStvrateDesc.hint" Id="SOVLCUR_STVRATE_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Id="SOVLCUR_STYP_CODE" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurLevlCode.hint" Id="SOVLCUR_LEVL_CODE" MaxLength="2" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurCampCode.hint" Id="SOVLCUR_CAMP_CODE" MaxLength="3" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Id="SOVLCUR_RATE_CODE" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurCollCode.hint" Id="SOVLCUR_COLL_CODE" MaxLength="2" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurDegcCode.hint" Id="SOVLCUR_DEGC_CODE" MaxLength="6" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurAdmtCode.hint" Id="SOVLCUR_ADMT_CODE" MaxLength="6" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurDgmrSeqno.hint" Id="SOVLCUR_DGMR_SEQNO" MaxLength="4" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurStvadmtDesc.hint" Id="SOVLCUR_STVADMT_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurTermCodeAdmit.hint" Id="SOVLCUR_TERM_CODE_ADMIT" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurTermCodeMatric.hint" Id="SOVLCUR_TERM_CODE_MATRIC" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.primaryDesc.hint" Id="PRIMARY_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Hint="sovlcur.sovlcurLmodCode.hint" Id="SOVLCUR_LMOD_CODE" MaxLength="15" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlcur.sovlcurLmodDesc.hint" Id="SOVLCUR_LMOD_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+    </Block>
+    <Block AllowDelete="false" AllowInsert="false" AllowUpdate="false" Id="SOVLFOS" MultiRecord="true">
+      <Item Id="SOVLFOS_LCUR_SEQNO" MaxLength="5" Type="TextItem" />
+      <Item Id="SOVLFOS_PIDM" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlfos.sovlfosPriorityNo.hint" Id="SOVLFOS_PRIORITY_NO" MaxLength="5" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlfos.sovlfosTermCode.hint" Id="SOVLFOS_TERM_CODE" MaxLength="30" Type="TextItem" />
+      <Item Hint="sovlfos.sovlfosLfstCode.hint" Id="SOVLFOS_LFST_CODE" MaxLength="30" Type="TextItem" />
+      <Item Hint="sovlfos.sovlfosMajrCode.hint" Id="SOVLFOS_MAJR_CODE" Lov="SOVLFOS_ATTACH_MAJR_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" Hint="sovlfos.sovlfosDeptCode.hint" Id="SOVLFOS_DEPT_CODE" MaxLength="4" Type="TextItem" />
+      <Item AllowInsert="false" Hint="sovlfos.sovlfosConcAttachMajrCode.hint" Id="SOVLFOS_CONC_ATTACH_MAJR_CODE" MaxLength="4" Type="TextItem" />
+      <Item AllowInsert="false" Id="SOVLFOS_TERM_CODE_CTLG" MaxLength="6" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlfos.gtvlfstDesc.hint" Id="GTVLFST_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlfos.stvmajrDesc.hint" Id="STVMAJR_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlfos.stvdeptDesc.hint" Id="STVDEPT_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="CURRICULA_SUMMARY_TAB" Hint="sovlfos.stvconcDesc.hint" Id="STVCONC_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+    </Block>
+    <Block AllowDelete="false" Id="SGRSTSP">
+      <Item Id="SGRSTSP_PIDM" MaxLength="30" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspTermCodeEff.hint" Id="SGRSTSP_TERM_CODE_EFF" Lov="STVTERM_LOV" MaxLength="30" PageName="STUDY_PATH" Required="true" Type="TextItem" />
+      <Item CanvasName="STUDYPATH" Id="END_STSP_TERM" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspKeySeqno.hint" Id="SGRSTSP_KEY_SEQNO" MaxLength="2" PageName="STUDY_PATH" Required="true" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspName.hint" Id="SGRSTSP_NAME" MaxLength="4000" Navigable="false" PageName="STUDY_PATH" Required="true" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspStspCode.hint" Id="SGRSTSP_STSP_CODE" Lov="STVSTSP_LOV" MaxLength="30" PageName="STUDY_PATH" Required="true" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspStspDesc.hint" Id="SGRSTSP_STSP_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Required="true" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspAstdCode.hint" Id="SGRSTSP_ASTD_CODE" Lov="STVASTD_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspAstdDesc.hint" Id="SGRSTSP_ASTD_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Required="true" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspPrevCode.hint" Id="SGRSTSP_PREV_CODE" Lov="STVPREV_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspPrevDesc.hint" Id="SGRSTSP_PREV_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Required="true" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspCastCode.hint" Id="SGRSTSP_CAST_CODE" Lov="STVCAST_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspCastDesc.hint" Id="SGRSTSP_CAST_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Required="true" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspResdCode.hint" Id="SGRSTSP_RESD_CODE" Lov="STVRESD_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspResdDesc.hint" Id="SGRSTSP_RESD_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Required="true" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspBlckCode.hint" Id="SGRSTSP_BLCK_CODE" Lov="STVBLCK_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspBlckDesc.hint" Id="SGRSTSP_BLCK_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Required="true" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspFullPartInd.hint" Id="SGRSTSP_FULL_PART_IND" MaxLength="30" PageName="STUDY_PATH" Type="RadioGroup">
+        <Item Id="FULL" Type="RadioButton" />
+        <Item Id="PART" Type="RadioButton" />
+        <Item Id="NONE" Type="RadioButton" />
+      </Item>
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspSessCode.hint" Id="SGRSTSP_SESS_CODE" Lov="STVSESS_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspSessDesc.hint" Id="SGRSTSP_SESS_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Required="true" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspBsklCode.hint" Id="SGRSTSP_BSKL_CODE" Lov="STVBSKL_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspBsklDesc.hint" Id="SGRSTSP_BSKL_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspPracCode.hint" Id="SGRSTSP_PRAC_CODE" Lov="STVPRAC_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspPracDesc.hint" Id="SGRSTSP_PRAC_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspOrsnCode.hint" Id="SGRSTSP_ORSN_CODE" Lov="STVORSN_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspOrsnDesc.hint" Id="SGRSTSP_ORSN_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspCaplCode.hint" Id="SGRSTSP_CAPL_CODE" Lov="STVCAPL_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspCaplDesc.hint" Id="SGRSTSP_CAPL_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspEdlvCode.hint" Id="SGRSTSP_EDLV_CODE" Lov="STVEDLV_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspEdlvDesc.hint" Id="SGRSTSP_EDLV_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspEmexCode.hint" Id="SGRSTSP_EMEX_CODE" Lov="STVEMEX_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspEmexDesc.hint" Id="SGRSTSP_EMEX_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspTrcnCode.hint" Id="SGRSTSP_TRCN_CODE" Lov="STVTRCN_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspTrcnDesc.hint" Id="SGRSTSP_TRCN_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspVoedCode.hint" Id="SGRSTSP_VOED_CODE" Lov="STVVOED_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspVoedDesc.hint" Id="SGRSTSP_VOED_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspEgolCode.hint" Id="SGRSTSP_EGOL_CODE" Lov="STVEGOL_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspEgolDesc.hint" Id="SGRSTSP_EGOL_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspAprnCode.hint" Id="SGRSTSP_APRN_CODE" Lov="STVAPRN_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspAprnDesc.hint" Id="SGRSTSP_APRN_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspGainCode.hint" Id="SGRSTSP_GAIN_CODE" Lov="STVGAIN_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspGainDesc.hint" Id="SGRSTSP_GAIN_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspIncmCode.hint" Id="SGRSTSP_INCM_CODE" Lov="STVINCM_LOV" MaxLength="30" PageName="STUDY_PATH" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="STUDYPATH" Hint="sgrstsp.sgrstspIncmDesc.hint" Id="SGRSTSP_INCM_DESC" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+    </Block>
+    <Block Id="S$_STUDYPATH">
+      <Item Id="QUERY_TERM" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="STUDYPATH" Id="STUDY_PATH_SEPARATOR_1" MaxLength="24" Navigable="false" PageName="STUDY_PATH" Type="DisplayItem" />
+      <Item Id="REG_INPROGRESS" MaxLength="1" Type="TextItem" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_STSP_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_ASTD_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_PREV_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_CAST_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_RESD_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_SESS_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_BSKL_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_PRAC_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_ORSN_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_CAPL_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_EDLV_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_EMEX_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_TRCN_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_VOED_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_EGOL_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_APRN_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_GAIN_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_INCM_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+      <Item CanvasName="STUDYPATH" Id="SGRSTSP_BLCK_CODE_LBT" MaxLength="30" Navigable="false" PageName="STUDY_PATH" Type="Button" />
+    </Block>
+  </Logic>
+</FormStructure>

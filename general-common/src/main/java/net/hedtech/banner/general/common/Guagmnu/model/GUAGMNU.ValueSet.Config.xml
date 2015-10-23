@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="RG_PRODUCT_LIST.ValueSet.Config" name="RG_PRODUCT_LIST">
+    <columns>
+		<column name="GUTMENU_DESC" type="String" size="80"/>
+		<column name="GUTMENU_VALUE" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT GUTMENU_DESC, GUTMENU_VALUE  FROM GUTMENU  WHERE GUTMENU_LEVEL = 1 AND GUTMENU_OBJT_CODE = 'MENU'  ORDER BY GUTMENU_SEQ_NO
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="RG_GUVPEMNU_PERSONAL.ValueSet.Config" name="RG_GUVPEMNU_PERSONAL">
+    <columns>
+		<column name="ICRGGQ_0" type="Number" size="23"/>
+		<column name="GUTPMNU_LEVEL" type="Number" size="23"/>
+		<column name="GUTPMNU_LABEL" type="String" size="80"/>
+		<column name="ICRGGQ_2" type="String" size="9"/>
+		<column name="ICRGGQ_3" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DECODE(SUBSTR(GUTPMNU_VALUE, 1, INSTR(GUTPMNU_VALUE, '|') - 1), 'MENU', - 1, 0), GUTPMNU_LEVEL, NVL(GUTPMNU_LABEL, '** Invalid object: ' || SUBSTR(GUTPMNU_VALUE, INSTR(GUTPMNU_VALUE, '|') + 1) || ' **'), DECODE(SUBSTR(GUTPMNU_VALUE, 1, INSTR(GUTPMNU_VALUE, '|') - 1), 'MENU', 'folder', 'FORM', 'form', 'JOBS', 'jobs', 'QUICKFLOW', 'quickflow', 'data'), SUBSTR(GUTPMNU_VALUE, INSTR(GUTPMNU_VALUE, '|') + 1)  FROM GUTPMNU  ORDER BY GUTPMNU_SEQ_NO
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="RG_GUVPEMNU_PERSONAL_LABEL.ValueSet.Config" name="RG_GUVPEMNU_PERSONAL_LABEL">
+    <columns>
+		<column name="ICRGGQ_0" type="Number" size="23"/>
+		<column name="GUTPMNU_LEVEL" type="Number" size="23"/>
+		<column name="GUTPMNU_LABEL" type="String" size="113"/>
+		<column name="ICRGGQ_2" type="String" size="9"/>
+		<column name="ICRGGQ_3" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DECODE(SUBSTR(GUTPMNU_VALUE, 1, INSTR(GUTPMNU_VALUE, '|') - 1), 'MENU', - 1, 0), GUTPMNU_LEVEL, NVL(GUTPMNU_LABEL, '** Invalid object **') || ' [' || SUBSTR(GUTPMNU_VALUE, INSTR(GUTPMNU_VALUE, '|') + 1) || ']', DECODE(SUBSTR(GUTPMNU_VALUE, 1, INSTR(GUTPMNU_VALUE, '|') - 1), 'MENU', 'folder', 'FORM', 'form', 'JOBS', 'jobs', 'QUICKFLOW', 'quickflow', 'data'), SUBSTR(GUTPMNU_VALUE, INSTR(GUTPMNU_VALUE, '|') + 1)  FROM GUTPMNU  ORDER BY GUTPMNU_SEQ_NO
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="RG_GUVMMNU_PRODUCTS.ValueSet.Config" name="RG_GUVMMNU_PRODUCTS">
+    <columns>
+		<column name="ICRGGQ_0" type="Number" size="23"/>
+		<column name="GUTMENU_LEVEL" type="Number" size="23"/>
+		<column name="GUTMENU_DESC" type="String" size="80"/>
+		<column name="ICRGGQ_1" type="String" size="9"/>
+		<column name="GUTMENU_VALUE" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DECODE(GUTMENU_OBJT_CODE, 'MENU', - 1, 0), GUTMENU_LEVEL, GUTMENU_DESC, DECODE(GUTMENU_OBJT_CODE, 'MENU', 'folder', 'FORM', 'form', 'JOBS', 'jobs', 'QUICKFLOW', 'quickflow', 'data'), GUTMENU_VALUE  FROM GUTMENU  ORDER BY GUTMENU_SEQ_NO
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="RG_GUVMMNU_PRODUCTS_LABEL.ValueSet.Config" name="RG_GUVMMNU_PRODUCTS_LABEL">
+    <columns>
+		<column name="ICRGGQ_0" type="Number" size="23"/>
+		<column name="GUTMENU_LEVEL" type="Number" size="23"/>
+		<column name="ICRGGQ_1" type="String" size="113"/>
+		<column name="ICRGGQ_2" type="String" size="9"/>
+		<column name="GUTMENU_VALUE" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DECODE(GUTMENU_OBJT_CODE, 'MENU', - 1, 0), GUTMENU_LEVEL, GUTMENU_DESC || ' [' || GUTMENU_VALUE || ']', DECODE(GUTMENU_OBJT_CODE, 'MENU', 'folder', 'FORM', 'form', 'JOBS', 'jobs', 'QUICKFLOW', 'quickflow', 'data'), GUTMENU_VALUE  FROM GUTMENU  ORDER BY GUTMENU_SEQ_NO
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="RG_GUVPSMNU_PROCESS.ValueSet.Config" name="RG_GUVPSMNU_PROCESS">
+    <columns>
+		<column name="ICRGGQ_0" type="Number" size="23"/>
+		<column name="GUVPSMNU_LEVEL" type="Number" size="23"/>
+		<column name="ICRGGQ_1" type="String" size="80"/>
+		<column name="ICRGGQ_2" type="String" size="6"/>
+		<column name="GUVPSMNU_VALUE" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DECODE(GUBOBJS_OBJT_CODE, 'MENU', - 1, 0), GUVPSMNU_LEVEL, NVL(GUVPSMNU_LABEL, GUBOBJS_DESC), DECODE(GUBOBJS_OBJT_CODE, 'MENU', 'folder', 'FORM', 'form', 'JOBS', 'jobs', 'data'), GUVPSMNU_VALUE  FROM GUVPSMNU_PROCESS, GUBOBJS  WHERE GUVPSMNU_VALUE = GUBOBJS_NAME AND 'Y' = DECODE(GUBOBJS_SYSI_CODE, 'G', :GENERAL_INSTALLED_IND, 'E', :BXS_INSTALLED_IND, 'A', :ALUMNI_INSTALLED_IND, 'S', :STUDENT_INSTALLED_IND, 'F', :FINANCE_INSTALLED_IND, 'R', :FINAID_INSTALLED_IND, 'H', :HUMANRE_INSTALLED_IND, 'N', :POSBUD_INSTALLED_IND, 'T', :AR_INSTALLED_IND, 'W', 'Y', 'Y', 'Y', 'Z', 'Y', 'N') 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GENERAL_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="GENERAL_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="BXS_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="BXS_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="ALUMNI_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="ALUMNI_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="STUDENT_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="STUDENT_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="FINANCE_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="FINANCE_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="FINAID_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="FINAID_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="HUMANRE_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="HUMANRE_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="POSBUD_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="POSBUD_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="AR_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="AR_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="RG_GUVPSMNU_PROCESS_LABEL.ValueSet.Config" name="RG_GUVPSMNU_PROCESS_LABEL">
+    <columns>
+		<column name="ICRGGQ_0" type="Number" size="23"/>
+		<column name="GUVPSMNU_LEVEL" type="Number" size="23"/>
+		<column name="ICRGGQ_1" type="String" size="113"/>
+		<column name="ICRGGQ_2" type="String" size="6"/>
+		<column name="GUVPSMNU_VALUE" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DECODE(GUBOBJS_OBJT_CODE, 'MENU', - 1, 0), GUVPSMNU_LEVEL, NVL(GUVPSMNU_LABEL, GUBOBJS_DESC) || ' [' || GUBOBJS_NAME || ']', DECODE(GUBOBJS_OBJT_CODE, 'MENU', 'folder', 'FORM', 'form', 'JOBS', 'jobs', 'data'), GUVPSMNU_VALUE  FROM GUVPSMNU_PROCESS, GUBOBJS  WHERE GUVPSMNU_VALUE = GUBOBJS_NAME AND 'Y' = DECODE(GUBOBJS_SYSI_CODE, 'G', :GENERAL_INSTALLED_IND, 'E', :BXS_INSTALLED_IND, 'A', :ALUMNI_INSTALLED_IND, 'S', :STUDENT_INSTALLED_IND, 'F', :FINANCE_INSTALLED_IND, 'R', :FINAID_INSTALLED_IND, 'H', :HUMANRE_INSTALLED_IND, 'N', :POSBUD_INSTALLED_IND, 'T', :AR_INSTALLED_IND, 'W', 'Y', 'Y', 'Y', 'Z', 'Y', 'N') 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GENERAL_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="GENERAL_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="BXS_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="BXS_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="ALUMNI_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="ALUMNI_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="STUDENT_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="STUDENT_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="FINANCE_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="FINANCE_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="FINAID_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="FINAID_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="HUMANRE_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="HUMANRE_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="POSBUD_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="POSBUD_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+		<parameter name="AR_INSTALLED_IND">
+			<value>
+				<item businessObject="FORM_HEADER" name="AR_INSTALLED_IND"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="RG_PRODUCT_LOAD_LABEL.ValueSet.Config" name="RG_PRODUCT_LOAD_LABEL">
+    <columns>
+		<column name="ICRGGQ_0" type="Number" size="23"/>
+		<column name="ICRGGQ_1" type="Number" size="23"/>
+		<column name="ICRGGQ_2" type="String" size="113"/>
+		<column name="ICRGGQ_3" type="String" size="9"/>
+		<column name="GURHMNU_VALUE" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DECODE(GURHMNU_OBJT_CODE, 'MENU', - 1, 0), 1, GURHMNU_DESC || ' [' || GURHMNU_VALUE || ']', DECODE(GURHMNU_OBJT_CODE, 'MENU', 'folder', 'FORM', 'form', 'JOBS', 'jobs', 'QUICKFLOW', 'quickflow', 'data'), GURHMNU_VALUE  FROM GURHMNU  WHERE GURHMNU_PRIOR_OBJ = :FORM_HEADER_MENU_TO_EXPAND AND GURHMNU_LEVEL = :FORM_HEADER_MENU_TO_EXPAND_LEVEL  ORDER BY GURHMNU_SEQ_NO
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FORM_HEADER_MENU_TO_EXPAND">
+			<value>
+				<item businessObject="FORM_HEADER" name="MENU_TO_EXPAND"/> 
+			</value>
+        </parameter>
+		<parameter name="FORM_HEADER_MENU_TO_EXPAND_LEVEL">
+			<value>
+				<item businessObject="FORM_HEADER" name="MENU_TO_EXPAND_LEVEL"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+</b:beans>

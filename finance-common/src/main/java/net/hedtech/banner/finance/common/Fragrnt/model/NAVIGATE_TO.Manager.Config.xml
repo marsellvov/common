@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="NAVIGATE_TO.Manager.Config" name="NavigateTo">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="NAVIGATE_TO_LIST" logicalName="navigateToList" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="DUMMY_LIST" logicalName="dummyList" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.finance.common.Fragrnt.model.NavigateTo</managerClass>
+
+	</manager>
+</b:beans>

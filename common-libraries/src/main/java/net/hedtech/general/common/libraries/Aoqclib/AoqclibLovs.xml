@@ -1,0 +1,62 @@
+﻿<Lovs>
+  <Lov Name="AGRGDES_PLEDGE_PIDM_LOV" Title="Gifts by Pledge" Width="359" Height="180" RecordGroup="AGRGDES_PLEDGE_PIDM_RG">
+    <Columns>
+      <Column DataMember="AGRGDES_PLEDGE_NO" Title="Pledge Number" Width="106" ReturnItem="">
+      </Column>
+      <Column DataMember="AGRGDES_GIFT_NO" Title="Gift Number" Width="93" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="AGRGDES_CAMPAIGN" Title="Campaign" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="AGRGDES_DESG" Title="Designation" Width="98" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AGRGDES_PLEDGE_PIDM_PGBE_LOV" Title="Gifts by Pledge" Width="359" Height="180" RecordGroup="AGRGDES_PLEDGE_PIDM_PGBE_RG">
+    <Columns>
+      <Column DataMember="AGRGDES_PLEDGE_NO" Title="Pledge Number" Width="106" ReturnItem="">
+      </Column>
+      <Column DataMember="AGRGDES_GIFT_NO" Title="Gift Number" Width="93" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="AGRGDES_CAMPAIGN" Title="Campaign" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="AGRGDES_DESG" Title="Designation" Width="98" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AGRGDES_GIFT_PIDM_LOV" Title="Pledges by Gift" Width="359" Height="180" RecordGroup="AGRGDES_GIFT_PIDM_RG">
+    <Columns>
+      <Column DataMember="AGRGDES_PLEDGE_NO" Title="Pledge Number" Width="106" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="AGRGDES_GIFT_NO" Title="Gift Number" Width="93" ReturnItem="">
+      </Column>
+      <Column DataMember="AGRGDES_CAMPAIGN" Title="Campaign" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="AGRGDES_DESG" Title="Designation" Width="98" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="AGRGDES_GIFT_PIDM_PGBE_LOV" Title="Pledges by Gift" Width="359" Height="180" RecordGroup="AGRGDES_GIFT_PIDM_PGBE_RG">
+    <Columns>
+      <Column DataMember="AGRGDES_PLEDGE_NO" Title="Pledge Number" Width="106" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="AGRGDES_GIFT_NO" Title="Gift Number" Width="93" ReturnItem="">
+      </Column>
+      <Column DataMember="AGRGDES_CAMPAIGN" Title="Campaign" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="AGRGDES_DESG" Title="Designation" Width="98" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PLEDGE_NUM_LOV" Title="Pledges by Gift" Width="359" Height="180" RecordGroup="PLEDGE_NUM_RG">
+    <Columns>
+      <Column DataMember="AGRGDES_PLEDGE_NO" Title="Pledge Number" Width="106" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="AGRGDES_GIFT_NO" Title="Gift Number" Width="93" ReturnItem="">
+      </Column>
+      <Column DataMember="AGRGDES_CAMPAIGN" Title="Campaign" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="AGRGDES_DESG" Title="Designation" Width="98" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+</Lovs>

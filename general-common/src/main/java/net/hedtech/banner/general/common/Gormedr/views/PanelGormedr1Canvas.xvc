@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GORMEDR"/>
+	<interactionblock name="FORM_HEADER"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="STVMEDI"/>
+	<panel class="ContentCanvas" id="pnlGormedr1Canvas" label="mainWindow.title" menu="G$_DEFAULT_PM" name="GORMEDR_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="gormedr1Canvas.text92.text" width="100%">
+				<panel name="rect29" width="100%">
+					<gridview block="STVMEDI" name="grdStvmedi" width="100%">
+						<viewheader>
+							<viewcolumn block="STVMEDI" case="upper" datatype="String" label="stvmedi.stvmediCode.prompt" labelstyle="DEFAULT" maxlength="30" member="STVMEDI_CODE" name="stvmediCode" required="true">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="STVMEDI" datatype="String" label="stvmedi.stvmediDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVMEDI_DESC" name="stvmediDesc" required="true">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+					<gridlayout cols="2" orientation="vertical">
+						<textbox block="FORM_HEADER" datatype="String" enabled="false" height="23px" maxlength="2" member="POINTER_TO_SEQ_1" name="pointerToSeq1">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridlayout>
+				</panel>
+			</panel>
+		</accordion>
+		<accordion width="100%">
+			<panel label="gormedr1Canvas.text2.text" width="100%">
+				<panel name="rect30" width="100%">
+					<gridview block="GORMEDR" name="grdGormedr" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="GORMEDR" case="upper" datatype="String" keyactions="NEXT_ITEM" label="gormedr.gormedrDisaCode.prompt" labelstyle="DEFAULT" maxlength="30" member="GORMEDR_DISA_CODE" name="gormedrDisaCode" required="true">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="GORMEDR" datatype="String" label="gormedr.disaDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="DISA_DESC" name="disaDesc" required="true" tooltip="gormedr.disaDesc.tooltip">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="GORMEDR" datatype="String" label="gormedr.gormedrDefaultInd.prompt" labelstyle="DEFAULT" maxlength="1" member="GORMEDR_DEFAULT_IND" name="gormedrDefaultInd">
+								<editor>
+									<checkbox action="WHEN-CHECKBOX-CHANGED" falsevalue="N" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+					<gridlayout cols="2" orientation="vertical">
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="20px" icon="search" member="GORMEDR_DISA_CODE_LBT" name="gormedrDisaCodeLbt" navigable="false" tooltip="buttonControlBlock.gormedrDisaCodeLbt.tooltip"/>
+					</gridlayout>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

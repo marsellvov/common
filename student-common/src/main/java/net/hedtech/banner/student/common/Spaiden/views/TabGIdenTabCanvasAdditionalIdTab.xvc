@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GORADID"/>
+	<panel width="100%">
+		<collapsiblepanel label="goradid.goradidIdentification.prompt" name="grdGoradid" width="100%">
+			<panel width="100%">
+				<gridview block="GORADID" width="100%">
+					<viewheader>
+						<viewcolumn autoskip="true" block="GORADID" case="upper" datatype="String" keyactions="NEXT_ITEM" label="goradid.goradidAdidCode.prompt" labelstyle="DEFAULT" member="GORADID_ADID_CODE" name="goradidAdidCode" width="71px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="GORADID" datatype="String" label="goradid.adidDesc.prompt" labelstyle="DEFAULT" member="ADID_DESC" name="adidDesc" width="239px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="GORADID" datatype="String" label="goradid.goradidAdditionalId.prompt" labelstyle="DEFAULT" member="GORADID_ADDITIONAL_ID" name="goradidAdditionalId" width="416px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</collapsiblepanel>
+		<!-- <panel width="100%">
+			<button action="WHEN-BUTTON-PRESSED" block="GORADID" height="20px" icon="search" member="GORADID_ADID_CODE_LBT" name="goradidAdidCodeLbt" navigable="false" tooltip="goradid.goradidAdidCodeLbt.tooltip" width="20px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+		</panel> -->
+	</panel>
+</config>

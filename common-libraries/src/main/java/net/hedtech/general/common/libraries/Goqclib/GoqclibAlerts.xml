@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alerts>
+	<Alert Name="WARNING_ID_CHANGE" Title="" Type="WARNING">
+		<Text>*WARNING* Records with this ID will be updated to the Current ID. Previous ID will no longer exist.</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="Continue" />
+  			<Button Type="BTN2" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="WARNING_ROW_REMOVE" Title="" Type="WARNING">
+		<Text>*Warning* Record will be deleted. </Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="Continue" />
+  			<Button Type="BTN2" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+</Alerts>
+

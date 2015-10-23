@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="G___OPT_BLOCK.Manager.Config" name="GOptBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="OPT_SEL" logicalName="optSel" type="String"   />
+			<item name="SELECT_A_KEY" logicalName="selectAKey" type="String"   />
+			<item name="SELECT_B_KEY" logicalName="selectBKey" type="String"   />
+			<item name="SELECT_C_KEY" logicalName="selectCKey" type="String"   />
+			<item name="SELECT_D_KEY" logicalName="selectDKey" type="String"   />
+			<item name="SELECT_E_KEY" logicalName="selectEKey" type="String"   />
+			<item name="SELECT_F_KEY" logicalName="selectFKey" type="String"   />
+			<item name="SELECT_ITEM" logicalName="selectItem" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Goqolib.model.GOptBlock</managerClass>
+
+	</manager>
+</b:beans>

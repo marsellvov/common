@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/finance/common/Foaiden/parts/goqclib/model/GOQCLIB.Model.Config.xml"/>
+	
+	<task id="GOQCLIB.TaskPart.Import" name="GOQCLIB">
+		<taskResources/>
+		<supportCodeConfiguration>
+			<packages>
+				<package  name="GOQCLIB" />
+				<package  name="SPRIDEN_CURRENT" />
+				<package  name="SPRIDEN_PREVIOUS" />
+				<package  name="SPRADDR" />
+				<package  name="SPRTELE" />
+				<package  name="SPBPERS" />
+				<package  name="GORPRAC" />
+				<package  name="GOREMAL" />
+				<package  name="SPREMRG" />
+				<package  name="GORADID" />
+			</packages>
+		</supportCodeConfiguration>
+
+		<formModelConfiguration config="GOQCLIB.Model.Config"/>
+	</task>
+</b:beans>
+
+ 

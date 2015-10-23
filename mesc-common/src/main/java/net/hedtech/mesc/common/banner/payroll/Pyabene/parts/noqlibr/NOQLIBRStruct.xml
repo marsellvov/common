@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<FormStructure AlertDataPath="net/hedtech/mesc/common/banner/payroll/Pyabene/parts/noqlibr/NOQLIBRAlerts.xml" LovDataPath="net/hedtech/mesc/common/banner/payroll/Pyabene/parts/noqlibr/NOQLIBRLovs.xml" Name="NOQLIBR">
+  <Visual>
+  </Visual>
+  <Logic>
+  </Logic>
+</FormStructure>

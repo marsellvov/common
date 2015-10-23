@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVCOAS"/>
+	<panel class="ContentCanvas" id="pnlFtvcoas1Canvas" menu="G$_DEFAULT_PM" name="FTVCOAS_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="ftvcoas.accordion.title">
+				<panel width="100%">
+					<gridview block="FTVCOAS" name="grdFtvcoas" width="100%">
+						<viewheader>
+							<viewcolumn block="FTVCOAS" case="upper" datatype="String" label="ftvcoas.ftvcoasCoasCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVCOAS_COAS_CODE" name="ftvcoasCoasCode">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVCOAS" datatype="String" enabled="false" label="ftvcoas.ftvcoasTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FTVCOAS_TITLE" name="ftvcoasTitle">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVCOAS" case="upper" datatype="String" enabled="false" label="ftvcoas.ftvcoasStatusInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVCOAS_STATUS_IND" name="ftvcoasStatusInd">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVCOAS" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvcoas.ftvcoasEffDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVCOAS_EFF_DATE" name="ftvcoasEffDate">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVCOAS" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvcoas.ftvcoasTermDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVCOAS_TERM_DATE" name="ftvcoasTermDate">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

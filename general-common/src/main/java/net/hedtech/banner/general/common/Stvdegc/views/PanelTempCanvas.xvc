@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlTempCanvas" menu="G$_DEFAULT_PM" name="TEMP_CANVAS" visible="false" width="100%">
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.stvdegc1RollbackBtn.label" member="STVDEGC_1_ROLLBACK_BTN" name="stvdegc1RollbackBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.stvdegc1SaveBtn.label" member="STVDEGC_1_SAVE_BTN" name="stvdegc1SaveBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.stvdegc1ExitBtn.label" member="STVDEGC_1_EXIT_BTN" name="stvdegc1ExitBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.stvdegc1ExitvalueBtn.label" member="STVDEGC_1_EXITVALUE_BTN" name="stvdegc1ExitvalueBtn" navigable="false" width="80px"/>
+	</panel>
+</config>

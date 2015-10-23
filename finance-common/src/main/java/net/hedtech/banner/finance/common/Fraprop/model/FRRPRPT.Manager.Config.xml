@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRRPRPT.Manager.Config" name="FRRPRPT">
+		
+		<items>
+			<item name="FRRPRPT_PROP_CODE" logicalName="frrprptPropCode" type="String" physicalName="FRRPRPT_PROP_CODE"  >
+				<value>
+					<item name="DISPLAY_FRBPROP_CODE" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>	
+			<item name="FRRPRPT_AGENCY_CODE" logicalName="frrprptAgencyCode" type="String"  virtual="true" />
+			<item name="FRRPRPT_AGCY_PIDM" logicalName="frrprptAgcyPidm" type="java.math.BigDecimal" physicalName="FRRPRPT_AGCY_PIDM"  />
+			<item name="FRRPRPT_AGCY_NAME" logicalName="frrprptAgcyName" type="String"  virtual="true" />
+			<item name="FRRPRPT_FEDERAL_FUND_PERCENT" logicalName="frrprptFederalFundPercent" type="java.math.BigDecimal" physicalName="FRRPRPT_FEDERAL_FUND_PERCENT"  />
+			<item name="FRRPRPT_SPONSOR_ID" logicalName="frrprptSponsorId" type="String" physicalName="FRRPRPT_SPONSOR_ID"  />
+			<item name="FRRPRPT_ACTIVITY_DATE" logicalName="frrprptActivityDate" type="java.util.Date" physicalName="FRRPRPT_ACTIVITY_DATE"  />
+			<item name="FRRPRPT_USER_ID" logicalName="frrprptUserId" type="String" physicalName="FRRPRPT_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fraprop.model.FrrprptAdapter</adapterClass>
+		<queryAllRecords>true</queryAllRecords>	
+
+	</manager>
+</b:beans>
+                  

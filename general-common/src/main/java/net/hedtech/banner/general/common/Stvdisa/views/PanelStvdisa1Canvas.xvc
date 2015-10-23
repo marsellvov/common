@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="STVDISA"/>
+	<panel class="ContentCanvas" id="pnlStvdisa1Canvas" label="stvdisa1Canvas.text1.text" menu="G$_DEFAULT_PM" name="STVDISA_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title2">
+				<panel width="100%">
+					<gridview block="STVDISA" name="grdStvdisa" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="STVDISA" case="upper" datatype="String" label="stvdisa1Canvas.text1.text" labelstyle="DEFAULT" maxlength="2" member="STVDISA_CODE" name="stvdisaCode" required="true" width="28px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVDISA" datatype="String" label="stvdisa.stvdisaDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVDISA_DESC" name="stvdisaDesc" required="true" width="239px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

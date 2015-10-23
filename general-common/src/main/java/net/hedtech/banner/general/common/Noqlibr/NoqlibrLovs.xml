@@ -1,0 +1,742 @@
+<Lovs>
+  <Lov Name="SPRTELE_LOV" Title="Telephone Numbers (SPRTELE)" Width="575" Height="267" RecordGroup="SPRTELE_RG">
+    <Columns>
+      <Column DataMember="SPRTELE_TELE_CODE" Title="Code" Width="43" ReturnItem="GLOBAL.TELE_CODE">
+      </Column>
+      <Column DataMember="SPRTELE_CODE_DESC" Title="Description" Width="239" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRTELE_PHONE" Title="Telephone" Width="165" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRTELE_INTL_ACCESS" Title="International Access" Width="128" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRTELE_PRIMARY_IND" Title="Primary" Width="56" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRTELE_STATUS_IND" Title="Active" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRTELE_UNLIST_IND" Title="Unlisted" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRTELE_ATYP_CODE" Title="Atyp" Width="32" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRTELE_SEQNO" Title="Tele Seqno" Width="24" ReturnItem="GLOBAL.TELE_SEQNO">
+      </Column>
+      <Column DataMember="SPRTELE_ACTIVITY_DATE" Title="Activity Date" Width="88" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQECLC_LOV" Title="Employee Leave Category (PTRECLS) " Width="575" Height="267" RecordGroup="PTQECLC_RG">
+    <Columns>
+      <Column DataMember="PTRECLC_LCAT_CODE" Title="Leave Cat " Width="72" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVLCAT_DESC" Title="Description" Width="160" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRECLC_ACTIVITY_DATE" Title="Activity Date " Width="112" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVSTGR_LOV" Title="Statistics Canada Grouping Type Validation (PTVSTGR)" Width="575" Height="267" RecordGroup="PTVSTGR_RG">
+    <Columns>
+      <Column DataMember="PTVSTGR_CODE" Title="Code " Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVSTGR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVSTGR_ACTIVITY_DATE" Title="Activity Date " Width="112" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQWKPR_LOV" Title="Work Period (PTRWKPR)" Width="575" Height="267" RecordGroup="PTQWKPR_RG">
+    <Columns>
+      <Column DataMember="PTRWKPR_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRWKPR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRWKPR_NUMBER_OF_DAYS" Title="Days " Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRWKPR_PERIOD_MAX_NON_OT_HRS" Title="Period Max Non Ot Hrs " Width="176" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRWKPR_DAILY_MAX_NON_OT_HRS" Title="Daily Max Non Ot Hrs " Width="168" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRWKPR_ACTIVITY_DATE" Title="Activity Date " Width="112" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVEGRP_LOV" Title="Employee Group Codes (PTVEGRP)" Width="575" Height="267" RecordGroup="PTVEGRP_RG">
+    <Columns>
+      <Column DataMember="PTVEGRP_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVEGRP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVEGRP_ACTIVITY_DATE" Title="Activity Date " Width="112" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVNRSI_LOV" Title="Canadian Non-Resident Service Industry Validation (PTVNRSI)" Width="575" Height="267" RecordGroup="PTVNRSI_RG">
+    <Columns>
+      <Column DataMember="PTVNRSI_CODE" Title="Code" Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVNRSI_DESC" Title="Description" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVNRSI_ACTIVITY_DATE" Title="Activity Date " Width="112" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVLCAT_LOV" Title="Leave Category Rule (PTVLCAT)" Width="575" Height="267" RecordGroup="PTVLCAT_RG">
+    <Columns>
+      <Column DataMember="PTVLCAT_CODE" Title="Code " Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVLCAT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVLCAT_ACTIVITY_DATE" Title="Activity Date " Width="112" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQBCAT_LOV" Title="Benefit Category (PTRBCAT)" Width="575" Height="267" RecordGroup="PTQBCAT_RG">
+    <Columns>
+      <Column DataMember="PTRBCAT_CODE" Title="Code " Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRBCAT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBCAT_ACTIVITY_DATE" Title="Activity Date " Width="112" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NBAJOBS_LOV" Title="Organization Codes" Width="575" Height="267" RecordGroup="NBAJOBS_RG">
+    <Columns>
+      <Column DataMember="NBRJOBS_COAS_CODE_TS" Title="COAS" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="NBRJOBS_ORGN_CODE_TS" Title="ORGN" Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="FTVORGN_DESC" Title="DESCRIPTION" Width="287" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQECLS_LOV" Title="Employee Class Query" Width="575" Height="267" RecordGroup="PTQECLS_RG">
+    <Columns>
+      <Column DataMember="PTRECLS_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRECLS_LONG_DESC" Title="Description" Width="192" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRECLS_PICT_CODE" Title="Pay Id" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRECLS_SALARY_ENCUMBRANCE_IND" Title="Sal Encb" Width="64" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRECLS_TS_ROSTER_IND" Title="Roster" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRECLS_SALARY_IND" Title="Salary" Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRECLS_EEOG_CODE" Title="EEOG" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRECLS_ACTIVITY_DATE" Title="Activity Date " Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQEARN_LOV" Title="Earnings Codes" Width="575" Height="267" RecordGroup="PTQEARN_RG">
+    <Columns>
+      <Column DataMember="PTREARN_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTREARN_LONG_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREARN_RATE_IND" Title="Rate Ind" Width="64" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREARN_RATE" Title="Rate " Width="32" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREARN_MULT_FACTOR" Title="Mult Factor" Width="88" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREARN_TYPE_IND" Title="Type Ind" Width="64" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREARN_LEAV_CODE_TAKEN" Title="Leave Code" Width="80" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREARN_ECLD_IND" Title="L/D Over" Width="64" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREARN_BASE_SAL_IND" Title="Base Sal" Width="64" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREARN_EXCEPTION_IND" Title="Exc Ind" Width="56" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREARN_ACTIVITY_DATE" Title="Activity Date " Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVAPTY_LOV" Title="Electronic Approval Type Code Validation (NTVAPTY)" Width="575" Height="267" RecordGroup="NTVAPTY_RG">
+    <Columns>
+      <Column DataMember="NTVAPTY_CODE" Title="Code" Width="64" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVAPTY_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date " Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQBDPL1_LOV" Title="Benefit/Deduction Plans" Width="575" Height="267" RecordGroup="PTQBDPL1_RG">
+    <Columns>
+      <Column DataMember="PTRBDPL_EFFECTIVE_DATE" Title="Effective Date " Width="98" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDPL_CODE" Title="Plan  " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRBDPL_DESC" Title="Description" Width="147" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDPL_AMT1" Title="Amount1" Width="70" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDPL_AMT2" Title="Amount2" Width="70" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDPL_AMT3" Title="Amount3" Width="70" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDPL_AMT4" Title="Amount4" Width="70" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVJOBP_LOV" Title="Job Progression Code Validation (NTVJOBP)" Width="575" Height="267" RecordGroup="NTVJOBP_RG">
+    <Columns>
+      <Column DataMember="NTVJOBP_CODE" Title="Code" Width="55" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVJOBP_DESC" Title="Description" Width="278" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="108" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQBDPL_LOV" Title="Benefit/Deduction Plans" Width="575" Height="267" RecordGroup="PTQBDPL_RG">
+    <Columns>
+      <Column DataMember="PTRBDPL_CODE" Title="Plan  " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRBDPL_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDPL_AMT1" Title="Amount1" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDPL_AMT2" Title="Amount2" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDPL_AMT3" Title="Amount3" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDPL_AMT4" Title="Amount4" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDPL_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTV87TR_LOV" Title="California STRS MR-87 Transaction Code Validation (PTV87TR)" Width="575" Height="267" RecordGroup="PTV87TR_RG">
+    <Columns>
+      <Column DataMember="PTV87TR_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTV87TR_DESC" Title="Description" Width="399" ReturnItem="">
+      </Column>
+      <Column DataMember="PTV87TR_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVWKSH_LOV" Title="Work Schedule Code Validation (NTVWKSH)" Width="575" Height="267" RecordGroup="NTVWKSH_RG">
+    <Columns>
+      <Column DataMember="NTVWKSH_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVWKSH_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVPNOC_LOV" Title="Standard Occupational Code Validation (NTVPNOC)" Width="575" Height="267" RecordGroup="NTVPNOC_RG">
+    <Columns>
+      <Column DataMember="NTVPNOC_CODE" Title="Code " Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVPNOC_DESC" Title="Description" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVPFOC_LOV" Title="Federal Occupational Code Validation (NTVPFOC)" Width="575" Height="267" RecordGroup="NTVPFOC_RG">
+    <Columns>
+      <Column DataMember="NTVPFOC_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVPFOC_DESC" Title="Description" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVDOTT_LOV" Title="Dictionary of Occupational Titles Code Validation (NTVDOTT)" Width="575" Height="267" RecordGroup="NTVDOTT_RG">
+    <Columns>
+      <Column DataMember="NTVDOTT_CODE" Title="Code " Width="96" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVDOTT_DESC" Title="Description" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="FBIN_EFF_DATES_LOV" Title="Select Effective Date to Query" Width="575" Height="267" RecordGroup="FBIN_EFF_DATES_RG">
+    <Columns>
+      <Column DataMember="NTRFBIN_EFFECTIVE_DATE" Title="Effective Date " Width="112" ReturnItem="GLOBAL.VALUE">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="FBEX_EFF_DATES_LOV" Title="Select Effective Date to Query" Width="575" Height="267" RecordGroup="FBEX_EFF_DATES_RG">
+    <Columns>
+      <Column DataMember="NTRFBEX_EFFECTIVE_DATE" Title="Effective Date " Width="112" ReturnItem="GLOBAL.VALUE">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="FELD_EFF_DATES_LOV" Title="Select Effective Date to Query" Width="575" Height="267" RecordGroup="FELD_EFF_DATES_RG">
+    <Columns>
+      <Column DataMember="NTRFELD_EFFECTIVE_DATE" Title="Effective Date " Width="112" ReturnItem="GLOBAL.VALUE">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQDFPR_LOV" Title="Defer Pay Period" Width="575" Height="267" RecordGroup="PTQDFPR_RG">
+    <Columns>
+      <Column DataMember="PTRDFPR_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRDFPR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRDFPR_PICT_CODE" Title="Pay Id " Width="64" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRDFPR_BEGIN_PAYNO" Title="Begin Payno " Width="88" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRDFPR_END_PAYNO" Title="End Payno " Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRDFPR_ACTIVITY_DATE" Title="Activity Date " Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVORGN_LOV" Title="Organization Validation (PTVORGN)" Width="575" Height="267" RecordGroup="PTVORGN_RG">
+    <Columns>
+      <Column DataMember="PTVORGN_CODE" Title="Code " Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVORGN_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVORGN_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQEMPR_LOV" Title="Employer Codes" Width="575" Height="267" RecordGroup="PTQEMPR_RG">
+    <Columns>
+      <Column DataMember="PTREMPR_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTREMPR_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREMPR_FED_EIN" Title="Employer Id Number " Width="160" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREMPR_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVPCAT_LOV" Title="Premium Pay Category Validation (PTVPCAT)" Width="575" Height="267" RecordGroup="PTVPCAT_RG">
+    <Columns>
+      <Column DataMember="PTVPCAT_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVPCAT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVPCAT_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQLOCN_LOV" Title="Location Query Form" Width="575" Height="267" RecordGroup="PTQLOCN_RG">
+    <Columns>
+      <Column DataMember="PTRLOCN_CODE" Title="Location " Width="80" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRLOCN_DESC" Title="Description" Width="160" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRLOCN_EMPR_CODE" Title="Empr " Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREMPR_DESC" Title="Description" Width="160" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRLOCN_HEADQUARTERS_IND" Title="Headquarters " Width="112" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRLOCN_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVLGCD_LOV" Title="Longevity Code Validation (PTVLGCD)" Width="575" Height="267" RecordGroup="PTVLGCD_RG">
+    <Columns>
+      <Column DataMember="PTVLGCD_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVLGCD_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVLGCD_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVJCRE_LOV" Title="Job Change Reason Validation" Width="575" Height="267" RecordGroup="PTVJCRE_RG">
+    <Columns>
+      <Column DataMember="PTVJCRE_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVJCRE_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVJCRE_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVWKCP_LOV" Title="Workers' Compensation Classification Validation (PTVWKCP)" Width="575" Height="267" RecordGroup="PTVWKCP_RG">
+    <Columns>
+      <Column DataMember="PTVWKCP_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVWKCP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVWKCP_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQJBLN_LOV" Title="Job/Hiring Location Codes (PTRJBLN)" Width="575" Height="267" RecordGroup="PTQJBLN_RG">
+    <Columns>
+      <Column DataMember="PTRJBLN_CODE" Title="Code " Width="66" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRJBLN_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRJBLN_DICD_CODE" Title="Dist Code" Width="86" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRJBLN_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVEFUN_LOV" Title="EEO Function Code Validation (PTVEFUN)" Width="575" Height="267" RecordGroup="PTVEFUN_RG">
+    <Columns>
+      <Column DataMember="PTVEFUN_CODE" Title="Code " Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVEFUN_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVEFUN_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVBARG_LOV" Title="Bargaining  Unit Validation (PTVBARG)" Width="575" Height="267" RecordGroup="PTVBARG_RG">
+    <Columns>
+      <Column DataMember="PTVBARG_CODE" Title="Code" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVBARG_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVBARG_ACTIVITY_DATE" Title="Activity Date " Width="112" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQBDCA_LOV" Title="Benefit Deduction Codes" Width="575" Height="267" RecordGroup="PTQBDCA_RG">
+    <Columns>
+      <Column DataMember="PTRBDCA_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRBDCA_LONG_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDCA_PRIORITY" Title="Priority " Width="68" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDCA_CALC_RULE" Title="Calc Rule " Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDCA_ACTIVITY_DATE" Title="Activity Date " Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVESKL_LOV" Title="EEO Skill Code Validation (PTVESKL)" Width="575" Height="267" RecordGroup="PTVESKL_RG">
+    <Columns>
+      <Column DataMember="PTVESKL_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVESKL_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVESKL_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVESKL_EMPR_CODE" Title="Empr Ind " Width="64" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQSCHL_LOV" Title="Schools Query Form" Width="575" Height="267" RecordGroup="PTQSCHL_RG">
+    <Columns>
+      <Column DataMember="PTRSCHL_CODE" Title="School " Width="64" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRSCHL_DESC" Title="Description" Width="160" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRSCHL_EMPR_CODE" Title="Empr " Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="PTREMPR_DESC" Title="Description" Width="160" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRSCHL_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVECIP_LOV" Title="Employment Categories (PTVECIP)" Width="575" Height="267" RecordGroup="PTVECIP_RG">
+    <Columns>
+      <Column DataMember="PTVECIP_CODE" Title="Code" Width="40" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVECIP_DESC" Title="Description" Width="266" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVECIP_ACTIVITY_DATE" Title="Activity Date" Width="88" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTRESOC_LOV" Title="Standard Occupational Category (PTRESOC)" Width="575" Height="267" RecordGroup="PTRESOC_RG">
+    <Columns>
+      <Column DataMember="PTRESOC_CODE" Title="Code" Width="64" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRESOC_DESC" Title="Description" Width="144" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRESOC_CATEGORY" Title="Reporting Category" Width="144" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRESOC_ACTIVITY_DATE" Title="Activity Date" Width="88" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="FTVECLS_LOV" Title="Employee Class List(FTMECLS)" Width="575" Height="267" RecordGroup="FTVECLS_RG">
+    <Columns>
+      <Column DataMember="FTVECLS_ECLS_CODE" Title="Empl Class " Width="96" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="FTVECLS_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="FTVECLS_ACTIVITY_DATE" Title="Activity Date " Width="120" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="FTVCTYP_LOV" Title="Cost Type Code List" Width="575" Height="267" RecordGroup="FTVCTYP_RG">
+    <Columns>
+      <Column DataMember="CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="SDESCR" Title="Short Descr " Width="104" ReturnItem="">
+      </Column>
+      <Column DataMember="LDESC" Title="Long Description " Width="287" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="FTVPROJ_LOV" Title="Project Code List (FTVPROJ)" Width="575" Height="267" RecordGroup="FTVPROJ_RG">
+    <Columns>
+      <Column DataMember="PROJ_CODE" Title="Code" Width="72" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="LDESC" Title="Description" Width="287" ReturnItem="">
+      </Column>
+      <Column DataMember="EFF_DATE" Title="Effective Date " Width="128" ReturnItem="">
+      </Column>
+      <Column DataMember="TERM_DATE" Title="Termination Date" Width="96" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="FTVOBUD_LOV" Title="Operating Budget List (FTVOBUD)" Width="575" Height="267" RecordGroup="FTVOBUD_RG">
+    <Columns>
+      <Column DataMember="FTVOBUD_COAS_CODE" Title="COA " Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="FTVOBUD_OBUD_CODE" Title="ID" Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="FTVOBUD_BUDG_TITLE" Title="Budget Title" Width="287" ReturnItem="">
+      </Column>
+      <Column DataMember="FTVOBUD_YRS_BUDGETED" FormatMask="9999" Title="Years Budgeted " Width="128" ReturnItem="">
+      </Column>
+      <Column DataMember="FTVOBUD_BUDG_PRD_TYPE" Title="Period Type" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="FTVOBPH_LOV" Title="Budget Phase List (FTVOBPH)" Width="575" Height="267" RecordGroup="FTVOBPH_RG">
+    <Columns>
+      <Column DataMember="FTVOBPH_COAS_CODE" Title="COA " Width="24" ReturnItem="">
+      </Column>
+      <Column DataMember="FTVOBPH_OBUD_CODE" Title="Bud ID" Width="56" ReturnItem="">
+      </Column>
+      <Column DataMember="FTVOBPH_OBPH_CODE" Title="Phase " Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="FTVOBPH_BUDG_PHASE_SHORT_TITLE" Title="Short Title" Width="168" ReturnItem="">
+      </Column>
+      <Column DataMember="FTVOBPH_BUDG_PHASE_STATUS" Title="Status " Width="48" ReturnItem="">
+      </Column>
+      <Column DataMember="DESCRIPT" Title="Descr" Width="56" ReturnItem="">
+      </Column>
+      <Column DataMember="ACTIVE_DATE" Title="Activation Date " Width="136" ReturnItem="">
+      </Column>
+      <Column DataMember="FTVOBPH_BUDG_MEAS_TYPE" Title="Meas Type " Width="72" ReturnItem="">
+      </Column>
+      <Column DataMember="FTVOBPH_OBUD_CODE_BASE" Title="Base Bud ID " Width="88" ReturnItem="">
+      </Column>
+      <Column DataMember="FTVOBPH_OBPH_CODE_BASE" Title="Base Phase " Width="80" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTQALVL_LOV" Title="Approval Level Codes" Width="575" Height="267" RecordGroup="NTQALVL_RG">
+    <Columns>
+      <Column DataMember="NTRALVL_LEVEL" Title="Level " Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="NTRALVL_CODE" Title="Code" Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTRALVL_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="NTRALVL_SUPERUSER_IND" Title="Superuser " Width="72" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVACAT_LOV" Title="Approval Category Code Validation (NTVACAT)" Width="575" Height="267" RecordGroup="NTVACAT_RG">
+    <Columns>
+      <Column DataMember="NTVACAT_CODE" Title="Category Code " Width="104" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVACAT_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="NTVACAT_ACTIVITY_DATE" Title="Activity Date " Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTQLVID_LOV" Title="Active User ID's for Level Code" Width="575" Height="267" RecordGroup="NTQLVID_RG">
+    <Columns>
+      <Column DataMember="GOBEACC_USERNAME" Title="User Id" Width="128" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="USERNAME_DESC" Title="Name" Width="247" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTVASSN_LOV" Title="STRS Employee Assignment Validation (PTVASSN)" Width="575" Height="267" RecordGroup="PTVASSN_RG">
+    <Columns>
+      <Column DataMember="PTVASSN_CODE" Title="Code " Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTVASSN_DESC" Title="Description" Width="487" ReturnItem="">
+      </Column>
+      <Column DataMember="PTVASSN_ACTIVITY_DATE" Title="Activity Date " Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTQAPTY_LOV" Title="Valid Approval Type Codes for Category Code" Width="575" Height="267" RecordGroup="NTQAPTY_RG">
+    <Columns>
+      <Column DataMember="NTRACAT_APTY_CODE" Title="Type Code" Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVAPTY_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="NTRACAT_APTY_ENTRY_SEQ_NO" Title="Sequence No " Width="96" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTQROUT_LOV" Title="Routing " Width="575" Height="226" RecordGroup="NTQROUT_RG">
+    <Columns>
+      <Column DataMember="NTRROUT_RECIPIENT_USER_ID" Title="User Id" Width="247" ReturnItem="GLOBAL.USER_ID">
+      </Column>
+      <Column DataMember="USERNAME_DESC" Title="Name" Width="168" ReturnItem="">
+      </Column>
+      <Column DataMember="NTRALVL_LEVEL" Title="Level # " Width="56" ReturnItem="">
+      </Column>
+      <Column DataMember="NTRROUT_ALVL_CODE" Title="" Width="56" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTRALVL_DESC" Title="Level Code " Width="128" ReturnItem="">
+      </Column>
+      <Column DataMember="NTRROUT_ACTION_IND" Title="Action " Width="48" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTQACLV_LOV" Title="Mandatory Levels" Width="575" Height="267" RecordGroup="NTQACLV_RG">
+    <Columns>
+      <Column DataMember="NTRALVL_LEVEL" Title="Level # " Width="56" ReturnItem="">
+      </Column>
+      <Column DataMember="NTRACLV_ALVL_CODE" Title="Level Code " Width="80" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTRALVL_DESC" Title="Description" Width="168" ReturnItem="GLOBAL.DESC">
+      </Column>
+      <Column DataMember="NTRACLV_ACTION_IND" Title="Action " Width="48" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTQSALA_LOV" Title="Salary/Rate Structure" Width="575" Height="267" RecordGroup="NTQSALA_RG">
+    <Columns>
+      <Column DataMember="NTRSALB_SGRP_CODE" Title="Group" Width="56" ReturnItem="GLOBAL.SGRP_CODE">
+      </Column>
+      <Column DataMember="NTRSALB_TABLE" Title="Table " Width="40" ReturnItem="GLOBAL.TABLE">
+      </Column>
+      <Column DataMember="NTRSALB_GRADE" Title="Grade " Width="48" ReturnItem="GLOBAL.GRADE">
+      </Column>
+      <Column DataMember="NTRSALA_STEP" Title="Step" Width="32" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTRSALB_IND" Title="S/H Ind " Width="56" ReturnItem="">
+      </Column>
+      <Column DataMember="NTRSALA_AMOUNT" Title="    Rate" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="PTQDCHN_LOV" Title="Benefits/Deductions" Width="575" Height="267" RecordGroup="PTQDCHN_RG">
+    <Columns>
+      <Column DataMember="PTRBDCA_CODE" Title="Code " Width="48" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="PTRBDCA_LONG_DESC" Title="Description" Width="230" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDCA_PRIORITY" Title="Priority " Width="60" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDCA_CALC_RULE" Title="Calc Rule " Width="88" ReturnItem="">
+      </Column>
+      <Column DataMember="PTRBDCA_ACTIVITY_DATE" Title="Activity Date " Width="110" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="JOBS_EFF_DATES_LOV" Title="Select Effective Date to Query" Width="575" Height="267" RecordGroup="JOBS_EFF_DATES_RG">
+    <Columns>
+      <Column DataMember="NBRJOBS_EFFECTIVE_DATE" Title="Effective Date" Width="112" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NBRJOBS_REG_RATE" Title="Rate" Width="112" ReturnItem="">
+      </Column>
+      <Column DataMember="NBRJOBS_ANN_SALARY" Title="Salary" Width="112" ReturnItem="">
+      </Column>
+      <Column DataMember="NBRJOBS_JCRE_CODE" Title="Job Change Reason" Width="399" ReturnItem="">
+      </Column>
+      <Column DataMember="NBRJOBS_ECLS_CODE" Title="ECLS" Width="40" ReturnItem="">
+      </Column>
+      <Column DataMember="NBRJOBS_PICT_CODE" Title="Pay Id" Width="48" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVBPRO_LOV" Title="Budget Profile (NTVBPRO)" Width="575" Height="267" RecordGroup="NTVBPRO_RG">
+    <Columns>
+      <Column DataMember="NTVBPRO_CODE" Title="Code" Width="64" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVBPRO_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTQSPEX_LOV" Title="Budget Extract ID (NTRSPEX)" Width="575" Height="267" RecordGroup="NTQSPEX_RG">
+    <Columns>
+      <Column DataMember="NTRSPEX_CODE" Title="Code" Width="86" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTRSPEX_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="ACT_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVAGRP_LOV" Title="Electronic Approval Groups Validation (NTVAGRP)" Width="575" Height="267" RecordGroup="NTVAGRP_RG">
+    <Columns>
+      <Column DataMember="NTVAGRP_CODE" Title="Group Code " Width="117" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVAGRP_DESC" Title="Description" Width="247" ReturnItem="">
+      </Column>
+      <Column DataMember="NTVAGRP_ACTIVITY_DATE" Title="Activity Date " Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTQAGRP_LOV" Title="Electronic Approval Groups" Width="575" Height="267" RecordGroup="NTQAGRP_RG">
+    <Columns>
+      <Column DataMember="NTRAGRP_AGRP_CODE" Title="Groups" Width="90" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVAGRP_DESC" Title="Description" Width="266" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTQAGID_LOV" Title="Electronic Approval Users" Width="575" Height="267" RecordGroup="NTQAGID_RG">
+    <Columns>
+      <Column DataMember="NTRAGID_ORIGINATOR_USER_ID" Title="User Name" Width="160" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="SPRIDEN_FIRST_NAME" Title="First Name" Width="106" ReturnItem="">
+      </Column>
+      <Column DataMember="SPRIDEN_LAST_NAME" Title="Last Name" Width="266" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVECCG_LOV" Title="Effort Certification Category Code (NTVECCG)" Width="575" Height="267" RecordGroup="NTVECCG_RG">
+    <Columns>
+      <Column DataMember="NTVECCG_CODE" Title="Code" Width="96" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVECCG_DESC" Title="Description" Width="266" ReturnItem="">
+      </Column>
+      <Column DataMember="NTVECCG_ACTIVITY_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVPRXM_LOV" Title="Proxy Module Code Validation (NTVPRXM)" Width="575" Height="267" RecordGroup="NTVPRXM_RG">
+    <Columns>
+      <Column DataMember="NTVPRXM_CODE" Title="Code" Width="96" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVPRXM_DESC" Title="Description" Width="266" ReturnItem="">
+      </Column>
+      <Column DataMember="NTVPRXM_ACTIVITY_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="NTVQPRT_LOV" Title="Routing Queue Participant Code (NTVQPRT)" Width="575" Height="267" RecordGroup="NTVQPRT_RG">
+    <Columns>
+      <Column DataMember="NTVQPRT_CODE" Title="Code" Width="96" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="NTVQPRT_DESC" Title="Description" Width="266" ReturnItem="">
+      </Column>
+      <Column DataMember="NTVQPRT_ACTIVITY_DATE" Title="Activity Date" Width="104" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+</Lovs>

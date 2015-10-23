@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>
+	<b:import resource="classpath:net/hedtech/banner/alumni/common/Aoqrpls/AOQRPLS.Library.Config.xml"/>			
+	
+	
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/alumni/common/Apaiden/model/APAIDEN.Model.Config.xml"/>
+	
+	<task id="APAIDEN.Task.Config" name="APAIDEN">
+		<baseTaskConfiguration config="BASE.Task.Config"/>
+		<taskParts>
+		 	<taskPartConfiguration name="AOQCLIB" config="AOQCLIB.TaskPart.Config"/> 
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+			<taskPartConfiguration name="GOQCLIB" config="GOQCLIB.TaskPart.Config"/>
+			<taskPartConfiguration name="AOQOLIB" config="AOQOLIB.TaskPart.Config"/>
+			
+		</taskParts>
+		<taskClass>net.hedtech.banner.alumni.common.Apaiden.ApaidenTask</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/alumni/common/Apaiden/ApaidenStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.alumni.common.Apaiden.services.ApaidenServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+				<libraryConfiguration config="AOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="APAIDEN.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.banner.alumni.common.Apaiden.controller.ApaidenFormController</formController>
+		<blockControllers>
+			<block  name="G$_VPDI_BLOCK">net.hedtech.banner.alumni.common.Apaiden.controller.GVpdiBlockController</block>
+			<block  name="KEY_BLOCK">net.hedtech.banner.alumni.common.Apaiden.controller.KeyBlockController</block>
+			<block  name="SPRIDEN_CURRENT">net.hedtech.banner.alumni.common.Apaiden.controller.SpridenCurrentController</block>
+			<block  name="SPRIDEN_PREVIOUS">net.hedtech.banner.alumni.common.Apaiden.controller.SpridenPreviousController</block>
+			<block  name="SPRADDR">net.hedtech.banner.alumni.common.Apaiden.controller.SpraddrController</block>
+			<block  name="SPRTELE">net.hedtech.banner.alumni.common.Apaiden.controller.SprteleController</block>
+			<block  name="GOREMAL">net.hedtech.banner.alumni.common.Apaiden.controller.GoremalController</block>
+			<block  name="SPBPERS">net.hedtech.banner.alumni.common.Apaiden.controller.SpbpersController</block>
+			<block  name="GORPRAC">net.hedtech.banner.alumni.common.Apaiden.controller.GorpracController</block>
+			<block  name="GORADID">net.hedtech.banner.alumni.common.Apaiden.controller.GoradidController</block>
+			<block  name="APTADDR_HEADER">net.hedtech.banner.alumni.common.Apaiden.controller.AptaddrHeaderController</block>
+			<block  name="APTADDR">net.hedtech.banner.alumni.common.Apaiden.controller.AptaddrController</block>
+			<block  name="G$_NAV_BLOCK">net.hedtech.banner.alumni.common.Apaiden.controller.GNavBlockController</block>
+			<block  name="FORM_HEADER">net.hedtech.banner.alumni.common.Apaiden.controller.FormHeaderController</block>
+			<block  name="BUTTON_CONTROL_BLOCK">net.hedtech.banner.alumni.common.Apaiden.controller.ButtonControlBlockController</block>
+			<block  name="AURALRT">net.hedtech.banner.alumni.common.Apaiden.controller.AuralrtController</block>
+			<block  name="G$_EXTENDED_SEARCH_BLOCK">net.hedtech.banner.alumni.common.Apaiden.controller.GExtendedSearchBlockController</block>
+			<block  name="G$_OPT_BLOCK">net.hedtech.banner.alumni.common.Apaiden.controller.GOptBlockController</block>
+		</blockControllers>
+		<menuControllers>
+			<menu  name="G$_DEFAULT_PM">net.hedtech.banner.alumni.common.Apaiden.controller.GDefaultPmContextController</menu>
+		</menuControllers>
+
+	</task>
+</b:beans>
+
+ 

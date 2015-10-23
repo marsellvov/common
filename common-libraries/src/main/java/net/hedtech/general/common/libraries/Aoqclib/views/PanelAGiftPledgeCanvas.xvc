@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel width="100%">
+		<tabpanel id="tabAGiftPledgeCanvas" name="A$_GIFT_PLEDGE_CANVAS">
+			<tab id="page_agradtlTab" label="agradtlTab.label" name="AGRADTL_TAB">
+				<include src="net/hedtech/general/common/libraries/Aoqclib/views/TabAGiftPledgeCanvasAgradtlTab"/>
+			</tab>
+			<tab id="page_agrpgbeTab" label="agrpgbeTab.label" name="AGRPGBE_TAB">
+				<include src="net/hedtech/general/common/libraries/Aoqclib/views/TabAGiftPledgeCanvasAgrpgbeTab"/>
+			</tab>
+		</tabpanel>
+	</panel>
+</config>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<window layout="horizontal" title="mainWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<include src="net/hedtech/banner/alumni/common/Apcaddr/views/PanelKeyBlockCanvas"/>
+	<tabpanel style="ui-panel-view-container ui-notabs">
+		<tab label="main">
+			<include src="net/hedtech/banner/alumni/common/Apcaddr/views/PanelGNavCanvas" xmlns:xc="urn:schemas:morphis:frames:control" xmlns:xl="urn:schemas:morphis:frames:logic" xmlns:xv="urn:schemas:morphis:frames:view"/>
+
+			<include src="net/hedtech/banner/alumni/common/Apcaddr/views/PanelSpraddr1Canvas" xmlns:xc="urn:schemas:morphis:frames:control" xmlns:xl="urn:schemas:morphis:frames:logic" xmlns:xv="urn:schemas:morphis:frames:view"/>
+			<include src="net/hedtech/general/common/libraries/Goqolib/views/PanelGWelcomeCanvas" xmlns:xc="urn:schemas:morphis:frames:control" xmlns:xl="urn:schemas:morphis:frames:logic" xmlns:xv="urn:schemas:morphis:frames:view"/>
+		</tab>
+	</tabpanel>
+</window>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVPROJ.Manager.Config" name="FTVPROJ">
+		
+		<items>
+			<item name="FTVPROJ_COAS_CODE" logicalName="ftvprojCoasCode" type="String" physicalName="FTVPROJ_COAS_CODE"  />
+			<item name="FTVPROJ_CODE" logicalName="ftvprojCode" type="String" physicalName="FTVPROJ_CODE"  />
+			<item name="FTVPROJ_LONG_DESC" logicalName="ftvprojLongDesc" type="String" physicalName="FTVPROJ_LONG_DESC"  />
+			<item name="FTVPROJ_EFF_DATE" logicalName="ftvprojEffDate" type="java.util.Date" physicalName="FTVPROJ_EFF_DATE"  />
+			<item name="FTVPROJ_TERM_DATE" logicalName="ftvprojTermDate" type="java.util.Date" physicalName="FTVPROJ_TERM_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvproj.model.FtvprojAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[ftvproj_code]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

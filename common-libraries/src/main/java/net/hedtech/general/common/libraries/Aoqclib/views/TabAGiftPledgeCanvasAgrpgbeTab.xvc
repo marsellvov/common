@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="AGRPGBE"/>
+	<panel width="100%">
+		<collapsiblepanel width="100%">
+			<panel width="100%">
+				<gridlayout cols="2" orientation="vertical">
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" case="upper" datatype="String" height="23px" label="agrpgbe.pgbeId.prompt" member="PGBE_ID" name="pgbeId" style="ui-buttoninput" width="72px"/>
+						<button action="WHEN-BUTTON-PRESSED" block="AGRPGBE" height="23px" icon="flashlit" member="PGBE_ID_LBT" name="pgbeIdLbt" navigable="false" style="ui-buttoninput" tooltip="agrpgbe.pgbeIdLbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="agrpgbe.agrpgbeXrefCode.prompt" member="AGRPGBE_XREF_CODE" name="agrpgbeXrefCode" style="ui-buttoninput" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button block="AGRPGBE" height="23px" icon="search" member="AGRPGBE_XREF_CODE_LBT" name="agrpgbeXrefCodeLbt" navigable="false" style="ui-buttoninput" tooltip="agrpgbe.agrpgbeXrefCodeLbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell>
+					<gridcell>
+						<textfield block="AGRPGBE" datatype="String" height="23px" member="PGBE_XREF_DESC" name="pgbeXrefDesc" width="399px"/>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="agrpgbe.agrpgbePledgeNo.prompt" member="AGRPGBE_PLEDGE_NO" name="agrpgbePledgeNo" style="ui-buttoninput" width="56px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button block="AGRPGBE" height="23px" icon="flashlit" label="agrpgbe.agrpgbePledgeNoLbt.label" member="AGRPGBE_PLEDGE_NO_LBT" name="agrpgbePledgeNoLbt" navigable="false" style="ui-buttoninput" tooltip="agrpgbe.agrpgbePledgeNoLbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="agrpgbe.agrpgbeGiftNo.prompt" member="AGRPGBE_GIFT_NO" name="agrpgbeGiftNo" style="ui-buttoninput" width="56px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button block="AGRPGBE" height="23px" icon="flashlit" member="AGRPGBE_GIFT_NO_LBT" name="agrpgbeGiftNoLbt" navigable="false" style="ui-buttoninput" tooltip="agrpgbe.agrpgbeGiftNoLbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" datatype="String" height="23px" member="AGRPGBE_SURNAME_PREFIX" name="agrpgbeSurnamePrefix" visible="false" width="479px"/>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" datatype="String" height="23px" label="agrpgbe.pgbeSurnamePrefix.prompt" member="PGBE_SURNAME_PREFIX" name="pgbeSurnamePrefix" width="479px"/>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" datatype="String" height="23px" member="AGRPGBE_LAST_NAME" name="agrpgbeLastName" visible="false" width="479px"/>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" datatype="String" height="23px" label="agrpgbe.pgbeLastName.prompt" member="PGBE_LAST_NAME" name="pgbeLastName" width="479px"/>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" datatype="String" height="23px" member="AGRPGBE_FIRST_NAME" name="agrpgbeFirstName" visible="false" width="479px"/>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" datatype="String" height="23px" label="agrpgbe.pgbeFirstName.prompt" member="PGBE_FIRST_NAME" name="pgbeFirstName" width="479px"/>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" datatype="String" height="23px" member="AGRPGBE_MI" name="agrpgbeMi" visible="false" width="479px"/>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="AGRPGBE" datatype="String" height="23px" label="agrpgbe.pgbeMi.prompt" member="PGBE_MI" name="pgbeMi" width="479px"/>
+					</gridcell>
+					<gridcell>
+						<radiogroup action="WHEN-RADIO-CHANGED" block="AGRPGBE" datatype="String" id="pgbeSex" member="PGBE_SEX" name="pgbeSex" othervalue="N">
+							<radiobox group="pgbeSex" height="23px" label="agrpgbe.pgbeSex.notAvailableBtn.label" labelalign="start" labelposition="left" name="rb_PgbeSex_NotAvailableBtn" value="N" width="213px"/>
+							<radiobox group="pgbeSex" height="23px" label="agrpgbe.pgbeSex.femaleBtn.label" labelalign="start" labelposition="left" name="rb_PgbeSex_FemaleBtn" value="F" width="160px"/>
+							<radiobox group="pgbeSex" height="23px" label="agrpgbe.pgbeSex.maleBtn.label" labelalign="center" labeloffset="-277" labelposition="right" name="rb_PgbeSex_MaleBtn" value="M" width="145px"/>
+						</radiogroup>
+					</gridcell>
+					<gridcell>
+						<calendar autoskip="true" block="AGRPGBE" datatype="Date" formatmask="DD-MON-YYYY" height="23px" member="AGRPGBE_BIRTH_DATE" name="agrpgbeBirthDate" visible="false" width="140px"/>
+					</gridcell>
+					<gridcell>
+						<calendar autoskip="true" block="AGRPGBE" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="agrpgbe.pgbeBirthDate.prompt" member="PGBE_BIRTH_DATE" name="pgbeBirthDate" width="140px"/>
+					</gridcell>
+					<gridcell>
+						<button action="WHEN-BUTTON-PRESSED" block="AGRPGBE" height="20px" icon="calendar" label="agrpgbe.pgbeBirthDateDbt.label" member="PGBE_BIRTH_DATE_DBT" name="pgbeBirthDateDbt" navigable="false" tooltip="agrpgbe.pgbeBirthDateDbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell>
+					<gridcell>
+						<textbox block="AGRPGBE" datatype="String" enabled="false" height="23px" label="agrpgbe.displayAge.prompt" member="DISPLAY_AGE" name="displayAge" textalign="right" width="50px"/>
+					</gridcell>
+					<gridcell>
+						<textbox block="AGRPGBE" datatype="String" height="21px" member="AGRPGBE_DECEASED_IND" name="agrpgbeDeceasedInd" visible="false" width="84px"/>
+						<calendar autoskip="true" block="AGRPGBE" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="21px" member="AGRPGBE_DECEASED_DATE" name="agrpgbeDeceasedDate" visible="false" width="140px"/>
+					</gridcell>
+					<gridcell>
+						<checkbox action="WHEN-CHECKBOX-CHANGED" block="AGRPGBE" height="21px" label="agrpgbe.pgbeDeceasedInd.label" member="PGBE_DECEASED_IND" name="pgbeDeceasedInd" othervaluestate="unchecked" value="Y" width="84px"/>
+						<calendar autoskip="true" block="AGRPGBE" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="21px" label="agrpgbe.pgbeDeceasedDate.prompt" member="PGBE_DECEASED_DATE" name="pgbeDeceasedDate" width="140px"/>
+					</gridcell>
+					<gridcell>
+						<button action="WHEN-BUTTON-PRESSED" block="AGRPGBE" height="20px" icon="calendar" label="agrpgbe.pgbeDeceasedDateDbt.label" member="PGBE_DECEASED_DATE_DBT" name="pgbeDeceasedDateDbt" navigable="false" tooltip="agrpgbe.pgbeDeceasedDateDbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell>
+					<gridcell>
+						<textbox block="AGRPGBE" datatype="String" height="90px" label="agrpgbe.agrpgbeComment.prompt" member="AGRPGBE_COMMENT" multiline="true" name="agrpgbeComment" width="648px"/>
+					</gridcell>
+					<gridcell>
+						<button action="WHEN-BUTTON-PRESSED" block="AGRPGBE" height="20px" icon="comments" member="AGRPGBE_COMMENT_BTN" name="agrpgbeCommentBtn" navigable="false" tooltip="agrpgbe.agrpgbeCommentBtn.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</collapsiblepanel>
+	</panel>
+</config>

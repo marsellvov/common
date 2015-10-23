@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:library"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:library http://www.morphis-tech.com/schema/foundations/library.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+
+	<library id="GOQRPLS.Lib.Config" name="GOQRPLS">
+		<libraryClass>net.hedtech.general.common.libraries.Goqrpls.GoqrplsServices</libraryClass>
+		<!-- support code -->
+		<supportCodeConfiguration>
+				<!-- Packages -->
+				<packages>
+					<package  name="G$_XE_STATE_MANAGER">net.hedtech.general.common.libraries.Goqrpls.GXeStateManager</package> 	
+					<package  name="G$_XE">net.hedtech.general.common.libraries.Goqrpls.GXe</package> 	
+					<package  name="G$_WRITE_BLOCK">net.hedtech.general.common.libraries.Goqrpls.GWriteBlock</package> 	
+					<package  name="G$_WALK_FORM">net.hedtech.general.common.libraries.Goqrpls.GWalkForm</package> 	
+					<package  name="G$_VPDI_TRIGGER">net.hedtech.general.common.libraries.Goqrpls.GVpdiTrigger</package> 	
+					<package  name="G$_VPDI">net.hedtech.general.common.libraries.Goqrpls.GVpdi</package> 	
+					<package  name="G$_TRACE_PKG">net.hedtech.general.common.libraries.Goqrpls.GTracePkg</package> 	
+					<package  name="G$_TOOLBAR">net.hedtech.general.common.libraries.Goqrpls.GToolbar</package> 	
+					<package  name="G$_TAB_SECURITY">net.hedtech.general.common.libraries.Goqrpls.GTabSecurity</package> 	
+					<package  name="G$_SEARCH_WHERE">net.hedtech.general.common.libraries.Goqrpls.GSearchWhere</package> 	
+					<package  name="G$_SEARCH">net.hedtech.general.common.libraries.Goqrpls.GSearch</package> 	
+					<package  name="G$_SD">net.hedtech.general.common.libraries.Goqrpls.GSd</package> 	
+					<package  name="G$_READ_METADATA">net.hedtech.general.common.libraries.Goqrpls.GReadMetadata</package> 	
+					<package  name="G$_POP_UP_MENU">net.hedtech.general.common.libraries.Goqrpls.GPopUpMenu</package> 	
+					<package  name="G$_NAVIGATION_FRAME">net.hedtech.general.common.libraries.Goqrpls.GNavigationFrame</package> 	
+					<package  name="G$_MENU_BAR">net.hedtech.general.common.libraries.Goqrpls.GMenuBar</package> 	
+					<package  name="G$_MASKS">net.hedtech.general.common.libraries.Goqrpls.GMasks</package> 	
+					<package  name="G$_LAST_TEN">net.hedtech.general.common.libraries.Goqrpls.GLastTen</package> 	
+					<package  name="G$_IMG_DRIVER">net.hedtech.general.common.libraries.Goqrpls.GImgDriver</package> 	
+					<package  name="G$_IDNAME_SEARCH">net.hedtech.general.common.libraries.Goqrpls.GIdnameSearch</package> 	
+					<package  name="G$_HANDSHAKE_AQ">net.hedtech.general.common.libraries.Goqrpls.GHandshakeAq</package> 	
+					<package  name="G$_GOQOLIB_USER_TRIGGER">net.hedtech.general.common.libraries.Goqrpls.GGoqolibUserTrigger</package> 	
+					<package  name="G$_GOQOLIB_PP_TRIGGER">net.hedtech.general.common.libraries.Goqrpls.GGoqolibPpTrigger</package> 	
+					<package  name="G$_GOQOLIB_OPT_BLOCK">net.hedtech.general.common.libraries.Goqrpls.GGoqolibOptBlock</package> 	
+					<package  name="G$_GOQOLIB_KEY_TRIGGER">net.hedtech.general.common.libraries.Goqrpls.GGoqolibKeyTrigger</package> 	
+					<package  name="G$_GOQOLIB_FUNC_INFO_BLOCK">net.hedtech.general.common.libraries.Goqrpls.GGoqolibFuncInfoBlock</package> 	
+					<package  name="G$_FRM">net.hedtech.general.common.libraries.Goqrpls.GFrm</package> 	
+					<package  name="G$_FORMS_NLS">net.hedtech.general.common.libraries.Goqrpls.GFormsNls</package> 	
+					<package  name="G$_F5_NAVIGATION">net.hedtech.general.common.libraries.Goqrpls.GF5Navigation</package> 	
+					<package  name="G$_ERRORS">net.hedtech.general.common.libraries.Goqrpls.GErrors</package> 	
+					<package  name="G$_B2K_WIN_HELP">net.hedtech.general.common.libraries.Goqrpls.GB2kWinHelp</package> 	
+				</packages>
+				<attachedLibraries>
+	<!-- Attached Libs -->
+					<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+				</attachedLibraries>
+		</supportCodeConfiguration>
+		
+	</library>
+</b:beans>
+
+ 

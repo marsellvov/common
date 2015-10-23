@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view"
+	xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SPRMEDI" />
+	<panel class="StackedCanvas" id="pnlSprmedi1Canvas" menu="G$_DEFAULT_PM"
+		name="SPRMEDI_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.label.title">
+				<repeater block="SPRMEDI" name="grdSprmedi" width="100%">
+					<panel width="100%">
+						<gridlayout cols="2" orientation="vertical">
+							<gridcell>
+								<component label="sprmedi.sprmediMediCode.prompt">
+									<textbox case="upper" height="23px" maxlength="10" label="sprmedi.sprmediMediCode.prompt"
+										member="SPRMEDI_MEDI_CODE" name="sprmediMediCode" style="ui-buttoninput ui-hidelabel"
+										width="120px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+									</textbox>
+									<button action="WHEN-BUTTON-PRESSED" height="23px" icon="search"
+										member="SPRMEDI_MEDI_CODE_LBT" name="sprmediMediCodeLbt" style="ui-buttoninput"
+										tooltip="sprmedi.sprmediMediCodeLbt.tooltip" width="23px" />
+									<textbox autoskip="true" height="23px" member="MEDI_DESCRIPTION"
+										name="mdeqDescription" width="241px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+									</textbox>
+								</component>
+							</gridcell>
+							<gridcell>
+								<calendar autoskip="true" case="upper" datatype="Date"
+									formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM"
+									label="sprmedi.sprmediMediCodeDate.prompt" maxlength="26"
+									member="SPRMEDI_MEDI_CODE_DATE" name="sprmediMediCodeDate"
+									width="140px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</calendar>
+							</gridcell>
+							<gridcell>
+								<component label="sprmedi.sprmediDisaCode.prompt">
+									<textbox case="upper" height="23px"
+										label="sprmedi.sprmediDisaCode.prompt" maxlength="30"
+										member="SPRMEDI_DISA_CODE" name="sprmediDisaCode" style="ui-buttoninput ui-hidelabel"
+										width="50px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+									</textbox>
+									<button action="WHEN-BUTTON-PRESSED" height="23px" icon="search"
+										member="SPRMEDI_DISA_CODE_LBT" name="sprmediDisaCodeLbt" style="ui-buttoninput"
+										tooltip="sprmedi.sprmediDisaCodeLbt.tooltip" width="23px" />
+									<textbox autoskip="true" height="23px" maxlength="30"
+										member="DISA_DESCRIPTION" name="disaDescription" width="262px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+									</textbox>
+								</component>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" datatype="Number" height="23px"
+									label="sprmedi.sprmediOnsetAge.prompt" labelstyle="DEFAULT"
+									maxlength="2" maxvalue="99" member="SPRMEDI_ONSET_AGE"
+									minvalue="0" name="sprmediOnsetAge" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<checkbox action="WHEN-CHECKBOX-CHANGED" falsevalue="N"
+									label="sprmedi.sprmediDisbInd.label" labelstyle="DEFAULT"
+									member="SPRMEDI_DISB_IND" name="sprmediDisbInd"
+									othervaluestate="unchecked" value="Y" width="146px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</checkbox>
+							</gridcell>
+							<gridcell>
+								<component label="sprmedi.sprmediMdeqCode.prompt">
+									<textbox case="upper" height="23px"
+										label="sprmedi.sprmediMdeqCode.prompt" maxlength="30"
+										member="SPRMEDI_MDEQ_CODE" name="sprmediMdeqCode" style="ui-buttoninput ui-hidelabel"
+										width="50px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+									</textbox>
+									<button action="WHEN-BUTTON-PRESSED" height="23px" icon="search"
+										member="SPRMEDI_MDEQ_CODE_LBT" name="sprmediMdeqCodeLbt" style="ui-buttoninput"
+										tooltip="sprmedi.sprmediMdeqCodeLbt.tooltip" width="23px" />
+									<textbox height="23px" maxlength="30" member="MDEQ_DESCRIPTION"
+										name="mdeqDescription" width="262px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+									</textbox>
+								</component>
+							</gridcell>
+							<gridcell>
+								<component label="sprmedi.sprmediSpsrCode.prompt">
+									<textbox height="23px" label="sprmedi.sprmediSpsrCode.prompt"
+										maxlength="30" member="SPRMEDI_SPSR_CODE" name="sprmediSpsrCode"
+										style="ui-buttoninput ui-hidelabel" width="50px" case="upper">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+									</textbox>
+									<button action="WHEN-BUTTON-PRESSED" height="23px" icon="search"
+										member="SPRMEDI_SPSR_CODE_LBT" name="sprmediSpsrCodeLbt" style="ui-buttoninput"
+										tooltip="sprmedi.sprmediSpsrCodeLbt.tooltip" width="23px" />
+									<textbox height="23px" labelstyle="DEFAULT" maxlength="30"
+										member="SPSR_DESCRIPTION" name="spsrDescription" width="269px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+									</textbox>
+								</component>
+							</gridcell>
+							<gridcell>
+								<textbox height="23px" icon="comments"
+									label="sprmedi.sprmediComment.prompt" labelstyle="DEFAULT"
+									maxlength="3600" member="SPRMEDI_COMMENT" style="ui-buttoninput"
+									name="sprmediComment" tooltip="sprmedi.sprmediCommentBtn.tooltip"
+									width="300px" />
+								<button action="WHEN-BUTTON-PRESSED" block="SPRMEDI"
+									height="23px" icon="ui-icon-pencil" labelstyle="DEFAULT"
+									member="SPRMEDI_COMMENT_BTN" name="sprmediCommentBtn"
+									navigable="false" style="ui-buttoninput" tooltip="sprmedi.sprmediCommentBtn.tooltip"
+									width="23px" />
+							</gridcell>
+						</gridlayout>
+					</panel>
+				</repeater>
+			</panel>
+		</accordion>
+	</panel>
+</config>

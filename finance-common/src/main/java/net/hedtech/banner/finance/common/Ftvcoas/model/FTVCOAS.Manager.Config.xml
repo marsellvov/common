@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVCOAS.Manager.Config" name="FTVCOAS">
+		
+		<items>
+			<item name="FTVCOAS_COAS_CODE" logicalName="ftvcoasCoasCode" type="String" physicalName="FTVCOAS_COAS_CODE"  />
+			<item name="FTVCOAS_ACTIVITY_DATE" logicalName="ftvcoasActivityDate" type="java.util.Date" physicalName="FTVCOAS_ACTIVITY_DATE"  />
+			<item name="FTVCOAS_USER_ID" logicalName="ftvcoasUserId" type="String" physicalName="FTVCOAS_USER_ID"  />
+			<item name="FTVCOAS_TITLE" logicalName="ftvcoasTitle" type="String" physicalName="FTVCOAS_TITLE"  />
+			<item name="FTVCOAS_STATUS_IND" logicalName="ftvcoasStatusInd" type="String" physicalName="FTVCOAS_STATUS_IND"  />
+			<item name="FTVCOAS_EFF_DATE" logicalName="ftvcoasEffDate" type="java.util.Date" physicalName="FTVCOAS_EFF_DATE"  />
+			<item name="FTVCOAS_TERM_DATE" logicalName="ftvcoasTermDate" type="java.util.Date" physicalName="FTVCOAS_TERM_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvcoas.model.FtvcoasAdapter</adapterClass>
+<!-- 		<defaultWhereClause><![CDATA[WHERE (ftvcoas_coas_code = nvl(:HOLD_COAS_CODE, ftvcoas_coas_code) OR ftvcoas_coas_code = :FTVCOAS_COAS_CODE)]]></defaultWhereClause> -->
+		<defaultWhereClause><![CDATA[WHERE (ftvcoas_coas_code = nvl(:HOLD_COAS_CODE, ftvcoas_coas_code))]]></defaultWhereClause>		
+		<defaultOrderByClause><![CDATA[order by ftvcoas_coas_code, ftvcoas_eff_date]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

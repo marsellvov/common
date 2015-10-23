@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GORADID.Manager.Config" name="GORADID">
+		
+		<items>
+			<item name="GORADID_ADID_CODE" logicalName="goradidAdidCode" type="String" physicalName="GORADID_ADID_CODE"  />
+			<item name="ADID_DESC" logicalName="adidDesc" type="String"  virtual="true" />
+			<item name="GORADID_ADDITIONAL_ID" logicalName="goradidAdditionalId" type="String" physicalName="GORADID_ADDITIONAL_ID"  />
+			<item name="GORADID_ACTIVITY_DATE" logicalName="goradidActivityDate" type="java.util.Date" physicalName="GORADID_ACTIVITY_DATE"  />
+			<item name="GORADID_USER_ID" logicalName="goradidUserId" type="String" physicalName="GORADID_USER_ID"  />
+			<item name="GORADID_DATA_ORIGIN" logicalName="goradidDataOrigin" type="String" physicalName="GORADID_DATA_ORIGIN"  />
+			<item name="GORADID_PIDM" logicalName="goradidPidm" type="java.math.BigDecimal" physicalName="GORADID_PIDM"  />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqclib.model.GoradidAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE goradid_pidm = :PIDM]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[GORADID_ADID_CODE, GORADID_ADDITIONAL_ID]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

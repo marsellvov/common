@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVACCT"/>
+	<panel class="ContentCanvas" id="pnlFtvacct1Canvas" menu="G$_DEFAULT_PM" name="FTVACCT_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="FTVACCT" name="grdFtvacct" width="100%">
+						<viewheader>
+							<viewcolumn block="FTVACCT" case="upper" datatype="String" label="ftvacct.ftvacctCoasCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVACCT_COAS_CODE" name="ftvacctCoasCode" width="133px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACCT" case="upper" datatype="String" enabled="false" label="ftvacct.ftvacctAcctCode.prompt" labelstyle="DEFAULT" maxlength="6" member="FTVACCT_ACCT_CODE" name="ftvacctAcctCode" width="109px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACCT" datatype="String" label="ftvacct.ftvacctTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FTVACCT_TITLE" name="ftvacctTitle" width="203px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACCT" case="upper" datatype="String" enabled="false" label="ftvacct.ftvacctAtypCode.prompt" labelstyle="DEFAULT" maxlength="2" member="FTVACCT_ATYP_CODE" name="ftvacctAtypCode" width="51px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACCT" case="upper" datatype="String" enabled="false" label="ftvacct.ftvacctDataEntryInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVACCT_DATA_ENTRY_IND" name="ftvacctDataEntryInd" width="85px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="FTVACCT" case="upper" datatype="String" enabled="false" label="ftvacct.ftvacctAcctClassCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVACCT_ACCT_CLASS_CODE" name="ftvacctAcctClassCode" width="110px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACCT" case="upper" datatype="String" enabled="false" label="ftvacct.ftvacctStatusInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVACCT_STATUS_IND" name="ftvacctStatusInd" width="61px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACCT" case="upper" datatype="String" enabled="false" label="ftvacct.internalAtyp.prompt" labelstyle="DEFAULT" maxlength="2" member="INTERNAL_ATYP" name="internalAtyp" width="103px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACCT" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvacct.ftvacctEffDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVACCT_EFF_DATE" name="ftvacctEffDate" width="105px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVACCT" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvacct.ftvacctTermDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVACCT_TERM_DATE" name="ftvacctTermDate" width="127px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

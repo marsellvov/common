@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="" LovDataPath="net/hedtech/banner/finance/common/Fragrnt/parts/goqolib/GoqolibLovs.xml" Name="GOQOLIB">
+  <Visual>
+    <Window Id="G$_EXTENDED_SEARCH_WINDOW" />
+    <Window Id="G$_SDSP_WINDOW" />
+    <Window Id="G$_VPDI_WINDOW" />
+  </Visual>
+  <Logic>
+    <Block Id="G$_EXTENDED_SEARCH_BLOCK" />
+    <Block Id="G$_SDKEY" />
+    <Block Id="G$_SDISP" />
+  </Logic>
+</FormStructure>

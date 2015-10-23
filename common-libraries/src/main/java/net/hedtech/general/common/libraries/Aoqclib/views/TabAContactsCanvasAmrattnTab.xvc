@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="AMRATTN"/>
+	<panel width="100%">
+		<collapsiblepanel label="mainWindow.title" name="grdAmrattn" width="100%">
+			<panel width="100%">
+				<gridview block="AMRATTN" height="364px" width="100%">
+					<viewheader>
+						<viewcolumn autoskip="true" block="AMRATTN" case="upper" datatype="String" keyactions="NEXT_ITEM" label="amrattn.amrattnAttnIdenCode.prompt" labelstyle="DEFAULT" member="AMRATTN_ATTN_IDEN_CODE" name="amrattnAttnIdenCode" width="61px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="AMRATTN" datatype="String" labelstyle="DEFAULT" member="ATTN_IDEN_DESC" name="attnIdenDesc" width="375px"/>
+						<viewcolumn block="AMRATTN" label="amrattn.amrattnOrigInd.prompt" labelstyle="DEFAULT" member="AMRATTN_ORIG_IND" name="amrattnOrigInd" width="20px">
+							<editor>
+								<checkbox falsevalue="0" othervaluestate="unchecked" value="1"/>
+							</editor>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</collapsiblepanel>
+		<panel width="100%">
+			<button block="AMRATTN" height="20px" icon="flashlit" member="AMRATTN_ATTN_IDEN_CODE_LBT" name="amrattnAttnIdenCodeLbt" navigable="false" tooltip="amrattn.amrattnAttnIdenCodeLbt.tooltip" width="20px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+		</panel>
+	</panel>
+</config>

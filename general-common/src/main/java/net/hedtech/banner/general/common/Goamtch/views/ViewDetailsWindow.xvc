@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" title="detailsWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<formpanel name="detailsWindow" width="100%">
+		<include src="net/hedtech/banner/general/common/Goamtch/views/PanelDetailsCanvas"/>
+	</formpanel>
+</config>

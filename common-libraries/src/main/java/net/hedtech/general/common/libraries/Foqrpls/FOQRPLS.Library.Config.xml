@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:library"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:library http://www.morphis-tech.com/schema/foundations/library.xsd">
+	<!-- Attached Libs -->
+
+	<library id="FOQRPLS.Lib.Config" name="FOQRPLS">
+		<libraryClass>net.hedtech.general.common.libraries.Foqrpls.FoqrplsServices</libraryClass>
+		<!-- support code -->
+		<supportCodeConfiguration>
+				<!-- Packages -->
+				<packages>
+					<package  name="PAC_COPY_REC">net.hedtech.general.common.libraries.Foqrpls.PacCopyRec</package> 	
+					<package  name="F$_SEARCH_WHERE">net.hedtech.general.common.libraries.Foqrpls.FSearchWhere</package> 	
+					<package  name="F$_FORMAT_NUMBER">net.hedtech.general.common.libraries.Foqrpls.FFormatNumber</package> 	
+				</packages>
+				<attachedLibraries>
+	<!-- Attached Libs -->
+				</attachedLibraries>
+		</supportCodeConfiguration>
+		
+	</library>
+</b:beans>
+
+ 

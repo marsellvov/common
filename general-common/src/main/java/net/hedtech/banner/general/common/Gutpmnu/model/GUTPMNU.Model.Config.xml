@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Gutpmnu/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Gutpmnu/model/GUBOBJS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Gutpmnu/model/GURMENU.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Gutpmnu/model/GURMENU2.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Gutpmnu/model/ALL_USERS_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Gutpmnu/model/GUTPMNU.ValueSet.Config.xml"/>
+
+	
+	<formModel id="GUTPMNU.Model.Config" name="GUTPMNU">
+		<modelClass>net.hedtech.banner.general.common.Gutpmnu.model.GutpmnuModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GUBOBJS" manager="GUBOBJS.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GURMENU" manager="GURMENU.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GURMENU2" manager="GURMENU2.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="ALL_USERS_BLOCK" manager="ALL_USERS_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="DRAG_GR.ValueSet.Config"/>
+				<valueSet config="USER_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

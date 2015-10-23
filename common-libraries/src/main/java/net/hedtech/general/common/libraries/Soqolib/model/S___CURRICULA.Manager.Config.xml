@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___CURRICULA.Manager.Config" name="SCurricula">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="COMMPLAN_DELETE_TRIGGER" logicalName="commplanDeleteTrigger" type="String"   />
+			<item name="CURRENT_ROLE" logicalName="currentRole" type="String"   />
+			<item name="CURRENT_OBJ" logicalName="currentObj" type="String"   />
+			<item name="COMMIT_INPROGRESS" logicalName="commitInprogress" type="String"   />
+			<item name="CREATE_RECR" logicalName="createRecr" type="String"   />
+			<item name="CREATE_ADM" logicalName="createAdm" type="String"   />
+			<item name="SAVE_ERROR_ITEM" logicalName="saveErrorItem" type="String"   />
+			<item name="LEARNER_EFF_TERM" logicalName="learnerEffTerm" type="String"   />
+			<item name="OPTIONS_IND" logicalName="optionsInd" type="String"   />
+			<item name="EVALUATE_COURSES" logicalName="evaluateCourses" type="String"   />
+			<item name="ORIGINAL_SORLCUR_COUNT" logicalName="originalSorlcurCount" type="java.math.BigDecimal"   />
+			<item name="CURRIC_COMMIT_ERROR_MSG" logicalName="curricCommitErrorMsg" type="String"   />
+			<item name="CURRICULA_UPDATED" logicalName="curriculaUpdated" type="String"   />
+			<item name="CURRICULA_DUP_INPROGRESS" logicalName="curriculaDupInprogress" type="String"   />
+			<item name="DEFAULT_OPTIONS_IND" logicalName="defaultOptionsInd" type="String"   />
+			<item name="SORLCUR_DEL_IND" logicalName="sorlcurDelInd" type="String"   />
+			<item name="DUP_CREATE_IND" logicalName="dupCreateInd" type="String"   />
+			<item name="SORLFOS_DEL_IND" logicalName="sorlfosDelInd" type="String"   />
+			<item name="HOLD_CURR_RULE" logicalName="holdCurrRule" type="java.math.BigDecimal"   />
+			<item name="HOLD_TERM_CTLG" logicalName="holdTermCtlg" type="String"   />
+			<item name="HOLD_DEPT" logicalName="holdDept" type="String"   />
+			<item name="HOLD_MAJR_RULE" logicalName="holdMajrRule" type="java.math.BigDecimal"   />
+			<item name="SORLCUR_BLOCK_STATUS" logicalName="sorlcurBlockStatus" type="String"   />
+			<item name="CURR_PROGRAM" logicalName="currProgram" type="String"   />
+			<item name="CURR_LEVL_CODE" logicalName="currLevlCode" type="String"   />
+			<item name="CURR_CAMP_CODE" logicalName="currCampCode" type="String"   />
+			<item name="CURR_DEGC_CODE" logicalName="currDegcCode" type="String"   />
+			<item name="CURR_COLL_CODE" logicalName="currCollCode" type="String"   />
+			<item name="CURR_CTLG_TERM" logicalName="currCtlgTerm" type="String"   />
+			<item name="DEFAULT_CACT" logicalName="defaultCact" type="String"   />
+			<item name="DEFAULT_CSTS" logicalName="defaultCsts" type="String"   />
+			<item name="DEFAULT_MAJOR" logicalName="defaultMajor" type="String"   />
+			<item name="DEFAULT_CMJR_RULE" logicalName="defaultCmjrRule" type="java.math.BigDecimal"   />
+			<item name="DEFAULT_DEPT" logicalName="defaultDept" type="String"   />
+			<item name="DEFAULT_LEVEL" logicalName="defaultLevel" type="String"   />
+			<item name="DEFAULT_CAMPUS" logicalName="defaultCampus" type="String"   />
+			<item name="DEFAULT_PROGRAM" logicalName="defaultProgram" type="String"   />
+			<item name="DEFAULT_COLLEGE" logicalName="defaultCollege" type="String"   />
+			<item name="DEFAULT_DEGREE" logicalName="defaultDegree" type="String"   />
+			<item name="DEFAULT_ADMT" logicalName="defaultAdmt" type="String"   />
+			<item name="DEFAULT_CURRIC_TERM_CTLG" logicalName="defaultCurricTermCtlg" type="String"   />
+			<item name="HOST_BLOCK_FIELD" logicalName="hostBlockField" type="String"   />
+			<item name="LCUR_PROCESS" logicalName="lcurProcess" type="String"   />
+			<item name="LCUR_LOV" logicalName="lcurLov" type="String"   />
+			<item name="LCUR_PROGRAM_FIELD" logicalName="lcurProgramField" type="String"   />
+			<item name="LCUR_LEVL_FIELD" logicalName="lcurLevlField" type="String"   />
+			<item name="LCUR_COLL_FIELD" logicalName="lcurCollField" type="String"   />
+			<item name="LCUR_CAMP_FIELD" logicalName="lcurCampField" type="String"   />
+			<item name="LCUR_DEGC_FIELD" logicalName="lcurDegcField" type="String"   />
+			<item name="LCUR_SOBCTRL_CURR_RULE_IND" logicalName="lcurSobctrlCurrRuleInd" type="String"   />
+			<item name="LCUR_ORIGINAL_CURR_IND" logicalName="lcurOriginalCurrInd" type="String"   />
+			<item name="LCUR_TEMP_RULE_IND" logicalName="lcurTempRuleInd" type="String"   />
+			<item name="LCUR_SOBCTRL_PROGRAM_IND" logicalName="lcurSobctrlProgramInd" type="String"   />
+			<item name="LCUR_SOBCTRL_CONC_IND" logicalName="lcurSobctrlConcInd" type="String"   />
+			<item name="LCUR_LEVL_DESC" logicalName="lcurLevlDesc" type="String"   />
+			<item name="LCUR_CAMP_DESC" logicalName="lcurCampDesc" type="String"   />
+			<item name="LCUR_COLL_DESC" logicalName="lcurCollDesc" type="String"   />
+			<item name="LCUR_DEGC_DESC" logicalName="lcurDegcDesc" type="String"   />
+			<item name="LCUR_CHANGE_IND" logicalName="lcurChangeInd" type="String"   />
+			<item name="RETURN_FROM_SORLCUR" logicalName="returnFromSorlcur" type="String"   />
+			<item name="NEXT_BLOCK_SORLFOS" logicalName="nextBlockSorlfos" type="String"   />
+			<item name="SORLFOS_NEXT_BLOCK_NAV" logicalName="sorlfosNextBlockNav" type="String"   />
+			<item name="EXIT_FROM_SORLCUR" logicalName="exitFromSorlcur" type="String"   />
+			<item name="MODULE_KEY_SEQNO" logicalName="moduleKeySeqno" type="java.math.BigDecimal"   />
+			<item name="MODULE_TERM_CODE" logicalName="moduleTermCode" type="String"   />
+			<item name="MODULE_END_TERM" logicalName="moduleEndTerm" type="String"   />
+			<item name="MODULE_CODE" logicalName="moduleCode" type="String"   />
+			<item name="MODULE_DEGS_CODE" logicalName="moduleDegsCode" type="String"   />
+			<item name="MODULE_STST_CODE" logicalName="moduleStstCode" type="String"   />
+			<item name="MODULE_INSERT_WARNING" logicalName="moduleInsertWarning" type="String"   />
+			<item name="MODULE_INSERT_RESTRICTION" logicalName="moduleInsertRestriction" type="String"   />
+			<item name="LCUR_LOCK_IND" logicalName="lcurLockInd" type="String"   />
+			<item name="LCUR_PROGRAM_PROCESS" logicalName="lcurProgramProcess" type="String"   />
+			<item name="LCUR_LEVL_CODE" logicalName="lcurLevlCode" type="String"   />
+			<item name="LCUR_CAMP_CODE" logicalName="lcurCampCode" type="String"   />
+			<item name="LCUR_DEGC_CODE" logicalName="lcurDegcCode" type="String"   />
+			<item name="LCUR_PROGRAM" logicalName="lcurProgram" type="String"   />
+			<item name="LCUR_COLL_CODE" logicalName="lcurCollCode" type="String"   />
+			<item name="LCUR_EFF_TERM" logicalName="lcurEffTerm" type="String"   />
+			<item name="LCUR_CTLG_TERM" logicalName="lcurCtlgTerm" type="String"   />
+			<item name="CHANGE_LEVL_CODE" logicalName="changeLevlCode" type="String"   />
+			<item name="CHANGE_PROGRAM" logicalName="changeProgram" type="String"   />
+			<item name="CHANGE_COLL_CODE" logicalName="changeCollCode" type="String"   />
+			<item name="CHANGE_DEGC_CODE" logicalName="changeDegcCode" type="String"   />
+			<item name="CHANGE_CAMP_CODE" logicalName="changeCampCode" type="String"   />
+			<item name="ERR_NUMBER" logicalName="errNumber" type="java.math.BigDecimal"   />
+			<item name="DELREC_IND" logicalName="delrecInd" type="String"   />
+			<item name="DELETE_INPROGRESS" logicalName="deleteInprogress" type="String"   />
+			<item name="DEFAULTINSERT_INPROGRESS" logicalName="defaultinsertInprogress" type="String"   />
+			<item name="CURRENT_RECORD" logicalName="currentRecord" type="java.math.BigDecimal"   />
+			<item name="NEXT_RECORD" logicalName="nextRecord" type="java.math.BigDecimal"   />
+			<item name="OPT_IND" logicalName="optInd" type="String"   />
+			<item name="MODULE_PIDM" logicalName="modulePidm" type="java.math.BigDecimal"   />
+			<item name="SAVE_ADMIT_TERM" logicalName="saveAdmitTerm" type="String"   />
+			<item name="SAVE_MATRIC_TERM" logicalName="saveMatricTerm" type="String"   />
+			<item name="SAVE_ADMIT_CODE" logicalName="saveAdmitCode" type="String"   />
+			<item name="SAVE_CATLG_TERM" logicalName="saveCatlgTerm" type="String"   />
+			<item name="SAVE_PRIORITY_NO" logicalName="savePriorityNo" type="java.math.BigDecimal"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SCurricula</managerClass>
+
+	</manager>
+</b:beans>

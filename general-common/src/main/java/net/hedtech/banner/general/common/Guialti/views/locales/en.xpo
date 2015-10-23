@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="guvalti.guvaltiSsn.prompt">SSN/SIN/TIN</msg>
+  <msg id="guvalti.guvaltiSsn.hint">SSN/SIN/TIN; Social Security Number, Social Insurance Number or Tax Identification Number.</msg>
+  <msg id="guvalti.guvaltiId.prompt">ID</msg>
+  <msg id="guvalti.guvaltiId.hint">Identification Number.</msg>
+  <msg id="guvalti.guvaltiEntityInd.prompt">Entity</msg>
+  <msg id="guvalti.guvaltiEntityInd.hint">Entity Indicator; values are 'P' for person, 'C' for non-person.</msg>
+  <msg id="guvalti.guvaltiLastName.prompt">Last Name  </msg>
+  <msg id="guvalti.guvaltiLastName.hint">Last Name.</msg>
+  <msg id="guvalti.guvaltiFirstName.prompt">First Name  </msg>
+  <msg id="guvalti.guvaltiFirstName.hint">First Name.</msg>
+  <msg id="guvalti.guvaltiMi.prompt">Middle Name</msg>
+  <msg id="guvalti.guvaltiMi.hint">Middle Name.</msg>
+  <msg id="guvalti.guvaltiShowBirthday.prompt">Birthdate</msg>
+  <msg id="guvalti.guvaltiShowBirthday.hint">Date of Birth. Please enter birth date in format DD-MON-YYYY.</msg>
+  <msg id="guvalti.guvaltiBirthDate.prompt">Birthdate</msg>
+  <msg id="guvalti.guvaltiBirthDate.hint">Date of Birth. Please enter birth date in format DD-MON-YYYY.</msg>
+  <msg id="guvalti.guvaltiChangeInd.prompt">Change</msg>
+  <msg id="guvalti.guvaltiChangeInd.hint">Change Indicator; values are 'N' for name change, 'I' for ID change.</msg>
+  <msg id="buttonControlBlock.caseInsensitiveRg.caseInsensitiveTrue.label">Case Insensitive Query</msg>
+  <msg id="buttonControlBlock.caseInsensitiveRg.caseInsensitiveFalse.label">Case Sensitive Query</msg>
+  <msg id="mainWindow.title">SSN/SIN/TFN Alternate ID Search</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

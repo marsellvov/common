@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="NOBTRAN.Manager.Config" name="nobtran">
+		
+		<items>
+			<item name="NOBTRAN_TRANSACTION_NO" logicalName="nobtranTransactionNo" type="java.math.BigDecimal" physicalName="NOBTRAN_TRANSACTION_NO"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Noqlibr.model.NobtranAdapter</adapterClass>
+
+	</manager>
+</b:beans>

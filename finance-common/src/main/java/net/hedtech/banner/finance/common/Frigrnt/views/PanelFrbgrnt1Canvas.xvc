@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FRBGRNT"/>
+	<panel class="ContentCanvas" id="pnlFrbgrnt1Canvas" menu="G$_DEFAULT_PM" name="FRBGRNT_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel width="100%" label="panel.mainWindow.title">
+				<repeater block="FRBGRNT" name="grdFrbgrnt" width="100%">
+					<panel width="100%">
+						<gridlayout cols="2" orientation="vertical">
+							<gridcell>
+								<textbox autoskip="true" case="upper" label="frbgrnt.frbgrntCode.prompt" maxlength="30" member="FRBGRNT_CODE" name="frbgrntCode" width="100px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+								<textbox autoskip="true" maxlength="70" member="FRBGRNT_TITLE" name="frbgrntTitle" width="300px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" enabled="false" label="frbgrnt.piId.prompt" maxlength="9" member="PI_ID" name="piId" width="100px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+								<textbox autoskip="true" maxlength="70" member="PI_LAST_NAME" name="piLastName" width="150px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+								<textbox autoskip="true" maxlength="70" member="PI_FIRST_NAME" name="piFirstName" width="125px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" enabled="false" label="frbgrnt.agencyId.prompt" maxlength="9" member="AGENCY_ID" name="agencyId" width="125px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+								<textbox autoskip="true" maxlength="30" member="AGENCY_NAME" name="agencyName" width="250px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" enabled="false" formatmask="999G999G999G999G990D99" label="frbgrnt.frbgrntCurrentFundingAmt.prompt" maxlength="25" member="FRBGRNT_CURRENT_FUNDING_AMT" name="frbgrntCurrentFundingAmt" textalign="right" width="200px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" enabled="false" formatmask="999G999G999G999G990D99" label="frbgrnt.frbgrntCumFundingAmt.prompt" maxlength="25" member="FRBGRNT_CUM_FUNDING_AMT" name="frbgrntCumFundingAmt" textalign="right" width="200px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" enabled="false" formatmask="999G999G999G999G990D99" label="frbgrnt.frbgrntMaxFundingAmt.prompt" maxlength="25" member="FRBGRNT_MAX_FUNDING_AMT" name="frbgrntMaxFundingAmt" textalign="right" width="200px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" enabled="false" label="frbgrnt.frbgrntStatusCode.prompt" maxlength="2" member="FRBGRNT_STATUS_CODE" name="frbgrntStatusCode" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+								<textbox autoskip="true" maxlength="70" member="FRBGRNT_STATUS_DESC" name="frbgrntStatusDesc" width="215px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<calendar autoskip="true" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntStatusDate.prompt" maxlength="11" member="FRBGRNT_STATUS_DATE" name="frbgrntStatusDate" width="140px"/>
+							</gridcell>
+							<gridcell>
+								<calendar autoskip="true" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntProjectStartDate.prompt" maxlength="11" member="FRBGRNT_PROJECT_START_DATE" name="frbgrntProjectStartDate" width="140px"/>
+							</gridcell>
+							<gridcell>
+								<calendar autoskip="true" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntProjectEndDate.prompt" maxlength="11" member="FRBGRNT_PROJECT_END_DATE" name="frbgrntProjectEndDate" width="140px"/>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" enabled="false" label="frbgrnt.frbgrntSponsorId.prompt" maxlength="30" member="FRBGRNT_SPONSOR_ID" name="frbgrntSponsorId">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" enabled="false" label="frbgrnt.frbgrntCoasCode.prompt" maxlength="1" member="FRBGRNT_COAS_CODE" name="frbgrntCoasCode" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+								<textbox autoskip="true" case="upper" maxlength="9" member="FRBGRNT_ORGN_CODE_RESP_OFFICE" name="frbgrntOrgnCodeRespOffice" width="150px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+								<textbox autoskip="true" maxlength="35" member="ORGN_DESC" name="orgnDesc" width="200px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+						</gridlayout>
+					</panel>
+				</repeater>
+			</panel>
+		</accordion>
+	</panel>
+</config>

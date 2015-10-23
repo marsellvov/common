@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GJBPRUN"/>
+	<interactionblock name="DUMMY"/>
+	<panel class="ContentCanvas" id="pnlGjbprun1Canvas" menu="G$_DEFAULT_PM" name="GJBPRUN_1_CANVAS" width="100%">
+		<flowlayout orientation="vertical">
+			<textfield block="DUMMY" datatype="String" height="23px" maxlength="255" member="PROCESS_MSG" multiline="true" name="processMsg" textalign="center" width="575px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textfield>
+	
+			<textfield block="GJBPRUN" datatype="String" height="23px" maxlength="30" member="GJBPRUN_DUMMY" name="gjbprunDummy" width="575px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textfield>
+		</flowlayout>
+	</panel>
+	<textbox block="DUMMY" datatype="String" height="23px" maxlength="255" member="PROCESS_STATUS" name="processStatus" textalign="center" visible="false" width="575px">
+		<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+	</textbox>
+	<textbox backgroundcolor="#e0e0e0" block="DUMMY" datatype="String" fontfamily="Wingdings" fontsize="12pt" foregroundcolor="Black" height="23px" maxlength="30" member="PROCESS_IND" name="processInd" textalign="center" visible="false" width="50px">
+		<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+	</textbox>
+</config>

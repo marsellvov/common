@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="G$_NAV_BLOCK"/>
+	<panel class="StackedCanvas" id="pnlGNavCanvas" name="G$_NAV_CANVAS" visible="false" width="100%">
+		<text fontcolor="Black" fontfamily="Verdana" fontsize="9pt" name="text262">gNavCanvas.text262.text</text>
+		<textbox autoskip="true" block="G$_NAV_BLOCK" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" label="gNavBlock.goItem.prompt" maxlength="30" member="GO_ITEM" name="goItem" width="118px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</textbox>
+		<button action="WHEN-BUTTON-PRESSED" block="G$_NAV_BLOCK" height="20px" icon="search" member="GO_ITEM_BTN" name="goItemBtn" navigable="false" tooltip="gNavBlock.goItemBtn.tooltip" width="20px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="G$_NAV_BLOCK" enabled="false" height="23px" member="URL_MY_INSTITUTION" name="urlMyInstitution" width="427px"/>
+	</panel>
+</config>

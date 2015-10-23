@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="G$_EXTENDED_SEARCH_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlGExtendedSearchCanvas" name="G$_EXTENDED_SEARCH_CANVAS" width="100%" >
+		<flowlayout orientation="vertical">
+			<framepanel width="100%" label="gExtendedSearchBlock.personDetailabelBtn.prompt" >
+				<gridlayout cols="2">
+					<gridcell style="empty">
+						<panel>
+							<button action="WHEN-BUTTON-PRESSED" label="gExtendedSearchBlock.idnameExtsearchListBtn.prompt"  icon="ui-icon-folder-open" block="G$_EXTENDED_SEARCH_BLOCK" member="IDNAME_EXTSEARCH_BTN" name="idnameExtsearchBtn"/>	
+						</panel>
+					</gridcell>
+					<gridcell style="empty">
+						<panel>
+							<flowlayout>
+								<textfield block="G$_EXTENDED_SEARCH_BLOCK" height="23px" label="gExtendedSearchBlock.extsearchCount.prompt" maxlength="5" member="EXTSEARCH_COUNT" name="extsearchCount" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</flowlayout>
+						</panel>
+					</gridcell>
+					<gridcell style="empty">
+						<panel>
+							<button action="WHEN-BUTTON-PRESSED" block="G$_EXTENDED_SEARCH_BLOCK" icon="ui-icon-folder-open" label="gExtendedSearchBlock.personDetailBtn.prompt" member="PERSON_DETAIL_BTN" name="personDetailBtn" tooltip="gExtendedSearchBlock.personDetailBtn.tooltip"/>
+						</panel>
+					</gridcell>
+					<gridcell style="empty">
+						<panel>
+							<button action="WHEN-BUTTON-PRESSED" block="G$_EXTENDED_SEARCH_BLOCK" icon="ui-icon-folder-open" label="gExtendedSearchBlock.npersonDetailBtn.prompt" member="NPERSON_DETAIL_BTN" name="npersonDetailBtn" tooltip="gExtendedSearchBlock.npersonDetailBtn.tooltip"/>
+						</panel>
+					</gridcell>
+				</gridlayout>	
+			</framepanel>
+			<framepanel width="100%" style="ui-section" label="gExtendedSearchCanvas.text96.text">
+				<flowlayout orientation="vertical">
+					<gridlayout cols="2" orientation="vertical">
+						<gridcell style="empty">
+							<component label="gExtendedSearchBlock.searchGroup.label">
+								<radiogroup action="WHEN-RADIO-CHANGED" block="G$_EXTENDED_SEARCH_BLOCK"  id="searchGroup" member="SEARCH_GROUP" name="searchGroup" navigable="false">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+									<radiobox group="searchGroup" height="23px" label="gExtendedSearchBlock.searchGroup.person.label" labelalign="start" labelposition="left" name="rb_SearchGroup_Person" value="P" width="72px" />
+									<radiobox group="searchGroup" height="23px" label="gExtendedSearchBlock.searchGroup.nonperson.label" labelalign="start" labelposition="left" name="rb_SearchGroup_Nonperson" value="C" width="104px" />
+									<radiobox group="searchGroup" height="23px" label="gExtendedSearchBlock.searchGroup.both.label" labelalign="start" labelposition="left" name="rb_SearchGroup_Both" value="B" width="56px" />
+								</radiogroup>
+							</component>
+						</gridcell>
+						<gridcell style="empty">
+							<textbox block="G$_EXTENDED_SEARCH_BLOCK" height="23px" label="gExtendedSearchBlock.srSpraddrCity.prompt" maxlength="30" member="SR_SPRADDR_CITY" name="srSpraddrCity" width="160px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+							</textbox>
+						</gridcell>
+						<gridcell style="empty">
+							<textbox autoskip="true" block="G$_EXTENDED_SEARCH_BLOCK" case="upper" style="ui-buttoninput" height="23px" keyactions="NEXT_ITEM" label="gExtendedSearchBlock.srSpraddrStatCode.prompt" maxlength="30" member="SR_SPRADDR_STAT_CODE" name="srSpraddrStatCode" width="88px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="G$_EXTENDED_SEARCH_BLOCK" style="ui-buttoninput" icon="flashlit" member="SR_SPRADDR_STAT_CODE_BTN" name="srSpraddrStatCodeBtn" navigable="false" tooltip="gExtendedSearchBlock.srSpraddrStatCodeBtn.tooltip" width="20px" />
+						</gridcell>
+						<gridcell style="empty">
+							<textbox block="G$_EXTENDED_SEARCH_BLOCK" height="23px" style="ui-buttoninput" label="gExtendedSearchBlock.srSpraddrZip.prompt" maxlength="30" member="SR_SPRADDR_ZIP" name="srSpraddrZip" width="88px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="G$_EXTENDED_SEARCH_BLOCK" style="ui-buttoninput" icon="flashlit" member="SR_SPRADDR_ZIP_BTN" name="srSpraddrZipBtn" navigable="false" tooltip="gExtendedSearchBlock.srSpraddrZipBtn.tooltip" width="23px" />
+						</gridcell>
+						<gridcell style="empty">
+							<textbox autoskip="true" block="G$_EXTENDED_SEARCH_BLOCK" case="upper" style="ui-buttoninput" keyactions="NEXT_ITEM" label="gExtendedSearchBlock.srSpridenNtypCode.prompt" maxlength="30" member="SR_SPRIDEN_NTYP_CODE" name="srSpridenNtypCode" width="88px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="G$_EXTENDED_SEARCH_BLOCK" style="ui-buttoninput" icon="flashlit" member="SR_SPRIDEN_NTYP_CODE_BTN" name="srSpridenNtypCodeBtn" navigable="false" tooltip="gExtendedSearchBlock.srSpridenNtypCodeBtn.tooltip" width="23px" />
+						</gridcell>
+						<gridcell style="empty">
+							<textbox block="G$_EXTENDED_SEARCH_BLOCK" case="upper" height="23px" keyactions="NEXT_ITEM" label="gExtendedSearchBlock.srSpbpersBirthDate.prompt" maxlength="13" member="SR_SPBPERS_BIRTH_DATE" name="srSpbpersBirthDate" width="104px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+							</textbox>
+						</gridcell>
+						<gridcell style="empty">
+							<textbox block="G$_EXTENDED_SEARCH_BLOCK" case="upper" height="23px" keyactions="NEXT_ITEM" label="gExtendedSearchBlock.srSpbpersSex.prompt" maxlength="1" member="SR_SPBPERS_SEX" name="srSpbpersSex" validation="server" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+							</textbox>
+						</gridcell>
+						<gridcell style="empty">
+							<textbox block="G$_EXTENDED_SEARCH_BLOCK" height="23px" label="gExtendedSearchBlock.srSpbpersSsn.prompt" maxlength="30" member="SR_SPBPERS_SSN" name="srSpbpersSsn" width="104px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+							</textbox>
+						</gridcell>
+					</gridlayout>
+				</flowlayout>
+			</framepanel>
+			<panel width="100%">
+				<flowlayout orientation="vertical">
+					<component>
+						<text width="300px">gExtendedSearchCanvas.text103.text</text>
+					<button action="WHEN-BUTTON-PRESSED" block="G$_EXTENDED_SEARCH_BLOCK" icon="ui-icon-arrowrefresh-1-w" member="EXTSEARCH_CLEAR_BTN" name="extsearchClearBtn" tooltip="gExtendedSearchBlock.extsearchClearBtn.tooltip" width="23px"/>
+					</component>
+					<component>
+						<text width="475px">gExtendedSearchCanvas.text100.text</text>
+						<button action="WHEN-BUTTON-PRESSED" block="G$_EXTENDED_SEARCH_BLOCK" icon="ui-icon-search" member="NARROW_SEARCH_BTN" name="narrowSearchBtn" tooltip="gExtendedSearchBlock.narrowSearchBtn.tooltip" width="23px"/>
+					</component>			
+				</flowlayout>
+			</panel>
+		</flowlayout>
+	</panel>
+</config>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Lovs>
+	<Lov Name="GTVADID_LOV"/>
+	<Lov Name="GORRACE_LOV"/>
+	<Lov Name="STVRELT_LOV"/>
+	<Lov Name="GTVEMAL_LOV"/>
+	<Lov Name="STVCITZ_LOV"/>
+	<Lov Name="STVETHN_LOV"/>
+	<Lov Name="STVLGCY_LOV"/>
+	<Lov Name="STVMRTL_LOV"/>
+	<Lov Name="STVRELG_LOV"/>
+</Lovs>
+ 

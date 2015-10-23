@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___CURRICULA_SUMMARY.Manager.Config" name="SCurriculaSummary">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="QUERY_SUMMARY" logicalName="querySummary" type="String"   />
+			<item name="PRIMARY_ROWID" logicalName="primaryRowid" type="String"   />
+			<item name="SECONDARY_ROWID" logicalName="secondaryRowid" type="String"   />
+			<item name="RETURN_FROM_SOVLCUR" logicalName="returnFromSovlcur" type="String"   />
+			<item name="SUMMARY_END_TERM" logicalName="summaryEndTerm" type="String"   />
+			<item name="SUMMARY_KEY_SEQNO" logicalName="summaryKeySeqno" type="java.math.BigDecimal"   />
+			<item name="SUMMARY_TERM_CODE" logicalName="summaryTermCode" type="String"   />
+			<item name="SUMMARY_CODE" logicalName="summaryCode" type="String"   />
+			<item name="SUMMARY_PIDM" logicalName="summaryPidm" type="java.math.BigDecimal"   />
+			<item name="DATA_SEPARATOR_LINE_SOVLCUR_1" logicalName="dataSeparatorLineSovlcur1" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SCurriculaSummary</managerClass>
+
+	</manager>
+</b:beans>

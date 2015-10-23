@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FORM_HEADER"/>
+	<interactionblock name="MESSAGES"/>
+	<panel class="StackedCanvas" id="pnlMessagesCanvas" label="messagesCanvas.text579.text" name="MESSAGES_CANVAS" style="keyblock" width="100%">
+		<textfield block="FORM_HEADER" datatype="String" height="3px" maxlength="30" member="GRAY_DATA_BAR_3" name="grayDataBar3" width="775px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</textfield>
+		<accordion width="100%">
+			<panel>
+				<panel width="100%">
+					<gridview block="MESSAGES" name="grdMessages" width="100%">
+						<viewheader>
+							<viewcolumn block="MESSAGES" datatype="Date" formatmask="DD-MON-YYYY" labelstyle="DEFAULT" maxlength="11" member="GURTKLR_TODO_DATE" name="gurtklrTodoDate" required="true" width="108px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="MESSAGES" datatype="String" labelstyle="DEFAULT" maxlength="180" member="GURTKLR_COMMENT" name="gurtklrComment" required="true" width="637px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+	<panel style="keyblock-button-container">
+		<button accesskey="ALT+PAGE_DOWN" action="NEXT_BLOCK" block="KEY_BLOCK" label="keyBlock.executeBtn.label" member="EXECUTE_BTN" tooltip="keyBlock.executeBtn.tooltip"/>
+		<button accesskey="F5" action="CLEAR-FORM" block="KEY_BLOCK" label="keyBlock.keyClrfrmBtn.label" member="KEY-CLRFRM_BTN" tooltip="keyBlock.keyClrfrmBtn.tooltip" visible="false"/>
+	</panel>
+</config>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="BUTTON_CONTROL_BLOCK.Manager.Config" name="ButtonControlBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CHECK_KEYS" logicalName="checkKeys" type="String"    /> 
+			<item name="STVSBGI_CM_MSG" logicalName="stvsbgiCmMsg" type="String"    /> 
+			<item name="MODE_IND" logicalName="modeInd" type="String"    /> 
+		</items>
+		
+			<managerClass>net.hedtech.banner.student.common.Soisbgi.model.ButtonControlBlock</managerClass>
+
+	</manager>
+</b:beans>

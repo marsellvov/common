@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+	<formModel id="GOQCLIB.Model.Config" name="GOQCLIB">
+		<parameters/>
+		<businessObjects>
+			<businessObject name="SPRIDEN_CURRENT" />
+			<businessObject name="SPRIDEN_PREVIOUS" />
+			<businessObject name="SPRADDR" />
+			<businessObject name="SPRTELE" />
+			<businessObject name="SPBPERS" />
+			<businessObject name="GORPRAC" />
+			<businessObject name="GOREMAL" />
+			<businessObject name="SPREMRG" />
+			<businessObject name="GORADID" />
+		</businessObjects>
+		<valueSets>
+			<valueSet config="GTVADID_RG.ValueSet.Config"/>
+			<valueSet config="GORRACE_RG.ValueSet.Config"/>
+			<valueSet config="GTVZIPC_RG.ValueSet.Config"/>
+			<valueSet config="STVRELT_RG.ValueSet.Config"/>
+			<valueSet config="GTVEMAL_RG.ValueSet.Config"/>
+			<valueSet config="STVCITZ_RG.ValueSet.Config"/>
+			<valueSet config="STVETHN_RG.ValueSet.Config"/>
+			<valueSet config="STVLGCY_RG.ValueSet.Config"/>
+			<valueSet config="STVRELG_RG.ValueSet.Config"/>
+			<valueSet config="STVASRC_RG.ValueSet.Config"/>
+			<valueSet config="STVATYP_RG.ValueSet.Config"/>
+			<valueSet config="STVCNTY_RG.ValueSet.Config"/>
+			<valueSet config="STVNATN_RG.ValueSet.Config"/>
+			<valueSet config="STVSTAT_RG.ValueSet.Config"/>
+			<valueSet config="STVTELE_RG.ValueSet.Config"/>
+			<valueSet config="GTVNTYP_RG.ValueSet.Config"/>
+			<valueSet config="STVMRTL_RG.ValueSet.Config"/>
+		</valueSets>
+	</formModel>
+</b:beans>

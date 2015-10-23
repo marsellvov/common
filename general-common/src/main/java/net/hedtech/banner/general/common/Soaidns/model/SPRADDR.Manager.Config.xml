@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPRADDR.Manager.Config" name="SPRADDR">
+		
+		<items>
+			<item name="SPRADDR_ATYP_CODE" logicalName="spraddrAtypCode" type="String" physicalName="SPRADDR_ATYP_CODE"  />
+			<item name="SPRADDR_STREET_LINE1" logicalName="spraddrStreetLine1" type="String" physicalName="SPRADDR_STREET_LINE1"  />
+			<item name="SPRADDR_CITY" logicalName="spraddrCity" type="String" physicalName="SPRADDR_CITY"  />
+			<item name="SPRADDR_STAT_CODE" logicalName="spraddrStatCode" type="String" physicalName="SPRADDR_STAT_CODE"  />
+			<item name="SPRADDR_ZIP" logicalName="spraddrZip" type="String" physicalName="SPRADDR_ZIP"  />
+			<item name="PHONE_AREA" logicalName="phoneArea" type="String"  virtual="true" />
+			<item name="PHONE_NUMBER" logicalName="phoneNumber" type="String"  virtual="true" />
+			<item name="SPRADDR_FROM_DATE" logicalName="spraddrFromDate" type="java.util.Date" physicalName="SPRADDR_FROM_DATE"  />
+			<item name="SPRADDR_TO_DATE" logicalName="spraddrToDate" type="java.util.Date" physicalName="SPRADDR_TO_DATE"  />
+			<item name="SPRADDR_STATUS_IND" logicalName="spraddrStatusInd" type="String" physicalName="SPRADDR_STATUS_IND"  />
+			<item name="SPRADDR_SEQNO" logicalName="spraddrSeqno" type="java.math.BigDecimal" physicalName="SPRADDR_SEQNO"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Soaidns.model.SpraddrAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE spraddr_pidm = :SPRIDEN_SPRIDEN_PIDM]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[decode(spraddr_status_ind, 'I',-2, decode(to_number(to_char(nvl(spraddr_to_date,
+   GREATEST(nvl(spraddr_from_date+1,sysdate+1),sysdate+1)),'J')) - to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')),0,1, (to_number(to_char(nvl(spraddr_to_date,
+   GREATEST(nvl(spraddr_from_date+1,sysdate+1),sysdate+1)),'J')) - to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')))) / decode(abs(to_number(to_char(nvl(spraddr_to_date,
+   GREATEST(nvl(spraddr_from_date+1,sysdate+1),sysdate+1)),'J')) - to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J'))),0,1, (abs(to_number(to_char(nvl(spraddr_to_date,
+   GREATEST(nvl(spraddr_from_date+1,sysdate+1),sysdate+1)),'J')) - to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')))))) * (decode(to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')) - to_number(to_char(nvl(spraddr_from_date,sysdate-1),'J')),0,1, (to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')) - to_number(to_char(nvl(spraddr_from_date,sysdate-1),'J')))) / decode(abs(to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')) - to_number(to_char(nvl(spraddr_from_date,sysdate-1),'J'))),0,1, (abs(to_number(to_char(
+   GREATEST(nvl(spraddr_from_date,sysdate),sysdate),'J')) - to_number(to_char(nvl(spraddr_from_date,sysdate-1),'J')))))) desc, spraddr_atyp_code, spraddr_to_date desc, spraddr_from_date desc, spraddr_seqno]]></defaultOrderByClause>	
+	<pagination maximumRows="3" enabled="true"/>
+	</manager>
+</b:beans>

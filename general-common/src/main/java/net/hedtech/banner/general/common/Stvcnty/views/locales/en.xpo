@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="stvcnty.stvcntyCode.prompt">Code</msg>
+  <msg id="stvcnty.stvcntyCode.hint">County code.</msg>
+  <msg id="stvcnty.stvcntyDesc.prompt">Description</msg>
+  <msg id="stvcnty.stvcntyDesc.hint">County code description.</msg>
+  <msg id="stvcnty.stvcntyActivityDate.prompt">Activity Date</msg>
+  <msg id="buttonControlBlock.stvcnty1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.stvcnty1SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.stvcnty1ExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.stvcnty1ExitvalueBtn.label">Select</msg>
+  <msg id="mainWindow.title">County  Code Validation Form </msg>
+  <msg id="mainWindow.title2">County  Code Validation </msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

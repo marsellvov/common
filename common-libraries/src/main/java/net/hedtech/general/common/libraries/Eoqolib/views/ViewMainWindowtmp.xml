@@ -1,0 +1,1774 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<WindowVisualView xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="MAIN_WINDOW">
+  <Attributes>
+    <Attr name="Controller.Namespace" value="net.hedtech.general.common.libraries.Eoqolib.controller" />
+    <Attr name="View.ClassName" value="ViewMainWindow" />
+    <Attr name="View.NameSpace" value="net.hedtech.general.common.libraries.Eoqolib.Views" />
+    <Attr name="Controller.ViewNamespace" value="net.hedtech.general.common.libraries.Eoqolib.views" />
+    <Attr name="View.OriginalName" value="MAIN_WINDOW" />
+    <Attr name="View.InstanceName" value="mainWindow" />
+    <Attr name="View.Theme.Path" value="net/hedtech/general/common/libraries/Eoqolib/views/theme/style.css" />
+    <Attr name="Controller.ClassName" value="MainWindowViewController" />
+    <Attr name="Controller.ModelClassName" value="EoqolibModel" />
+    <Attr name="View.MasterPage" value="com/atxsoftware/common/theme/master" />
+    <Attr name="Controller.ModelNamespace" value="net.hedtech.general.common.libraries.Eoqolib.model" />
+    <Attr name="Controller.ViewClassName" value="ViewMainWindow" />
+  </Attributes>
+  <Title>mainWindow.title</Title>
+  <FontSize>8</FontSize>
+  <FontSpacing>4</FontSpacing>
+  <FontStyle>0</FontStyle>
+  <FontWeight>4</FontWeight>
+  <ShowHorizontalScrollBar>false</ShowHorizontalScrollBar>
+  <ShowVerticalScrollBar>false</ShowVerticalScrollBar>
+  <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+  <Visible>false</Visible>
+  <Height>1</Height>
+  <Width>1</Width>
+  <XPosition>0</XPosition>
+  <YPosition>0</YPosition>
+  <Triggers />
+  <Canvases>
+    <ContentCanvasVisualView name="EQQOLIB_1_CANVAS">
+      <Attributes>
+        <Attr name="Controller.ModelClassName" value="EoqolibModel" />
+        <Attr name="View.Path" value="net.hedtech.general.common.libraries.Eoqolib.views" />
+        <Attr name="Controller.Namespace" value="net.hedtech.general.common.libraries.Eoqolib.controller" />
+        <Attr name="View.ClassName" value="PanelEqqolib1Canvas" />
+        <Attr name="Controller.ViewNamespace" value="net.hedtech.general.common.libraries.Eoqolib.views" />
+        <Attr name="Controller.ClassName" value="Eqqolib1CanvasPanelController" />
+        <Attr name="Controller.ModelNamespace" value="net.hedtech.general.common.libraries.Eoqolib.model" />
+        <Attr name="Controller.ViewClassName" value="PanelEqqolib1Canvas" />
+        <Attr name="View.NameSpace" value="net.hedtech.general.common.libraries.Eoqolib.Views" />
+        <Attr name="View.InstanceName" value="pnlEqqolib1Canvas" />
+        <Attr name="View.OriginalName" value="EQQOLIB_1_CANVAS" />
+      </Attributes>
+      <FontSize>8</FontSize>
+      <FontSpacing>4</FontSpacing>
+      <FontStyle>0</FontStyle>
+      <FontWeight>4</FontWeight>
+      <ShowHorizontalScrollBar>false</ShowHorizontalScrollBar>
+      <ShowVerticalScrollBar>false</ShowVerticalScrollBar>
+      <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+      <Visible>true</Visible>
+      <Height>452</Height>
+      <Width>622</Width>
+      <XPosition>0</XPosition>
+      <YPosition>0</YPosition>
+      <Triggers />
+      <Items />
+      <Graphics>
+        <TEXT name="TEXT1" id="7">
+          <Attributes>
+            <Attr name="UIResourceString" value="CODE" />
+            <Attr name="Visual.ForeColor" value="Black" />
+            <Attr name="Visual.FontName" value="Arial" />
+            <Attr name="Visual.PromptForeColor" value="Black" />
+            <Attr name="Visual.PromptFontName" value="Arial" />
+            <Attr name="Visual.PromptFontSize" value="10" />
+            <Attr name="Visual.FontSize" value="10" />
+            <Attr name="Visual.BackColor" value="White" />
+            <Attr name="View.InstanceName" value="text11" />
+          </Attributes>
+          <AllowExpansion>true</AllowExpansion>
+          <AllowMultilinePrompts>true</AllowMultilinePrompts>
+          <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+          <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+          <ArrowStyle>0</ArrowStyle>
+          <BackgroundColor>white</BackgroundColor>
+          <Bevel>2</Bevel>
+          <BoundingBoxScaleable>true</BoundingBoxScaleable>
+          <CapStyle>0</CapStyle>
+          <ClipHeight>0</ClipHeight>
+          <ClipWidth>0</ClipWidth>
+          <ClipXPosition>0</ClipXPosition>
+          <ClipYPosition>0</ClipYPosition>
+          <Closed>true</Closed>
+          <XCornerRadius>0</XCornerRadius>
+          <YCornerRadius>0</YCornerRadius>
+          <CustomSpacing>0</CustomSpacing>
+          <DashStyle>0</DashStyle>
+          <DisplayQuality>0</DisplayQuality>
+          <DistanceBetweenRecords>0</DistanceBetweenRecords>
+          <Dither>true</Dither>
+          <EdgeBackgroundColor>white</EdgeBackgroundColor>
+          <EdgeForegroundColor>white</EdgeForegroundColor>
+          <EdgePattern>solid</EdgePattern>
+          <FillPattern>transparent</FillPattern>
+          <FixedBoundingBox>false</FixedBoundingBox>
+          <FontScaleable>false</FontScaleable>
+          <ForegroundColor>black</ForegroundColor>
+          <FrameAlignment>4</FrameAlignment>
+          <FrameTitleAlignment>3</FrameTitleAlignment>
+          <FrameTitleFontSize>0</FrameTitleFontSize>
+          <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+          <FrameTitleFontStyle>0</FrameTitleFontStyle>
+          <FrameTitleFontWeight>4</FrameTitleFontWeight>
+          <FrameTitleOffset>0</FrameTitleOffset>
+          <FrameTitleSpacing>0</FrameTitleSpacing>
+          <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+          <GraphicsType>6</GraphicsType>
+          <GraFontColor>Black</GraFontColor>
+          <GraFontColorCode>0</GraFontColorCode>
+          <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+          <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+          <GraphicFontSpacing>4</GraphicFontSpacing>
+          <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+          <GraphicFontWeight>3</GraphicFontWeight>
+          <GraphicObjectText>eqqolib1Canvas.text1.text</GraphicObjectText>
+          <Height>16</Height>
+          <HorizontalJustification>0</HorizontalJustification>
+          <HorizontalMargin>5</HorizontalMargin>
+          <HorizontalObjectOffset>9</HorizontalObjectOffset>
+          <HorizontalOrigin>0</HorizontalOrigin>
+          <EndAngle>0</EndAngle>
+          <LineWidth>1</LineWidth>
+          <RotationAngle>0</RotationAngle>
+          <StartAngle>0</StartAngle>
+          <JoinStyle>1</JoinStyle>
+          <Direction>0</Direction>
+          <LayoutStyle>0</LayoutStyle>
+          <LineSpacing>0</LineSpacing>
+          <MaximumObjectsperLine>0</MaximumObjectsperLine>
+          <ParentObjectsModule>NULL</ParentObjectsModule>
+          <ParentObjectsModuleType>12</ParentObjectsModuleType>
+          <ParentObjectName>NULL</ParentObjectName>
+          <ParentObjectsType>0</ParentObjectsType>
+          <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+          <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+          <ScrollBarAlignment>1</ScrollBarAlignment>
+          <ScrollBarWidth>12</ScrollBarWidth>
+          <ShowScrollBar>false</ShowScrollBar>
+          <Shrinkwrap>false</Shrinkwrap>
+          <SingleObjectAlignment>0</SingleObjectAlignment>
+          <StartPromptAlignment>0</StartPromptAlignment>
+          <StartPromptOffset>5</StartPromptOffset>
+          <SubclObjGrp>false</SubclObjGrp>
+          <SubclSubObj>false</SubclSubObj>
+          <TopPromptAlignment>2</TopPromptAlignment>
+          <TopPromptOffset>0</TopPromptOffset>
+          <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+          <UpdateLayout>1</UpdateLayout>
+          <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+          <VerticalFill>true</VerticalFill>
+          <VerticalJustification>0</VerticalJustification>
+          <VerticalMargin>14</VerticalMargin>
+          <VerticalObjectOffset>0</VerticalObjectOffset>
+          <VerticalOrigin>0</VerticalOrigin>
+          <Width>33</Width>
+          <WrapText>true</WrapText>
+          <XPosition>44</XPosition>
+          <YPosition>21</YPosition>
+          <GraphicTextStringID>0</GraphicTextStringID>
+        </TEXT>
+        <TEXT name="TEXT4" id="8">
+          <Attributes>
+            <Attr name="UIResourceString" value="DESCRIPTION" />
+            <Attr name="Visual.ForeColor" value="Black" />
+            <Attr name="Visual.FontName" value="Arial" />
+            <Attr name="Visual.PromptForeColor" value="Black" />
+            <Attr name="Visual.PromptFontName" value="Arial" />
+            <Attr name="Visual.PromptFontSize" value="10" />
+            <Attr name="Visual.FontSize" value="10" />
+            <Attr name="Visual.BackColor" value="White" />
+            <Attr name="View.InstanceName" value="text41" />
+          </Attributes>
+          <AllowExpansion>true</AllowExpansion>
+          <AllowMultilinePrompts>true</AllowMultilinePrompts>
+          <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+          <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+          <ArrowStyle>0</ArrowStyle>
+          <BackgroundColor>white</BackgroundColor>
+          <Bevel>2</Bevel>
+          <BoundingBoxScaleable>true</BoundingBoxScaleable>
+          <CapStyle>0</CapStyle>
+          <ClipHeight>0</ClipHeight>
+          <ClipWidth>0</ClipWidth>
+          <ClipXPosition>0</ClipXPosition>
+          <ClipYPosition>0</ClipYPosition>
+          <Closed>true</Closed>
+          <XCornerRadius>0</XCornerRadius>
+          <YCornerRadius>0</YCornerRadius>
+          <CustomSpacing>0</CustomSpacing>
+          <DashStyle>0</DashStyle>
+          <DisplayQuality>0</DisplayQuality>
+          <DistanceBetweenRecords>0</DistanceBetweenRecords>
+          <Dither>true</Dither>
+          <EdgeBackgroundColor>white</EdgeBackgroundColor>
+          <EdgeForegroundColor>white</EdgeForegroundColor>
+          <EdgePattern>solid</EdgePattern>
+          <FillPattern>transparent</FillPattern>
+          <FixedBoundingBox>false</FixedBoundingBox>
+          <FontScaleable>false</FontScaleable>
+          <ForegroundColor>black</ForegroundColor>
+          <FrameAlignment>4</FrameAlignment>
+          <FrameTitleAlignment>3</FrameTitleAlignment>
+          <FrameTitleFontSize>0</FrameTitleFontSize>
+          <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+          <FrameTitleFontStyle>0</FrameTitleFontStyle>
+          <FrameTitleFontWeight>4</FrameTitleFontWeight>
+          <FrameTitleOffset>0</FrameTitleOffset>
+          <FrameTitleSpacing>0</FrameTitleSpacing>
+          <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+          <GraphicsType>6</GraphicsType>
+          <GraFontColor>Black</GraFontColor>
+          <GraFontColorCode>0</GraFontColorCode>
+          <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+          <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+          <GraphicFontSpacing>4</GraphicFontSpacing>
+          <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+          <GraphicFontWeight>3</GraphicFontWeight>
+          <GraphicObjectText>eqqolib1Canvas.text4.text</GraphicObjectText>
+          <Height>16</Height>
+          <HorizontalJustification>0</HorizontalJustification>
+          <HorizontalMargin>5</HorizontalMargin>
+          <HorizontalObjectOffset>9</HorizontalObjectOffset>
+          <HorizontalOrigin>0</HorizontalOrigin>
+          <EndAngle>0</EndAngle>
+          <LineWidth>1</LineWidth>
+          <RotationAngle>0</RotationAngle>
+          <StartAngle>0</StartAngle>
+          <JoinStyle>1</JoinStyle>
+          <Direction>0</Direction>
+          <LayoutStyle>0</LayoutStyle>
+          <LineSpacing>0</LineSpacing>
+          <MaximumObjectsperLine>0</MaximumObjectsperLine>
+          <ParentObjectsModule>NULL</ParentObjectsModule>
+          <ParentObjectsModuleType>12</ParentObjectsModuleType>
+          <ParentObjectName>NULL</ParentObjectName>
+          <ParentObjectsType>0</ParentObjectsType>
+          <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+          <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+          <ScrollBarAlignment>1</ScrollBarAlignment>
+          <ScrollBarWidth>12</ScrollBarWidth>
+          <ShowScrollBar>false</ShowScrollBar>
+          <Shrinkwrap>false</Shrinkwrap>
+          <SingleObjectAlignment>0</SingleObjectAlignment>
+          <StartPromptAlignment>0</StartPromptAlignment>
+          <StartPromptOffset>5</StartPromptOffset>
+          <SubclObjGrp>false</SubclObjGrp>
+          <SubclSubObj>false</SubclSubObj>
+          <TopPromptAlignment>2</TopPromptAlignment>
+          <TopPromptOffset>0</TopPromptOffset>
+          <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+          <UpdateLayout>1</UpdateLayout>
+          <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+          <VerticalFill>true</VerticalFill>
+          <VerticalJustification>0</VerticalJustification>
+          <VerticalMargin>14</VerticalMargin>
+          <VerticalObjectOffset>0</VerticalObjectOffset>
+          <VerticalOrigin>0</VerticalOrigin>
+          <Width>68</Width>
+          <WrapText>true</WrapText>
+          <XPosition>164</XPosition>
+          <YPosition>19</YPosition>
+          <GraphicTextStringID>0</GraphicTextStringID>
+        </TEXT>
+        <TEXT name="TEXT7" id="9">
+          <Attributes>
+            <Attr name="UIResourceString" value="APPLICATION" />
+            <Attr name="Visual.ForeColor" value="Black" />
+            <Attr name="Visual.FontName" value="Arial" />
+            <Attr name="Visual.PromptForeColor" value="Black" />
+            <Attr name="Visual.PromptFontName" value="Arial" />
+            <Attr name="Visual.PromptFontSize" value="10" />
+            <Attr name="Visual.FontSize" value="10" />
+            <Attr name="Visual.BackColor" value="White" />
+            <Attr name="View.InstanceName" value="text71" />
+          </Attributes>
+          <AllowExpansion>true</AllowExpansion>
+          <AllowMultilinePrompts>true</AllowMultilinePrompts>
+          <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+          <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+          <ArrowStyle>0</ArrowStyle>
+          <BackgroundColor>white</BackgroundColor>
+          <Bevel>2</Bevel>
+          <BoundingBoxScaleable>true</BoundingBoxScaleable>
+          <CapStyle>0</CapStyle>
+          <ClipHeight>0</ClipHeight>
+          <ClipWidth>0</ClipWidth>
+          <ClipXPosition>0</ClipXPosition>
+          <ClipYPosition>0</ClipYPosition>
+          <Closed>true</Closed>
+          <XCornerRadius>0</XCornerRadius>
+          <YCornerRadius>0</YCornerRadius>
+          <CustomSpacing>0</CustomSpacing>
+          <DashStyle>0</DashStyle>
+          <DisplayQuality>0</DisplayQuality>
+          <DistanceBetweenRecords>0</DistanceBetweenRecords>
+          <Dither>true</Dither>
+          <EdgeBackgroundColor>white</EdgeBackgroundColor>
+          <EdgeForegroundColor>white</EdgeForegroundColor>
+          <EdgePattern>solid</EdgePattern>
+          <FillPattern>transparent</FillPattern>
+          <FixedBoundingBox>false</FixedBoundingBox>
+          <FontScaleable>false</FontScaleable>
+          <ForegroundColor>black</ForegroundColor>
+          <FrameAlignment>4</FrameAlignment>
+          <FrameTitleAlignment>3</FrameTitleAlignment>
+          <FrameTitleFontSize>0</FrameTitleFontSize>
+          <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+          <FrameTitleFontStyle>0</FrameTitleFontStyle>
+          <FrameTitleFontWeight>4</FrameTitleFontWeight>
+          <FrameTitleOffset>0</FrameTitleOffset>
+          <FrameTitleSpacing>0</FrameTitleSpacing>
+          <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+          <GraphicsType>6</GraphicsType>
+          <GraFontColor>Black</GraFontColor>
+          <GraFontColorCode>0</GraFontColorCode>
+          <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+          <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+          <GraphicFontSpacing>4</GraphicFontSpacing>
+          <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+          <GraphicFontWeight>3</GraphicFontWeight>
+          <GraphicObjectText>eqqolib1Canvas.text7.text</GraphicObjectText>
+          <Height>13</Height>
+          <HorizontalJustification>0</HorizontalJustification>
+          <HorizontalMargin>5</HorizontalMargin>
+          <HorizontalObjectOffset>9</HorizontalObjectOffset>
+          <HorizontalOrigin>0</HorizontalOrigin>
+          <EndAngle>0</EndAngle>
+          <LineWidth>1</LineWidth>
+          <RotationAngle>0</RotationAngle>
+          <StartAngle>0</StartAngle>
+          <JoinStyle>1</JoinStyle>
+          <Direction>0</Direction>
+          <LayoutStyle>0</LayoutStyle>
+          <LineSpacing>0</LineSpacing>
+          <MaximumObjectsperLine>0</MaximumObjectsperLine>
+          <ParentObjectsModule>NULL</ParentObjectsModule>
+          <ParentObjectsModuleType>12</ParentObjectsModuleType>
+          <ParentObjectName>NULL</ParentObjectName>
+          <ParentObjectsType>0</ParentObjectsType>
+          <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+          <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+          <ScrollBarAlignment>1</ScrollBarAlignment>
+          <ScrollBarWidth>12</ScrollBarWidth>
+          <ShowScrollBar>false</ShowScrollBar>
+          <Shrinkwrap>false</Shrinkwrap>
+          <SingleObjectAlignment>0</SingleObjectAlignment>
+          <StartPromptAlignment>0</StartPromptAlignment>
+          <StartPromptOffset>5</StartPromptOffset>
+          <SubclObjGrp>false</SubclObjGrp>
+          <SubclSubObj>false</SubclSubObj>
+          <TopPromptAlignment>2</TopPromptAlignment>
+          <TopPromptOffset>0</TopPromptOffset>
+          <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+          <UpdateLayout>1</UpdateLayout>
+          <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+          <VerticalFill>true</VerticalFill>
+          <VerticalJustification>0</VerticalJustification>
+          <VerticalMargin>14</VerticalMargin>
+          <VerticalObjectOffset>0</VerticalObjectOffset>
+          <VerticalOrigin>0</VerticalOrigin>
+          <Width>52</Width>
+          <WrapText>true</WrapText>
+          <XPosition>28</XPosition>
+          <YPosition>4</YPosition>
+          <GraphicTextStringID>0</GraphicTextStringID>
+        </TEXT>
+        <TEXT name="TEXT10" id="10">
+          <Attributes>
+            <Attr name="UIResourceString" value="APP___ID" />
+            <Attr name="Visual.ForeColor" value="Black" />
+            <Attr name="Visual.FontName" value="Arial" />
+            <Attr name="Visual.PromptForeColor" value="Black" />
+            <Attr name="Visual.PromptFontName" value="Arial" />
+            <Attr name="Visual.PromptFontSize" value="10" />
+            <Attr name="Visual.FontSize" value="10" />
+            <Attr name="Visual.BackColor" value="White" />
+            <Attr name="View.InstanceName" value="text101" />
+          </Attributes>
+          <AllowExpansion>true</AllowExpansion>
+          <AllowMultilinePrompts>true</AllowMultilinePrompts>
+          <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+          <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+          <ArrowStyle>0</ArrowStyle>
+          <BackgroundColor>white</BackgroundColor>
+          <Bevel>2</Bevel>
+          <BoundingBoxScaleable>true</BoundingBoxScaleable>
+          <CapStyle>0</CapStyle>
+          <ClipHeight>0</ClipHeight>
+          <ClipWidth>0</ClipWidth>
+          <ClipXPosition>0</ClipXPosition>
+          <ClipYPosition>0</ClipYPosition>
+          <Closed>true</Closed>
+          <XCornerRadius>0</XCornerRadius>
+          <YCornerRadius>0</YCornerRadius>
+          <CustomSpacing>0</CustomSpacing>
+          <DashStyle>0</DashStyle>
+          <DisplayQuality>0</DisplayQuality>
+          <DistanceBetweenRecords>0</DistanceBetweenRecords>
+          <Dither>true</Dither>
+          <EdgeBackgroundColor>white</EdgeBackgroundColor>
+          <EdgeForegroundColor>white</EdgeForegroundColor>
+          <EdgePattern>solid</EdgePattern>
+          <FillPattern>transparent</FillPattern>
+          <FixedBoundingBox>false</FixedBoundingBox>
+          <FontScaleable>false</FontScaleable>
+          <ForegroundColor>black</ForegroundColor>
+          <FrameAlignment>4</FrameAlignment>
+          <FrameTitleAlignment>3</FrameTitleAlignment>
+          <FrameTitleFontSize>0</FrameTitleFontSize>
+          <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+          <FrameTitleFontStyle>0</FrameTitleFontStyle>
+          <FrameTitleFontWeight>4</FrameTitleFontWeight>
+          <FrameTitleOffset>0</FrameTitleOffset>
+          <FrameTitleSpacing>0</FrameTitleSpacing>
+          <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+          <GraphicsType>6</GraphicsType>
+          <GraFontColor>Black</GraFontColor>
+          <GraFontColorCode>0</GraFontColorCode>
+          <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+          <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+          <GraphicFontSpacing>4</GraphicFontSpacing>
+          <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+          <GraphicFontWeight>3</GraphicFontWeight>
+          <GraphicObjectText>eqqolib1Canvas.text10.text</GraphicObjectText>
+          <Height>33</Height>
+          <HorizontalJustification>0</HorizontalJustification>
+          <HorizontalMargin>5</HorizontalMargin>
+          <HorizontalObjectOffset>9</HorizontalObjectOffset>
+          <HorizontalOrigin>0</HorizontalOrigin>
+          <EndAngle>0</EndAngle>
+          <LineWidth>1</LineWidth>
+          <RotationAngle>0</RotationAngle>
+          <StartAngle>0</StartAngle>
+          <JoinStyle>1</JoinStyle>
+          <Direction>0</Direction>
+          <LayoutStyle>0</LayoutStyle>
+          <LineSpacing>0</LineSpacing>
+          <MaximumObjectsperLine>0</MaximumObjectsperLine>
+          <ParentObjectsModule>NULL</ParentObjectsModule>
+          <ParentObjectsModuleType>12</ParentObjectsModuleType>
+          <ParentObjectName>NULL</ParentObjectName>
+          <ParentObjectsType>0</ParentObjectsType>
+          <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+          <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+          <ScrollBarAlignment>1</ScrollBarAlignment>
+          <ScrollBarWidth>12</ScrollBarWidth>
+          <ShowScrollBar>false</ShowScrollBar>
+          <Shrinkwrap>false</Shrinkwrap>
+          <SingleObjectAlignment>0</SingleObjectAlignment>
+          <StartPromptAlignment>0</StartPromptAlignment>
+          <StartPromptOffset>5</StartPromptOffset>
+          <SubclObjGrp>false</SubclObjGrp>
+          <SubclSubObj>false</SubclSubObj>
+          <TopPromptAlignment>2</TopPromptAlignment>
+          <TopPromptOffset>0</TopPromptOffset>
+          <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+          <UpdateLayout>1</UpdateLayout>
+          <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+          <VerticalFill>true</VerticalFill>
+          <VerticalJustification>0</VerticalJustification>
+          <VerticalMargin>14</VerticalMargin>
+          <VerticalObjectOffset>0</VerticalObjectOffset>
+          <VerticalOrigin>0</VerticalOrigin>
+          <Width>25</Width>
+          <WrapText>true</WrapText>
+          <XPosition>305</XPosition>
+          <YPosition>4</YPosition>
+          <GraphicTextStringID>0</GraphicTextStringID>
+        </TEXT>
+        <TEXT name="TEXT15" id="11">
+          <Attributes>
+            <Attr name="UIResourceString" value="SYS_IND" />
+            <Attr name="Visual.ForeColor" value="Black" />
+            <Attr name="Visual.FontName" value="Arial" />
+            <Attr name="Visual.PromptForeColor" value="Black" />
+            <Attr name="Visual.PromptFontName" value="Arial" />
+            <Attr name="Visual.PromptFontSize" value="10" />
+            <Attr name="Visual.FontSize" value="10" />
+            <Attr name="Visual.BackColor" value="White" />
+            <Attr name="View.InstanceName" value="text151" />
+          </Attributes>
+          <AllowExpansion>true</AllowExpansion>
+          <AllowMultilinePrompts>true</AllowMultilinePrompts>
+          <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+          <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+          <ArrowStyle>0</ArrowStyle>
+          <BackgroundColor>white</BackgroundColor>
+          <Bevel>2</Bevel>
+          <BoundingBoxScaleable>true</BoundingBoxScaleable>
+          <CapStyle>0</CapStyle>
+          <ClipHeight>0</ClipHeight>
+          <ClipWidth>0</ClipWidth>
+          <ClipXPosition>0</ClipXPosition>
+          <ClipYPosition>0</ClipYPosition>
+          <Closed>true</Closed>
+          <XCornerRadius>0</XCornerRadius>
+          <YCornerRadius>0</YCornerRadius>
+          <CustomSpacing>0</CustomSpacing>
+          <DashStyle>0</DashStyle>
+          <DisplayQuality>0</DisplayQuality>
+          <DistanceBetweenRecords>0</DistanceBetweenRecords>
+          <Dither>true</Dither>
+          <EdgeBackgroundColor>white</EdgeBackgroundColor>
+          <EdgeForegroundColor>white</EdgeForegroundColor>
+          <EdgePattern>solid</EdgePattern>
+          <FillPattern>transparent</FillPattern>
+          <FixedBoundingBox>false</FixedBoundingBox>
+          <FontScaleable>false</FontScaleable>
+          <ForegroundColor>black</ForegroundColor>
+          <FrameAlignment>4</FrameAlignment>
+          <FrameTitleAlignment>3</FrameTitleAlignment>
+          <FrameTitleFontSize>0</FrameTitleFontSize>
+          <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+          <FrameTitleFontStyle>0</FrameTitleFontStyle>
+          <FrameTitleFontWeight>4</FrameTitleFontWeight>
+          <FrameTitleOffset>0</FrameTitleOffset>
+          <FrameTitleSpacing>0</FrameTitleSpacing>
+          <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+          <GraphicsType>6</GraphicsType>
+          <GraFontColor>Black</GraFontColor>
+          <GraFontColorCode>0</GraFontColorCode>
+          <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+          <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+          <GraphicFontSpacing>4</GraphicFontSpacing>
+          <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+          <GraphicFontWeight>3</GraphicFontWeight>
+          <GraphicObjectText>eqqolib1Canvas.text15.text</GraphicObjectText>
+          <Height>33</Height>
+          <HorizontalJustification>0</HorizontalJustification>
+          <HorizontalMargin>5</HorizontalMargin>
+          <HorizontalObjectOffset>9</HorizontalObjectOffset>
+          <HorizontalOrigin>0</HorizontalOrigin>
+          <EndAngle>0</EndAngle>
+          <LineWidth>1</LineWidth>
+          <RotationAngle>0</RotationAngle>
+          <StartAngle>0</StartAngle>
+          <JoinStyle>1</JoinStyle>
+          <Direction>0</Direction>
+          <LayoutStyle>0</LayoutStyle>
+          <LineSpacing>0</LineSpacing>
+          <MaximumObjectsperLine>0</MaximumObjectsperLine>
+          <ParentObjectsModule>NULL</ParentObjectsModule>
+          <ParentObjectsModuleType>12</ParentObjectsModuleType>
+          <ParentObjectName>NULL</ParentObjectName>
+          <ParentObjectsType>0</ParentObjectsType>
+          <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+          <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+          <ScrollBarAlignment>1</ScrollBarAlignment>
+          <ScrollBarWidth>12</ScrollBarWidth>
+          <ShowScrollBar>false</ShowScrollBar>
+          <Shrinkwrap>false</Shrinkwrap>
+          <SingleObjectAlignment>0</SingleObjectAlignment>
+          <StartPromptAlignment>0</StartPromptAlignment>
+          <StartPromptOffset>5</StartPromptOffset>
+          <SubclObjGrp>false</SubclObjGrp>
+          <SubclSubObj>false</SubclSubObj>
+          <TopPromptAlignment>2</TopPromptAlignment>
+          <TopPromptOffset>0</TopPromptOffset>
+          <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+          <UpdateLayout>1</UpdateLayout>
+          <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+          <VerticalFill>true</VerticalFill>
+          <VerticalJustification>0</VerticalJustification>
+          <VerticalMargin>14</VerticalMargin>
+          <VerticalObjectOffset>0</VerticalObjectOffset>
+          <VerticalOrigin>0</VerticalOrigin>
+          <Width>23</Width>
+          <WrapText>true</WrapText>
+          <XPosition>355</XPosition>
+          <YPosition>5</YPosition>
+          <GraphicTextStringID>0</GraphicTextStringID>
+        </TEXT>
+        <TEXT name="TEXT20" id="12">
+          <Attributes>
+            <Attr name="UIResourceString" value="SYSI_CODE" />
+            <Attr name="Visual.ForeColor" value="Black" />
+            <Attr name="Visual.FontName" value="Arial" />
+            <Attr name="Visual.PromptForeColor" value="Black" />
+            <Attr name="Visual.PromptFontName" value="Arial" />
+            <Attr name="Visual.PromptFontSize" value="10" />
+            <Attr name="Visual.FontSize" value="10" />
+            <Attr name="Visual.BackColor" value="White" />
+            <Attr name="View.InstanceName" value="text201" />
+          </Attributes>
+          <AllowExpansion>true</AllowExpansion>
+          <AllowMultilinePrompts>true</AllowMultilinePrompts>
+          <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+          <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+          <ArrowStyle>0</ArrowStyle>
+          <BackgroundColor>white</BackgroundColor>
+          <Bevel>2</Bevel>
+          <BoundingBoxScaleable>true</BoundingBoxScaleable>
+          <CapStyle>0</CapStyle>
+          <ClipHeight>0</ClipHeight>
+          <ClipWidth>0</ClipWidth>
+          <ClipXPosition>0</ClipXPosition>
+          <ClipYPosition>0</ClipYPosition>
+          <Closed>true</Closed>
+          <XCornerRadius>0</XCornerRadius>
+          <YCornerRadius>0</YCornerRadius>
+          <CustomSpacing>0</CustomSpacing>
+          <DashStyle>0</DashStyle>
+          <DisplayQuality>0</DisplayQuality>
+          <DistanceBetweenRecords>0</DistanceBetweenRecords>
+          <Dither>true</Dither>
+          <EdgeBackgroundColor>white</EdgeBackgroundColor>
+          <EdgeForegroundColor>white</EdgeForegroundColor>
+          <EdgePattern>solid</EdgePattern>
+          <FillPattern>transparent</FillPattern>
+          <FixedBoundingBox>false</FixedBoundingBox>
+          <FontScaleable>false</FontScaleable>
+          <ForegroundColor>black</ForegroundColor>
+          <FrameAlignment>4</FrameAlignment>
+          <FrameTitleAlignment>3</FrameTitleAlignment>
+          <FrameTitleFontSize>0</FrameTitleFontSize>
+          <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+          <FrameTitleFontStyle>0</FrameTitleFontStyle>
+          <FrameTitleFontWeight>4</FrameTitleFontWeight>
+          <FrameTitleOffset>0</FrameTitleOffset>
+          <FrameTitleSpacing>0</FrameTitleSpacing>
+          <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+          <GraphicsType>6</GraphicsType>
+          <GraFontColor>Black</GraFontColor>
+          <GraFontColorCode>0</GraFontColorCode>
+          <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+          <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+          <GraphicFontSpacing>4</GraphicFontSpacing>
+          <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+          <GraphicFontWeight>3</GraphicFontWeight>
+          <GraphicObjectText>eqqolib1Canvas.text20.text</GraphicObjectText>
+          <Height>33</Height>
+          <HorizontalJustification>0</HorizontalJustification>
+          <HorizontalMargin>5</HorizontalMargin>
+          <HorizontalObjectOffset>9</HorizontalObjectOffset>
+          <HorizontalOrigin>0</HorizontalOrigin>
+          <EndAngle>0</EndAngle>
+          <LineWidth>1</LineWidth>
+          <RotationAngle>0</RotationAngle>
+          <StartAngle>0</StartAngle>
+          <JoinStyle>1</JoinStyle>
+          <Direction>0</Direction>
+          <LayoutStyle>0</LayoutStyle>
+          <LineSpacing>0</LineSpacing>
+          <MaximumObjectsperLine>0</MaximumObjectsperLine>
+          <ParentObjectsModule>NULL</ParentObjectsModule>
+          <ParentObjectsModuleType>12</ParentObjectsModuleType>
+          <ParentObjectName>NULL</ParentObjectName>
+          <ParentObjectsType>0</ParentObjectsType>
+          <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+          <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+          <ScrollBarAlignment>1</ScrollBarAlignment>
+          <ScrollBarWidth>12</ScrollBarWidth>
+          <ShowScrollBar>false</ShowScrollBar>
+          <Shrinkwrap>false</Shrinkwrap>
+          <SingleObjectAlignment>0</SingleObjectAlignment>
+          <StartPromptAlignment>0</StartPromptAlignment>
+          <StartPromptOffset>5</StartPromptOffset>
+          <SubclObjGrp>false</SubclObjGrp>
+          <SubclSubObj>false</SubclSubObj>
+          <TopPromptAlignment>2</TopPromptAlignment>
+          <TopPromptOffset>0</TopPromptOffset>
+          <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+          <UpdateLayout>1</UpdateLayout>
+          <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+          <VerticalFill>true</VerticalFill>
+          <VerticalJustification>0</VerticalJustification>
+          <VerticalMargin>14</VerticalMargin>
+          <VerticalObjectOffset>0</VerticalObjectOffset>
+          <VerticalOrigin>0</VerticalOrigin>
+          <Width>33</Width>
+          <WrapText>true</WrapText>
+          <XPosition>384</XPosition>
+          <YPosition>5</YPosition>
+          <GraphicTextStringID>0</GraphicTextStringID>
+        </TEXT>
+        <TEXT name="TEXT25" id="13">
+          <Attributes>
+            <Attr name="UIResourceString" value="USER" />
+            <Attr name="Visual.ForeColor" value="Black" />
+            <Attr name="Visual.FontName" value="Arial" />
+            <Attr name="Visual.PromptForeColor" value="Black" />
+            <Attr name="Visual.PromptFontName" value="Arial" />
+            <Attr name="Visual.PromptFontSize" value="10" />
+            <Attr name="Visual.FontSize" value="10" />
+            <Attr name="Visual.BackColor" value="White" />
+            <Attr name="View.InstanceName" value="text251" />
+          </Attributes>
+          <AllowExpansion>true</AllowExpansion>
+          <AllowMultilinePrompts>true</AllowMultilinePrompts>
+          <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+          <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+          <ArrowStyle>0</ArrowStyle>
+          <BackgroundColor>white</BackgroundColor>
+          <Bevel>2</Bevel>
+          <BoundingBoxScaleable>true</BoundingBoxScaleable>
+          <CapStyle>0</CapStyle>
+          <ClipHeight>0</ClipHeight>
+          <ClipWidth>0</ClipWidth>
+          <ClipXPosition>0</ClipXPosition>
+          <ClipYPosition>0</ClipYPosition>
+          <Closed>true</Closed>
+          <XCornerRadius>0</XCornerRadius>
+          <YCornerRadius>0</YCornerRadius>
+          <CustomSpacing>0</CustomSpacing>
+          <DashStyle>0</DashStyle>
+          <DisplayQuality>0</DisplayQuality>
+          <DistanceBetweenRecords>0</DistanceBetweenRecords>
+          <Dither>true</Dither>
+          <EdgeBackgroundColor>white</EdgeBackgroundColor>
+          <EdgeForegroundColor>white</EdgeForegroundColor>
+          <EdgePattern>solid</EdgePattern>
+          <FillPattern>transparent</FillPattern>
+          <FixedBoundingBox>false</FixedBoundingBox>
+          <FontScaleable>false</FontScaleable>
+          <ForegroundColor>black</ForegroundColor>
+          <FrameAlignment>4</FrameAlignment>
+          <FrameTitleAlignment>3</FrameTitleAlignment>
+          <FrameTitleFontSize>0</FrameTitleFontSize>
+          <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+          <FrameTitleFontStyle>0</FrameTitleFontStyle>
+          <FrameTitleFontWeight>4</FrameTitleFontWeight>
+          <FrameTitleOffset>0</FrameTitleOffset>
+          <FrameTitleSpacing>0</FrameTitleSpacing>
+          <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+          <GraphicsType>6</GraphicsType>
+          <GraFontColor>Black</GraFontColor>
+          <GraFontColorCode>0</GraFontColorCode>
+          <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+          <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+          <GraphicFontSpacing>4</GraphicFontSpacing>
+          <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+          <GraphicFontWeight>3</GraphicFontWeight>
+          <GraphicObjectText>eqqolib1Canvas.text25.text</GraphicObjectText>
+          <Height>16</Height>
+          <HorizontalJustification>0</HorizontalJustification>
+          <HorizontalMargin>5</HorizontalMargin>
+          <HorizontalObjectOffset>9</HorizontalObjectOffset>
+          <HorizontalOrigin>0</HorizontalOrigin>
+          <EndAngle>0</EndAngle>
+          <LineWidth>1</LineWidth>
+          <RotationAngle>0</RotationAngle>
+          <StartAngle>0</StartAngle>
+          <JoinStyle>1</JoinStyle>
+          <Direction>0</Direction>
+          <LayoutStyle>0</LayoutStyle>
+          <LineSpacing>0</LineSpacing>
+          <MaximumObjectsperLine>0</MaximumObjectsperLine>
+          <ParentObjectsModule>NULL</ParentObjectsModule>
+          <ParentObjectsModuleType>12</ParentObjectsModuleType>
+          <ParentObjectName>NULL</ParentObjectName>
+          <ParentObjectsType>0</ParentObjectsType>
+          <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+          <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+          <ScrollBarAlignment>1</ScrollBarAlignment>
+          <ScrollBarWidth>12</ScrollBarWidth>
+          <ShowScrollBar>false</ShowScrollBar>
+          <Shrinkwrap>false</Shrinkwrap>
+          <SingleObjectAlignment>0</SingleObjectAlignment>
+          <StartPromptAlignment>0</StartPromptAlignment>
+          <StartPromptOffset>5</StartPromptOffset>
+          <SubclObjGrp>false</SubclObjGrp>
+          <SubclSubObj>false</SubclSubObj>
+          <TopPromptAlignment>2</TopPromptAlignment>
+          <TopPromptOffset>0</TopPromptOffset>
+          <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+          <UpdateLayout>1</UpdateLayout>
+          <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+          <VerticalFill>true</VerticalFill>
+          <VerticalJustification>0</VerticalJustification>
+          <VerticalMargin>14</VerticalMargin>
+          <VerticalObjectOffset>0</VerticalObjectOffset>
+          <VerticalOrigin>0</VerticalOrigin>
+          <Width>29</Width>
+          <WrapText>true</WrapText>
+          <XPosition>452</XPosition>
+          <YPosition>19</YPosition>
+          <GraphicTextStringID>0</GraphicTextStringID>
+        </TEXT>
+        <TEXT name="TEXT28" id="14">
+          <Attributes>
+            <Attr name="UIResourceString" value="ACTIVITY____DATE" />
+            <Attr name="Visual.ForeColor" value="Black" />
+            <Attr name="Visual.FontName" value="Arial" />
+            <Attr name="Visual.PromptForeColor" value="Black" />
+            <Attr name="Visual.PromptFontName" value="Arial" />
+            <Attr name="Visual.PromptFontSize" value="10" />
+            <Attr name="Visual.FontSize" value="10" />
+            <Attr name="Visual.BackColor" value="White" />
+            <Attr name="View.InstanceName" value="text281" />
+          </Attributes>
+          <AllowExpansion>true</AllowExpansion>
+          <AllowMultilinePrompts>true</AllowMultilinePrompts>
+          <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+          <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+          <ArrowStyle>0</ArrowStyle>
+          <BackgroundColor>white</BackgroundColor>
+          <Bevel>2</Bevel>
+          <BoundingBoxScaleable>true</BoundingBoxScaleable>
+          <CapStyle>0</CapStyle>
+          <ClipHeight>0</ClipHeight>
+          <ClipWidth>0</ClipWidth>
+          <ClipXPosition>0</ClipXPosition>
+          <ClipYPosition>0</ClipYPosition>
+          <Closed>true</Closed>
+          <XCornerRadius>0</XCornerRadius>
+          <YCornerRadius>0</YCornerRadius>
+          <CustomSpacing>0</CustomSpacing>
+          <DashStyle>0</DashStyle>
+          <DisplayQuality>0</DisplayQuality>
+          <DistanceBetweenRecords>0</DistanceBetweenRecords>
+          <Dither>true</Dither>
+          <EdgeBackgroundColor>white</EdgeBackgroundColor>
+          <EdgeForegroundColor>white</EdgeForegroundColor>
+          <EdgePattern>solid</EdgePattern>
+          <FillPattern>transparent</FillPattern>
+          <FixedBoundingBox>false</FixedBoundingBox>
+          <FontScaleable>false</FontScaleable>
+          <ForegroundColor>black</ForegroundColor>
+          <FrameAlignment>4</FrameAlignment>
+          <FrameTitleAlignment>3</FrameTitleAlignment>
+          <FrameTitleFontSize>0</FrameTitleFontSize>
+          <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+          <FrameTitleFontStyle>0</FrameTitleFontStyle>
+          <FrameTitleFontWeight>4</FrameTitleFontWeight>
+          <FrameTitleOffset>0</FrameTitleOffset>
+          <FrameTitleSpacing>0</FrameTitleSpacing>
+          <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+          <GraphicsType>6</GraphicsType>
+          <GraFontColor>Black</GraFontColor>
+          <GraFontColorCode>0</GraFontColorCode>
+          <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+          <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+          <GraphicFontSpacing>4</GraphicFontSpacing>
+          <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+          <GraphicFontWeight>3</GraphicFontWeight>
+          <GraphicObjectText>eqqolib1Canvas.text28.text</GraphicObjectText>
+          <Height>33</Height>
+          <HorizontalJustification>0</HorizontalJustification>
+          <HorizontalMargin>5</HorizontalMargin>
+          <HorizontalObjectOffset>9</HorizontalObjectOffset>
+          <HorizontalOrigin>0</HorizontalOrigin>
+          <EndAngle>0</EndAngle>
+          <LineWidth>1</LineWidth>
+          <RotationAngle>0</RotationAngle>
+          <StartAngle>0</StartAngle>
+          <JoinStyle>1</JoinStyle>
+          <Direction>0</Direction>
+          <LayoutStyle>0</LayoutStyle>
+          <LineSpacing>0</LineSpacing>
+          <MaximumObjectsperLine>0</MaximumObjectsperLine>
+          <ParentObjectsModule>NULL</ParentObjectsModule>
+          <ParentObjectsModuleType>12</ParentObjectsModuleType>
+          <ParentObjectName>NULL</ParentObjectName>
+          <ParentObjectsType>0</ParentObjectsType>
+          <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+          <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+          <ScrollBarAlignment>1</ScrollBarAlignment>
+          <ScrollBarWidth>12</ScrollBarWidth>
+          <ShowScrollBar>false</ShowScrollBar>
+          <Shrinkwrap>false</Shrinkwrap>
+          <SingleObjectAlignment>0</SingleObjectAlignment>
+          <StartPromptAlignment>0</StartPromptAlignment>
+          <StartPromptOffset>5</StartPromptOffset>
+          <SubclObjGrp>false</SubclObjGrp>
+          <SubclSubObj>false</SubclSubObj>
+          <TopPromptAlignment>2</TopPromptAlignment>
+          <TopPromptOffset>0</TopPromptOffset>
+          <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+          <UpdateLayout>1</UpdateLayout>
+          <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+          <VerticalFill>true</VerticalFill>
+          <VerticalJustification>0</VerticalJustification>
+          <VerticalMargin>14</VerticalMargin>
+          <VerticalObjectOffset>0</VerticalObjectOffset>
+          <VerticalOrigin>0</VerticalOrigin>
+          <Width>45</Width>
+          <WrapText>true</WrapText>
+          <XPosition>531</XPosition>
+          <YPosition>4</YPosition>
+          <GraphicTextStringID>0</GraphicTextStringID>
+        </TEXT>
+      </Graphics>
+      <PureInherited>false</PureInherited>
+      <PopupMenus />
+      <ListOfValues />
+      <Content name="EQQOLIB_1_CANVAS" id="6">
+        <Attributes>
+          <Attr name="Controller.ModelClassName" value="EoqolibModel" />
+          <Attr name="Controller.ViewNamespace" value="net.hedtech.general.common.libraries.Eoqolib.views" />
+          <Attr name="Controller.ViewClassName" value="PanelEqqolib1Canvas" />
+          <Attr name="Controller.ModelNamespace" value="net.hedtech.general.common.libraries.Eoqolib.model" />
+          <Attr name="Controller.ClassName" value="Eqqolib1CanvasPanelController" />
+          <Attr name="Controller.Namespace" value="net.hedtech.general.common.libraries.Eoqolib.controller" />
+        </Attributes>
+        <Bevel>2</Bevel>
+        <CanvasType>0</CanvasType>
+        <FontSize>8</FontSize>
+        <FontSpacing>4</FontSpacing>
+        <FontStyle>0</FontStyle>
+        <FontWeight>4</FontWeight>
+        <Height>452</Height>
+        <Direction>0</Direction>
+        <ParentObjectsModule>NULL</ParentObjectsModule>
+        <ParentObjectsModuleType>12</ParentObjectsModuleType>
+        <ParentObjectName>NULL</ParentObjectName>
+        <ParentObjectsType>0</ParentObjectsType>
+        <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+        <RaiseonEntry>false</RaiseonEntry>
+        <ShowHorizontalScrollBar>false</ShowHorizontalScrollBar>
+        <ShowVerticalScrollBar>false</ShowVerticalScrollBar>
+        <SubclObjGrp>false</SubclObjGrp>
+        <SubclSubObj>false</SubclSubObj>
+        <ActiveStyle>0</ActiveStyle>
+        <TabAttachmentEdge>0</TabAttachmentEdge>
+        <CornerStyle>0</CornerStyle>
+        <WidthStyle>0</WidthStyle>
+        <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+        <Visible>true</Visible>
+        <ViewportHeight>0</ViewportHeight>
+        <ViewportWidth>0</ViewportWidth>
+        <ViewportXPosition>0</ViewportXPosition>
+        <ViewportXPositiononCanvas>0</ViewportXPositiononCanvas>
+        <ViewportYPosition>0</ViewportYPosition>
+        <ViewportYPositiononCanvas>0</ViewportYPositiononCanvas>
+        <WhiteonBlack>false</WhiteonBlack>
+        <Width>622</Width>
+        <Window>MAIN_WINDOW</Window>
+        <CharacterModeLogicalAttribute />
+        <BoilerplateObjects>
+          <TEXT name="TEXT1" id="7">
+            <Attributes>
+              <Attr name="UIResourceString" value="CODE" />
+              <Attr name="Visual.ForeColor" value="Black" />
+              <Attr name="Visual.FontName" value="Arial" />
+              <Attr name="Visual.PromptForeColor" value="Black" />
+              <Attr name="Visual.PromptFontName" value="Arial" />
+              <Attr name="Visual.PromptFontSize" value="10" />
+              <Attr name="Visual.FontSize" value="10" />
+              <Attr name="Visual.BackColor" value="White" />
+              <Attr name="View.InstanceName" value="text11" />
+            </Attributes>
+            <AllowExpansion>true</AllowExpansion>
+            <AllowMultilinePrompts>true</AllowMultilinePrompts>
+            <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+            <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+            <ArrowStyle>0</ArrowStyle>
+            <BackgroundColor>white</BackgroundColor>
+            <Bevel>2</Bevel>
+            <BoundingBoxScaleable>true</BoundingBoxScaleable>
+            <CapStyle>0</CapStyle>
+            <ClipHeight>0</ClipHeight>
+            <ClipWidth>0</ClipWidth>
+            <ClipXPosition>0</ClipXPosition>
+            <ClipYPosition>0</ClipYPosition>
+            <Closed>true</Closed>
+            <XCornerRadius>0</XCornerRadius>
+            <YCornerRadius>0</YCornerRadius>
+            <CustomSpacing>0</CustomSpacing>
+            <DashStyle>0</DashStyle>
+            <DisplayQuality>0</DisplayQuality>
+            <DistanceBetweenRecords>0</DistanceBetweenRecords>
+            <Dither>true</Dither>
+            <EdgeBackgroundColor>white</EdgeBackgroundColor>
+            <EdgeForegroundColor>white</EdgeForegroundColor>
+            <EdgePattern>solid</EdgePattern>
+            <FillPattern>transparent</FillPattern>
+            <FixedBoundingBox>false</FixedBoundingBox>
+            <FontScaleable>false</FontScaleable>
+            <ForegroundColor>black</ForegroundColor>
+            <FrameAlignment>4</FrameAlignment>
+            <FrameTitleAlignment>3</FrameTitleAlignment>
+            <FrameTitleFontSize>0</FrameTitleFontSize>
+            <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+            <FrameTitleFontStyle>0</FrameTitleFontStyle>
+            <FrameTitleFontWeight>4</FrameTitleFontWeight>
+            <FrameTitleOffset>0</FrameTitleOffset>
+            <FrameTitleSpacing>0</FrameTitleSpacing>
+            <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+            <GraphicsType>6</GraphicsType>
+            <GraFontColor>Black</GraFontColor>
+            <GraFontColorCode>0</GraFontColorCode>
+            <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+            <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+            <GraphicFontSpacing>4</GraphicFontSpacing>
+            <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+            <GraphicFontWeight>3</GraphicFontWeight>
+            <GraphicObjectText>eqqolib1Canvas.text1.text</GraphicObjectText>
+            <Height>16</Height>
+            <HorizontalJustification>0</HorizontalJustification>
+            <HorizontalMargin>5</HorizontalMargin>
+            <HorizontalObjectOffset>9</HorizontalObjectOffset>
+            <HorizontalOrigin>0</HorizontalOrigin>
+            <EndAngle>0</EndAngle>
+            <LineWidth>1</LineWidth>
+            <RotationAngle>0</RotationAngle>
+            <StartAngle>0</StartAngle>
+            <JoinStyle>1</JoinStyle>
+            <Direction>0</Direction>
+            <LayoutStyle>0</LayoutStyle>
+            <LineSpacing>0</LineSpacing>
+            <MaximumObjectsperLine>0</MaximumObjectsperLine>
+            <ParentObjectsModule>NULL</ParentObjectsModule>
+            <ParentObjectsModuleType>12</ParentObjectsModuleType>
+            <ParentObjectName>NULL</ParentObjectName>
+            <ParentObjectsType>0</ParentObjectsType>
+            <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+            <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+            <ScrollBarAlignment>1</ScrollBarAlignment>
+            <ScrollBarWidth>12</ScrollBarWidth>
+            <ShowScrollBar>false</ShowScrollBar>
+            <Shrinkwrap>false</Shrinkwrap>
+            <SingleObjectAlignment>0</SingleObjectAlignment>
+            <StartPromptAlignment>0</StartPromptAlignment>
+            <StartPromptOffset>5</StartPromptOffset>
+            <SubclObjGrp>false</SubclObjGrp>
+            <SubclSubObj>false</SubclSubObj>
+            <TopPromptAlignment>2</TopPromptAlignment>
+            <TopPromptOffset>0</TopPromptOffset>
+            <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+            <UpdateLayout>1</UpdateLayout>
+            <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+            <VerticalFill>true</VerticalFill>
+            <VerticalJustification>0</VerticalJustification>
+            <VerticalMargin>14</VerticalMargin>
+            <VerticalObjectOffset>0</VerticalObjectOffset>
+            <VerticalOrigin>0</VerticalOrigin>
+            <Width>33</Width>
+            <WrapText>true</WrapText>
+            <XPosition>44</XPosition>
+            <YPosition>21</YPosition>
+            <GraphicTextStringID>0</GraphicTextStringID>
+          </TEXT>
+          <TEXT name="TEXT4" id="8">
+            <Attributes>
+              <Attr name="UIResourceString" value="DESCRIPTION" />
+              <Attr name="Visual.ForeColor" value="Black" />
+              <Attr name="Visual.FontName" value="Arial" />
+              <Attr name="Visual.PromptForeColor" value="Black" />
+              <Attr name="Visual.PromptFontName" value="Arial" />
+              <Attr name="Visual.PromptFontSize" value="10" />
+              <Attr name="Visual.FontSize" value="10" />
+              <Attr name="Visual.BackColor" value="White" />
+              <Attr name="View.InstanceName" value="text41" />
+            </Attributes>
+            <AllowExpansion>true</AllowExpansion>
+            <AllowMultilinePrompts>true</AllowMultilinePrompts>
+            <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+            <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+            <ArrowStyle>0</ArrowStyle>
+            <BackgroundColor>white</BackgroundColor>
+            <Bevel>2</Bevel>
+            <BoundingBoxScaleable>true</BoundingBoxScaleable>
+            <CapStyle>0</CapStyle>
+            <ClipHeight>0</ClipHeight>
+            <ClipWidth>0</ClipWidth>
+            <ClipXPosition>0</ClipXPosition>
+            <ClipYPosition>0</ClipYPosition>
+            <Closed>true</Closed>
+            <XCornerRadius>0</XCornerRadius>
+            <YCornerRadius>0</YCornerRadius>
+            <CustomSpacing>0</CustomSpacing>
+            <DashStyle>0</DashStyle>
+            <DisplayQuality>0</DisplayQuality>
+            <DistanceBetweenRecords>0</DistanceBetweenRecords>
+            <Dither>true</Dither>
+            <EdgeBackgroundColor>white</EdgeBackgroundColor>
+            <EdgeForegroundColor>white</EdgeForegroundColor>
+            <EdgePattern>solid</EdgePattern>
+            <FillPattern>transparent</FillPattern>
+            <FixedBoundingBox>false</FixedBoundingBox>
+            <FontScaleable>false</FontScaleable>
+            <ForegroundColor>black</ForegroundColor>
+            <FrameAlignment>4</FrameAlignment>
+            <FrameTitleAlignment>3</FrameTitleAlignment>
+            <FrameTitleFontSize>0</FrameTitleFontSize>
+            <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+            <FrameTitleFontStyle>0</FrameTitleFontStyle>
+            <FrameTitleFontWeight>4</FrameTitleFontWeight>
+            <FrameTitleOffset>0</FrameTitleOffset>
+            <FrameTitleSpacing>0</FrameTitleSpacing>
+            <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+            <GraphicsType>6</GraphicsType>
+            <GraFontColor>Black</GraFontColor>
+            <GraFontColorCode>0</GraFontColorCode>
+            <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+            <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+            <GraphicFontSpacing>4</GraphicFontSpacing>
+            <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+            <GraphicFontWeight>3</GraphicFontWeight>
+            <GraphicObjectText>eqqolib1Canvas.text4.text</GraphicObjectText>
+            <Height>16</Height>
+            <HorizontalJustification>0</HorizontalJustification>
+            <HorizontalMargin>5</HorizontalMargin>
+            <HorizontalObjectOffset>9</HorizontalObjectOffset>
+            <HorizontalOrigin>0</HorizontalOrigin>
+            <EndAngle>0</EndAngle>
+            <LineWidth>1</LineWidth>
+            <RotationAngle>0</RotationAngle>
+            <StartAngle>0</StartAngle>
+            <JoinStyle>1</JoinStyle>
+            <Direction>0</Direction>
+            <LayoutStyle>0</LayoutStyle>
+            <LineSpacing>0</LineSpacing>
+            <MaximumObjectsperLine>0</MaximumObjectsperLine>
+            <ParentObjectsModule>NULL</ParentObjectsModule>
+            <ParentObjectsModuleType>12</ParentObjectsModuleType>
+            <ParentObjectName>NULL</ParentObjectName>
+            <ParentObjectsType>0</ParentObjectsType>
+            <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+            <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+            <ScrollBarAlignment>1</ScrollBarAlignment>
+            <ScrollBarWidth>12</ScrollBarWidth>
+            <ShowScrollBar>false</ShowScrollBar>
+            <Shrinkwrap>false</Shrinkwrap>
+            <SingleObjectAlignment>0</SingleObjectAlignment>
+            <StartPromptAlignment>0</StartPromptAlignment>
+            <StartPromptOffset>5</StartPromptOffset>
+            <SubclObjGrp>false</SubclObjGrp>
+            <SubclSubObj>false</SubclSubObj>
+            <TopPromptAlignment>2</TopPromptAlignment>
+            <TopPromptOffset>0</TopPromptOffset>
+            <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+            <UpdateLayout>1</UpdateLayout>
+            <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+            <VerticalFill>true</VerticalFill>
+            <VerticalJustification>0</VerticalJustification>
+            <VerticalMargin>14</VerticalMargin>
+            <VerticalObjectOffset>0</VerticalObjectOffset>
+            <VerticalOrigin>0</VerticalOrigin>
+            <Width>68</Width>
+            <WrapText>true</WrapText>
+            <XPosition>164</XPosition>
+            <YPosition>19</YPosition>
+            <GraphicTextStringID>0</GraphicTextStringID>
+          </TEXT>
+          <TEXT name="TEXT7" id="9">
+            <Attributes>
+              <Attr name="UIResourceString" value="APPLICATION" />
+              <Attr name="Visual.ForeColor" value="Black" />
+              <Attr name="Visual.FontName" value="Arial" />
+              <Attr name="Visual.PromptForeColor" value="Black" />
+              <Attr name="Visual.PromptFontName" value="Arial" />
+              <Attr name="Visual.PromptFontSize" value="10" />
+              <Attr name="Visual.FontSize" value="10" />
+              <Attr name="Visual.BackColor" value="White" />
+              <Attr name="View.InstanceName" value="text71" />
+            </Attributes>
+            <AllowExpansion>true</AllowExpansion>
+            <AllowMultilinePrompts>true</AllowMultilinePrompts>
+            <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+            <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+            <ArrowStyle>0</ArrowStyle>
+            <BackgroundColor>white</BackgroundColor>
+            <Bevel>2</Bevel>
+            <BoundingBoxScaleable>true</BoundingBoxScaleable>
+            <CapStyle>0</CapStyle>
+            <ClipHeight>0</ClipHeight>
+            <ClipWidth>0</ClipWidth>
+            <ClipXPosition>0</ClipXPosition>
+            <ClipYPosition>0</ClipYPosition>
+            <Closed>true</Closed>
+            <XCornerRadius>0</XCornerRadius>
+            <YCornerRadius>0</YCornerRadius>
+            <CustomSpacing>0</CustomSpacing>
+            <DashStyle>0</DashStyle>
+            <DisplayQuality>0</DisplayQuality>
+            <DistanceBetweenRecords>0</DistanceBetweenRecords>
+            <Dither>true</Dither>
+            <EdgeBackgroundColor>white</EdgeBackgroundColor>
+            <EdgeForegroundColor>white</EdgeForegroundColor>
+            <EdgePattern>solid</EdgePattern>
+            <FillPattern>transparent</FillPattern>
+            <FixedBoundingBox>false</FixedBoundingBox>
+            <FontScaleable>false</FontScaleable>
+            <ForegroundColor>black</ForegroundColor>
+            <FrameAlignment>4</FrameAlignment>
+            <FrameTitleAlignment>3</FrameTitleAlignment>
+            <FrameTitleFontSize>0</FrameTitleFontSize>
+            <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+            <FrameTitleFontStyle>0</FrameTitleFontStyle>
+            <FrameTitleFontWeight>4</FrameTitleFontWeight>
+            <FrameTitleOffset>0</FrameTitleOffset>
+            <FrameTitleSpacing>0</FrameTitleSpacing>
+            <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+            <GraphicsType>6</GraphicsType>
+            <GraFontColor>Black</GraFontColor>
+            <GraFontColorCode>0</GraFontColorCode>
+            <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+            <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+            <GraphicFontSpacing>4</GraphicFontSpacing>
+            <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+            <GraphicFontWeight>3</GraphicFontWeight>
+            <GraphicObjectText>eqqolib1Canvas.text7.text</GraphicObjectText>
+            <Height>13</Height>
+            <HorizontalJustification>0</HorizontalJustification>
+            <HorizontalMargin>5</HorizontalMargin>
+            <HorizontalObjectOffset>9</HorizontalObjectOffset>
+            <HorizontalOrigin>0</HorizontalOrigin>
+            <EndAngle>0</EndAngle>
+            <LineWidth>1</LineWidth>
+            <RotationAngle>0</RotationAngle>
+            <StartAngle>0</StartAngle>
+            <JoinStyle>1</JoinStyle>
+            <Direction>0</Direction>
+            <LayoutStyle>0</LayoutStyle>
+            <LineSpacing>0</LineSpacing>
+            <MaximumObjectsperLine>0</MaximumObjectsperLine>
+            <ParentObjectsModule>NULL</ParentObjectsModule>
+            <ParentObjectsModuleType>12</ParentObjectsModuleType>
+            <ParentObjectName>NULL</ParentObjectName>
+            <ParentObjectsType>0</ParentObjectsType>
+            <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+            <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+            <ScrollBarAlignment>1</ScrollBarAlignment>
+            <ScrollBarWidth>12</ScrollBarWidth>
+            <ShowScrollBar>false</ShowScrollBar>
+            <Shrinkwrap>false</Shrinkwrap>
+            <SingleObjectAlignment>0</SingleObjectAlignment>
+            <StartPromptAlignment>0</StartPromptAlignment>
+            <StartPromptOffset>5</StartPromptOffset>
+            <SubclObjGrp>false</SubclObjGrp>
+            <SubclSubObj>false</SubclSubObj>
+            <TopPromptAlignment>2</TopPromptAlignment>
+            <TopPromptOffset>0</TopPromptOffset>
+            <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+            <UpdateLayout>1</UpdateLayout>
+            <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+            <VerticalFill>true</VerticalFill>
+            <VerticalJustification>0</VerticalJustification>
+            <VerticalMargin>14</VerticalMargin>
+            <VerticalObjectOffset>0</VerticalObjectOffset>
+            <VerticalOrigin>0</VerticalOrigin>
+            <Width>52</Width>
+            <WrapText>true</WrapText>
+            <XPosition>28</XPosition>
+            <YPosition>4</YPosition>
+            <GraphicTextStringID>0</GraphicTextStringID>
+          </TEXT>
+          <TEXT name="TEXT10" id="10">
+            <Attributes>
+              <Attr name="UIResourceString" value="APP___ID" />
+              <Attr name="Visual.ForeColor" value="Black" />
+              <Attr name="Visual.FontName" value="Arial" />
+              <Attr name="Visual.PromptForeColor" value="Black" />
+              <Attr name="Visual.PromptFontName" value="Arial" />
+              <Attr name="Visual.PromptFontSize" value="10" />
+              <Attr name="Visual.FontSize" value="10" />
+              <Attr name="Visual.BackColor" value="White" />
+              <Attr name="View.InstanceName" value="text101" />
+            </Attributes>
+            <AllowExpansion>true</AllowExpansion>
+            <AllowMultilinePrompts>true</AllowMultilinePrompts>
+            <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+            <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+            <ArrowStyle>0</ArrowStyle>
+            <BackgroundColor>white</BackgroundColor>
+            <Bevel>2</Bevel>
+            <BoundingBoxScaleable>true</BoundingBoxScaleable>
+            <CapStyle>0</CapStyle>
+            <ClipHeight>0</ClipHeight>
+            <ClipWidth>0</ClipWidth>
+            <ClipXPosition>0</ClipXPosition>
+            <ClipYPosition>0</ClipYPosition>
+            <Closed>true</Closed>
+            <XCornerRadius>0</XCornerRadius>
+            <YCornerRadius>0</YCornerRadius>
+            <CustomSpacing>0</CustomSpacing>
+            <DashStyle>0</DashStyle>
+            <DisplayQuality>0</DisplayQuality>
+            <DistanceBetweenRecords>0</DistanceBetweenRecords>
+            <Dither>true</Dither>
+            <EdgeBackgroundColor>white</EdgeBackgroundColor>
+            <EdgeForegroundColor>white</EdgeForegroundColor>
+            <EdgePattern>solid</EdgePattern>
+            <FillPattern>transparent</FillPattern>
+            <FixedBoundingBox>false</FixedBoundingBox>
+            <FontScaleable>false</FontScaleable>
+            <ForegroundColor>black</ForegroundColor>
+            <FrameAlignment>4</FrameAlignment>
+            <FrameTitleAlignment>3</FrameTitleAlignment>
+            <FrameTitleFontSize>0</FrameTitleFontSize>
+            <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+            <FrameTitleFontStyle>0</FrameTitleFontStyle>
+            <FrameTitleFontWeight>4</FrameTitleFontWeight>
+            <FrameTitleOffset>0</FrameTitleOffset>
+            <FrameTitleSpacing>0</FrameTitleSpacing>
+            <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+            <GraphicsType>6</GraphicsType>
+            <GraFontColor>Black</GraFontColor>
+            <GraFontColorCode>0</GraFontColorCode>
+            <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+            <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+            <GraphicFontSpacing>4</GraphicFontSpacing>
+            <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+            <GraphicFontWeight>3</GraphicFontWeight>
+            <GraphicObjectText>eqqolib1Canvas.text10.text</GraphicObjectText>
+            <Height>33</Height>
+            <HorizontalJustification>0</HorizontalJustification>
+            <HorizontalMargin>5</HorizontalMargin>
+            <HorizontalObjectOffset>9</HorizontalObjectOffset>
+            <HorizontalOrigin>0</HorizontalOrigin>
+            <EndAngle>0</EndAngle>
+            <LineWidth>1</LineWidth>
+            <RotationAngle>0</RotationAngle>
+            <StartAngle>0</StartAngle>
+            <JoinStyle>1</JoinStyle>
+            <Direction>0</Direction>
+            <LayoutStyle>0</LayoutStyle>
+            <LineSpacing>0</LineSpacing>
+            <MaximumObjectsperLine>0</MaximumObjectsperLine>
+            <ParentObjectsModule>NULL</ParentObjectsModule>
+            <ParentObjectsModuleType>12</ParentObjectsModuleType>
+            <ParentObjectName>NULL</ParentObjectName>
+            <ParentObjectsType>0</ParentObjectsType>
+            <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+            <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+            <ScrollBarAlignment>1</ScrollBarAlignment>
+            <ScrollBarWidth>12</ScrollBarWidth>
+            <ShowScrollBar>false</ShowScrollBar>
+            <Shrinkwrap>false</Shrinkwrap>
+            <SingleObjectAlignment>0</SingleObjectAlignment>
+            <StartPromptAlignment>0</StartPromptAlignment>
+            <StartPromptOffset>5</StartPromptOffset>
+            <SubclObjGrp>false</SubclObjGrp>
+            <SubclSubObj>false</SubclSubObj>
+            <TopPromptAlignment>2</TopPromptAlignment>
+            <TopPromptOffset>0</TopPromptOffset>
+            <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+            <UpdateLayout>1</UpdateLayout>
+            <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+            <VerticalFill>true</VerticalFill>
+            <VerticalJustification>0</VerticalJustification>
+            <VerticalMargin>14</VerticalMargin>
+            <VerticalObjectOffset>0</VerticalObjectOffset>
+            <VerticalOrigin>0</VerticalOrigin>
+            <Width>25</Width>
+            <WrapText>true</WrapText>
+            <XPosition>305</XPosition>
+            <YPosition>4</YPosition>
+            <GraphicTextStringID>0</GraphicTextStringID>
+          </TEXT>
+          <TEXT name="TEXT15" id="11">
+            <Attributes>
+              <Attr name="UIResourceString" value="SYS_IND" />
+              <Attr name="Visual.ForeColor" value="Black" />
+              <Attr name="Visual.FontName" value="Arial" />
+              <Attr name="Visual.PromptForeColor" value="Black" />
+              <Attr name="Visual.PromptFontName" value="Arial" />
+              <Attr name="Visual.PromptFontSize" value="10" />
+              <Attr name="Visual.FontSize" value="10" />
+              <Attr name="Visual.BackColor" value="White" />
+              <Attr name="View.InstanceName" value="text151" />
+            </Attributes>
+            <AllowExpansion>true</AllowExpansion>
+            <AllowMultilinePrompts>true</AllowMultilinePrompts>
+            <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+            <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+            <ArrowStyle>0</ArrowStyle>
+            <BackgroundColor>white</BackgroundColor>
+            <Bevel>2</Bevel>
+            <BoundingBoxScaleable>true</BoundingBoxScaleable>
+            <CapStyle>0</CapStyle>
+            <ClipHeight>0</ClipHeight>
+            <ClipWidth>0</ClipWidth>
+            <ClipXPosition>0</ClipXPosition>
+            <ClipYPosition>0</ClipYPosition>
+            <Closed>true</Closed>
+            <XCornerRadius>0</XCornerRadius>
+            <YCornerRadius>0</YCornerRadius>
+            <CustomSpacing>0</CustomSpacing>
+            <DashStyle>0</DashStyle>
+            <DisplayQuality>0</DisplayQuality>
+            <DistanceBetweenRecords>0</DistanceBetweenRecords>
+            <Dither>true</Dither>
+            <EdgeBackgroundColor>white</EdgeBackgroundColor>
+            <EdgeForegroundColor>white</EdgeForegroundColor>
+            <EdgePattern>solid</EdgePattern>
+            <FillPattern>transparent</FillPattern>
+            <FixedBoundingBox>false</FixedBoundingBox>
+            <FontScaleable>false</FontScaleable>
+            <ForegroundColor>black</ForegroundColor>
+            <FrameAlignment>4</FrameAlignment>
+            <FrameTitleAlignment>3</FrameTitleAlignment>
+            <FrameTitleFontSize>0</FrameTitleFontSize>
+            <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+            <FrameTitleFontStyle>0</FrameTitleFontStyle>
+            <FrameTitleFontWeight>4</FrameTitleFontWeight>
+            <FrameTitleOffset>0</FrameTitleOffset>
+            <FrameTitleSpacing>0</FrameTitleSpacing>
+            <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+            <GraphicsType>6</GraphicsType>
+            <GraFontColor>Black</GraFontColor>
+            <GraFontColorCode>0</GraFontColorCode>
+            <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+            <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+            <GraphicFontSpacing>4</GraphicFontSpacing>
+            <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+            <GraphicFontWeight>3</GraphicFontWeight>
+            <GraphicObjectText>eqqolib1Canvas.text15.text</GraphicObjectText>
+            <Height>33</Height>
+            <HorizontalJustification>0</HorizontalJustification>
+            <HorizontalMargin>5</HorizontalMargin>
+            <HorizontalObjectOffset>9</HorizontalObjectOffset>
+            <HorizontalOrigin>0</HorizontalOrigin>
+            <EndAngle>0</EndAngle>
+            <LineWidth>1</LineWidth>
+            <RotationAngle>0</RotationAngle>
+            <StartAngle>0</StartAngle>
+            <JoinStyle>1</JoinStyle>
+            <Direction>0</Direction>
+            <LayoutStyle>0</LayoutStyle>
+            <LineSpacing>0</LineSpacing>
+            <MaximumObjectsperLine>0</MaximumObjectsperLine>
+            <ParentObjectsModule>NULL</ParentObjectsModule>
+            <ParentObjectsModuleType>12</ParentObjectsModuleType>
+            <ParentObjectName>NULL</ParentObjectName>
+            <ParentObjectsType>0</ParentObjectsType>
+            <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+            <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+            <ScrollBarAlignment>1</ScrollBarAlignment>
+            <ScrollBarWidth>12</ScrollBarWidth>
+            <ShowScrollBar>false</ShowScrollBar>
+            <Shrinkwrap>false</Shrinkwrap>
+            <SingleObjectAlignment>0</SingleObjectAlignment>
+            <StartPromptAlignment>0</StartPromptAlignment>
+            <StartPromptOffset>5</StartPromptOffset>
+            <SubclObjGrp>false</SubclObjGrp>
+            <SubclSubObj>false</SubclSubObj>
+            <TopPromptAlignment>2</TopPromptAlignment>
+            <TopPromptOffset>0</TopPromptOffset>
+            <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+            <UpdateLayout>1</UpdateLayout>
+            <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+            <VerticalFill>true</VerticalFill>
+            <VerticalJustification>0</VerticalJustification>
+            <VerticalMargin>14</VerticalMargin>
+            <VerticalObjectOffset>0</VerticalObjectOffset>
+            <VerticalOrigin>0</VerticalOrigin>
+            <Width>23</Width>
+            <WrapText>true</WrapText>
+            <XPosition>355</XPosition>
+            <YPosition>5</YPosition>
+            <GraphicTextStringID>0</GraphicTextStringID>
+          </TEXT>
+          <TEXT name="TEXT20" id="12">
+            <Attributes>
+              <Attr name="UIResourceString" value="SYSI_CODE" />
+              <Attr name="Visual.ForeColor" value="Black" />
+              <Attr name="Visual.FontName" value="Arial" />
+              <Attr name="Visual.PromptForeColor" value="Black" />
+              <Attr name="Visual.PromptFontName" value="Arial" />
+              <Attr name="Visual.PromptFontSize" value="10" />
+              <Attr name="Visual.FontSize" value="10" />
+              <Attr name="Visual.BackColor" value="White" />
+              <Attr name="View.InstanceName" value="text201" />
+            </Attributes>
+            <AllowExpansion>true</AllowExpansion>
+            <AllowMultilinePrompts>true</AllowMultilinePrompts>
+            <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+            <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+            <ArrowStyle>0</ArrowStyle>
+            <BackgroundColor>white</BackgroundColor>
+            <Bevel>2</Bevel>
+            <BoundingBoxScaleable>true</BoundingBoxScaleable>
+            <CapStyle>0</CapStyle>
+            <ClipHeight>0</ClipHeight>
+            <ClipWidth>0</ClipWidth>
+            <ClipXPosition>0</ClipXPosition>
+            <ClipYPosition>0</ClipYPosition>
+            <Closed>true</Closed>
+            <XCornerRadius>0</XCornerRadius>
+            <YCornerRadius>0</YCornerRadius>
+            <CustomSpacing>0</CustomSpacing>
+            <DashStyle>0</DashStyle>
+            <DisplayQuality>0</DisplayQuality>
+            <DistanceBetweenRecords>0</DistanceBetweenRecords>
+            <Dither>true</Dither>
+            <EdgeBackgroundColor>white</EdgeBackgroundColor>
+            <EdgeForegroundColor>white</EdgeForegroundColor>
+            <EdgePattern>solid</EdgePattern>
+            <FillPattern>transparent</FillPattern>
+            <FixedBoundingBox>false</FixedBoundingBox>
+            <FontScaleable>false</FontScaleable>
+            <ForegroundColor>black</ForegroundColor>
+            <FrameAlignment>4</FrameAlignment>
+            <FrameTitleAlignment>3</FrameTitleAlignment>
+            <FrameTitleFontSize>0</FrameTitleFontSize>
+            <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+            <FrameTitleFontStyle>0</FrameTitleFontStyle>
+            <FrameTitleFontWeight>4</FrameTitleFontWeight>
+            <FrameTitleOffset>0</FrameTitleOffset>
+            <FrameTitleSpacing>0</FrameTitleSpacing>
+            <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+            <GraphicsType>6</GraphicsType>
+            <GraFontColor>Black</GraFontColor>
+            <GraFontColorCode>0</GraFontColorCode>
+            <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+            <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+            <GraphicFontSpacing>4</GraphicFontSpacing>
+            <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+            <GraphicFontWeight>3</GraphicFontWeight>
+            <GraphicObjectText>eqqolib1Canvas.text20.text</GraphicObjectText>
+            <Height>33</Height>
+            <HorizontalJustification>0</HorizontalJustification>
+            <HorizontalMargin>5</HorizontalMargin>
+            <HorizontalObjectOffset>9</HorizontalObjectOffset>
+            <HorizontalOrigin>0</HorizontalOrigin>
+            <EndAngle>0</EndAngle>
+            <LineWidth>1</LineWidth>
+            <RotationAngle>0</RotationAngle>
+            <StartAngle>0</StartAngle>
+            <JoinStyle>1</JoinStyle>
+            <Direction>0</Direction>
+            <LayoutStyle>0</LayoutStyle>
+            <LineSpacing>0</LineSpacing>
+            <MaximumObjectsperLine>0</MaximumObjectsperLine>
+            <ParentObjectsModule>NULL</ParentObjectsModule>
+            <ParentObjectsModuleType>12</ParentObjectsModuleType>
+            <ParentObjectName>NULL</ParentObjectName>
+            <ParentObjectsType>0</ParentObjectsType>
+            <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+            <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+            <ScrollBarAlignment>1</ScrollBarAlignment>
+            <ScrollBarWidth>12</ScrollBarWidth>
+            <ShowScrollBar>false</ShowScrollBar>
+            <Shrinkwrap>false</Shrinkwrap>
+            <SingleObjectAlignment>0</SingleObjectAlignment>
+            <StartPromptAlignment>0</StartPromptAlignment>
+            <StartPromptOffset>5</StartPromptOffset>
+            <SubclObjGrp>false</SubclObjGrp>
+            <SubclSubObj>false</SubclSubObj>
+            <TopPromptAlignment>2</TopPromptAlignment>
+            <TopPromptOffset>0</TopPromptOffset>
+            <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+            <UpdateLayout>1</UpdateLayout>
+            <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+            <VerticalFill>true</VerticalFill>
+            <VerticalJustification>0</VerticalJustification>
+            <VerticalMargin>14</VerticalMargin>
+            <VerticalObjectOffset>0</VerticalObjectOffset>
+            <VerticalOrigin>0</VerticalOrigin>
+            <Width>33</Width>
+            <WrapText>true</WrapText>
+            <XPosition>384</XPosition>
+            <YPosition>5</YPosition>
+            <GraphicTextStringID>0</GraphicTextStringID>
+          </TEXT>
+          <TEXT name="TEXT25" id="13">
+            <Attributes>
+              <Attr name="UIResourceString" value="USER" />
+              <Attr name="Visual.ForeColor" value="Black" />
+              <Attr name="Visual.FontName" value="Arial" />
+              <Attr name="Visual.PromptForeColor" value="Black" />
+              <Attr name="Visual.PromptFontName" value="Arial" />
+              <Attr name="Visual.PromptFontSize" value="10" />
+              <Attr name="Visual.FontSize" value="10" />
+              <Attr name="Visual.BackColor" value="White" />
+              <Attr name="View.InstanceName" value="text251" />
+            </Attributes>
+            <AllowExpansion>true</AllowExpansion>
+            <AllowMultilinePrompts>true</AllowMultilinePrompts>
+            <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+            <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+            <ArrowStyle>0</ArrowStyle>
+            <BackgroundColor>white</BackgroundColor>
+            <Bevel>2</Bevel>
+            <BoundingBoxScaleable>true</BoundingBoxScaleable>
+            <CapStyle>0</CapStyle>
+            <ClipHeight>0</ClipHeight>
+            <ClipWidth>0</ClipWidth>
+            <ClipXPosition>0</ClipXPosition>
+            <ClipYPosition>0</ClipYPosition>
+            <Closed>true</Closed>
+            <XCornerRadius>0</XCornerRadius>
+            <YCornerRadius>0</YCornerRadius>
+            <CustomSpacing>0</CustomSpacing>
+            <DashStyle>0</DashStyle>
+            <DisplayQuality>0</DisplayQuality>
+            <DistanceBetweenRecords>0</DistanceBetweenRecords>
+            <Dither>true</Dither>
+            <EdgeBackgroundColor>white</EdgeBackgroundColor>
+            <EdgeForegroundColor>white</EdgeForegroundColor>
+            <EdgePattern>solid</EdgePattern>
+            <FillPattern>transparent</FillPattern>
+            <FixedBoundingBox>false</FixedBoundingBox>
+            <FontScaleable>false</FontScaleable>
+            <ForegroundColor>black</ForegroundColor>
+            <FrameAlignment>4</FrameAlignment>
+            <FrameTitleAlignment>3</FrameTitleAlignment>
+            <FrameTitleFontSize>0</FrameTitleFontSize>
+            <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+            <FrameTitleFontStyle>0</FrameTitleFontStyle>
+            <FrameTitleFontWeight>4</FrameTitleFontWeight>
+            <FrameTitleOffset>0</FrameTitleOffset>
+            <FrameTitleSpacing>0</FrameTitleSpacing>
+            <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+            <GraphicsType>6</GraphicsType>
+            <GraFontColor>Black</GraFontColor>
+            <GraFontColorCode>0</GraFontColorCode>
+            <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+            <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+            <GraphicFontSpacing>4</GraphicFontSpacing>
+            <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+            <GraphicFontWeight>3</GraphicFontWeight>
+            <GraphicObjectText>eqqolib1Canvas.text25.text</GraphicObjectText>
+            <Height>16</Height>
+            <HorizontalJustification>0</HorizontalJustification>
+            <HorizontalMargin>5</HorizontalMargin>
+            <HorizontalObjectOffset>9</HorizontalObjectOffset>
+            <HorizontalOrigin>0</HorizontalOrigin>
+            <EndAngle>0</EndAngle>
+            <LineWidth>1</LineWidth>
+            <RotationAngle>0</RotationAngle>
+            <StartAngle>0</StartAngle>
+            <JoinStyle>1</JoinStyle>
+            <Direction>0</Direction>
+            <LayoutStyle>0</LayoutStyle>
+            <LineSpacing>0</LineSpacing>
+            <MaximumObjectsperLine>0</MaximumObjectsperLine>
+            <ParentObjectsModule>NULL</ParentObjectsModule>
+            <ParentObjectsModuleType>12</ParentObjectsModuleType>
+            <ParentObjectName>NULL</ParentObjectName>
+            <ParentObjectsType>0</ParentObjectsType>
+            <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+            <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+            <ScrollBarAlignment>1</ScrollBarAlignment>
+            <ScrollBarWidth>12</ScrollBarWidth>
+            <ShowScrollBar>false</ShowScrollBar>
+            <Shrinkwrap>false</Shrinkwrap>
+            <SingleObjectAlignment>0</SingleObjectAlignment>
+            <StartPromptAlignment>0</StartPromptAlignment>
+            <StartPromptOffset>5</StartPromptOffset>
+            <SubclObjGrp>false</SubclObjGrp>
+            <SubclSubObj>false</SubclSubObj>
+            <TopPromptAlignment>2</TopPromptAlignment>
+            <TopPromptOffset>0</TopPromptOffset>
+            <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+            <UpdateLayout>1</UpdateLayout>
+            <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+            <VerticalFill>true</VerticalFill>
+            <VerticalJustification>0</VerticalJustification>
+            <VerticalMargin>14</VerticalMargin>
+            <VerticalObjectOffset>0</VerticalObjectOffset>
+            <VerticalOrigin>0</VerticalOrigin>
+            <Width>29</Width>
+            <WrapText>true</WrapText>
+            <XPosition>452</XPosition>
+            <YPosition>19</YPosition>
+            <GraphicTextStringID>0</GraphicTextStringID>
+          </TEXT>
+          <TEXT name="TEXT28" id="14">
+            <Attributes>
+              <Attr name="UIResourceString" value="ACTIVITY____DATE" />
+              <Attr name="Visual.ForeColor" value="Black" />
+              <Attr name="Visual.FontName" value="Arial" />
+              <Attr name="Visual.PromptForeColor" value="Black" />
+              <Attr name="Visual.PromptFontName" value="Arial" />
+              <Attr name="Visual.PromptFontSize" value="10" />
+              <Attr name="Visual.FontSize" value="10" />
+              <Attr name="Visual.BackColor" value="White" />
+              <Attr name="View.InstanceName" value="text281" />
+            </Attributes>
+            <AllowExpansion>true</AllowExpansion>
+            <AllowMultilinePrompts>true</AllowMultilinePrompts>
+            <AllowStartAttachedPrompts>false</AllowStartAttachedPrompts>
+            <AllowTopAttachedPrompts>false</AllowTopAttachedPrompts>
+            <ArrowStyle>0</ArrowStyle>
+            <BackgroundColor>white</BackgroundColor>
+            <Bevel>2</Bevel>
+            <BoundingBoxScaleable>true</BoundingBoxScaleable>
+            <CapStyle>0</CapStyle>
+            <ClipHeight>0</ClipHeight>
+            <ClipWidth>0</ClipWidth>
+            <ClipXPosition>0</ClipXPosition>
+            <ClipYPosition>0</ClipYPosition>
+            <Closed>true</Closed>
+            <XCornerRadius>0</XCornerRadius>
+            <YCornerRadius>0</YCornerRadius>
+            <CustomSpacing>0</CustomSpacing>
+            <DashStyle>0</DashStyle>
+            <DisplayQuality>0</DisplayQuality>
+            <DistanceBetweenRecords>0</DistanceBetweenRecords>
+            <Dither>true</Dither>
+            <EdgeBackgroundColor>white</EdgeBackgroundColor>
+            <EdgeForegroundColor>white</EdgeForegroundColor>
+            <EdgePattern>solid</EdgePattern>
+            <FillPattern>transparent</FillPattern>
+            <FixedBoundingBox>false</FixedBoundingBox>
+            <FontScaleable>false</FontScaleable>
+            <ForegroundColor>black</ForegroundColor>
+            <FrameAlignment>4</FrameAlignment>
+            <FrameTitleAlignment>3</FrameTitleAlignment>
+            <FrameTitleFontSize>0</FrameTitleFontSize>
+            <FrameTitleFontSpacing>4</FrameTitleFontSpacing>
+            <FrameTitleFontStyle>0</FrameTitleFontStyle>
+            <FrameTitleFontWeight>4</FrameTitleFontWeight>
+            <FrameTitleOffset>0</FrameTitleOffset>
+            <FrameTitleSpacing>0</FrameTitleSpacing>
+            <FrameTitleVisualAttributeGroup>DEFAULT</FrameTitleVisualAttributeGroup>
+            <GraphicsType>6</GraphicsType>
+            <GraFontColor>Black</GraFontColor>
+            <GraFontColorCode>0</GraFontColorCode>
+            <GraphicObjectFontName>MS Sans Serif</GraphicObjectFontName>
+            <GraphicObjectFontSize>1000</GraphicObjectFontSize>
+            <GraphicFontSpacing>4</GraphicFontSpacing>
+            <GraphicObjectFontStyle>0</GraphicObjectFontStyle>
+            <GraphicFontWeight>3</GraphicFontWeight>
+            <GraphicObjectText>eqqolib1Canvas.text28.text</GraphicObjectText>
+            <Height>33</Height>
+            <HorizontalJustification>0</HorizontalJustification>
+            <HorizontalMargin>5</HorizontalMargin>
+            <HorizontalObjectOffset>9</HorizontalObjectOffset>
+            <HorizontalOrigin>0</HorizontalOrigin>
+            <EndAngle>0</EndAngle>
+            <LineWidth>1</LineWidth>
+            <RotationAngle>0</RotationAngle>
+            <StartAngle>0</StartAngle>
+            <JoinStyle>1</JoinStyle>
+            <Direction>0</Direction>
+            <LayoutStyle>0</LayoutStyle>
+            <LineSpacing>0</LineSpacing>
+            <MaximumObjectsperLine>0</MaximumObjectsperLine>
+            <ParentObjectsModule>NULL</ParentObjectsModule>
+            <ParentObjectsModuleType>12</ParentObjectsModuleType>
+            <ParentObjectName>NULL</ParentObjectName>
+            <ParentObjectsType>0</ParentObjectsType>
+            <PersistentClientInfoStorageLength>0</PersistentClientInfoStorageLength>
+            <NumberofRecordsDisplayed>1</NumberofRecordsDisplayed>
+            <ScrollBarAlignment>1</ScrollBarAlignment>
+            <ScrollBarWidth>12</ScrollBarWidth>
+            <ShowScrollBar>false</ShowScrollBar>
+            <Shrinkwrap>false</Shrinkwrap>
+            <SingleObjectAlignment>0</SingleObjectAlignment>
+            <StartPromptAlignment>0</StartPromptAlignment>
+            <StartPromptOffset>5</StartPromptOffset>
+            <SubclObjGrp>false</SubclObjGrp>
+            <SubclSubObj>false</SubclSubObj>
+            <TopPromptAlignment>2</TopPromptAlignment>
+            <TopPromptOffset>0</TopPromptOffset>
+            <FrameTitleReadingOrder>0</FrameTitleReadingOrder>
+            <UpdateLayout>1</UpdateLayout>
+            <VisualAttributeGroup>DEFAULT</VisualAttributeGroup>
+            <VerticalFill>true</VerticalFill>
+            <VerticalJustification>0</VerticalJustification>
+            <VerticalMargin>14</VerticalMargin>
+            <VerticalObjectOffset>0</VerticalObjectOffset>
+            <VerticalOrigin>0</VerticalOrigin>
+            <Width>45</Width>
+            <WrapText>true</WrapText>
+            <XPosition>531</XPosition>
+            <YPosition>4</YPosition>
+            <GraphicTextStringID>0</GraphicTextStringID>
+          </TEXT>
+        </BoilerplateObjects>
+      </Content>
+    </ContentCanvasVisualView>
+  </Canvases>
+  <PopupMenus />
+  <Extensions>
+    <ItemExtension name="MAIN_WINDOW_Extension" interactionBlockID="" DataSource="" DataMember="" DataType="" FormatMask="" MaximumLength="0" extendedItem="mainWindow" itemName="MAIN_WINDOW" extensionType="window" needsExtension="true" required="false" block="EOQOLIB">
+      <Attributes>
+        <Attr name="View.InstanceName" value="mainWindowExtension" />
+      </Attributes>
+    </ItemExtension>
+    <ItemExtension name="EQQOLIB_1_CANVAS_Extension" interactionBlockID="" DataSource="" DataMember="" DataType="" FormatMask="" MaximumLength="0" extendedItem="pnlEqqolib1Canvas" itemName="EQQOLIB_1_CANVAS" extensionType="panel" needsExtension="true" required="false" block="EOQOLIB">
+      <Attributes>
+        <Attr name="View.InstanceName" value="pnlEqqolib1CanvasExtension" />
+      </Attributes>
+    </ItemExtension>
+  </Extensions>
+</WindowVisualView>

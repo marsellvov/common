@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	
+	
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/general/common/Stvstat/model/STVSTAT.Model.Config.xml"/>
+	
+	<task id="STVSTAT.Task.Config" name="STVSTAT">
+		<baseTaskConfiguration config="BASE.Task.Config"/>
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.general.common.Stvstat.StvstatTask</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/general/common/Stvstat/StvstatStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.general.common.Stvstat.services.StvstatServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="STVSTAT.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.banner.general.common.Stvstat.controller.StvstatFormController</formController>
+		<blockControllers>
+			
+			
+			<block  name="G$_VPDI_BLOCK">net.hedtech.banner.general.common.Stvstat.controller.GVpdiBlockController</block>
+			<block  name="G$_NAV_BLOCK">net.hedtech.banner.general.common.Stvstat.controller.GNavBlockController</block>
+			<block  name="FORM_HEADER">net.hedtech.banner.general.common.Stvstat.controller.FormHeaderController</block>
+			<block  name="STVSTAT">net.hedtech.banner.general.common.Stvstat.controller.StvstatController</block>
+			<block  name="BUTTON_CONTROL_BLOCK">net.hedtech.banner.general.common.Stvstat.controller.ButtonControlBlockController</block>
+		</blockControllers>
+		<menuControllers>
+			<menu  name="G$_DEFAULT_PM">net.hedtech.banner.general.common.Stvstat.controller.GDefaultPmContextController</menu>
+		</menuControllers>
+
+	</task>
+</b:beans>
+
+ 

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FORM_HEADER"/>
+	<interactionblock name="SPRADDR"/>
+	<interactionblock name="KEY_BLOCK"/>
+	<panel class="StackedCanvas" id="pnlSpraddr1Canvas" menu="G$_DEFAULT_PM" name="SPRADDR_1_CANVAS" width="100%">
+		<collapsiblepanel label="mainWindow.title" name="rect46" width="100%">
+			<panel width="100%">
+				<repeater block="SPRADDR" name="grdSpraddr" width="100%">
+					<panel width="100%">
+						<gridlayout cols="2" orientation="vertical" >
+							<gridcell>
+								<textbox autoskip="true" style="ui-buttoninput"  case="upper"  datatype="String" keyactions="NEXT_ITEM" label="spraddr.spraddrAtypCode.prompt" labelstyle="DEFAULT" maxlength="30" member="SPRADDR_ATYP_CODE" name="spraddrAtypCode" width="80px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button  style="ui-buttoninput" icon="search" labelstyle="DEFAULT" maxlength="30" member="SPRADDR_ATYP_CODE_LBT" name="spraddrAtypCodeLbt" navigable="false" tooltip="spraddr.spraddrAtypCodeLbt.tooltip" width="80px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+							</gridcell>
+							<gridcell>
+								<textbox  datatype="Number" enabled="false" label="spraddr.spraddrSeqno.prompt" labelstyle="DEFAULT" maxlength="2" member="SPRADDR_SEQNO" name="spraddrSeqno" textalign="right" width="80px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" style="ui-buttoninput"  case="upper" datatype="String" keyactions="NEXT_ITEM" label="spraddr.spraddrAsrcCode.prompt" labelstyle="DEFAULT" maxlength="30" member="SPRADDR_ASRC_CODE" name="spraddrAsrcCode" width="80px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button  style="ui-buttoninput" icon="search" labelstyle="DEFAULT" maxlength="30" member="SPRADDR_ASRC_CODE_LBT" name="spraddrAsrcCodeLbt" navigable="false" tooltip="spraddr.spraddrAsrcCodeLbt.tooltip" width="80px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+							</gridcell>
+							<gridcell>
+								<textbox  datatype="String" label="spraddr.spraddrHouseNumber.prompt" labelstyle="DEFAULT" maxlength="10" member="SPRADDR_HOUSE_NUMBER" name="spraddrHouseNumber" width="128px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox  datatype="String" label="spraddr.spraddrStreetLine1.prompt" labelstyle="DEFAULT" maxlength="75" member="SPRADDR_STREET_LINE1" name="spraddrStreetLine1" width="342px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox  datatype="String" label="spraddr.spraddrStreetLine2.prompt" labelstyle="DEFAULT" maxlength="75" member="SPRADDR_STREET_LINE2" name="spraddrStreetLine2" width="342px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox  datatype="String" label="spraddr.spraddrStreetLine3.prompt" labelstyle="DEFAULT" maxlength="75" member="SPRADDR_STREET_LINE3" name="spraddrStreetLine3" width="342px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox  datatype="String" label="spraddr.spraddrStreetLine4.prompt" labelstyle="DEFAULT" maxlength="75" member="SPRADDR_STREET_LINE4" name="spraddrStreetLine4" width="342px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox  datatype="String" label="spraddr.spraddrCity.prompt" labelstyle="DEFAULT" maxlength="50" member="SPRADDR_CITY" name="spraddrCity" width="160px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox  case="upper" datatype="String" label="spraddr.spraddrStatCode.prompt" labelstyle="DEFAULT" maxlength="3" member="SPRADDR_STAT_CODE" name="spraddrStatCode" width="80px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox  case="upper" datatype="String" label="spraddr.spraddrNatnCode.prompt" labelstyle="DEFAULT" maxlength="5" member="SPRADDR_NATN_CODE" name="spraddrNatnCode" width="80px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<textbox  datatype="String" labelstyle="DEFAULT" maxlength="30" member="NATN_DESC" name="natnDesc" width="225px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox  datatype="String" label="spraddr.spraddrZip.prompt" labelstyle="DEFAULT" maxlength="30" member="SPRADDR_ZIP" name="spraddrZip" width="150px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<checkbox  enabled="false" label="spraddr.spraddrStatusInd.label" labelstyle="DEFAULT" maxlength="1" member="SPRADDR_STATUS_IND" name="spraddrStatusInd" othervaluestate="unchecked" value="I" width="84px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</checkbox>
+							</gridcell>
+							<gridcell>
+								<calendar  datatype="Date" case="upper" formatmask="DD-MON-YYYY" label="spraddr.spraddrToDate.prompt" labelstyle="DEFAULT" maxlength="11" member="SPRADDR_TO_DATE" name="spraddrToDate" width="120px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</calendar>
+							</gridcell>
+							<gridcell>
+								<calendar  datatype="Date" case="upper" formatmask="DD-MON-YYYY" label="spraddr.spraddrFromDate.prompt" labelstyle="DEFAULT" maxlength="11" member="SPRADDR_FROM_DATE" name="spraddrFromDate" width="120px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</calendar>
+							</gridcell>
+						</gridlayout>
+					</panel>
+				</repeater>
+			</panel>
+		</collapsiblepanel>
+	</panel>
+</config>

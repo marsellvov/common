@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="G___SDKEY.Manager.Config" name="GSdkey">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="SD_BLOCK" logicalName="sdBlock" type="String"   />
+			<item name="SD_DISPBLOCK" logicalName="sdDispblock" type="String"   />
+			<item name="SD_BANTAB" logicalName="sdBantab" type="String"   />
+			<item name="SD_KEY" logicalName="sdKey" type="String"   />
+			<item name="SD_ROWID" logicalName="sdRowid" type="String"   />
+			<item name="SD_DISPROWID" logicalName="sdDisprowid" type="String"   />
+			<item name="SD_EXISTS" logicalName="sdExists" type="String"   />
+			<item name="ENABLE_ATTR_INS" logicalName="enableAttrIns" type="String"   >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+			<item name="TRIG_ENA" logicalName="trigEna" type="String"   >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+			<item name="RENUM_SD_REC" logicalName="renumSdRec" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="COUNT_NOT_NULL" logicalName="countNotNull" type="java.math.BigDecimal"   >
+				<value>
+					<summary function="COUNT"/>
+				</value>
+			</item>
+			<item name="COUNT_REQD_IS_NULL" logicalName="countReqdIsNull" type="java.math.BigDecimal"   >
+				<value>
+					<summary function="COUNT"/>
+				</value>
+			</item>
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Goqolib.model.GSdkey</managerClass>
+
+	</manager>
+</b:beans>

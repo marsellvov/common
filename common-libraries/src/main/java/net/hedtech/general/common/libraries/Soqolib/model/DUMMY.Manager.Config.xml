@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="DUMMY.Manager.Config" name="Dummy">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CHECK_KEYS" logicalName="checkKeys" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="SGBSTDN_ADVR_ID" logicalName="sgbstdnAdvrId" type="String"   />
+			<item name="SGBSTDN_ADVR_NAME" logicalName="sgbstdnAdvrName" type="String"   />
+			<item name="SGBSTDN_ADVR_CODE" logicalName="sgbstdnAdvrCode" type="String"   />
+			<item name="SGBSTDN_PIDM" logicalName="sgbstdnPidm" type="java.math.BigDecimal"   />
+			<item name="SGBSTDN_TERM_CODE_EFF" logicalName="sgbstdnTermCodeEff" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.Dummy</managerClass>
+
+	</manager>
+</b:beans>

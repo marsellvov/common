@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas:morphis:frames:messages">
+  <msg id="formHeader.exitBtn.label">Exit</msg>
+  <msg id="popUp.title">Personal Image</msg>
+</messages>

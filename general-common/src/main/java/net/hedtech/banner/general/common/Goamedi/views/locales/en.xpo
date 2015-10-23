@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="keyBlock.id.prompt">ID</msg>
+  <msg id="keyBlock.id.hint">ID number; press LIST for person name/ID search.</msg>
+  <msg id="keyBlock._name.hint">Name; Enter a name Last, First, Middle and press enter or tab. Use the wildcard "%" if needed.</msg>
+  <msg id="sprmedi.sprmediSpsrCodeLbt.tooltip">Search</msg>
+  <msg id="sprmedi.sprmediMediCodeLbt.tooltip">Search</msg>
+  <msg id="sprmedi.sprmediMediCode.prompt">Medical Code</msg>
+  <msg id="sprmedi.sprmediMediCode.hint">Medical Code; press LIST for valid codes.</msg>
+  <msg id="sprmedi.holdMediCode.prompt">Medical Code</msg>
+  <msg id="sprmedi.holdMediCode.hint">Medical Code; press LIST for valid codes.</msg>
+  <msg id="sprmedi.mediDescription.hint">G$_DESC_ITEM</msg>
+  <msg id="sprmedi.sprmediMediCodeDate.prompt">Medical Date</msg>
+  <msg id="sprmedi.sprmediMediCodeDate.hint">Medical Date; format ('DD-MON-YYYY')</msg>
+  <msg id="sprmedi.sprmediMediCodeDateDbt.label">Calendar</msg>
+  <msg id="sprmedi.sprmediMediCodeDateDbt.tooltip">Calendar</msg>
+  <msg id="sprmedi.sprmediDisaCode.prompt">Disability Type</msg>
+  <msg id="sprmedi.sprmediDisaCode.hint">Disability Type Code; press LIST for valid codes.</msg>
+  <msg id="sprmedi.disaDescription.hint">G$_DESC_ITEM</msg>
+  <msg id="sprmedi.sprmediOnsetAge.prompt">Disability Onset Age</msg>
+  <msg id="sprmedi.sprmediOnsetAge.hint">Onset Age; free format number denoting the age at which the disability occurred.</msg>
+  <msg id="sprmedi.sprmediDisbInd.label">Primary Disability</msg>
+  <msg id="sprmedi.sprmediDisbInd.hint">Primary Disability Indicator; Checked = Y, Unchecked = N.</msg>
+  <msg id="sprmedi.sprmediMdeqCode.prompt">Equipment Code</msg>
+  <msg id="sprmedi.sprmediMdeqCode.hint">Equipment Code; press LIST for valid codes.</msg>
+  <msg id="sprmedi.mdeqDescription.hint">G$_DESC_ITEM</msg>
+  <msg id="sprmedi.sprmediSpsrCode.prompt">Disability Service</msg>
+  <msg id="sprmedi.sprmediSpsrCode.hint">Disability Service Code; press LIST for valid codes.</msg>
+  <msg id="sprmedi.spsrDescription.hint">G$_DESC_ITEM</msg>
+  <msg id="sprmedi.sprmediComment.prompt">Comment</msg>
+  <msg id="sprmedi.sprmediComment.hint">Medical Comment Text.  Maximum 3600 characters.  Press EDIT to view or edit Comment in separate window.</msg>
+  <msg id="sprmedi.sprmediCommentBtn.label">Edit Comment</msg>
+  <msg id="sprmedi.sprmediCommentBtn.tooltip">Edit Medical Code Comment in separate window.</msg>
+  <msg id="sprmedi.sprmediUserId.prompt">User ID</msg>
+  <msg id="sprmedi.sprmediUserId.hint">User ID.</msg>
+  <msg id="sprmedi.sprmediActivityDate.prompt">Activity Date</msg>
+  <msg id="sprmedi.sprmediActivityDate.hint">Activity Date</msg>
+  <msg id="sprmedi.sprmediDisaCodeLbt.tooltip">Search</msg>
+  <msg id="sprmedi.sprmediMdeqCodeLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.idLbt.label">ID</msg>
+  <msg id="buttonControlBlock.idLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.sprmedi1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.sprmedi1SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.sprmedi1ExitBtn.label">Exit</msg>
+  <msg id="gExtendedSearchBlock.idnameExtsearchList.prompt">Results</msg>
+  <msg id="mainWindow.title">Medical Information Form</msg>
+  <msg id="mainWindow.label.title">General Medical Information</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

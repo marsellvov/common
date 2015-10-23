@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Gormedr/GormedrAlerts.xml" FirstNavigationBlock="STVMEDI" LovDataPath="/net/hedtech/banner/general/common/Gormedr/GormedrLovs.xml" Name="GORMEDR">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Gormedr/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="GORMEDR_1_CANVAS" />
+    </Window>
+    <Window Id="GORMEDR_WINDOW" Url="net/hedtech/banner/general/common/Gormedr/views/ViewGormedrWindow" />
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" CanvasName="GORMEDR_1_CANVAS" DataType="String" Enabled="false" Id="POINTER_TO_SEQ_1" MaxLength="2" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_FORM" MaxLength="7" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" DataType="Date" />
+      <Item AllowInsert="false" CanvasName="GORMEDR_1_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_0" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" CanvasName="GORMEDR_1_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_1" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+    </Block>
+    <Block AllowDelete="false" AllowInsert="false" AllowUpdate="false" Id="STVMEDI" MultiRecord="true">
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="GORMEDR_1_CANVAS" DataType="String" Hint="stvmedi.stvmediCode.hint" Id="STVMEDI_CODE" MaxLength="30" Required="true" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="GORMEDR_1_CANVAS" DataType="String" Enabled="true" Hint="stvmedi.stvmediDesc.hint" Id="STVMEDI_DESC" MaxLength="30" Required="true" Type="TextItem" />
+    </Block>
+    <Block Id="GORMEDR" MultiRecord="true">
+      <Item DataType="String" Enabled="false" Id="GORMEDR_MEDI_CODE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GORMEDR_1_CANVAS" DataType="String" Enabled="true" Hint="gormedr.gormedrDisaCode.hint" Id="GORMEDR_DISA_CODE" Lov="STVDISA_LOV" MaxLength="30" Required="true" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GORMEDR_1_CANVAS" DataType="String" Enabled="true" Hint="gormedr.disaDesc.hint" Id="DISA_DESC" MaxLength="30" Navigable="false" Required="true" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GORMEDR_1_CANVAS" DataType="String" Enabled="true" Hint="gormedr.gormedrDefaultInd.hint" Id="GORMEDR_DEFAULT_IND" MaxLength="1" Type="Checkbox" Visible="true" />
+      <!--<Item CanvasName="GORMEDR_1_CANVAS" DataType="String" Enabled="false" Hint="gormedr.gormedrUserId.hint" Id="GORMEDR_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" />-->
+      <Item DataType="String" Enabled="false" Hint="gormedr.gormedrUserId.hint" Id="GORMEDR_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" CanvasName="GORMEDR_1_CANVAS">
+        <Extension Name="ViewMode" Value="Filter" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID" />
+      </Item>
+      <!--<Item CanvasName="GORMEDR_1_CANVAS" DataType="Date" Enabled="false" Hint="gormedr.gormedrActivityDate.hint" Id="GORMEDR_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />-->
+      <Item DataType="Date" Enabled="false" Hint="gormedr.gormedrActivityDate.hint" Id="GORMEDR_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" CanvasName="GORMEDR_1_CANVAS">
+        <Extension Name="ViewMode" Value="Filter" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE" />
+      </Item>
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="STVMEDI_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="STVMEDI_1_SAVE_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="STVMEDI_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="GORMEDR_1_CANVAS" Id="GORMEDR_DISA_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+  </Logic>
+</FormStructure>

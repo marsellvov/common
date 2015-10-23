@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="stvmedi.stvmediCode.prompt">Medical Code</msg>
+  <msg id="stvmedi.stvmediCode.hint">Medical Condition Code.</msg>
+  <msg id="stvmedi.stvmediDesc.prompt">Description</msg>
+  <msg id="stvmedi.stvmediDesc.hint">Medical Condition Description.</msg>
+  <msg id="gormedr.gormedrDisaCode.prompt">Disability Type</msg>
+  <msg id="gormedr.gormedrDisaCode.hint">Disability Type; press LIST for valid codes.</msg>
+  <msg id="gormedr.disaDesc.prompt">Description</msg>
+  <msg id="gormedr.disaDesc.tooltip">Disability Type Description.</msg>
+  <msg id="gormedr.disaDesc.hint">G$_DESC_ITEM</msg>
+  <msg id="gormedr.gormedrDefaultInd.prompt">Default?</msg>
+  <msg id="gormedr.gormedrDefaultInd.hint">Default Indicator; Checked=Y.</msg>
+  <msg id="gormedr.gormedrUserId.prompt">User ID</msg>
+  <msg id="gormedr.gormedrUserId.hint">User ID</msg>
+  <msg id="gormedr.gormedrActivityDate.prompt">Activity Date</msg>
+  <msg id="gormedr.gormedrActivityDate.hint">Activity Date.</msg>
+  <msg id="buttonControlBlock.stvmedi1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.stvmedi1SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.stvmedi1ExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.gormedrDisaCodeLbt.tooltip">Search</msg>
+  <msg id="mainWindow.title">Medical Disability Rule Form</msg>
+  <msg id="gormedrWindow.title">Medical Disability Rule Form</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+  <msg id="gormedr1Canvas.text2.text">Disability Group Information</msg>
+  <msg id="gormedr1Canvas.text92.text">Medical Code Information</msg>
+</messages>

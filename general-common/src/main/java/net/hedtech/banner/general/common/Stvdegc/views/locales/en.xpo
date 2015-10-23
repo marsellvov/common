@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="stvdegc.stvdegcCode.prompt">Code  </msg>
+  <msg id="stvdegc.stvdegcCode.hint">Degree code.</msg>
+  <msg id="stvdegc.stvdegcDesc.prompt">Description  </msg>
+  <msg id="stvdegc.stvdegcDesc.hint">Degree code description.</msg>
+  <msg id="stvdegc.stvdegcFaCountInd.prompt">Count in Financial Aid</msg>
+  <msg id="stvdegc.stvdegcFaCountInd.hint">Check for (Y) if this degree should count in Financial Aid.</msg>
+  <msg id="stvdegc.stvdegcDlevCode.prompt">Level</msg>
+  <msg id="stvdegc.stvdegcDlevCode.hint">Degree level code; press LIST for valid code.</msg>
+  <msg id="stvdegc.stvdegcAcatCode.prompt">Award Category</msg>
+  <msg id="stvdegc.stvdegcAcatCode.hint">Degree award category.</msg>
+  <msg id="stvdegc.stvdegcVrMsgNo.prompt">Voice Response Message Number</msg>
+  <msg id="stvdegc.stvdegcVrMsgNo.hint">Voice Response Message Number.</msg>
+  <msg id="stvdegc.stvdegcDispWebInd.prompt">Web Indicator</msg>
+  <msg id="stvdegc.stvdegcDispWebInd.hint">Web Display Indicator; checked indicates value will be displayed on Web.</msg>
+  <msg id="stvdegc.stvdegcSystemReqInd.prompt">System Required</msg>
+  <msg id="stvdegc.stvdegcSystemReqInd.hint">System Required Indicator; Check for (Y).</msg>
+  <msg id="stvdegc.stvdegcActivityDate.prompt">Activity Date</msg>
+  <msg id="buttonControlBlock.stvdegcDlevCodeLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.stvdegc1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.stvdegc1SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.stvdegc1ExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.stvdegc1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.stvdegcAcatCodeLbt.tooltip">Search</msg>
+  <msg id="mainWindow.title">Degree Code Validation</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+  <msg id="stvacatLov.title">Degree Award Category Code Validation Form (STVACAT)</msg>
+  <msg id="stvacatLov.stvacatCode.title">Stvacat_Code</msg>
+  <msg id="stvacatLov.stvacatDesc.title">Stvacat_Desc</msg>
+  <msg id="stvacatLov.stvacatActivityDate.title">Stvacat_Activity_Date</msg>
+  <msg id="stvacatLov.stvacatSystemReqInd.title">Stvacat_System_Req_Ind</msg>
+</messages>

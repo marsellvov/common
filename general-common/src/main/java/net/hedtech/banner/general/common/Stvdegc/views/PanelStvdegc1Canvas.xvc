@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="STVDEGC"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlStvdegc1Canvas" menu="G$_DEFAULT_PM" name="STVDEGC_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="STVDEGC" name="grdStvdegc" width="100%">
+						<viewheader>
+							<viewcolumn allowupdate="false" autoskip="true" block="STVDEGC" case="upper" datatype="String" label="stvdegc.stvdegcCode.prompt" labelstyle="DEFAULT" maxlength="6" member="STVDEGC_CODE" name="stvdegcCode" required="true" width="40px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVDEGC" datatype="String" label="stvdegc.stvdegcDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVDEGC_DESC" name="stvdegcDesc" required="true" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVDEGC" case="upper" datatype="String" label="stvdegc.stvdegcFaCountInd.prompt" labelstyle="DEFAULT" maxlength="1" member="STVDEGC_FA_COUNT_IND" name="stvdegcFaCountInd" width="85px">
+								<editor>
+									<checkbox falsevalue="N" othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVDEGC" case="upper" datatype="String" keyactions="NEXT_ITEM" label="stvdegc.stvdegcDlevCode.prompt" labelstyle="DEFAULT" maxlength="30" member="STVDEGC_DLEV_CODE" name="stvdegcDlevCode" width="20px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+								<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="20px" icon="search" member="STVDEGC_DLEV_CODE_LBT" name="stvdegcDlevCodeLbt" navigable="false" tooltip="buttonControlBlock.stvdegcDlevCodeLbt.tooltip" width="20px"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVDEGC" case="upper" datatype="String" keyactions="NEXT_ITEM" label="stvdegc.stvdegcAcatCode.prompt" labelstyle="DEFAULT" maxlength="30" member="STVDEGC_ACAT_CODE" name="stvdegcAcatCode" width="45px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+								<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="20px" icon="search" member="STVDEGC_ACAT_CODE_LBT" name="stvdegcAcatCodeLbt" navigable="false" tooltip="buttonControlBlock.stvdegcAcatCodeLbt.tooltip" width="20px"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVDEGC" datatype="Number" label="stvdegc.stvdegcVrMsgNo.prompt" labelstyle="DEFAULT" maxlength="6" member="STVDEGC_VR_MSG_NO" name="stvdegcVrMsgNo" textalign="right" width="125px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="STVDEGC" datatype="String" label="stvdegc.stvdegcDispWebInd.prompt" labelstyle="DEFAULT" maxlength="1" member="STVDEGC_DISP_WEB_IND" name="stvdegcDispWebInd" width="45px">
+								<editor>
+									<checkbox falsevalue="N" othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVDEGC" case="upper" datatype="String" label="stvdegc.stvdegcSystemReqInd.prompt" labelstyle="DEFAULT" maxlength="1" member="STVDEGC_SYSTEM_REQ_IND" name="stvdegcSystemReqInd" width="50px">
+								<editor>
+									<checkbox othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

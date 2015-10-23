@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="NOQLIBR" LovDataPath="/net/hedtech/banner/general/common/Noqlibr/NoqlibrLovs.xml">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Noqlibr/views/ViewMainWindow">
+      <ContentCanvas Id="PAGE_1">
+      </ContentCanvas>
+      <TabPageCanvas Id="NOAAPSM_1_TAB_CANVAS">
+        <Page Id="OTHER_DATA_AND_COMMENTS">
+        </Page>
+      </TabPageCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <!-- <Block Id="FORM_HEADER">
+      <Item Id="CURRENT_RELEASE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+    </Block> -->
+    <Block Id="NOQOLIB">
+      <Item Id="N$_ACCI_CODE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_FUND_CODE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ORGN_CODE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ACCT_CODE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_PROG_CODE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ACTV_CODE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_LOCN_CODE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_FUND_OVER" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ORGN_OVER" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ACCT_OVER" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_PROG_OVER" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ACTV_OVER" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_LOCN_OVER" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_FOAPAL_FIELD" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="60" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="NOBTRAN">
+      <Item Id="NOBTRAN_TRANSACTION_NO" CanvasName="" Required="true" MaxLength="16" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="NOBTRAN_INFO_1">
+      <Item Id="NOBTRAN_CREATED_DATE" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS" Hint="nobtranInfo1.nobtranCreatedDate.hint" AllowInsert="false" AllowUpdate="false" Required="true" MaxLength="11" Type="TextItem">
+      </Item>
+      <Item Id="NOBTRAN_ORIGINATOR_USER_ID" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS" Hint="nobtranInfo1.nobtranOriginatorUserId.hint" AllowInsert="false" AllowUpdate="false" Required="true" MaxLength="30" Type="TextItem">
+      </Item>
+      <Item Id="NOBTRAN_SUBMISSION_DATE" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS" Hint="nobtranInfo1.nobtranSubmissionDate.hint" AllowInsert="false" AllowUpdate="false" MaxLength="11" Type="TextItem">
+      </Item>
+      <Item Id="NOBTRAN_SUBMITTOR_USER_ID" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS" Hint="nobtranInfo1.nobtranSubmittorUserId.hint" AllowInsert="false" AllowUpdate="false" MaxLength="30" Type="TextItem">
+      </Item>
+      <Item Id="NOBTRAN_APPLY_DATE" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS" Hint="nobtranInfo1.nobtranApplyDate.hint" AllowInsert="false" AllowUpdate="false" MaxLength="11" Type="TextItem">
+      </Item>
+      <Item Id="NOBTRAN_APPLY_USER_ID" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS" Hint="nobtranInfo1.nobtranApplyUserId.hint" AllowInsert="false" AllowUpdate="false" MaxLength="30" Type="TextItem">
+      </Item>
+      <Item Id="NOBTRAN_TRANSACTION_NO" CanvasName="" AllowInsert="false" AllowUpdate="false" Required="true" MaxLength="16" Type="TextItem">
+      </Item>
+      <Item Id="NOBTRAN_PIDM" CanvasName="" AllowInsert="false" AllowUpdate="false" MaxLength="9" Type="TextItem">
+      </Item>
+      <Item Id="DATA_SEPARATOR_LINE_0" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS" AllowInsert="false" Navigable="false" MaxLength="24" Type="DisplayItem">
+      </Item>
+    </Block>
+    <Block Id="NORCMNT" MultiRecord="true" AllowUpdate="false">
+      <Item Id="NORCMNT_COMMENTS" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS" Hint="norcmnt.norcmntComments.hint" AllowUpdate="false" Required="true" MaxLength="4000" Type="TextItem">
+      </Item>
+      <!--<Item Id="NORCMNT_ACTIVITY_DATE" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS" Hint="norcmnt.norcmntActivityDate.hint" AllowUpdate="false" Required="true" MaxLength="26" Type="TextItem"></Item>-->
+      <Item Navigable="false"  Id="NORCMNT_ACTIVITY_DATE" PageName="OTHER_DATA_AND_COMMENTS" Hint="norcmnt.norcmntActivityDate.hint" AllowUpdate="false" Required="true" MaxLength="26" Type="TextItem" CanvasName="NOAAPSM_1_TAB_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE"/>
+
+      </Item>
+      <!--<Item Id="NORCMNT_USER_ID" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS" Hint="norcmnt.norcmntUserId.hint" MaxLength="30" Type="TextItem"></Item>-->
+      <Item Navigable="false"  Id="NORCMNT_USER_ID" PageName="OTHER_DATA_AND_COMMENTS" Hint="norcmnt.norcmntUserId.hint" MaxLength="30" Type="TextItem" CanvasName="NOAAPSM_1_TAB_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID"/>
+
+      </Item>
+      <Item Id="NORCMNT_TRANSACTION_NO" CanvasName="" Required="true" MaxLength="16" Type="TextItem">
+      </Item>
+      <Item Id="NORCMNT_DATA_ORIGIN" CanvasName="" MaxLength="30" Type="TextItem">
+      </Item>
+      <Item Id="NORCMNT_SEQ_NO" CanvasName="" Hint="norcmnt.norcmntSeqNo.hint" MaxLength="7" Type="TextItem">
+      </Item>
+      <Item Id="NORCMNTScrollbar" CanvasName="NOAAPSM_1_TAB_CANVAS" PageName="OTHER_DATA_AND_COMMENTS">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

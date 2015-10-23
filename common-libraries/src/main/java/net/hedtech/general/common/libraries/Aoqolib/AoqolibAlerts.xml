@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alerts>
+	<Alert Name="A$_SUPERVISOR_OVERRIDE_ALERT" Title="" Type="ERROR">
+		<Text>*WARNING* The designation entered is inactive, would you like to override?</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="Yes" />
+  			<Button Type="BTN2" Label="No" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="A$_INACTIVE_CAMP_SOLICITOR" Title="" Type="WARNING">
+		<Text>*WARNING* Solicitor is inactive for this Campaign/Type/Org combo.</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="A$_CONTACT_EXISTS_ALERT" Title="" Type="WARNING">
+		<Text>*WARNING* Contact already assigned to this solicitation combination.</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="A$_INACTIVE_ORG_SOLICITOR" Title="" Type="WARNING">
+		<Text>*WARNING* Solicitor is inactive for this organization.</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="A$_INACT_DESG_WARN_ALERT" Title="" Type="WARNING">
+		<Text>*Warning* Designation is Inactive.</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="A$_INACT_DESG_ERROR_ALERT" Title="" Type="ERROR">
+		<Text>*ERROR* Designation is Inactive. Select another or REMOVE the Camp/Desg.</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="A$_DECEASED_WARNING" Title="" Type="WARNING">
+		<Text>Warning: This person is deceased.</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+</Alerts>
+

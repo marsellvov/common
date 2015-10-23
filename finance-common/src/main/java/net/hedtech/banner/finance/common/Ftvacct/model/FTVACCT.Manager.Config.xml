@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVACCT.Manager.Config" name="FTVACCT">
+		
+		<items>
+			<item name="FTVACCT_COAS_CODE" logicalName="ftvacctCoasCode" type="String" physicalName="FTVACCT_COAS_CODE"  />
+			<item name="FTVACCT_ACCT_CODE" logicalName="ftvacctAcctCode" type="String" physicalName="FTVACCT_ACCT_CODE"  />
+			<item name="FTVACCT_TITLE" logicalName="ftvacctTitle" type="String" physicalName="FTVACCT_TITLE"  />
+			<item name="FTVACCT_ATYP_CODE" logicalName="ftvacctAtypCode" type="String" physicalName="FTVACCT_ATYP_CODE"  />
+			<item name="FTVACCT_DATA_ENTRY_IND" logicalName="ftvacctDataEntryInd" type="String" physicalName="FTVACCT_DATA_ENTRY_IND"  />
+			<item name="FTVACCT_ACCT_CLASS_CODE" logicalName="ftvacctAcctClassCode" type="String" physicalName="FTVACCT_ACCT_CLASS_CODE"  />
+			<item name="FTVACCT_STATUS_IND" logicalName="ftvacctStatusInd" type="String" physicalName="FTVACCT_STATUS_IND"  />
+			<item name="INTERNAL_ATYP" logicalName="internalAtyp" type="String"  virtual="true" />
+			<item name="FTVACCT_EFF_DATE" logicalName="ftvacctEffDate" type="java.util.Date" physicalName="FTVACCT_EFF_DATE"  />
+			<item name="FTVACCT_TERM_DATE" logicalName="ftvacctTermDate" type="java.util.Date" physicalName="FTVACCT_TERM_DATE"  />
+			<item name="FTVACCT_ACTIVITY_DATE" logicalName="ftvacctActivityDate" type="java.util.Date" physicalName="FTVACCT_ACTIVITY_DATE"  />
+			<item name="FTVACCT_USER_ID" logicalName="ftvacctUserId" type="String" physicalName="FTVACCT_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvacct.model.FtvacctAdapter</adapterClass>
+<!-- 		<defaultWhereClause><![CDATA[WHERE (ftvacct_coas_code = :HOLD_COAS_CODE OR ftvacct_coas_code = :FTVACCT_COAS_CODE) AND (ftvacct_data_entry_ind = 'Y' OR ftvacct_data_entry_ind = :FTVACCT_DATA_ENTRY_IND)]]></defaultWhereClause> -->
+		<defaultWhereClause><![CDATA[WHERE (ftvacct_coas_code = NVL(:HOLD_COAS_CODE, ftvacct_coas_code)) AND (ftvacct_data_entry_ind = 'Y')]]></defaultWhereClause>		
+		<defaultOrderByClause><![CDATA[order by ftvacct_coas_code, ftvacct_acct_code, ftvacct_eff_date]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

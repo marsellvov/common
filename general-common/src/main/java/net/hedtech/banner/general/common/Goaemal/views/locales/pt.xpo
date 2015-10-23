@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="keyBlock.id.prompt">ID</msg>
+  <msg id="keyBlock.id.hint">ID;  press LIST for person, COUNT HITS for non-persons, DUP ITEM for SSN/SID Search.</msg>
+  <msg id="keyBlock.keyblockName.hint">Name; Enter a name Last, First, Middle and press enter or tab. Use the wildcard "%" if needed.</msg>
+  <msg id="keyBlock.idLbt.label">ID</msg>
+  <msg id="keyBlock.idLbt.tooltip">Search</msg>
+  <msg id="goremal.goremalEmalCode.prompt">E-mail Type</msg>
+  <msg id="goremal.goremalEmalCode.hint">E-mail Type; LIST for available types.</msg>
+  <msg id="goremal.goremalEmalCodeLbt.tooltip">Search</msg>
+  <msg id="goremal.emailDesc.hint">G$_DESC_ITEM</msg>
+  <msg id="goremal.goremalEmailAddress.prompt">E-mail Address</msg>
+  <msg id="goremal.goremalEmailAddress.hint">E-mail Address.</msg>
+  <msg id="goremal.goremalPreferredInd.label">Preferred</msg>
+  <msg id="goremal.goremalPreferredInd.hint">Primary indicator; checked indicates this e-mail is the preferred e-mail address.</msg>
+  <msg id="goremal.goremalStatusInd.label">Inactivate</msg>
+  <msg id="goremal.goremalStatusInd.hint">Check to inactivate. Uncheck to activate.</msg>
+  <msg id="goremal.goremalDispWebInd.label">Display on Web</msg>
+  <msg id="goremal.goremalDispWebInd.hint">Web Display Indicator; checked indicates that this e-mail address may appear on the Web.</msg>
+  <msg id="goremal.urlInd.label">URL</msg>
+  <msg id="goremal.goremalComment.prompt">Comment</msg>
+  <msg id="goremal.goremalComment.hint">Comment.</msg>
+  <msg id="goremal.goremalActivityDate.prompt">Activity Date</msg>
+  <msg id="goremal.goremalUserId.prompt">User</msg>
+  <msg id="buttonControlBlock.goaemal1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.goaemal1SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.goaemal1ExitBtn.label">Exit</msg>
+  <msg id="gExtendedSearchBlock.idnameExtsearchList.prompt">Results</msg>
+  <msg id="mainWindow.title">E-mail Address Form</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="G$_VPDI_BLOCK" />
+  <panel id="pnlGVpdiCanvas" name="G$_VPDI_CANVAS" class="ContentCanvas" width="100%">
+  	<gridlayout cols="1" orientation="horizontal">
+  		<gridcell>
+		    <textbox label="gVpdiBlock.vpdiCode.prompt"  name="vpdiCode" style="ui-buttoninput GNvaTextItem"  width="100px" height="23px" enabled="false"  autoskip="true" keyactions="NEXT_ITEM" member="VPDI_CODE" block="G$_VPDI_BLOCK" validation="server" maxlength="30" datatype="String" case="upper">
+		      <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+		    </textbox>
+		    <button  label="gVpdiBlock.vpdiCodeLbt.label" name="vpdiCodeLbt" style="ui-buttoninput" width="20px" height="23px" navigable="false"  icon="search" tooltip="gVpdiBlock.vpdiCodeLbt.tooltip" member="VPDI_CODE_LBT" block="G$_VPDI_BLOCK" maxlength="8" case="mixed" action="WHEN-BUTTON-PRESSED" />
+		    <textfield  name="g$_vpdi_block_vpdiDesc" style="DEFAULT"  width="225px" height="23px"  member="VPDI_DESC" block="G$_VPDI_BLOCK" maxlength="30" datatype="String" case="mixed" />
+		    <button  label="gVpdiBlock.vpdiOtherInstitutions.label" name="g$_vpdi_block_vpdiOtherInstitutions" style="DEFAULT"  visible="false" enabled="false" navigable="false" tooltip="gVpdiBlock.vpdiOtherInstitutions.tooltip" member="VPDI_OTHER_INSTITUTIONS" block="G$_VPDI_BLOCK" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED" />
+		 </gridcell>
+		</gridlayout>
+	</panel>
+	 <panel style="alert-footer">
+	 	<flowlayout orientation="horizontal">
+		    <button  label="gVpdiBlock.vpdiCancelBtn.label" name="g$_vpdi_block_vpdiCancelBtn" style="GNvaButtonItem"  enabled="false"  member="VPDI_CANCEL_BTN" block="G$_VPDI_BLOCK" maxlength="14" case="mixed" action="WHEN-BUTTON-PRESSED" />
+		    <button  label="gVpdiBlock.vpdiOkBtn.label" name="g$_vpdi_block_vpdiOkBtn" style="GNvaButtonItem"  enabled="false"   member="VPDI_OK_BTN" block="G$_VPDI_BLOCK" maxlength="14" case="mixed" action="WHEN-BUTTON-PRESSED" />
+ 		 </flowlayout>
+  </panel>
+</config>

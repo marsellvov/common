@@ -1,0 +1,2978 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="GTVVPDI_RG.ValueSet.Config" name="GTVVPDI_RG">
+    <columns>
+		<column name="GTVVPDI_CODE" type="String" size="6"/>
+		<column name="GTVVPDI_DESC" type="String" size="30"/>
+		<column name="GTVVPDI_TYPE_CDE" type="String" size="2"/>
+		<column name="GTVVPDI_SYS_DEF_INST_IND" type="String" size="1"/>
+		<column name="GTVVPDI_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT GTVVPDI_CODE, GTVVPDI_DESC, GTVVPDI_TYPE_CDE, GTVVPDI_SYS_DEF_INST_IND, GTVVPDI_ACTIVITY_DATE  FROM GTVVPDI  ORDER BY GTVVPDI_CODE
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___VPDI_ALL_RG.ValueSet.Config" name="G$_VPDI_ALL_RG">
+    <columns>
+		<column name="A" type="String" size="100"/>
+		<column name="B" type="String" size="100"/>
+		<column name="C" type="String" size="100"/>
+		<column name="D" type="String" size="100"/>
+		<column name="E" type="String" size="100"/>
+		<column name="F" type="String" size="100"/>
+		<column name="G" type="String" size="100"/>
+		<column name="H" type="String" size="100"/>
+		<column name="I" type="String" size="100"/>
+		<column name="J" type="String" size="100"/>
+		<column name="A$" type="String" size="2000"/>
+		<column name="B$" type="String" size="2000"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'A' A, 'B' B, 'C' C, 'D' D, 'E' E, 'F' F, 'G' G, 'H' H, 'I' I, 'J' J, 'A$', 'B$'  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ALL_USERS_RG.ValueSet.Config" name="ALL_USERS_RG">
+    <columns>
+		<column name="USERNAME" type="String" size="30"/>
+		<column name="USER_ID" type="Number" size="23"/>
+		<column name="CREATED" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM all_users  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSQPR_RG.ValueSet.Config" name="GTVSQPR_RG">
+    <columns>
+		<column name="GTVSQPR_CODE" type="String" size="30"/>
+		<column name="GTVSQPR_DESC" type="String" size="60"/>
+		<column name="GTVSQPR_SYS_REQ_IND" type="String" size="1"/>
+		<column name="GTVSQPR_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsqpr_code, gtvsqpr_desc, gtvsqpr_sys_req_ind, to_char(gtvsqpr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsqpr_activity_date  FROM gtvsqpr  WHERE TRUNC(gtvsqpr_start_date) <= TRUNC(SYSDATE) AND TRUNC(NVL(gtvsqpr_end_date, TO_DATE(G$_DATE.NORMALISE_GREG_DATE('31-12-2099', 'DD-MM-YYYY'), G$_DATE.GET_NLS_DATE_FORMAT))) >= TRUNC(SYSDATE)  ORDER BY gtvsqpr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSQRU_RG.ValueSet.Config" name="GTVSQRU_RG">
+    <columns>
+		<column name="GTVSQRU_CODE" type="String" size="30"/>
+		<column name="GTVSQRU_DESC" type="String" size="60"/>
+		<column name="GTVSQRU_SYS_REQ_IND" type="String" size="1"/>
+		<column name="GTVSQRU_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsqru_code, gtvsqru_desc, gtvsqru_sys_req_ind, to_char(gtvsqru_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsqru_activity_date  FROM gtvsqru  WHERE TRUNC(gtvsqru_start_date) <= TRUNC(SYSDATE) AND TRUNC(NVL(gtvsqru_end_date, TO_DATE(G$_DATE.NORMALISE_GREG_DATE('31-12-2099', 'DD-MM-YYYY'), G$_DATE.GET_NLS_DATE_FORMAT))) >= TRUNC(SYSDATE)  ORDER BY gtvsqru_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVAP_RG.ValueSet.Config" name="GTVSVAP_RG">
+    <columns>
+		<column name="GTVSVAP_CODE" type="String" size="30"/>
+		<column name="GTVSVAP_DESC" type="String" size="60"/>
+		<column name="GTVSVAP_SYS_REQ_IND" type="String" size="1"/>
+		<column name="GTVSVAP_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvap_code, gtvsvap_desc, gtvsvap_sys_req_ind, to_char(gtvsvap_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsvap_activity_date  FROM gtvsvap  WHERE TRUNC(gtvsvap_start_date) <= TRUNC(SYSDATE) AND TRUNC(NVL(gtvsvap_end_date, TO_DATE(G$_DATE.NORMALISE_GREG_DATE('31-12-2099', 'DD-MM-YYYY'), G$_DATE.GET_NLS_DATE_FORMAT))) >= TRUNC(SYSDATE)  ORDER BY gtvsvap_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVBA_RG.ValueSet.Config" name="GTVSVBA_RG">
+    <columns>
+		<column name="GTVSVBA_CODE" type="String" size="30"/>
+		<column name="GTVSVBA_DESC" type="String" size="60"/>
+		<column name="GTVSVBA_DBPROC_NAME" type="String" size="100"/>
+		<column name="GTVSVBA_SYS_REQ_IND" type="String" size="1"/>
+		<column name="GTVSVBA_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvba_code, gtvsvba_desc, gtvsvba_dbproc_name, gtvsvba_sys_req_ind, to_char(gtvsvba_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsvba_activity_date  FROM gtvsvba  WHERE TRUNC(gtvsvba_start_date) <= TRUNC(SYSDATE) AND TRUNC(NVL(gtvsvba_end_date, TO_DATE(G$_DATE.NORMALISE_GREG_DATE('31-12-2099', 'DD-MM-YYYY'), G$_DATE.GET_NLS_DATE_FORMAT))) >= TRUNC(SYSDATE)  ORDER BY gtvsvba_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVCA_RG.ValueSet.Config" name="GTVSVCA_RG">
+    <columns>
+		<column name="GTVSVCA_CODE" type="String" size="2"/>
+		<column name="GTVSVCA_DESC" type="String" size="60"/>
+		<column name="GTVSVCA_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvca_code, gtvsvca_desc, gtvsvca_activity_date  FROM gtvsvca  ORDER BY gtvsvca_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVCC_RG.ValueSet.Config" name="GTVSVCC_RG">
+    <columns>
+		<column name="GTVSVCC_CODE" type="String" size="3"/>
+		<column name="GTVSVCC_DESC" type="String" size="60"/>
+		<column name="GTVSVCC_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvcc_code, gtvsvcc_desc, gtvsvcc_activity_date  FROM gtvsvcc  ORDER BY gtvsvcc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVCP_RG.ValueSet.Config" name="GTVSVCP_RG">
+    <columns>
+		<column name="GTVSVCP_CODE" type="String" size="3"/>
+		<column name="GTVSVCP_DESC" type="String" size="30"/>
+		<column name="GTVSVCP_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvcp_code, gtvsvcp_desc, gtvsvcp_activity_date  FROM gtvsvcp  ORDER BY gtvsvcp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVCR_RG.ValueSet.Config" name="GTVSVCR_RG">
+    <columns>
+		<column name="GTVSVCR_CODE" type="String" size="4"/>
+		<column name="GTVSVCR_DESC" type="String" size="30"/>
+		<column name="GTVSVCR_USAGE_IND" type="String" size="1"/>
+		<column name="GTVSVCR_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvcr_code, gtvsvcr_desc, gtvsvcr_usage_ind, to_char(gtvsvcr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsvcr_activity_date  FROM gtvsvcr  ORDER BY gtvsvcr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVDT_RG.ValueSet.Config" name="GTVSVDT_RG">
+    <columns>
+		<column name="GTVSVDT_CODE" type="String" size="2"/>
+		<column name="GTVSVDT_DESC" type="String" size="30"/>
+		<column name="GTVSVDT_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvdt_code, gtvsvdt_desc, to_char(gtvsvdt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsvdt_activity_date  FROM gtvsvdt  ORDER BY gtvsvdt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVEL_RG.ValueSet.Config" name="GTVSVEL_RG">
+    <columns>
+		<column name="GTVSVEL_CODE" type="String" size="2"/>
+		<column name="GTVSVEL_DESC" type="String" size="30"/>
+		<column name="GTVSVEL_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvel_code, gtvsvel_desc, to_char(gtvsvel_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsvel_activity_date  FROM gtvsvel  ORDER BY gtvsvel_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVEP_RG.ValueSet.Config" name="GTVSVEP_RG">
+    <columns>
+		<column name="GTVSVEP_CODE" type="String" size="4"/>
+		<column name="GTVSVEP_DESC" type="String" size="30"/>
+		<column name="GTVSVEP_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvep_code, gtvsvep_desc, to_char(gtvsvep_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsvep_activity_date  FROM gtvsvep  ORDER BY gtvsvep_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVFT_RG.ValueSet.Config" name="GTVSVFT_RG">
+    <columns>
+		<column name="GTVSVFT_CODE" type="String" size="2"/>
+		<column name="GTVSVFT_DESC" type="String" size="30"/>
+		<column name="GTVSVFT_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvft_code, gtvsvft_desc, to_char(gtvsvft_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsvft_activity_date  FROM gtvsvft  ORDER BY gtvsvft_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVGO_RG.ValueSet.Config" name="GTVSVGO_RG">
+    <columns>
+		<column name="GTVSVGO_CODE" type="String" size="6"/>
+		<column name="GTVSVGO_DESC" type="String" size="30"/>
+		<column name="GTVSVGO_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvgo_code, gtvsvgo_desc, gtvsvgo_activity_date  FROM gtvsvgo  ORDER BY gtvsvgo_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVPC_RG.ValueSet.Config" name="GTVSVPC_RG">
+    <columns>
+		<column name="GTVSVPC_CODE" type="String" size="3"/>
+		<column name="GTVSVPC_DESC" type="String" size="30"/>
+		<column name="GTVSVPC_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvpc_code, gtvsvpc_desc, gtvsvpc_activity_date  FROM gtvsvpc  ORDER BY gtvsvpc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVRP_RG.ValueSet.Config" name="GTVSVRP_RG">
+    <columns>
+		<column name="GTVSVRP_CODE" type="String" size="2"/>
+		<column name="GTVSVRP_DESC" type="String" size="30"/>
+		<column name="GTVSVRP_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvrp_code, gtvsvrp_desc, to_char(gtvsvrp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsvrp_activity_date  FROM gtvsvrp  ORDER BY gtvsvrp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVTR_RG.ValueSet.Config" name="GTVSVTR_RG">
+    <columns>
+		<column name="GTVSVTR_CODE" type="String" size="6"/>
+		<column name="GTVSVTR_DESC" type="String" size="30"/>
+		<column name="GTVSVTR_USAGE_IND" type="String" size="1"/>
+		<column name="GTVSVTR_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvtr_code, gtvsvtr_desc, gtvsvtr_usage_ind, to_char(gtvsvtr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsvtr_activity_date  FROM gtvsvtr  ORDER BY gtvsvtr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVTS_RG.ValueSet.Config" name="GTVSVTS_RG">
+    <columns>
+		<column name="GTVSVTS_CODE" type="String" size="1"/>
+		<column name="GTVSVTS_DESC" type="String" size="30"/>
+		<column name="GTVSVTS_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="GTVSVTS_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvts_code, gtvsvts_desc, gtvsvts_system_req_ind, to_char(gtvsvts_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsvts_activity_date  FROM gtvsvts  ORDER BY gtvsvts_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVIO_RG.ValueSet.Config" name="GTVSVIO_RG">
+    <columns>
+		<column name="GTVSVIO_CODE" type="String" size="6"/>
+		<column name="GTVSVIO_DESC" type="String" size="30"/>
+		<column name="GTVSVIO_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvio_code, gtvsvio_desc, gtvsvio_activity_date  FROM gtvsvio  ORDER BY gtvsvio_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSVIT_RG.ValueSet.Config" name="GTVSVIT_RG">
+    <columns>
+		<column name="GTVSVIT_CODE" type="String" size="3"/>
+		<column name="GTVSVIT_DESC" type="String" size="60"/>
+		<column name="GTVSVIT_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsvit_code, gtvsvit_desc, gtvsvit_activity_date  FROM gtvsvit  ORDER BY gtvsvit_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVCMSC_RG.ValueSet.Config" name="GTVCMSC_RG">
+    <columns>
+		<column name="GTVCMSC_CODE" type="String" size="20"/>
+		<column name="GTVCMSC_DESC" type="String" size="60"/>
+		<column name="GTVCMSC_ACTIVITY_DATE" type="String" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvcmsc_code, gtvcmsc_desc, to_char(gtvcmsc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvcmsc_activity_date FROM gtvcmsc  ORDER BY gtvcmsc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVMTYP_RG.ValueSet.Config" name="GTVMTYP_RG">
+    <columns>
+		<column name="GTVMTYP_CODE" type="String" size="10"/>
+		<column name="GTVMTYP_DESC" type="String" size="30"/>
+		<column name="GTVMTYP_SYS_REQ_IND" type="String" size="1"/>
+		<column name="GTVMTYP_ACTIVITY_DATE" type="String" size="11"/>
+		<column name="GTVMTYP_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvmtyp_code, gtvmtyp_desc, gtvmtyp_sys_req_ind, to_char(gtvmtyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvmtyp_activity_date, gtvmtyp_user_id  FROM gtvmtyp  ORDER BY gtvmtyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVINSM_RG.ValueSet.Config" name="GTVINSM_RG">
+    <columns>
+		<column name="GTVINSM_CODE" type="String" size="5"/>
+		<column name="GTVINSM_DESC" type="String" size="30"/>
+		<column name="GTVINSM_ACTIVITY_DATE" type="String" size="11"/>
+		<column name="GTVINSM_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvinsm_code, gtvinsm_desc, to_char(gtvinsm_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvinsm_activity_date, gtvinsm_user_id  FROM gtvinsm  ORDER BY gtvinsm_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSRCE_RG.ValueSet.Config" name="GTVSRCE_RG">
+    <columns>
+		<column name="GTVSRCE_CODE" type="String" size="6"/>
+		<column name="GTVSRCE_DESC" type="String" size="30"/>
+		<column name="GTVSRCE_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsrce_code, gtvsrce_desc, to_char(gtvsrce_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsrce_activity_date  FROM gtvsrce  ORDER BY gtvsrce_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVDOCM_RG.ValueSet.Config" name="GTVDOCM_RG">
+    <columns>
+		<column name="GTVDOCM_CODE" type="String" size="6"/>
+		<column name="GTVDOCM_DESC" type="String" size="30"/>
+		<column name="GTVDOCM_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvdocm_code, gtvdocm_desc, to_char(gtvdocm_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvdocm_activity_date  FROM gtvdocm  ORDER BY gtvdocm_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVVISS_RG.ValueSet.Config" name="GTVVISS_RG">
+    <columns>
+		<column name="GTVVISS_CODE" type="String" size="6"/>
+		<column name="GTVVISS_DESC" type="String" size="30"/>
+		<column name="GTVVISS_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvviss_code, gtvviss_desc, to_char(gtvviss_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvviss_activity_date  FROM gtvviss  ORDER BY gtvviss_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVCELG_RG.ValueSet.Config" name="GTVCELG_RG">
+    <columns>
+		<column name="GTVCELG_CODE" type="String" size="6"/>
+		<column name="GTVCELG_DESC" type="String" size="30"/>
+		<column name="GTVCELG_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvcelg_code, gtvcelg_desc, to_char(gtvcelg_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvcelg_activity_date  FROM gtvcelg  ORDER BY gtvcelg_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GOBWFED_RG.ValueSet.Config" name="GOBWFED_RG">
+    <columns>
+		<column name="GOBWFED_DESC" type="String" size="30"/>
+		<column name="GOBWFED_TRANS_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gobwfed_desc, gobwfed_trans_no  FROM gobwfed  WHERE gokwfed.f_get_access(gobwfed_trans_no) = 'Y'  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVDUNT_RG.ValueSet.Config" name="GTVDUNT_RG">
+    <columns>
+		<column name="GTVDUNT_CODE" type="String" size="4"/>
+		<column name="GTVDUNT_DESC" type="String" size="30"/>
+		<column name="GTVDUNT_NUMBER_OF_DAYS" type="Number" size="23"/>
+		<column name="GTVDUNT_ACTIVITY_DATE" type="String" size="11"/>
+		<column name="GTVDUNT_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvdunt_code, gtvdunt_desc, gtvdunt_number_of_days, to_char(gtvdunt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvdunt_activity_date, gtvdunt_user_id  FROM gtvdunt  ORDER BY gtvdunt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVWFED_RG.ValueSet.Config" name="GTVWFED_RG">
+    <columns>
+		<column name="GTVWFED_CODE" type="String" size="20"/>
+		<column name="GTVWFED_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvwfed_code, gtvwfed_desc  FROM gtvwfed  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GOBWFDD_RG.ValueSet.Config" name="GOBWFDD_RG">
+    <columns>
+		<column name="CODE" type="String" size="20"/>
+		<column name="DESC" type="String" size="80"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gobwfdd_appl_name \"code\", gubobjs_desc \"desc\"  FROM gobwfdd, gubobjs  WHERE gobwfdd_appl_name = gubobjs_name AND gobwfdd_product_type = 'ORACLE FORMS' AND gubobjs_objt_code = 'FORM'  ORDER BY gobwfdd_appl_name
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVEQPG_RG.ValueSet.Config" name="GTVEQPG_RG">
+    <columns>
+		<column name="GTVEQPG_CODE" type="String" size="10"/>
+		<column name="GTVEQPG_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtveqpg_code, gtveqpg_desc  FROM gtveqpg  ORDER BY gtveqpg_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVEQNM_RG.ValueSet.Config" name="GTVEQNM_RG">
+    <columns>
+		<column name="GTVEQNM_CODE" type="String" size="20"/>
+		<column name="GTVEQNM_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtveqnm_code, gtveqnm_desc  FROM gtveqnm  ORDER BY gtveqnm_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVEQTS_RG.ValueSet.Config" name="GTVEQTS_RG">
+    <columns>
+		<column name="GTVEQTS_CODE" type="String" size="10"/>
+		<column name="GTVEQTS_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtveqts_code, gtveqts_desc  FROM gtveqts  ORDER BY gtveqts_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVEQPM_RG.ValueSet.Config" name="GTVEQPM_RG">
+    <columns>
+		<column name="GTVEQPM_CODE" type="String" size="100"/>
+		<column name="GTVEQPM_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtveqpm_code, gtveqpm_desc  FROM gtveqpm  ORDER BY gtveqpm_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GXVBANK_RG.ValueSet.Config" name="GXVBANK_RG">
+    <columns>
+		<column name="GXVBANK_COAS_CODE" type="String" size="1"/>
+		<column name="GXVBANK_BANK_CODE" type="String" size="2"/>
+		<column name="GXVBANK_ACCT_NAME" type="String" size="35"/>
+		<column name="GXVBANK_STATUS_IND" type="String" size="1"/>
+		<column name="ICRGGQ_0" type="String" size="75"/>
+		<column name="ICRGGQ_1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gxvbank_coas_code, gxvbank_bank_code, gxvbank_acct_name, gxvbank_status_ind, to_char(gxvbank_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) ICRGGQ_0, to_char(gxvbank_term_date, G$_DATE.GET_NLS_DATE_FORMAT) ICRGGQ_1  FROM gxvbank  ORDER BY gxvbank_coas_code, gxvbank_bank_code, gxvbank_eff_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVNTYP_RG_IDNAME.ValueSet.Config" name="GTVNTYP_RG_IDNAME">
+    <columns>
+		<column name="GTVNTYP_CODE" type="String" size="4"/>
+		<column name="GTVNTYP_DESC" type="String" size="30"/>
+		<column name="GTVNTYP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvntyp_code, gtvntyp_desc, to_char(gtvntyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvntyp_activity_date  FROM gtvntyp  ORDER BY gtvntyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVHLDD_RG.ValueSet.Config" name="STVHLDD_RG">
+    <columns>
+		<column name="STVHLDD_CODE" type="String" size="2"/>
+		<column name="STVHLDD_DESC" type="String" size="30"/>
+		<column name="STVHLDD_REG_HOLD_IND" type="String" size="1"/>
+		<column name="STVHLDD_ENV_HOLD_IND" type="String" size="1"/>
+		<column name="STVHLDD_TRANS_HOLD_IND" type="String" size="1"/>
+		<column name="STVHLDD_GRAD_HOLD_IND" type="String" size="1"/>
+		<column name="STVHLDD_GRADE_HOLD_IND" type="String" size="1"/>
+		<column name="STVHLDD_AR_HOLD_IND" type="String" size="1"/>
+		<column name="STVHLDD_APPLICATION_HOLD_IND" type="String" size="1"/>
+		<column name="STVHLDD_COMPLIANCE_HOLD_IND" type="String" size="1"/>
+		<column name="STVHLDD_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVHLDD_DISP_WEB_IND" type="String" size="1"/>
+		<column name="STVHLDD_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvhldd_code, stvhldd_desc, stvhldd_reg_hold_ind, stvhldd_env_hold_ind, stvhldd_trans_hold_ind, stvhldd_grad_hold_ind, stvhldd_grade_hold_ind, stvhldd_ar_hold_ind, stvhldd_application_hold_ind, stvhldd_compliance_hold_ind, stvhldd_vr_msg_no, stvhldd_disp_web_ind, to_char(stvhldd_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvhldd_activity_date  FROM stvhldd  ORDER BY stvhldd_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVSTAT_RG_IDNAME.ValueSet.Config" name="STVSTAT_RG_IDNAME">
+    <columns>
+		<column name="STVSTAT_CODE" type="String" size="3"/>
+		<column name="STVSTAT_DESC" type="String" size="30"/>
+		<column name="STVSTAT_EDI_EQUIV" type="String" size="2"/>
+		<column name="STVSTAT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvstat_code, stvstat_desc, stvstat_edi_equiv, to_char(stvstat_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvstat_activity_date  FROM stvstat  ORDER BY stvstat_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GUBOBJS_RG.ValueSet.Config" name="GUBOBJS_RG">
+    <columns>
+		<column name="GUBOBJS_NAME" type="String" size="30"/>
+		<column name="GUBOBJS_DESC" type="String" size="80"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gubobjs_name, gubobjs_desc  FROM gubobjs  WHERE gubobjs_objt_code = 'FORM' AND (gubobjs_user_id = 'BASELINE' OR gubobjs_user_id = user)  ORDER BY gubobjs_name
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVCOMF_RG.ValueSet.Config" name="STVCOMF_RG">
+    <columns>
+		<column name="STVCOMF_CODE" type="String" size="2"/>
+		<column name="STVCOMF_DESC" type="String" size="30"/>
+		<column name="STVCOMF_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvcomf_code, stvcomf_desc, to_char(stvcomf_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvcomf_activity_date  FROM stvcomf  ORDER BY stvcomf_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVCOMS_RG.ValueSet.Config" name="STVCOMS_RG">
+    <columns>
+		<column name="STVCOMS_CODE" type="String" size="2"/>
+		<column name="STVCOMS_DESC" type="String" size="30"/>
+		<column name="STVCOMS_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvcoms_code, stvcoms_desc, to_char(stvcoms_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvcoms_activity_date  FROM stvcoms  ORDER BY stvcoms_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVCOMT_RG.ValueSet.Config" name="STVCOMT_RG">
+    <columns>
+		<column name="STVCOMT_CODE" type="String" size="6"/>
+		<column name="STVCOMT_DESC" type="String" size="30"/>
+		<column name="STVCOMT_TRANS_PRINT" type="String" size="1"/>
+		<column name="STVCOMT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvcomt_code, stvcomt_desc, stvcomt_trans_print, to_char(stvcomt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvcomt_activity_date  FROM stvcomt  ORDER BY stvcomt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVNTYP_RG.ValueSet.Config" name="GTVNTYP_RG">
+    <columns>
+		<column name="GTVNTYP_CODE" type="String" size="4"/>
+		<column name="GTVNTYP_DESC" type="String" size="30"/>
+		<column name="GTVNTYP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvntyp_code, gtvntyp_desc, to_char(gtvntyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvntyp_activity_date  FROM gtvntyp  ORDER BY gtvntyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVTELE_RG.ValueSet.Config" name="STVTELE_RG">
+    <columns>
+		<column name="STVTELE_CODE" type="String" size="4"/>
+		<column name="STVTELE_DESC" type="String" size="30"/>
+		<column name="STVTELE_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvtele_code, stvtele_desc, to_char(stvtele_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvtele_activity_date  FROM stvtele  ORDER BY stvtele_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVTESC_RG.ValueSet.Config" name="STVTESC_RG">
+    <columns>
+		<column name="STVTESC_CODE" type="String" size="4"/>
+		<column name="STVTESC_DESC" type="String" size="30"/>
+		<column name="STVTESC_NO_POSITIONS" type="Number" size="23"/>
+		<column name="STVTESC_DATA_TYPE" type="String" size="1"/>
+		<column name="STVTESC_MIN_VALUE" type="String" size="5"/>
+		<column name="STVTESC_MAX_VALUE" type="String" size="5"/>
+		<column name="STVTESC_ADMR_CODE" type="String" size="4"/>
+		<column name="STVTESC_MIS_CODE" type="String" size="6"/>
+		<column name="STVTESC_ASSESSMENT_FORM" type="String" size="1"/>
+		<column name="STVTESC_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvtesc_code, stvtesc_desc, stvtesc_no_positions, stvtesc_data_type, stvtesc_min_value, stvtesc_max_value, stvtesc_admr_code, stvtesc_mis_code, stvtesc_assessment_form, to_char(stvtesc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvtesc_activity_date  FROM stvtesc  ORDER BY stvtesc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVASRC_RG.ValueSet.Config" name="STVASRC_RG">
+    <columns>
+		<column name="STVASRC_CODE" type="String" size="4"/>
+		<column name="STVASRC_DESC" type="String" size="30"/>
+		<column name="STVASRC_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvasrc_code, stvasrc_desc, to_char(stvasrc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvasrc_activity_date  FROM stvasrc  ORDER BY stvasrc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVSBGI_RG.ValueSet.Config" name="STVSBGI_RG">
+    <columns>
+		<column name="STVSBGI_CODE" type="String" size="6"/>
+		<column name="STVSBGI_TYPE_IND" type="String" size="1"/>
+		<column name="STVSBGI_SRCE_IND" type="String" size="1"/>
+		<column name="STVSBGI_DESC" type="String" size="30"/>
+		<column name="STVSBGI_ADMR_CODE" type="String" size="4"/>
+		<column name="STVSBGI_EDI_CAPABLE" type="String" size="1"/>
+		<column name="STVSBGI_FICE" type="String" size="6"/>
+		<column name="STVSBGI_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVSBGI_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvsbgi_code, stvsbgi_type_ind, stvsbgi_srce_ind, stvsbgi_desc, stvsbgi_admr_code, stvsbgi_edi_capable, stvsbgi_fice, stvsbgi_vr_msg_no, to_char(stvsbgi_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvsbgi_activity_date  FROM stvsbgi  ORDER BY stvsbgi_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVRELG_RG.ValueSet.Config" name="STVRELG_RG">
+    <columns>
+		<column name="STVRELG_CODE" type="String" size="2"/>
+		<column name="STVRELG_DESC" type="String" size="30"/>
+		<column name="STVRELG_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvrelg_code, stvrelg_desc, to_char(stvrelg_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvrelg_activity_date  FROM stvrelg  ORDER BY stvrelg_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVMAJR_RG.ValueSet.Config" name="STVMAJR_RG">
+    <columns>
+		<column name="STVMAJR_CODE" type="String" size="4"/>
+		<column name="STVMAJR_DESC" type="String" size="30"/>
+		<column name="STVMAJR_CIPC_CODE" type="String" size="6"/>
+		<column name="STVMAJR_VALID_MAJOR_IND" type="String" size="1"/>
+		<column name="STVMAJR_VALID_MINOR_IND" type="String" size="1"/>
+		<column name="STVMAJR_VALID_CONCENTRATN_IND" type="String" size="1"/>
+		<column name="STVMAJR_OCCUPATION_IND" type="String" size="1"/>
+		<column name="STVMAJR_AID_ELIGIBILITY_IND" type="String" size="1"/>
+		<column name="STVMAJR_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="STVMAJR_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVMAJR_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvmajr_code, stvmajr_desc, stvmajr_cipc_code, stvmajr_valid_major_ind, stvmajr_valid_minor_ind, stvmajr_valid_concentratn_ind, stvmajr_occupation_ind, stvmajr_aid_eligibility_ind, stvmajr_system_req_ind, stvmajr_vr_msg_no, to_char(stvmajr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvmajr_activity_date  FROM stvmajr  ORDER BY stvmajr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVLGCY_RG.ValueSet.Config" name="STVLGCY_RG">
+    <columns>
+		<column name="STVLGCY_CODE" type="String" size="1"/>
+		<column name="STVLGCY_DESC" type="String" size="30"/>
+		<column name="STVLGCY_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvlgcy_code, stvlgcy_desc, to_char(stvlgcy_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvlgcy_activity_date  FROM stvlgcy  ORDER BY stvlgcy_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVHONR_RG.ValueSet.Config" name="STVHONR_RG">
+    <columns>
+		<column name="STVHONR_CODE" type="String" size="6"/>
+		<column name="STVHONR_DESC" type="String" size="30"/>
+		<column name="STVHONR_TRANSC_PRT_IND" type="String" size="1"/>
+		<column name="STVHONR_COMMENCE_PRT_IND" type="String" size="1"/>
+		<column name="STVHONR_EDI_EQUIV" type="String" size="3"/>
+		<column name="STVHONR_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvhonr_code, stvhonr_desc, stvhonr_transc_prt_ind, stvhonr_commence_prt_ind, stvhonr_edi_equiv, to_char(stvhonr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvhonr_activity_date  FROM stvhonr  ORDER BY stvhonr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVETHN_RG.ValueSet.Config" name="STVETHN_RG">
+    <columns>
+		<column name="STVETHN_CODE" type="String" size="2"/>
+		<column name="STVETHN_DESC" type="String" size="30"/>
+		<column name="STVETHN_ETCT_CODE" type="String" size="1"/>
+		<column name="STVETHN_EDI_EQUIV" type="String" size="1"/>
+		<column name="STVETHN_LMS_EQUIV" type="String" size="1"/>
+		<column name="STVETHN_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvethn_code, stvethn_desc, stvethn_etct_code, stvethn_edi_equiv, stvethn_lms_equiv, to_char(stvethn_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvethn_activity_date  FROM stvethn  ORDER BY stvethn_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVDEGC_RG.ValueSet.Config" name="STVDEGC_RG">
+    <columns>
+		<column name="STVDEGC_CODE" type="String" size="6"/>
+		<column name="STVDEGC_DESC" type="String" size="30"/>
+		<column name="STVDEGC_FA_COUNT_IND" type="String" size="1"/>
+		<column name="STVDEGC_DLEV_CODE" type="String" size="2"/>
+		<column name="STVDEGC_ACAT_CODE" type="String" size="2"/>
+		<column name="STVDEGC_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVDEGC_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="STVDEGC_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvdegc_code, stvdegc_desc, stvdegc_fa_count_ind, stvdegc_dlev_code, stvdegc_acat_code, stvdegc_vr_msg_no, stvdegc_system_req_ind, to_char(stvdegc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvdegc_activity_date  FROM stvdegc  ORDER BY stvdegc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVACTC_RG.ValueSet.Config" name="STVACTC_RG">
+    <columns>
+		<column name="STVACTC_CODE" type="String" size="8"/>
+		<column name="STVACTC_DESC" type="String" size="30"/>
+		<column name="STVACTC_ACTP_CODE" type="String" size="5"/>
+		<column name="STVACTC_ACCG_CODE" type="String" size="5"/>
+		<column name="STVACTC_LEAD_CODE" type="String" size="5"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvactc_code, stvactc_desc, stvactc_actp_code, stvactc_accg_code, stvactc_lead_code  FROM stvactc  ORDER BY stvactc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVMRTL_RG.ValueSet.Config" name="STVMRTL_RG">
+    <columns>
+		<column name="STVMRTL_CODE" type="String" size="1"/>
+		<column name="STVMRTL_DESC" type="String" size="30"/>
+		<column name="STVMRTL_FA_CONV_CODE" type="String" size="1"/>
+		<column name="STVMRTL_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvmrtl_code, stvmrtl_desc, stvmrtl_fa_conv_code, to_char(stvmrtl_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvmrtl_activity_date  FROM stvmrtl  ORDER BY stvmrtl_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVCOLL_RG.ValueSet.Config" name="STVCOLL_RG">
+    <columns>
+		<column name="STVCOLL_CODE" type="String" size="2"/>
+		<column name="STVCOLL_DESC" type="String" size="30"/>
+		<column name="STVCOLL_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="STVCOLL_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVCOLL_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvcoll_code, stvcoll_desc, stvcoll_system_req_ind, stvcoll_vr_msg_no, to_char(stvcoll_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvcoll_activity_date  FROM stvcoll  ORDER BY stvcoll_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVSTAT_RG.ValueSet.Config" name="STVSTAT_RG">
+    <columns>
+		<column name="STVSTAT_CODE" type="String" size="3"/>
+		<column name="STVSTAT_DESC" type="String" size="30"/>
+		<column name="STVSTAT_EDI_EQUIV" type="String" size="2"/>
+		<column name="STVSTAT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvstat_code, stvstat_desc, stvstat_edi_equiv, to_char(stvstat_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvstat_activity_date  FROM stvstat  ORDER BY stvstat_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVNATN_RG.ValueSet.Config" name="STVNATN_RG">
+    <columns>
+		<column name="STVNATN_CODE" type="String" size="5"/>
+		<column name="STVNATN_NATION" type="String" size="30"/>
+		<column name="STVNATN_EDI_EQUIV" type="String" size="2"/>
+		<column name="STVNATN_LMS_EQUIV" type="String" size="2"/>
+		<column name="STVNATN_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvnatn_code, stvnatn_nation, stvnatn_edi_equiv, stvnatn_lms_equiv, to_char(stvnatn_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvnatn_activity_date  FROM stvnatn  ORDER BY stvnatn_nation
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVCNTY_RG.ValueSet.Config" name="STVCNTY_RG">
+    <columns>
+		<column name="STVCNTY_CODE" type="String" size="5"/>
+		<column name="STVCNTY_DESC" type="String" size="30"/>
+		<column name="STVCNTY_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvcnty_code, stvcnty_desc, to_char(stvcnty_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvcnty_activity_date  FROM stvcnty  ORDER BY stvcnty_desc
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVATYP_RG.ValueSet.Config" name="STVATYP_RG">
+    <columns>
+		<column name="STVATYP_CODE" type="String" size="2"/>
+		<column name="STVATYP_DESC" type="String" size="30"/>
+		<column name="STVATYP_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="STVATYP_TELE_CODE" type="String" size="4"/>
+		<column name="STVATYP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvatyp_code, stvatyp_desc, stvatyp_system_req_ind, stvatyp_tele_code, to_char(stvatyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvatyp_activity_date  FROM stvatyp  ORDER BY stvatyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVTERM_RG.ValueSet.Config" name="STVTERM_RG">
+    <columns>
+		<column name="STVTERM_CODE" type="String" size="6"/>
+		<column name="STVTERM_DESC" type="String" size="30"/>
+		<column name="STVTERM_START_DATE" type="String" size="75"/>
+		<column name="STVTERM_END_DATE" type="String" size="75"/>
+		<column name="STVTERM_FA_PROC_YR" type="String" size="4"/>
+		<column name="STVTERM_FA_TERM" type="String" size="1"/>
+		<column name="STVTERM_FA_PERIOD" type="Number" size="23"/>
+		<column name="STVTERM_FA_END_PERIOD" type="Number" size="23"/>
+		<column name="STVTERM_TRMT_CODE" type="String" size="1"/>
+		<column name="STVTERM_ACYR_CODE" type="String" size="4"/>
+		<column name="STVTERM_HOUSING_START_DATE" type="String" size="75"/>
+		<column name="STVTERM_HOUSING_END_DATE" type="String" size="75"/>
+		<column name="STVTERM_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="STVTERM_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvterm_code, stvterm_desc, to_char(stvterm_start_date, G$_DATE.GET_NLS_DATE_FORMAT) stvterm_start_date, to_char(stvterm_end_date, G$_DATE.GET_NLS_DATE_FORMAT) stvterm_end_date, stvterm_fa_proc_yr, stvterm_fa_term, stvterm_fa_period, stvterm_fa_end_period, stvterm_trmt_code, stvterm_acyr_code, to_char(stvterm_housing_start_date, G$_DATE.GET_NLS_DATE_FORMAT) stvterm_housing_start_date, to_char(stvterm_housing_end_date, G$_DATE.GET_NLS_DATE_FORMAT) stvterm_housing_end_date, stvterm_system_req_ind, to_char(stvterm_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvterm_activity_date  FROM stvterm  ORDER BY stvterm_code DESC
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVADID_RG.ValueSet.Config" name="GTVADID_RG">
+    <columns>
+		<column name="GTVADID_CODE" type="String" size="4"/>
+		<column name="GTVADID_DESC" type="String" size="30"/>
+		<column name="GTVADID_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvadid_code, gtvadid_desc, to_char(gtvadid_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvadid_activity_date  FROM gtvadid  ORDER BY gtvadid_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVPROC_RG.ValueSet.Config" name="GTVPROC_RG">
+    <columns>
+		<column name="GTVPROC_CODE" type="String" size="30"/>
+		<column name="GTVPROC_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvproc_code, gtvproc_desc  FROM gtvproc  ORDER BY gtvproc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVCCRD_RG.ValueSet.Config" name="GTVCCRD_RG">
+    <columns>
+		<column name="GTVCCRD_CODE" type="String" size="10"/>
+		<column name="GTVCCRD_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvccrd_code, gtvccrd_desc  FROM gtvccrd  ORDER BY gtvccrd_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVCURR_RG.ValueSet.Config" name="GTVCURR_RG">
+    <columns>
+		<column name="GTVCURR_CURR_CODE" type="String" size="4"/>
+		<column name="GTVCURR_RATE_EFF_DATE" type="String" size="75"/>
+		<column name="GTVCURR_ACTIVITY_DATE" type="String" size="75"/>
+		<column name="GTVCURR_USER_ID" type="String" size="30"/>
+		<column name="GTVCURR_RATE_NCHG_DATE" type="String" size="75"/>
+		<column name="GTVCURR_RATE_TERM_DATE" type="String" size="75"/>
+		<column name="GTVCURR_TITLE" type="String" size="35"/>
+		<column name="GTVCURR_STATUS_IND" type="String" size="1"/>
+		<column name="GTVCURR_AP_ACCT" type="String" size="6"/>
+		<column name="GTVCURR_NATION_CODE" type="String" size="5"/>
+		<column name="GTVCURR_CONV_TYPE" type="String" size="1"/>
+		<column name="GTVCURR_EXCH_ACCT" type="String" size="6"/>
+		<column name="GTVCURR_BANK_CODE" type="String" size="2"/>
+		<column name="GTVCURR_DISB_AGENT_PIDM" type="Number" size="23"/>
+		<column name="GTVCURR_AP_ACCT2" type="String" size="60"/>
+		<column name="GTVCURR_EXCH_ACCT2" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvcurr_curr_code, to_char(gtvcurr_rate_eff_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvcurr_rate_eff_date, to_char(gtvcurr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvcurr_activity_date, gtvcurr_user_id, to_char(gtvcurr_rate_nchg_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvcurr_rate_nchg_date, to_char(gtvcurr_rate_term_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvcurr_rate_term_date, gtvcurr_title, gtvcurr_status_ind, gtvcurr_ap_acct, gtvcurr_nation_code, gtvcurr_conv_type, gtvcurr_exch_acct, gtvcurr_bank_code, gtvcurr_disb_agent_pidm, gtvcurr_ap_acct2, gtvcurr_exch_acct2  FROM gtvcurr  WHERE gtvcurr_rate_eff_date <= sysdate AND (gtvcurr_rate_nchg_date IS NULL OR gtvcurr_rate_nchg_date > sysdate) AND (gtvcurr_rate_term_date IS NULL OR gtvcurr_rate_term_date > sysdate) AND gtvcurr_status_ind = 'A'  ORDER BY gtvcurr_curr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVZIPC_RG.ValueSet.Config" name="GTVZIPC_RG">
+    <columns>
+		<column name="GTVZIPC_CODE" type="String" size="10"/>
+		<column name="GTVZIPC_CITY" type="String" size="20"/>
+		<column name="GTVZIPC_STAT_CODE" type="String" size="3"/>
+		<column name="GTVZIPC_NATN_CODE" type="String" size="5"/>
+		<column name="GTVZIPC_ACTIVITY_DATE" type="String" size="75"/>
+		<column name="GTVZIPC_USER_ID" type="String" size="30"/>
+		<column name="GTVZIPC_CNTY_CODE" type="String" size="5"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvzipc_code, gtvzipc_city, gtvzipc_stat_code, gtvzipc_natn_code, to_char(gtvzipc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvzipc_activity_date, gtvzipc_user_id, gtvzipc_cnty_code  FROM gtvzipc  ORDER BY gtvzipc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVUOMS_RG.ValueSet.Config" name="GTVUOMS_RG">
+    <columns>
+		<column name="GTVUOMS_CODE" type="String" size="4"/>
+		<column name="GTVUOMS_DESC" type="String" size="30"/>
+		<column name="GTVUOMS_ACTIVITY_DATE" type="String" size="75"/>
+		<column name="GTVUOMS_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvuoms_code, gtvuoms_desc, to_char(gtvuoms_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvuoms_activity_date, gtvuoms_user_id  FROM gtvuoms  ORDER BY gtvuoms_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVTTYP_RG.ValueSet.Config" name="GTVTTYP_RG">
+    <columns>
+		<column name="GTVTTYP_CODE" type="String" size="5"/>
+		<column name="GTVTTYP_DESC" type="String" size="30"/>
+		<column name="GTVTTYP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvttyp_code, gtvttyp_desc, to_char(gtvttyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvttyp_activity_date  FROM gtvttyp  ORDER BY gtvttyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVTSTA_RG.ValueSet.Config" name="GTVTSTA_RG">
+    <columns>
+		<column name="GTVTSTA_CODE" type="String" size="6"/>
+		<column name="GTVTSTA_DESC" type="String" size="30"/>
+		<column name="GTVTSTA_ACTIVITY_DATE" type="String" size="75"/>
+		<column name="GTVTSTA_COMPL_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvtsta_code, gtvtsta_desc, to_char(gtvtsta_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvtsta_activity_date, gtvtsta_compl_ind  FROM gtvtsta  ORDER BY gtvtsta_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVTASK_RG.ValueSet.Config" name="GTVTASK_RG">
+    <columns>
+		<column name="GTVTASK_CODE" type="String" size="10"/>
+		<column name="GTVTASK_DESC" type="String" size="30"/>
+		<column name="GTVTASK_ACTIVITY_DATE" type="String" size="75"/>
+		<column name="GTVTASK_TTYP_CODE" type="String" size="5"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvtask_code, gtvtask_desc, to_char(gtvtask_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvtask_activity_date, gtvtask_ttyp_code  FROM gtvtask  ORDER BY gtvtask_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVTARG_RG.ValueSet.Config" name="GTVTARG_RG">
+    <columns>
+		<column name="GTVTARG_CODE" type="String" size="5"/>
+		<column name="GTVTARG_DESC" type="String" size="30"/>
+		<column name="GTVTARG_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvtarg_code, gtvtarg_desc, to_char(gtvtarg_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvtarg_activity_date  FROM gtvtarg  ORDER BY gtvtarg_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSYSI_RG.ValueSet.Config" name="GTVSYSI_RG">
+    <columns>
+		<column name="GTVSYSI_CODE" type="String" size="2"/>
+		<column name="GTVSYSI_DESC" type="String" size="30"/>
+		<column name="GTVSYSI_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsysi_code, gtvsysi_desc, to_char(gtvsysi_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsysi_activity_date  FROM gtvsysi  ORDER BY gtvsysi_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVSUBJ_RG.ValueSet.Config" name="GTVSUBJ_RG">
+    <columns>
+		<column name="GTVSUBJ_CODE" type="String" size="6"/>
+		<column name="GTVSUBJ_DESC" type="String" size="30"/>
+		<column name="GTVSUBJ_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsubj_code, gtvsubj_desc, to_char(gtvsubj_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvsubj_activity_date  FROM gtvsubj  ORDER BY gtvsubj_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVRTNG_RG.ValueSet.Config" name="GTVRTNG_RG">
+    <columns>
+		<column name="GTVRTNG_CODE" type="String" size="2"/>
+		<column name="GTVRTNG_DESC" type="String" size="30"/>
+		<column name="GTVRTNG_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvrtng_code, gtvrtng_desc, to_char(gtvrtng_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvrtng_activity_date  FROM gtvrtng  ORDER BY gtvrtng_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVRSVP_RG.ValueSet.Config" name="GTVRSVP_RG">
+    <columns>
+		<column name="GTVRSVP_CODE" type="String" size="6"/>
+		<column name="GTVRSVP_DESC" type="String" size="30"/>
+		<column name="GTVRSVP_PLAN_TO_ATTEND_IND" type="String" size="1"/>
+		<column name="GTVRSVP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvrsvp_code, gtvrsvp_desc, gtvrsvp_plan_to_attend_ind, to_char(gtvrsvp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvrsvp_activity_date  FROM gtvrsvp  ORDER BY gtvrsvp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVREVN_RG.ValueSet.Config" name="GTVREVN_RG">
+    <columns>
+		<column name="GTVREVN_CODE" type="String" size="2"/>
+		<column name="GTVREVN_DESC" type="String" size="30"/>
+		<column name="GTVREVN_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvrevn_code, gtvrevn_desc, to_char(gtvrevn_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvrevn_activity_date  FROM gtvrevn  ORDER BY gtvrevn_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVRATE_RG.ValueSet.Config" name="GTVRATE_RG">
+    <columns>
+		<column name="GTVRATE_CODE" type="String" size="6"/>
+		<column name="GTVRATE_DESC" type="String" size="30"/>
+		<column name="GTVRATE_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvrate_code, gtvrate_desc, to_char(gtvrate_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvrate_activity_date  FROM gtvrate  ORDER BY gtvrate_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVPURP_RG.ValueSet.Config" name="GTVPURP_RG">
+    <columns>
+		<column name="GTVPURP_CODE" type="String" size="10"/>
+		<column name="GTVPURP_DESC" type="String" size="60"/>
+		<column name="GTVPURP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvpurp_code, gtvpurp_desc, to_char(gtvpurp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvpurp_activity_date  FROM gtvpurp  ORDER BY gtvpurp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVPTYP_RG.ValueSet.Config" name="GTVPTYP_RG">
+    <columns>
+		<column name="GTVPTYP_CODE" type="String" size="5"/>
+		<column name="GTVPTYP_DESC" type="String" size="30"/>
+		<column name="GTVPTYP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvptyp_code, gtvptyp_desc, to_char(gtvptyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvptyp_activity_date  FROM gtvptyp  ORDER BY gtvptyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVPRNT_RG.ValueSet.Config" name="GTVPRNT_RG">
+    <columns>
+		<column name="GTVPRNT_CODE" type="String" size="30"/>
+		<column name="GTVPRNT_DESC" type="String" size="30"/>
+		<column name="GTVPRNT_PRINTER_COMMAND" type="String" size="255"/>
+		<column name="GTVPRNT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvprnt_code, gtvprnt_desc, gtvprnt_printer_command, to_char(gtvprnt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvprnt_activity_date  FROM gtvprnt  ORDER BY gtvprnt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVPARA_RG.ValueSet.Config" name="GTVPARA_RG">
+    <columns>
+		<column name="GTVPARA_CODE" type="String" size="7"/>
+		<column name="GTVPARA_DESC" type="String" size="30"/>
+		<column name="GTVPARA_COMMENT" type="String" size="240"/>
+		<column name="GTVPARA_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvpara_code, gtvpara_desc, gtvpara_comment, to_char(gtvpara_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvpara_activity_date  FROM gtvpara  ORDER BY gtvpara_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVOBJT_RG.ValueSet.Config" name="GTVOBJT_RG">
+    <columns>
+		<column name="GTVOBJT_CODE" type="String" size="10"/>
+		<column name="GTVOBJT_DESC" type="String" size="80"/>
+		<column name="GTVOBJT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvobjt_code, gtvobjt_desc, to_char(gtvobjt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvobjt_activity_date  FROM gtvobjt  ORDER BY gtvobjt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVMENU_RG.ValueSet.Config" name="GTVMENU_RG">
+    <columns>
+		<column name="GTVMENU_CODE" type="String" size="10"/>
+		<column name="GTVMENU_DESC" type="String" size="30"/>
+		<column name="GTVMENU_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvmenu_code, gtvmenu_desc, to_char(gtvmenu_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvmenu_activity_date  FROM gtvmenu  ORDER BY gtvmenu_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVMAIL_RG.ValueSet.Config" name="GTVMAIL_RG">
+    <columns>
+		<column name="GTVMAIL_CODE" type="String" size="3"/>
+		<column name="GTVMAIL_DESC" type="String" size="30"/>
+		<column name="GTVMAIL_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvmail_code, gtvmail_desc, to_char(gtvmail_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvmail_activity_date  FROM gtvmail  ORDER BY gtvmail_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVLETR_RG.ValueSet.Config" name="GTVLETR_RG">
+    <columns>
+		<column name="GTVLETR_CODE" type="String" size="15"/>
+		<column name="GTVLETR_ACTIVITY_DATE" type="String" size="75"/>
+		<column name="GTVLETR_DUPL_IND" type="String" size="1"/>
+		<column name="GTVLETR_DESC" type="String" size="30"/>
+		<column name="GTVLETR_PRINT_COMMAND" type="String" size="10"/>
+		<column name="GTVLETR_LETR_CODE_ALT" type="String" size="15"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvletr_code, to_char(gtvletr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvletr_activity_date, gtvletr_dupl_ind, gtvletr_desc, gtvletr_print_command, gtvletr_letr_code_alt  FROM gtvletr  ORDER BY gtvletr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVFTYP_RG.ValueSet.Config" name="GTVFTYP_RG">
+    <columns>
+		<column name="GTVFTYP_CODE" type="String" size="6"/>
+		<column name="GTVFTYP_DESC" type="String" size="30"/>
+		<column name="GTVFTYP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvftyp_code, gtvftyp_desc, to_char(gtvftyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvftyp_activity_date  FROM gtvftyp  ORDER BY gtvftyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVFUNC_RG.ValueSet.Config" name="GTVFUNC_RG">
+    <columns>
+		<column name="GTVFUNC_CODE" type="String" size="12"/>
+		<column name="GTVFUNC_DESC" type="String" size="60"/>
+		<column name="GTVFUNC_ETYP_CODE" type="String" size="4"/>
+		<column name="GTVFUNC_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvfunc_code, gtvfunc_desc, gtvfunc_etyp_code, to_char(gtvfunc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvfunc_activity_date  FROM gtvfunc  ORDER BY gtvfunc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVFSTA_RG.ValueSet.Config" name="GTVFSTA_RG">
+    <columns>
+		<column name="GTVFSTA_CODE" type="String" size="1"/>
+		<column name="GTVFSTA_DESC" type="String" size="30"/>
+		<column name="GTVFSTA_ACTIVITY_DATE" type="String" size="75"/>
+		<column name="GTVFSTA_ACTIVE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvfsta_code, gtvfsta_desc, to_char(gtvfsta_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvfsta_activity_date, gtvfsta_active_ind  FROM gtvfsta  ORDER BY gtvfsta_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVFEES_RG.ValueSet.Config" name="GTVFEES_RG">
+    <columns>
+		<column name="GTVFEES_CODE" type="String" size="5"/>
+		<column name="GTVFEES_DESC" type="String" size="30"/>
+		<column name="GTVFEES_ACTIVITY_DATE" type="String" size="75"/>
+		<column name="GTVFEES_PAID_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvfees_code, gtvfees_desc, to_char(gtvfees_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvfees_activity_date, gtvfees_paid_ind  FROM gtvfees  ORDER BY gtvfees_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVEXPN_RG.ValueSet.Config" name="GTVEXPN_RG">
+    <columns>
+		<column name="GTVEXPN_CODE" type="String" size="2"/>
+		<column name="GTVEXPN_DESC" type="String" size="30"/>
+		<column name="GTVEXPN_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvexpn_code, gtvexpn_desc, to_char(gtvexpn_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvexpn_activity_date  FROM gtvexpn  ORDER BY gtvexpn_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVEMPH_RG.ValueSet.Config" name="GTVEMPH_RG">
+    <columns>
+		<column name="GTVEMPH_CODE" type="String" size="10"/>
+		<column name="GTVEMPH_DESC" type="String" size="30"/>
+		<column name="GTVEMPH_ACTIVITY_DATE" type="String" size="75"/>
+		<column name="GTVEMPH_COLL_CODE" type="String" size="2"/>
+		<column name="GTVEMPH_DEPT_CODE" type="String" size="4"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvemph_code, gtvemph_desc, to_char(gtvemph_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvemph_activity_date, gtvemph_coll_code, gtvemph_dept_code  FROM gtvemph  ORDER BY gtvemph_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVCALL_RG.ValueSet.Config" name="GTVCALL_RG">
+    <columns>
+		<column name="GTVCALL_CODE" type="String" size="10"/>
+		<column name="GTVCALL_DESC" type="String" size="30"/>
+		<column name="GTVCALL_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvcall_code, gtvcall_desc, to_char(gtvcall_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvcall_activity_date  FROM gtvcall  ORDER BY gtvcall_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVASCD_RG.ValueSet.Config" name="STVASCD_RG">
+    <columns>
+		<column name="STVASCD_CODE" type="String" size="2"/>
+		<column name="STVASCD_DESC" type="String" size="30"/>
+		<column name="STVASCD_COUNT_IN_USAGE" type="String" size="1"/>
+		<column name="STVASCD_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvascd_code, stvascd_desc, stvascd_count_in_usage, to_char(stvascd_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvascd_activity_date  FROM stvascd  ORDER BY stvascd_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVADMR_RG.ValueSet.Config" name="STVADMR_RG">
+    <columns>
+		<column name="STVADMR_CODE" type="String" size="4"/>
+		<column name="STVADMR_DESC" type="String" size="30"/>
+		<column name="STVADMR_TABLE_NAME" type="String" size="7"/>
+		<column name="STVADMR_VR_ELIG_IND" type="String" size="1"/>
+		<column name="STVADMR_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVADMR_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvadmr_code, stvadmr_desc, stvadmr_table_name, stvadmr_vr_elig_ind, stvadmr_vr_msg_no, to_char(stvadmr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvadmr_activity_date  FROM stvadmr  ORDER BY stvadmr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVACYR_RG.ValueSet.Config" name="STVACYR_RG">
+    <columns>
+		<column name="STVACYR_CODE" type="String" size="4"/>
+		<column name="STVACYR_DESC" type="String" size="30"/>
+		<column name="STVACYR_SYSREQ_IND" type="String" size="1"/>
+		<column name="STVACYR_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvacyr_code, stvacyr_desc, stvacyr_sysreq_ind, to_char(stvacyr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvacyr_activity_date  FROM stvacyr  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVACTP_RG.ValueSet.Config" name="STVACTP_RG">
+    <columns>
+		<column name="STVACTP_CODE" type="String" size="5"/>
+		<column name="STVACTP_DESC" type="String" size="30"/>
+		<column name="STVACTP_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="STVACTP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvactp_code, stvactp_desc, stvactp_system_req_ind, to_char(stvactp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvactp_activity_date  FROM stvactp  ORDER BY stvactp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVACCG_RG.ValueSet.Config" name="STVACCG_RG">
+    <columns>
+		<column name="STVACCG_CODE" type="String" size="5"/>
+		<column name="STVACCG_DESC" type="String" size="30"/>
+		<column name="STVACCG_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvaccg_code, stvaccg_desc, to_char(stvaccg_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvaccg_activity_date  FROM stvaccg  ORDER BY stvaccg_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVACAT_RG.ValueSet.Config" name="STVACAT_RG">
+    <columns>
+		<column name="STVACAT_CODE" type="String" size="2"/>
+		<column name="STVACAT_DESC" type="String" size="30"/>
+		<column name="STVACAT_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="STVACAT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvacat_code, stvacat_desc, stvacat_system_req_ind, to_char(stvacat_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvacat_activity_date  FROM stvacat  ORDER BY stvacat_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVMATL_RG.ValueSet.Config" name="STVMATL_RG">
+    <columns>
+		<column name="STVMATL_CODE" type="String" size="4"/>
+		<column name="STVMATL_DESC" type="String" size="30"/>
+		<column name="STVMATL_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvmatl_code, stvmatl_desc, to_char(stvmatl_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvmatl_activity_date  FROM stvmatl  ORDER BY stvmatl_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVLEVL_RG.ValueSet.Config" name="STVLEVL_RG">
+    <columns>
+		<column name="STVLEVL_CODE" type="String" size="2"/>
+		<column name="STVLEVL_DESC" type="String" size="30"/>
+		<column name="STVLEVL_CEU_IND" type="String" size="1"/>
+		<column name="STVLEVL_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVLEVL_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="STVLEVL_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvlevl_code, stvlevl_desc, stvlevl_ceu_ind, stvlevl_vr_msg_no, stvlevl_system_req_ind, to_char(stvlevl_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvlevl_activity_date  FROM stvlevl  ORDER BY stvlevl_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVLEAD_RG.ValueSet.Config" name="STVLEAD_RG">
+    <columns>
+		<column name="STVLEAD_CODE" type="String" size="5"/>
+		<column name="STVLEAD_DESC" type="String" size="30"/>
+		<column name="STVLEAD_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvlead_code, stvlead_desc, to_char(stvlead_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvlead_activity_date  FROM stvlead  ORDER BY stvlead_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVLANG_RG.ValueSet.Config" name="STVLANG_RG">
+    <columns>
+		<column name="STVLANG_CODE" type="String" size="3"/>
+		<column name="STVLANG_DESC" type="String" size="30"/>
+		<column name="STVLANG_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvlang_code, stvlang_desc, to_char(stvlang_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvlang_activity_date  FROM stvlang  ORDER BY stvlang_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVINIT_RG.ValueSet.Config" name="STVINIT_RG">
+    <columns>
+		<column name="STVINIT_CODE" type="String" size="4"/>
+		<column name="STVINIT_DESC" type="String" size="60"/>
+		<column name="STVINIT_TITLE1" type="String" size="35"/>
+		<column name="STVINIT_TITLE2" type="String" size="35"/>
+		<column name="STVINIT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvinit_code, stvinit_desc, stvinit_title1, stvinit_title2, to_char(stvinit_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvinit_activity_date  FROM stvinit  ORDER BY stvinit_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVGEOR_RG.ValueSet.Config" name="STVGEOR_RG">
+    <columns>
+		<column name="STVGEOR_CODE" type="String" size="10"/>
+		<column name="STVGEOR_DESC" type="String" size="30"/>
+		<column name="STVGEOR_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvgeor_code, stvgeor_desc, to_char(stvgeor_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvgeor_activity_date  FROM stvgeor  ORDER BY stvgeor_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVGEOD_RG.ValueSet.Config" name="STVGEOD_RG">
+    <columns>
+		<column name="STVGEOD_CODE" type="String" size="10"/>
+		<column name="STVGEOD_DESC" type="String" size="30"/>
+		<column name="STVGEOD_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvgeod_code, stvgeod_desc, to_char(stvgeod_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvgeod_activity_date  FROM stvgeod  ORDER BY stvgeod_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVFCNT_RG.ValueSet.Config" name="STVFCNT_RG">
+    <columns>
+		<column name="STVFCNT_CODE" type="String" size="2"/>
+		<column name="STVFCNT_DESC" type="String" size="30"/>
+		<column name="STVFCNT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvfcnt_code, stvfcnt_desc, to_char(stvfcnt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvfcnt_activity_date  FROM stvfcnt  ORDER BY stvfcnt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVETYP_RG.ValueSet.Config" name="STVETYP_RG">
+    <columns>
+		<column name="STVETYP_CODE" type="String" size="4"/>
+		<column name="STVETYP_DESC" type="String" size="30"/>
+		<column name="STVETYP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvetyp_code, stvetyp_desc, to_char(stvetyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvetyp_activity_date  FROM stvetyp  ORDER BY stvetyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVETCT_RG.ValueSet.Config" name="STVETCT_RG">
+    <columns>
+		<column name="STVETCT_CODE" type="String" size="1"/>
+		<column name="STVETCT_DESC" type="String" size="30"/>
+		<column name="STVETCT_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="STVETCT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvetct_code, stvetct_desc, stvetct_system_req_ind, to_char(stvetct_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvetct_activity_date  FROM stvetct  ORDER BY stvetct_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVEMPT_RG.ValueSet.Config" name="STVEMPT_RG">
+    <columns>
+		<column name="STVEMPT_CODE" type="String" size="3"/>
+		<column name="STVEMPT_DESC" type="String" size="30"/>
+		<column name="STVEMPT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvempt_code, stvempt_desc, to_char(stvempt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvempt_activity_date  FROM stvempt  ORDER BY stvempt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVDPLM_RG.ValueSet.Config" name="STVDPLM_RG">
+    <columns>
+		<column name="STVDPLM_CODE" type="String" size="2"/>
+		<column name="STVDPLM_DESC" type="String" size="30"/>
+		<column name="STVDPLM_EDI_EQUIV" type="String" size="3"/>
+		<column name="STVDPLM_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvdplm_code, stvdplm_desc, stvdplm_edi_equiv, to_char(stvdplm_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvdplm_activity_date  FROM stvdplm  ORDER BY stvdplm_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVDLEV_RG.ValueSet.Config" name="STVDLEV_RG">
+    <columns>
+		<column name="STVDLEV_CODE" type="String" size="2"/>
+		<column name="STVDLEV_DESC" type="String" size="30"/>
+		<column name="STVDLEV_NUMERIC_VALUE" type="Number" size="23"/>
+		<column name="STVDLEV_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvdlev_code, stvdlev_desc, stvdlev_numeric_value, to_char(stvdlev_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvdlev_activity_date  FROM stvdlev  ORDER BY stvdlev_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVDISA_RG.ValueSet.Config" name="STVDISA_RG">
+    <columns>
+		<column name="STVDISA_CODE" type="String" size="2"/>
+		<column name="STVDISA_DESC" type="String" size="30"/>
+		<column name="STVDISA_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvdisa_code, stvdisa_desc, to_char(stvdisa_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvdisa_activity_date  FROM stvdisa  ORDER BY stvdisa_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVDEPT_RG.ValueSet.Config" name="STVDEPT_RG">
+    <columns>
+		<column name="STVDEPT_CODE" type="String" size="4"/>
+		<column name="STVDEPT_DESC" type="String" size="30"/>
+		<column name="STVDEPT_SYSTEM_REQ_IND" type="String" size="1"/>
+		<column name="STVDEPT_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVDEPT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvdept_code, stvdept_desc, stvdept_system_req_ind, stvdept_vr_msg_no, to_char(stvdept_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvdept_activity_date  FROM stvdept  ORDER BY stvdept_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVDAYS_RG.ValueSet.Config" name="STVDAYS_RG">
+    <columns>
+		<column name="STVDAYS_CODE" type="String" size="1"/>
+		<column name="STVDAYS_DESC" type="String" size="30"/>
+		<column name="STVDAYS_NUMBER" type="String" size="1"/>
+		<column name="STVDAYS_SYSREQ_IND" type="String" size="1"/>
+		<column name="STVDAYS_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvdays_code, stvdays_desc, stvdays_number, stvdays_sysreq_ind, to_char(stvdays_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvdays_activity_date  FROM stvdays  ORDER BY stvdays_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVCITZ_RG.ValueSet.Config" name="STVCITZ_RG">
+    <columns>
+		<column name="STVCITZ_CODE" type="String" size="2"/>
+		<column name="STVCITZ_DESC" type="String" size="30"/>
+		<column name="STVCITZ_CITIZEN_IND" type="String" size="1"/>
+		<column name="STVCITZ_EDI_EQUIV" type="String" size="2"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvcitz_code, stvcitz_desc, stvcitz_citizen_ind, stvcitz_edi_equiv  FROM stvcitz  ORDER BY stvcitz_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVCIPC_RG.ValueSet.Config" name="STVCIPC_RG">
+    <columns>
+		<column name="STVCIPC_CODE" type="String" size="6"/>
+		<column name="STVCIPC_DESC" type="String" size="30"/>
+		<column name="STVCIPC_CIPC_A_IND" type="String" size="1"/>
+		<column name="STVCIPC_CIPC_B_IND" type="String" size="1"/>
+		<column name="STVCIPC_CIPC_C_IND" type="String" size="1"/>
+		<column name="STVCIPC_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvcipc_code, stvcipc_desc, stvcipc_cipc_a_ind, stvcipc_cipc_b_ind, stvcipc_cipc_c_ind, to_char(stvcipc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvcipc_activity_date  FROM stvcipc  ORDER BY stvcipc_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVCAMP_RG.ValueSet.Config" name="STVCAMP_RG">
+    <columns>
+		<column name="STVCAMP_CODE" type="String" size="3"/>
+		<column name="STVCAMP_DESC" type="String" size="30"/>
+		<column name="STVCAMP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvcamp_code, stvcamp_desc, to_char(stvcamp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvcamp_activity_date  FROM stvcamp  ORDER BY stvcamp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVBLDG_RG.ValueSet.Config" name="STVBLDG_RG">
+    <columns>
+		<column name="STVBLDG_CODE" type="String" size="6"/>
+		<column name="STVBLDG_DESC" type="String" size="30"/>
+		<column name="STVBLDG_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVBLDG_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvbldg_code, stvbldg_desc, stvbldg_vr_msg_no, to_char(stvbldg_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvbldg_activity_date  FROM stvbldg  ORDER BY stvbldg_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVBCHR_RG.ValueSet.Config" name="STVBCHR_RG">
+    <columns>
+		<column name="STVBCHR_CODE" type="String" size="1"/>
+		<column name="STVBCHR_DESC" type="String" size="30"/>
+		<column name="STVBCHR_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvbchr_code, stvbchr_desc, to_char(stvbchr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvbchr_activity_date  FROM stvbchr  ORDER BY stvbchr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVPRCD_RG.ValueSet.Config" name="STVPRCD_RG">
+    <columns>
+		<column name="STVPRCD_CODE" type="String" size="4"/>
+		<column name="STVPRCD_DESC" type="String" size="30"/>
+		<column name="STVPRCD_MONTHLY_IND" type="String" size="1"/>
+		<column name="STVPRCD_DAILY_IND" type="String" size="1"/>
+		<column name="STVPRCD_TERMLY_IND" type="String" size="1"/>
+		<column name="STVPRCD_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvprcd_code, stvprcd_desc, stvprcd_monthly_ind, stvprcd_daily_ind, stvprcd_termly_ind, to_char(stvprcd_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvprcd_activity_date  FROM stvprcd  ORDER BY stvprcd_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVPENT_RG.ValueSet.Config" name="STVPENT_RG">
+    <columns>
+		<column name="STVPENT_CODE" type="String" size="3"/>
+		<column name="STVPENT_DESC" type="String" size="30"/>
+		<column name="STVPENT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvpent_code, stvpent_desc, to_char(stvpent_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvpent_activity_date  FROM stvpent  ORDER BY stvpent_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVORIG_RG.ValueSet.Config" name="STVORIG_RG">
+    <columns>
+		<column name="STVORIG_CODE" type="String" size="4"/>
+		<column name="STVORIG_DESC" type="String" size="30"/>
+		<column name="STVORIG_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvorig_code, stvorig_desc, to_char(stvorig_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvorig_activity_date  FROM stvorig  ORDER BY stvorig_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVMEDI_RG.ValueSet.Config" name="STVMEDI_RG">
+    <columns>
+		<column name="STVMEDI_CODE" type="String" size="10"/>
+		<column name="STVMEDI_DESC" type="String" size="30"/>
+		<column name="STVMEDI_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvmedi_code, stvmedi_desc, to_char(stvmedi_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvmedi_activity_date  FROM stvmedi  ORDER BY stvmedi_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVMDEQ_RG.ValueSet.Config" name="STVMDEQ_RG">
+    <columns>
+		<column name="STVMDEQ_CODE" type="String" size="3"/>
+		<column name="STVMDEQ_DESC" type="String" size="30"/>
+		<column name="STVMDEQ_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvmdeq_code, stvmdeq_desc, to_char(stvmdeq_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvmdeq_activity_date  FROM stvmdeq  ORDER BY stvmdeq_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVRELT_RG.ValueSet.Config" name="STVRELT_RG">
+    <columns>
+		<column name="STVRELT_CODE" type="String" size="1"/>
+		<column name="STVRELT_DESC" type="String" size="30"/>
+		<column name="STVRELT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvrelt_code, stvrelt_desc, to_char(stvrelt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvrelt_activity_date  FROM stvrelt  ORDER BY stvrelt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVRDEF_RG.ValueSet.Config" name="STVRDEF_RG">
+    <columns>
+		<column name="STVRDEF_CODE" type="String" size="4"/>
+		<column name="STVRDEF_DESC" type="String" size="30"/>
+		<column name="STVRDEF_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvrdef_code, stvrdef_desc, to_char(stvrdef_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvrdef_activity_date  FROM stvrdef  ORDER BY stvrdef_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVPTYP_RG.ValueSet.Config" name="STVPTYP_RG">
+    <columns>
+		<column name="STVPTYP_CODE" type="String" size="4"/>
+		<column name="STVPTYP_DESC" type="String" size="30"/>
+		<column name="STVPTYP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvptyp_code, stvptyp_desc, to_char(stvptyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvptyp_activity_date  FROM stvptyp  ORDER BY stvptyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVSPSR_RG.ValueSet.Config" name="STVSPSR_RG">
+    <columns>
+		<column name="STVSPSR_CODE" type="String" size="2"/>
+		<column name="STVSPSR_DESC" type="String" size="30"/>
+		<column name="STVSPSR_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvspsr_code, stvspsr_desc, to_char(stvspsr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvspsr_activity_date  FROM stvspsr  ORDER BY stvspsr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVSPON_RG.ValueSet.Config" name="STVSPON_RG">
+    <columns>
+		<column name="STVSPON_CODE" type="String" size="3"/>
+		<column name="STVSPON_DESC" type="String" size="30"/>
+		<column name="STVSPON_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvspon_code, stvspon_desc, to_char(stvspon_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvspon_activity_date  FROM stvspon  ORDER BY stvspon_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVSITE_RG.ValueSet.Config" name="STVSITE_RG">
+    <columns>
+		<column name="STVSITE_CODE" type="String" size="3"/>
+		<column name="STVSITE_DESC" type="String" size="30"/>
+		<column name="STVSITE_STREET_ADDR1" type="String" size="30"/>
+		<column name="STVSITE_STREET_ADDR2" type="String" size="30"/>
+		<column name="STVSITE_STREET_ADDR3" type="String" size="30"/>
+		<column name="STVSITE_CITY" type="String" size="20"/>
+		<column name="STVSITE_STATE" type="String" size="3"/>
+		<column name="STVSITE_ZIPC" type="String" size="10"/>
+		<column name="STVSITE_NATN_CODE" type="String" size="5"/>
+		<column name="STVSITE_FOREIGN_COUNTRY" type="String" size="28"/>
+		<column name="STVSITE_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvsite_code, stvsite_desc, stvsite_street_addr1, stvsite_street_addr2, stvsite_street_addr3, stvsite_city, stvsite_state, stvsite_zipc, stvsite_natn_code, stvsite_foreign_country, to_char(stvsite_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvsite_activity_date  FROM stvsite  ORDER BY stvsite_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVRRCD_RG.ValueSet.Config" name="STVRRCD_RG">
+    <columns>
+		<column name="STVRRCD_CODE" type="String" size="4"/>
+		<column name="STVRRCD_DESC" type="String" size="30"/>
+		<column name="STVRRCD_MONTHLY_IND" type="String" size="1"/>
+		<column name="STVRRCD_DAILY_IND" type="String" size="1"/>
+		<column name="STVRRCD_TERMLY_IND" type="String" size="1"/>
+		<column name="STVRRCD_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvrrcd_code, stvrrcd_desc, stvrrcd_monthly_ind, stvrrcd_daily_ind, stvrrcd_termly_ind, to_char(stvrrcd_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvrrcd_activity_date  FROM stvrrcd  ORDER BY stvrrcd_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVRMST_RG.ValueSet.Config" name="STVRMST_RG">
+    <columns>
+		<column name="STVRMST_CODE" type="String" size="2"/>
+		<column name="STVRMST_DESC" type="String" size="30"/>
+		<column name="STVRMST_INACT_IND" type="String" size="1"/>
+		<column name="STVRMST_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvrmst_code, stvrmst_desc, stvrmst_inact_ind, to_char(stvrmst_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvrmst_activity_date  FROM stvrmst  ORDER BY stvrmst_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVSUBJ_RG.ValueSet.Config" name="STVSUBJ_RG">
+    <columns>
+		<column name="STVSUBJ_CODE" type="String" size="4"/>
+		<column name="STVSUBJ_DESC" type="String" size="30"/>
+		<column name="STVSUBJ_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVSUBJ_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvsubj_code, stvsubj_desc, stvsubj_vr_msg_no, to_char(stvsubj_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvsubj_activity_date  FROM stvsubj  ORDER BY stvsubj_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GLBAPPL_RG.ValueSet.Config" name="GLBAPPL_RG">
+    <columns>
+		<column name="GLBAPPL_APPLICATION" type="String" size="30"/>
+		<column name="GLBAPPL_DESC" type="String" size="30"/>
+		<column name="GLBAPPL_SYSI_CODE" type="String" size="2"/>
+		<column name="GLBAPPL_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT glbappl_application, glbappl_desc, glbappl_sysi_code, to_char(glbappl_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) glbappl_activity_date  FROM glbappl  ORDER BY glbappl_application
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVVTYP_RG.ValueSet.Config" name="STVVTYP_RG">
+    <columns>
+		<column name="STVVTYP_CODE" type="String" size="2"/>
+		<column name="STVVTYP_DESC" type="String" size="30"/>
+		<column name="STVVTYP_ADMR_CODE" type="String" size="4"/>
+		<column name="STVVTYP_NON_RES_IND" type="String" size="1"/>
+		<column name="STVVTYP_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVVTYP_STATSCAN_CDE2" type="Number" size="23"/>
+		<column name="STVVTYP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvvtyp_code, stvvtyp_desc, stvvtyp_admr_code, stvvtyp_non_res_ind, stvvtyp_vr_msg_no, stvvtyp_statscan_cde2, to_char(stvvtyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvvtyp_activity_date  FROM stvvtyp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVDICD_RG.ValueSet.Config" name="GTVDICD_RG">
+    <columns>
+		<column name="GTVDICD_CODE" type="String" size="3"/>
+		<column name="GTVDICD_DESC" type="String" size="30"/>
+		<column name="GTVDICD_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvdicd_code, gtvdicd_desc, to_char(gtvdicd_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvdicd_activity_date  FROM gtvdicd  ORDER BY gtvdicd_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GUROPTM_RG.ValueSet.Config" name="GUROPTM_RG">
+    <columns>
+		<column name="GUROPTM_NAME1_DESC" type="String" size="60"/>
+		<column name="GUROPTM_NAME1" type="String" size="30"/>
+		<column name="GUROPTM_TYPE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT guroptm_name1_desc, guroptm_name1, guroptm_type_ind  FROM guroptm  WHERE (guroptm_form_name = :FORM_HEADER_CURRENT_FORM OR guroptm_form_name = 'SEPARATOR') AND (guroptm_block_valid = :FORM_HEADER_CURRENT_INSTITUTION OR guroptm_block_valid IS NULL)  ORDER BY guroptm_sort_seq
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FORM_HEADER_CURRENT_FORM">
+			<value>
+				<item businessObject="FORM_HEADER" name="CURRENT_FORM"/> 
+			</value>
+        </parameter>
+		<parameter name="FORM_HEADER_CURRENT_INSTITUTION">
+			<value>
+				<item businessObject="FORM_HEADER" name="CURRENT_INSTITUTION"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="G___GENERIC_RGD.ValueSet.Config" name="G$_GENERIC_RGD">
+    <columns>
+		<column name="CODE" type="String" size="10"/>
+		<column name="DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' code, '2' \"desc\"  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___ATVGIFT_RGD.ValueSet.Config" name="G$_ATVGIFT_RGD">
+    <columns>
+		<column name="CODE" type="String" size="2"/>
+		<column name="DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' code, '2' \"desc\", '3' act_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___TBBDETC_RGD.ValueSet.Config" name="G$_TBBDETC_RGD">
+    <columns>
+		<column name="CODE" type="String" size="4"/>
+		<column name="DESC" type="String" size="30"/>
+		<column name="DCAT" type="String" size="3"/>
+		<column name="PRIORITY" type="String" size="3"/>
+		<column name="RECEIPT_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' code, '2' \"desc\", '3' dcat, '4' priority, '5' receipt_ind  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVFUND_RGD.ValueSet.Config" name="G$_FTVFUND_RGD">
+    <columns>
+		<column name="COA" type="String" size="4"/>
+		<column name="FUND" type="String" size="7"/>
+		<column name="TITLE" type="String" size="36"/>
+		<column name="FTYP" type="String" size="5"/>
+		<column name="DATA" type="String" size="11"/>
+		<column name="STAT" type="String" size="7"/>
+		<column name="POOL" type="String" size="9"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' coa, '2' fund, '3' title, '4' ftyp, '5' data, '6' stat, '7' pool, '8' eff, '9' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVRUCL_RGD.ValueSet.Config" name="G$_FTVRUCL_RGD">
+    <columns>
+		<column name="RUCL" type="String" size="5"/>
+		<column name="TITLE" type="String" size="36"/>
+		<column name="TYPE" type="String" size="10"/>
+		<column name="STAT" type="String" size="7"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' rucl, '2' title, '3' type, '4' stat, '5' eff, '6' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVPROG_RGD.ValueSet.Config" name="G$_FTVPROG_RGD">
+    <columns>
+		<column name="COA" type="String" size="4"/>
+		<column name="PROG" type="String" size="7"/>
+		<column name="TITLE" type="String" size="36"/>
+		<column name="DATA" type="String" size="11"/>
+		<column name="STAT" type="String" size="7"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' coa, '2' prog, '3' title, '4' data, '5' stat, '6' eff, '7' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVORGN_RGD.ValueSet.Config" name="G$_FTVORGN_RGD">
+    <columns>
+		<column name="COAS" type="String" size="4"/>
+		<column name="ORGN" type="String" size="7"/>
+		<column name="TITLE" type="String" size="36"/>
+		<column name="DATA" type="String" size="11"/>
+		<column name="STATUS" type="String" size="7"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' coas, '2' orgn, '3' title, '4' data, '5' status, '6' eff, '7' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVLOCN_RGD.ValueSet.Config" name="G$_FTVLOCN_RGD">
+    <columns>
+		<column name="COA" type="String" size="4"/>
+		<column name="LOCN" type="String" size="7"/>
+		<column name="TITLE" type="String" size="36"/>
+		<column name="STAT" type="String" size="7"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' coa, '2' locn, '3' title, '4' stat, '5' eff, '6' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVCOAS_RGD.ValueSet.Config" name="G$_FTVCOAS_RGD">
+    <columns>
+		<column name="COAS" type="String" size="4"/>
+		<column name="TITLE" type="String" size="36"/>
+		<column name="STATUS" type="String" size="7"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' coas, '2' title, '3' status, '4' eff, '5' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___GXRDIRD_RGD.ValueSet.Config" name="G$_GXRDIRD_RGD">
+    <columns>
+		<column name="ROUT_NUM" type="String" size="9"/>
+		<column name="GXVDIRD_DESC" type="String" size="60"/>
+		<column name="ACCT_NUM" type="String" size="17"/>
+		<column name="ACCT_TYPE" type="String" size="8"/>
+		<column name="PRIORITY" type="String" size="40"/>
+		<column name="AMT_PCT" type="String" size="41"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gxrdird_bank_rout_num rout_num, gxvdird_desc, gxrdird_bank_acct_num acct_num, decode(gxrdird_acct_type, 'C', 'Checking', 'S', G___NLS.Get('GOQOLIB-0042', 'FORM', 'Savings')) acct_type, to_char(gxrdird_priority) priority, nvl(to_char(gxrdird_amount, '999999999D99'), gxrdird_percent) || decode(gxrdird_amount, NULL, '%') amt_pct, to_char(gxrdird_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM gxrdird, gxvdird  WHERE gxrdird_hr_ind = 'A' AND gxvdird_code_bank_rout_num = gxrdird_bank_rout_num 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___GXVBANK_RGD.ValueSet.Config" name="G$_GXVBANK_RGD">
+    <columns>
+		<column name="COA" type="String" size="4"/>
+		<column name="CODE" type="String" size="5"/>
+		<column name="NAME" type="String" size="36"/>
+		<column name="STATUS" type="String" size="7"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' coa, '2' code, '3' name, '4' status, '5' eff, '6' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVACTV_RGD.ValueSet.Config" name="G$_FTVACTV_RGD">
+    <columns>
+		<column name="COA" type="String" size="4"/>
+		<column name="ACTV" type="String" size="7"/>
+		<column name="TITLE" type="String" size="36"/>
+		<column name="STAT" type="String" size="7"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' coa, '2' actv, '3' title, '4' stat, '5' eff, '6' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVACCT_RGD.ValueSet.Config" name="G$_FTVACCT_RGD">
+    <columns>
+		<column name="COA" type="String" size="4"/>
+		<column name="ACCT" type="String" size="7"/>
+		<column name="TITLE" type="String" size="36"/>
+		<column name="ATYP" type="String" size="5"/>
+		<column name="DATA" type="String" size="11"/>
+		<column name="STAT" type="String" size="7"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' coa, '2' acct, '3' title, '4' atyp, '5' data, '6' stat, '7' eff, '8' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVACCI_RGD.ValueSet.Config" name="G$_FTVACCI_RGD">
+    <columns>
+		<column name="COA" type="String" size="4"/>
+		<column name="ACCI" type="String" size="16"/>
+		<column name="TITLE" type="String" size="36"/>
+		<column name="STAT" type="String" size="7"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' coa, '2' acci, '3' title, '4' stat, '5' eff, '6' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GJQPVAL_RG.ValueSet.Config" name="GJQPVAL_RG">
+    <columns>
+		<column name="GJBPVAL_VALUE" type="String" size="30"/>
+		<column name="GJBPVAL_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gjbpval_value, gjbpval_desc  FROM gjbpval  WHERE gjbpval_job = :GLOBAL_KEY_JOB_NAME AND gjbpval_number = :GLOBAL_JOB_NUMBER  ORDER BY gjbpval_value
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_KEY_JOB_NAME">
+			<value>
+				<globalVariable name="KEY_JOB_NAME"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_JOB_NUMBER">
+			<value>
+				<globalVariable name="JOB_NUMBER"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVPROJ_RGD.ValueSet.Config" name="G$_FTVPROJ_RGD">
+    <columns>
+		<column name="PROJ" type="String" size="1"/>
+		<column name="DESC" type="String" size="1"/>
+		<column name="EFF" type="String" size="12"/>
+		<column name="TERM" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' proj, '2' \"desc\", '3' eff, '4' term  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVCTYP_RGD.ValueSet.Config" name="G$_FTVCTYP_RGD">
+    <columns>
+		<column name="CTYP" type="String" size="2"/>
+		<column name="SHORT_DESC" type="String" size="10"/>
+		<column name="LONG_DESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' ctyp, '2' short_desc, '3' long_desc  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___ROIAIDY_RGD.ValueSet.Config" name="G$_ROIAIDY_RGD">
+    <columns>
+		<column name="CODE" type="String" size="5"/>
+		<column name="DESC" type="String" size="30"/>
+		<column name="STATUS" type="String" size="2"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' code, '2' \"desc\", '3' status  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___FTVATYP_RGD.ValueSet.Config" name="G$_FTVATYP_RGD">
+    <columns>
+		<column name="COAS" type="String" size="1"/>
+		<column name="ATYP" type="String" size="2"/>
+		<column name="TITLE" type="String" size="35"/>
+		<column name="PRED" type="String" size="2"/>
+		<column name="STAT" type="String" size="12"/>
+		<column name="EFFDT" type="String" size="12"/>
+		<column name="TERMDT" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' coas, '2' atyp, '3' title, '4' pred, '5' stat, '6' effdt, '7' termdt  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="G___SEARCH_RG.ValueSet.Config" name="G$_SEARCH_RG">
+    <columns>
+		<column name="DESC" type="String" size="1"/>
+		<column name="CODE" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' \"DESC\", '2' \"CODE\"  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVTRMT_RG.ValueSet.Config" name="STVTRMT_RG">
+    <columns>
+		<column name="STVTRMT_CODE" type="String" size="1"/>
+		<column name="STVTRMT_DESC" type="String" size="30"/>
+		<column name="STVTRMT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvtrmt_code, stvtrmt_desc, to_char(stvtrmt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvtrmt_activity_date  FROM stvtrmt  ORDER BY stvtrmt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GUBLHLP_FLD_RG.ValueSet.Config" name="GUBLHLP_FLD_RG">
+    <columns>
+		<column name="GUBLHLP_FIELD_NAME" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT gublhlp_field_name  FROM gublhlp  WHERE gublhlp_form_name = :FORM_NAME AND gublhlp_block_name = :BLOCK_NAME AND :FORM_NAME IS NOT NULL AND :BLOCK_NAME IS NOT NULL  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FORM_NAME">
+			<value>
+				<item businessObject="" name="FORM_NAME"/> 
+			</value>
+        </parameter>
+		<parameter name="BLOCK_NAME">
+			<value>
+				<item businessObject="" name="BLOCK_NAME"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="GUBLHLP_BLK_RG.ValueSet.Config" name="GUBLHLP_BLK_RG">
+    <columns>
+		<column name="GUBLHLP_BLOCK_NAME" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT gublhlp_block_name  FROM gublhlp  WHERE gublhlp_form_name = :FORM_NAME AND :FORM_NAME IS NOT NULL  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FORM_NAME">
+			<value>
+				<item businessObject="" name="FORM_NAME"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="GUBLHLP_FRM_RG.ValueSet.Config" name="GUBLHLP_FRM_RG">
+    <columns>
+		<column name="GUBLHLP_FORM_NAME" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT gublhlp_form_name  FROM gublhlp  WHERE gublhlp_form_name LIKE decode(user, 'FAISPRD', 'R', 'HRISPRD', 'P', 'POSNPRD', 'N', substr(user, 1, 1)) || '%'  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GUBBHLP_FLD_RG.ValueSet.Config" name="GUBBHLP_FLD_RG">
+    <columns>
+		<column name="GUBBHLP_FIELD_NAME" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT gubbhlp_field_name  FROM gubbhlp  WHERE gubbhlp_form_name = :FORM_NAME AND gubbhlp_block_name = :BLOCK_NAME AND :FORM_NAME IS NOT NULL AND :BLOCK_NAME IS NOT NULL  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FORM_NAME">
+			<value>
+				<item businessObject="" name="FORM_NAME"/> 
+			</value>
+        </parameter>
+		<parameter name="BLOCK_NAME">
+			<value>
+				<item businessObject="" name="BLOCK_NAME"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="GUBBHLP_BLK_RG.ValueSet.Config" name="GUBBHLP_BLK_RG">
+    <columns>
+		<column name="GUBBHLP_BLOCK_NAME" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT gubbhlp_block_name  FROM gubbhlp  WHERE gubbhlp_form_name = :FORM_NAME AND :FORM_NAME IS NOT NULL  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FORM_NAME">
+			<value>
+				<item businessObject="" name="FORM_NAME"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="GUBBHLP_FRM_RG.ValueSet.Config" name="GUBBHLP_FRM_RG">
+    <columns>
+		<column name="GUBBHLP_FORM_NAME" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT gubbhlp_form_name  FROM gubbhlp  WHERE gubbhlp_form_name LIKE decode(user, 'FAISPRD', 'R', 'HRISPRD', 'P', 'POSNPRD', 'N', substr(user, 1, 1)) || '%'  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVHOND_RG.ValueSet.Config" name="STVHOND_RG">
+    <columns>
+		<column name="STVHOND_CODE" type="String" size="6"/>
+		<column name="STVHOND_DESC" type="String" size="30"/>
+		<column name="STVHOND_TRANSC_PRT_IND" type="String" size="1"/>
+		<column name="STVHOND_COMMENCE_PRT_IND" type="String" size="1"/>
+		<column name="STVHOND_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvhond_code, stvhond_desc, stvhond_transc_prt_ind, stvhond_commence_prt_ind, to_char(stvhond_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvhond_activity_date  FROM stvhond  ORDER BY stvhond_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVEMAL_RG.ValueSet.Config" name="GTVEMAL_RG">
+    <columns>
+		<column name="GTVEMAL_CODE" type="String" size="4"/>
+		<column name="GTVEMAL_DESC" type="String" size="60"/>
+		<column name="GTVEMAL_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvemal_code, gtvemal_desc, to_char(gtvemal_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvemal_activity_date  FROM gtvemal  ORDER BY gtvemal_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVASTY_RG.ValueSet.Config" name="STVASTY_RG">
+    <columns>
+		<column name="STVASTY_CODE" type="String" size="4"/>
+		<column name="STVASTY_DESC" type="String" size="30"/>
+		<column name="STVASTY_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvasty_code, stvasty_desc, to_char(stvasty_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvasty_activity_date  FROM stvasty  ORDER BY stvasty_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GORDWIZ_RG.ValueSet.Config" name="GORDWIZ_RG">
+    <columns>
+		<column name="GORDWIZ_WIZARD_NAME" type="String" size="15"/>
+		<column name="GORDWIZ_WIZARD_DESCRIPTION" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gordwiz_wizard_name, gordwiz_wizard_description  FROM gordwiz  WHERE gordwiz_dadd_code = :GLOBAL_DSKT_ADDIN_CODE AND (((gordwiz_student_ind = :GLOBAL_STUSYS) AND :GLOBAL_STUSYS = 'Y') OR ((gordwiz_finaid_ind = :GLOBAL_RESSYS) AND :GLOBAL_RESSYS = 'Y') OR ((gordwiz_posbud_ind = :GLOBAL_POSBUD) AND :GLOBAL_POSBUD = 'Y') OR ((gordwiz_bilcsh_ind = :GLOBAL_BILCSH) AND :GLOBAL_BILCSH = 'Y') OR ((gordwiz_humanre_ind = :GLOBAL_HRESYS) AND :GLOBAL_HRESYS = 'Y') OR ((gordwiz_finance_ind = :GLOBAL_FINSYS) AND :GLOBAL_FINSYS = 'Y') OR ((gordwiz_alumni_ind = :GLOBAL_ALUSYS) AND :GLOBAL_ALUSYS = 'Y')) 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_DSKT_ADDIN_CODE">
+			<value>
+				<globalVariable name="DSKT_ADDIN_CODE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_STUSYS">
+			<value>
+				<globalVariable name="STUSYS"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_RESSYS">
+			<value>
+				<globalVariable name="RESSYS"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_POSBUD">
+			<value>
+				<globalVariable name="POSBUD"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_BILCSH">
+			<value>
+				<globalVariable name="BILCSH"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_HRESYS">
+			<value>
+				<globalVariable name="HRESYS"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FINSYS">
+			<value>
+				<globalVariable name="FINSYS"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_ALUSYS">
+			<value>
+				<globalVariable name="ALUSYS"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="GTVDPRP_RG.ValueSet.Config" name="GTVDPRP_RG">
+    <columns>
+		<column name="GTVDPRP_CODE" type="String" size="15"/>
+		<column name="GTVDPRP_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvdprp_code, gtvdprp_desc  FROM gtvdprp  ORDER BY gtvdprp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVDSTP_RG.ValueSet.Config" name="GTVDSTP_RG">
+    <columns>
+		<column name="GTVDSTP_CODE" type="String" size="15"/>
+		<column name="GTVDSTP_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvdstp_code, gtvdstp_desc  FROM gtvdstp  ORDER BY gtvdstp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVDADD_GORDWIZ_RG.ValueSet.Config" name="GTVDADD_GORDWIZ_RG">
+    <columns>
+		<column name="GTVDADD_CODE" type="String" size="15"/>
+		<column name="GTVDADD_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvdadd_code, gtvdadd_desc  FROM gtvdadd  WHERE  EXISTS(SELECT 'x' GTVDADD_CODE  FROM gordwiz  WHERE gordwiz_dadd_code = gtvdadd_code AND (((gordwiz_student_ind = :GLOBAL_STUSYS) AND :GLOBAL_STUSYS = 'Y') OR ((gordwiz_finaid_ind = :GLOBAL_RESSYS) AND :GLOBAL_RESSYS = 'Y') OR ((gordwiz_posbud_ind = :GLOBAL_POSBUD) AND :GLOBAL_POSBUD = 'Y') OR ((gordwiz_bilcsh_ind = :GLOBAL_BILCSH) AND :GLOBAL_BILCSH = 'Y') OR ((gordwiz_humanre_ind = :GLOBAL_HRESYS) AND :GLOBAL_HRESYS = 'Y') OR ((gordwiz_finance_ind = :GLOBAL_FINSYS) AND :GLOBAL_FINSYS = 'Y') OR ((gordwiz_alumni_ind = :GLOBAL_ALUSYS) AND :GLOBAL_ALUSYS = 'Y')) )  ORDER BY gtvdadd_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_STUSYS">
+			<value>
+				<globalVariable name="STUSYS"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_RESSYS">
+			<value>
+				<globalVariable name="RESSYS"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_POSBUD">
+			<value>
+				<globalVariable name="POSBUD"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_BILCSH">
+			<value>
+				<globalVariable name="BILCSH"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_HRESYS">
+			<value>
+				<globalVariable name="HRESYS"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_FINSYS">
+			<value>
+				<globalVariable name="FINSYS"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_ALUSYS">
+			<value>
+				<globalVariable name="ALUSYS"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="GTVDADD_RG.ValueSet.Config" name="GTVDADD_RG">
+    <columns>
+		<column name="GTVDADD_CODE" type="String" size="15"/>
+		<column name="GTVDADD_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvdadd_code, gtvdadd_desc  FROM gtvdadd  ORDER BY gtvdadd_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GOBFDMN_RG.ValueSet.Config" name="GOBFDMN_RG">
+    <columns>
+		<column name="GTVFDMN_CODE" type="String" size="30"/>
+		<column name="GTVFDMN_DESC" type="String" size="60"/>
+		<column name="GOBFDMN_FDTP_CODE" type="String" size="5"/>
+		<column name="GOBFDMN_ENABLE_PII_IND" type="String" size="1"/>
+		<column name="GOBFDMN_TABLE_NAME" type="String" size="30"/>
+		<column name="ACTIVITY_DATE" type="String" size="11"/>
+		<column name="GOBFDMN_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvfdmn_code, gtvfdmn_desc, gobfdmn_fdtp_code, gobfdmn_enable_pii_ind, gobfdmn_table_name, to_char(gobfdmn_activity_date, G$_DATE.GET_NLS_DATE_FORMAT), gobfdmn_user_id  FROM gtvfdmn, gobfdmn  WHERE gtvfdmn_code = gobfdmn_fdmn_code  ORDER BY gtvfdmn_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GORPFII_RG.ValueSet.Config" name="GORPFII_RG">
+    <columns>
+		<column name="GORFPII_FGAC_USER_ID" type="String" size="30"/>
+		<column name="GORFPII_FDMN_CODE_PII" type="String" size="30"/>
+		<column name="ACTIVITY_DATE" type="String" size="11"/>
+		<column name="GORFPII_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gorfpii_fgac_user_id, gorfpii_fdmn_code_pii, to_char(gorfpii_activity_date, G$_DATE.GET_NLS_DATE_FORMAT), gorfpii_user_id  FROM gorfpii  ORDER BY gorfpii_fdmn_code_pii
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVFBPR_RG.ValueSet.Config" name="GTVFBPR_RG">
+    <columns>
+		<column name="GTVFBPR_CODE" type="String" size="30"/>
+		<column name="GTVFBPR_DESC" type="String" size="60"/>
+		<column name="ACTIVITY_DATE" type="String" size="11"/>
+		<column name="GTVFBPR_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvfbpr_code, gtvfbpr_desc, to_char(gtvfbpr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT), gtvfbpr_user_id  FROM gtvfbpr  ORDER BY gtvfbpr_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVFDMN_RG.ValueSet.Config" name="GTVFDMN_RG">
+    <columns>
+		<column name="GTVFDMN_CODE" type="String" size="30"/>
+		<column name="GTVFDMN_DESC" type="String" size="60"/>
+		<column name="ACTIVITY_DATE" type="String" size="11"/>
+		<column name="GTVFDMN_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvfdmn_code, gtvfdmn_desc, to_char(gtvfdmn_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) ACTIVITY_DATE, gtvfdmn_user_id  FROM gtvfdmn  ORDER BY gtvfdmn_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVFDTP_RG.ValueSet.Config" name="GTVFDTP_RG">
+    <columns>
+		<column name="GTVFDTP_CODE" type="String" size="5"/>
+		<column name="GTVFDTP_DESC" type="String" size="60"/>
+		<column name="ACTIVITY_DATE" type="String" size="11"/>
+		<column name="GTVFDTP_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvfdtp_code, gtvfdtp_desc, to_char(gtvfdtp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) ACTIVITY_DATE, gtvfdtp_user_id  FROM gtvfdtp  ORDER BY gtvfdtp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVFGAC_RG.ValueSet.Config" name="GTVFGAC_RG">
+    <columns>
+		<column name="GTVFGAC_CODE" type="String" size="30"/>
+		<column name="GTVFGAC_DESC" type="String" size="60"/>
+		<column name="ACTIVITY_DATE" type="String" size="11"/>
+		<column name="GTVFGAC_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvfgac_code, gtvfgac_desc, to_char(gtvfgac_activity_date, G$_DATE.GET_NLS_DATE_FORMAT), gtvfgac_user_id  FROM gtvfgac  ORDER BY gtvfgac_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVLFST_RG.ValueSet.Config" name="GTVLFST_RG">
+    <columns>
+		<column name="GTVLFST_CODE" type="String" size="15"/>
+		<column name="GTVLFST_DESC" type="String" size="30"/>
+		<column name="ACTIVITY_DATE" type="String" size="11"/>
+		<column name="GTVLFST_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvlfst_code, gtvlfst_desc, to_char(gtvlfst_activity_date, G$_DATE.GET_NLS_DATE_FORMAT), gtvlfst_user_id  FROM gtvlfst  ORDER BY gtvlfst_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GTVRRAC_RG.ValueSet.Config" name="GTVRRAC_RG">
+    <columns>
+		<column name="GTVRRAC_CODE" type="String" size="1"/>
+		<column name="GTVRRAC_DESC" type="String" size="60"/>
+		<column name="GTVRRAC_SYS_REQ_IND" type="String" size="1"/>
+		<column name="GTVRRAC_USER_ID" type="String" size="30"/>
+		<column name="GTVRRAC_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvrrac_code, gtvrrac_desc, gtvrrac_sys_req_ind, gtvrrac_user_id, gtvrrac_activity_date  FROM gtvrrac  ORDER BY gtvrrac_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GORRACE_RG.ValueSet.Config" name="GORRACE_RG">
+    <columns>
+		<column name="GORRACE_RACE_CDE" type="String" size="3"/>
+		<column name="GORRACE_DESC" type="String" size="60"/>
+		<column name="GORRACE_RRAC_CODE" type="String" size="1"/>
+		<column name="GORRACE_EDI_EQUIV" type="String" size="1"/>
+		<column name="GORRACE_LMS_EQUIV" type="String" size="1"/>
+		<column name="GORRACE_USER_ID" type="String" size="30"/>
+		<column name="GORRACE_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gorrace_race_cde, gorrace_desc, gorrace_rrac_code, gorrace_edi_equiv, gorrace_lms_equiv, gorrace_user_id, gorrace_activity_date  FROM gorrace  ORDER BY gorrace_race_cde
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="GOBSDTB_RG.ValueSet.Config" name="GOBSDTB_RG">
+    <columns>
+		<column name="GOBSDTB_TABLE_NAME" type="String" size="30"/>
+		<column name="GOBSDTB_OWNER" type="String" size="30"/>
+		<column name="GOBSDTB_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gobsdtb_table_name, gobsdtb_owner, TO_CHAR(gobsdtb_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gobsdtb_activity_date  FROM gobsdtb  ORDER BY gobsdtb_table_name
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="WFED_TRANS_NO_RG.ValueSet.Config" name="WFED_TRANS_NO_RG">
+    <columns>
+		<column name="GORWFDH_TRANS_NO" type="Number" size="23"/>
+		<column name="CODE" type="String" size="2000"/>
+		<column name="DESC" type="String" size="2000"/>
+		<column name="GORWFDH_STATUS" type="String" size="20"/>
+		<column name="GORWFDH_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="GORWFDH_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gorwfdh_trans_no, gokwfed.f_get_trans_code(gorwfdh_trans_no) \"code\", gokwfed.f_get_code_desc(gokwfed.f_get_trans_code(gorwfdh_trans_no)) \"desc\", gorwfdh_status, gorwfdh_activity_date, gorwfdh_user_id  FROM gorwfdh a  WHERE gorwfdh_seq_no = (SELECT max(gorwfdh_seq_no)  FROM gorwfdh  WHERE gorwfdh_trans_no = a.gorwfdh_trans_no ) AND gokwfed.f_get_access(gorwfdh_trans_no) = 'Y'  ORDER BY gorwfdh_trans_no
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ALL_TAB_COLUMNS_RG.ValueSet.Config" name="ALL_TAB_COLUMNS_RG">
+    <columns>
+		<column name="COLUMN_NAME" type="String" size="30"/>
+		<column name="DATA_TYPE" type="String" size="106"/>
+		<column name="NEW_LENGTH" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT column_name, data_type, DECODE(data_type, 'NUMBER', data_precision, 'VARCHAR2', char_length, 'DATE', '', 'CHAR', char_length, data_length) new_length  FROM all_tab_columns  WHERE table_name = :KEY_BLOCK_KEY_BLOCK_TABLE_NAME 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="KEY_BLOCK_KEY_BLOCK_TABLE_NAME">
+			<value>
+				<item businessObject="KEY_BLOCK" name="KEY_BLOCK_TABLE_NAME"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+
+<valueSet id="GTVPLAT_RG.ValueSet.Config" name="GTVPLAT_RG">
+    <columns>
+		<column name="GTVPLAT_CODE" type="String" size="30"/>
+		<column name="GTVPLAT_DESC" type="String" size="106"/>
+		<column name="GTVPLAT_SYS_REQ_IND" type="String" size="23"/>
+		<column name="GTVPLAT_USER_ID" type="String" size="23"/>
+		<column name="GTVPLAT_ACTIVITY_DATE" type="Date" size="23"/>
+	</columns>
+	<query><![CDATA[
+	select gtvplat_code, gtvplat_desc, gtvplat_sys_req_ind, gtvplat_user_id, gtvplat_activity_date from gtvplat order by gtvplat_code 
+	]]>
+	</query>
+	 <parameters>
+	</parameters>
+</valueSet>
+
+</b:beans>

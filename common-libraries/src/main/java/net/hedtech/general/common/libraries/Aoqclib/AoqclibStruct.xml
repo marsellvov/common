@@ -1,0 +1,206 @@
+<FormStructure Name="AOQCLIB" LovDataPath="/net/hedtech/general/common/libraries/Aoqclib/AoqclibLovs.xml" AlertDataPath="/net/hedtech/general/common/libraries/Aoqclib/AoqclibAlerts.xml">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/general/common/libraries/Aoqclib/views/ViewMainWindow">
+      <TabPageCanvas Id="A$_GIFT_PLEDGE_CANVAS">
+        <Page Id="AGRADTL_TAB">
+        </Page>
+        <Page Id="AGRPGBE_TAB">
+        </Page>
+      </TabPageCanvas>
+      <TabPageCanvas Id="A$_CONTACTS_CANVAS">
+        <Page Id="AMRATTN_TAB">
+        </Page>
+      </TabPageCanvas>
+    </Window>
+    <Window Id="USER_ALERTS_WINDOW" Url="net/hedtech/general/common/libraries/Aoqclib/views/ViewUserAlertsWindow" Modal="true">
+      <ContentCanvas Id="A$_USER_ALERT_CANVAS">
+      </ContentCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="FORM_HEADER">
+      <Item Id="ATTN_COUNT" CanvasName="" AllowSearch="false" Navigable="false" AutoSkip="true" MinValue="0" MaxValue="99" MaxLength="2" Enabled="false" Visible="false" Type="DisplayItem">
+      </Item>
+      <Item Id="DUMMY_ITEM" CanvasName="" AllowSearch="false" Navigable="false" MaxLength="30" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="CURRENT_RELEASE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="10" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="CALLED_FROM_ITEM" CanvasName="" Navigable="false" MaxLength="60" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="HOLD_KEY_IDNO_FOR_ALERTS" CanvasName="" Navigable="false" MaxLength="9" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="ADTL_NEXT_BLOCK_OK" CanvasName="" Navigable="false" MaxLength="1" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_NEXT_BLOCK_OK" CanvasName="" Navigable="false" MaxLength="1" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="AURALRT" MultiRecord="true" AllowInsert="false" AllowDelete="false" AllowUpdate="false">
+      <Item Id="ALRT_PARK_SPOT" CanvasName="A$_USER_ALERT_CANVAS" Navigable="false" MaxLength="30" Type="TextItem">
+      </Item>
+      <Item Id="AURALRT_MESSAGE" CanvasName="A$_USER_ALERT_CANVAS" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="20000" Type="TextItem">
+      </Item>
+      <Item Id="USER_ALERTS_BTN" CanvasName="" Navigable="false" MaxLength="30" Enabled="false" Type="Button">
+      </Item>
+      <Item Id="USER_ALERT_CLOSE_BTN" CanvasName="A$_USER_ALERT_CANVAS" MaxLength="30" Enabled="false" Type="Button">
+      </Item>
+    </Block>
+    <Block Id="AGRADTL" MultiRecord="true">
+      <Item Id="AGRADTL_ADTL_CODE" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" Lov="ATVADTL_LOV" AllowUpdate="false" AutoSkip="true" MaxLength="15" Type="TextItem">
+      </Item>
+      <Item Id="AGRADTL_ADTL_CODE_LBT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="ADTL_DESC" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="60" Type="DisplayItem">
+      </Item>
+      <Item Id="AGRADTL_PLEDGE_NO" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" Lov="AGRGDES_GIFT_PIDM_LOV" AutoSkip="true" MaxLength="7" Type="TextItem">
+      </Item>
+      <Item Id="AGRADTL_PLEDGE_NO_LBT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="AGRADTL_GIFT_NO" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" Lov="AGRGDES_PLEDGE_PIDM_LOV" AutoSkip="true" MaxLength="7" Type="TextItem">
+      </Item>
+      <Item Id="AGRADTL_GIFT_NO_LBT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="AGRADTL_AMT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" MinValue="-999999999999999.99" MaxValue=" 999999999999999.99" MaxLength="22" Type="TextItem">
+      </Item>
+      <Item Id="AGRADTL_DETAILS" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" MaxLength="120" Type="TextItem">
+      </Item>
+      <Item Id="AGRADTL_COMMENT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" AllowSearch="false" MaxLength="32767" Type="TextItem">
+      </Item>
+      <Item Id="AGRADTL_COMMENT_BTN" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <!--<Item Id="AGRADTL_ACTIVITY_DATE" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="26" Enabled="false" Type="TextItem"></Item>-->
+      <Item Id="AGRADTL_ACTIVITY_DATE" PageName="AGRADTL_TAB" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="26" Enabled="false" Type="TextItem" CanvasName="A$_GIFT_PLEDGE_CANVAS" >
+      	<Extension Name="ViewMode" Value="None"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE"/>
+
+      </Item>
+      <!--<Item Id="AGRADTL_USER_ID" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRADTL_TAB" Navigable="false" MaxLength="30" Enabled="false" Type="TextItem"></Item>-->
+      <Item Id="AGRADTL_USER_ID" PageName="AGRADTL_TAB" Navigable="false" MaxLength="30" Enabled="false" Type="TextItem" CanvasName="A$_GIFT_PLEDGE_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID"/>
+
+      </Item>
+      <Item Id="AGRADTL_PIDM" CanvasName="" AllowSearch="false" Navigable="false" MaxLength="8" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="AGRADTL_DATA_ORIGIN" CanvasName="" AllowSearch="false" Navigable="false" MaxLength="30" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="AGRPGBE">
+      <Item Id="PGBE_ID" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AllowSearch="false" AllowUpdate="false" AutoSkip="true" MaxLength="9" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_XREF_CODE" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Lov="ATVXREF_LOV" AutoSkip="true" MaxLength="3" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_XREF_DESC" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="60" Type="DisplayItem">
+      </Item>
+      <Item Id="AGRPGBE_PLEDGE_NO" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Lov="AGRGDES_GIFT_PIDM_PGBE_LOV" AutoSkip="true" MaxLength="7" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_PLEDGE_NO_LBT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="AGRPGBE_GIFT_NO" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Lov="AGRGDES_PLEDGE_PIDM_PGBE_LOV" AutoSkip="true" MaxLength="7" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_GIFT_NO_LBT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="AGRPGBE_SURNAME_PREFIX" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="60" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_SURNAME_PREFIX" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="60" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_LAST_NAME" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="60" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_LAST_NAME" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="60" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_FIRST_NAME" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="60" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_FIRST_NAME" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="60" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_MI" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="60" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_MI" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="60" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_SEX" CanvasName="" AutoSkip="true" MaxLength="1" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_SEX" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="1" Type="RadioGroup">
+        <Item Id="NOT_AVAILABLE_BTN" Type="RadioButton">
+        </Item>
+        <Item Id="FEMALE_BTN" Type="RadioButton">
+        </Item>
+        <Item Id="MALE_BTN" Type="RadioButton">
+        </Item>
+      </Item>
+      <Item Id="AGRPGBE_BIRTH_DATE" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="11" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_BIRTH_DATE" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="11" Type="TextItem">
+      </Item>
+      <Item Id="DISPLAY_AGE" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="4" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_DECEASED_IND" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AllowSearch="false" MaxLength="1" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_DECEASED_IND" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AllowSearch="false" MaxLength="1" Type="Checkbox">
+      </Item>
+      <Item Id="AGRPGBE_DECEASED_DATE" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="11" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_DECEASED_DATE" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AutoSkip="true" MaxLength="11" Enabled="false" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_COMMENT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AllowSearch="false" MaxLength="32767" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_COMMENT_BTN" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <!--<Item Id="AGRPGBE_ACTIVITY_DATE" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="26" Enabled="false" Type="TextItem"></Item>-->
+      <Item Id="AGRPGBE_ACTIVITY_DATE" PageName="AGRPGBE_TAB" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="26" Enabled="false" Type="TextItem" CanvasName="A$_GIFT_PLEDGE_CANVAS" >
+      	<Extension Name="ViewMode" Value="None"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE"/>
+
+      </Item>
+      <!--<Item Id="AGRPGBE_USER_ID" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Navigable="false" MaxLength="30" Enabled="false" Type="TextItem"></Item>-->
+      <Item Id="AGRPGBE_USER_ID" PageName="AGRPGBE_TAB" Navigable="false" MaxLength="30" Enabled="false" Type="TextItem" CanvasName="A$_GIFT_PLEDGE_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID"/>
+
+      </Item>
+      <Item Id="PGBE_ID_LBT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="PGBE_BIRTH_DATE_DBT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="PGBE_DECEASED_DATE_DBT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="AGRPGBE_XREF_CODE_LBT" CanvasName="A$_GIFT_PLEDGE_CANVAS" PageName="AGRPGBE_TAB" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="AGRPGBE_PIDM" CanvasName="" AllowSearch="false" Navigable="false" MaxLength="8" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_PGBE_PIDM" CanvasName="" AllowSearch="false" Navigable="false" MaxLength="8" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="AGRPGBE_DATA_ORIGIN" CanvasName="" AllowSearch="false" Navigable="false" MaxLength="30" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_NAME" CanvasName="" AllowSearch="false" Navigable="false" MaxLength="230" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="PGBE_CHANGE_IND" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="AMRATTN" MultiRecord="true">
+      <Item Id="AMRATTN_ATTN_IDEN_CODE" CanvasName="A$_CONTACTS_CANVAS" PageName="AMRATTN_TAB" AutoSkip="true" Required="true" MaxLength="30" Type="TextItem">
+      </Item>
+      <Item Id="ATTN_IDEN_DESC" CanvasName="A$_CONTACTS_CANVAS" PageName="AMRATTN_TAB" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="60" Type="TextItem">
+      </Item>
+      <Item Id="AMRATTN_ORIG_IND" CanvasName="A$_CONTACTS_CANVAS" PageName="AMRATTN_TAB" AllowInsert="false" AllowUpdate="false" AutoSkip="true" MaxLength="1" Type="Checkbox">
+      </Item>
+      <!--<Item Id="AMRATTN_ACTIVITY_DATE" CanvasName="A$_CONTACTS_CANVAS" PageName="AMRATTN_TAB" AllowUpdate="false" Navigable="false" MaxLength="11" Enabled="false" Type="TextItem"></Item>-->
+      <Item Id="AMRATTN_ACTIVITY_DATE" PageName="AMRATTN_TAB" AllowUpdate="false" Navigable="false" MaxLength="11" Enabled="false" Type="TextItem" CanvasName="A$_CONTACTS_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE"/>
+
+      </Item>
+      <!--<Item Id="AMRATTN_USER_ID" CanvasName="A$_CONTACTS_CANVAS" PageName="AMRATTN_TAB" AllowSearch="false" AllowUpdate="false" Navigable="false" AutoSkip="true" Required="true" MaxLength="30" Enabled="false" Type="DisplayItem"></Item>-->
+      <Item Id="AMRATTN_USER_ID" PageName="AMRATTN_TAB" AllowSearch="false" AllowUpdate="false" Navigable="false" AutoSkip="true" Required="true" MaxLength="30" Enabled="false" Type="DisplayItem" CanvasName="A$_CONTACTS_CANVAS" >
+      	<Extension Name="ViewMode" Value="None"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID"/>
+
+      </Item>
+      <Item Id="AMRATTN_PIDM" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="10" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="AMRATTN_ITEM_REFNO" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="15" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="AMRATTN_DATA_ORIGIN" CanvasName="" AllowSearch="false" Navigable="false" AutoSkip="true" MaxLength="30" Enabled="false" Visible="false" Type="TextItem">
+      </Item>
+      <Item Id="AMRATTN_ATTN_IDEN_CODE_LBT" CanvasName="A$_CONTACTS_CANVAS" PageName="AMRATTN_TAB" Navigable="false" MaxLength="11" Type="Button">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

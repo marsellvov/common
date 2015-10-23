@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRRPLOC.Manager.Config" name="FRRPLOC">
+		
+		<items>
+			<item name="FRRPLOC_LOCN_CODE" logicalName="frrplocLocnCode" type="String" physicalName="FRRPLOC_LOCN_CODE"  />
+			<item name="FRRPLOC_LOCN_RESEARCH_IND" logicalName="frrplocLocnResearchInd" type="String" physicalName="FRRPLOC_LOCN_RESEARCH_IND"  >
+				<value>
+					<constant>C</constant>
+				</value>	
+			</item>
+			<item name="FRRPLOC_LOCN_TITLE" logicalName="frrplocLocnTitle" type="String"  virtual="true" />
+			<item name="FRRPLOC_PROP_CODE" logicalName="frrplocPropCode" type="String" physicalName="FRRPLOC_PROP_CODE" >
+				<value>
+					<item name="FRBPROP_CODE" businessObject="FRBPROP"/>
+				</value>
+			</item>	
+			
+			<item name="FRRPLOC_ACTIVITY_DATE" logicalName="frrplocActivityDate" type="java.util.Date" physicalName="FRRPLOC_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+			<item name="FRRPLOC_USER_ID" logicalName="frrplocUserId" type="String" physicalName="FRRPLOC_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fraprop.model.FrrplocAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE frrploc_prop_code = :FRBPROP_CODE]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[frrploc_locn_code]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

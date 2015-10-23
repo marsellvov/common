@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GURTKLR"/>
+	<panel class="ContentCanvas" id="pnlGurtklr1Canvas" menu="G$_DEFAULT_PM" name="GURTKLR_1_CANVAS" width="100%">
+		<panel width="100%">
+			<accordion width="100%">
+				<panel label="mainWindow.title">
+					<repeater block="GURTKLR" name="gurtklrRepeater" width="100%">
+						<panel width="100%">
+							<gridlayout cols="2" orientation="vertical">
+								<gridcell>
+									<component label="gurtklr.gurtklrUserId.prompt">
+										<textbox autoskip="true" case="upper" datatype="String" height="23px" keyactions="PREVIOUS_ITEM" label="gurtklr.gurtklrUserId.prompt" maxlength="30" member="GURTKLR_USER_ID" name="gurtklrUserId" required="true" style="ui-buttoninput ui-hidelabel" width="100px">
+											<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+										</textbox>
+										<button action="WHEN-BUTTON-PRESSED" height="23px" icon="flashlit" member="GURTKLR_USER_ID_LBT" name="gurtklrUserIdLbt" navigable="false" style="ui-buttoninput" tooltip="gurtklr.gurtklrUserIdLbt.tooltip" width="23px"/>
+										<textfield datatype="String" height="23px" maxlength="161" member="USER_ID_NAME" name="userIdName" width="200px">
+											<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+										</textfield>
+									</component>
+								</gridcell>
+								<gridcell>
+									<textbox case="upper" datatype="String" enabled="false" height="23px" label="gurtklr.gurtklrCreator.prompt" maxlength="30" member="GURTKLR_CREATOR" name="gurtklrCreator" width="120px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+								</gridcell>
+								<gridcell>
+									<calendar case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="gurtklr.gurtklrTodoDate.prompt" maxlength="11" member="GURTKLR_TODO_DATE" name="gurtklrTodoDate" validation="server" width="140px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+									<textbox autoskip="true" datatype="Number" height="23px" formatmask="0000" label="gurtklr.gurtklrTodoTime.prompt" maxlength="4" maxvalue="2359" member="GURTKLR_TODO_TIME" minvalue="0" name="gurtklrTodoTime" width="70px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+								</gridcell>
+								<gridcell>
+									<component label="gurtklr.gurtklrComment.prompt">
+										<textbox autoskip="true" datatype="String" style="ui-buttoninput ui-hidelabel" height="23px" label="gurtklr.gurtklrComment.prompt" maxlength="180" member="GURTKLR_COMMENT" name="gurtklrComment" required="true" width="240px">
+											<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+										</textbox>
+										<button action="WHEN-BUTTON-PRESSED" style="ui-buttoninput" height="23px" icon="ui-icon-pencil" member="GURTKLR_COMMENT_BTN" name="gurtklrCommentBtn" navigable="false" tooltip="gurtklr.gurtklrCommentBtn.tooltip" width="23px"/>
+									</component>
+								</gridcell>
+								<gridcell>
+									<textbox autoskip="true" case="upper" datatype="String" enabled="false" height="23px" label="gurtklr.gurtklrSource.prompt" maxlength="30" member="GURTKLR_SOURCE" name="gurtklrSource" navigable="false" width="64px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+								</gridcell>
+								<gridcell>
+									<component label="gurtklr.idno.prompt">
+										<textbox autoskip="true" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gurtklr.idno.prompt" maxlength="9" member="IDNO" name="idno" style="ui-buttoninput ui-hidelabel" validation="server" width="120px">
+											<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+										</textbox>
+										<button action="WHEN-BUTTON-PRESSED" height="23px" icon="flashlit" member="IDNO_LBT" name="idnoLbt" navigable="false" style="ui-buttoninput" tooltip="gurtklr.idnoLbt.tooltip" width="23px"/>
+										<textfield datatype="String" enabled="false" height="23px" maxlength="161" member="NAME" name="nname" width="250px">
+											<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+										</textfield>
+									</component>
+								</gridcell>
+								<gridcell>
+									<textbox autoskip="true" case="upper" datatype="String" height="23px" label="gurtklr.gurtklrItemRefno.prompt" maxlength="15" member="GURTKLR_ITEM_REFNO" name="gurtklrItemRefno" width="120px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</textbox>
+								</gridcell>
+								<gridcell>
+									<component label="gurtklr.gurtklrSystemInd.prompt">
+										<textbox autoskip="true" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gurtklr.gurtklrSystemInd.prompt" maxlength="30" member="GURTKLR_SYSTEM_IND" name="gurtklrSystemInd" required="true" style="ui-buttoninput ui-hidelabel" width="120px">
+											<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+										</textbox>
+										<button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="GURTKLR_SYSTEM_IND_LBT" name="gurtklrSystemIndLbt" navigable="false" style="ui-buttoninput" tooltip="gurtklr.gurtklrSystemIndLbt.tooltip" width="23px"/>
+										<textfield datatype="String" height="23px" maxlength="30" member="GURTKLR_SYSTEM_DESC" name="gurtklrSystemDesc" width="180px">
+											<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+										</textfield>
+									</component>
+								</gridcell>
+								<gridcell>
+									<radiogroup label="gurtklr.gurtklrStatus.gurtklrStatusRbtStatus.label" datatype="String" id="gurtklrStatus" member="GURTKLR_STATUS" name="gurtklrStatus">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+										<radiobox group="gurtklrStatus" height="23px" label="gurtklr.gurtklrStatus.gurtklrStatusRbt1.label" labelalign="start" labelposition="left" name="rb_GurtklrStatus_GurtklrStatusRbt1" value="C" width="96px"/>
+										<radiobox group="gurtklrStatus" height="23px" label="gurtklr.gurtklrStatus.gurtklrStatusRbt2.label" labelalign="start" labelposition="left" name="rb_GurtklrStatus_GurtklrStatusRbt2" value="P" width="96px"/>
+										<radiobox group="gurtklrStatus" height="23px" label="gurtklr.gurtklrStatus.gurtklrStatusRbt3.label" labelalign="start" labelposition="left" name="rb_GurtklrStatus_GurtklrStatusRbt3" value="H" width="64px"/>
+									</radiogroup>
+								</gridcell>
+								<gridcell>
+									<checkbox height="23px" label="gurtklr.gurtklrConfidInd.label" member="GURTKLR_CONFID_IND" name="gurtklrConfidInd" othervaluestate="unchecked" value="Y" width="100px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</gridcell>
+							</gridlayout>
+						</panel>
+					</repeater>
+				</panel>
+			</accordion>
+		</panel>
+	</panel>
+</config>

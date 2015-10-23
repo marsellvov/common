@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guagmnu/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guagmnu/model/KEY_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guagmnu/model/MESSAGES.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guagmnu/model/MY_LINKS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guagmnu/model/SITE_MAP1.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guagmnu/model/SITE_MAP2.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guagmnu/model/SITE_MAP3.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guagmnu/model/SITE_MAP4.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guagmnu/model/GUAGMNU.ValueSet.Config.xml"/>
+
+	
+	<formModel id="GUAGMNU.Model.Config" name="GUAGMNU">
+		<modelClass>net.hedtech.banner.general.common.Guagmnu.model.GuagmnuModel</modelClass>
+		<parameters>
+			<parameter name="VALUE" type="String">			</parameter>
+			<parameter name="G$_PREFERENCES" type="String">			</parameter>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="KEY_BLOCK" manager="KEY_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="MESSAGES" manager="MESSAGES.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="MY_LINKS" manager="MY_LINKS.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SITE_MAP1" manager="SITE_MAP1.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SITE_MAP2" manager="SITE_MAP2.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SITE_MAP3" manager="SITE_MAP3.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SITE_MAP4" manager="SITE_MAP4.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="RG_PRODUCT_LIST.ValueSet.Config"/>
+				<valueSet config="RG_GUVPEMNU_PERSONAL.ValueSet.Config"/>
+				<valueSet config="RG_GUVPEMNU_PERSONAL_LABEL.ValueSet.Config"/>
+				<valueSet config="RG_GUVMMNU_PRODUCTS.ValueSet.Config"/>
+				<valueSet config="RG_GUVMMNU_PRODUCTS_LABEL.ValueSet.Config"/>
+				<valueSet config="RG_GUVPSMNU_PROCESS.ValueSet.Config"/>
+				<valueSet config="RG_GUVPSMNU_PROCESS_LABEL.ValueSet.Config"/>
+				<valueSet config="RG_PRODUCT_LOAD_LABEL.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

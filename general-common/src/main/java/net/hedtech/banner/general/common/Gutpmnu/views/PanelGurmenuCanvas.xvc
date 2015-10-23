@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GURMENU"/>
+	<panel class="StackedCanvas" id="pnlGurmenuCanvas" menu="G$_DEFAULT_PM" name="GURMENU_CANVAS" width="100%">
+	 <collapsiblepanel label="mainWindow.title" name="grdGubobjs" width="100%">
+		<panel width="100%" style="ui-table-doublegrid">
+		<gridlayout cols="3" >
+				 <gridcell style="empty" width="45%">
+			        <include src="net/hedtech/banner/general/common/Gutpmnu/views/PanelGurmenu2Canvas"/>
+			        <include src="net/hedtech/banner/general/common/Gutpmnu/views/PanelUserView"/>
+			      </gridcell>
+	   		 
+	   		 	<gridcell style="empty ui-button-container" width="9%" orientation="vertical">
+		            <panel width="100%">
+			              <flowlayout>
+			   		 		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.insertBtn.label" member="INSERT_BTN" name="insertBtn" navigable="false" tooltip="buttonControlBlock.insertBtn.tooltip" width="100%" />
+						    <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.deleteBtn.label" member="DELETE_BTN" name="deleteBtn" navigable="false" tooltip="buttonControlBlock.deleteBtn.tooltip" width="100%" />
+						    <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.insertAllBtn.label" member="INSERT_ALL_BTN" name="insertAllBtn" navigable="false" tooltip="buttonControlBlock.insertAllBtn.tooltip" width="100%" />
+						    <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.deleteAllBtn.label" member="DELETE_ALL_BTN" name="deleteAllBtn" navigable="false" tooltip="buttonControlBlock.deleteAllBtn.tooltip" width="100%" />
+						    <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.allUsersBtn.label" member="ALL_USERS_BTN" name="allUsersBtn" navigable="false" tooltip="buttonControlBlock.allUsersBtn.tooltip" width="100%" />
+						    <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.copyBtn.label" member="COPY_BTN" name="copyBtn" navigable="false" tooltip="buttonControlBlock.copyBtn.tooltip" width="100%" />
+						    <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.cancelBtn.label" member="CANCEL_BTN" name="cancelBtn" navigable="false" tooltip="buttonControlBlock.cancelBtn.tooltip" width="100%" />
+						 </flowlayout>
+					</panel>
+				 </gridcell>
+  		 
+				<gridcell style="empty" width="45%">
+					<framepanel label="gurmenu.gurmenuObjSelect.prompt" name="grdGurmenu" width="100%">
+						<gridview block="GURMENU"  height="530px" width="100%">
+							<viewheader>
+								<viewcolumn autoskip="true" block="GURMENU" case="upper" datatype="String" label="gurmenu.gurmenuObjName.prompt" labelstyle="DEFAULT" maxlength="30" member="GURMENU_OBJ_NAME" name="gurmenuObjName" validation="server" width="98px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</viewcolumn>
+								<viewcolumn block="GURMENU" datatype="String" label="gurmenu.displayDesc.prompt" labelstyle="DEFAULT" maxlength="80" member="DISPLAY_DESC" name="displayDesc" validation="server" width="448px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</viewcolumn>
+							</viewheader>
+						</gridview>
+					</framepanel>
+				</gridcell>
+			</gridlayout>
+		</panel>
+		</collapsiblepanel>
+	</panel>
+</config>

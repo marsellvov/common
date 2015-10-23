@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<FormStructure AlertDataPath="net/hedtech/banner/alumni/common/Apaiden/parts/aoqclib/AOQCLIBAlerts.xml" LovDataPath="net/hedtech/banner/alumni/common/Apaiden/parts/aoqclib/AOQCLIBLovs.xml" Name="AOQCLIB">
+  <Visual>
+  </Visual>
+  <Logic>
+    <Block Id="AURALRT" />
+  </Logic>
+</FormStructure>

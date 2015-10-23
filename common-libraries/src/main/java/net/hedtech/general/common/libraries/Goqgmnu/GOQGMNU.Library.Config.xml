@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:library"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:library http://www.morphis-tech.com/schema/foundations/library.xsd">
+	<!-- Attached Libs -->
+
+	<library id="GOQGMNU.Lib.Config" name="GOQGMNU">
+		<libraryClass>net.hedtech.general.common.libraries.Goqgmnu.GoqgmnuServices</libraryClass>
+		<!-- support code -->
+		<supportCodeConfiguration>
+				<!-- Packages -->
+				<packages>
+					<package  name="G$_MULTI_REC_SELECTION">net.hedtech.general.common.libraries.Goqgmnu.GMultiRecSelection</package> 	
+				</packages>
+				<attachedLibraries>
+	<!-- Attached Libs -->
+				</attachedLibraries>
+		</supportCodeConfiguration>
+		
+	</library>
+</b:beans>
+
+ 

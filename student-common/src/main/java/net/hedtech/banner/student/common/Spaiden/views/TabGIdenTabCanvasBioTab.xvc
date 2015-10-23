@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="SPBPERS" />
+  <interactionblock name="GORPRAC" />
+  <panel width="100%">
+    <collapsiblepanel label="spbpers.spbpersBioInfo.label" width="100%">
+      <panel width="100%">
+        <gridlayout cols="2" orientation="vertical">
+          <gridcell>
+            <radiogroup action="WHEN-RADIO-CHANGED" block="SPBPERS" label="spbpers.persSex.label" datatype="String" id="persSex" member="PERS_SEX" name="persSex" othervalue="N">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              <radiobox group="persSex" height="23px" label="spbpers.persSex.male.label" labelalign="center" labeloffset="-164" labelposition="right" name="rb_PersSex_Male" value="M" width="96px" />
+              <radiobox group="persSex" height="23px" label="spbpers.persSex.female.label" labelalign="center" labeloffset="-126" labelposition="right" name="rb_PersSex_Female" value="F" width="116px" />
+              <radiobox group="persSex" height="23px" label="spbpers.persSex.notAvailable.label" labelalign="center" labeloffset="-200" labelposition="right" name="rb_PersSex_NotAvailable" value="N" width="140px" />
+            </radiogroup>
+          </gridcell>
+          <gridcell>
+            <calendar autoskip="true" block="SPBPERS" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spbpers.spbpersBirthDate.prompt" member="SPBPERS_BIRTH_DATE" name="spbpersBirthDate" width="140px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </calendar>
+          </gridcell>
+          <gridcell>
+            <textbox block="SPBPERS" datatype="Number" enabled="false" height="23px" label="spbpers.persAge.prompt" member="PERS_AGE" name="persAge" textalign="right" width="50px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="SPBPERS" case="upper" datatype="String" height="23px" label="spbpers.spbpersSsn.prompt" member="SPBPERS_SSN" name="spbpersSsn" width="148px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <checkbox block="SPBPERS" falsevalue="N" height="23px" label="spbpers.spbpersConfidInd.label" member="SPBPERS_CONFID_IND" name="spbpersConfidInd" othervaluestate="unchecked" value="Y" width="109px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </checkbox>
+          </gridcell>
+          <gridcell>
+            <checkbox action="WHEN-CHECKBOX-CHANGED" block="SPBPERS" height="23px" label="spbpers.spbpersDeadInd.label" member="SPBPERS_DEAD_IND" name="spbpersDeadInd" othervaluestate="unchecked" value="Y" width="109px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </checkbox>
+          </gridcell>
+          <gridcell>
+            <calendar block="SPBPERS" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spbpers.spbpersDeadDate.prompt" member="SPBPERS_DEAD_DATE" name="spbpersDeadDate" width="115px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </calendar>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="SPBPERS" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spbpers.spbpersCitzCode.prompt" member="SPBPERS_CITZ_CODE" name="spbpersCitzCode" style="ui-buttoninput" width="50px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+            <button action="WHEN-BUTTON-PRESSED" block="SPBPERS" height="23px" icon="search" member="SPBPERS_CITZ_CODE_LBT" name="spbpersCitzCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spbpers.spbpersCitzCodeLbt.tooltip" width="20px">
+              <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+            </button>
+            <textfield block="SPBPERS" datatype="String" height="23px" member="CITZ_DESC" name="citzDesc" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="SPBPERS" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spbpers.spbpersMrtlCode.prompt" member="SPBPERS_MRTL_CODE" name="spbpersMrtlCode" style="ui-buttoninput" width="50px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+            <button action="WHEN-BUTTON-PRESSED" block="SPBPERS" height="23px" icon="search" member="SPBPERS_MRTL_CODE_LBT" name="spbpersMrtlCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spbpers.spbpersMrtlCodeLbt.tooltip" width="20px">
+              <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+            </button>
+            <textfield block="SPBPERS" datatype="String" height="23px" member="MRTL_DESCRIPTION" name="mrtlDescription" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="SPBPERS" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spbpers.spbpersRelgCode.prompt" member="SPBPERS_RELG_CODE" name="spbpersRelgCode" style="ui-buttoninput" width="50px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+            <button action="WHEN-BUTTON-PRESSED" block="SPBPERS" height="23px" icon="search" member="SPBPERS_RELG_CODE_LBT" name="spbpersRelgCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spbpers.spbpersRelgCodeLbt.tooltip" width="20px">
+              <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+            </button>
+            <textfield block="SPBPERS" datatype="String" height="23px" member="RELG_DESCRIPTION" name="relgDescription" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="SPBPERS" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spbpers.spbpersLgcyCode.prompt" member="SPBPERS_LGCY_CODE" name="spbpersLgcyCode" style="ui-buttoninput" width="50px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+            <button action="WHEN-BUTTON-PRESSED" block="SPBPERS" height="23px" icon="search" member="SPBPERS_LGCY_CODE_LBT" name="spbpersLgcyCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spbpers.spbpersLgcyCodeLbt.tooltip" width="20px">
+              <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+            </button>
+            <textfield block="SPBPERS" datatype="String" height="23px" member="LGCY_DESCRIPTION" name="lgcyDescription" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="SPBPERS" case="upper" datatype="String" height="25px" keyactions="NEXT_ITEM" label="spbpers.spbpersEthnCode.prompt" member="SPBPERS_ETHN_CODE" name="spbpersEthnCode" style="ui-buttoninput" width="50px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+            <button action="WHEN-BUTTON-PRESSED" block="SPBPERS" height="25px" icon="search" member="SPBPERS_ETHN_CODE_LBT" name="spbpersEthnCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spbpers.spbpersEthnCodeLbt.tooltip" width="20px">
+              <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+            </button>
+            <textfield block="SPBPERS" datatype="String" height="25px" member="ETHN_DESCRIPTION" name="ethnDescription" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textfield>
+          </gridcell>
+          <gridcell>
+            <combobox block="SPBPERS" height="23px" label="spbpers.spbpersEthnCde.prompt" member="SPBPERS_ETHN_CDE" name="spbpersEthnCde" width="180px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              <model>
+                <item label="spbpers.spbpersEthnCde.item0.label" value="1" />
+                <item label="spbpers.spbpersEthnCde.item1.label" value="2" />
+                <item label="spbpers.spbpersEthnCde.item2.label" />
+              </model>
+            </combobox>
+          </gridcell>
+          <gridcell>
+            <checkbox action="WHEN-CHECKBOX-CHANGED" block="SPBPERS" falsevalue="N" height="23px" label="spbpers.spbpersConfirmedReCde.label" member="SPBPERS_CONFIRMED_RE_CDE" name="spbpersConfirmedReCde" othervaluestate="unchecked" value="Y" width="239px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </checkbox>
+          </gridcell>
+          <gridcell>
+            <calendar block="SPBPERS" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spbpers.spbpersConfirmedReDate.prompt" member="SPBPERS_CONFIRMED_RE_DATE" name="spbpersConfirmedReDate" width="115px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </calendar>
+          </gridcell>
+          <gridcell>
+            <textbox autoskip="true" block="SPBPERS" case="upper" datatype="String" height="23px" label="spbpers.spbpersVetcFileNumber.prompt" member="SPBPERS_VETC_FILE_NUMBER" name="spbpersVetcFileNumber" width="80px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </textbox>
+          </gridcell>
+          <gridcell>
+            <combobox autoskip="true" block="SPBPERS" height="23px" label="spbpers.spbpersVeraInd.prompt" member="SPBPERS_VERA_IND" name="spbpersVeraInd" width="226px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              <model>
+                <item label="spbpers.spbpersVeraInd.item0.label" />
+                <item label="spbpers.spbpersVeraInd.item1.label" value="O" />
+                <item label="spbpers.spbpersVeraInd.item2.label" value="V" />
+                <item label="spbpers.spbpersVeraInd.item3.label" value="B" />
+              </model>
+            </combobox>
+          </gridcell>
+          <gridcell>
+            <calendar block="SPBPERS" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spbpers.spbpersActiveDutySeprDate.prompt" member="SPBPERS_ACTIVE_DUTY_SEPR_DATE" name="spbpersActiveDutySeprDate" width="115px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </calendar>
+          </gridcell>
+          <gridcell>
+            <checkbox block="SPBPERS" falsevalue="N" height="23px" label="spbpers.spbpersArmedServMedVetInd.label" member="SPBPERS_ARMED_SERV_MED_VET_IND" name="spbpersArmedServMedVetInd" othervaluestate="unchecked" value="Y" width="293px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </checkbox>
+          </gridcell>
+          <gridcell>
+            <checkbox block="SPBPERS" height="23px" label="spbpers.spbpersSdvetInd.label" member="SPBPERS_SDVET_IND" name="spbpersSdvetInd" othervaluestate="unchecked" value="Y" width="213px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </checkbox>
+          </gridcell>
+<!--           <gridcell> -->
+<!--             <textbox block="SPBPERS" datatype="String" enabled="false" height="23px" label="spbpers.spbpersUserId.prompt" member="SPBPERS_USER_ID" name="spbpersUserId" width="160px"> -->
+<!--               <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" /> -->
+<!--             </textbox> -->
+<!--           </gridcell> -->
+<!--           <gridcell> -->
+<!--             <calendar block="SPBPERS" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spbpers.spbpersActivityDate.prompt" member="SPBPERS_ACTIVITY_DATE" name="spbpersActivityDate" width="140px"> -->
+<!--               <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" /> -->
+<!--             </calendar> -->
+<!--           </gridcell> -->
+        </gridlayout>
+      </panel>
+    </collapsiblepanel>
+    <collapsiblepanel name="graphic210" label="gorprac.gorpracRaceInfo.prompt" width="100%">
+      <panel width="100%">
+        <gridview block="GORPRAC" name="grdGorprac" width="100%">
+          <viewheader>
+            <viewcolumn autoskip="true" block="GORPRAC" case="upper" datatype="String" keyactions="NEXT_ITEM" label="gorprac.gorpracRaceCde.prompt" labelstyle="DEFAULT" member="GORPRAC_RACE_CDE" name="gorpracRaceCde" width="36px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              <editor><lovbox/></editor>
+            </viewcolumn>
+            <viewcolumn block="GORPRAC" datatype="String" label="gorprac.gorpracRaceDesc.prompt" labelstyle="DEFAULT" member="RACE_DESC" name="raceDesc" width="532px">
+              <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+            </viewcolumn>
+<!--             <viewcolumn block="GORPRAC" datatype="String" enabled="false" label="gorprac.gorpracUserId.prompt" labelstyle="DEFAULT" member="GORPRAC_USER_ID" name="gorpracUserId" width="209px"> -->
+<!--               <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" /> -->
+<!--             </viewcolumn> -->
+<!--             <viewcolumn block="GORPRAC" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="gorprac.gorpracActivityDate.prompt" labelstyle="DEFAULT" member="GORPRAC_ACTIVITY_DATE" name="gorpracActivityDate" width="88px"> -->
+<!--               <editor> -->
+<!--                 <calendar> -->
+<!--                   <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" /> -->
+<!--                 </calendar> -->
+<!--               </editor> -->
+<!--             </viewcolumn> -->
+          </viewheader>
+        </gridview>
+      </panel>
+    </collapsiblepanel>
+  </panel>
+</config>
+<!-- <panel width="100%">
+					<button action="WHEN-BUTTON-PRESSED" block="GORPRAC" height="20px" icon="search" member="GORPRAC_RACE_CDE_LBT" name="gorpracRaceCdeLbt" navigable="false" tooltip="gorprac.gorpracRaceCdeLbt.tooltip" width="20px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+					</button>
+				</panel> -->
+<!-- 		</collapsiblepanel> -->
+<!-- <gridcell>
+						<button action="WHEN-BUTTON-PRESSED" block="SPBPERS" height="20px" icon="calendar" label="spbpers.spbpersBirthDateDbt.label" member="SPBPERS_BIRTH_DATE_DBT" name="spbpersBirthDateDbt" navigable="false" tooltip="spbpers.spbpersBirthDateDbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell> -->
+<!-- <gridcell>
+						<button action="WHEN-BUTTON-PRESSED" block="SPBPERS" height="20px" icon="calendar" label="spbpers.spbpersDeadDateDbt.label" member="SPBPERS_DEAD_DATE_DBT" name="spbpersDeadDateDbt" navigable="false" tooltip="spbpers.spbpersDeadDateDbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell> -->
+<!-- <gridcell>
+						<button action="WHEN-BUTTON-PRESSED" block="SPBPERS" height="20px" icon="calendar" label="spbpers.persActiveDutySeprDateDbt.label" member="PERS_ACTIVE_DUTY_SEPR_DATE_DBT" name="persActiveDutySeprDateDbt" navigable="false" tooltip="spbpers.persActiveDutySeprDateDbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell> -->
+<!-- <gridcell>
+						<button action="WHEN-BUTTON-PRESSED" block="SPBPERS" height="20px" icon="calendar" label="spbpers.spbpersConfirmedReDateDbt.label" member="SPBPERS_CONFIRMED_RE_DATE_DBT" name="spbpersConfirmedReDateDbt" navigable="false" tooltip="spbpers.spbpersConfirmedReDateDbt.tooltip" width="20px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						</button>
+					</gridcell> -->

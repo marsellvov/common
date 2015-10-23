@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="NORCMNT"/>
+	<interactionblock name="NOBTRAN_INFO_1"/>
+	<panel>
+		<textbox block="NOBTRAN_INFO_1" datatype="String" enabled="false" height="23px" label="nobtranInfo1.nobtranOriginatorUserId.prompt" maxlength="30" member="NOBTRAN_ORIGINATOR_USER_ID" name="nobtran_info_1_nobtranOriginatorUserId" required="true" width="160px"/>
+		<textbox block="NOBTRAN_INFO_1" datatype="String" enabled="false" height="23px" label="nobtranInfo1.nobtranSubmittorUserId.prompt" maxlength="30" member="NOBTRAN_SUBMITTOR_USER_ID" name="nobtran_info_1_nobtranSubmittorUserId" width="160px"/>
+		<textbox block="NOBTRAN_INFO_1" datatype="String" enabled="false" height="23px" label="nobtranInfo1.nobtranApplyUserId.prompt" maxlength="30" member="NOBTRAN_APPLY_USER_ID" name="nobtran_info_1_nobtranApplyUserId" width="160px"/>
+		<textfield block="NOBTRAN_INFO_1" case="upper" datatype="String" enabled="false" height="5px" maxlength="24" member="DATA_SEPARATOR_LINE_0" name="nobtran_info_1_dataSeparatorLine0" width="988px"/>
+		<slider height="249px" name="norcmntscrollbar" width="19px"/>
+		<framepanel name="norcmntBox" width="100%">
+			<gridview block="NORCMNT" name="norcmnt_grdNorcmnt" width="100%">
+				<viewheader>
+					<viewcolumn block="NORCMNT" datatype="String" label="norcmnt.norcmntComments.prompt" labelstyle="DEFAULT" maxlength="4000" member="NORCMNT_COMMENTS" multiline="true" name="norcmnt_norcmntComments" required="true" width="487px"/>
+				</viewheader>
+			</gridview>
+			<calendar block="NOBTRAN_INFO_1" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="nobtranInfo1.nobtranCreatedDate.prompt" maxlength="11" member="NOBTRAN_CREATED_DATE" name="nobtran_info_1_nobtranCreatedDate" required="true" width="140px"/>
+			<calendar block="NOBTRAN_INFO_1" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="nobtranInfo1.nobtranSubmissionDate.prompt" maxlength="11" member="NOBTRAN_SUBMISSION_DATE" name="nobtran_info_1_nobtranSubmissionDate" width="140px"/>
+			<calendar block="NOBTRAN_INFO_1" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="nobtranInfo1.nobtranApplyDate.prompt" maxlength="11" member="NOBTRAN_APPLY_DATE" name="nobtran_info_1_nobtranApplyDate" width="140px"/>
+		</framepanel>
+	</panel>
+</config>

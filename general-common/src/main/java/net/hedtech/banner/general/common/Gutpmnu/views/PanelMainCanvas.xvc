@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <interactionblock name="FORM_HEADER" />
+  <panel class="ContentCanvas" id="pnlMainCanvas" menu="G$_DEFAULT_PM" name="MAIN_CANVAS" width="100%">~
+  	<gridlayout orientation="vertical">
+          <gridcell style="empty">
+    <combobox action="WHEN-LIST-CHANGED" block="FORM_HEADER" height="23px" keyactions="NEXT_BLOCK" label="formHeader.custUserId.prompt" member="CUST_USER_ID" name="custUserId" width="332px">
+      <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+      <model>
+        <item label="formHeader.custUserId.item0.label" />
+      </model>
+    </combobox>
+    </gridcell>
+    </gridlayout>
+    </panel>
+ <!--  <panel style="keyblock-button-container">
+    <button accesskey="ALT+PAGE_DOWN" action="NEXT_BLOCK" block="KEY_BLOCK" label="keyBlock.executeBtn.label" member="EXECUTE_BTN" tooltip="keyBlock.executeBtn.tooltip" />
+    <button accesskey="F5" action="CLEAR-FORM" block="KEY_BLOCK" label="keyBlock.keyClrfrmBtn.label" member="KEY-CLRFRM_BTN" tooltip="keyBlock.keyClrfrmBtn.tooltip" visible="false" />
+  </panel> -->
+</config>

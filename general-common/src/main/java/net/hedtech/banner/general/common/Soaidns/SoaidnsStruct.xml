@@ -1,0 +1,178 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Soaidns/SoaidnsAlerts.xml" FirstNavigationBlock="SPRIDEN" LovDataPath="/net/hedtech/banner/general/common/Soaidns/SoaidnsLovs.xml" Name="SOAIDNS">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Soaidns/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="SPRIDEN_1_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKFLD" MaxLength="12" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD" MaxLength="17" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="21" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="LAST_NAME" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FIRST_NAME" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_0" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_1" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_2" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_3" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_4" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+    </Block>
+    <Block AllowUpdate="false" Id="SPRIDEN" MultiRecord="true" NextBlock="SOUNDEX">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="SPRIDEN_PIDM" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenId.hint" Id="SPRIDEN_ID" MaxLength="9" NextItem="SPRIDEN_LAST_NAME" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenLastName.hint" Id="SPRIDEN_LAST_NAME" MaxLength="60" NextItem="SPRIDEN_FIRST_NAME" PreviousItem="SPRIDEN_ID" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenFirstName.hint" Id="SPRIDEN_FIRST_NAME" MaxLength="60" NextItem="SPRIDEN_MI" PreviousItem="SPRIDEN_LAST_NAME" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenMi.hint" Id="SPRIDEN_MI" MaxLength="60" NextItem="BIRTHDATE" PreviousItem="SPRIDEN_FIRST_NAME" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="Date" Enabled="true" Hint="spriden.birthdate.hint" Id="BIRTHDATE" MaxLength="11" NextItem="SEX" PreviousItem="SPRIDEN_MI" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Hint="spriden.sex.hint" Id="SEX" MaxLength="1" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spriden.spridenChangeInd.hint" Id="SPRIDEN_CHANGE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="true" />
+    </Block>
+    <Block AllowUpdate="false" Id="SOUNDEX" NextBlock="SPRADDR" PreviousBlock="SPRIDEN">
+      <Item AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="soundex.soundexLastName.hint" Id="SOUNDEX_LAST_NAME" MaxLength="25" NextItem="SOUNDEX_FIRST_NAME" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="soundex.soundexFirstName.hint" Id="SOUNDEX_FIRST_NAME" MaxLength="60" PreviousItem="SOUNDEX_LAST_NAME" Type="TextItem" Visible="true" />
+    </Block>
+    <Block AllowInsert="false" AllowUpdate="false" Id="SPRADDR" MultiRecord="true" NextBlock="SGBSTDN" PreviousBlock="SOUNDEX">
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spraddr.spraddrAtypCode.hint" Id="SPRADDR_ATYP_CODE" Lov="STVATYP_LOV" MaxLength="2" NextItem="SPRADDR_STREET_LINE1" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spraddr.spraddrStreetLine1.hint" Id="SPRADDR_STREET_LINE1" MaxLength="75" NextItem="SPRADDR_CITY" PreviousItem="SPRADDR_ATYP_CODE" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spraddr.spraddrCity.hint" Id="SPRADDR_CITY" MaxLength="50" NextItem="SPRADDR_STAT_CODE" PreviousItem="SPRADDR_STREET_LINE1" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Hint="spraddr.spraddrStatCode.hint" Id="SPRADDR_STAT_CODE" Lov="STVSTAT_LOV" MaxLength="3" NextItem="SPRADDR_ZIP" PreviousItem="SPRADDR_CITY" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spraddr.spraddrZip.hint" Id="SPRADDR_ZIP" MaxLength="30" NextItem="PHONE_AREA" PreviousItem="SPRADDR_STAT_CODE" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="spraddr.phoneArea.hint" Id="PHONE_AREA" MaxLength="6" NextItem="PHONE_NUMBER" PreviousItem="SPRADDR_ZIP" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Hint="spraddr.phoneNumber.hint" Id="PHONE_NUMBER" MaxLength="12" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="Date" Enabled="true" Hint="spraddr.spraddrFromDate.hint" Id="SPRADDR_FROM_DATE" MaxLength="11" NextItem="SPRADDR_TO_DATE" PreviousItem="PHONE_NUMBER" Type="TextItem" />
+      <Item CanvasName="SPRIDEN_1_CANVAS" DataType="Date" Hint="spraddr.spraddrToDate.hint" Id="SPRADDR_TO_DATE" MaxLength="11" NextItem="SPRADDR_STATUS_IND" PreviousItem="SPRADDR_FROM_DATE" Type="TextItem" />
+      <Item CanvasName="SPRIDEN_1_CANVAS" DataType="String" Hint="spraddr.spraddrStatusInd.hint" Id="SPRADDR_STATUS_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="SPRADDR_SEQNO" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowInsert="false" AllowUpdate="false" Id="SGBSTDN" NextBlock="SFBETRM" PreviousBlock="SPRADDR">
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="sgbstdn.stvclasDesc.hint" Id="STVCLAS_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="TERM_EFF_END" MaxLength="6" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="REQ_TERM" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="SHRTTRM_CLAS_CODE" MaxLength="2" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Hint="sgbstdn.stvststDesc.hint" Id="STVSTST_DESC" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Id="SGBSTDN_RESD_CODE" MaxLength="1" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="sgbstdn.sgbstdnTermCodeEff.hint" Id="SGBSTDN_TERM_CODE_EFF" Lov="STVTERM_LOV" MaxLength="6" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="SGBSTDN_STST_CODE" Lov="STVSTST_LOV" MaxLength="2" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="SGBSTDN_LEVL_CODE" Lov="STVLEVL_LOV" MaxLength="3" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="SGBSTDN_STYP_CODE" Lov="STVSTYP_LOV" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="SGBSTDN_DEGC_CODE_1" Lov="STVDEGC_LOV" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="SGBSTDN_COLL_CODE_1" Lov="STVCOLL_LOV" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="SGBSTDN_MAJR_CODE_1" Lov="STVMAJR_LOV" MaxLength="4" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="SGBSTDN_ADMT_CODE" Lov="STVADMT_LOV" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <!--<Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="Date" Enabled="false" Id="SGBSTDN_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />-->
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="SGBSTDN_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" CanvasName="SPRIDEN_1_CANVAS">
+        <Extension Name="ViewMode" Value="None" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE" />
+      </Item>
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="false" Id="SGBSTDN_TERM_CODE_ADMIT" Lov="STVTERM_LOV" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Id="SGBSTDN_FULL_PART_IND" MaxLength="1" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Id="STATUS_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Id="RESIDENCE_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Hint="sgbstdn.fullPartDesc.hint" Id="FULL_PART_DESC" MaxLength="9" Navigable="false" Type="DisplayItem" />
+    </Block>
+    <Block AllowInsert="false" AllowUpdate="false" Id="SFBETRM" NextBlock="SOVLCUR" PreviousBlock="SGBSTDN">
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="sfbetrm.betrmDesc.hint" Id="BETRM_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" DataType="String" Enabled="true" Hint="sfbetrm.sfbetrmTermCode.hint" Id="SFBETRM_TERM_CODE" Lov="STVTERM_LOV" MaxLength="6" Type="TextItem" Visible="true" />
+    </Block>
+    <Block AllowDelete="false" AllowInsert="false" Id="SOVLCUR" NextBlock="SOVLFOS" PreviousBlock="SFBETRM">
+      <Item Id="SOVLCUR_ROLLED_SEQNO" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item Id="SOVLCUR_RPT_CURRENT_IND" MaxLength="1" Type="TextItem" Visible="false" />
+      <Item Id="SUMMARY_ROWID" MaxLength="30" Type="TextItem" />
+      <Item Id="SOVLCUR_PIDM" MaxLength="9" Type="TextItem" Visible="false" />
+      <Item Id="SOVLCUR_SEQNO" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item Id="SOVLCUR_GAPP_SEQNO" MaxLength="4" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Hint="sovlcur.sovlcurPriorityNo.hint" Id="SOVLCUR_PRIORITY_NO" MaxLength="5" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Hint="sovlcur.sovlcurTermCode.hint" Id="SOVLCUR_TERM_CODE" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurProgram.hint" Id="SOVLCUR_PROGRAM" MaxLength="12" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Hint="sovlcur.sovlcurTermCodeCtlg.hint" Id="SOVLCUR_TERM_CODE_CTLG" MaxLength="6" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Hint="sovlcur.sovlcurKeySeqno.hint" Id="SOVLCUR_KEY_SEQNO" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlcur.sovlcurProgramDesc.hint" Id="SOVLCUR_PROGRAM_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlcur.stvlevlDesc.hint" Id="STVLEVL_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlcur.stvcampDesc.hint" Id="STVCAMP_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlcur.stvcollDesc.hint" Id="STVCOLL_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlcur.stvdegcDesc.hint" Id="STVDEGC_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Hint="sovlcur.sovlcurTermCodeEnd.hint" Id="SOVLCUR_TERM_CODE_END" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlcur.sovlcurStvstypDesc.hint" Id="SOVLCUR_STVSTYP_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlcur.sovlcurStvrateDesc.hint" Id="SOVLCUR_STVRATE_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" Id="SOVLCUR_STYP_CODE" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurLevlCode.hint" Id="SOVLCUR_LEVL_CODE" MaxLength="2" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurCampCode.hint" Id="SOVLCUR_CAMP_CODE" MaxLength="3" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" Id="SOVLCUR_RATE_CODE" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurCollCode.hint" Id="SOVLCUR_COLL_CODE" MaxLength="2" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurDegcCode.hint" Id="SOVLCUR_DEGC_CODE" MaxLength="6" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" Hint="sovlcur.sovlcurAdmtCode.hint" Id="SOVLCUR_ADMT_CODE" MaxLength="6" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Hint="sovlcur.sovlcurDgmrSeqno.hint" Id="SOVLCUR_DGMR_SEQNO" MaxLength="4" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlcur.sovlcurStvadmtDesc.hint" Id="SOVLCUR_STVADMT_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Hint="sovlcur.sovlcurTermCodeAdmit.hint" Id="SOVLCUR_TERM_CODE_ADMIT" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Hint="sovlcur.sovlcurTermCodeMatric.hint" Id="SOVLCUR_TERM_CODE_MATRIC" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlcur.primaryDesc.hint" Id="PRIMARY_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="true" Hint="sovlcur.sovlcurLmodCode.hint" Id="SOVLCUR_LMOD_CODE" MaxLength="15" Navigable="false" Type="DisplayItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlcur.sovlcurLmodDesc.hint" Id="SOVLCUR_LMOD_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+    </Block>
+    <Block AllowDelete="false" AllowInsert="false" AllowUpdate="false" Id="SOVLFOS" MultiRecord="true" PreviousBlock="SOVLCUR">
+      <Item Id="SOVLFOS_LCUR_SEQNO" MaxLength="5" Type="TextItem" Visible="false" />
+      <Item Id="SOVLFOS_PIDM" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" CanvasName="SPRIDEN_1_CANVAS" Hint="sovlfos.sovlfosPriorityNo.hint" Id="SOVLFOS_PRIORITY_NO" MaxLength="5" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="SPRIDEN_1_CANVAS" Hint="sovlfos.sovlfosTermCode.hint" Id="SOVLFOS_TERM_CODE" MaxLength="30" Type="TextItem" />
+      <Item Hint="sovlfos.sovlfosLfstCode.hint" Id="SOVLFOS_LFST_CODE" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item Hint="sovlfos.sovlfosMajrCode.hint" Id="SOVLFOS_MAJR_CODE" Lov="SOVLFOS_ATTACH_MAJR_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" Hint="sovlfos.sovlfosDeptCode.hint" Id="SOVLFOS_DEPT_CODE" MaxLength="4" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" Hint="sovlfos.sovlfosConcAttachMajrCode.hint" Id="SOVLFOS_CONC_ATTACH_MAJR_CODE" MaxLength="4" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" Id="SOVLFOS_TERM_CODE_CTLG" MaxLength="6" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlfos.gtvlfstDesc.hint" Id="GTVLFST_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlfos.stvmajrDesc.hint" Id="STVMAJR_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlfos.stvdeptDesc.hint" Id="STVDEPT_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="SPRIDEN_1_CANVAS" Enabled="true" Hint="sovlfos.stvconcDesc.hint" Id="STVCONC_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+    </Block>
+    <Block Id="S$_CURRICULA_SUMMARY">
+      <Item Id="QUERY_SUMMARY" MaxLength="30" Type="TextItem" />
+      <Item Id="PRIMARY_ROWID" MaxLength="30" Type="TextItem" />
+      <Item Id="SECONDARY_ROWID" MaxLength="30" Type="TextItem" />
+      <Item Id="RETURN_FROM_SOVLCUR" MaxLength="100" Type="TextItem" />
+      <Item Id="SUMMARY_END_TERM" MaxLength="30" Type="TextItem" />
+      <Item Id="SUMMARY_KEY_SEQNO" MaxLength="30" Type="TextItem" />
+      <Item Id="SUMMARY_TERM_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="SUMMARY_CODE" MaxLength="30" Type="TextItem" />
+      <Item Id="SUMMARY_PIDM" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="CURRICULA_SUMMARY_TAB" Enabled="false" Id="DATA_SEPARATOR_LINE_SOVLCUR_1" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="CURRICULA_SUMMARY_TAB" Enabled="false" Id="SOVLFOS_CONC_CODE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SPRIDEN_1_EXITVALUE_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SPRIDEN_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SPRIDEN_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SEARCH_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+  </Logic>
+</FormStructure>

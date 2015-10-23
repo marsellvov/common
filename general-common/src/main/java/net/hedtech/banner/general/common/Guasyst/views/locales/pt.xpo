@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="keyBlock.hrEmpl.label">Employee</msg>
+  <msg id="keyBlock.hrBene.label">Beneficiary</msg>
+  <msg id="keyBlock.finAgency.label">Agency</msg>
+  <msg id="keyBlock.finBank.label">Bank</msg>
+  <msg id="keyBlock.finCust.label">Customer</msg>
+  <msg id="keyBlock.finEmpl.label">Employee</msg>
+  <msg id="keyBlock.finMagr.label">Financial Manager</msg>
+  <msg id="keyBlock.aluConst.label">Individual</msg>
+  <msg id="keyBlock.advIndivDonrCatg.prompt">Category</msg>
+  <msg id="keyBlock.advIndivPrefClas.prompt">Class</msg>
+  <msg id="keyBlock.stdRecr.label">Recruiting</msg>
+  <msg id="keyBlock.stdAdm.label">Admissions</msg>
+  <msg id="keyBlock.finAidAppl.label">Applicant</msg>
+  <msg id="keyBlock.stdGenr.label">General Student</msg>
+  <msg id="keyBlock.stdRegr.label">Registration</msg>
+  <msg id="keyBlock.stdTran.label">Transfer Work</msg>
+  <msg id="keyBlock.id.prompt">ID</msg>
+  <msg id="keyBlock.id.hint">ID; press LIST for Name/ID search, QUERY COUNT HITS for non-person search, DUP ITEM for SSN/SIN search.</msg>
+  <msg id="keyBlock._name.hint">Name; Enter a name Last, First, Middle and press enter or tab. Use the wildcard "%" if needed.</msg>
+  <msg id="keyBlock.stdHous.label">Housing</msg>
+  <msg id="keyBlock.ar.label">Accounts Receivable</msg>
+  <msg id="keyBlock.aluOrgn.label">Organization</msg>
+  <msg id="keyBlock.advOrgnDonrCatg.prompt">Category</msg>
+  <msg id="keyBlock.finVend.label">Vendor</msg>
+  <msg id="keyBlock.hrCobra.label">Cobra Person</msg>
+  <msg id="keyBlock.stdFacu.label">Faculty</msg>
+  <msg id="keyBlock.hrAppl.label">Applicant</msg>
+  <msg id="buttonControlBlock.idLbt.label">ID</msg>
+  <msg id="buttonControlBlock.idLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.guasyst1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.guasyst1ExitBtn.label">Exit</msg>
+  <msg id="gExtendedSearchBlock.idnameExtsearchList.prompt">Results</msg>
+  <msg id="mainWindow.title">System Identification Form</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

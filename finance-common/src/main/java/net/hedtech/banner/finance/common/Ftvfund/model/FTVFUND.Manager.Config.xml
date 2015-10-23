@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVFUND.Manager.Config" name="FTVFUND">
+		
+		<items>
+			<item name="FTVFUND_COAS_CODE" logicalName="ftvfundCoasCode" type="String" physicalName="FTVFUND_COAS_CODE"  />
+			<item name="FTVFUND_FUND_CODE" logicalName="ftvfundFundCode" type="String" physicalName="FTVFUND_FUND_CODE"  />
+			<item name="FTVFUND_FTYP_CODE" logicalName="ftvfundFtypCode" type="String" physicalName="FTVFUND_FTYP_CODE"  />
+			<item name="FTVFUND_TITLE" logicalName="ftvfundTitle" type="String" physicalName="FTVFUND_TITLE"  />
+			<item name="FTVFUND_DATA_ENTRY_IND" logicalName="ftvfundDataEntryInd" type="String" physicalName="FTVFUND_DATA_ENTRY_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="FTVFUND_STATUS_IND" logicalName="ftvfundStatusInd" type="String" physicalName="FTVFUND_STATUS_IND"  />
+			<item name="FTVFUND_EFF_DATE" logicalName="ftvfundEffDate" type="java.util.Date" physicalName="FTVFUND_EFF_DATE"  />
+			<item name="FTVFUND_TERM_DATE" logicalName="ftvfundTermDate" type="java.util.Date" physicalName="FTVFUND_TERM_DATE"  />
+			<item name="FTVFUND_ACTIVITY_DATE" logicalName="ftvfundActivityDate" type="java.util.Date" physicalName="FTVFUND_ACTIVITY_DATE"  />
+			<item name="FTVFUND_USER_ID" logicalName="ftvfundUserId" type="String" physicalName="FTVFUND_USER_ID"  />
+			<item name="FTVFUND_GRNT_CODE" logicalName="ftvfundGrntCode" type="String" physicalName="FTVFUND_GRNT_CODE"  />
+			<item name="GRNT_DESC" logicalName="grntDesc" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvfund.model.FtvfundAdapter</adapterClass>
+<!-- 		<defaultWhereClause><![CDATA[WHERE (ftvfund_coas_code = :HOLD_COAS_CODE OR ftvfund_coas_code = :FTVFUND_COAS_CODE) AND (ftvfund_data_entry_ind = 'Y' OR ftvfund_data_entry_ind = :FTVFUND_DATA_ENTRY_IND)]]></defaultWhereClause>	 -->
+		<defaultWhereClause><![CDATA[WHERE (ftvfund_coas_code = NVL(:HOLD_COAS_CODE, ftvfund_coas_code)) AND (ftvfund_data_entry_ind = 'Y')]]></defaultWhereClause>
+		<defaultOrderByClause><![CDATA[order by ftvfund_coas_code, ftvfund_fund_code, ftvfund_eff_date]]></defaultOrderByClause>	
+		 
+		<pagination maximumRows="20" enabled="true"/>
+
+	</manager>
+</b:beans>

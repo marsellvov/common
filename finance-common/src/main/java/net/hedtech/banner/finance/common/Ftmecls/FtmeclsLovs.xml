@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Lovs>
+	<Lov Height="267" Name="GTVVPDI_LOV" RecordGroup="GTVVPDI_RG" Title="Institution Code Validation (GTVVPDI)" Width="575">
+		<Columns>
+			<Column DataMember="GTVVPDI_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="53"/>
+			<Column DataMember="GTVVPDI_DESC" ReturnItem="G$_VPDI_BLOCK.VPDI_DESC" Title="Description" Width="160"/>
+			<Column DataMember="GTVVPDI_TYPE_CDE" Title="Type " Width="33"/>
+			<Column DataMember="GTVVPDI_SYS_DEF_INST_IND" Title="Default Ind" Width="80"/>
+			<Column DataMember="GTVVPDI_ACTIVITY_DATE" Title="Activity Date" Width="86"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_VPDI_ALL_LOV" RecordGroup="G$_VPDI_ALL_RG" Title="Existing Institution Values" Width="575">
+		<Columns>
+			<Column DataMember="A" Width="133"/>
+			<Column DataMember="B" Width="133"/>
+			<Column DataMember="C" Width="133"/>
+			<Column DataMember="D" Width="133"/>
+			<Column DataMember="E" Width="133"/>
+			<Column DataMember="F" Width="133"/>
+			<Column DataMember="G" Width="133"/>
+			<Column DataMember="H" Width="133"/>
+			<Column DataMember="I" Width="133"/>
+			<Column DataMember="J" Width="133"/>
+			<Column DataMember="A$" Width="90"/>
+			<Column DataMember="B$" ReturnItem="G$_VPDI_BLOCK.VPDI_HOLD_VALUE" Width="90"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="G$_SEARCH_LOV" RecordGroup="G$_SEARCH_RG" Title="Search Results" Width="575">
+		<Columns>
+			<Column DataMember="DESC" ReturnItem="GLOBAL.DESC" Title="Desc" Width="213"/>
+			<Column DataMember="CODE" ReturnItem="GLOBAL.CODE" Title="Code" Width="106"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="NTVWKSH_LOV" RecordGroup="NTVWKSH_RG" Title="Work Schedule Code Validation (NTVWKSH)" Width="575">
+		<Columns>
+			<Column DataMember="NTVWKSH_CODE" ReturnItem="GLOBAL.VALUE" Title="Code " Width="250"/>
+			<Column DataMember="NTVWKSH_DESC" Title="Description" Width="400"/>
+			<Column DataMember="ACT_DATE" Title="Activity Date " Width="175"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUROPTM_LOV" RecordGroup="GUROPTM_RG" Title="Option Menu" Width="575">
+		<Columns>
+			<Column DataMember="GUROPTM_NAME1_DESC" Width="487"/>
+			<Column DataMember="GUROPTM_NAME1" ReturnItem="GLOBAL.GUROPTM_NAME1" Width="0"/>
+			<Column DataMember="GUROPTM_TYPE_IND" ReturnItem="GLOBAL.GUROPTM_TYPE_IND" Width="0"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="FTVECLS_LOV" RecordGroup="FTVECLS_RG" Title="Employee Class List (FTVECLS)" Width="575">
+		<Columns>
+			<Column DataMember="FTVECLS_ECLS_CODE" ReturnItem="GLOBAL.VALUE" Title="Employee Class" Width="250"/>
+			<Column DataMember="FTVECLS_DESC" Title="Description" Width="400"/>
+			<Column DataMember="ICRGGQ_0" Title="Activity Date" Width="175"/>
+		</Columns>
+	</Lov>
+</Lovs>

@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SPRADDR"/>
+	<panel width="100%">
+		<accordion width="100%">
+			<panel width="100%" label="spraddr.spraddrAddressInfo.prompt">
+				<repeater block="SPRADDR"  name="spraddrRepeater" width="100%">
+					<panel width="100%">
+						<gridlayout cols="2" orientation="vertical">
+							<gridcell>
+								<calendar autoskip="true"  case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spraddr.spraddrFromDate.prompt" member="SPRADDR_FROM_DATE" name="spraddrFromDate" width="115px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</calendar>
+							</gridcell>
+							<gridcell>
+								<calendar autoskip="true"  case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spraddr.spraddrToDate.prompt" member="SPRADDR_TO_DATE" name="spraddrToDate" width="115px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</calendar>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spraddr.spraddrAtypCode.prompt" member="SPRADDR_ATYP_CODE" name="spraddrAtypCode" style="ui-buttoninput" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="SPRADDR_ATYP_CODE_LBT" name="spraddrAtypCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spraddr.spraddrAtypCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+								<textfield  datatype="String" height="23px" member="ATYP_DESCRIPTION" name="atypDescription" width="211px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox  datatype="Number" enabled="false" height="23px" label="spraddr.spraddrSeqno.prompt" member="SPRADDR_SEQNO" name="spraddrSeqno" textalign="right" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spraddr.spraddrHouseNumber.prompt" member="SPRADDR_HOUSE_NUMBER" name="spraddrHouseNumber" width="120px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spraddr.spraddrStreetLine1.prompt" member="SPRADDR_STREET_LINE1" name="spraddrStreetLine1" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spraddr.spraddrStreetLine2.prompt" member="SPRADDR_STREET_LINE2" name="spraddrStreetLine2" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spraddr.spraddrStreetLine3.prompt" member="SPRADDR_STREET_LINE3" name="spraddrStreetLine3" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spraddr.spraddrStreetLine4.prompt" member="SPRADDR_STREET_LINE4" name="spraddrStreetLine4" width="346px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="String" height="23px" label="spraddr.spraddrCity.prompt" member="SPRADDR_CITY" name="spraddrCity" width="239px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spraddr.spraddrStatCode.prompt" member="SPRADDR_STAT_CODE" name="spraddrStatCode" style="ui-buttoninput" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="SPRADDR_STAT_CODE_LBT" name="spraddrStatCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spraddr.spraddrStatCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+								<textfield  datatype="String" height="23px" member="STAT_DESCRIPTION" name="statDescription" width="206px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="spraddr.spraddrZip.prompt" member="SPRADDR_ZIP" name="spraddrZip" style="ui-buttoninput" width="239px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="flashlit" label="spraddr.spraddrZipLbt.label" member="SPRADDR_ZIP_LBT" name="spraddrZipLbt" navigable="false" style="ui-buttoninput" tooltip="spraddr.spraddrZipLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spraddr.spraddrCntyCode.prompt" member="SPRADDR_CNTY_CODE" name="spraddrCntyCode" style="ui-buttoninput" width="64px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="SPRADDR_CNTY_CODE_LBT" name="spraddrCntyCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spraddr.spraddrCntyCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+								<textfield  datatype="String" height="23px" member="CNTY_DESCRIPTION" name="cntyDescription" width="193px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spraddr.spraddrNatnCode.prompt" member="SPRADDR_NATN_CODE" name="spraddrNatnCode" style="ui-buttoninput" width="64px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="SPRADDR_NATN_CODE_LBT" name="spraddrNatnCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spraddr.spraddrNatnCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+								<textfield  datatype="String" height="23px" member="NATN_DESCRIPTION" name="natnDescription" width="184px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spraddr.teleCode.prompt" member="TELE_CODE" name="teleCode" style="ui-buttoninput" width="51px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="TELE_CODE_LBT" name="teleCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spraddr.teleCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+								<textfield  datatype="String" height="23px" member="TELE_DESCRIPTION" name="teleDescription" width="185px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" label="spraddr.phoneCtry.prompt" member="PHONE_CTRY" name="phoneCtry" width="73px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" label="spraddr.phoneArea.prompt" member="PHONE_AREA" name="phoneArea" width="73px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" label="spraddr.phoneNumber.prompt" member="PHONE_NUMBER" name="phoneNumber" width="140px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" label="spraddr.phoneExt.prompt" style="ui-buttoninput" member="PHONE_EXT" name="phoneExt" width="120px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="20px" icon="flashlit" label="spraddr.phoneBtn.label" style="ui-buttoninput" member="PHONE_BTN" name="phoneBtn" navigable="false" tooltip="spraddr.phoneBtn.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+							</gridcell>
+							<gridcell>
+								<checkbox  height="23px" label="spraddr.spraddrStatusInd.label" member="SPRADDR_STATUS_IND" name="spraddrStatusInd" othervaluestate="unchecked" value="I" width="150px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</checkbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="spraddr.spraddrAsrcCode.prompt" member="SPRADDR_ASRC_CODE" name="spraddrAsrcCode" style="ui-buttoninput" width="52px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+								<button action="WHEN-BUTTON-PRESSED"  height="23px" icon="search" member="SPRADDR_ASRC_CODE_LBT" name="spraddrAsrcCodeLbt" navigable="false" style="ui-buttoninput" tooltip="spraddr.spraddrAsrcCodeLbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+								</button>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="Number" formatmask="09" height="23px" label="spraddr.spraddrDeliveryPoint.prompt" member="SPRADDR_DELIVERY_POINT" name="spraddrDeliveryPoint" textalign="right" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true"  datatype="Number" height="23px" label="spraddr.spraddrCorrectionDigit.prompt" member="SPRADDR_CORRECTION_DIGIT" name="spraddrCorrectionDigit" textalign="right" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox  case="upper" datatype="String" height="23px" label="spraddr.spraddrCarrierRoute.prompt" member="SPRADDR_CARRIER_ROUTE" name="spraddrCarrierRoute" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+						</gridlayout>
+					</panel>
+				</repeater>
+			</panel>
+		</accordion>
+<!-- 		<collapsiblepanel label="addressTab.text300.text" name="graphic334" width="100%"> -->
+<!-- 			<panel width="100%"> -->
+<!-- 				<gridlayout cols="2" orientation="vertical"> -->
+<!-- 					<gridcell> -->
+<!-- 						<textbox block="SPRADDR" case="upper" datatype="String" enabled="false" height="23px" label="spraddr.spraddrUser.prompt" member="SPRADDR_USER" name="spraddrUser" width="160px"> -->
+<!-- 							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/> -->
+<!-- 						</textbox> -->
+<!-- 					</gridcell> -->
+<!-- 					<gridcell> -->
+<!-- 						<calendar block="SPRADDR" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="spraddr.spraddrActivityDate.prompt" member="SPRADDR_ACTIVITY_DATE" name="spraddrActivityDate" width="140px"> -->
+<!-- 							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/> -->
+<!-- 						</calendar> -->
+<!-- 					</gridcell> -->
+<!-- 				</gridlayout> -->
+<!-- 			</panel> -->
+<!-- 		</collapsiblepanel> -->
+	</panel>
+</config>
+
+							<!-- <gridcell>
+								<button action="WHEN-BUTTON-PRESSED" block="SPRADDR" height="20px" icon="calendar" label="spraddr.spraddrFromDateDbt.label" member="SPRADDR_FROM_DATE_DBT" name="spraddrFromDateDbt" navigable="false" tooltip="spraddr.spraddrFromDateDbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+								</button>
+							</gridcell> -->
+							<!-- <gridcell>
+								<button action="WHEN-BUTTON-PRESSED" block="SPRADDR" height="20px" icon="calendar" label="spraddr.spraddrToDateDbt.label" member="SPRADDR_TO_DATE_DBT" name="spraddrToDateDbt" navigable="false" tooltip="spraddr.spraddrToDateDbt.tooltip" width="20px">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+								</button>
+							</gridcell> -->
+							<!-- <gridcell>
+								<textbox block="SPRADDR" datatype="String" height="23px" label="spraddr.spraddrGstTaxId.prompt" member="SPRADDR_GST_TAX_ID" name="spraddrGstTaxId" visible="false" width="90px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" block="SPRADDR" case="upper" datatype="String" height="23px" label="spraddr.faxArea.prompt" member="FAX_AREA" name="faxArea" visible="false" width="73px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" block="SPRADDR" case="upper" datatype="String" height="23px" member="FAX_NUMBER" name="faxNumber" visible="false" width="140px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" block="SPRADDR" case="upper" datatype="String" height="23px" member="FAX_EXT" name="faxExt" visible="false" width="120px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<checkbox block="SPRADDR" falsevalue="N" height="23px" label="spraddr.preferredAddr.label" member="PREFERRED_ADDR" name="preferredAddr" othervaluestate="unchecked" value="Y" visible="false" width="146px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</checkbox>
+							</gridcell>
+							<gridcell>
+								<checkbox block="SPRADDR" falsevalue="N" height="23px" label="spraddr.preferredRegion.label" member="PREFERRED_REGION" name="preferredRegion" othervaluestate="unchecked" value="Y" visible="false" width="138px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</checkbox>
+							</gridcell>
+							<gridcell>
+								<checkbox block="SPRADDR" falsevalue="N" height="23px" label="spraddr.combinedMailing.label" member="COMBINED_MAILING" name="combinedMailing" othervaluestate="unchecked" value="Y" visible="false" width="142px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</checkbox>
+							</gridcell>
+							<gridcell>
+								<textbox autoskip="true" block="SPRADDR" case="upper" datatype="String" height="23px" member="FAX_CTRY" name="faxCtry" visible="false" width="73px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+								</textbox>
+							</gridcell> -->

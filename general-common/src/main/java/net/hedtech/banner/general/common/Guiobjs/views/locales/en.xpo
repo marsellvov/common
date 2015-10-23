@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas:morphis:frames:messages">
+  <msg id="gubobjs.gubobjsName.prompt">Name</msg>
+  <msg id="gubobjs.gubobjsName.label">Menuna</msg>
+  <msg id="gubobjs.gubobjsName.hint">Object Name; Double Click or COUNT HITS to execute object.</msg>
+  <msg id="gubobjs.gubobjsDesc.prompt">Description</msg>
+  <msg id="gubobjs.gubobjsDesc.hint">Object Description; Double Click or COUNT HITS to execute object.</msg>
+  <msg id="gubobjs.gubobjsObjtCode.prompt">Type</msg>
+  <msg id="gubobjs.gubobjsObjtCode.label">Menuda</msg>
+  <msg id="gubobjs.gubobjsObjtCode.hint">Object Type; Double Click or COUNT HITS to execute object.</msg>
+  <msg id="buttonControlBlock.gubobjs1StartBtn.label">Start</msg>
+  <msg id="buttonControlBlock.gubobjs1RollbackBtn.label">Clear</msg>
+  <msg id="buttonControlBlock.gubobjs1ExitBtn.label">Cancel</msg>
+  <msg id="buttonControlBlock.gubobjs1ExitvalueBtn.label">Select</msg>
+  <msg id="mainWindow.title">Object Search</msg>
+  <msg id="gubobjs.gubobjsObjtCode.item0.label">All</msg>
+  <msg id="gubobjs.gubobjsObjtCode.item1.label">QuickFlow</msg>
+  <msg id="gubobjs.gubobjsObjtCode.item2.label">Form</msg>
+  <msg id="gubobjs.gubobjsObjtCode.item3.label">Jobs</msg>
+  <msg id="gubobjs.gubobjsObjtCode.item4.label">Menu</msg>
+  <msg id="gubobjs.gubobjsObjtCode.item5.label">Message</msg>
+</messages>

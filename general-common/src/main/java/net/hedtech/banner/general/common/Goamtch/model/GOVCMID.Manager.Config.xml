@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GOVCMID.Manager.Config" name="GOVCMID">
+		<kind>View</kind>
+		<items>
+			<item name="GOVCMID_PIDM" logicalName="govcmidPidm" type="java.math.BigDecimal" physicalName="GOVCMID_PIDM"  />
+			<item name="GOVCMID_ID" logicalName="govcmidId" type="String" physicalName="GOVCMID_ID"  />
+			<item name="GOVCMID_NAME" logicalName="govcmidName" type="String" physicalName="GOVCMID_NAME"  />
+			<item name="MATCH_ID" logicalName="matchId" type="String"  virtual="true" />
+			<item name="MATCH_SSN" logicalName="matchSsn" type="String"  virtual="true" />
+			<item name="MATCH_BIRTH_DATE" logicalName="matchBirthDate" type="java.util.Date"  virtual="true" />
+			<item name="MATCH_SEX" logicalName="matchSex" type="String"  virtual="true" />
+			<item name="ADDRESS_HIERARCHY_MATCH" logicalName="addressHierarchyMatch" type="String"  virtual="true" />
+			<item name="TELEPHONE_HIERARCHY_MATCH" logicalName="telephoneHierarchyMatch" type="String"  virtual="true" />
+			<item name="EMAIL_HIERARCHY_MATCH" logicalName="emailHierarchyMatch" type="String"  virtual="true" />
+			<item name="MATCH_ADD_CODE" logicalName="matchAddCode" type="String"  virtual="true" />
+			<item name="MATCH_ADD_ID" logicalName="matchAddId" type="String"  virtual="true" />
+			<item name="MATCH_PRIORITY_LIST" logicalName="matchPriorityList" type="String"  virtual="true" />
+			<item name="ADDRESS_LIST" logicalName="addressList" type="String"  virtual="true" />
+			<item name="PHONE_LIST" logicalName="phoneList" type="String"  virtual="true" />
+			<item name="EMAIL_LIST" logicalName="emailList" type="String"  virtual="true" />
+			<item name="GOVCMRT_SPRADDR_ROWID" logicalName="govcmrtSpraddrRowid" type="String"  virtual="true" />
+			<item name="GOVCMRT_SPRTELE_ROWID" logicalName="govcmrtSprteleRowid" type="String"  virtual="true" />
+			<item name="GOVCMRT_GOREMAL_ROWID" logicalName="govcmrtGoremalRowid" type="String"  virtual="true" />
+			<item name="GOVCMRT_GORADID_ROWID" logicalName="govcmrtGoradidRowid" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Goamtch.model.GovcmidAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE ((GOVCMID_PIDM <> :FORM_HEADER_MATCH_PIDM AND :FORM_HEADER_MATCH_PIDM IS NOT NULL) OR :FORM_HEADER_MATCH_PIDM IS NULL)]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[GOVCMID_ID]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FORM_HEADER.Manager.Config" name="FormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CUST_USER_ID" logicalName="custUserId" type="String"   />
+			<item name="USER_SEARCH" logicalName="userSearch" type="String"   />
+			<item name="OBJECT_TYPE" logicalName="objectType" type="String"   />
+			<item name="SEARCH_CR" logicalName="searchCr" type="String"   />
+			<item name="CHECK_KEYS" logicalName="checkKeys" type="String"   />
+			<item name="WORK_CR" logicalName="workCr" type="String"   >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+			<item name="current_user1" logicalName="currentUser1" type="String"   />
+			<item name="CURRENT_DATE" logicalName="currentDate" type="String"   />
+			<item name="CURRENT_TIME" logicalName="currentTime" type="String"   />
+			<item name="CURRENT_FORM" logicalName="currentForm" type="String"   />
+			<item name="CURRENT_BLOCK" logicalName="currentBlock" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="CURRENT_INSTITUTION" logicalName="currentInstitution" type="String"   />
+			<item name="HOLD_RECORD" logicalName="holdRecord" type="String"   />
+			<item name="SUB_NAME" logicalName="subName" type="String"   />
+			<item name="COMMIT_FLAG" logicalName="commitFlag" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="NAVIGATE_FLAG" logicalName="navigateFlag" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="INITIAL_QUERY" logicalName="initialQuery" type="String"   >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Gutpmnu.model.FormHeader</managerClass>
+
+	</manager>
+</b:beans>

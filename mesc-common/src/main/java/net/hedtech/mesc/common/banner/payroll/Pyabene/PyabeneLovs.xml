@@ -1,0 +1,42 @@
+﻿<Lovs>
+  <Lov Name="GYVTYP3_LOV" Title="Eligibility Reason" Width="575" Height="267" RecordGroup="GYVTYP3_RG">
+    <Columns>
+      <Column DataMember="GYVCODE_CODE" Title="Code" Width="81" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="GYVCODE_DESC" Title="Desc" Width="278" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="GYVTYP2_LOV" Title="Airfare Classes" Width="575" Height="267" RecordGroup="GYVTYP2_RG">
+    <Columns>
+      <Column DataMember="GYVCODE_CODE" Title="Code" Width="81" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="GYVCODE_DESC" Title="Desc" Width="278" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="GYVTYP1_LOV" Title="Airport Code" Width="575" Height="267" RecordGroup="GYVTYP1_RG">
+    <Columns>
+      <Column DataMember="GYVCODE_CODE" Title="Code" Width="81" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="GYVCODE_DESC" Title="Desc" Width="278" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="STVMRTL_LOV" Title="Marital Code (STVMRTL)" Width="575" Height="267" RecordGroup="STVMRTL_RG">
+    <Columns>
+      <Column DataMember="STVMRTL_CODE" Title="Code" Width="81" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="STVMRTL_DESC" Title="Desc" Width="278" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="STVNATN_LOV" Title="Nation Code (STVNATN)" Width="575" Height="267" RecordGroup="STVNATN_RG">
+    <Columns>
+      <Column DataMember="STVNATN_CODE" Title="Code" Width="81" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="STVNATN_NATION" Title="Nation" Width="278" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+</Lovs>

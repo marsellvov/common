@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="BUTTON_CONTROL_BLOCK.Manager.Config" name="ButtonControlBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="ADDRESS_BTN" logicalName="addressBtn" type="String"   />
+			<item name="PREVIOUS_NAME_BTN" logicalName="previousNameBtn" type="String"   />
+			<item name="SOURCE_BTN" logicalName="sourceBtn" type="String"   />
+			<item name="LEGAL_NAME_ROLLBACK_BTN" logicalName="legalNameRollbackBtn" type="String"   />
+			<item name="LEGAL_NAME_SAVE_BTN" logicalName="legalNameSaveBtn" type="String"   />
+			<item name="LEGAL_NAME_EXIT_BTN" logicalName="legalNameExitBtn" type="String"   />
+			<item name="PREVIOUS_SOURCE_BTN" logicalName="previousSourceBtn" type="String"   />
+			<item name="SPRADDR_6_CANCEL_BTN" logicalName="spraddr6CancelBtn" type="String"   />
+			<item name="SPRADDR_6_SAVE_BTN" logicalName="spraddr6SaveBtn" type="String"   />
+			<item name="SPRADDR_6_EXIT_BTN" logicalName="spraddr6ExitBtn" type="String"   />
+			<item name="SPRADDR_6_ROLLBACK_BTN" logicalName="spraddr6RollbackBtn" type="String"   />
+			<item name="SPRADDR_5_ROLLBACK_BTN" logicalName="spraddr5RollbackBtn" type="String"   />
+			<item name="SPRADDR_5_SAVE_BTN" logicalName="spraddr5SaveBtn" type="String"   />
+			<item name="SPRADDR_5_EXIT_BTN" logicalName="spraddr5ExitBtn" type="String"   />
+			<item name="SPRIDEN_CURRENT_1_ROLLBACK_BTN" logicalName="spridenCurrent1RollbackBtn" type="String"   />
+			<item name="SPRIDEN_CURRENT_1_EXIT_BTN" logicalName="spridenCurrent1ExitBtn" type="String"   />
+			<item name="SPRIDEN_CURRENT_2_CANCEL_BTN" logicalName="spridenCurrent2CancelBtn" type="String"   />
+			<item name="SPRIDEN_CURRENT_2_ROLLBACK_BTN" logicalName="spridenCurrent2RollbackBtn" type="String"   />
+			<item name="SPRIDEN_CURRENT_2_EXIT_BTN" logicalName="spridenCurrent2ExitBtn" type="String"   />
+			<item name="SPRIDEN_PREV_4_CANCEL_BTN" logicalName="spridenPrev4CancelBtn" type="String"   />
+			<item name="SPRIDEN_PREV_4_ROLLBACK_BTN" logicalName="spridenPrev4RollbackBtn" type="String"   />
+			<item name="SPRIDEN_PREV_4_EXIT_BTN" logicalName="spridenPrev4ExitBtn" type="String"   />
+			<item name="SPRIDEN_PREVIOUS_ROLLBACK_BTN" logicalName="spridenPreviousRollbackBtn" type="String"   />
+			<item name="SPRIDEN_PREVIOUS_SAVE_BTN" logicalName="spridenPreviousSaveBtn" type="String"   />
+			<item name="SPRIDEN_PREVIOUS_EXIT_BTN" logicalName="spridenPreviousExitBtn" type="String"   />
+			<item name="CHECK_KEYS" logicalName="checkKeys" type="String"   />
+			<item name="SPRIDEN_CURRENT_1_SAVE_BTN" logicalName="spridenCurrent1SaveBtn" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.finance.common.Foaiden.model.ButtonControlBlock</managerClass>
+
+	</manager>
+</b:beans>

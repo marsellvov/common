@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GUISETI"/>
+	<interactionblock name="MENU_CONTROL"/>
+	<panel class="ContentCanvas" id="pnlMainCanvas" menu="G$_DEFAULT_PM" name="MAIN_CANVAS" width="100%">
+		<panel name="grdGuiseti" style="ui-form-center">
+			<text style="ui-form-title">mainWindow.title</text>
+			<panel width="100%" style="ui-form-container">
+				<gridview block="GUISETI" width="100%">
+					<viewheader>
+						<viewcolumn block="GUISETI" datatype="String" label="guiseti.vpdiCode.prompt" labelstyle="DEFAULT" maxlength="6" member="VPDI_CODE" name="vpdiCode" width="63px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="GUISETI" datatype="String" label="guiseti.codeDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="CODE_DESC" name="codeDesc" width="278px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+			<panel style="ui-form-footer">
+				<flowlayout orientation="horizontal">
+					<button block="GUISETI" action="WHEN-MOUSE-DOUBLECLICK" label="guiseti.selectBtn.label" />
+				</flowlayout>
+			</panel>
+		</panel>
+	</panel>
+</config>

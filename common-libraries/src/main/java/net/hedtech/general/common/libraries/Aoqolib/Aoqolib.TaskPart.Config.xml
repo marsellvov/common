@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>
+	
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqolib/model/AOQOLIB.Model.Config.xml"/>
+	
+	<task id="AOQOLIB.TaskPart.Config" name="AOQOLIB">
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.general.common.libraries.Aoqolib.AoqolibTaskPart</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/general/common/libraries/Aoqolib/AoqolibStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.general.common.libraries.Aoqolib.services.AoqolibServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+				<package  name="AOQOLIB">net.hedtech.general.common.libraries.Aoqolib.controller.AoqolibFormController</package>
+				<package  name="FORM_HEADER">net.hedtech.general.common.libraries.Aoqolib.controller.FormHeaderController</package>
+				<package  name="CP$_BLOCK">net.hedtech.general.common.libraries.Aoqolib.controller.CpBlockController</package>
+				<package  name="LAST_QUERY">net.hedtech.general.common.libraries.Aoqolib.controller.LastQueryController</package>
+				<package  name="DUMMY">net.hedtech.general.common.libraries.Aoqolib.controller.DummyController</package>
+				<package  name="G$_DEFAULT_PM">net.hedtech.general.common.libraries.Aoqolib.controller.GDefaultPmContextController</package>
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="AOQOLIB.Model.Config"/>
+		<!-- controllers -->
+		
+		<blockControllers>
+		</blockControllers>
+
+	</task>
+</b:beans>
+
+ 

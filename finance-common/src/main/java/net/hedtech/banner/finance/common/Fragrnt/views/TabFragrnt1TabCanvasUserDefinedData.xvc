@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="FRRGUSN"/>
+	<panel width="100%">
+		<accordion width="100%">
+			<panel label="userCodesInfo.title">
+				<panel width="100%">
+					<gridview block="FRRGUSN" name="grdFrrgusn" width="100%">
+						<viewheader>
+							<viewcolumn block="FRRGUSN" case="upper" datatype="String" label="frrgusn.frrgusnSdatCodeAttr.prompt" labelstyle="DEFAULT" maxlength="35" member="FRRGUSN_SDAT_CODE_ATTR" name="frrgusnSdatCodeAttr" required="true" width="279px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="FRRGUSN" case="upper" datatype="String" label="frrgusn.frrgusnSdatCodeOpt1.prompt" labelstyle="DEFAULT" maxlength="8" member="FRRGUSN_SDAT_CODE_OPT_1" name="frrgusnSdatCodeOpt1" width="72px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FRRGUSN" datatype="String" label="frrgusn.frrgusnSdatCodeOpt1Description.prompt" labelstyle="DEFAULT" maxlength="35" member="FRRGUSN_DESC" name="frrgusnDesc" width="279px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

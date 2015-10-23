@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVACTV"/>
+	<panel class="ContentCanvas" id="pnlFtvactv1Canvas" menu="G$_DEFAULT_PM" name="FTVACTV_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="FTVACTV" name="grdFtvactv" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="FTVACTV" case="upper" datatype="String" label="ftvactv.ftvactvCoasCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVACTV_COAS_CODE" name="ftvactvCoasCode" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACTV" case="upper" datatype="String" enabled="false" label="ftvactv.ftvactvActvCode.prompt" labelstyle="DEFAULT" maxlength="6" member="FTVACTV_ACTV_CODE" name="ftvactvActvCode" width="80px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACTV" datatype="String" enabled="false" label="ftvactv.ftvactvTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FTVACTV_TITLE" name="ftvactvTitle" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACTV" case="upper" datatype="String" enabled="false" label="ftvactv.ftvactvStatusInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVACTV_STATUS_IND" name="ftvactvStatusInd" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVACTV" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvactv.ftvactvEffDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVACTV_EFF_DATE" name="ftvactvEffDate" width="100px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVACTV" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvactv.ftvactvTermDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVACTV_TERM_DATE" name="ftvactvTermDate" width="88px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

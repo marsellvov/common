@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <interactionblock name="GOVCMID" />
+  <panel width="100%">
+    <accordion width="100%">
+      <panel label="govcmid.label">
+        <panel width="100%" style="ui-section">
+          <gridview block="GOVCMID" name="grdGovcmid" width="100%">
+            <viewheader>
+              <viewcolumn block="GOVCMID" case="upper" datatype="String" label="govcmid.matchId.prompt" labelstyle="DEFAULT" maxlength="10" member="MATCH_ID" name="matchId" visible="false" width="100px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <editor>
+                  <image block="BUTTON_CONTROL_BLOCK" height="20px" maxlength="30" member="SORT_ID_BTN" name="sortIdBtn" tooltip="buttonControlBlock.sortIdBtn.tooltip" width="20px">
+                    <xl:event action="WHEN-IMAGE-PRESSED" name="click" />
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                  </image>
+                </editor>
+              </viewcolumn>
+              <viewcolumn autoskip="true" block="GOVCMID" case="upper" datatype="String" label="govcmid.govcmidId.prompt" labelstyle="DEFAULT" maxlength="10" member="GOVCMID_ID" name="govcmidId" width="100px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <editor>
+                  <image block="BUTTON_CONTROL_BLOCK" height="20px" maxlength="30" member="SORT_NAME_BTN" name="sortNameBtn" tooltip="buttonControlBlock.sortNameBtn.tooltip" width="100px">
+                    <xl:event action="WHEN-IMAGE-PRESSED" name="click" />
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                  </image>
+                </editor>
+              </viewcolumn>
+              <viewcolumn block="GOVCMID" case="upper" datatype="Number" enabled="false" label="govcmid.govcmidPidm.prompt" labelstyle="DEFAULT" maxlength="8" member="GOVCMID_PIDM" name="govcmidPidm" visible="false" width="100px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn block="GOVCMID" datatype="String" label="govcmid.govcmidName.prompt" labelstyle="DEFAULT" maxlength="230" member="GOVCMID_NAME" name="govcmidName" width="180px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn block="GOVCMID" datatype="String" label="govcmid.matchSsn.prompt" labelstyle="DEFAULT" maxlength="15" member="MATCH_SSN" name="matchSsn" width="100px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn autoskip="true" block="GOVCMID" case="upper" datatype="Date" formatmask="DD-MON-YYYY" label="govcmid.matchBirthDate.prompt" labelstyle="DEFAULT" maxlength="11" member="MATCH_BIRTH_DATE" name="matchBirthDate" width="100px">
+                <editor>
+                  <calendar>
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                  </calendar>
+                </editor>
+              </viewcolumn>
+              <viewcolumn autoskip="true" block="GOVCMID" case="upper" datatype="String" label="govcmid.matchSex.prompt" labelstyle="DEFAULT" maxlength="1" member="MATCH_SEX" name="matchSex" width="60px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn block="GOVCMID" datatype="String" label="govcmid.addressHierarchyMatch.prompt" labelstyle="DEFAULT" maxlength="200" member="ADDRESS_HIERARCHY_MATCH" name="addressHierarchyMatch" width="270px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn block="GOVCMID" datatype="String" label="govcmid.telephoneHierarchyMatch.prompt" labelstyle="DEFAULT" maxlength="200" member="TELEPHONE_HIERARCHY_MATCH" name="telephoneHierarchyMatch" width="100px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn block="GOVCMID" datatype="String" label="govcmid.emailHierarchyMatch.prompt" labelstyle="DEFAULT" maxlength="200" member="EMAIL_HIERARCHY_MATCH" name="emailHierarchyMatch" width="100px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+            </viewheader>
+          </gridview>
+        </panel>
+<!--       </panel> -->
+<!--     </accordion> -->
+<!--     <accordion width="100%"> -->
+<!--       <panel label="matchTab.label"> -->
+        <framepanel width="100%" label="matchTab.label">
+          <gridlayout cols="1" orientation="vertical" width="100%">
+            <gridcell>
+              <textbox block="GOVCMID" datatype="String" height="23px" label="govcmid.matchAddId.prompt" maxlength="80" member="MATCH_ADD_ID" name="matchAddId" width="399px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <combobox block="GOVCMID" height="23px" label="govcmid.matchPriorityList.prompt" member="MATCH_PRIORITY_LIST" name="matchPriorityList" width="520px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <model>
+                  <item label="govcmid.matchPriorityList.item0.label" value="NM" />
+                </model>
+              </combobox>
+            </gridcell>
+            <gridcell>
+              <combobox block="GOVCMID" height="23px" label="govcmid.addressList.prompt" member="ADDRESS_LIST" name="addressList1" width="330px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <model>
+                  <item label="govcmid.addressList1.item0.label" value="NAA" />
+                </model>
+              </combobox>
+            </gridcell>
+            <gridcell>
+              <combobox block="GOVCMID" height="23px" label="govcmid.phoneList.prompt" member="PHONE_LIST" name="phoneList1" width="400px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <model>
+                  <item label="govcmid.phoneList1.item0.label" value="Unknown" />
+                </model>
+              </combobox>
+            </gridcell>
+            <gridcell>
+              <combobox block="GOVCMID" height="23px" label="govcmid.emailList.prompt" member="EMAIL_LIST" name="emailList1" textalign="center" width="320px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <model>
+                  <item label="govcmid.emailList1.item0.label" value="Unknown" />
+                </model>
+              </combobox>
+            </gridcell>
+            <gridcell>
+              <component>
+                <!-- <text width="50px">buttonControlBlock.clearSuspenseBtn.prompt</text> -->
+                <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.clearSuspenseBtn.prompt" enabled="false" height="20px" member="CLEAR_SUSPENSE_BTN" name="clearSuspenseBtn" navigable="false" tooltip="buttonControlBlock.clearSuspenseBtn.tooltip" width="250px" />
+              </component>
+            </gridcell>
+          </gridlayout>
+        </framepanel>
+      </panel>
+    </accordion>
+  </panel>
+</config>

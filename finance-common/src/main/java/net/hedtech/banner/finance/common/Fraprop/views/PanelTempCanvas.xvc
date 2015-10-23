@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="FRRPRPI"/>
+	<panel class="ContentCanvas" id="pnlTempCanvas" menu="G$_DEFAULT_PM" name="TEMP_CANVAS" visible="false" width="100%">
+		<gridview block="FRRPRPI" name="grdFrrprpi" width="100%">
+			<viewheader>
+				<viewcolumn block="FRRPRPI" labelstyle="DEFAULT" maxlength="0" member="EVENTS_BTN" name="eventsBtn" navigable="false" width="64px">
+					<editor>
+						<button action="WHEN-BUTTON-PRESSED" label="frrprpi.eventsBtn.label"/>
+					</editor>
+				</viewcolumn>
+				<viewcolumn block="FRRPRPI" labelstyle="DEFAULT" maxlength="0" member="TEXT_BTN" name="textBtn" navigable="false" width="64px">
+					<editor>
+						<button action="WHEN-BUTTON-PRESSED" label="frrprpi.textBtn.label"/>
+					</editor>
+				</viewcolumn>
+			</viewheader>
+		</gridview>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.viewHierBtn.label" member="VIEW_HIER_BTN" name="viewHierBtn" navigable="false" width="88px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.pushButton314.label" member="PUSH_BUTTON314" name="pushButton314" navigable="false" width="104px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.navigateTo6Btn.label" member="NAVIGATE_TO_6_BTN" name="navigateTo6Btn" navigable="false" width="104px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.navigateTo5Btn.label" member="NAVIGATE_TO_5_BTN" name="navigateTo5Btn" navigable="false" width="104px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.navigateTo4Btn.label" member="NAVIGATE_TO_4_BTN" name="navigateTo4Btn" navigable="false" width="104px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropExit1Btn.label" member="FRBPROP_EXIT_1_BTN" name="frbpropExit1Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropRollback1Btn.label" member="FRBPROP_ROLLBACK_1_BTN" name="frbpropRollback1Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropSave1Btn.label" member="FRBPROP_SAVE_1_BTN" name="frbpropSave1Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.copyProp.label" member="COPY_PROP" name="copyProp" navigable="false" width="64px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.navigateToBtn.label" member="NAVIGATE_TO_BTN" name="navigateToBtn" navigable="false" width="104px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.navigateTo1Btn.label" member="NAVIGATE_TO_1_BTN" name="navigateTo1Btn" navigable="false" width="104px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropExit2Btn.label" member="FRBPROP_EXIT_2_BTN" name="frbpropExit2Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropSave2Btn.label" member="FRBPROP_SAVE_2_BTN" name="frbpropSave2Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropRollback2Btn.label" member="FRBPROP_ROLLBACK_2_BTN" name="frbpropRollback2Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropRollback5Btn.label" member="FRBPROP_ROLLBACK_5_BTN" name="frbpropRollback5Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropSave5Btn.label" member="FRBPROP_SAVE_5_BTN" name="frbpropSave5Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.exit6Btn.label" member="EXIT_6_BTN" name="exit6Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.save6Btn.label" member="SAVE_6_BTN" name="save6Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.rollback6Btn.label" member="ROLLBACK_6_BTN" name="rollback6Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropExit5Btn.label" member="FRBPROP_EXIT_5_BTN" name="frbpropExit5Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropExit4Btn.label" member="FRBPROP_EXIT_4_BTN" name="frbpropExit4Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropSave4Btn.label" member="FRBPROP_SAVE_4_BTN" name="frbpropSave4Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.frbpropRollback4Btn.label" member="FRBPROP_ROLLBACK_4_BTN" name="frbpropRollback4Btn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.tbrrras1SaveBtn.label" member="TBRRRAS_1_SAVE_BTN" name="tbrrras1SaveBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.tbrrras1ExitBtn.label" member="TBRRRAS_1_EXIT_BTN" name="tbrrras1ExitBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.tbrrras1RollbackBtn.label" member="TBRRRAS_1_ROLLBACK_BTN" name="tbrrras1RollbackBtn" navigable="false" width="80px"/>
+	</panel>
+</config>

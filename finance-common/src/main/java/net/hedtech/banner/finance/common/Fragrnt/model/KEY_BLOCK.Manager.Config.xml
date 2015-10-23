@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="KEY_BLOCK.Manager.Config" name="KeyBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="DISPLAY_FRBGRNT_CODE" logicalName="displayFrbgrntCode" type="String"   />
+			<item name="DISPLAY_PROP_CODE" logicalName="displayPropCode" type="String"   />
+			<item name="DISPLAY_TEXT_IND" logicalName="displayTextInd" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+		</items>
+		
+			<managerClass>net.hedtech.banner.finance.common.Fragrnt.model.KeyBlock</managerClass>
+
+	</manager>
+</b:beans>

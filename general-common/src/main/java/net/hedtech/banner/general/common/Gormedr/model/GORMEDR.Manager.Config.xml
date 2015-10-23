@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GORMEDR.Manager.Config" name="GORMEDR">
+		
+		<items>
+			<item name="GORMEDR_MEDI_CODE" logicalName="gormedrMediCode" type="String" physicalName="GORMEDR_MEDI_CODE"  />
+			<item name="GORMEDR_DISA_CODE" logicalName="gormedrDisaCode" type="String" physicalName="GORMEDR_DISA_CODE"  />
+			<item name="DISA_DESC" logicalName="disaDesc" type="String"  virtual="true" />
+			<item name="GORMEDR_DEFAULT_IND" logicalName="gormedrDefaultInd" type="String" physicalName="GORMEDR_DEFAULT_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GORMEDR_USER_ID" logicalName="gormedrUserId" type="String" physicalName="GORMEDR_USER_ID"  />
+			<item name="GORMEDR_ACTIVITY_DATE" logicalName="gormedrActivityDate" type="java.util.Date" physicalName="GORMEDR_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Gormedr.model.GormedrAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[GORMEDR_DISA_CODE]]></defaultOrderByClause>	
+		<pagination maximumRows="11" enabled="true"/>
+	</manager>
+</b:beans>

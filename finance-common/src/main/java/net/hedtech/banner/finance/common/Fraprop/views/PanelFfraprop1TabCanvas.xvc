@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel width="100%">
+		<tabpanel id="tabFfraprop1TabCanvas" name="FFRAPROP_1_TAB_CANVAS">
+			<xl:event action="WHEN-TAB-PAGE-CHANGED" name="change"/>
+			<tab id="page_headerInformation" label="headerInformation.label" name="HEADER_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fraprop/views/TabFfraprop1TabCanvasHeaderInformation"/>
+			</tab>
+			<tab id="page_proposalAgencyInformation" label="proposalAgencyInformation.label" name="PROPOSAL_AGENCY_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fraprop/views/TabFfraprop1TabCanvasProposalAgencyInformation"/>
+			</tab>
+			<tab id="page_locationInformation" label="locationInformation.label" name="LOCATION_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fraprop/views/TabFfraprop1TabCanvasLocationInformation"/>
+			</tab>
+			<tab id="page_costCodeInformation" label="costCodeInformation.label" name="COST_CODE_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fraprop/views/TabFfraprop1TabCanvasCostCodeInformation"/>
+			</tab>
+			<tab id="page_personnelInformation" label="personnelInformation.label" name="PERSONNEL_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fraprop/views/TabFfraprop1TabCanvasPersonnelInformation"/>
+			</tab>
+			<tab id="page_userDefinedData" label="userDefinedData.label" name="USER_DEFINED_DATA">
+				<include src="net/hedtech/banner/finance/common/Fraprop/views/TabFfraprop1TabCanvasUserDefinedData"/>
+			</tab>
+			<tab id="page_passthroughAgency" label="passthroughAgency.label" name="PASSTHROUGH_AGENCY">
+				<include src="net/hedtech/banner/finance/common/Fraprop/views/TabFfraprop1TabCanvasPassthroughAgency"/>
+			</tab>
+		</tabpanel>
+	</panel>
+</config>

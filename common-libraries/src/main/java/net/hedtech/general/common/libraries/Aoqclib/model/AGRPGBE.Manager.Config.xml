@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="AGRPGBE.Manager.Config" name="AGRPGBE">
+		
+		<items>
+			<item name="PGBE_ID" logicalName="pgbeId" type="String"  virtual="true"  /> 
+			<item name="AGRPGBE_XREF_CODE" logicalName="agrpgbeXrefCode" type="String" physicalName="AGRPGBE_XREF_CODE"   /> 
+			<item name="PGBE_XREF_DESC" logicalName="pgbeXrefDesc" type="String"  virtual="true"  /> 
+			<item name="AGRPGBE_PLEDGE_NO" logicalName="agrpgbePledgeNo" type="String" physicalName="AGRPGBE_PLEDGE_NO"   /> 
+			<item name="AGRPGBE_GIFT_NO" logicalName="agrpgbeGiftNo" type="String" physicalName="AGRPGBE_GIFT_NO"   /> 
+			<item name="AGRPGBE_SURNAME_PREFIX" logicalName="agrpgbeSurnamePrefix" type="String" physicalName="AGRPGBE_SURNAME_PREFIX"   /> 
+			<item name="PGBE_SURNAME_PREFIX" logicalName="pgbeSurnamePrefix" type="String"  virtual="true"  /> 
+			<item name="AGRPGBE_LAST_NAME" logicalName="agrpgbeLastName" type="String" physicalName="AGRPGBE_LAST_NAME"   /> 
+			<item name="PGBE_LAST_NAME" logicalName="pgbeLastName" type="String"  virtual="true"  /> 
+			<item name="AGRPGBE_FIRST_NAME" logicalName="agrpgbeFirstName" type="String" physicalName="AGRPGBE_FIRST_NAME"   /> 
+			<item name="PGBE_FIRST_NAME" logicalName="pgbeFirstName" type="String"  virtual="true"  /> 
+			<item name="AGRPGBE_MI" logicalName="agrpgbeMi" type="String" physicalName="AGRPGBE_MI"   /> 
+			<item name="PGBE_MI" logicalName="pgbeMi" type="String"  virtual="true"  /> 
+			<item name="AGRPGBE_SEX" logicalName="agrpgbeSex" type="String" physicalName="AGRPGBE_SEX"   > 
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="PGBE_SEX" logicalName="pgbeSex" type="String"  virtual="true"  > 
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="AGRPGBE_BIRTH_DATE" logicalName="agrpgbeBirthDate" type="java.util.Date" physicalName="AGRPGBE_BIRTH_DATE"   /> 
+			<item name="PGBE_BIRTH_DATE" logicalName="pgbeBirthDate" type="java.util.Date"  virtual="true"  /> 
+			<item name="DISPLAY_AGE" logicalName="displayAge" type="String"  virtual="true"  /> 
+			<item name="AGRPGBE_DECEASED_IND" logicalName="agrpgbeDeceasedInd" type="String" physicalName="AGRPGBE_DECEASED_IND"   /> 
+			<item name="PGBE_DECEASED_IND" logicalName="pgbeDeceasedInd" type="String"  virtual="true"  /> 
+			<item name="AGRPGBE_DECEASED_DATE" logicalName="agrpgbeDeceasedDate" type="java.util.Date" physicalName="AGRPGBE_DECEASED_DATE"   /> 
+			<item name="PGBE_DECEASED_DATE" logicalName="pgbeDeceasedDate" type="java.util.Date"  virtual="true"  /> 
+			<item name="AGRPGBE_COMMENT" logicalName="agrpgbeComment" type="String" physicalName="AGRPGBE_COMMENT"   /> 
+			<item name="AGRPGBE_ACTIVITY_DATE" logicalName="agrpgbeActivityDate" type="java.util.Date" physicalName="AGRPGBE_ACTIVITY_DATE"   /> 
+			<item name="AGRPGBE_USER_ID" logicalName="agrpgbeUserId" type="String" physicalName="AGRPGBE_USER_ID"   /> 
+			<item name="AGRPGBE_PIDM" logicalName="agrpgbePidm" type="java.math.BigDecimal" physicalName="AGRPGBE_PIDM"   /> 
+			<item name="AGRPGBE_PGBE_PIDM" logicalName="agrpgbePgbePidm" type="java.math.BigDecimal" physicalName="AGRPGBE_PGBE_PIDM"   /> 
+			<item name="AGRPGBE_DATA_ORIGIN" logicalName="agrpgbeDataOrigin" type="String" physicalName="AGRPGBE_DATA_ORIGIN"   /> 
+			<item name="PGBE_NAME" logicalName="pgbeName" type="String"  virtual="true"  /> 
+			<item name="PGBE_CHANGE_IND" logicalName="pgbeChangeInd" type="String"  virtual="true"  /> 
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Aoqclib.model.AgrpgbeAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE agrpgbe_pidm = :PIDM AND ((agrpgbe_pledge_no = :GLOBAL_PLEDGE_NO AND :GLOBAL_GIFT_NO IS NULL) OR (agrpgbe_gift_no = :GLOBAL_GIFT_NO AND :GLOBAL_PLEDGE_NO IS NULL) OR (agrpgbe_pledge_no = :GLOBAL_PLEDGE_NO AND agrpgbe_gift_no = :GLOBAL_GIFT_NO))]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[ agrpgbe_last_name, agrpgbe_first_name,agrpgbe_activity_date]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

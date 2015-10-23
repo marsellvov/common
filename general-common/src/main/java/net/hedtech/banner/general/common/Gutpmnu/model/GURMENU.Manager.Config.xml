@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GURMENU.Manager.Config" name="GURMENU">
+		
+		<items>
+			<item name="GURMENU_OBJ_NAME" logicalName="gurmenuObjName" type="String" physicalName="GURMENU_OBJ_NAME"  />
+			<item name="DISPLAY_DESC" logicalName="displayDesc" type="String"  virtual="true" />
+			<item name="OBJ_TYPE" logicalName="objType" type="String"  virtual="true" />
+			<item name="GURMENU_NAME" logicalName="gurmenuName" type="String" physicalName="GURMENU_NAME"  />
+			<item name="GURMENU_DESC" logicalName="gurmenuDesc" type="String" physicalName="GURMENU_DESC"  />
+			<item name="GURMENU_SORT_SEQ" logicalName="gurmenuSortSeq" type="java.math.BigDecimal" physicalName="GURMENU_SORT_SEQ"  />
+			<item name="GURMENU_USER_ID" logicalName="gurmenuUserId" type="String" physicalName="GURMENU_USER_ID"  />
+			<item name="GURMENU_ACTIVITY_DATE" logicalName="gurmenuActivityDate" type="java.util.Date" physicalName="GURMENU_ACTIVITY_DATE"  />
+			<item name="HOLD_DESC" logicalName="holdDesc" type="String"  virtual="true" />
+			<item name="GURMENU_COUNT" logicalName="gurmenuCount" type="java.math.BigDecimal"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Gutpmnu.model.GurmenuAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE GURMENU_USER_ID = :CUST_USER_ID AND GURMENU_NAME = '*PERSONAL']]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[ORDER BY GURMENU_SORT_SEQ]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

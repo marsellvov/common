@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVACCI.Manager.Config" name="FTVACCI">
+		
+		<items>
+			<item name="FTVACCI_COAS_CODE" logicalName="ftvacciCoasCode" type="String" physicalName="FTVACCI_COAS_CODE"  />
+			<item name="FTVACCI_ACCI_CODE" logicalName="ftvacciAcciCode" type="String" physicalName="FTVACCI_ACCI_CODE"  />
+			<item name="FTVACCI_TITLE" logicalName="ftvacciTitle" type="String" physicalName="FTVACCI_TITLE"  />
+			<item name="FTVACCI_STATUS_IND" logicalName="ftvacciStatusInd" type="String" physicalName="FTVACCI_STATUS_IND"  />
+			<item name="FTVACCI_EFF_DATE" logicalName="ftvacciEffDate" type="java.util.Date" physicalName="FTVACCI_EFF_DATE"  />
+			<item name="FTVACCI_TERM_DATE" logicalName="ftvacciTermDate" type="java.util.Date" physicalName="FTVACCI_TERM_DATE"  />
+			<item name="FTVACCI_ACTIVITY_DATE" logicalName="ftvacciActivityDate" type="java.util.Date" physicalName="FTVACCI_ACTIVITY_DATE"  />
+			<item name="FTVACCI_USER_ID" logicalName="ftvacciUserId" type="String" physicalName="FTVACCI_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvacci.model.FtvacciAdapter</adapterClass>
+<!-- 		<defaultWhereClause><![CDATA[WHERE (ftvacci_coas_code = :HOLD_COAS_CODE OR :FTVACCI_COAS_CODE = :FTVACCI_COAS_CODE)]]></defaultWhereClause>	 -->
+		<defaultWhereClause><![CDATA[WHERE (ftvacci_coas_code = NVL(:HOLD_COAS_CODE, FTVACCI_COAS_CODE))]]></defaultWhereClause>
+		<defaultOrderByClause><![CDATA[order by ftvacci_coas_code, ftvacci_acci_code, ftvacci_eff_date]]></defaultOrderByClause>	
+        <pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

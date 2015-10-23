@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Goaeacc/GoaeaccAlerts.xml" FirstNavigationBlock="GOBEACC" LovDataPath="/net/hedtech/banner/general/common/Goaeacc/GoaeaccLovs.xml" Name="GOAEACC">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Goaeacc/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="GOBEACC_CANVAS" />
+    </Window>
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Goaeacc/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item DataType="String" Id="CHECK_KEYS" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_USER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_FORM" MaxLength="7" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Id="DEL_IND" MaxLength="1" Type="TextItem" />
+    </Block>
+    <Block Id="GOBEACC" MultiRecord="true">
+      <Item AllowUpdate="false" CanvasName="GOBEACC_CANVAS" DataType="String" Enabled="true" Hint="gobeacc.gobeaccUsername.hint" Id="GOBEACC_USERNAME" Lov="ALL_USERS_LOV" MaxLength="30" Required="true" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="GOBEACC_CANVAS" DataType="String" Enabled="true" Hint="gobeacc.wacsId.hint" Id="WACS_ID" MaxLength="9" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOBEACC_CANVAS" DataType="String" Enabled="false" Hint="gobeacc.nname.hint" Id="NAME" MaxLength="230" Navigable="false" Type="TextItem" Visible="true" />
+      <Item DataType="Number" Enabled="true" Hint="gobeacc.gobeaccPidm.hint" Id="GOBEACC_PIDM" MaxLength="10" Required="true" Type="TextItem" Visible="true" />
+      <Item DataType="Date" Enabled="true" Hint="gobeacc.gobeaccActivityDate.hint" Id="GOBEACC_ACTIVITY_DATE" MaxLength="11" Required="true" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" DataType="String" Enabled="false" Id="GOBEACC_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" DataType="String" Enabled="false" Id="CONFID_INFO" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" DataType="String" Enabled="false" Id="DECEASED_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="VUSR_IND" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item DataType="Number" Enabled="false" Id="IDEN_REC_CNT" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item DataType="String" Enabled="false" Id="IDEN_ID" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item DataType="String" Enabled="false" Id="ERR_CODE" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" DataType="String" Enabled="false" Id="EACC_ERROR_MSG" MaxLength="80" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" DataType="String" Id="VALID_ORACLEUSER" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="AMSG" MaxLength="75" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="GOBEACC_CANVAS" Id="GOBEACC_USERNAME_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GOBEACC_CANVAS" Id="WACS_ID_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="GOBVUSR_EXIT_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="GOBVUSR_SAVE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="GOBVUSR_ROLLBACK_BTN" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+    <Block Id="G$_OPT_BLOCK">
+      <Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_SEL" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+    </Block>
+  </Logic>
+</FormStructure>

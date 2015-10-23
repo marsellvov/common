@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SORLFOS.Manager.Config" name="sovlfos">
+		<kind>View</kind>
+		<items>
+			<item name="LFOS_ROLLED_IND" logicalName="lfosRolledInd" type="String"  virtual="true" />
+			<item name="LFOS_DEACTIVATE_IND" logicalName="lfosDeactivateInd" type="String"  virtual="true" />
+			<item name="LFOS_ERROR_ITEM" logicalName="lfosErrorItem" type="String"  virtual="true" />
+			<item name="LFOS_ERROR_FLAG" logicalName="lfosErrorFlag" type="String"  virtual="true" />
+			<item name="LFOS_DELETE_IND" logicalName="lfosDeleteInd" type="String"  virtual="true" />
+			<item name="LFOS_OPTION_KEY1" logicalName="lfosOptionKey1" type="String"  virtual="true" />
+			<item name="LFOS_OPTION_KEY2" logicalName="lfosOptionKey2" type="String"  virtual="true" />
+			<item name="LFOS_OPTION_KEY3" logicalName="lfosOptionKey3" type="String"  virtual="true" />
+			<item name="LFOS_OPTION_TITLE1" logicalName="lfosOptionTitle1" type="String"  virtual="true" />
+			<item name="LFOS_OPTION_TITLE2" logicalName="lfosOptionTitle2" type="String"  virtual="true" />
+			<item name="LFOS_OPTION_TITLE3" logicalName="lfosOptionTitle3" type="String"  virtual="true" />
+			<item name="HOLD_DEPT_ATTACH" logicalName="holdDeptAttach" type="String"  virtual="true" />
+			<item name="LFOS_WARNING" logicalName="lfosWarning" type="java.math.BigDecimal"  virtual="true" />
+			<item name="SEVERITY_OUT" logicalName="severityOut" type="String"  virtual="true" />
+			<item name="CURR_ERROR" logicalName="currError" type="java.math.BigDecimal"  virtual="true" />
+			<item name="SORLFOS_PIDM" logicalName="sorlfosPidm" type="java.math.BigDecimal" physicalName="SOVLFOS_PIDM"  />
+			<item name="SOVLFOS_ROWID" logicalName="sovlfosRowid" type="String" physicalName="sovlfos_rowid"  />
+			<item name="SORLFOS_LCUR_SEQNO" logicalName="sorlfosLcurSeqno" type="java.math.BigDecimal" physicalName="SOVLFOS_LCUR_SEQNO"  />
+			<item name="SORLFOS_CURRENT_IND" logicalName="sorlfosCurrentInd" type="String" physicalName="sovlfos_current_ind"  />
+			<item name="SORLFOS_SEQNO" logicalName="sorlfosSeqno" type="java.math.BigDecimal" physicalName="SOVLFOS_SEQNO"  />
+			<item name="SORLFOS_CACT_CODE" logicalName="sorlfosCactCode" type="String" physicalName="SOVLFOS_CACT_CODE"  />
+			<item name="SORLFOS_CSTS_CODE" logicalName="sorlfosCstsCode" type="String" physicalName="SOVLFOS_CSTS_CODE"  />
+			<item name="SORLFOS_LFST_CODE" logicalName="sorlfosLfstCode" type="String" physicalName="SOVLFOS_LFST_CODE"  />
+			<item name="SORLFOS_PRIORITY_NO" logicalName="sorlfosPriorityNo" type="java.math.BigDecimal" physicalName="SOVLFOS_PRIORITY_NO"  />
+			<item name="SORLFOS_TERM_CODE" logicalName="sorlfosTermCode" type="String" physicalName="SOVLFOS_TERM_CODE"  />
+			<item name="SORLFOS_TERM_CODE_CTLG" logicalName="sorlfosTermCodeCtlg" type="String" physicalName="SOVLFOS_TERM_CODE_CTLG"  />
+			<item name="SORLFOS_TERM_CODE_END" logicalName="sorlfosTermCodeEnd" type="String" physicalName="SOVLFOS_TERM_CODE_END"  />
+			<item name="SORLFOS_MAJR_CODE" logicalName="sorlfosMajrCode" type="String" physicalName="SOVLFOS_MAJR_CODE"  />
+			<item name="SORLFOS_DEPT_CODE" logicalName="sorlfosDeptCode" type="String" physicalName="SOVLFOS_DEPT_CODE"  />
+			<item name="SORLFOS_MAJR_CODE_ATTACH" logicalName="sorlfosMajrCodeAttach" type="String" physicalName="sovlfos_majr_code_attach"  />
+			<item name="SORLFOS_TMST_CODE" logicalName="sorlfosTmstCode" type="String" physicalName="SOVLFOS_TMST_CODE"  />
+			<item name="SORLFOS_START_DATE" logicalName="sorlfosStartDate" type="java.util.Date" physicalName="SOVLFOS_START_DATE"  />
+			<item name="SORLFOS_END_DATE" logicalName="sorlfosEndDate" type="java.util.Date" physicalName="SOVLFOS_END_DATE"  />
+			<item name="SORLFOS_LFOS_RULE" logicalName="sorlfosLfosRule" type="java.math.BigDecimal" physicalName="SOVLFOS_LFOS_RULE"  />
+			<item name="SORLFOS_CONC_ATTACH_RULE" logicalName="sorlfosConcAttachRule" type="java.math.BigDecimal" physicalName="SOVLFOS_CONC_ATTACH_RULE"  />
+			<item name="SORLFOS_ROLLED_SEQNO" logicalName="sorlfosRolledSeqno" type="java.math.BigDecimal" physicalName="SOVLFOS_ROLLED_SEQNO"  />
+			<item name="SORLFOS_USER_ID" logicalName="sorlfosUserId" type="String" physicalName="SOVLFOS_USER_ID"  />
+			<item name="SORLFOS_ACTIVITY_DATE" logicalName="sorlfosActivityDate" type="java.util.Date" physicalName="SOVLFOS_ACTIVITY_DATE"  />
+			<item name="SORLFOS_MAJR_DESC" logicalName="sorlfosMajrDesc" type="String"  virtual="true" />
+			<item name="SORLFOS_ATTACH_CONC_DESC" logicalName="sorlfosAttachConcDesc" type="String"  virtual="true" />
+			<item name="SORLFOS_TMST_DESC" logicalName="sorlfosTmstDesc" type="String"  virtual="true" />
+			<item name="SORLFOS_DEPT_DESC" logicalName="sorlfosDeptDesc" type="String"  virtual="true" />
+			<item name="SORLFOS_LFST_CODE_DESC" logicalName="sorlfosLfstCodeDesc" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Soqolib.model.SorlfosAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE ((nvl(:GLOBAL_VIEW_CURRENT, 'N') = 'Y' AND sovlfos_current_ind = 'Y' AND sovlfos_active_ind = 'Y') OR (nvl(:GLOBAL_VIEW_CURRENT, 'N') = 'N')) AND sovlfos_pidm = :SORLCUR_PIDM AND sovlfos_lcur_seqno = :SORLCUR_SEQNO]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by decode(sovlfos_lfst_code,sb_fieldofstudy_str.f_major,'1',
+sb_fieldofstudy_str.f_minor,'2', 
+sb_fieldofstudy_str.f_concentration,'3','4'),
+decode(sovlfos_current_ind || sovlfos_active_ind, 'YY',1,2),
+sovlfos_priority_no, sovlfos_seqno desc ]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

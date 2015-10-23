@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVCTYP.Manager.Config" name="FTVCTYP">
+		
+		<items>
+			<item name="FTVCTYP_USER_ID" logicalName="ftvctypUserId" type="String" physicalName="FTVCTYP_USER_ID"  />
+			<item name="FTVCTYP_ACTIVITY_DATE" logicalName="ftvctypActivityDate" type="java.util.Date" physicalName="FTVCTYP_ACTIVITY_DATE"  />
+			<item name="FTVCTYP_CODE" logicalName="ftvctypCode" type="String" physicalName="FTVCTYP_CODE"  />
+			<item name="FTVCTYP_SHORT_DESC" logicalName="ftvctypShortDesc" type="String" physicalName="FTVCTYP_SHORT_DESC"  />
+			<item name="FTVCTYP_LONG_DESC" logicalName="ftvctypLongDesc" type="String" physicalName="FTVCTYP_LONG_DESC"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftmctyp.model.FtvctypAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[ftvctyp_code]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

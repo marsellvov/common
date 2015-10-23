@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="LIB__FORM_HEADER.Manager.Config" name="LibFormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CURRENT_FORM" logicalName="currentForm" type="String"   />
+			<item name="CHECK_KEYS" logicalName="checkKeys" type="String"   />
+			<item name="INST_NAME" logicalName="instName" type="String"   />
+			<item name="CURRENT_INSTITUTION" logicalName="currentInstitution" type="String"   />
+			<item name="CURRENT_DATE" logicalName="currentDate" type="String"   />
+			<item name="CURRENT_TIME" logicalName="currentTime" type="String"   />
+			<item name="WORKDATE" logicalName="workdate" type="String"   />
+			<item name="WORKUSER" logicalName="workuser" type="String"   />
+			<item name="CALLFLD" logicalName="callfld" type="String"   />
+			<item name="CURRENT_USER" logicalName="currentUser" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Goqolib.model.LibFormHeader</managerClass>
+
+	</manager>
+</b:beans>

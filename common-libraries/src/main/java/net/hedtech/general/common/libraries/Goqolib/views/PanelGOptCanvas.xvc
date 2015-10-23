@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="G$_OPT_BLOCK" />
+  <panel label="gOptWindow.title" style="lightbox" width="100%" class="ContentCanvas" id="panelGOptCanvas" name="G$_OPT_CANVAS">
+<!--     <textbox name="g$_opt_block_optSel" left="0px" top="0px" width="0px" height="0px" enabled="false" member="OPT_SEL" block="G$_OPT_BLOCK" maxlength="30" datatype="String" /> -->
+  <flowlayout orientation="vertical">
+	    <button name="g$_opt_block_selectADesc" enabled="false" navigable="false" member="SELECT_A_DESC" block="G$_OPT_BLOCK" action="WHEN-BUTTON-PRESSED">
+	      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+	    </button>
+	    <button name="g$_opt_block_selectBDesc" enabled="false" navigable="false"  member="SELECT_B_DESC" block="G$_OPT_BLOCK" action="WHEN-BUTTON-PRESSED">
+	      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+	    </button>
+	    <button name="g$_opt_block_selectCDesc" enabled="false" navigable="false"  member="SELECT_C_DESC" block="G$_OPT_BLOCK" action="WHEN-BUTTON-PRESSED">
+	      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+	    </button>
+	    <button name="g$_opt_block_selectDDesc" enabled="false" navigable="false"  member="SELECT_D_DESC" block="G$_OPT_BLOCK" action="WHEN-BUTTON-PRESSED">
+	      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+	    </button>
+	    <button name="g$_opt_block_selectEDesc" enabled="false" navigable="false"  member="SELECT_E_DESC" block="G$_OPT_BLOCK" action="WHEN-BUTTON-PRESSED">
+	      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+	    </button>
+	    <button name="g$_opt_block_selectFDesc" enabled="false" navigable="false"  member="SELECT_F_DESC" block="G$_OPT_BLOCK" action="WHEN-BUTTON-PRESSED">
+	      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+	    </button>
+	</flowlayout>
+	</panel>
+<!-- 	<panel style="alert-footer">   -->
+<!-- 	   <flowlayout orientation="horizontal">  -->
+<!-- 	    	<button label="gOptBlock.optCancelBtn.label" name="g$_opt_block_optCancelBtn" style="GNvaButtonItem"  enabled="false" navigable="false" wrapStyle="none" bordertype="raised" member="OPT_CANCEL_BTN" block="G$_OPT_BLOCK" maxlength="14" action="WHEN-BUTTON-PRESSED" /> -->
+<!-- 	    </flowlayout> -->
+<!--   </panel> -->
+</config>

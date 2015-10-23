@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GJBPRUN.Manager.Config" name="GJBPRUN">
+		
+		<items>
+			<item name="GJBPRUN_JOB" logicalName="gjbprunJob" type="String" physicalName="GJBPRUN_JOB"  />
+			<item name="GJBPRUN_DUMMY" logicalName="gjbprunDummy" type="String"  virtual="true" />
+			<item name="GJBPRUN_ONE_UP_NO" logicalName="gjbprunOneUpNo" type="java.math.BigDecimal" physicalName="GJBPRUN_ONE_UP_NO"  />
+			<item name="GJBPRUN_NUMBER" logicalName="gjbprunNumber" type="String" physicalName="GJBPRUN_NUMBER"  />
+			<item name="GJBPRUN_ACTIVITY_DATE" logicalName="gjbprunActivityDate" type="java.util.Date" physicalName="GJBPRUN_ACTIVITY_DATE"  />
+			<item name="GJBPRUN_VALUE" logicalName="gjbprunValue" type="String" physicalName="GJBPRUN_VALUE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Guqintf.model.GjbprunAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE gjbprun_job = 'DEFAULT' AND gjbprun_one_up_no = 9999999999]]></defaultWhereClause>	
+
+	</manager>
+</b:beans>

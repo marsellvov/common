@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlTempCanvas" menu="G$_DEFAULT_PM" name="TEMP_CANVAS" visible="false" width="100%">
+		<panel width="100%">
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddrAtypCodeLbt.label" member="SPRADDR_ATYP_CODE_LBT" name="spraddrAtypCodeLbt" navigable="false" width="104px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr6ReturnBtn.label" member="SPRADDR_6_RETURN_BTN" name="spraddr6ReturnBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.legalNameReturnBtn.label" member="LEGAL_NAME_RETURN_BTN" name="legalNameReturnBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.legalNameRollbackBtn.label" member="LEGAL_NAME_ROLLBACK_BTN" name="legalNameRollbackBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.legalNameSaveBtn.label" member="LEGAL_NAME_SAVE_BTN" name="legalNameSaveBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.legalNameExitBtn.label" member="LEGAL_NAME_EXIT_BTN" name="legalNameExitBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr6SaveBtn.label" member="SPRADDR_6_SAVE_BTN" name="spraddr6SaveBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr6ExitBtn.label" member="SPRADDR_6_EXIT_BTN" name="spraddr6ExitBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr6RollbackBtn.label" member="SPRADDR_6_ROLLBACK_BTN" name="spraddr6RollbackBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenCurrent2RollbackBtn.label" member="SPRIDEN_CURRENT_2_ROLLBACK_BTN" name="spridenCurrent2RollbackBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenCurrent2ExitBtn.label" member="SPRIDEN_CURRENT_2_EXIT_BTN" name="spridenCurrent2ExitBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenPrev4RollbackBtn.label" member="SPRIDEN_PREV_4_ROLLBACK_BTN" name="spridenPrev4RollbackBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenPrev4ExitBtn.label" member="SPRIDEN_PREV_4_EXIT_BTN" name="spridenPrev4ExitBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenPreviousExitBtn.label" member="SPRIDEN_PREVIOUS_EXIT_BTN" name="spridenPreviousExitBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spricurrNtypCodeLbt.label" member="SPRICURR_NTYP_CODE_LBT" name="spricurrNtypCodeLbt" navigable="false" width="96px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.previousSourceBtn.label" member="PREVIOUS_SOURCE_BTN" name="previousSourceBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddrAsrcCodeLbt.label" member="SPRADDR_ASRC_CODE_LBT" name="spraddrAsrcCodeLbt" navigable="false" width="72px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenPreviousRollbackBtn.label" member="SPRIDEN_PREVIOUS_ROLLBACK_BTN" name="spridenPreviousRollbackBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenPreviousSaveBtn.label" member="SPRIDEN_PREVIOUS_SAVE_BTN" name="spridenPreviousSaveBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddrStatCodeLbt.label" member="SPRADDR_STAT_CODE_LBT" name="spraddrStatCodeLbt" navigable="false" width="104px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenPrevious3ReturnBtn.label" member="SPRIDEN_PREVIOUS_3_RETURN_BTN" name="spridenPrevious3ReturnBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddrCntyCodeLbt.label" member="SPRADDR_CNTY_CODE_LBT" name="spraddrCntyCodeLbt" navigable="false" width="104px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddrNatnCodeLbt.label" member="SPRADDR_NATN_CODE_LBT" name="spraddrNatnCodeLbt" navigable="false" width="104px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.teleCodeLbt.label" member="TELE_CODE_LBT" name="teleCodeLbt" navigable="false" width="56px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr5ReturnBtn.label" member="SPRADDR_5_RETURN_BTN" name="spraddr5ReturnBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr5RollbackBtn.label" member="SPRADDR_5_ROLLBACK_BTN" name="spraddr5RollbackBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr5SaveBtn.label" member="SPRADDR_5_SAVE_BTN" name="spraddr5SaveBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr5ExitBtn.label" member="SPRADDR_5_EXIT_BTN" name="spraddr5ExitBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.addressBtn.label" member="ADDRESS_BTN" name="addressBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.previousNameBtn.label" member="PREVIOUS_NAME_BTN" name="previousNameBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.sourceBtn.label" member="SOURCE_BTN" name="sourceBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.legalNameBtn.label" member="LEGAL_NAME_BTN" name="legalNameBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenCurrent1RollbackBtn.label" member="SPRIDEN_CURRENT_1_ROLLBACK_BTN" name="spridenCurrent1RollbackBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenCurrent1SaveBtn.label" member="SPRIDEN_CURRENT_1_SAVE_BTN" name="spridenCurrent1SaveBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenCurrent1ExitBtn.label" member="SPRIDEN_CURRENT_1_EXIT_BTN" name="spridenCurrent1ExitBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+		</panel>
+	</panel>
+</config>

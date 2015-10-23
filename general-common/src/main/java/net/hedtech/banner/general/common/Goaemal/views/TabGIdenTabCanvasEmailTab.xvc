@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GOREMAL"/>
+	<panel class="StackedCanvas" id="page_emailTab" menu="G$_DEFAULT_PM" name="EMAIL_TAB" width="100%">
+		<accordion width="100%">
+			<panel label="accordion.title.label">
+				<panel width="100%">
+					<!-- <repeater block="GOREMAL" width="100%"> -->
+						<!-- <gridlayout cols="2" orientation="vertical"> -->
+					<gridview block="GOREMAL" width="100%">
+						<viewheader>
+							<viewcolumn block="GOREMAL" autoskip="true" case="upper" height="23px" label="goremal.goremalEmalCode.prompt" maxlength="30" member="GOREMAL_EMAL_CODE" name="goremalEmalCode" style="ui-buttoninput" validation="server" width="80px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									<editor>
+										<lovbox></lovbox>
+									</editor>
+							</viewcolumn>
+<!-- 								<button action="WHEN-BUTTON-PRESSED" height="23px" icon="flashlit" member="GOREMAL_EMAL_CODE_LBT" name="goremalEmalCodeLbt" navigable="false" style="ui-buttoninput" tooltip="goremal.goremalEmalCodeLbt.tooltip" width="23px"/> -->
+							
+							<viewcolumn block="GOREMAL" label="goremal.goremalEmalCodeDescription.prompt" autoskip="true" case="upper" enabled="false" height="23px" maxlength="30" member="EMAIL_DESC" name="emailDesc" width="200px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							
+							<viewcolumn block="GOREMAL" autoskip="true" height="23px" label="goremal.goremalEmailAddress.prompt" maxlength="128" member="GOREMAL_EMAIL_ADDRESS" name="goremalEmailAddress" validation="server" width="450px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							
+							<viewcolumn block="GOREMAL" enabled="false" height="23px" label="goremal.goremalPreferredInd.label" member="GOREMAL_PREFERRED_IND" name="goremalPreferredInd" width="80px" >
+								<editor>
+									<checkbox action="WHEN-CHECKBOX-CHANGED" falsevalue="N" othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							
+							
+							<viewcolumn block="GOREMAL" label="goremal.goremalStatusInd.label" member="GOREMAL_STATUS_IND" name="goremalStatusInd"  validation="server" width="80px">
+								<editor>
+									<checkbox action="WHEN-CHECKBOX-CHANGED" falsevalue="A" othervaluestate="unchecked" value="I">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							
+						
+							
+							
+							<viewcolumn block="GOREMAL" label="goremal.goremalDispWebInd.label" member="GOREMAL_DISP_WEB_IND" name="goremalDispWebInd" width="130px" >
+								<editor>
+									<checkbox falsevalue="N" othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							
+							<viewcolumn block="GOREMAL" enabled="false" label="goremal.urlInd.label" member="URL_IND" name="urlInd" navigable="false" width="80px" >
+								<editor>
+									<checkbox falsevalue="N" othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							
+							<viewcolumn block="GOREMAL" label="goremal.goremalComment.prompt" maxlength="60" member="GOREMAL_COMMENT" name="goremalComment" width="420px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

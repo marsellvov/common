@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="ftvctyp.ftvctypCode.prompt">Cost Type Code</msg>
+  <msg id="ftvctyp.ftvctypCode.hint">Cost Type Code;</msg>
+  <msg id="ftvctyp.ftvctypShortDesc.prompt">Short Description</msg>
+  <msg id="ftvctyp.ftvctypShortDesc.hint">Cost Type Short Description;</msg>
+  <msg id="ftvctyp.ftvctypLongDesc.prompt">Long Description</msg>
+  <msg id="ftvctyp.ftvctypLongDesc.hint">Cost Type Long Description.</msg>
+  <msg id="buttonControlBlock.ftvctyp1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.ftvctyp1SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.ftvctyp1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Cost Type Code Maintenance Form</msg>
+  <msg id="ftvctyp.accordion.title">Cost Type Code Maintenance</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

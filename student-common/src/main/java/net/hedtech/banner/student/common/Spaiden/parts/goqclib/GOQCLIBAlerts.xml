@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alerts>
+	<Alert Name="WARNING_ID_CHANGE"/>
+	<Alert Name="WARNING_ROW_REMOVE"/>
+</Alerts>
+ 

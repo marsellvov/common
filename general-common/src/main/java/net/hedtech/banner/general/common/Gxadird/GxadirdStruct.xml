@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Gxadird/GxadirdAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/general/common/Gxadird/GxadirdLovs.xml" Name="GXADIRD">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Gxadird/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="KEY_BLOCK_CANVAS" />
+      <StackedCanvas Id="GXADIRD_1_CANVAS" />
+      <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false" />
+    </Window>
+    <Window Id="PERPADV_WINDOW" Url="net/hedtech/banner/general/common/Gxadird/views/ViewPerpadvWindow" />
+    <!--     <Window Id="G$_EXTENDED_SEARCH_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Gxadird/views/ViewGExtendedSearchWindow"> -->
+    <!--       <StackedCanvas Id="G$_EXTENDED_SEARCH_CANVAS" /> -->
+    <!--     </Window> -->
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Gxadird/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item CanvasName="G$_VPDI_CANVAS" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" />
+      <Item CanvasName="G$_VPDI_CANVAS" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="G$_VPDI_CANVAS" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" />
+      <Item CanvasName="G$_VPDI_CANVAS" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" />
+      <Item Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item DataType="String" Id="HOLD_SECURITY" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="WORKUSER" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CURRENT_USER" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="STATUS_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Id="WORKFLD" MaxLength="11" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="H_ORGN_DE" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CURRENT_FORM" MaxLength="7" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CONVERTED_DATE" MaxLength="11" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="DATE_TO_CONVERT" MaxLength="9" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Id="YEAR" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="GXADIRD_1_CANVAS" DataType="String" Id="DATA_SEPARATOR_LINE_0" MaxLength="24" Navigable="false" Type="DisplayItem" />
+    </Block>
+    <Block Id="KEY_BLOCK">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Id="PIDM" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" DataType="String" Hint="keyBlock.id.hint" Id="ID" MaxLength="9" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="KEY_BLOCK_CANVAS" DataType="String" Enabled="false" Hint="keyBlock.nname.hint" Id="NAME" MaxLength="230" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Id="TOTAL_AMOUNT" MaxLength="25" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Id="TOTAL_PERCENT" MaxLength="25" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Id="QUERY_SWITCH" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="DELETE_MODE_FLAG" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" Navigable="true" Type="Button" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" Navigable="true" Type="Button" Visible="false" />
+    </Block>
+    <Block Id="GXRDIRD" MultiRecord="true">
+      <Item DataType="String" Id="HOLD_ROWID" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdBankRoutNum.hint" Id="GXRDIRD_BANK_ROUT_NUM" MaxLength="30" Required="true" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.bankDesc.hint" Id="BANK_DESC" MaxLength="60" Navigable="false" Type="DisplayItem" />
+      <!--<Item AllowUpdate="false" CanvasName="GXADIRD_1_CANVAS" DataType="Date" Hint="gxrdird.gxrdirdActivityDate.hint" Id="GXRDIRD_ACTIVITY_DATE" MaxLength="26" Navigable="false" Type="TextItem" />-->
+      <Item AllowUpdate="false" DataType="Date" Hint="gxrdird.gxrdirdActivityDate.hint" Id="GXRDIRD_ACTIVITY_DATE" MaxLength="26" Navigable="false" Type="TextItem" CanvasName="GXADIRD_1_CANVAS">
+        <Extension Name="ViewMode" Value="Filter" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE" />
+      </Item>
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdAtypCode.hint" Id="GXRDIRD_ATYP_CODE" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="Number" Hint="gxrdird.gxrdirdAddrSeqno.hint" Id="GXRDIRD_ADDR_SEQNO" MaxLength="2" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdApInd.hint" Id="GXRDIRD_AP_IND" MaxLength="1" Type="Checkbox" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdHrInd.hint" Id="GXRDIRD_HR_IND" MaxLength="1" Type="Checkbox" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdBankAcctNum.hint" Id="GXRDIRD_BANK_ACCT_NUM" MaxLength="17" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdAcctType.hint" Id="GXRDIRD_ACCT_TYPE" MaxLength="1" Type="RadioGroup">
+        <Item Id="CHECKING" Type="RadioButton" />
+        <Item Id="SAVINGS" Type="RadioButton" />
+      </Item>
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdStatus.hint" Id="GXRDIRD_STATUS" MaxLength="1" Required="true" Type="List" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="Number" Hint="gxrdird.gxrdirdPriority.hint" Id="GXRDIRD_PRIORITY" MaxLength="2" MinValue="0" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="Number" Hint="gxrdird.gxrdirdAmount.hint" Id="GXRDIRD_AMOUNT" MaxLength="25" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="Number" Hint="gxrdird.gxrdirdPercent.hint" Id="GXRDIRD_PERCENT" MaxLength="6" MaxValue="100" MinValue="0" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdAchIatInd.hint" Id="GXRDIRD_ACH_IAT_IND" MaxLength="1" Type="Checkbox" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdScodCodeIso.hint" Id="GXRDIRD_SCOD_CODE_ISO" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.scodCodeDesc.hint" Id="SCOD_CODE_DESC" MaxLength="80" Navigable="false" Type="DisplayItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdAchtCode.hint" Id="GXRDIRD_ACHT_CODE" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Hint="gxrdird.gxrdirdAtypCodeIat.hint" Id="GXRDIRD_ATYP_CODE_IAT" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" DataType="Number" Hint="gxrdird.gxrdirdAddrSeqnoIat.hint" Id="GXRDIRD_ADDR_SEQNO_IAT" MaxLength="2" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Hint="gxrdird.gxrdirdDocType.hint" Id="GXRDIRD_DOC_TYPE" MaxLength="1" Navigable="false" Type="TextItem" />
+      <!--<Item CanvasName="GXADIRD_1_CANVAS" DataType="String" Id="GXRDIRD_USER_ID" MaxLength="30" Type="TextItem" />-->
+      <Item Navigable="false" DataType="String" Id="GXRDIRD_USER_ID" MaxLength="30" Type="TextItem" CanvasName="GXADIRD_1_CANVAS">
+        <Extension Name="ViewMode" Value="Filter" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID" />
+      </Item>
+      <Item CanvasName="GXADIRD_1_CANVAS" Id="GXRDIRD_BANK_ROUT_NUM_LBT" MaxLength="10" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Hint="gxrdird.gxrdirdPidm.hint" Id="GXRDIRD_PIDM" MaxLength="10" Navigable="false" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" Id="GXRDIRD_ATYP_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GXADIRD_1_CANVAS" Id="GXRDIRD_SCOD_CODE_ISO_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GXADIRD_1_CANVAS" Id="GXRDIRD_ACHT_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GXADIRD_1_CANVAS" Id="GXRDIRD_ATYP_CODE_IAT_LBT" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="TEMP_CANVAS" Id="GXRDIRD_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="PERPADV_2_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="GXRDIRD_1_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="PERPADV_2_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="GXRDIRD_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="PERPADV_2_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item CanvasName="GXADIRD_1_CANVAS" Id="ID_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="ADVANCE_RECOVERY_BTN" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+    <Block Id="G$_OPT_BLOCK">
+      <Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Id="OPT_SEL" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" />
+      <Item CanvasName="G$_OPT_CANVAS" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" />
+    </Block>
+  </Logic>
+</FormStructure>

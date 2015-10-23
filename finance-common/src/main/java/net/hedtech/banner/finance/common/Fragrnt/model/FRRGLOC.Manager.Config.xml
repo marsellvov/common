@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRRGLOC.Manager.Config" name="FRRGLOC">
+		
+		<items>
+			<item name="FRRGLOC_LOCN_CODE" logicalName="frrglocLocnCode" type="String" physicalName="FRRGLOC_LOCN_CODE"  />
+			<item name="FRRGLOC_LOCN_RESEARCH_IND" logicalName="frrglocLocnResearchInd" type="String" physicalName="FRRGLOC_LOCN_RESEARCH_IND"  >
+				<value>
+					<constant>C</constant>
+				</value>	
+			</item>
+			<item name="FRRGLOC_LOCN_TITLE" logicalName="frrglocLocnTitle" type="String"  virtual="true" />
+			
+			<item name="FRRGLOC_GRNT_CODE" logicalName="frrglocGrntCode" type="String" physicalName="FRRGLOC_GRNT_CODE">
+				<value>			
+					<item name="frbgrnt_CODE" businessObject="FRBGRNT" />
+				</value>
+			</item>
+			
+			
+			
+			<item name="FRRGLOC_ACTIVITY_DATE" logicalName="frrglocActivityDate" type="java.util.Date" physicalName="FRRGLOC_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+			<item name="FRRGLOC_USER_ID" logicalName="frrglocUserId" type="String" physicalName="FRRGLOC_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fragrnt.model.FrrglocAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE frrgloc_grnt_code = :FRBGRNT_CODE]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[frrgloc_locn_code]]></defaultOrderByClause>	
+
+
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="18" enabled="true"/>
+
+	</manager>
+</b:beans>

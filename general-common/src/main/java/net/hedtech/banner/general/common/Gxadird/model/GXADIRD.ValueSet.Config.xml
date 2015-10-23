@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="GTVACHT_RG.ValueSet.Config" name="GTVACHT_RG">
+    <columns>
+		<column name="GTVACHT_CODE" type="String" size="8"/>
+		<column name="GTVACHT_DESC" type="String" size="30"/>
+		<column name="GTVACHT_ACTIVITY_DATE" type="String" size="7"/>
+	</columns>
+	<query><![CDATA[SELECT gtvacht_code, gtvacht_desc, to_char(gtvacht_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) GTVACHT_ACTIVITY_DATE FROM GTVACHT  WHERE gtvacht_status_ind = 'Y'  ORDER BY gtvacht_code]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FORM_HEADER"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel style="lightbox" width="100%">
+		<flowlayout orientation="vertical">
+			<textfield block="FORM_HEADER" datatype="String" height="23px" maxlength="100" member="DISP_QUERY_STATUS" name="dispQueryStatus" visible="false" width="434px">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</textfield>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spridenNtypLbt.label" member="SPRIDEN_NTYP_LBT" name="spridenNtypLbt" navigable="false" width="48px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.searchBtn.label" member="SEARCH_BTN" name="searchBtn" navigable="false" width="80px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.soundexSearchBtn.label" member="SOUNDEX_SEARCH_BTN" name="soundexSearchBtn" navigable="false" width="80px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spriden1ExitvalueBtn.label" member="SPRIDEN_1_EXITVALUE_BTN" name="spriden1ExitvalueBtn" navigable="false" width="80px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spriden1RollbackBtn.label" member="SPRIDEN_1_ROLLBACK_BTN" name="spriden1RollbackBtn" navigable="false" width="80px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.soundexRollbackBtn.label" member="SOUNDEX_ROLLBACK_BTN" name="soundexRollbackBtn" navigable="false" width="80px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spriden1ExitBtn.label" member="SPRIDEN_1_EXIT_BTN" name="spriden1ExitBtn" navigable="false" width="80px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.soundexExitBtn.label" member="SOUNDEX_EXIT_BTN" name="soundexExitBtn" navigable="false" width="80px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.soundexBtn.label" member="SOUNDEX_BTN" name="soundexBtn" navigable="false" width="80px"/>
+		</flowlayout>
+	</panel>
+	<panel style="alert-footer">
+		<flowlayout orientation="horizontal">
+			<component/>
+		</flowlayout>
+	</panel>
+</config>

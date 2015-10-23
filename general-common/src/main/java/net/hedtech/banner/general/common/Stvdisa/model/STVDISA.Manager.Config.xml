@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="STVDISA.Manager.Config" name="STVDISA">
+		
+		<items>
+			<item name="STVDISA_CODE" logicalName="stvdisaCode" type="String" physicalName="STVDISA_CODE"  />
+			<item name="STVDISA_DESC" logicalName="stvdisaDesc" type="String" physicalName="STVDISA_DESC"  />
+			<item name="STVDISA_ACTIVITY_DATE" logicalName="stvdisaActivityDate" type="java.util.Date" physicalName="STVDISA_ACTIVITY_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Stvdisa.model.StvdisaAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[stvdisa_code]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

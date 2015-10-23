@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="AURALRT"/>
+	<panel class="ContentCanvas" id="pnlAUserAlertCanvas" menu="G$_DEFAULT_PM" name="A$_USER_ALERT_CANVAS" width="100%">
+		<collapsiblepanel label="mainWindow.title" name="grdAuralrt" width="100%">
+			<panel width="100%">
+				<gridview block="AURALRT" height="221px" width="100%">
+					<viewheader>
+						<viewcolumn block="AURALRT" datatype="String" labelstyle="DEFAULT" maxlength="30" member="ALRT_PARK_SPOT" name="alrtParkSpot" width="642px"/>
+						<viewcolumn block="AURALRT" datatype="String" label="auralrt.auralrtMessage.prompt" labelstyle="DEFAULT" maxlength="20000" member="AURALRT_MESSAGE" multiline="true" name="auralrtMessage" width="642px"/>
+					</viewheader>
+				</gridview>
+			</panel>
+		</collapsiblepanel>
+		<panel width="100%">
+			<button action="WHEN-BUTTON-PRESSED" block="AURALRT" enabled="false" height="21px" label="auralrt.userAlertCloseBtn.label" member="USER_ALERT_CLOSE_BTN" name="userAlertCloseBtn" width="76px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+		</panel>
+	</panel>
+</config>

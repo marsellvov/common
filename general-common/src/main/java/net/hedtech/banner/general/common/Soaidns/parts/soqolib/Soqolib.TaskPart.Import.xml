@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/general/common/Soaidns/parts/soqolib/model/SOQOLIB.Model.Config.xml"/>
+	
+	<task id="SOQOLIB.TaskPart.Import" name="SOQOLIB">
+		<taskResources/>
+		<supportCodeConfiguration>
+			<packages>
+				<package  name="SOQOLIB" />
+				<package  name="G$_DESC_CLASS" />
+				<package  name="SOVLCUR" />
+				<package  name="SOVLFOS" />
+				<package  name="S$_CURRICULA_SUMMARY" />
+			</packages>
+		</supportCodeConfiguration>
+
+		<formModelConfiguration config="SOQOLIB.Model.Config"/>
+	</task>
+</b:beans>
+
+ 

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GXRDIRD.Manager.Config" name="GXRDIRD">
+		
+		<items>
+			<item name="HOLD_ROWID" logicalName="holdRowid" type="String"  virtual="true" />
+			<item name="GXRDIRD_BANK_ROUT_NUM" logicalName="gxrdirdBankRoutNum" type="String" physicalName="GXRDIRD_BANK_ROUT_NUM"  />
+			<item name="BANK_DESC" logicalName="bankDesc" type="String"  virtual="true" />
+			<item name="GXRDIRD_ACTIVITY_DATE" logicalName="gxrdirdActivityDate" type="java.util.Date" physicalName="GXRDIRD_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+			<item name="GXRDIRD_ATYP_CODE" logicalName="gxrdirdAtypCode" type="String" physicalName="GXRDIRD_ATYP_CODE"  />
+			<item name="GXRDIRD_ADDR_SEQNO" logicalName="gxrdirdAddrSeqno" type="java.math.BigDecimal" physicalName="GXRDIRD_ADDR_SEQNO"  />
+			<item name="GXRDIRD_AP_IND" logicalName="gxrdirdApInd" type="String" physicalName="GXRDIRD_AP_IND"  >
+				<value>
+					<constant>I</constant>
+				</value>	
+			</item>
+			<item name="GXRDIRD_HR_IND" logicalName="gxrdirdHrInd" type="String" physicalName="GXRDIRD_HR_IND"  >
+				<value>
+					<constant>I</constant>
+				</value>	
+			</item>
+			<item name="GXRDIRD_BANK_ACCT_NUM" logicalName="gxrdirdBankAcctNum" type="String" physicalName="GXRDIRD_BANK_ACCT_NUM"  />
+			<item name="GXRDIRD_ACCT_TYPE" logicalName="gxrdirdAcctType" type="String" physicalName="GXRDIRD_ACCT_TYPE"  >
+				<value>
+					<constant>C</constant>
+				</value>	
+			</item>
+			<item name="GXRDIRD_STATUS" logicalName="gxrdirdStatus" type="String" physicalName="GXRDIRD_STATUS"  >
+				<value>
+					<constant>P</constant>
+				</value>	
+			</item>
+			<item name="GXRDIRD_PRIORITY" logicalName="gxrdirdPriority" type="java.math.BigDecimal" physicalName="GXRDIRD_PRIORITY"  />
+			<item name="GXRDIRD_AMOUNT" logicalName="gxrdirdAmount" type="java.math.BigDecimal" physicalName="GXRDIRD_AMOUNT"  />
+			<item name="GXRDIRD_PERCENT" logicalName="gxrdirdPercent" type="java.math.BigDecimal" physicalName="GXRDIRD_PERCENT"  >
+				<value>
+					<constant>100.00</constant>
+				</value>	
+			</item>
+			<item name="GXRDIRD_ACH_IAT_IND" logicalName="gxrdirdAchIatInd" type="String" physicalName="GXRDIRD_ACH_IAT_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GXRDIRD_SCOD_CODE_ISO" logicalName="gxrdirdScodCodeIso" type="String" physicalName="GXRDIRD_SCOD_CODE_ISO"  />
+			<item name="SCOD_CODE_DESC" logicalName="scodCodeDesc" type="String"  virtual="true" />
+			<item name="GXRDIRD_ACHT_CODE" logicalName="gxrdirdAchtCode" type="String" physicalName="GXRDIRD_ACHT_CODE"  />
+			<item name="GXRDIRD_ATYP_CODE_IAT" logicalName="gxrdirdAtypCodeIat" type="String" physicalName="GXRDIRD_ATYP_CODE_IAT"  />
+			<item name="GXRDIRD_ADDR_SEQNO_IAT" logicalName="gxrdirdAddrSeqnoIat" type="java.math.BigDecimal" physicalName="GXRDIRD_ADDR_SEQNO_IAT"  />
+			<item name="GXRDIRD_DOC_TYPE" logicalName="gxrdirdDocType" type="String" physicalName="GXRDIRD_DOC_TYPE"  />
+			<item name="GXRDIRD_USER_ID" logicalName="gxrdirdUserId" type="String" physicalName="GXRDIRD_USER_ID"  />
+			<item name="GXRDIRD_PIDM" logicalName="gxrdirdPidm" type="java.math.BigDecimal" physicalName="GXRDIRD_PIDM"  >
+				<value>
+  					<item name="PIDM" businessObject="KEY_BLOCK"/>
+ 				</value>
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Gxadird.model.GxrdirdAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE gxrdird_pidm = :PIDM]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[gxrdird_priority]]></defaultOrderByClause>	
+		<pagination maximumRows="3" enabled="true"/>
+
+	</manager>
+</b:beans>

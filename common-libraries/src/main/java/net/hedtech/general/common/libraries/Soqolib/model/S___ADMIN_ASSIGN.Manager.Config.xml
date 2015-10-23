@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___ADMIN_ASSIGN.Manager.Config" name="SAdminAssign">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="SORAINF_DELETE_IND" logicalName="sorainfDeleteInd" type="String"   />
+			<item name="SORAINF_RETURN_ITEM" logicalName="sorainfReturnItem" type="String"   />
+			<item name="SORAINF_RETURN_OBJECT" logicalName="sorainfReturnObject" type="String"   />
+			<item name="CALL_ADMIN" logicalName="callAdmin" type="String"   />
+			<item name="ADMIN_ASSIGN_MODULE" logicalName="adminAssignModule" type="String"   />
+			<item name="ADMIN_ASSIGN_SEQNO" logicalName="adminAssignSeqno" type="java.math.BigDecimal"   />
+			<item name="ADMIN_ASSIGN_TERM_CODE" logicalName="adminAssignTermCode" type="String"   />
+			<item name="ADMIN_QUERY_MODE" logicalName="adminQueryMode" type="String"   />
+			<item name="ADMIN_PIDM" logicalName="adminPidm" type="java.math.BigDecimal"   />
+			<item name="ADMIN_COMMIT_IND" logicalName="adminCommitInd" type="String"   />
+			<item name="ADMIN_ASSIGN_SAVE_FIELD" logicalName="adminAssignSaveField" type="String"   />
+			<item name="ADMIN_ASSIGN_OPTION_IND" logicalName="adminAssignOptionInd" type="String"   />
+			<item name="DATA_SEPARATOR_LINE" logicalName="dataSeparatorLine" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SAdminAssign</managerClass>
+
+	</manager>
+</b:beans>

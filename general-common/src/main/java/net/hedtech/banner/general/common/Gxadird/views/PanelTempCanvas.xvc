@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlTempCanvas" menu="G$_DEFAULT_PM" name="TEMP_CANVAS" visible="false" width="100%">
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.gxrdird1RollbackBtn.label" member="GXRDIRD_1_ROLLBACK_BTN" name="gxrdird1RollbackBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.perpadv2RollbackBtn.label" member="PERPADV_2_ROLLBACK_BTN" name="perpadv2RollbackBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.gxrdird1SaveBtn.label" member="GXRDIRD_1_SAVE_BTN" name="gxrdird1SaveBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.perpadv2SaveBtn.label" member="PERPADV_2_SAVE_BTN" name="perpadv2SaveBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.gxrdird1ExitBtn.label" member="GXRDIRD_1_EXIT_BTN" name="gxrdird1ExitBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.perpadv2ExitBtn.label" member="PERPADV_2_EXIT_BTN" name="perpadv2ExitBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.advanceRecoveryBtn.label" member="ADVANCE_RECOVERY_BTN" name="advanceRecoveryBtn" navigable="false" width="144px"/>
+	</panel>
+</config>

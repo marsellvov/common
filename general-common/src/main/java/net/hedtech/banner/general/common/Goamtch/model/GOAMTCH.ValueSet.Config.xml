@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="GTVADID_RG.ValueSet.Config" name="GTVADID_RG">
+    <columns>
+		<column name="GTVADID_CODE" type="String" size="4"/>
+		<column name="GTVADID_DESC" type="String" size="30"/>
+		<column name="GTVADID_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvadid_code, gtvadid_desc, to_char(gtvadid_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) gtvadid_activity_date  FROM gtvadid  ORDER BY gtvadid_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ADDRESS_MATCH_LIST_RG.ValueSet.Config" name="ADDRESS_MATCH_LIST_RG">
+    <columns>
+		<column name="ICRGGQ_0" type="String" size="166"/>
+		<column name="SPRADDR_STREET_LINE1" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT SPRADDR_ATYP_CODE || '=' || SPRADDR_STREET_LINE1 || ', ' || SPRADDR_CITY || ', ' || SPRADDR_STAT_CODE || ' ' || SPRADDR_ZIP, SPRADDR_STREET_LINE1  FROM SPRADDR  WHERE SPRADDR_PIDM = :GOVCMRT_MATCH_GOVCMRT_PIDM  ORDER BY SPRADDR_ATYP_CODE, SPRADDR_SEQNO
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GOVCMRT_MATCH_GOVCMRT_PIDM">
+			<value>
+				<item businessObject="GOVCMRT_MATCH" name="GOVCMRT_PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="EMAIL_MATCH_LIST_RG.ValueSet.Config" name="EMAIL_MATCH_LIST_RG">
+    <columns>
+		<column name="ICRGGQ_0" type="String" size="95"/>
+		<column name="GOREMAL_EMAL_CODE" type="String" size="4"/>
+	</columns>
+	<query><![CDATA[
+	SELECT GOREMAL_EMAL_CODE || '=' || GOREMAL_EMAIL_ADDRESS, GOREMAL_EMAL_CODE  FROM GOREMAL  WHERE GOREMAL_PIDM = :GOVCMRT_MATCH_GOVCMRT_PIDM  ORDER BY GOREMAL_EMAL_CODE
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GOVCMRT_MATCH_GOVCMRT_PIDM">
+			<value>
+				<item businessObject="GOVCMRT_MATCH" name="GOVCMRT_PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="GOVCMID_ADDRESS_LIST_RG.ValueSet.Config" name="GOVCMID_ADDRESS_LIST_RG">
+    <columns>
+		<column name="ICRGGQ_0" type="String" size="71"/>
+		<column name="SPRADDR_ATYP_CODE" type="String" size="2"/>
+	</columns>
+	<query><![CDATA[
+	SELECT SPRADDR_ATYP_CODE || '=' || SPRADDR_STREET_LINE1 || ', ' || SPRADDR_CITY || ', ' || SPRADDR_STAT_CODE || ' ' || SPRADDR_ZIP, SPRADDR_ATYP_CODE  FROM SPRADDR  WHERE SPRADDR_PIDM = :GOVCMID_GOVCMID_PIDM  ORDER BY SPRADDR_ATYP_CODE, SPRADDR_SEQNO
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GOVCMID_GOVCMID_PIDM">
+			<value>
+				<item businessObject="GOVCMID" name="GOVCMID_PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="GOVCMID_EMAIL_LIST_RG.ValueSet.Config" name="GOVCMID_EMAIL_LIST_RG">
+    <columns>
+		<column name="ICRGGQ_0" type="String" size="95"/>
+		<column name="GOREMAL_EMAL_CODE" type="String" size="4"/>
+	</columns>
+	<query><![CDATA[
+	SELECT GOREMAL_EMAL_CODE || '=' || GOREMAL_EMAIL_ADDRESS, GOREMAL_EMAL_CODE  FROM GOREMAL  WHERE GOREMAL_PIDM = :GOVCMID_GOVCMID_PIDM  ORDER BY GOREMAL_EMAL_CODE
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GOVCMID_GOVCMID_PIDM">
+			<value>
+				<item businessObject="GOVCMID" name="GOVCMID_PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="GOVCMID_PHONE_LIST_RG.ValueSet.Config" name="GOVCMID_PHONE_LIST_RG">
+    <columns>
+		<column name="ICRGGQ_0" type="String" size="40"/>
+		<column name="SPRTELE_TELE_CODE" type="String" size="4"/>
+	</columns>
+	<query><![CDATA[
+	SELECT SPRTELE_TELE_CODE || '=' || DECODE(SPRTELE_INTL_ACCESS, '', '', '+' || SPRTELE_INTL_ACCESS) || ' (' || SPRTELE_PHONE_AREA || ')' || SPRTELE_PHONE_NUMBER || ' ' || SPRTELE_PHONE_EXT, SPRTELE_TELE_CODE  FROM SPRTELE  WHERE SPRTELE_PIDM = :GOVCMID_GOVCMID_PIDM  ORDER BY SPRTELE_ATYP_CODE, SPRTELE_ADDR_SEQNO
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GOVCMID_GOVCMID_PIDM">
+			<value>
+				<item businessObject="GOVCMID" name="GOVCMID_PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="PHONE_MATCH_LIST_RG.ValueSet.Config" name="PHONE_MATCH_LIST_RG">
+    <columns>
+		<column name="ICRGGQ_0" type="String" size="40"/>
+		<column name="SPRTELE_TELE_CODE" type="String" size="4"/>
+	</columns>
+	<query><![CDATA[
+	SELECT SPRTELE_TELE_CODE || '=' || DECODE(SPRTELE_INTL_ACCESS, '', '', '+' || SPRTELE_INTL_ACCESS) || ' (' || SPRTELE_PHONE_AREA || ')' || SPRTELE_PHONE_NUMBER || ' ' || SPRTELE_PHONE_EXT, SPRTELE_TELE_CODE  FROM SPRTELE  WHERE SPRTELE_PIDM = :GOVCMRT_MATCH_GOVCMRT_PIDM  ORDER BY SPRTELE_ATYP_CODE, SPRTELE_ADDR_SEQNO
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GOVCMRT_MATCH_GOVCMRT_PIDM">
+			<value>
+				<item businessObject="GOVCMRT_MATCH" name="GOVCMRT_PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="MATCH_LIST_RG.ValueSet.Config" name="MATCH_LIST_RG">
+    <columns>
+		<column name="ICRGGQ_0" type="String" size="291"/>
+		<column name="GOVCMRT_RESULT_TYPE" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT GOVCMRT_CMSR_PRIORITY_NO || '=' || GOVCMRT_MESSAGE, GOVCMRT_RESULT_TYPE  FROM GOVCMRT  WHERE GOVCMRT_PIDM = :GOVCMRT_MATCH_GOVCMRT_PIDM  ORDER BY GOVCMRT_CMSR_PRIORITY_NO
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GOVCMRT_MATCH_GOVCMRT_PIDM">
+			<value>
+				<item businessObject="GOVCMRT_MATCH" name="GOVCMRT_PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="MATCH_PRIORITY_LIST_RG.ValueSet.Config" name="MATCH_PRIORITY_LIST_RG">
+    <columns>
+		<column name="ICRGGQ_0" type="String" size="291"/>
+		<column name="GOVCMRT_RESULT_TYPE" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT GOVCMRT_CMSR_PRIORITY_NO || '=' || GOVCMRT_MESSAGE, GOVCMRT_RESULT_TYPE  FROM GOVCMRT  WHERE GOVCMRT_PIDM = :GOVCMID_GOVCMID_PIDM  ORDER BY GOVCMRT_CMSR_PRIORITY_NO
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GOVCMID_GOVCMID_PIDM">
+			<value>
+				<item businessObject="GOVCMID" name="GOVCMID_PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+</b:beans>

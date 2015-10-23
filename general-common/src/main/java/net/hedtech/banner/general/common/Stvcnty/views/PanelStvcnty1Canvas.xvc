@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="STVCNTY"/>
+	<panel class="ContentCanvas" id="pnlStvcnty1Canvas" menu="G$_DEFAULT_PM" name="STVCNTY_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title2">
+				<panel width="100%">
+					<gridview block="STVCNTY" name="grdStvcnty" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="STVCNTY" case="upper" datatype="String" label="stvcnty.stvcntyCode.prompt" labelstyle="DEFAULT" maxlength="5" member="STVCNTY_CODE" name="stvcntyCode" required="true" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVCNTY" datatype="String" label="stvcnty.stvcntyDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVCNTY_DESC" name="stvcntyDesc" required="true" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

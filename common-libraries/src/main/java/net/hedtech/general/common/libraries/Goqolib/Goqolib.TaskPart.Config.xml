@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqgmnu/GOQGMNU.Library.Config.xml"/>		
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>		
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	
+	
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/GOQOLIB.Model.Config.xml"/>
+	
+	<task id="GOQOLIB.TaskPart.Config" name="GOQOLIB">
+		
+		<taskClass>net.hedtech.general.common.libraries.Goqolib.GoqolibTaskPart</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/general/common/libraries/Goqolib/GoqolibStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.general.common.libraries.Goqolib.services.GoqolibServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+				<package name="GOQOLIB_PC">net.hedtech.general.common.libraries.Goqolib.services.GoqolibFormController</package>
+				<!-- BlockControllers -->
+				<package name="FORM_HEADER">net.hedtech.general.common.libraries.Goqolib.controller.FormHeaderController</package>
+				<package name="G$_DEFAULT_PM_CONTEXT">net.hedtech.general.common.libraries.Goqolib.controller.GDefaultPmContextController</package>
+				<package name="G$_EXTENDED_SEARCH_BLOCK">net.hedtech.general.common.libraries.Goqolib.controller.GExtendedSearchBlockController</package>
+				<package name="G$_FUNC_BASE_INFO_BLOCK">net.hedtech.general.common.libraries.Goqolib.controller.GFuncBaseInfoBlockController</package>
+				<package name="G$_NAV_BLOCK">net.hedtech.general.common.libraries.Goqolib.controller.GNavBlockController</package>
+				<package name="G$_OPT_BLOCK">net.hedtech.general.common.libraries.Goqolib.controller.GOptBlockController</package>
+				<package name="GOQOLIB">net.hedtech.general.common.libraries.Goqolib.controller.GoqolibFormController</package>				
+				<package name="G$_VPDI_BLOCK">net.hedtech.general.common.libraries.Goqolib.controller.GVpdiBlockController</package>
+				<package name="QK_FLOW">net.hedtech.general.common.libraries.Goqolib.controller.QkFlowController</package>
+				<package name="QK_MENU">net.hedtech.general.common.libraries.Goqolib.controller.QkMenuController</package>
+				
+				<!-- Classes -->
+				<package name="G$_APPL_FORM_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GApplFormClass</package>
+				<package name="G$_CALENDAR_BTN_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GCalendarBtnClass</package>
+				<package name="G$_CODE_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GCodeClass</package>
+				<package name="G$_DATE_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GDateClass</package>
+				<package name="G$_DESC_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GDescClass</package>
+				<package name="G$_FORM_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GFormClass</package>
+				<package name="G$_ICON_BTN_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GIconBtnClass</package>
+				<package name="G$_ID_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GIdClass</package>
+				<package name="G$_INQ_FORM_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GInqFormClass</package>
+				<package name="G$_KEY_BLOCK_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GKeyBlockClass</package>
+				<package name="G$_NAME_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GNameClass</package>
+				<package name="G$_NON_ICON_BTN_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GNonIconBtnClass</package>
+				<package name="GUBOBJS_TYPE">net.hedtech.general.common.libraries.Goqolib.services.GubobjsType</package>
+				<package name="GURMENU_TYPE">net.hedtech.general.common.libraries.Goqolib.services.GurmenuType</package>
+				<package name="G$_VAL_FORM_CLASS">net.hedtech.general.common.libraries.Goqolib.services.GValFormClass</package>
+				<package name="MENU_TYPE">net.hedtech.general.common.libraries.Goqolib.services.MenuType</package>
+				<package name="QK_MENU_CLASS">net.hedtech.general.common.libraries.Goqolib.services.QkMenuType</package>
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQGMNU.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="GOQOLIB.Model.Config"/>
+		<!-- controllers -->
+		<blockControllers>
+            <block name="G$_SDKEY">net.hedtech.general.common.libraries.Goqolib.controller.GSdkeyController</block>
+            <block name="G$_SDISP">net.hedtech.general.common.libraries.Goqolib.controller.GSdispController</block>
+	    </blockControllers>
+	</task>
+</b:beans>
+
+ 

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:library"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:library http://www.morphis-tech.com/schema/foundations/library.xsd">
+	<!-- Attached Libs -->
+
+	<library id="GOQOREP.Lib.Config" name="GOQOREP">
+		<libraryClass>net.hedtech.general.common.libraries.Goqorep.GoqorepServices</libraryClass>
+		<!-- support code -->
+		<supportCodeConfiguration>
+				<!-- Packages -->
+				<packages>
+					<package  name="ORACLEREPORTSCONFIGEXCEPTION">net.hedtech.general.common.libraries.Goqorep.Oraclereportsconfigexception</package> 	
+					<package  name="G$_SCT_RUN_REPORTS">net.hedtech.general.common.libraries.Goqorep.GSctRunReports</package> 	
+					<package  name="G$_REPORT_VPDI">net.hedtech.general.common.libraries.Goqorep.GReportVpdi</package> 	
+					<package  name="G$_REPORT_SECURITY">net.hedtech.general.common.libraries.Goqorep.GReportSecurity</package> 	
+					<package  name="G$_PATHFINDER">net.hedtech.general.common.libraries.Goqorep.GPathfinder</package> 	
+					<package  name="G$_LOCATE_FILE">net.hedtech.general.common.libraries.Goqorep.GLocateFile</package> 	
+					<package  name="G$_GETCHKSUM">net.hedtech.general.common.libraries.Goqorep.GGetchksum</package> 	
+					<package  name="G$_DLL_HANDLE">net.hedtech.general.common.libraries.Goqorep.GDllHandle</package> 	
+					<package  name="G$_BANNER_REPORT_PROCESSING">net.hedtech.general.common.libraries.Goqorep.GBannerReportProcessing</package> 	
+					<package  name="G$_BANNER_REPORT_EDITING">net.hedtech.general.common.libraries.Goqorep.GBannerReportEditing</package> 	
+					<package  name="EXCEPTION_">net.hedtech.general.common.libraries.Goqorep.Exception_</package> 	
+					<package  name="BANNERID">net.hedtech.general.common.libraries.Goqorep.Bannerid</package> 	
+				</packages>
+				<attachedLibraries>
+	<!-- Attached Libs -->
+				</attachedLibraries>
+		</supportCodeConfiguration>
+		
+	</library>
+</b:beans>
+
+ 

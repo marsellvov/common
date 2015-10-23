@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqolib/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqolib/model/CP___BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqolib/model/LAST_QUERY.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqolib/model/AOQOLIB.ValueSet.Config.xml"/>
+
+	
+	<formModel id="AOQOLIB.Model.Config" name="AOQOLIB">
+		<modelClass>net.hedtech.general.common.libraries.Aoqolib.model.AoqolibModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="CP$_BLOCK" manager="CP___BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="LAST_QUERY" manager="LAST_QUERY.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="ATVIGRP_RG.ValueSet.Config"/>
+				<valueSet config="ATVMEDU_RG.ValueSet.Config"/>
+				<valueSet config="ATVVIPC_RG.ValueSet.Config"/>
+				<valueSet config="ATVUSRC_RG.ValueSet.Config"/>
+				<valueSet config="ATVSTFT_RG.ValueSet.Config"/>
+				<valueSet config="ATVSRCE_RG.ValueSet.Config"/>
+				<valueSet config="ATVSOTP_RG.ValueSet.Config"/>
+				<valueSet config="ATVSORC_RG.ValueSet.Config"/>
+				<valueSet config="ATVSOLT_RG.ValueSet.Config"/>
+				<valueSet config="ATVSOLC_RG.ValueSet.Config"/>
+				<valueSet config="ATVSICC_RG.ValueSet.Config"/>
+				<valueSet config="ATVSCRS_RG.ValueSet.Config"/>
+				<valueSet config="ATVSCNT_RG.ValueSet.Config"/>
+				<valueSet config="ATVSALU_RG.ValueSet.Config"/>
+				<valueSet config="ATVRTGT_RG.ValueSet.Config"/>
+				<valueSet config="ATVRSTA_RG.ValueSet.Config"/>
+				<valueSet config="ATVRSCR_RG.ValueSet.Config"/>
+				<valueSet config="ATVREFR_RG.ValueSet.Config"/>
+				<valueSet config="ATVRATE_RG.ValueSet.Config"/>
+				<valueSet config="ATVPSTA_RG.ValueSet.Config"/>
+				<valueSet config="ATVPRTP_RG.ValueSet.Config"/>
+				<valueSet config="ATVPRST_RG.ValueSet.Config"/>
+				<valueSet config="ATVPROJ_RG.ValueSet.Config"/>
+				<valueSet config="ATVPRMD_RG.ValueSet.Config"/>
+				<valueSet config="ATVPRCD_RG.ValueSet.Config"/>
+				<valueSet config="ATVPLDG_RG.ValueSet.Config"/>
+				<valueSet config="ATVPDUR_RG.ValueSet.Config"/>
+				<valueSet config="ATVPCLS_RG.ValueSet.Config"/>
+				<valueSet config="ATVPACK_RG.ValueSet.Config"/>
+				<valueSet config="ATVOCON_RG.ValueSet.Config"/>
+				<valueSet config="ATVMPUR_RG.ValueSet.Config"/>
+				<valueSet config="ATVMPRO_RG.ValueSet.Config"/>
+				<valueSet config="ATVMOVE_RG.ValueSet.Config"/>
+				<valueSet config="ATVMNED_RG.ValueSet.Config"/>
+				<valueSet config="ATVMNAT_RG.ValueSet.Config"/>
+				<valueSet config="ATVMLVL_RG.ValueSet.Config"/>
+				<valueSet config="ATVMLOC_RG.ValueSet.Config"/>
+				<valueSet config="ATVMIND_RG.ValueSet.Config"/>
+				<valueSet config="ATVMERQ_RG.ValueSet.Config"/>
+				<valueSet config="ATVMDIS_RG.ValueSet.Config"/>
+				<valueSet config="ATVMDEF_RG.ValueSet.Config"/>
+				<valueSet config="ATVMCTL_RG.ValueSet.Config"/>
+				<valueSet config="ATVMAST_RG.ValueSet.Config"/>
+				<valueSet config="ATVMACC_RG.ValueSet.Config"/>
+				<valueSet config="ATVJOBC_RG.ValueSet.Config"/>
+				<valueSet config="ATVINCM_RG.ValueSet.Config"/>
+				<valueSet config="ATVGIVL_RG.ValueSet.Config"/>
+				<valueSet config="ATVGIVH_RG.ValueSet.Config"/>
+				<valueSet config="ATVGIFT_RG.ValueSet.Config"/>
+				<valueSet config="ATVGCLS_RG.ValueSet.Config"/>
+				<valueSet config="ATVGACK_RG.ValueSet.Config"/>
+				<valueSet config="ATVFUND_RG.ValueSet.Config"/>
+				<valueSet config="ATVFREQ_RG.ValueSet.Config"/>
+				<valueSet config="ATVFISC_RG.ValueSet.Config"/>
+				<valueSet config="ATVEXRS_RG.ValueSet.Config"/>
+				<valueSet config="ATVEXCL_RG.ValueSet.Config"/>
+				<valueSet config="ATVEMPS_RG.ValueSet.Config"/>
+				<valueSet config="ATVDSTP_RG.ValueSet.Config"/>
+				<valueSet config="ATVDOTT_RG.ValueSet.Config"/>
+				<valueSet config="ATVDONR_RG.ValueSet.Config"/>
+				<valueSet config="ATVDCYR_RG.ValueSet.Config"/>
+				<valueSet config="ATVDCST_RG.ValueSet.Config"/>
+				<valueSet config="ATVDCPR_RG.ValueSet.Config"/>
+				<valueSet config="ATVDCNP_RG.ValueSet.Config"/>
+				<valueSet config="ATVDCAM_RG.ValueSet.Config"/>
+				<valueSet config="ATVCONT_RG.ValueSet.Config"/>
+				<valueSet config="ATVCMTP_RG.ValueSet.Config"/>
+				<valueSet config="ATVCFAE_RG.ValueSet.Config"/>
+				<valueSet config="ATVAUXL_RG.ValueSet.Config"/>
+				<valueSet config="ATVASSC_RG.ValueSet.Config"/>
+				<valueSet config="ATVAMTP_RG.ValueSet.Config"/>
+				<valueSet config="ATVAMST_RG.ValueSet.Config"/>
+				<valueSet config="ATVAMPM_RG.ValueSet.Config"/>
+				<valueSet config="ATVAMIN_RG.ValueSet.Config"/>
+				<valueSet config="ATVAMGP_RG.ValueSet.Config"/>
+				<valueSet config="ATVAMCT_RG.ValueSet.Config"/>
+				<valueSet config="ATVADJT_RG.ValueSet.Config"/>
+				<valueSet config="ATVXREF_RG.ValueSet.Config"/>
+				<valueSet config="ATVCTYP_RG.ValueSet.Config"/>
+				<valueSet config="ATVPCAT_RG.ValueSet.Config"/>
+				<valueSet config="ATVDGRP_RG.ValueSet.Config"/>
+				<valueSet config="ATVDIST_RG.ValueSet.Config"/>
+				<valueSet config="ATVDSTA_RG.ValueSet.Config"/>
+				<valueSet config="ATVDATR_RG.ValueSet.Config"/>
+				<valueSet config="ATVDITP_RG.ValueSet.Config"/>
+				<valueSet config="ATVPROP_RG.ValueSet.Config"/>
+				<valueSet config="ATVPGVE_RG.ValueSet.Config"/>
+				<valueSet config="ATVDOSR_RG.ValueSet.Config"/>
+				<valueSet config="ATVSSTA_RG.ValueSet.Config"/>
+				<valueSet config="AGBPLDG_RG.ValueSet.Config"/>
+				<valueSet config="ADBDESG_RG.ValueSet.Config"/>
+				<valueSet config="AFBCAMP_RG.ValueSet.Config"/>
+				<valueSet config="AFRCORG_RG.ValueSet.Config"/>
+				<valueSet config="AFRCSLT_RG_OLD.ValueSet.Config"/>
+				<valueSet config="AFRCSLT_RG.ValueSet.Config"/>
+				<valueSet config="AFRCSOL_RG.ValueSet.Config"/>
+				<valueSet config="AFRCTYP_RG.ValueSet.Config"/>
+				<valueSet config="AMBPROP_RG.ValueSet.Config"/>
+				<valueSet config="APRCATG_RG.ValueSet.Config"/>
+				<valueSet config="APRCATG_SPS_RG.ValueSet.Config"/>
+				<valueSet config="APRDHIS_RG.ValueSet.Config"/>
+				<valueSet config="ASCCSLT_RG.ValueSet.Config"/>
+				<valueSet config="ASCSORG_RG.ValueSet.Config"/>
+				<valueSet config="ASRSOAG_RG.ValueSet.Config"/>
+				<valueSet config="ASRSORG_RG.ValueSet.Config"/>
+				<valueSet config="ASRSSAG_RG.ValueSet.Config"/>
+				<valueSet config="GTVNTYP_RG.ValueSet.Config"/>
+				<valueSet config="TYPE_ORG_SOL_4_CAMP_RG.ValueSet.Config"/>
+				<valueSet config="YEAR_SOL_4_ORG_RG.ValueSet.Config"/>
+				<valueSet config="CAMP_ORG_SOL_RG.ValueSet.Config"/>
+				<valueSet config="ORG_YR_SOL_RG.ValueSet.Config"/>
+				<valueSet config="POP_SEL_RG.ValueSet.Config"/>
+				<valueSet config="ATVDNAM_RG.ValueSet.Config"/>
+				<valueSet config="AGBPDEF_RG.ValueSet.Config"/>
+				<valueSet config="ATVCCLS_RG.ValueSet.Config"/>
+				<valueSet config="ATVACAT_RG.ValueSet.Config"/>
+				<valueSet config="ATVRCAT_RG.ValueSet.Config"/>
+				<valueSet config="ATVALRT_RG.ValueSet.Config"/>
+				<valueSet config="ATVADTL_RG.ValueSet.Config"/>
+				<valueSet config="ATVSCTG_RG.ValueSet.Config"/>
+				<valueSet config="ATVSGRP_RG.ValueSet.Config"/>
+				<valueSet config="ATVPFTP_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

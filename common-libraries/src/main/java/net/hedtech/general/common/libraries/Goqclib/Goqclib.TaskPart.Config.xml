@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="urn:schemas:morphis:foundations:task" xmlns:b="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Noqjpls/NOQJPLS.Library.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Noqrpls/NOQRPLS.Library.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Poqrpls/POQRPLS.Library.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>
+	<!-- model definition -->
+	<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/GOQCLIB.Model.Config.xml"/>
+	<task id="GOQCLIB.TaskPart.Config" name="GOQCLIB">
+		<taskParts>
+			<taskPartConfiguration config="GOQOLIB.TaskPart.Config" name="GOQOLIB"/>
+		</taskParts>
+		<taskClass>net.hedtech.general.common.libraries.Goqclib.GoqclibTaskPart</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/general/common/libraries/Goqclib/GoqclibStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.general.common.libraries.Goqclib.services.GoqclibServices</services>
+			<!-- Package Beans -->
+			<packages>
+				<package name="SPRIDEN_CURRENT">net.hedtech.general.common.libraries.Goqclib.controller.SpridenCurrentController</package>
+				<package name="SPRIDEN_PREVIOUS">net.hedtech.general.common.libraries.Goqclib.controller.SpridenPreviousController</package>
+				<package name="SPRADDR">net.hedtech.general.common.libraries.Goqclib.controller.SpraddrController</package>
+				<package name="SPRTELE">net.hedtech.general.common.libraries.Goqclib.controller.SprteleController</package>
+				<package name="SPBPERS">net.hedtech.general.common.libraries.Goqclib.controller.SpbpersController</package>
+				<package name="GORPRAC">net.hedtech.general.common.libraries.Goqclib.controller.GorpracController</package>
+				<package name="GOREMAL">net.hedtech.general.common.libraries.Goqclib.controller.GoremalController</package>
+				<package name="SPREMRG">net.hedtech.general.common.libraries.Goqclib.controller.SpremrgController</package>
+				<package name="GORADID">net.hedtech.general.common.libraries.Goqclib.controller.GoradidController</package>
+				<package name="GOQCLIB">net.hedtech.general.common.libraries.Goqclib.controller.GoqclibFormController</package>
+			</packages>
+			<attachedLibraries>
+				<!-- Attached Libs -->
+				<libraryConfiguration config="NOQJPLS.Lib.Config"/>
+				<libraryConfiguration config="NOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="POQRPLS.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+		<!-- model -->
+		<formModelConfiguration config="GOQCLIB.Model.Config"/>
+		<!-- controllers -->
+		<!-- <formController>net.hedtech.general.common.libraries.Goqclib.controller.GoqclibFormController</formController> -->
+		<blockControllers/>
+	</task>
+</b:beans>

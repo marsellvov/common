@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="STVNATN_RG.ValueSet.Config" name="STVNATN_RG">
+    <columns>
+		<column name="STVNATN_CODE" type="String" size="5"/>
+		<column name="STVNATN_NATION" type="String" size="30"/>
+		<column name="STVNATN_SEVIS_EQUIV" type="String" size="2"/>
+		<column name="STVNATN_EDI_EQUIV" type="String" size="2"/>
+		<column name="STVNATN_LMS_EQUIV" type="String" size="2"/>
+		<column name="STVNATN_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvnatn_code, stvnatn_nation, stvnatn_sevis_equiv, stvnatn_edi_equiv, stvnatn_lms_equiv, to_char(stvnatn_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvnatn_activity_date  FROM stvnatn  ORDER BY stvnatn_nation
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="STVVTYP_RG.ValueSet.Config" name="STVVTYP_RG">
+    <columns>
+		<column name="STVVTYP_CODE" type="String" size="2"/>
+		<column name="STVVTYP_DESC" type="String" size="30"/>
+		<column name="STVVTYP_ADMR_CODE" type="String" size="4"/>
+		<column name="STVVTYP_NON_RES_IND" type="String" size="1"/>
+		<column name="STVVTYP_VR_MSG_NO" type="Number" size="23"/>
+		<column name="STVVTYP_STATSCAN_CDE2" type="Number" size="23"/>
+		<column name="STVVTYP_SEVIS_EQUIV" type="String" size="2"/>
+		<column name="STVVTYP_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT stvvtyp_code, stvvtyp_desc, stvvtyp_admr_code, stvvtyp_non_res_ind, stvvtyp_vr_msg_no, stvvtyp_statscan_cde2, stvvtyp_sevis_equiv, to_char(stvvtyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) stvvtyp_activity_date  FROM stvvtyp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

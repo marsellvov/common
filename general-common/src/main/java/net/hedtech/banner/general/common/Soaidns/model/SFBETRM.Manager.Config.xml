@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SFBETRM.Manager.Config" name="SFBETRM">
+		
+		<items>
+			<item name="BETRM_DESC" logicalName="betrmDesc" type="String"  virtual="true" />
+			<item name="SFBETRM_TERM_CODE" logicalName="sfbetrmTermCode" type="String" physicalName="SFBETRM_TERM_CODE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Soaidns.model.SfbetrmAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE sfbetrm_pidm = :SPRIDEN_SPRIDEN_PIDM]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by sfbetrm_term_code desc]]></defaultOrderByClause>	
+		
+		<pagination maximumRows="1" enabled="true"/>
+
+	</manager>
+</b:beans>

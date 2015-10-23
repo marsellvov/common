@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" >
+  <interactionblock name="SOVLFOS" />
+  <interactionblock name="SOVLCUR" />
+  <interactionblock name="S$_CURRICULA_SUMMARY" />
+  <panel width="968px" height="221px" top="344px" left="13px" id="pnlCurriculaSummaryTab" name="CURRICULA_SUMMARY_TAB" class="StackedCanvas" menu="G$_DEFAULT_PM">
+    <textfield labelposition="left" labelalign="start" name="dataSeparatorLineSovlcur1" style="GNvaDataSeparatorLinegDataSeparatorLineClass" left="4px" top="3px" width="960px" height="5px" enabled="false" wrapStyle="none" bordertype="none" member="DATA_SEPARATOR_LINE_SOVLCUR_1" block="S$_CURRICULA_SUMMARY" maxlength="24" datatype="" case="upper" />
+    <slider name="sovlcurscrollbar" block="" top="47px" left="938px" width="16px" height="45px" />
+    <slider name="sovlfosscrollbar" block="" top="142px" left="938px" width="16px" height="68px" />
+    <framepanel width="960px" height="206px" top="9px" left="3px" name="rect785">
+      <button labelposition="top" labeloffset="4" labelalign="center" label="sCurriculaSummary.sovlfosConcCodeBtn.label" name="sovlfosConcCodeBtn" style="GIconBtnClass" left="881px" top="112px" width="20px" height="20px" backgroundcolor="White" foregroundcolor="Black" fontsize="8pt" fontfamily="Tahoma" enabled="false" navigable="false" icon="details" tooltip="sCurriculaSummary.sovlfosConcCodeBtn.tooltip" member="SOVLFOS_CONC_CODE_BTN" block="S$_CURRICULA_SUMMARY" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </button>
+      <textbox label="sovlcur.sovlcurPriorityNo.prompt" labelposition="top" labelalign="center" name="sovlcurPriorityNo" style="GNvaTextItem" left="28px" top="42px" width="29px" height="23px" member="SOVLCUR_PRIORITY_NO" block="SOVLCUR" maxlength="5" datatype="" case="upper" />
+      <textbox label="sovlcur.sovlcurTermCode.prompt" labelposition="top" labelalign="start" labelfontsize="9pt" labelfontfamily="Verdana" name="sovlcurTermCode" style="GNvaTextItem" left="69px" top="42px" width="64px" height="23px" member="SOVLCUR_TERM_CODE" block="SOVLCUR" maxlength="30" datatype="" case="upper" />
+      <textbox label="sovlcur.sovlcurTermCodeCtlg.prompt" labelposition="top" labelalign="start" name="sovlcurTermCodeCtlg" style="GNvaTextItem" left="272px" top="42px" width="63px" height="23px" member="SOVLCUR_TERM_CODE_CTLG" block="SOVLCUR" maxlength="6" datatype="" case="upper" />
+      <textbox label="sovlcur.sovlcurKeySeqno.prompt" labelposition="right" labeloffset="-142" labelalign="center" name="sovlcurKeySeqno" style="GNvaTextItem" left="861px" top="8px" width="32px" height="21px" visible="false" member="SOVLCUR_KEY_SEQNO" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textfield label="sovlcur.sovlcurProgramDesc.prompt" labelposition="top" labelalign="start" name="sovlcurProgramDesc" style="GDescClass" left="142px" top="42px" width="125px" height="23px" bordertype="none" member="SOVLCUR_PROGRAM_DESC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textfield label="sovlcur.stvlevlDesc.prompt" labelposition="top" labelalign="start" name="stvlevlDesc" style="GDescClass" left="347px" top="42px" width="136px" height="23px" bordertype="none" member="STVLEVL_DESC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textfield label="sovlcur.stvcampDesc.prompt" labelposition="top" labelalign="start" name="stvcampDesc" style="GDescClass" left="497px" top="42px" width="126px" height="23px" bordertype="none" member="STVCAMP_DESC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textfield label="sovlcur.stvcollDesc.prompt" labelposition="top" labelalign="start" name="stvcollDesc" style="GDescClass" left="649px" top="42px" width="144px" height="23px" bordertype="none" member="STVCOLL_DESC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textfield label="sovlcur.stvdegcDesc.prompt" labelposition="top" labelalign="start" name="stvdegcDesc" style="GDescClass" left="804px" top="42px" width="120px" height="23px" bordertype="none" member="STVDEGC_DESC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sovlcur.sovlcurTermCodeEnd.prompt" labelposition="right" labeloffset="-114" labelalign="center" name="sovlcurTermCodeEnd" style="GNvaTextItem" left="69px" top="64px" width="64px" height="23px" member="SOVLCUR_TERM_CODE_END" block="SOVLCUR" maxlength="30" datatype="" case="upper" />
+      <textfield label="sovlcur.sovlcurStvstypDesc.prompt" labelposition="right" labeloffset="-290" labelalign="center" labelfontsize="9pt" labelfontfamily="Verdana" name="sovlcurStvstypDesc" style="GDescClass" left="448px" top="8px" width="190px" height="21px" bordertype="none" member="SOVLCUR_STVSTYP_DESC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textfield label="sovlcur.sovlcurStvrateDesc.prompt" labelposition="right" labeloffset="-306" labelalign="center" name="sovlcurStvrateDesc" style="GDescClass" left="709px" top="6px" width="246px" height="23px" bordertype="none" member="SOVLCUR_STVRATE_DESC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sovlcur.sovlcurDgmrSeqno.prompt" labelposition="right" labeloffset="-161" labelalign="center" name="sovlcurDgmrSeqno" style="GNvaTextItem" left="272px" top="64px" width="32px" height="23px" member="SOVLCUR_DGMR_SEQNO" block="SOVLCUR" maxlength="4" datatype="" case="mixed" />
+      <textfield label="sovlcur.sovlcurStvadmtDesc.prompt" labelposition="right" labeloffset="-286" labelalign="center" name="sovlcurStvadmtDesc" style="DEFAULT" left="429px" top="64px" width="166px" height="23px" bordertype="none" member="SOVLCUR_STVADMT_DESC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sovlcur.sovlcurTermCodeAdmit.prompt" labelposition="right" labeloffset="-149" labelalign="center" name="sovlcurTermCodeAdmit" style="GNvaTextItem" left="687px" top="64px" width="64px" height="23px" member="SOVLCUR_TERM_CODE_ADMIT" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sovlcur.sovlcurTermCodeMatric.prompt" labelposition="right" labeloffset="-164" labelalign="center" name="sovlcurTermCodeMatric" style="GNvaTextItem" left="861px" top="65px" width="64px" height="21px" member="SOVLCUR_TERM_CODE_MATRIC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="primaryDesc" style="GDescClass" left="173px" top="3px" width="149px" height="23px" fontsize="11pt" fontfamily="Verdana" bordertype="none" member="PRIMARY_DESC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <textfield labelposition="left" labelalign="start" name="sovlcurLmodDesc" style="GDescClass" left="173px" top="3px" width="166px" height="23px" fontsize="11pt" fontfamily="Verdana" bordertype="none" member="SOVLCUR_LMOD_DESC" block="SOVLCUR" maxlength="30" datatype="" case="mixed" />
+      <gridview top="114px" left="24px" width="901px" name="grdSovlfos" block="SOVLFOS">
+        <viewheader>
+          <viewcolumn width="29px" label="sovlfos.sovlfosPriorityNo.prompt" labelposition="top" labeloffset="4" labelalign="center" name="sovlfosPriorityNo" style="GNvaTextItem" labelstyle="DEFAULT" member="SOVLFOS_PRIORITY_NO" block="SOVLFOS" maxlength="5" datatype="" case="upper" />
+          <viewcolumn width="66px" label="sovlfos.sovlfosTermCode.prompt" labelposition="top" labeloffset="4" labelalign="start" name="sovlfosTermCode" style="GNvaTextItem" labelstyle="DEFAULT" member="SOVLFOS_TERM_CODE" block="SOVLFOS" maxlength="30" datatype="" case="upper" />
+          <viewcolumn width="144px" label="sovlfos.gtvlfstDesc.prompt" labelposition="top" labelalign="center" name="gtvlfstDesc" style="DEFAULT" labelstyle="DEFAULT" bordertype="none" member="GTVLFST_DESC" block="SOVLFOS" maxlength="30" datatype="" case="mixed" />
+          <viewcolumn width="219px" label="sovlfos.stvmajrDesc.prompt" labelposition="top" labeloffset="4" labelalign="start" name="stvmajrDesc" style="DEFAULT" labelstyle="DEFAULT" bordertype="none" member="STVMAJR_DESC" block="SOVLFOS" maxlength="30" datatype="" case="mixed" />
+          <viewcolumn width="211px" label="sovlfos.stvdeptDesc.prompt" labelposition="top" labeloffset="4" labelalign="start" name="stvdeptDesc" style="DEFAULT" labelstyle="DEFAULT" bordertype="none" member="STVDEPT_DESC" block="SOVLFOS" maxlength="30" datatype="" case="mixed" />
+          <viewcolumn width="166px" label="sovlfos.stvconcDesc.prompt" labelposition="top" labeloffset="4" labelalign="start" name="stvconcDesc" style="DEFAULT" labelstyle="DEFAULT" bordertype="none" member="STVCONC_DESC" block="SOVLFOS" maxlength="30" datatype="" case="mixed" />
+        </viewheader>
+      </gridview>
+      <framepanel width="960px" height="1px" top="92px" left="0px" name="rect833" />
+    </framepanel>
+    <text fontfamily="Verdana" fontsize="11pt" fontcolor="Black" name="text781" left="17px" top="13px" bordertype="none">curriculaSummaryTab.text781.text</text>
+    <text fontfamily="Verdana" fontsize="11pt" fontcolor="Black" name="text820" left="17px" top="106px" bordertype="none">curriculaSummaryTab.text820.text</text>
+  </panel>
+</config>

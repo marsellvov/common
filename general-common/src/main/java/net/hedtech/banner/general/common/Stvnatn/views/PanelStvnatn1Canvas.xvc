@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="STVNATN"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlStvnatn1Canvas" menu="G$_DEFAULT_PM" name="STVNATN_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="STVNATN" name="grdStvnatn" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="STVNATN" case="upper" datatype="String" label="stvnatn.stvnatnCode.prompt" labelstyle="DEFAULT" maxlength="5" member="STVNATN_CODE" name="stvnatnCode" required="true" width="85px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVNATN" datatype="String" label="stvnatn.stvnatnDescription.prompt" labelstyle="DEFAULT" maxlength="30" member="STVNATN_NATION" name="stvnatnNation" required="true" width="130px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVNATN" case="upper" datatype="String" label="stvnatn.stvnatnSevisEquiv.prompt" labelstyle="DEFAULT" maxlength="2" member="STVNATN_SEVIS_EQUIV" name="stvnatnSevisEquiv">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVNATN" case="upper" datatype="String" label="stvnatn.stvnatnEdiEquiv.prompt" labelstyle="DEFAULT" maxlength="2" member="STVNATN_EDI_EQUIV" name="stvnatnEdiEquiv" width="98px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVNATN" case="upper" datatype="String" label="stvnatn.stvnatnLmsEquiv.prompt" labelstyle="DEFAULT" maxlength="2" member="STVNATN_LMS_EQUIV" name="stvnatnLmsEquiv">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVNATN" case="upper" datatype="String" label="stvnatn.stvnatnScodCodeIso.prompt" labelstyle="DEFAULT" maxlength="30" member="STVNATN_SCOD_CODE_ISO" name="stvnatnScodCodeIso" validation="server" width="70px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVNATN" datatype="String" label="stvnatn.stvnatnStatscanCde.prompt" labelstyle="DEFAULT" maxlength="5" member="STVNATN_STATSCAN_CDE" name="stvnatnStatscanCde" width="150px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVNATN" case="upper" datatype="String" label="stvnatn.stvnatnSsaReportingEquiv.prompt" labelstyle="DEFAULT" maxlength="2" member="STVNATN_SSA_REPORTING_EQUIV" name="stvnatnSsaReportingEquiv" width="95px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

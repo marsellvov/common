@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="urn:schemas:morphis:frames:messages">
+  <msg id="mainWindow.title">Document Management Application Validation</msg>
+  <msg id="eqqolib1Canvas.text1.text">Code</msg>
+  <msg id="eqqolib1Canvas.text4.text">Description</msg>
+  <msg id="eqqolib1Canvas.text7.text">Application</msg>
+  <msg id="eqqolib1Canvas.text10.text">App
+  ID</msg>
+  <msg id="eqqolib1Canvas.text15.text">Sys
+Ind</msg>
+  <msg id="eqqolib1Canvas.text20.text">Sysi
+Code</msg>
+  <msg id="eqqolib1Canvas.text25.text">User</msg>
+  <msg id="eqqolib1Canvas.text28.text">Activity 
+  Date</msg>
+  <msg id="etvaxapLov.title">Document Management  Application Validation (ETVAXAP)</msg>
+  <msg id="etvaxapLov.etvaxapCode.title">Application Code</msg>
+  <msg id="etvaxapLov.etvaxapDesc.title">Application Desc</msg>
+  <msg id="etvaxapLov.etvaxapActivityDate.title">Activity Date</msg>
+  <msg id="etvdtypLov.title">Document Management -  Document Type Validation (ETVDTYP)</msg>
+  <msg id="etvdtypLov.etvdtypCode.title">Document Type Code</msg>
+  <msg id="etvdtypLov.etvdtypDesc.title">Description</msg>
+  <msg id="etvdtypLov.etvdtypActivityDate.title">Activity Date</msg>
+</messages>

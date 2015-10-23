@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SPRIDEN"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlSpriden1Canvas" menu="G$_DEFAULT_PM" name="SPRIDEN_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="SPRIDEN" name="grdSpriden" width="100%">
+						<viewheader>
+							<viewcolumn block="SPRIDEN" case="upper" datatype="String" label="spriden.spridenId.prompt" labelstyle="DEFAULT" maxlength="9" member="SPRIDEN_ID" name="spridenId">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="SPRIDEN" datatype="String" label="spriden.spridenSurnamePrefix.prompt" labelstyle="DEFAULT" maxlength="60" member="SPRIDEN_SURNAME_PREFIX" name="spridenSurnamePrefix" visible="false">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="SPRIDEN" datatype="String" label="spriden.spridenLastName.prompt" labelstyle="DEFAULT" maxlength="60" member="SPRIDEN_LAST_NAME" name="spridenLastName">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="SPRIDEN" datatype="String" label="spriden.spridenFirstName.prompt" labelstyle="DEFAULT" maxlength="60" member="SPRIDEN_FIRST_NAME" name="spridenFirstName">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="SPRIDEN" datatype="String" label="spriden.spridenMi.prompt" labelstyle="DEFAULT" maxlength="60" member="SPRIDEN_MI" name="spridenMi">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="SPRIDEN" case="upper" datatype="String" enabled="false" label="spriden.spridenChangeInd.prompt" labelstyle="DEFAULT" maxlength="1" member="SPRIDEN_CHANGE_IND" name="spridenChangeInd">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="SPRIDEN" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="spriden.birthdate.prompt" labelstyle="DEFAULT" maxlength="11" member="BIRTHDATE" name="birthdate">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="SPRIDEN" case="upper" datatype="String" keyactions="NEXT_ITEM" label="spriden.spridenNtypCode.prompt" labelstyle="DEFAULT" maxlength="30" member="SPRIDEN_NTYP_CODE" name="spridenNtypCode">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+<!-- 								<editor> -->
+<!-- 									<lovbox/> -->
+<!-- 								</editor> -->
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

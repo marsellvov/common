@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="GTVSDAX_RG.ValueSet.Config" name="GTVSDAX_RG">
+    <columns>
+		<column name="GTVSDAX_INTERNAL_CODE" type="String" size="30"/>
+		<column name="GTVSDAX_DESC" type="String" size="100"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvsdax_internal_code, gtvsdax_desc  FROM gtvsdax  WHERE gtvsdax_internal_code_group = 'EDI STANDARDS' 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

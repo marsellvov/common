@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqclib/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqclib/model/AURALRT.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqclib/model/AGRADTL.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqclib/model/AGRPGBE.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqclib/model/AMRATTN.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Aoqclib/model/AOQCLIB.ValueSet.Config.xml"/>
+
+	
+	<formModel id="AOQCLIB.Model.Config" name="AOQCLIB">
+		<modelClass>net.hedtech.general.common.libraries.Aoqclib.model.AoqclibModel</modelClass>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="AURALRT" manager="AURALRT.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="AGRADTL" manager="AGRADTL.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="AGRPGBE" manager="AGRPGBE.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="AMRATTN" manager="AMRATTN.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="AGRGDES_GIFT_PIDM_RG.ValueSet.Config"/>
+				<valueSet config="AGRGDES_GIFT_PIDM_PGBE_RG.ValueSet.Config"/>
+				<valueSet config="PLEDGE_NUM_RG.ValueSet.Config"/>
+				<valueSet config="AGRGDES_PLEDGE_PIDM_RG.ValueSet.Config"/>
+				<valueSet config="AGRGDES_PLEDGE_PIDM_PGBE_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

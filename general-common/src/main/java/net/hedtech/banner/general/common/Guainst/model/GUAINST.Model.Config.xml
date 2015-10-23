@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guainst/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guainst/model/GUBINST.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guainst/model/BUTTON_CONTROL_BLOCK.Manager.Config.xml"/>
+	
+	<formModel id="GUAINST.Model.Config" name="GUAINST">
+		<modelClass>net.hedtech.banner.general.common.Guainst.model.GuainstModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GUBINST" manager="GUBINST.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="BUTTON_CONTROL_BLOCK" manager="BUTTON_CONTROL_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+	</formModel>
+</b:beans>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="gtvscod.gtvscodElementId.prompt">Element</msg>
+  <msg id="gtvscod.gtvscodElementId.hint">EDI Element ID</msg>
+  <msg id="gtvscod.gtvscodCode.prompt">Code</msg>
+  <msg id="gtvscod.gtvscodCode.hint">Enter EDI code</msg>
+  <msg id="gtvscod.gtvscodDesc.prompt">Description</msg>
+  <msg id="gtvscod.gtvscodDesc.hint">Enter description for EDI code</msg>
+  <msg id="gtvscod.gtvscodStandardInd.prompt">Standard</msg>
+  <msg id="gtvscod.gtvscodStandardInd.hint">Standard Organization </msg>
+  <msg id="gtvscod.gtvscodActivityDate.prompt">Activity Date</msg>
+  <msg id="buttonControlBlock.gtvscod1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.gtvscod1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.gtvscod1SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.gtvscod1ExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.gtvscodStandardIndLbt.tooltip">Search</msg>
+  <msg id="mainWindow.title">EDI/ISO Standard Code Validation</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+  <msg id="gtvsdaxLov.title">Standard Indicator LOV</msg>
+  <msg id="gtvsdaxLov.gtvsdaxInternalCode.title">EDI Standard Code</msg>
+  <msg id="gtvsdaxLov.gtvsdaxDesc.title">Description</msg>
+</messages>

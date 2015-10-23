@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRBGRNT.Manager.Config" name="FRBGRNT">
+		
+		<items>
+			<item name="FRBGRNT_CODE" logicalName="frbgrntCode" type="String" physicalName="FRBGRNT_CODE"  />
+			<item name="FRBGRNT_TITLE" logicalName="frbgrntTitle" type="String" physicalName="FRBGRNT_TITLE"  />
+			<item name="PI_ID" logicalName="piId" type="String"  virtual="true" />
+			<item name="FRBGRNT_PI_PIDM" logicalName="frbgrntPiPidm" type="java.math.BigDecimal" physicalName="FRBGRNT_PI_PIDM"  />
+			<item name="PI_LAST_NAME" logicalName="piLastName" type="String"  virtual="true" />
+			<item name="PI_FIRST_NAME" logicalName="piFirstName" type="String"  virtual="true" />
+			<item name="AGENCY_ID" logicalName="agencyId" type="String"  virtual="true" />
+			<item name="AGENCY_NAME" logicalName="agencyName" type="String"  virtual="true" />
+			<item name="FRBGRNT_AGENCY_PIDM" logicalName="frbgrntAgencyPidm" type="java.math.BigDecimal" physicalName="FRBGRNT_AGENCY_PIDM"  />
+			<item name="FRBGRNT_CURRENT_FUNDING_AMT" logicalName="frbgrntCurrentFundingAmt" type="java.math.BigDecimal" physicalName="FRBGRNT_CURRENT_FUNDING_AMT"  />
+			<item name="FRBGRNT_CUM_FUNDING_AMT" logicalName="frbgrntCumFundingAmt" type="java.math.BigDecimal" physicalName="FRBGRNT_CUM_FUNDING_AMT"  />
+			<item name="FRBGRNT_MAX_FUNDING_AMT" logicalName="frbgrntMaxFundingAmt" type="java.math.BigDecimal" physicalName="FRBGRNT_MAX_FUNDING_AMT"  />
+			<item name="FRBGRNT_STATUS_CODE" logicalName="frbgrntStatusCode" type="String" physicalName="FRBGRNT_STATUS_CODE"  />
+			<item name="FRBGRNT_ALTERNATE_STATUS_DESC" logicalName="frbgrntAlternateStatusDesc" type="String" physicalName="FRBGRNT_ALTERNATE_STATUS_DESC"  />
+			<item name="FRBGRNT_STATUS_DESC" logicalName="frbgrntStatusDesc" type="String"  virtual="true" />
+			<item name="FRBGRNT_STATUS_DATE" logicalName="frbgrntStatusDate" type="java.util.Date" physicalName="FRBGRNT_STATUS_DATE"  />
+			<item name="FRBGRNT_PROJECT_START_DATE" logicalName="frbgrntProjectStartDate" type="java.util.Date" physicalName="FRBGRNT_PROJECT_START_DATE"  />
+			<item name="FRBGRNT_PROJECT_END_DATE" logicalName="frbgrntProjectEndDate" type="java.util.Date" physicalName="FRBGRNT_PROJECT_END_DATE"  />
+			<item name="FRBGRNT_SPONSOR_ID" logicalName="frbgrntSponsorId" type="String" physicalName="FRBGRNT_SPONSOR_ID"  />
+			<item name="FRBGRNT_COAS_CODE" logicalName="frbgrntCoasCode" type="String" physicalName="FRBGRNT_COAS_CODE"  />
+			<item name="FRBGRNT_ORGN_CODE_RESP_OFFICE" logicalName="frbgrntOrgnCodeRespOffice" type="String" physicalName="FRBGRNT_ORGN_CODE_RESP_OFFICE"  />
+			<item name="ORGN_DESC" logicalName="orgnDesc" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Frigrnt.model.FrbgrntAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[frbgrnt_code ]]></defaultOrderByClause>	
+		<pagination maximumRows="1" enabled="true"/>
+	</manager>
+</b:beans>

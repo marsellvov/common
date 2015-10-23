@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="BLOCK3.Manager.Config" name="FRBGRNT">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="GRNT_CODE_DISPLAY_1" logicalName="grntCodeDisplay1" type="String"   />
+			<item name="GRNT_TITLE_DISPLAY_2" logicalName="grntTitleDisplay2" type="String"   />
+			<item name="AGENCY_NAME_1" logicalName="agencyName1" type="String"   />
+			<item name="GRNT_TITLE_DISPLAY_4" logicalName="grntTitleDisplay4" type="String"   />
+			<item name="AGENCY_CODE_1" logicalName="agencyCode1" type="String"   />
+			<item name="GRNT_TITLE_DISPLAY_5" logicalName="grntTitleDisplay5" type="String"   />
+			<item name="GRNT_CODE_DISPLAY_4" logicalName="grntCodeDisplay4" type="String"   />
+			<item name="GRNT_TITLE_DISPLAY_1" logicalName="grntTitleDisplay1" type="String"   />
+			<item name="GRNT_CODE_DISPLAY_5" logicalName="grntCodeDisplay5" type="String"   />
+			<item name="GRNT_CODE_DISPLAY_2" logicalName="grntCodeDisplay2" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.finance.common.Fragrnt.model.Block3</managerClass>
+
+	</manager>
+</b:beans>

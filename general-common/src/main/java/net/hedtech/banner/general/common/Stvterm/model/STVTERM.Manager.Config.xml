@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="STVTERM.Manager.Config" name="STVTERM">
+		
+		<items>
+			<item name="STVTERM_CODE" logicalName="stvtermCode" type="String" physicalName="STVTERM_CODE"  />
+			<item name="STVTERM_DESC" logicalName="stvtermDesc" type="String" physicalName="STVTERM_DESC"  />
+			<item name="STVTERM_START_DATE" logicalName="stvtermStartDate" type="java.util.Date" physicalName="STVTERM_START_DATE"  />
+			<item name="STVTERM_END_DATE" logicalName="stvtermEndDate" type="java.util.Date" physicalName="STVTERM_END_DATE"  />
+			<item name="STVTERM_TRMT_CODE" logicalName="stvtermTrmtCode" type="String" physicalName="STVTERM_TRMT_CODE"  />
+			<item name="STVTERM_ACYR_CODE" logicalName="stvtermAcyrCode" type="String" physicalName="STVTERM_ACYR_CODE"  />
+			<item name="STVTERM_HOUSING_START_DATE" logicalName="stvtermHousingStartDate" type="java.util.Date" physicalName="STVTERM_HOUSING_START_DATE"  />
+			<item name="STVTERM_HOUSING_END_DATE" logicalName="stvtermHousingEndDate" type="java.util.Date" physicalName="STVTERM_HOUSING_END_DATE"  />
+			<item name="STVTERM_FA_PROC_YR" logicalName="stvtermFaProcYr" type="String" physicalName="STVTERM_FA_PROC_YR"  />
+			<item name="STVTERM_FA_SUMMER_IND" logicalName="stvtermFaSummerInd" type="String" physicalName="STVTERM_FA_SUMMER_IND"  />
+			<item name="STVTERM_FA_TERM" logicalName="stvtermFaTerm" type="String" physicalName="STVTERM_FA_TERM"  />
+			<item name="STVTERM_FA_PERIOD" logicalName="stvtermFaPeriod" type="java.math.BigDecimal" physicalName="STVTERM_FA_PERIOD"  />
+			<item name="STVTERM_FA_END_PERIOD" logicalName="stvtermFaEndPeriod" type="java.math.BigDecimal" physicalName="STVTERM_FA_END_PERIOD"  />
+			<item name="STVTERM_SYSTEM_REQ_IND" logicalName="stvtermSystemReqInd" type="String" physicalName="STVTERM_SYSTEM_REQ_IND"  />
+			<item name="STVTERM_ACTIVITY_DATE" logicalName="stvtermActivityDate" type="java.util.Date" physicalName="STVTERM_ACTIVITY_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Stvterm.model.StvtermAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[stvterm_code desc]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

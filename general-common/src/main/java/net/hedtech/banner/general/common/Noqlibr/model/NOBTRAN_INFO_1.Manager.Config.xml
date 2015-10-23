@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="NOBTRAN_INFO_1.Manager.Config" name="nobtran">
+		
+		<items>
+			<item name="NOBTRAN_CREATED_DATE" logicalName="nobtranCreatedDate" type="java.util.Date" physicalName="NOBTRAN_CREATED_DATE"  />
+			<item name="NOBTRAN_ORIGINATOR_USER_ID" logicalName="nobtranOriginatorUserId" type="String" physicalName="NOBTRAN_ORIGINATOR_USER_ID"  />
+			<item name="NOBTRAN_SUBMISSION_DATE" logicalName="nobtranSubmissionDate" type="java.util.Date" physicalName="NOBTRAN_SUBMISSION_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+			<item name="NOBTRAN_SUBMITTOR_USER_ID" logicalName="nobtranSubmittorUserId" type="String" physicalName="NOBTRAN_SUBMITTOR_USER_ID"  />
+			<item name="NOBTRAN_APPLY_DATE" logicalName="nobtranApplyDate" type="java.util.Date" physicalName="NOBTRAN_APPLY_DATE"  />
+			<item name="NOBTRAN_APPLY_USER_ID" logicalName="nobtranApplyUserId" type="String" physicalName="NOBTRAN_APPLY_USER_ID"  />
+			<item name="NOBTRAN_TRANSACTION_NO" logicalName="nobtranTransactionNo" type="java.math.BigDecimal" physicalName="NOBTRAN_TRANSACTION_NO"  />
+			<item name="NOBTRAN_PIDM" logicalName="nobtranPidm" type="java.math.BigDecimal" physicalName="NOBTRAN_PIDM"  />
+			<item name="DATA_SEPARATOR_LINE_0" logicalName="dataSeparatorLine0" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Noqlibr.model.NobtranInfo1Adapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE NOBTRAN_TRANSACTION_NO = :NOBTRAN_NOBTRAN_TRANSACTION_NO]]></defaultWhereClause>	
+
+	</manager>
+</b:beans>

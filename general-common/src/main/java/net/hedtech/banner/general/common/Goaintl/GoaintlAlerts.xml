@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alerts>
+	<Alert Name="G$_EXTEND_SOLUT_ALERT" Title="Message from Banner Document Management..." Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_EXTEND_SOLUT_2_ALERT" Title="Message from Banner Document Management..." Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="Yes" />
+  			<Button Type="BTN2" Label="No" />
+  			<Button Type="BTN3" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_EXIT_FORM_ALERT" Title="Banner" Type="ERROR">
+		<Text>Do you want to save the changes you have made?</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="Yes" />
+  			<Button Type="BTN2" Label="No" />
+  			<Button Type="BTN3" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_CLOSE_FORM_ALERT" Title="Banner" Type="ERROR">
+		<Text>Your changes could not be saved, close form?</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="Yes" />
+  			<Button Type="BTN2" Label="No" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_CAUTION_ALERT" Title="Banner" Type="WARNING">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+  			<Button Type="BTN2" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_PIPE_MESSAGE_ALERT" Title="Banner" Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="Yes" />
+  			<Button Type="BTN2" Label="No" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_CAUTION_OK_ALERT" Title="Banner" Type="WARNING">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_INFO_ALERT" Title="Banner" Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_WARNING_ALERT" Title="Banner" Type="ERROR">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+</Alerts>
+

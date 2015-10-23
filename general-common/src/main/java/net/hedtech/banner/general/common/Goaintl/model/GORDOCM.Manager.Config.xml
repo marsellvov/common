@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GORDOCM.Manager.Config" name="GORDOCM">
+		<items>
+			<item name="GORDOCM_PIDM" logicalName="gordocmPidm" type="java.math.BigDecimal" physicalName="GORDOCM_PIDM"  >
+				<value>
+					<item name="GORVISA_PIDM" businessObject="GORVISA"/>
+				</value>	
+			</item>
+			<item name="GORDOCM_SEQ_NO" logicalName="gordocmSeqNo" type="java.math.BigDecimal" physicalName="GORDOCM_SEQ_NO"  >
+				<value>
+					<item name="GORVISA_SEQ_NO" businessObject="GORVISA"/>
+				</value>	
+			</item>
+			<item name="GORDOCM_VTYP_CODE" logicalName="gordocmVtypCode" type="String" physicalName="GORDOCM_VTYP_CODE"  >
+				<value>
+					<item name="GORVISA_VTYP_CODE" businessObject="GORVISA"/>
+				</value>	
+			</item>
+			<item name="GORDOCM_VISA_NUMBER" logicalName="gordocmVisaNumber" type="String" physicalName="GORDOCM_VISA_NUMBER"  >
+				<value>
+					<item name="GORVISA_VISA_NUMBER" businessObject="GORVISA"/>
+				</value>	
+			</item>
+			<item name="GORDOCM_USER_ID" logicalName="gordocmUserId" type="String" physicalName="GORDOCM_USER_ID"  />
+			<item name="GORDOCM_ACTIVITY_DATE" logicalName="gordocmActivityDate" type="java.util.Date" physicalName="GORDOCM_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATETIME"/>
+				</value>	
+			</item>
+			<item name="GORDOCM_DOCM_CODE" logicalName="gordocmDocmCode" type="String" physicalName="GORDOCM_DOCM_CODE"  />
+			<item name="DOCM_DESC" logicalName="docmDesc" type="String"  virtual="true" />
+			<item name="GORDOCM_SRCE_CODE" logicalName="gordocmSrceCode" type="String" physicalName="GORDOCM_SRCE_CODE"  />
+			<item name="SRCE_DESC" logicalName="srceDesc" type="String"  virtual="true" />
+			<item name="GORDOCM_REQUEST_DATE" logicalName="gordocmRequestDate" type="java.util.Date" physicalName="GORDOCM_REQUEST_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+			<item name="GORDOCM_DISPOSITION" logicalName="gordocmDisposition" type="String" physicalName="GORDOCM_DISPOSITION"  >
+				<value>
+					<constant>P</constant>
+				</value>	
+			</item>
+			<item name="GORDOCM_RECEIVED_DATE" logicalName="gordocmReceivedDate" type="java.util.Date" physicalName="GORDOCM_RECEIVED_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Goaintl.model.GordocmAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE gordocm_pidm = :GORVISA_PIDM AND gordocm_seq_no = :GORVISA_SEQ_NO AND gordocm_vtyp_code = :GORVISA_VTYP_CODE]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by gordocm_docm_code]]></defaultOrderByClause>	
+		<pagination maximumRows="8" enabled="true"/>
+	</manager>
+</b:beans>

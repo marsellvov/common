@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="G___BANNER_REPORT_HEADER.Manager.Config" name="GBannerReportHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="OREP_NAME" logicalName="orepName" type="String"    /> 
+			<item name="OREP_REPORT_DESCRIPTION" logicalName="orepReportDescription" type="String"    /> 
+			<item name="OREP_SERVER_NAME" logicalName="orepServerName" type="String"    /> 
+			<item name="OREP_SERVICE" logicalName="orepService" type="String"    /> 
+			<item name="WORK_OREP_RETURN_ITEM" logicalName="workOrepReturnItem" type="String"    /> 
+			<item name="DEFAULT_DESFORMAT" logicalName="defaultDesformat" type="String"    /> 
+			<item name="DEFAULT_DESTYPE" logicalName="defaultDestype" type="String"    /> 
+			<item name="DEFAULT_DESNAME" logicalName="defaultDesname" type="String"    /> 
+			<item name="DEFAULT_EXECUTION_MODE" logicalName="defaultExecutionMode" type="String"    /> 
+			<item name="DEFAULT_COMM_MODE" logicalName="defaultCommMode" type="String"    /> 
+			<item name="DEFAULT_PARAMFORM_DESIG" logicalName="defaultParamformDesig" type="String"    /> 
+			<item name="DATA_SEPARATOR_LINE_1" logicalName="dataSeparatorLine1" type="String"    /> 
+			<item name="DATA_SEPARATOR_LINE_2" logicalName="dataSeparatorLine2" type="String"    /> 
+			<item name="LIST_PARAM_NAMES" logicalName="listParamNames" type="String"    /> 
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Goqrlib.model.GBannerReportHeader</managerClass>
+
+	</manager>
+</b:beans>

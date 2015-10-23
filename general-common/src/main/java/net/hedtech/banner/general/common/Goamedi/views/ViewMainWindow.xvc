@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<window layout="horizontal" name="mainWindow" title="mainWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<include src="net/hedtech/banner/general/common/Goamedi/views/PanelKeyBlockCanvas"/>
+	<tabpanel style="ui-panel-view-container ui-notabs" width="100%">
+		<tab label="main">
+			<include src="net/hedtech/banner/general/common/Goamedi/views/PanelGNavCanvas"/>
+			<include src="net/hedtech/banner/general/common/Goamedi/views/PanelSprmedi1Canvas"/>
+			<include src="net/hedtech/general/common/libraries/Goqolib/views/PanelGWelcomeCanvas"/>
+		</tab>
+	</tabpanel>
+</window>

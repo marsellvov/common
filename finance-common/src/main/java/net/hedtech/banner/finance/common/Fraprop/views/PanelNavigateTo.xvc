@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <interactionblock name="NAVIGATE_TO" />
+  <panel class="ContentCanvas" id="pnlNavigateTo" menu="G$_DEFAULT_PM" name="NAVIGATE_TO" width="100%">
+    <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.cancelNavigateBtn.label" member="CANCEL_NAVIGATE_BTN" name="cancelNavigateBtn" navigable="false" width="80px" />
+    <combobox action="WHEN-LIST-CHANGED" block="NAVIGATE_TO" height="23px" member="NAVIGATE_TO_LIST" name="navigateToList" required="true" width="207px">
+      <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+      <model>
+        <item label="navigateTo.navigateToList.item0.label" value="N" />
+        <item label="navigateTo.navigateToList.item1.label" value="D" />
+        <item label="navigateTo.navigateToList.item2.label" value="K" />
+        <item label="navigateTo.navigateToList.item3.label" value="E" />
+        <item label="navigateTo.navigateToList.item4.label" value="L" />
+        <item label="navigateTo.navigateToList.item5.label" value="F" />
+        <item label="navigateTo.navigateToList.item6.label" value="G" />
+        <item label="navigateTo.navigateToList.item7.label" value="I" />
+        <item label="navigateTo.navigateToList.item8.label" value="B" />
+        <item label="navigateTo.navigateToList.item9.label" value="C" />
+      </model>
+    </combobox>
+    <textbox block="NAVIGATE_TO" datatype="String" height="23px" maxlength="1" member="DUMMY_LIST" name="dummyList" width="50px">
+      <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+    </textbox>
+  </panel>
+</config>

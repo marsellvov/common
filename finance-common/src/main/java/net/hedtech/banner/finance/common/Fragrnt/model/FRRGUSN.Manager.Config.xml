@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRRGUSN.Manager.Config" name="FRRGUSN">
+		
+		<items>
+			<item name="FRRGUSN_SDAT_CODE_ATTR" logicalName="frrgusnSdatCodeAttr" type="String" physicalName="FRRGUSN_SDAT_CODE_ATTR"  />
+			<item name="FRRGUSN_SDAT_CODE_OPT_1" logicalName="frrgusnSdatCodeOpt1" type="String" physicalName="FRRGUSN_SDAT_CODE_OPT_1"  />
+			<item name="FRRGUSN_DESC" logicalName="frrgusnDesc" type="String"  virtual="true" />
+			<item name="FRRGUSN_ACTIVITY_DATE" logicalName="frrgusnActivityDate" type="java.util.Date" physicalName="FRRGUSN_ACTIVITY_DATE"  />
+			<item name="FRRGUSN_USER_ID" logicalName="frrgusnUserId" type="String" physicalName="FRRGUSN_USER_ID"  />
+			
+			<item name="FRRGUSN_GRNT_CODE" logicalName="frrgusnGrntCode" type="String" physicalName="FRRGUSN_GRNT_CODE">
+				<value>					
+					<item name="frbgrnt_CODE" businessObject="FRBGRNT" />
+				</value>
+			</item>
+			
+			
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fragrnt.model.FrrgusnAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE frrgusn_grnt_code = :FRBGRNT_CODE]]></defaultWhereClause>	
+
+
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="18" enabled="true"/>
+
+	</manager>
+</b:beans>

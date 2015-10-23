@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fomusor/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fomusor/model/KEY_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fomusor/model/FORUSOR.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fomusor/model/FORUSOR_DUMMY.Manager.Config.xml"/>
+	
+	<formModel id="FOMUSOR.Model.Config" name="FOMUSOR">
+		<modelClass>net.hedtech.banner.finance.common.Fomusor.model.FomusorModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="KEY_BLOCK" manager="KEY_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FORUSOR" manager="FORUSOR.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FORUSOR_DUMMY" manager="FORUSOR_DUMMY.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+	</formModel>
+</b:beans>

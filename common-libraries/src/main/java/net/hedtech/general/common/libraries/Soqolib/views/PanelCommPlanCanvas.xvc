@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" >
+  <interactionblock name="S$_COMM_PLAN_BLOCK" />
+  <interactionblock name="SOBCPLN" />
+  <panel width="1007px" height="591px" top="0px" left="0px" id="pnlCommPlanCanvas" name="COMM_PLAN_CANVAS" class="ContentCanvas" menu="G$_DEFAULT_PM">
+    <slider name="sobcplnscrollbar" block="" top="90px" left="976px" width="16px" height="137px" />
+    <textfield labelposition="left" labelalign="start" name="dataSeparatorLineC1" style="GNvaDataSeparatorLinegDataSeparatorLineClass" left="3px" top="9px" width="1001px" height="5px" enabled="false" wrapStyle="none" bordertype="none" member="DATA_SEPARATOR_LINE_C1" block="S$_COMM_PLAN_BLOCK" maxlength="24" datatype="" case="upper" />
+    <framepanel width="1001px" height="243px" top="16px" left="3px" name="rect531">
+      <radiogroup id="sobcplnTypeInd" otherValue="" name="sobcplnTypeInd" style="DEFAULT" autoskip="true" keyactions="NEXT_ITEM" member="SOBCPLN_TYPE_IND" block="SOBCPLN"  validation="server" maxlength="1" datatype="" case="upper">
+        <radiobox group="sobcplnTypeInd" labelposition="top" labeloffset="19" labelalign="center" labelalignoffset="-4px" label="" value="R" name="rb_SobcplnTypeInd_Recruit" style="G$_NVA_RADIO_BUTTON" left="312px" top="74px" width="19px" height="23px" />
+        <radiobox group="sobcplnTypeInd" labelposition="top" labeloffset="19" labelalign="center" labelalignoffset="-4px" label="" value="A" name="rb_SobcplnTypeInd_Admit" style="G$_NVA_RADIO_BUTTON" left="381px" top="74px" width="19px" height="23px" />
+        <radiobox group="sobcplnTypeInd" labelposition="top" labeloffset="19" labelalign="center" labelalignoffset="-4px" label="" value="S" name="rb_SobcplnTypeInd_Student" style="G$_NVA_RADIO_BUTTON" left="449px" top="74px" width="19px" height="23px" />
+      </radiogroup>
+      <gridview top="55px" left="36px" width="867px" name="grdSobcpln" block="SOBCPLN">
+        <viewheader>
+          <viewcolumn width="61px" label="sobcpln.sobcplnCplnCode.prompt" labelposition="top" labeloffset="19" labelalign="center" name="sobcplnCplnCode" style="GNvaTextItem" labelstyle="DEFAULT" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SOBCPLN_CPLN_CODE" block="SOBCPLN" maxlength="30" datatype="" case="upper">
+            <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+          </viewcolumn>
+          <viewcolumn width="181px" label="sobcpln.stvcplnDesc.prompt" labelposition="top" labeloffset="19" labelalign="center" name="stvcplnDesc" style="DEFAULT" labelstyle="DEFAULT" bordertype="none" member="STVCPLN_DESC" block="SOBCPLN" maxlength="30" datatype="" case="mixed" />
+          <viewcolumn width="61px" label="sobcpln.sobcplnTermCode.prompt" labelposition="top" labeloffset="19" labelalign="center" name="sobcplnTermCode" style="GNvaTextItem" labelstyle="DEFAULT" member="SOBCPLN_TERM_CODE" block="SOBCPLN" validation="server" maxlength="30" datatype="" case="upper" />
+          <viewcolumn width="28px" label="sobcpln.sobcplnSeqno.prompt" labelposition="top" labeloffset="19" labelalign="center" name="sobcplnSeqno" style="GNvaTextItem" labelstyle="DEFAULT" member="SOBCPLN_SEQNO" block="SOBCPLN" validation="server" maxlength="4" datatype="" case="mixed" />
+          <viewcolumn width="23px" label="sobcpln.sobcplnActiveInd.prompt" name="sobcplnActiveInd" style="GNvaCheckBox" labelstyle="DEFAULT" member="SOBCPLN_ACTIVE_IND" block="SOBCPLN" required="true" maxlength="1" datatype="" case="mixed">
+            <editor>
+              <checkbox value="Y" falsevalue="N" />
+            </editor>
+          </viewcolumn>
+          <viewcolumn width="23px" label="sobcpln.unsentMail.prompt" name="unsentMail" style="GNvaCheckBox" labelstyle="DEFAULT" member="UNSENT_MAIL" block="SOBCPLN" maxlength="1" datatype="" case="mixed">
+            <editor>
+              <checkbox othervaluestate="unchecked" value="Y" falsevalue="N" />
+            </editor>
+          </viewcolumn>
+          <viewcolumn width="23px" label="sobcpln.deleteMail.prompt" name="deleteMail" style="GNvaCheckBox" labelstyle="DEFAULT" autoskip="true" member="DELETE_MAIL" block="SOBCPLN" maxlength="1" datatype="" case="upper">
+            <editor>
+              <checkbox othervaluestate="unchecked" value="Y" falsevalue="N" action="WHEN-CHECKBOX-CHANGED" />
+            </editor>
+          </viewcolumn>
+        </viewheader>
+      </gridview>
+      <button labelposition="left" labeloffset="21" labelalign="start" label="sCommPlanBlock.sobcplnTermCodeLbt.label" name="sobcplnTermCodeLbt" style="GFlashliteBtnClass" left="528px" top="54px" width="20px" height="20px" navigable="false" icon="flashlit" tooltip="sCommPlanBlock.sobcplnTermCodeLbt.tooltip" member="SOBCPLN_TERM_CODE_LBT" block="S$_COMM_PLAN_BLOCK" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sCommPlanBlock.commPlanCanvasReturnBtn.label" name="commPlanCanvasReturnBtn" style="GNvaButtonItem" left="903px" top="215px" width="66px" height="23px" member="COMM_PLAN_CANVAS_RETURN_BTN" block="S$_COMM_PLAN_BLOCK" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED" />
+      <button labelposition="left" labelalign="start" label="sCommPlanBlock.sobcplnCplnCodeLbt.label" name="sobcplnCplnCodeLbt" style="GIconBtnClass" left="57px" top="54px" width="20px" height="20px" navigable="false" icon="search" tooltip="sCommPlanBlock.sobcplnCplnCodeLbt.tooltip" member="SOBCPLN_CPLN_CODE_LBT" block="S$_COMM_PLAN_BLOCK" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+    </framepanel>
+  </panel>
+</config>

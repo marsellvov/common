@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="GTVZIPC_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlGtvzipcBlock1Canvas" menu="G$_DEFAULT_PM" name="GTVZIPC_BLOCK_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="gtvzipcBlock.accordion.title">
+				<panel width="100%">
+					<gridview block="GTVZIPC_BLOCK" name="grdGtvzipcBlock" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="GTVZIPC_BLOCK" datatype="String" label="gtvzipcBlock.gtvzipcCode.prompt" labelstyle="DEFAULT" maxlength="30" member="GTVZIPC_CODE" name="gtvzipcCode" required="true" width="281px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GTVZIPC_BLOCK" datatype="String" label="gtvzipcBlock.gtvzipcCity.prompt" labelstyle="DEFAULT" maxlength="50" member="GTVZIPC_CITY" name="gtvzipcCity" required="true" width="281px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GTVZIPC_BLOCK" case="upper" datatype="String" keyactions="NEXT_ITEM" label="gtvzipcBlock.gtvzipcCntyCode.prompt" labelstyle="DEFAULT" maxlength="30" member="GTVZIPC_CNTY_CODE" name="gtvzipcCntyCode" validation="server" width="281px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GTVZIPC_BLOCK" case="upper" datatype="String" keyactions="NEXT_ITEM" label="gtvzipcBlock.gtvzipcStatCode.prompt" labelstyle="DEFAULT" maxlength="30" member="GTVZIPC_STAT_CODE" name="gtvzipcStatCode" width="281px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GTVZIPC_BLOCK" case="upper" datatype="String" keyactions="NEXT_ITEM" label="gtvzipcBlock.gtvzipcNatnCode.prompt" labelstyle="DEFAULT" maxlength="30" member="GTVZIPC_NATN_CODE" name="gtvzipcNatnCode" width="280px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

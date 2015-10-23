@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="FTVECLS" />
+  <accordion width="100%">
+    <panel class="ContentCanvas" id="pnlFtvecls1Canvas" label="ftmecls.accordion.title" menu="G$_DEFAULT_PM" name="FTVECLS_1_CANVAS" width="100%">
+          <repeater block="FTVECLS" width="100%">
+  
+    <panel width="100%">
+          <panel width="100%">
+            <gridlayout cols="2" orientation="vertical">
+              <gridcell>
+                <textbox case="upper" height="23px" label="ftvecls.ftveclsEclsCode.prompt" maxlength="2" member="FTVECLS_ECLS_CODE" name="ftveclsEclsCode" required="true" style="ui-buttoninput" width="50px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <button action="WHEN-BUTTON-PRESSED" height="23px" icon="flashlit" member="FTVECLS_ECLS_CODE_LBT" name="ftveclsEclsCodeLbt" navigable="false" style="ui-buttoninput" tooltip="ftvecls.ftveclsEclsCodeLbt.tooltip" width="23px" />
+                <textbox autoskip="true" height="23px" maxlength="30" label="ftvecls.ftveclsDesc.hint" member="FTVECLS_DESC" name="ftveclsDesc" required="true" tooltip="ftvecls.ftveclsDesc.prompt" style="ui-hidelabel" width="190px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" case="upper" height="23px" label="ftvecls.ftveclsPictCode.prompt" maxlength="2" member="FTVECLS_PICT_CODE" name="ftveclsPictCode" required="true" width="50px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" case="upper" height="23px" keyactions="NEXT_ITEM" label="ftvecls.ftveclsWkshCode.prompt" maxlength="4" member="FTVECLS_WKSH_CODE" name="ftveclsWkshCode" style="ui-buttoninput" width="51px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="FTVECLS_WKSH_CODE_LBT" name="ftveclsWkshCodeLbt" navigable="false" style="ui-buttoninput" tooltip="ftvecls.ftveclsWkshCodeLbt.tooltip" width="23px" />
+                <textfield height="23px" maxlength="30" member="WKSH_CODE_DESC" name="wkshCodeDesc" tooltip="ftvecls.wkshCodeDesc.prompt" width="150px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textfield>
+              </gridcell>
+              <gridcell>
+                <combobox autoskip="true" height="23px" label="ftvecls.ftveclsContractInd.prompt" member="FTVECLS_CONTRACT_IND" name="ftveclsContractInd" required="true" width="200px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                  <model>
+                    <item label="ftvecls.ftveclsContractInd.item0.label" value="H" />
+                    <item label="ftvecls.ftveclsContractInd.item1.label" value="V" />
+                    <item label="ftvecls.ftveclsContractInd.item2.label" value="S" />
+                    <item label="ftvecls.ftveclsContractInd.item3.label" value="A" />
+                  </model>
+                </combobox>
+              </gridcell>
+              <gridcell>
+                <combobox autoskip="true" height="23px" label="ftvecls.ftveclsBudgetRollInd.prompt" member="FTVECLS_BUDGET_ROLL_IND" name="ftveclsBudgetRollInd" required="true" width="150px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                  <model>
+                    <item label="ftvecls.ftveclsBudgetRollInd.item0.label" value="C" />
+                    <item label="ftvecls.ftveclsBudgetRollInd.item1.label" value="M" />
+                    <item label="ftvecls.ftveclsBudgetRollInd.item2.label" value="R" />
+                    <item label="ftvecls.ftveclsBudgetRollInd.item3.label" value="Z" />
+                    <item label="ftvecls.ftveclsBudgetRollInd.item4.label" value="S" />
+                    <item label="ftvecls.ftveclsBudgetRollInd.item5.label" value="V" />
+                  </model>
+                </combobox>
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" height="23px" label="ftvecls.ftveclsHoursPerDay.prompt" maxlength="8" member="FTVECLS_HOURS_PER_DAY" name="ftveclsHoursPerDay" required="true" textalign="right" width="64px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" height="23px" label="ftvecls.ftveclsHoursPerPay.prompt" maxlength="8" member="FTVECLS_HOURS_PER_PAY" name="ftveclsHoursPerPay" required="true" textalign="right" width="64px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+              <gridcell>
+                <textbox autoskip="true" height="23px" label="ftvecls.ftveclsPaysPerYear.prompt" maxlength="5" member="FTVECLS_PAYS_PER_YEAR" name="ftveclsPaysPerYear" required="true" textalign="right" width="50px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </gridcell>
+            </gridlayout>
+          </panel>
+    </panel>  
+            </repeater>
+    
+    </panel>
+    
+  </accordion>
+</config>

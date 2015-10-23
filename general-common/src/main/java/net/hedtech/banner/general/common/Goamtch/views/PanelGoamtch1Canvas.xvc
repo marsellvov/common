@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <interactionblock name="FORM_HEADER" />
+  <interactionblock name="GOTCMME" />
+  <panel class="StackedCanvas" id="pnlGoamtch1Canvas" menu="G$_DEFAULT_PM" name="GOAMTCH_1_CANVAS" width="100%">
+    <accordion width="100%">
+      <panel label="goamtch1Canvas.text28.text">
+        <panel width="100%">
+          <gridlayout cols="2" orientation="vertical">
+            <gridcell>
+              <textbox block="GOTCMME" datatype="String" height="23px" label="gotcmme.lastName.prompt" maxlength="60" member="LAST_NAME" name="lastName" validation="server" width="278px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeFirstName.prompt" maxlength="60" member="GOTCMME_FIRST_NAME" name="gotcmmeFirstName" validation="server" width="278px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeMi.prompt" maxlength="60" member="GOTCMME_MI" name="gotcmmeMi" validation="server" width="278px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" block="GOTCMME" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gotcmme.gotcmmeAtypCode.prompt" maxlength="30" member="GOTCMME_ATYP_CODE" name="gotcmmeAtypCode" style="ui-buttoninput" validation="server" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" block="GOTCMME" height="23px" icon="search" member="GOTCMME_ATYP_CODE_LBT" name="gotcmmeAtypCodeLbt" navigable="false" style="ui-buttoninput" tooltip="gotcmme.gotcmmeAtypCodeLbt.tooltip" width="23px" />
+              <textfield block="GOTCMME" datatype="String" height="23px"  maxlength="30" member="ATYP_DESCRIPTION" name="atypDescription" width="225px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeStreetLine1.prompt" maxlength="75" member="GOTCMME_STREET_LINE1" name="gotcmmeStreetLine1" width="278px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeStreetLine2.prompt" maxlength="75" member="GOTCMME_STREET_LINE2" name="gotcmmeStreetLine2" width="278px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeStreetLine3.prompt" maxlength="75" member="GOTCMME_STREET_LINE3" name="gotcmmeStreetLine3" width="278px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeCity.prompt" maxlength="50" member="GOTCMME_CITY" name="gotcmmeCity" width="189px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" block="GOTCMME" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gotcmme.gotcmmeStatCode.prompt" maxlength="30" member="GOTCMME_STAT_CODE" name="gotcmmeStatCode" style="ui-buttoninput" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" block="GOTCMME" height="23px" icon="search" member="GOTCMME_STAT_CODE_LBT" name="gotcmmeStatCodeLbt" navigable="false" style="ui-buttoninput" tooltip="gotcmme.gotcmmeStatCodeLbt.tooltip" width="23px" />
+              <textfield block="GOTCMME" datatype="String" height="23px" maxlength="30"  member="STAT_DESCRIPTION" name="statDescription" width="206px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox block="GOTCMME" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="gotcmme.gotcmmeZip.prompt" maxlength="30" member="GOTCMME_ZIP" name="gotcmmeZip" style="ui-buttoninput" width="98px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" block="GOTCMME" height="23px" icon="flashlit" member="GOTCMME_ZIP_LBT" name="gotcmmeZipLbt" navigable="false" style="ui-buttoninput" tooltip="gotcmme.gotcmmeZipLbt.tooltip" width="23px" />
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" block="GOTCMME" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gotcmme.gotcmmeCntyCode.prompt" maxlength="30" member="GOTCMME_CNTY_CODE" name="gotcmmeCntyCode" style="ui-buttoninput" width="55px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" block="GOTCMME" height="23px" icon="search"  member="GOTCMME_CNTY_CODE_LBT" name="gotcmmeCntyCodeLbt" navigable="false" style="ui-buttoninput" tooltip="gotcmme.gotcmmeCntyCodeLbt.tooltip" width="23px" />
+              <textfield block="GOTCMME" datatype="String" height="23px" maxlength="30" member="CNTY_DESCRIPTION" name="cntyDescription" width="193px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" block="GOTCMME" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gotcmme.gotcmmeNatnCode.prompt" maxlength="30" member="GOTCMME_NATN_CODE" name="gotcmmeNatnCode" style="ui-buttoninput" width="75px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" block="GOTCMME" height="23px" icon="search"  member="GOTCMME_NATN_CODE_LBT" name="gotcmmeNatnCodeLbt" navigable="false" style="ui-buttoninput" tooltip="gotcmme.gotcmmeNatnCodeLbt.tooltip" width="23px" />
+              <textfield block="GOTCMME" datatype="String" height="23px" maxlength="30" member="NATN_DESCRIPTION" name="natnDescription" width="184px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox block="GOTCMME" datatype="String" height="23px" label="gotcmme.nonpersonName.prompt" maxlength="60" member="NONPERSON_NAME" name="nonpersonName" validation="server" width="278px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" block="GOTCMME" case="upper" datatype="String" height="23px" label="gotcmme.gotcmmeSsn.prompt" maxlength="15" member="GOTCMME_SSN" name="gotcmmeSsn" validation="server" width="178px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <text>goamtch1Canvas.text162.text</text>
+              <text></text>
+              <textbox autoskip="true" block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeBirthDay.prompt" maxlength="2" member="GOTCMME_BIRTH_DAY" name="gotcmmeBirthDay" validation="server" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <textbox autoskip="true" block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeBirthMon.prompt" maxlength="2" member="GOTCMME_BIRTH_MON" name="gotcmmeBirthMon" validation="server" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <textbox autoskip="true" block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeBirthYear.prompt" maxlength="4" member="GOTCMME_BIRTH_YEAR" name="gotcmmeBirthYear" validation="server" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <combobox block="GOTCMME" height="23px" label="gotcmme.gotcmmeSex.prompt" member="GOTCMME_SEX" name="gotcmmeSex" width="102px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <model>
+                  <item label="gotcmme.gotcmmeSex.item0.label" value="F" />
+                  <item label="gotcmme.gotcmmeSex.item1.label" value="M" />
+                  <item label="gotcmme.gotcmmeSex.item2.label" value="N" />
+                  <item label="gotcmme.gotcmmeSex.item3.label" />
+                </model>
+              </combobox>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" block="GOTCMME" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gotcmme.gotcmmeTeleCode.prompt" maxlength="30" member="GOTCMME_TELE_CODE" name="gotcmmeTeleCode" style="ui-buttoninput" validation="server" width="56px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" block="GOTCMME" height="23px" icon="search" member="GOTCMME_TELE_CODE_LBT" name="gotcmmeTeleCodeLbt" navigable="false" style="ui-buttoninput" tooltip="gotcmme.gotcmmeTeleCodeLbt.tooltip" width="23px" />
+              <textfield block="GOTCMME" datatype="String" height="23px" maxlength="30"  member="TELE_DESCRIPTION" name="teleDescription" width="277px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <component label="gotcmme.gotcmmePhoneArea.prompt">
+                <textbox autoskip="true" block="GOTCMME" datatype="String" height="23px" style="ui-hidelabel" maxlength="6" label="gotcmme.gotcmmePhoneArea.hint" member="GOTCMME_PHONE_AREA" name="gotcmmePhoneArea" tooltip="gotcmme.gotcmmePhoneArea.hint" width="50px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <textbox autoskip="true" block="GOTCMME" datatype="String" height="23px" style="ui-hidelabel" maxlength="12" label="gotcmme.gotcmmePhoneNumber.hint" member="GOTCMME_PHONE_NUMBER" name="gotcmmePhoneNumber" tooltip="gotcmme.gotcmmePhoneNumber.hint" width="81px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <textbox autoskip="true" block="GOTCMME" datatype="String" height="23px" style="ui-hidelabel" maxlength="10" label="gotcmme.gotcmmePhoneExtNew.hint" member="GOTCMME_PHONE_EXT" name="gotcmmePhoneExt" tooltip="gotcmme.gotcmmePhoneExt.hint" width="65px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+              </component>
+            </gridcell>
+            <gridcell>
+            	<component label="gotcmme.gotcmmeEmalCode.prompt">
+	              <textbox autoskip="true" block="GOTCMME" case="upper" datatype="String" height="23px"  keyactions="NEXT_ITEM" label="gotcmme.gotcmmeEmalCode.prompt" maxlength="30" member="GOTCMME_EMAL_CODE" name="gotcmmeEmalCode" style="ui-buttoninput ui-hidelabel" validation="server" width="56px">
+	                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+	              </textbox>
+	              <button action="WHEN-BUTTON-PRESSED" block="GOTCMME" height="23px" icon="search" member="GOTCMME_EMAL_CODE_LBT" name="gotcmmeEmalCodeLbt" navigable="false" style="ui-buttoninput" tooltip="gotcmme.gotcmmeEmalCodeLbt.tooltip" width="23px" />
+	              <textfield block="GOTCMME" datatype="String" height="23px" maxlength="60" member="EMAL_DESCRIPTION" name="emalDescription" width="278px">
+	                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+	              </textfield>
+	             </component>
+            </gridcell>
+            <gridcell>
+              <textbox block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeEmailAddress.prompt" maxlength="128" member="GOTCMME_EMAIL_ADDRESS" name="gotcmmeEmailAddress" width="278px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" block="GOTCMME" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="gotcmme.gotcmmeAdidCode.prompt" maxlength="4" member="GOTCMME_ADID_CODE" name="gotcmmeAdidCode" style="ui-buttoninput" validation="server" width="51px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" backgroundcolor="White" block="GOTCMME" fontfamily="Tahoma" fontsize="8pt" foregroundcolor="Black" height="23px" icon="search" member="GOTCMME_ADID_CODE_LBT" name="gotcmmeAdidCodeLbt" navigable="false" style="ui-buttoninput" width="23px" />
+              <textfield block="GOTCMME" datatype="String" height="23px" maxlength="30" member="ADID_DESC" name="adidDesc" width="277px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox block="GOTCMME" datatype="String" height="23px" label="gotcmme.gotcmmeAdditionalId.prompt" maxlength="50" member="GOTCMME_ADDITIONAL_ID" name="gotcmmeAdditionalId" width="278px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+          </gridlayout>
+        </panel>
+        <panel width="100%">
+          <gridlayout cols="2" orientation="vertical">
+            <gridcell>
+              <component>
+                <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.checkBtn.prompt" enabled="false" height="20px" member="CHECK_BTN" name="checkBtn" navigable="false" tooltip="buttonControlBlock.checkBtn.tooltip" width="200px" />
+              </component>
+            </gridcell>
+            <gridcell>
+              <component>
+                <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.selectBtn.prompt" enabled="false" height="20px" member="SELECT_BTN" name="selectBtn" navigable="false" tooltip="buttonControlBlock.selectBtn.tooltip" width="200px" />
+              </component>
+            </gridcell>
+            <gridcell>
+              <component>
+                <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.detailsBtn.prompt" enabled="false" height="20px" member="DETAILS_BTN" name="detailsBtn" navigable="false" tooltip="buttonControlBlock.detailsBtn.tooltip" width="200px" />
+              </component>
+            </gridcell>
+            <gridcell>
+              <component>
+                <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.updateBtn.prompt" enabled="false" height="20px" member="UPDATE_BTN" name="updateBtn" navigable="false" tooltip="buttonControlBlock.updateBtn.tooltip" width="200px" />
+              </component>
+            </gridcell>
+            <gridcell>
+              <component>
+                <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.sourceCommentBtn.prompt" enabled="false" height="20px" member="SOURCE_COMMENT_BTN" name="sourceCommentBtn" navigable="false" tooltip="buttonControlBlock.sourceCommentBtn.tooltip" width="200px" />
+              </component>
+            </gridcell>
+            <gridcell>
+              <component>
+                <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" label="buttonControlBlock.createBtn.prompt" enabled="false" height="20px" member="CREATE_BTN" name="createBtn" navigable="false" tooltip="buttonControlBlock.createBtn.tooltip" width="200px" />
+              </component>
+            </gridcell>
+          </gridlayout>
+        </panel>
+      </panel>
+    </accordion>
+  </panel>
+</config>

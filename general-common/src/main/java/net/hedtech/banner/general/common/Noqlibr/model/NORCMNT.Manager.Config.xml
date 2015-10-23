@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="NORCMNT.Manager.Config" name="norcmnt">
+		
+		<items>
+			<item name="NORCMNT_COMMENTS" logicalName="norcmntComments" type="String" physicalName="NORCMNT_COMMENTS"  />
+			<item name="NORCMNT_ACTIVITY_DATE" logicalName="norcmntActivityDate" type="java.util.Date" physicalName="NORCMNT_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATETIME"/>
+				</value>	
+			</item>
+			<item name="NORCMNT_USER_ID" logicalName="norcmntUserId" type="String" physicalName="NORCMNT_USER_ID"  >
+				<value>
+					<globalVariable name="CURRENT_USER" />
+				</value>	
+			</item>
+			<item name="NORCMNT_TRANSACTION_NO" logicalName="norcmntTransactionNo" type="java.math.BigDecimal" physicalName="NORCMNT_TRANSACTION_NO"  >
+				<value>
+					<item name="NOBTRAN_TRANSACTION_NO" businessObject="NOBTRAN"/>
+				</value>	
+			</item>
+			<item name="NORCMNT_DATA_ORIGIN" logicalName="norcmntDataOrigin" type="String" physicalName="NORCMNT_DATA_ORIGIN"  >
+				<value>
+					<globalVariable name="DATA_ORIGIN" />
+				</value>	
+			</item>
+			<item name="NORCMNT_SEQ_NO" logicalName="norcmntSeqNo" type="java.math.BigDecimal" physicalName="NORCMNT_SEQ_NO"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Noqlibr.model.NorcmntAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE NORCMNT_TRANSACTION_NO = :NOBTRAN_NOBTRAN_TRANSACTION_NO]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[NORCMNT_SEQ_NO desc]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

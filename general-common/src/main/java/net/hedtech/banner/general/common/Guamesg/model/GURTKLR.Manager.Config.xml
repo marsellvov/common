@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GURTKLR.Manager.Config" name="GURTKLR">
+		
+		<items>
+			<item name="GURTKLR_USER_ID" logicalName="gurtklrUserId" type="String" physicalName="GURTKLR_USER_ID"  />
+			<item name="USER_ID_NAME" logicalName="userIdName" type="String"  virtual="true" />
+			<item name="GURTKLR_CREATOR" logicalName="gurtklrCreator" type="String" physicalName="GURTKLR_CREATOR"  />
+			<item name="GURTKLR_TODO_DATE" logicalName="gurtklrTodoDate" type="java.util.Date" physicalName="GURTKLR_TODO_DATE"  >
+		
+				</item>
+			<item name="GURTKLR_TODO_TIME" logicalName="gurtklrTodoTime" type="java.math.BigDecimal" physicalName="GURTKLR_TODO_TIME"  />
+			<item name="GURTKLR_COMMENT" logicalName="gurtklrComment" type="String" physicalName="GURTKLR_COMMENT"  />
+			<item name="GURTKLR_SOURCE" logicalName="gurtklrSource" type="String" physicalName="GURTKLR_SOURCE"  />
+			<item name="IDNO" logicalName="idno" type="String"  virtual="true" />
+			<item name="NAME" logicalName="nname" type="String"  virtual="true" />
+			<item name="GURTKLR_ITEM_REFNO" logicalName="gurtklrItemRefno" type="String" physicalName="GURTKLR_ITEM_REFNO"  />
+			<item name="GURTKLR_ACTIVITY_DATE" logicalName="gurtklrActivityDate" type="java.util.Date" physicalName="GURTKLR_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>
+				</item>
+			<item name="GURTKLR_SYSTEM_IND" logicalName="gurtklrSystemInd" type="String" physicalName="GURTKLR_SYSTEM_IND"  />
+			<item name="GURTKLR_SYSTEM_DESC" logicalName="gurtklrSystemDesc" type="String"  virtual="true" />
+			<item name="GURTKLR_STATUS" logicalName="gurtklrStatus" type="String" physicalName="GURTKLR_STATUS"  >
+				<value>
+					<constant>P</constant>
+				</value>	
+			</item>
+			<item name="STATUS_FLAG" logicalName="statusFlag" type="String"  virtual="true" />
+			<item name="GURTKLR_CONFID_IND" logicalName="gurtklrConfidInd" type="String" physicalName="GURTKLR_CONFID_IND"  />
+			<item name="GURTKLR_SEQNO" logicalName="gurtklrSeqno" type="java.math.BigDecimal" physicalName="GURTKLR_SEQNO"  />
+			<item name="GURTKLR_IDEN_CODE" logicalName="gurtklrIdenCode" type="String" physicalName="GURTKLR_IDEN_CODE"  />
+			<item name="QUERY_FLAG" logicalName="queryFlag" type="String"  virtual="true" />
+			<item name="DUPREC_IND" logicalName="duprecInd" type="String"  virtual="true" />
+			<item name="GURTKLR_PIDM" logicalName="gurtklrPidm" type="java.math.BigDecimal" physicalName="GURTKLR_PIDM"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Guamesg.model.GurtklrAdapter</adapterClass>
+<!-- 		  <defaultWhereClause><![CDATA[WHERE (gurtklr_user_id = :WORKUSER AND trunc(gurtklr_todo_date) <= trunc(sysdate) AND (gurtklr_status = 'P' OR gurtklr_status = 'H')) OR (:WORKUSER IS NULL AND (gurtklr_creator LIKE :GURTKLR_CREATOR OR :GURTKLR_CREATOR IS NULL) AND (gurtklr_user_id LIKE :GURTKLR_USER_ID OR :GURTKLR_USER_ID IS NULL))]]></defaultWhereClause> -->
+		  <defaultWhereClause><![CDATA[WHERE (gurtklr_user_id = :WORKUSER AND trunc(gurtklr_todo_date) <= trunc(sysdate) AND (gurtklr_status = 'P' OR gurtklr_status = 'H')) OR (:WORKUSER IS NULL)]]></defaultWhereClause>		     
+ 
+		<defaultOrderByClause><![CDATA[order by gurtklr_user_id, gurtklr_todo_date desc]]></defaultOrderByClause>	
+			<pagination maximumRows="1" enabled="true"/>
+	</manager>
+</b:beans>

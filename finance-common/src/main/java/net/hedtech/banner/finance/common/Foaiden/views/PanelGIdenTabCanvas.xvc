@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel width="100%">
+		<tabpanel id="tabGIdenTabCanvas" style="ui-panel-view-scroll" name="G$_IDEN_TAB_CANVAS">
+			<xl:event action="WHEN-TAB-PAGE-CHANGED" name="change"/>
+			<tab id="page_currentIdTab" label="currentIdTab.label" name="CURRENT_ID_TAB">
+				<include src="net/hedtech/banner/finance/common/Foaiden/views/TabGIdenTabCanvasCurrentIdTab"/>
+			</tab>
+			<tab id="page_alternateIdTab" label="alternateIdTab.label" name="ALTERNATE_ID_TAB">
+				<include src="net/hedtech/banner/finance/common/Foaiden/views/TabGIdenTabCanvasAlternateIdTab"/>
+			</tab>
+			<tab id="page_addressTab" label="addressTab.label" name="ADDRESS_TAB">
+				<include src="net/hedtech/banner/finance/common/Foaiden/views/TabGIdenTabCanvasAddressTab"/>
+			</tab>
+			<tab id="page_telephoneTab" label="telephoneTab.label" name="TELEPHONE_TAB">
+				<include src="net/hedtech/banner/finance/common/Foaiden/views/TabGIdenTabCanvasTelephoneTab"/>
+			</tab>
+			<tab id="page_bioTab" label="bioTab.label" name="BIO_TAB">
+				<include src="net/hedtech/banner/finance/common/Foaiden/views/TabGIdenTabCanvasBioTab"/>
+			</tab>
+			<tab id="page_emailTab" label="emailTab.label" name="EMAIL_TAB">
+				<include src="net/hedtech/banner/finance/common/Foaiden/views/TabGIdenTabCanvasEmailTab"/>
+			</tab>
+			<tab id="page_emergencyContactTab" label="emergencyContactTab.label" name="EMERGENCY_CONTACT_TAB">
+				<include src="net/hedtech/banner/finance/common/Foaiden/views/TabGIdenTabCanvasEmergencyContactTab"/>
+			</tab>
+			<tab id="page_additionalIdTab" label="additionalIdTab.label" name="ADDITIONAL_ID_TAB">
+				<include src="net/hedtech/banner/finance/common/Foaiden/views/TabGIdenTabCanvasAdditionalIdTab"/>
+			</tab>
+		</tabpanel>
+	</panel>
+</config>

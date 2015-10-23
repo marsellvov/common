@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Stvdegc/StvdegcAlerts.xml" FirstNavigationBlock="STVDEGC" LovDataPath="/net/hedtech/banner/general/common/Stvdegc/StvdegcLovs.xml" Name="STVDEGC">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Stvdegc/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="STVDEGC_1_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD" MaxLength="17" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HEADER_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="21" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="STVDEGC" MultiRecord="true">
+      <Item AllowUpdate="false" CanvasName="STVDEGC_1_CANVAS" DataType="String" Enabled="true" Hint="stvdegc.stvdegcCode.hint" Id="STVDEGC_CODE" MaxLength="6" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="STVDEGC_1_CANVAS" DataType="String" Enabled="true" Hint="stvdegc.stvdegcDesc.hint" Id="STVDEGC_DESC" MaxLength="30" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="STVDEGC_1_CANVAS" DataType="String" Enabled="true" Hint="stvdegc.stvdegcFaCountInd.hint" Id="STVDEGC_FA_COUNT_IND" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item CanvasName="STVDEGC_1_CANVAS" DataType="String" Enabled="true" Hint="stvdegc.stvdegcDlevCode.hint" Id="STVDEGC_DLEV_CODE" Lov="STVDLEV_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="STVDEGC_1_CANVAS" DataType="String" Enabled="true" Hint="stvdegc.stvdegcAcatCode.hint" Id="STVDEGC_ACAT_CODE" Lov="STVACAT_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="STVDEGC_1_CANVAS" DataType="Number" Enabled="true" Hint="stvdegc.stvdegcVrMsgNo.hint" Id="STVDEGC_VR_MSG_NO" MaxLength="6" Type="TextItem" Visible="true" />
+      <Item CanvasName="STVDEGC_1_CANVAS" DataType="String" Enabled="true" Hint="stvdegc.stvdegcDispWebInd.hint" Id="STVDEGC_DISP_WEB_IND" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="STVDEGC_1_CANVAS" DataType="String" Enabled="true" Hint="stvdegc.stvdegcSystemReqInd.hint" Id="STVDEGC_SYSTEM_REQ_IND" MaxLength="1" Type="Checkbox" Visible="true" />
+      <!--<Item AllowUpdate="false" CanvasName="STVDEGC_1_CANVAS" DataType="Date" Enabled="false" Id="STVDEGC_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />-->
+      <Item AllowUpdate="false" DataType="Date" Enabled="false" Id="STVDEGC_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" CanvasName="STVDEGC_1_CANVAS">
+        <Extension Name="ViewMode" Value="Filter" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE" />
+      </Item>
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="STVDEGC_1_CANVAS" Enabled="true" Id="STVDEGC_DLEV_CODE_LBT" Lov="STVDLEV_LOV" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="STVDEGC_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="STVDEGC_1_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="STVDEGC_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="STVDEGC_1_EXITVALUE_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="STVDEGC_1_CANVAS" Enabled="true" Id="STVDEGC_ACAT_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" Visible="true" />
+    </Block>
+  </Logic>
+</FormStructure>

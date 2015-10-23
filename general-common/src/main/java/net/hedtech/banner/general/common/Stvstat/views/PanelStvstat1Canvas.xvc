@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="STVSTAT"/>
+	<panel class="ContentCanvas" id="pnlStvstat1Canvas" menu="G$_DEFAULT_PM" name="STVSTAT_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="STVSTAT" name="grdStvstat" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="STVSTAT" case="upper" datatype="String" label="stvstat.stvstatCode.prompt" labelstyle="DEFAULT" maxlength="3" member="STVSTAT_CODE" name="stvstatCode" required="true" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVSTAT" datatype="String" label="stvstat.stvstatDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVSTAT_DESC" name="stvstatDesc" required="true" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVSTAT" case="upper" datatype="String" label="stvstat.stvstatEdiEquiv.prompt" labelstyle="DEFAULT" maxlength="2" member="STVSTAT_EDI_EQUIV" name="stvstatEdiEquiv" required="false" validation="server" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVSTAT" datatype="String" label="stvstat.stvstatIpedsCde.prompt" labelstyle="DEFAULT" maxlength="5" member="STVSTAT_IPEDS_CDE" name="stvstatIpedsCde" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVSTAT" datatype="String" label="stvstat.stvstatStatscanCde.prompt" labelstyle="DEFAULT" maxlength="5" member="STVSTAT_STATSCAN_CDE" name="stvstatStatscanCde" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

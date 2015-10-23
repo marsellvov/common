@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="KEY_BLOCK.Manager.Config" name="KeyBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="ID" logicalName="id" type="String"   />
+			<item name="KEYBLOCK_SOURCE_CODE" logicalName="keyblockSourceCode" type="String"   />
+			<item name="KEYBLOCK_SOURCE_DESC" logicalName="keyblockSourceDesc" type="String"   />
+			<item name="KEYBLOCK_SOURCE_COMMENT" logicalName="keyblockSourceComment" type="String"   >
+				<value>
+					<constant>Rule Priority comments can be stored in this form item.  Up to 32,000 characters can be stored in the CLOB type database column in the GORCMSP table.  Editing can be performed in the form item or thru an edit window by pressing the edit button.</constant>
+				</value>	
+			</item>
+			<item name="KEYBLOCK_ATYP_CODE" logicalName="keyblockAtypCode" type="String"   />
+			<item name="KEYBLOCK_EMAL_CODE" logicalName="keyblockEmalCode" type="String"   />
+			<item name="KEYBLOCK_TELE_CODE" logicalName="keyblockTeleCode" type="String"   />
+			<item name="KEYBLOCK_ENTITY_CDE" logicalName="keyblockEntityCde" type="String"   />
+			<item name="KEYBLOCK_API_FAILURE_IND" logicalName="keyblockApiFailureInd" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Goamtch.model.KeyBlock</managerClass>
+
+	</manager>
+</b:beans>

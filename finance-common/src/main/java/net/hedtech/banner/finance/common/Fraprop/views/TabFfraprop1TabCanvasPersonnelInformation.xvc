@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FRRPRPI"/>
+	<accordion width="100%">
+		<panel label="Personnel Information">
+			<panel width="100%">
+				<gridview block="FRRPRPI" name="grdFrrprpi" width="100%">
+					<viewheader>
+						<viewcolumn autoskip="true" block="FRRPRPI" case="upper" datatype="String" keyactions="NEXT_ITEM" label="frrprpi.frrprpiId.prompt" labelstyle="DEFAULT" maxlength="9" member="FRRPRPI_ID" name="frrprpiId" validation="server" width="30px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="FRRPRPI" datatype="String" enabled="false" keyactions="NEXT_ITEM" label="frrprpi.frrprpiIdName.prompt" labelstyle="DEFAULT" maxlength="230" member="FRRPRPI_ID_NAME" name="frrprpiIdName" width="100px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="FRRPRPI" case="upper" datatype="String" keyactions="NEXT_ITEM" label="frrprpi.frrprpiIdInd.prompt" labelstyle="DEFAULT" maxlength="30" member="FRRPRPI_ID_IND" name="frrprpiIdInd" required="true" width="70px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="FRRPRPI" datatype="String" label="frrprpi.frrprpiIdIndName.prompt" labelstyle="DEFAULT" maxlength="35" member="FRRPRPI_ID_IND_NAME" name="frrprpiIdIndName" width="110px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FRRPRPI" datatype="String" enabled="false" label="frrprpi.frrprpiCoas.prompt" labelstyle="DEFAULT" maxlength="1" member="FRRPRPI_COAS" name="frrprpiCoas" width="100px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FRRPRPI" case="upper" datatype="String" label="frrprpi.frrprpiOrgnCode.prompt" labelstyle="DEFAULT" maxlength="30" member="FRRPRPI_ORGN_CODE" name="frrprpiOrgnCode" width="85px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FRRPRPI" datatype="String" label="frrprpi.frrprpiOrgnCodeName.prompt" labelstyle="DEFAULT" maxlength="35" member="FRRPRPI_ORGN_CODE_NAME" name="frrprpiOrgnCodeName" width="130px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="FRRPRPI" datatype="String" label="frrprpi.frrprpiSalutation.prompt" labelstyle="DEFAULT" maxlength="35" member="FRRPRPI_SALUTATION" name="frrprpiSalutation" width="60px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="FRRPRPI" datatype="String" label="frrprpi.frrprpiTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FRRPRPI_TITLE" name="frrprpiTitle" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="FRRPRPI" case="upper" datatype="Number" formatmask="9D99" label="frrprpi.frrprpiFte.prompt" labelstyle="DEFAULT" maxlength="4" maxvalue="1.0" member="FRRPRPI_FTE" minvalue="0.0" name="frrprpiFte" textalign="right" width="130px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="FRRPRPI" case="upper" datatype="String" label="frrprpi.frrprpiEmployeeInd.label" labelstyle="DEFAULT" maxlength="1" member="FRRPRPI_EMPLOYEE_IND" name="frrprpiEmployeeInd" validation="server" width="110px">
+							<editor>
+								<checkbox falsevalue="N" othervaluestate="unchecked" value="Y">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</checkbox>
+							</editor>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</panel>
+	</accordion>
+</config>

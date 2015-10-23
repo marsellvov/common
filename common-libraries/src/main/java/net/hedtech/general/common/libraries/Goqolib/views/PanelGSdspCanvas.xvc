@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="G$_SDKEY"/>
+	<interactionblock name="G$_SDISP"/>
+	<panel class="ContentCanvas" id="pnlGSdspCanvas" menu="G$_DEFAULT_PM"  name="G$_SDSP_CANVAS" width="550px">
+	<flowlayout orientation="vertical">
+		<textfield block="G$_SDKEY" enabled="false" height="24px" maxlength="30" member="COUNT_REQD_IS_NULL" name="countReqdIsNull" visible="false" width="90px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</textfield>
+<!-- 		<button action="WHEN-BUTTON-PRESSED" block="G$_SDKEY" height="20px" icon="flashlit" member="GOVSDAV_VALUE_AS_CHAR_LBT" name="govsdavValueAsCharLbt" navigable="false" tooltip="gSdkey.govsdavValueAsCharLbt.tooltip" width="20px"/> -->
+<!-- 		<button action="WHEN-BUTTON-PRESSED" block="G$_SDKEY" height="20px" icon="calendar" member="GOVSDAV_VALUE_AS_CHAR_DBT" name="govsdavValueAsCharDbt" navigable="false" tooltip="gSdkey.govsdavValueAsCharDbt.tooltip" width="20px"/> -->
+<!-- 		<button action="WHEN-BUTTON-PRESSED" block="G$_SDKEY" height="20px" icon="exit" member="SDE_CLOSE_BTN" name="sdeCloseBtn" navigable="false" tooltip="gSdkey.sdeCloseBtn.tooltip" width="20px"/> -->
+
+	
+		<accordion width="100%">
+			<panel label="gSdspWindow.title">
+				<panel width="100%">
+					<gridview block="G$_SDISP" name="grdGSdisp" width="100%">
+						<viewheader>
+							<viewcolumn block="G$_SDISP" label="gSdisp.govsdavAttrPromptDisp.prompt" enabled="false" labelstyle="DEFAULT" maxlength="100" member="GOVSDAV_ATTR_PROMPT_DISP" name="govsdavAttrPromptDisp" required="true" validation="server" width="262px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="G$_SDISP" enabled="false" labelstyle="DEFAULT" maxlength="2000" member="GOVSDAV_VALUE_AS_CHAR" name="govsdavValueAsChar" validation="server" width="262px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+		<panel width="100%">
+			<text block="G$_SDISP" enabled="false" maxlength="1024" member="GOVSDAV_ATTR_INFO"  name="govsdavAttrInfo" validation="server" width="100%">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</text>
+		</panel>
+		</flowlayout>
+	</panel>
+</config>

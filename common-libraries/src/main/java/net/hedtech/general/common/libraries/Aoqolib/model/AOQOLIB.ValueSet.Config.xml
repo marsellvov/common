@@ -1,0 +1,2000 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="ATVIGRP_RG.ValueSet.Config" name="ATVIGRP_RG">
+    <columns>
+		<column name="ATVIGRP_CODE" type="String" size="10"/>
+		<column name="ATVIGRP_DESC" type="String" size="30"/>
+		<column name="ATVIGRP_DISP_WEB_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVIGRP_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvigrp_code, atvigrp_desc, atvigrp_disp_web_ind, to_char(atvigrp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvigrp_user  FROM atvigrp 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMEDU_RG.ValueSet.Config" name="ATVMEDU_RG">
+    <columns>
+		<column name="ATVMEDU_CODE" type="String" size="1"/>
+		<column name="ATVMEDU_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVMEDU_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmedu_code, atvmedu_desc, to_char(atvmedu_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvmedu_user  FROM atvmedu  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVVIPC_RG.ValueSet.Config" name="ATVVIPC_RG">
+    <columns>
+		<column name="ATVVIPC_CODE" type="String" size="3"/>
+		<column name="ATVVIPC_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvvipc_code, atvvipc_desc, to_char(atvvipc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvvipc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVUSRC_RG.ValueSet.Config" name="ATVUSRC_RG">
+    <columns>
+		<column name="ATVUSRC_CODE" type="String" size="20"/>
+		<column name="ATVUSRC_DESC" type="String" size="40"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvusrc_code, atvusrc_desc, to_char(atvusrc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvusrc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSTFT_RG.ValueSet.Config" name="ATVSTFT_RG">
+    <columns>
+		<column name="ATVSTFT_CODE" type="String" size="4"/>
+		<column name="ATVSTFT_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVSTFT_SOLICIT_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvstft_code, atvstft_desc, to_char(atvstft_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvstft_solicit_ind  FROM atvstft  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSRCE_RG.ValueSet.Config" name="ATVSRCE_RG">
+    <columns>
+		<column name="ATVSRCE_CODE" type="String" size="5"/>
+		<column name="ATVSRCE_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVSRCE_GIFT_CODE" type="String" size="2"/>
+		<column name="ATVSRCE_GCLS_CODE" type="String" size="4"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvsrce_code, atvsrce_desc, to_char(atvsrce_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvsrce_gift_code, atvsrce_gcls_code  FROM atvsrce  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSOTP_RG.ValueSet.Config" name="ATVSOTP_RG">
+    <columns>
+		<column name="ATVSOTP_CODE" type="String" size="2"/>
+		<column name="ATVSOTP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvsotp_code, atvsotp_desc, to_char(atvsotp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvsotp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSORC_RG.ValueSet.Config" name="ATVSORC_RG">
+    <columns>
+		<column name="ATVSORC_CODE" type="String" size="6"/>
+		<column name="ATVSORC_DESC" type="String" size="60"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvsorc_code, atvsorc_desc, to_char(atvsorc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvsorc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSOLT_RG.ValueSet.Config" name="ATVSOLT_RG">
+    <columns>
+		<column name="ATVSOLT_CODE" type="String" size="4"/>
+		<column name="ATVSOLT_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvsolt_code, atvsolt_desc, to_char(atvsolt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvsolt  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSOLC_RG.ValueSet.Config" name="ATVSOLC_RG">
+    <columns>
+		<column name="ATVSOLC_CODE" type="String" size="15"/>
+		<column name="ATVSOLC_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvsolc_code, atvsolc_desc, to_char(atvsolc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvsolc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSICC_RG.ValueSet.Config" name="ATVSICC_RG">
+    <columns>
+		<column name="ATVSICC_CODE" type="String" size="4"/>
+		<column name="ATVSICC_DESC" type="String" size="60"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVSICC_DISP_WEB_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvsicc_code, atvsicc_desc, to_char(atvsicc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvsicc_disp_web_ind  FROM atvsicc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSCRS_RG.ValueSet.Config" name="ATVSCRS_RG">
+    <columns>
+		<column name="ATVSCRS_CODE" type="String" size="3"/>
+		<column name="ATVSCRS_DESC" type="String" size="30"/>
+		<column name="ATVSCRS_SOLICITATION_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVSCRS_DISP_WEB_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvscrs_code, atvscrs_desc, atvscrs_solicitation_ind, to_char(atvscrs_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvscrs_disp_web_ind  FROM atvscrs  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSCNT_RG.ValueSet.Config" name="ATVSCNT_RG">
+    <columns>
+		<column name="ATVSCNT_CODE" type="String" size="3"/>
+		<column name="ATVSCNT_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVSCNT_DISP_WEB_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvscnt_code, atvscnt_desc, to_char(atvscnt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvscnt_disp_web_ind  FROM atvscnt  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSALU_RG.ValueSet.Config" name="ATVSALU_RG">
+    <columns>
+		<column name="ATVSALU_CODE" type="String" size="4"/>
+		<column name="ATVSALU_DESC" type="String" size="30"/>
+		<column name="ATVSALU_DEFAULT_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvsalu_code, atvsalu_desc, atvsalu_default_ind, to_char(atvsalu_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvsalu  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVRTGT_RG.ValueSet.Config" name="ATVRTGT_RG">
+    <columns>
+		<column name="ATVRTGT_CODE" type="String" size="1"/>
+		<column name="ATVRTGT_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvrtgt_code, atvrtgt_desc, to_char(atvrtgt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvrtgt  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVRSTA_RG.ValueSet.Config" name="ATVRSTA_RG">
+    <columns>
+		<column name="ATVRSTA_CODE" type="String" size="1"/>
+		<column name="ATVRSTA_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvrsta_code, atvrsta_desc, to_char(atvrsta_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvrsta  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVRSCR_RG.ValueSet.Config" name="ATVRSCR_RG">
+    <columns>
+		<column name="ATVRSCR_CODE" type="String" size="5"/>
+		<column name="ATVRSCR_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvrscr_code, atvrscr_desc, to_char(atvrscr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvrscr  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVREFR_RG.ValueSet.Config" name="ATVREFR_RG">
+    <columns>
+		<column name="ATVREFR_CODE" type="String" size="2"/>
+		<column name="ATVREFR_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvrefr_code, atvrefr_desc, to_char(atvrefr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvrefr  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVRATE_RG.ValueSet.Config" name="ATVRATE_RG">
+    <columns>
+		<column name="ATVRATE_CODE" type="String" size="2"/>
+		<column name="ATVRATE_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVRATE_RATE_AMT" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvrate_code, atvrate_desc, to_char(atvrate_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvrate_rate_amt  FROM atvrate  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPSTA_RG.ValueSet.Config" name="ATVPSTA_RG">
+    <columns>
+		<column name="ATVPSTA_CODE" type="String" size="1"/>
+		<column name="ATVPSTA_DESC" type="String" size="30"/>
+		<column name="ATVPSTA_ACTIVE_IND" type="String" size="1"/>
+		<column name="ATVPSTA_CHG_ACTIVE" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvpsta_code, atvpsta_desc, atvpsta_active_ind, atvpsta_chg_active, to_char(atvpsta_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvpsta  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPRTP_RG.ValueSet.Config" name="ATVPRTP_RG">
+    <columns>
+		<column name="ATVPRTP_CODE" type="String" size="5"/>
+		<column name="ATVPRTP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvprtp_code, atvprtp_desc, to_char(atvprtp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvprtp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPRST_RG.ValueSet.Config" name="ATVPRST_RG">
+    <columns>
+		<column name="ATVPRST_CODE" type="String" size="6"/>
+		<column name="ATVPRST_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVPRST_ACTIVE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvprst_code, atvprst_desc, to_char(atvprst_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvprst_active_ind  FROM atvprst  WHERE (atvprst_pros_ind = '1' AND :SYSTEM_CURSOR_ITEM = 'AMRINFO.AMRINFO_STATUS') OR (atvprst_pros_ind = '1' AND :SYSTEM_CURSOR_ITEM = 'AUBINST.AUBINST_DFLT_PRST_CODE') OR (atvprst_proj_ind = '1' AND :SYSTEM_CURSOR_ITEM = 'AMRPRIN.AMRPRIN_PRST_CODE') OR (atvprst_proj_ind = '1' AND :SYSTEM_CURSOR_ITEM = 'AMRPROP.AMRPROP_PRST_CODE') OR (atvprst_prop_ind = '1' AND :SYSTEM_CURSOR_ITEM = 'AMBPROP.AMBPROP_PRST_CODE') OR (atvprst_prop_ind = '1' AND :SYSTEM_CURSOR_ITEM = 'AMBPRPH.AMBPRPH_PRST_CODE') OR (atvprst_proj_ind = '1' AND :SYSTEM_CURSOR_ITEM = 'AMRPRPH.AMRPRPH_PRST_CODE')  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="SYSTEM_CURSOR_ITEM"/>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPROJ_RG.ValueSet.Config" name="ATVPROJ_RG">
+    <columns>
+		<column name="ATVPROJ_CODE" type="String" size="6"/>
+		<column name="ATVPROJ_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvproj_code, atvproj_desc, to_char(atvproj_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvproj  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPRMD_RG.ValueSet.Config" name="ATVPRMD_RG">
+    <columns>
+		<column name="ATVPRMD_CODE" type="String" size="2"/>
+		<column name="ATVPRMD_DESC" type="String" size="30"/>
+		<column name="ATVPRMD_LETTER_TYPE" type="String" size="2"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvprmd_code, atvprmd_desc, atvprmd_letter_type, to_char(atvprmd_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvprmd  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPRCD_RG.ValueSet.Config" name="ATVPRCD_RG">
+    <columns>
+		<column name="ATVPRCD_CODE" type="String" size="5"/>
+		<column name="ATVPRCD_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvprcd_code, atvprcd_desc, to_char(atvprcd_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvprcd  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPLDG_RG.ValueSet.Config" name="ATVPLDG_RG">
+    <columns>
+		<column name="ATVPLDG_CODE" type="String" size="2"/>
+		<column name="ATVPLDG_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVPLDG_PAYROLL_DED_IND" type="String" size="1"/>
+		<column name="ATVPLDG_PAY_DED_CODE" type="String" size="3"/>
+		<column name="ATVPLDG_CFAE_PLDG_CATG" type="String" size="1"/>
+		<column name="ATVPLDG_RUCL_CODE" type="String" size="4"/>
+		<column name="ATVPLDG_DB_GL_ACCT" type="String" size="60"/>
+		<column name="ATVPLDG_DISP_WEB_IND" type="String" size="1"/>
+		<column name="ATVPLDG_PLANNED_GIFT_IND" type="String" size="1"/>
+		<column name="ATVPLDG_FEED_TO_FINANCE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvpldg_code, atvpldg_desc, to_char(atvpldg_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvpldg_payroll_ded_ind, atvpldg_pay_ded_code, atvpldg_cfae_pldg_catg, atvpldg_rucl_code, atvpldg_db_gl_acct, atvpldg_disp_web_ind, ATVPLDG_PLANNED_GIFT_IND, ATVPLDG_FEED_TO_FINANCE_IND  FROM atvpldg  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPDUR_RG.ValueSet.Config" name="ATVPDUR_RG">
+    <columns>
+		<column name="ATVPDUR_CODE" type="String" size="1"/>
+		<column name="ATVPDUR_DESC" type="String" size="30"/>
+		<column name="ATVPDUR_MONTHS" type="Number" size="23"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVPDUR_DISP_WEB_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvpdur_code, atvpdur_desc, atvpdur_months, to_char(atvpdur_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvpdur_disp_web_ind  FROM atvpdur  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPCLS_RG.ValueSet.Config" name="ATVPCLS_RG">
+    <columns>
+		<column name="ATVPCLS_CODE" type="String" size="4"/>
+		<column name="ATVPCLS_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVPCLS_ANONYMOUS_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvpcls_code, atvpcls_desc, to_char(atvpcls_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvpcls_anonymous_ind  FROM atvpcls  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPACK_RG.ValueSet.Config" name="ATVPACK_RG">
+    <columns>
+		<column name="ATVPACK_CODE" type="String" size="2"/>
+		<column name="ATVPACK_DESC" type="String" size="30"/>
+		<column name="ATVPACK_LOW_LEVEL" type="Number" size="23"/>
+		<column name="ATVPACK_HIGH_LEVEL" type="Number" size="23"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvpack_code, atvpack_desc, atvpack_low_level, atvpack_high_level, to_char(atvpack_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvpack  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVOCON_RG.ValueSet.Config" name="ATVOCON_RG">
+    <columns>
+		<column name="ATVOCON_CODE" type="String" size="3"/>
+		<column name="ATVOCON_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvocon_code, atvocon_desc, to_char(atvocon_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvocon  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMPUR_RG.ValueSet.Config" name="ATVMPUR_RG">
+    <columns>
+		<column name="ATVMPUR_CODE" type="String" size="1"/>
+		<column name="ATVMPUR_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmpur_code, atvmpur_desc, to_char(atvmpur_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmpur  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMPRO_RG.ValueSet.Config" name="ATVMPRO_RG">
+    <columns>
+		<column name="ATVMPRO_CODE" type="String" size="1"/>
+		<column name="ATVMPRO_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmpro_code, atvmpro_desc, to_char(atvmpro_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmpro  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMOVE_RG.ValueSet.Config" name="ATVMOVE_RG">
+    <columns>
+		<column name="ATVMOVE_CODE" type="String" size="4"/>
+		<column name="ATVMOVE_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmove_code, atvmove_desc, to_char(atvmove_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmove  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMNED_RG.ValueSet.Config" name="ATVMNED_RG">
+    <columns>
+		<column name="ATVMNED_CODE" type="String" size="3"/>
+		<column name="ATVMNED_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmned_code, atvmned_desc, to_char(atvmned_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmned  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMNAT_RG.ValueSet.Config" name="ATVMNAT_RG">
+    <columns>
+		<column name="ATVMNAT_CODE" type="String" size="1"/>
+		<column name="ATVMNAT_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmnat_code, atvmnat_desc, to_char(atvmnat_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmnat  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMLVL_RG.ValueSet.Config" name="ATVMLVL_RG">
+    <columns>
+		<column name="ATVMLVL_CODE" type="String" size="1"/>
+		<column name="ATVMLVL_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmlvl_code, atvmlvl_desc, to_char(atvmlvl_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmlvl  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMLOC_RG.ValueSet.Config" name="ATVMLOC_RG">
+    <columns>
+		<column name="ATVMLOC_CODE" type="String" size="1"/>
+		<column name="ATVMLOC_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmloc_code, atvmloc_desc, to_char(atvmloc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmloc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMIND_RG.ValueSet.Config" name="ATVMIND_RG">
+    <columns>
+		<column name="ATVMIND_CODE" type="String" size="1"/>
+		<column name="ATVMIND_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmind_code, atvmind_desc, to_char(atvmind_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmind  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMERQ_RG.ValueSet.Config" name="ATVMERQ_RG">
+    <columns>
+		<column name="ATVMERQ_CODE" type="String" size="1"/>
+		<column name="ATVMERQ_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmerq_code, atvmerq_desc, to_char(atvmerq_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmerq  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMDIS_RG.ValueSet.Config" name="ATVMDIS_RG">
+    <columns>
+		<column name="ATVMDIS_CODE" type="String" size="1"/>
+		<column name="ATVMDIS_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmdis_code, atvmdis_desc, to_char(atvmdis_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmdis  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMDEF_RG.ValueSet.Config" name="ATVMDEF_RG">
+    <columns>
+		<column name="ATVMDEF_CODE" type="String" size="1"/>
+		<column name="ATVMDEF_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmdef_code, atvmdef_desc, to_char(atvmdef_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmdef  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMCTL_RG.ValueSet.Config" name="ATVMCTL_RG">
+    <columns>
+		<column name="ATVMCTL_CODE" type="String" size="1"/>
+		<column name="ATVMCTL_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmctl_code, atvmctl_desc, to_char(atvmctl_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmctl  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMAST_RG.ValueSet.Config" name="ATVMAST_RG">
+    <columns>
+		<column name="ATVMAST_CODE" type="String" size="1"/>
+		<column name="ATVMAST_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmast_code, atvmast_desc, to_char(atvmast_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmast  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVMACC_RG.ValueSet.Config" name="ATVMACC_RG">
+    <columns>
+		<column name="ATVMACC_CODE" type="String" size="1"/>
+		<column name="ATVMACC_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvmacc_code, atvmacc_desc, to_char(atvmacc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvmacc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVJOBC_RG.ValueSet.Config" name="ATVJOBC_RG">
+    <columns>
+		<column name="ATVJOBC_CODE" type="String" size="3"/>
+		<column name="ATVJOBC_DESC" type="String" size="60"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVJOBC_DISP_WEB_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvjobc_code, atvjobc_desc, to_char(atvjobc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvjobc_disp_web_ind  FROM atvjobc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVINCM_RG.ValueSet.Config" name="ATVINCM_RG">
+    <columns>
+		<column name="ATVINCM_CODE" type="String" size="2"/>
+		<column name="ATVINCM_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvincm_code, atvincm_desc, to_char(atvincm_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvincm  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVGIVL_RG.ValueSet.Config" name="ATVGIVL_RG">
+    <columns>
+		<column name="ATVGIVL_CODE" type="String" size="3"/>
+		<column name="ATVGIVL_DESC" type="String" size="30"/>
+		<column name="ATVGIVL_LOW_RANGE" type="Number" size="23"/>
+		<column name="ATVGIVL_HIGH_RANGE" type="Number" size="23"/>
+		<column name="ATVGIVL_REPORT_CODE" type="String" size="3"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvgivl_code, atvgivl_desc, atvgivl_low_range, atvgivl_high_range, atvgivl_report_code, to_char(atvgivl_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvgivl  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVGIVH_RG.ValueSet.Config" name="ATVGIVH_RG">
+    <columns>
+		<column name="ATVGIVH_CODE" type="String" size="2"/>
+		<column name="ATVGIVH_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvgivh_code, atvgivh_desc, to_char(atvgivh_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvgivh  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVGIFT_RG.ValueSet.Config" name="ATVGIFT_RG">
+    <columns>
+		<column name="ATVGIFT_CODE" type="String" size="2"/>
+		<column name="ATVGIFT_DESC" type="String" size="30"/>
+		<column name="ATVGIFT_CREDIT_CARD_IND" type="String" size="1"/>
+		<column name="ATVGIFT_MATCH_IND" type="String" size="1"/>
+		<column name="ATVGIFT_CFAE_GIFT_CATG" type="String" size="1"/>
+		<column name="ATVGIFT_GIFT_GROUP" type="String" size="1"/>
+		<column name="ATVGIFT_GIFT_GROUP_DESC" type="String" size="10"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVGIFT_RUCL_CODE" type="String" size="4"/>
+		<column name="ATVGIFT_DB_GL_ACCT" type="String" size="60"/>
+		<column name="ATVGIFT_PLANNED_GIFT_IND" type="String" size="1"/>
+		<column name="ATVGIFT_DISP_WEB_IND" type="String" size="1"/>
+		<column name="ATVGIFT_FEED_TO_FINANCE_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvgift_code, atvgift_desc, atvgift_credit_card_ind, atvgift_match_ind, atvgift_cfae_gift_catg, atvgift_gift_group, atvgift_gift_group_desc, to_char(atvgift_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvgift_rucl_code, atvgift_db_gl_acct, ATVGIFT_PLANNED_GIFT_IND, ATVGIFT_DISP_WEB_IND, ATVGIFT_FEED_TO_FINANCE_IND  FROM atvgift  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVGCLS_RG.ValueSet.Config" name="ATVGCLS_RG">
+    <columns>
+		<column name="ATVGCLS_CODE" type="String" size="4"/>
+		<column name="ATVGCLS_DESC" type="String" size="30"/>
+		<column name="ATVGCLS_ANONYMOUS_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvgcls_code, atvgcls_desc, atvgcls_anonymous_ind, to_char(atvgcls_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvgcls  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVGACK_RG.ValueSet.Config" name="ATVGACK_RG">
+    <columns>
+		<column name="ATVGACK_CODE" type="String" size="2"/>
+		<column name="ATVGACK_DESC" type="String" size="30"/>
+		<column name="ATVGACK_LOW_LEVEL" type="Number" size="23"/>
+		<column name="ATVGACK_HIGH_LEVEL" type="Number" size="23"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvgack_code, atvgack_desc, atvgack_low_level, atvgack_high_level, to_char(atvgack_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvgack  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVFUND_RG.ValueSet.Config" name="ATVFUND_RG">
+    <columns>
+		<column name="ATVFUND_CODE" type="String" size="6"/>
+		<column name="ATVFUND_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvfund_code, atvfund_desc, to_char(atvfund_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvfund  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVFREQ_RG.ValueSet.Config" name="ATVFREQ_RG">
+    <columns>
+		<column name="ATVFREQ_CODE" type="String" size="2"/>
+		<column name="ATVFREQ_DESC" type="String" size="30"/>
+		<column name="ATVFREQ_UNITS" type="String" size="1"/>
+		<column name="ATVFREQ_NO_OF_UNITS" type="Number" size="23"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVFREQ_DISP_WEB_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvfreq_code, atvfreq_desc, atvfreq_units, atvfreq_no_of_units, to_char(atvfreq_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvfreq_disp_web_ind  FROM atvfreq  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVFISC_RG.ValueSet.Config" name="ATVFISC_RG">
+    <columns>
+		<column name="ATVFISC_CODE" type="Number" size="23"/>
+		<column name="ATVFISC_DESC" type="String" size="30"/>
+		<column name="START_DATE" type="String" size="75"/>
+		<column name="END_DATE" type="String" size="75"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvfisc_code, atvfisc_desc, to_char(atvfisc_start_date, G$_DATE.GET_NLS_DATE_FORMAT) start_date, to_char(atvfisc_end_date, G$_DATE.GET_NLS_DATE_FORMAT) end_date, to_char(atvfisc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvfisc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVEXRS_RG.ValueSet.Config" name="ATVEXRS_RG">
+    <columns>
+		<column name="ATVEXRS_CODE" type="String" size="5"/>
+		<column name="ATVEXRS_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvexrs_code, atvexrs_desc, to_char(atvexrs_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvexrs  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVEXCL_RG.ValueSet.Config" name="ATVEXCL_RG">
+    <columns>
+		<column name="ATVEXCL_CODE" type="String" size="3"/>
+		<column name="ATVEXCL_DESC" type="String" size="30"/>
+		<column name="ATVEXCL_EXCLUDE_PHONE" type="String" size="1"/>
+		<column name="ATVEXCL_EXCLUDE_MAIL" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvexcl_code, atvexcl_desc, atvexcl_exclude_phone, atvexcl_exclude_mail, to_char(atvexcl_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvexcl  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVEMPS_RG.ValueSet.Config" name="ATVEMPS_RG">
+    <columns>
+		<column name="ATVEMPS_CODE" type="String" size="1"/>
+		<column name="ATVEMPS_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVEMPS_ACTIVE_IND" type="String" size="1"/>
+		<column name="ATVEMPS_MERQ_CODE" type="String" size="1"/>
+		<column name="ATVEMPS_DISP_WEB_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvemps_code, atvemps_desc, to_char(atvemps_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvemps_active_ind, atvemps_merq_code, atvemps_disp_web_ind  FROM atvemps  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDSTP_RG.ValueSet.Config" name="ATVDSTP_RG">
+    <columns>
+		<column name="ATVDSTP_CODE" type="String" size="5"/>
+		<column name="ATVDSTP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdstp_code, atvdstp_desc, to_char(atvdstp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvdstp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDOTT_RG.ValueSet.Config" name="ATVDOTT_RG">
+    <columns>
+		<column name="ATVDOTT_CODE" type="String" size="4"/>
+		<column name="ATVDOTT_DESC" type="String" size="60"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdott_code, atvdott_desc, to_char(atvdott_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvdott  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDONR_RG.ValueSet.Config" name="ATVDONR_RG">
+    <columns>
+		<column name="ATVDONR_CODE" type="String" size="4"/>
+		<column name="ATVDONR_DESC" type="String" size="30"/>
+		<column name="ATVDONR_ALUM_IND" type="String" size="1"/>
+		<column name="ATVDONR_FRND_IND" type="String" size="1"/>
+		<column name="ATVDONR_SPOUSE_ONLY_IND" type="String" size="1"/>
+		<column name="ATVDONR_CFAE_1" type="String" size="1"/>
+		<column name="ATVDONR_CFAE_2" type="String" size="1"/>
+		<column name="ATVDONR_RPT_SEQ_IND" type="Number" size="23"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+		<column name="ATVDONR_SITE_SEQ_IND" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdonr_code, atvdonr_desc, atvdonr_alum_ind, atvdonr_frnd_ind, atvdonr_spouse_only_ind, atvdonr_cfae_1, atvdonr_cfae_2, atvdonr_rpt_seq_ind, to_char(atvdonr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvdonr_site_seq_ind  FROM atvdonr  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDCYR_RG.ValueSet.Config" name="ATVDCYR_RG">
+    <columns>
+		<column name="ATVDCYR_CODE" type="Number" size="23"/>
+		<column name="ATVDCYR_DESC" type="String" size="30"/>
+		<column name="START_DATE" type="String" size="75"/>
+		<column name="END_DATE" type="String" size="75"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdcyr_code, atvdcyr_desc, to_char(atvdcyr_start_date, G$_DATE.GET_NLS_DATE_FORMAT) start_date, to_char(atvdcyr_end_date, G$_DATE.GET_NLS_DATE_FORMAT) end_date, to_char(atvdcyr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvdcyr  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDCST_RG.ValueSet.Config" name="ATVDCST_RG">
+    <columns>
+		<column name="ATVDCST_CODE" type="String" size="2"/>
+		<column name="ATVDCST_DESC" type="String" size="30"/>
+		<column name="ATVDCST_PRI_IND" type="Number" size="23"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdcst_code, atvdcst_desc, atvdcst_pri_ind, to_char(atvdcst_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvdcst  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDCPR_RG.ValueSet.Config" name="ATVDCPR_RG">
+    <columns>
+		<column name="ATVDCPR_CODE" type="String" size="4"/>
+		<column name="ATVDCPR_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVDCPR_VALUE" type="Number" size="23"/>
+		<column name="ATVDCPR_COST" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdcpr_code, atvdcpr_desc, to_char(atvdcpr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvdcpr_value, atvdcpr_cost  FROM atvdcpr  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDCNP_RG.ValueSet.Config" name="ATVDCNP_RG">
+    <columns>
+		<column name="ATVDCNP_CODE" type="String" size="4"/>
+		<column name="ATVDCNP_DESC" type="String" size="60"/>
+		<column name="ATVDCNP_PRIORITY_IND" type="Number" size="23"/>
+		<column name="ATVDCNP_DELETE_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVDCNP_DCST_CODE" type="String" size="2"/>
+		<column name="ATVDCNP_MANL_ENTRY_IND" type="String" size="1"/>
+		<column name="ATVDCNP_DCYR_CODE" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdcnp_code, atvdcnp_desc, atvdcnp_priority_ind, atvdcnp_delete_ind, to_char(atvdcnp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvdcnp_dcst_code, atvdcnp_manl_entry_ind, atvdcnp_dcyr_code  FROM atvdcnp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDCAM_RG.ValueSet.Config" name="ATVDCAM_RG">
+    <columns>
+		<column name="ATVDCAM_CODE" type="String" size="2"/>
+		<column name="ATVDCAM_DESC" type="String" size="30"/>
+		<column name="ATVDCAM_MAN_SYS_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdcam_code, atvdcam_desc, atvdcam_man_sys_ind, to_char(atvdcam_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvdcam  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVCONT_RG.ValueSet.Config" name="ATVCONT_RG">
+    <columns>
+		<column name="ATVCONT_CODE" type="String" size="4"/>
+		<column name="ATVCONT_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvcont_code, atvcont_desc, to_char(atvcont_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvcont  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVCMTP_RG.ValueSet.Config" name="ATVCMTP_RG">
+    <columns>
+		<column name="ATVCMTP_CODE" type="String" size="2"/>
+		<column name="ATVCMTP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVCMTP_CAPITAL_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvcmtp_code, atvcmtp_desc, to_char(atvcmtp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvcmtp_capital_ind  FROM atvcmtp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVCFAE_RG.ValueSet.Config" name="ATVCFAE_RG">
+    <columns>
+		<column name="ATVCFAE_CODE" type="String" size="5"/>
+		<column name="ATVCFAE_TYPE" type="Number" size="23"/>
+		<column name="ATVCFAE_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVCFAE_MG_PURPOSE" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvcfae_code, atvcfae_type, atvcfae_desc, to_char(atvcfae_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvcfae_mg_purpose  FROM atvcfae  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVAUXL_RG.ValueSet.Config" name="ATVAUXL_RG">
+    <columns>
+		<column name="ATVAUXL_CODE" type="String" size="5"/>
+		<column name="ATVAUXL_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVAUXL_DCPR_CODE" type="String" size="4"/>
+		<column name="ATVAUXL_DONR_IND" type="String" size="1"/>
+		<column name="ATVAUXL_CLAS_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvauxl_code, atvauxl_desc, to_char(atvauxl_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvauxl_dcpr_code, atvauxl_donr_ind, atvauxl_clas_ind  FROM atvauxl  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVASSC_RG.ValueSet.Config" name="ATVASSC_RG">
+    <columns>
+		<column name="ATVASSC_CODE" type="String" size="5"/>
+		<column name="ATVASSC_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvassc_code, atvassc_desc, to_char(atvassc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvassc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVAMTP_RG.ValueSet.Config" name="ATVAMTP_RG">
+    <columns>
+		<column name="ATVAMTP_CODE" type="String" size="3"/>
+		<column name="ATVAMTP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvamtp_code, atvamtp_desc, to_char(atvamtp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvamtp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVAMST_RG.ValueSet.Config" name="ATVAMST_RG">
+    <columns>
+		<column name="ATVAMST_CODE" type="String" size="1"/>
+		<column name="ATVAMST_DESC" type="String" size="30"/>
+		<column name="ATVAMST_ACTIVE_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVAMST_GRACE_IND" type="String" size="1"/>
+		<column name="ATVAMST_EXPIRED_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvamst_code, atvamst_desc, atvamst_active_ind, to_char(atvamst_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvamst_grace_ind, atvamst_expired_ind  FROM atvamst  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVAMPM_RG.ValueSet.Config" name="ATVAMPM_RG">
+    <columns>
+		<column name="ATVAMPM_CODE" type="String" size="5"/>
+		<column name="ATVAMPM_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvampm_code, atvampm_desc, to_char(atvampm_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvampm  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVAMIN_RG.ValueSet.Config" name="ATVAMIN_RG">
+    <columns>
+		<column name="ATVAMIN_CODE" type="String" size="2"/>
+		<column name="ATVAMIN_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvamin_code, atvamin_desc, to_char(atvamin_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvamin  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVAMGP_RG.ValueSet.Config" name="ATVAMGP_RG">
+    <columns>
+		<column name="ATVAMGP_CODE" type="String" size="5"/>
+		<column name="ATVAMGP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvamgp_code, atvamgp_desc, to_char(atvamgp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvamgp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVAMCT_RG.ValueSet.Config" name="ATVAMCT_RG">
+    <columns>
+		<column name="ATVAMCT_CODE" type="String" size="5"/>
+		<column name="ATVAMCT_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVAMCT_LIFETIME_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvamct_code, atvamct_desc, to_char(atvamct_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvamct_lifetime_ind  FROM atvamct  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVADJT_RG.ValueSet.Config" name="ATVADJT_RG">
+    <columns>
+		<column name="ATVADJT_CODE" type="String" size="2"/>
+		<column name="ATVADJT_DESC" type="String" size="30"/>
+		<column name="ATVADJT_DEBIT_CREDIT_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvadjt_code, atvadjt_desc, atvadjt_debit_credit_ind, to_char(atvadjt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvadjt  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVXREF_RG.ValueSet.Config" name="ATVXREF_RG">
+    <columns>
+		<column name="ATVXREF_CODE" type="String" size="3"/>
+		<column name="ATVXREF_DESC" type="String" size="30"/>
+		<column name="ATVXREF_REVERSE_XREF" type="String" size="3"/>
+		<column name="ATVXREF_SPOUSE_IND" type="String" size="1"/>
+		<column name="ATVXREF_EMPLOYER_IND" type="String" size="1"/>
+		<column name="ATVXREF_MATCH_GIFT_IND" type="String" size="1"/>
+		<column name="ATVXREF_HOUSEHOLD_IND" type="String" size="1"/>
+		<column name="ATVXREF_ASSOC_PLEDGE_IND" type="String" size="1"/>
+		<column name="AGBSPRL_XREF_PRIORITY" type="Number" size="23"/>
+		<column name="AGBSPRL_MULT_MEM_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvxref_code, atvxref_desc, atvxref_reverse_xref, atvxref_spouse_ind, atvxref_employer_ind, atvxref_match_gift_ind, atvxref_household_ind, atvxref_assoc_pledge_ind, agbsprl_xref_priority, agbsprl_mult_mem_ind, to_char(atvxref_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM agbsprl, atvxref  WHERE agbsprl_xref_code(+) = atvxref_code  ORDER BY atvxref_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVCTYP_RG.ValueSet.Config" name="ATVCTYP_RG">
+    <columns>
+		<column name="ATVCTYP_CODE" type="String" size="5"/>
+		<column name="ATVCTYP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVCTYP_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvctyp_code, atvctyp_desc, to_char(atvctyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvctyp_user  FROM atvctyp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPCAT_RG.ValueSet.Config" name="ATVPCAT_RG">
+    <columns>
+		<column name="ATVPCAT_CODE" type="String" size="5"/>
+		<column name="ATVPCAT_DESC" type="String" size="30"/>
+		<column name="ATVPCAT_COND_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVPCAT_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvpcat_code, atvpcat_desc, atvpcat_cond_ind, to_char(atvpcat_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvpcat_user  FROM atvpcat  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDGRP_RG.ValueSet.Config" name="ATVDGRP_RG">
+    <columns>
+		<column name="ATVDGRP_CODE" type="String" size="5"/>
+		<column name="ATVDGRP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVDGRP_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdgrp_code, atvdgrp_desc, to_char(atvdgrp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvdgrp_user  FROM atvdgrp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDIST_RG.ValueSet.Config" name="ATVDIST_RG">
+    <columns>
+		<column name="ATVDIST_CODE" type="String" size="1"/>
+		<column name="ATVDIST_DESC" type="String" size="30"/>
+		<column name="ATVDIST_ACTIVE_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVDIST_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdist_code, atvdist_desc, atvdist_active_ind, to_char(atvdist_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvdist_user  FROM atvdist  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDSTA_RG.ValueSet.Config" name="ATVDSTA_RG">
+    <columns>
+		<column name="ATVDSTA_CODE" type="String" size="1"/>
+		<column name="ATVDSTA_DESC" type="String" size="30"/>
+		<column name="ATVDSTA_ACTIVE_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVDSTA_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdsta_code, atvdsta_desc, atvdsta_active_ind, to_char(atvdsta_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvdsta_user  FROM atvdsta  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDATR_RG.ValueSet.Config" name="ATVDATR_RG">
+    <columns>
+		<column name="ATVDATR_CODE" type="String" size="4"/>
+		<column name="ATVDATR_DESC" type="String" size="60"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVDATR_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdatr_code, atvdatr_desc, to_char(atvdatr_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvdatr_user  FROM atvdatr  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDITP_RG.ValueSet.Config" name="ATVDITP_RG">
+    <columns>
+		<column name="ATVDITP_CODE" type="String" size="4"/>
+		<column name="ATVDITP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVDITP_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvditp_code, atvditp_desc, to_char(atvditp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvditp_user  FROM atvditp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPROP_RG.ValueSet.Config" name="ATVPROP_RG">
+    <columns>
+		<column name="ATVPROP_CODE" type="String" size="6"/>
+		<column name="ATVPROP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVPROP_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvprop_code, atvprop_desc, to_char(atvprop_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvprop_user  FROM atvprop  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPGVE_RG.ValueSet.Config" name="ATVPGVE_RG">
+    <columns>
+		<column name="ATVPGVE_CODE" type="String" size="5"/>
+		<column name="ATVPGVE_DESC" type="String" size="30"/>
+		<column name="ATVPGVE_3PP_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVPGVE_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvpgve_code, atvpgve_desc, atvpgve_3pp_ind, to_char(atvpgve_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvpgve_user  FROM atvpgve  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDOSR_RG.ValueSet.Config" name="ATVDOSR_RG">
+    <columns>
+		<column name="ATVDOSR_CODE" type="String" size="10"/>
+		<column name="ATVDOSR_DESC" type="String" size="30"/>
+		<column name="ATVDOSR_TITLE" type="String" size="60"/>
+		<column name="ATVDOSR_DISPLAY_IND" type="String" size="1"/>
+		<column name="ATVDOSR_DFLT_DISP_SEQNO" type="Number" size="23"/>
+		<column name="ATVDOSR_USER_ID" type="String" size="30"/>
+		<column name="ATVDOSR_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="ATVDOSR_DATA_ORIGIN" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT *  FROM atvdosr 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSSTA_RG.ValueSet.Config" name="ATVSSTA_RG">
+    <columns>
+		<column name="ATVSSTA_CODE" type="String" size="1"/>
+		<column name="ATVSSTA_DESC" type="String" size="30"/>
+		<column name="ATVSSTA_ACTIVE_IND" type="String" size="1"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+		<column name="ATVSSTA_USER" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvssta_code, atvssta_desc, atvssta_active_ind, to_char(atvssta_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date, atvssta_user  FROM atvssta  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="AGBPLDG_RG.ValueSet.Config" name="AGBPLDG_RG">
+    <columns>
+		<column name="AGBPLDG_PLEDGE_NO" type="String" size="7"/>
+		<column name="PDATE" type="String" size="75"/>
+		<column name="AGBPLDG_PCAT_CODE" type="String" size="5"/>
+		<column name="ATVPCAT_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT agbpldg_pledge_no, to_char(agbpldg_pledge_date, G$_DATE.GET_NLS_DATE_FORMAT) pdate, agbpldg_pcat_code, atvpcat_desc  FROM agbpldg, atvpcat  WHERE agbpldg_pidm = :KEY_BLOCK_PIDM AND agbpldg_pcat_code = atvpcat_code  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="KEY_BLOCK_PIDM">
+			<value>
+				<item businessObject="KEY_BLOCK" name="PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="ADBDESG_RG.ValueSet.Config" name="ADBDESG_RG">
+    <columns>
+		<column name="ADBDESG_DESG" type="String" size="10"/>
+		<column name="ADBDESG_NAME" type="String" size="120"/>
+		<column name="ADBDESG_DSTA_CODE" type="String" size="1"/>
+		<column name="ADBDESG_DSTP_CODE" type="String" size="5"/>
+		<column name="ADBDESG_RESTR_IND" type="String" size="1"/>
+		<column name="ADBDESG_COLL_CODE" type="String" size="2"/>
+	</columns>
+	<query><![CDATA[
+	SELECT adbdesg_desg, adbdesg_name, adbdesg_dsta_code, adbdesg_dstp_code, adbdesg_restr_ind, adbdesg_coll_code  FROM adbdesg  ORDER BY adbdesg_desg
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="AFBCAMP_RG.ValueSet.Config" name="AFBCAMP_RG">
+    <columns>
+		<column name="AFBCAMP_CAMPAIGN" type="String" size="5"/>
+		<column name="AFBCAMP_NAME" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT afbcamp_campaign, afbcamp_name  FROM afbcamp  ORDER BY afbcamp_campaign
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="AFRCORG_RG.ValueSet.Config" name="AFRCORG_RG">
+    <columns>
+		<column name="AFRCORG_SOL_ORG" type="String" size="5"/>
+		<column name="ASBSORG_NAME" type="String" size="60"/>
+		<column name="AFRCORG_GOAL" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT afrcorg_sol_org, asbsorg_name, afrcorg_goal  FROM afrcorg, asbsorg  WHERE ((afrcorg_campaign = :GLOBAL_CAMPAIGN AND afrcorg_solc_code = :GLOBAL_SOLICITATION_TYPE AND :GLOBAL_SOLICITATION_TYPE IS NOT NULL) OR (afrcorg_campaign = :GLOBAL_CAMPAIGN AND :GLOBAL_SOLICITATION_TYPE IS NULL AND afrcorg_solc_code IS NULL)) AND asbsorg_sol_org = afrcorg_sol_org 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_CAMPAIGN">
+			<value>
+				<globalVariable name="CAMPAIGN"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_SOLICITATION_TYPE">
+			<value>
+				<globalVariable name="SOLICITATION_TYPE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="AFRCSLT_RG_OLD.ValueSet.Config" name="AFRCSLT_RG_OLD">
+    <columns>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="SPRIDEN_LAST_NAME" type="String" size="60"/>
+		<column name="SPRIDEN_FIRST_NAME" type="String" size="15"/>
+		<column name="SPRIDEN_MI" type="String" size="15"/>
+	</columns>
+	<query><![CDATA[
+	SELECT spriden_id, spriden_last_name, spriden_first_name, spriden_mi  FROM afrcslt, spriden  WHERE ((afrcslt_campaign = :GLOBAL_CAMPAIGN AND afrcslt_solc_code = :GLOBAL_SOLICITATION_TYPE AND afrcslt_sol_org = :GLOBAL_ORGANIZATION) OR (afrcslt_campaign = :GLOBAL_CAMPAIGN AND afrcslt_solc_code = :GLOBAL_SOLICITATION_TYPE AND afrcslt_sol_org IS NULL AND :GLOBAL_ORGANIZATION IS NULL) OR (afrcslt_campaign = :GLOBAL_CAMPAIGN AND afrcslt_sol_org = :GLOBAL_ORGANIZATION AND afrcslt_solc_code IS NULL AND :GLOBAL_SOLICITATION_TYPE IS NULL) OR (afrcslt_campaign = :GLOBAL_CAMPAIGN AND afrcslt_solc_code IS NULL AND :GLOBAL_SOLICITATION_TYPE IS NULL AND afrcslt_sol_org IS NULL AND :GLOBAL_ORGANIZATION IS NULL)) AND spriden_pidm = afrcslt_pidm AND spriden_change_ind IS NULL 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_CAMPAIGN">
+			<value>
+				<globalVariable name="CAMPAIGN"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_SOLICITATION_TYPE">
+			<value>
+				<globalVariable name="SOLICITATION_TYPE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_ORGANIZATION">
+			<value>
+				<globalVariable name="ORGANIZATION"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="AFRCSLT_RG.ValueSet.Config" name="AFRCSLT_RG">
+    <columns>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="SPRIDEN_NAME" type="String" size="244"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT (spriden_id), decode(spriden_surname_prefix, '', '', spriden_surname_prefix || ' ') || spriden_last_name || decode(spriden_first_name, '', '', ', ' || spriden_first_name || ' ') || decode(spriden_mi, '', '', spriden_mi)  FROM spriden, afrcslt  WHERE spriden_pidm = afrcslt_pidm AND spriden_change_ind IS NULL AND nvl(afrcslt_campaign, '~') = nvl(:GLOBAL_CAMPAIGN, '~') AND nvl(afrcslt_solc_code, '~') = nvl(:GLOBAL_SOLICITATION_TYPE, '~') AND nvl(afrcslt_sol_org, '~') = nvl(:GLOBAL_ORGANIZATION, '~') 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_CAMPAIGN">
+			<value>
+				<globalVariable name="CAMPAIGN"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_SOLICITATION_TYPE">
+			<value>
+				<globalVariable name="SOLICITATION_TYPE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_ORGANIZATION">
+			<value>
+				<globalVariable name="ORGANIZATION"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="AFRCSOL_RG.ValueSet.Config" name="AFRCSOL_RG">
+    <columns>
+		<column name="AFRCSOL_SOLC_CODE" type="String" size="15"/>
+		<column name="ATVSOLC_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT afrcsol_solc_code, atvsolc_desc  FROM afrcsol, atvsolc  WHERE afrcsol_campaign = :GLOBAL_CAMPAIGN AND afrcsol_solc_code IS NOT NULL AND afrcsol_solc_code = atvsolc_code 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_CAMPAIGN">
+			<value>
+				<globalVariable name="CAMPAIGN"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="AFRCTYP_RG.ValueSet.Config" name="AFRCTYP_RG">
+    <columns>
+		<column name="AFRCTYP_CAMPAIGN" type="String" size="5"/>
+		<column name="AFRCTYP_SOLC_CODE" type="String" size="15"/>
+		<column name="AFRCTYP_SOL_ORG" type="String" size="5"/>
+		<column name="AFRCTYP_DCYR_CODE" type="Number" size="23"/>
+		<column name="SOLICITOR_NAME" type="String" size="93"/>
+		<column name="SOLICITOR_ID" type="String" size="9"/>
+		<column name="AFRCTYP_CONSTITUENT_PIDM" type="Number" size="23"/>
+		<column name="CREDIT_NAME" type="String" size="93"/>
+		<column name="CREDIT_ID" type="String" size="9"/>
+		<column name="AFRCTYP_SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT afrctyp_campaign, afrctyp_solc_code, afrctyp_sol_org, afrctyp_dcyr_code, (x.spriden_last_name || decode(x.spriden_first_name, '', '', ', ' || x.spriden_first_name || ' ') || decode(x.spriden_mi, '', '', x.spriden_mi)), x.spriden_id, afrctyp_constituent_pidm, (y.spriden_last_name || decode(y.spriden_first_name, '', '', ', ' || y.spriden_first_name || ' ') || decode(y.spriden_mi, '', '', y.spriden_mi)), y.spriden_id, afrctyp_seq_no  FROM afrctyp, spriden x, spriden y  WHERE (afrctyp_campaign = :GLOBAL_CAMPAIGN OR afrctyp_campaign IS NULL) AND (afrctyp_constituent_pidm = :KEY_BLOCK_PIDM OR afrctyp_constituent_pidm = :KEY_BLOCK_SPS_PIDM) AND (afrctyp_pidm = x.spriden_pidm AND x.spriden_change_ind IS NULL) AND (y.spriden_pidm = afrctyp_constituent_pidm AND y.spriden_change_ind IS NULL)  ORDER BY afrctyp_dcyr_code DESC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_CAMPAIGN">
+			<value>
+				<globalVariable name="CAMPAIGN"/>
+			</value>
+         </parameter>
+		<parameter name="KEY_BLOCK_PIDM">
+			<value>
+				<item businessObject="KEY_BLOCK" name="PIDM"/> 
+			</value>
+        </parameter>
+		<parameter name="KEY_BLOCK_SPS_PIDM">
+			<value>
+				<item businessObject="KEY_BLOCK" name="SPS_PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="AMBPROP_RG.ValueSet.Config" name="AMBPROP_RG">
+    <columns>
+		<column name="AMBPROP_PROP_CODE" type="String" size="6"/>
+		<column name="AMBPROP_PROP_SEQ_NO" type="Number" size="23"/>
+		<column name="ATVPROP_DESC" type="String" size="30"/>
+		<column name="AMBPROP_ASK_AMOUNT" type="Number" size="23"/>
+		<column name="DUE_DATE" type="String" size="75"/>
+		<column name="AMBPROP_PRST_CODE" type="String" size="6"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ambprop_prop_code, ambprop_prop_seq_no, atvprop_desc, ambprop_ask_amount, to_char(ambprop_due_date, G$_DATE.GET_NLS_DATE_FORMAT) due_date, ambprop_prst_code  FROM ambprop, atvprop  WHERE ambprop_pidm = :KEY_BLOCK_PIDM AND ambprop_prop_code = atvprop_code  ORDER BY ambprop_due_date, ambprop_prop_code, ambprop_prop_seq_no
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="KEY_BLOCK_PIDM">
+			<value>
+				<item businessObject="KEY_BLOCK" name="PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="APRCATG_RG.ValueSet.Config" name="APRCATG_RG">
+    <columns>
+		<column name="APRCATG_DONR_CODE" type="String" size="4"/>
+		<column name="ATVDONR_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT aprcatg_donr_code, atvdonr_desc  FROM aprcatg, atvdonr  WHERE aprcatg_pidm = :PIDM AND aprcatg_donr_code = atvdonr_code  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="PIDM">
+			<value>
+				<item businessObject="" name="PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="APRCATG_SPS_RG.ValueSet.Config" name="APRCATG_SPS_RG">
+    <columns>
+		<column name="APRCATG_DONR_CODE" type="String" size="4"/>
+		<column name="ATVDONR_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT aprcatg_donr_code, atvdonr_desc  FROM aprcatg, atvdonr  WHERE aprcatg_pidm = :SPS_PIDM AND aprcatg_donr_code = atvdonr_code  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="SPS_PIDM">
+			<value>
+				<item businessObject="" name="SPS_PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="APRDHIS_RG.ValueSet.Config" name="APRDHIS_RG">
+    <columns>
+		<column name="APRDHIS_DESG" type="String" size="10"/>
+		<column name="ADBDESG_NAME" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT UNIQUE aprdhis_desg, adbdesg_name  FROM aprdhis, adbdesg  WHERE aprdhis_pidm = :KEY_BLOCK_PIDM AND aprdhis_desg = adbdesg_desg 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="KEY_BLOCK_PIDM">
+			<value>
+				<item businessObject="KEY_BLOCK" name="PIDM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="ASCCSLT_RG.ValueSet.Config" name="ASCCSLT_RG">
+    <columns>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="NAME" type="String" size="243"/>
+	</columns>
+	<query><![CDATA[
+	SELECT spriden_id, decode(spriden_first_name, '', '', spriden_first_name || ' ') || decode(spriden_mi, '', '', spriden_mi || ' ') || decode(spriden_surname_prefix, '', '', spriden_surname_prefix || ' ') || spriden_last_name name  FROM spriden, asrsorg  WHERE spriden_pidm = asrsorg_pidm AND spriden_change_ind IS NULL AND asrsorg_sol_org = :GLOBAL_ORGANIZATION 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ORGANIZATION">
+			<value>
+				<globalVariable name="ORGANIZATION"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="ASCSORG_RG.ValueSet.Config" name="ASCSORG_RG">
+    <columns>
+		<column name="ASBSORG_SOL_ORG" type="String" size="5"/>
+		<column name="ASBSORG_NAME" type="String" size="60"/>
+		<column name="ASBSORG_SOTP_CODE" type="String" size="2"/>
+	</columns>
+	<query><![CDATA[
+	SELECT asbsorg_sol_org, asbsorg_name, asbsorg_sotp_code  FROM asbsorg 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ASRSOAG_RG.ValueSet.Config" name="ASRSOAG_RG">
+    <columns>
+		<column name="ASRSOAG_DCYR_CODE" type="Number" size="23"/>
+		<column name="ATVDCYR_DESC" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT asrsoag_dcyr_code, atvdcyr_desc  FROM asrsoag, atvdcyr  WHERE asrsoag_sol_org = :GLOBAL_ORGANIZATION AND atvdcyr_code = asrsoag_dcyr_code  ORDER BY asrsoag_dcyr_code DESC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ORGANIZATION">
+			<value>
+				<globalVariable name="ORGANIZATION"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="ASRSORG_RG.ValueSet.Config" name="ASRSORG_RG">
+    <columns>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="SPRIDEN_NAME" type="String" size="93"/>
+	</columns>
+	<query><![CDATA[
+	SELECT spriden_id, spriden_last_name || decode(spriden_first_name, '', '', ', ' || spriden_first_name || ' ' || spriden_mi)  FROM spriden, asrsorg  WHERE asrsorg_sol_org = :GLOBAL_ORGANIZATION AND spriden_pidm = asrsorg_pidm AND spriden_change_ind IS NULL  ORDER BY spriden_last_name
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ORGANIZATION">
+			<value>
+				<globalVariable name="ORGANIZATION"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="ASRSSAG_RG.ValueSet.Config" name="ASRSSAG_RG">
+    <columns>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="SPRIDEN_NAME" type="String" size="244"/>
+	</columns>
+	<query><![CDATA[
+	SELECT spriden_id, decode(spriden_surname_prefix, '', '', spriden_surname_prefix || ' ') || spriden_last_name || decode(spriden_first_name, '', '', ', ' || spriden_first_name || ' ' || spriden_mi)  FROM spriden, asrssag  WHERE asrssag_sol_org = :GLOBAL_ORGANIZATION AND asrssag_dcyr_code = :GLOBAL_DCYR_CODE AND spriden_pidm = asrssag_pidm AND spriden_change_ind IS NULL  ORDER BY decode(spriden_surname_prefix, '', '', spriden_surname_prefix || ' ') || spriden_last_name
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ORGANIZATION">
+			<value>
+				<globalVariable name="ORGANIZATION"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_DCYR_CODE">
+			<value>
+				<globalVariable name="DCYR_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="GTVNTYP_RG.ValueSet.Config" name="GTVNTYP_RG">
+    <columns>
+		<column name="GTVNTYP_CODE" type="String" size="4"/>
+		<column name="GTVNTYP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT gtvntyp_code, gtvntyp_desc, to_char(gtvntyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM gtvntyp  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="TYPE_ORG_SOL_4_CAMP_RG.ValueSet.Config" name="TYPE_ORG_SOL_4_CAMP_RG">
+    <columns>
+		<column name="AFRCSLT_SOLC_CODE" type="String" size="8"/>
+		<column name="AFRCSLT_SOL_ORG" type="String" size="5"/>
+		<column name="FULL_NAME" type="String" size="244"/>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="SPRIDEN_SURNAME_PREFIX" type="String" size="60"/>
+		<column name="SPRIDEN_LAST_NAME" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT afrcslt_solc_code, afrcslt_sol_org, (decode(spriden_surname_prefix, '', '', spriden_surname_prefix || ' ') || spriden_last_name || decode(spriden_first_name, '', '', ', ' || spriden_first_name || ' ') || decode(spriden_mi, '', '', spriden_mi)), spriden_id, spriden_surname_prefix, spriden_last_name  FROM afrcslt, spriden  WHERE afrcslt_campaign = :GLOBAL_CAMPAIGN AND ((afrcslt_solc_code = :GLOBAL_SOLICITATION_TYPE) OR :GLOBAL_SOLICITATION_TYPE IS NULL) AND ((afrcslt_sol_org = :GLOBAL_ORGANIZATION) OR :GLOBAL_ORGANIZATION IS NULL) AND (afrcslt_pidm = spriden_pidm AND spriden_change_ind IS NULL)  ORDER BY decode(afrcslt_solc_code, '', '*', afrcslt_solc_code) ASC, decode(afrcslt_sol_org, '', '*', afrcslt_sol_org) ASC, decode(spriden_surname_prefix, '', '', spriden_surname_prefix || ' ') || spriden_last_name ASC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_CAMPAIGN">
+			<value>
+				<globalVariable name="CAMPAIGN"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_SOLICITATION_TYPE">
+			<value>
+				<globalVariable name="SOLICITATION_TYPE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_ORGANIZATION">
+			<value>
+				<globalVariable name="ORGANIZATION"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="YEAR_SOL_4_ORG_RG.ValueSet.Config" name="YEAR_SOL_4_ORG_RG">
+    <columns>
+		<column name="ASRSSAG_DCYR_CODE" type="Number" size="23"/>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="FULL_NAME" type="String" size="244"/>
+		<column name="SPRIDEN_SURNAME_PREFIX" type="String" size="60"/>
+		<column name="SPRIDEN_LAST_NAME" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT asrssag_dcyr_code, spriden_id, decode(spriden_surname_prefix, '', '', spriden_surname_prefix || ' ') || spriden_last_name || decode(spriden_first_name, '', '', ', ' || spriden_first_name || ' ' || spriden_mi), spriden_surname_prefix, spriden_last_name  FROM spriden, asrssag  WHERE asrssag_sol_org = :GLOBAL_ORGANIZATION AND ((asrssag_dcyr_code = :GLOBAL_DCYR_CODE) OR :GLOBAL_DCYR_CODE IS NULL) AND spriden_pidm = asrssag_pidm AND spriden_change_ind IS NULL  ORDER BY asrssag_dcyr_code DESC, decode(spriden_surname_prefix, '', '', spriden_surname_prefix || ' ') || spriden_last_name ASC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ORGANIZATION">
+			<value>
+				<globalVariable name="ORGANIZATION"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_DCYR_CODE">
+			<value>
+				<globalVariable name="DCYR_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="CAMP_ORG_SOL_RG.ValueSet.Config" name="CAMP_ORG_SOL_RG">
+    <columns>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="SPRIDEN_NAME" type="String" size="244"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT (spriden_id), decode(spriden_surname_prefix, '', '', spriden_surname_prefix || ' ') || spriden_last_name || decode(spriden_first_name, '', '', ', ' || spriden_first_name || ' ') || decode(spriden_mi, '', '', spriden_mi)  FROM spriden, afrctyp  WHERE spriden_pidm = afrctyp_pidm AND spriden_change_ind IS NULL AND nvl(afrctyp_campaign, '~') = nvl(:GLOBAL_CAMPAIGN, '~') AND nvl(afrctyp_solc_code, '~') = nvl(:GLOBAL_SOLICITATION_TYPE, '~') AND nvl(afrctyp_sol_org, '~') = nvl(:GLOBAL_ORGANIZATION, '~') 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_CAMPAIGN">
+			<value>
+				<globalVariable name="CAMPAIGN"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_SOLICITATION_TYPE">
+			<value>
+				<globalVariable name="SOLICITATION_TYPE"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_ORGANIZATION">
+			<value>
+				<globalVariable name="ORGANIZATION"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="ORG_YR_SOL_RG.ValueSet.Config" name="ORG_YR_SOL_RG">
+    <columns>
+		<column name="SPRIDEN_ID" type="String" size="9"/>
+		<column name="SPRIDEN_NAME" type="String" size="244"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT (spriden_id), decode(spriden_surname_prefix, '', '', spriden_surname_prefix || ' ') || spriden_last_name || decode(spriden_first_name, '', '', ', ' || spriden_first_name || ' ') || decode(spriden_mi, '', '', spriden_mi)  FROM spriden, afrctyp  WHERE spriden_pidm = afrctyp_pidm AND spriden_change_ind IS NULL AND afrctyp_sol_org = :GLOBAL_ORGANIZATION AND afrctyp_dcyr_code = :GLOBAL_DCYR_CODE 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ORGANIZATION">
+			<value>
+				<globalVariable name="ORGANIZATION"/>
+			</value>
+         </parameter>
+		<parameter name="GLOBAL_DCYR_CODE">
+			<value>
+				<globalVariable name="DCYR_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="POP_SEL_RG.ValueSet.Config" name="POP_SEL_RG">
+    <columns>
+		<column name="GLVSLCT_APPLICATION" type="String" size="30"/>
+		<column name="GLVSLCT_SELECTION" type="String" size="30"/>
+		<column name="GLVSLCT_CREATOR_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT glvslct_application, glvslct_selection, glvslct_creator_id  FROM glvslct  WHERE (glvslct_application = :GLOBAL_APPL_CODE AND :GLOBAL_APPL_CODE IS NOT NULL) OR :GLOBAL_APPL_CODE IS NULL 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_APPL_CODE">
+			<value>
+				<globalVariable name="APPL_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="ATVDNAM_RG.ValueSet.Config" name="ATVDNAM_RG">
+    <columns>
+		<column name="ATVDNAM_CODE" type="String" size="10"/>
+		<column name="ATVDNAM_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvdnam_code, atvdnam_desc, to_char(atvdnam_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM atvdnam  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="AGBPDEF_RG.ValueSet.Config" name="AGBPDEF_RG">
+    <columns>
+		<column name="AGBPDEF_DNAM_CODE" type="String" size="10"/>
+		<column name="ATVDNAM_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT agbpdef_dnam_code, atvdnam_desc, to_char(agbpdef_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM agbpdef, atvdnam  WHERE agbpdef_user = :CURRENT_USER AND agbpdef_dnam_code = atvdnam_code  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="CURRENT_USER">
+			<value>
+				<item businessObject="FORM_HEADER" name="CURRENT_USER"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="ATVCCLS_RG.ValueSet.Config" name="ATVCCLS_RG">
+    <columns>
+		<column name="ATVCCLS_CODE" type="String" size="12"/>
+		<column name="ATVCCLS_DESC" type="String" size="120"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvccls_code, atvccls_desc  FROM atvccls 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVACAT_RG.ValueSet.Config" name="ATVACAT_RG">
+    <columns>
+		<column name="ATVACAT_CODE" type="String" size="6"/>
+		<column name="ATVACAT_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvacat_code, atvacat_desc  FROM atvacat  ORDER BY atvacat_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVRCAT_RG.ValueSet.Config" name="ATVRCAT_RG">
+    <columns>
+		<column name="ATVRCAT_CODE" type="String" size="30"/>
+		<column name="ATVRCAT_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvrcat_code, atvrcat_desc  FROM atvrcat  ORDER BY atvrcat_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVALRT_RG.ValueSet.Config" name="ATVALRT_RG">
+    <columns>
+		<column name="ATVALRT_CODE" type="String" size="6"/>
+		<column name="ATVALRT_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvalrt_code, atvalrt_desc  FROM atvalrt  WHERE (atvalrt_super_ind = '0' OR (atvalrt_super_ind = '1' AND (user) IN ((SELECT aabctrl_super_id  FROM aabctrl  WHERE aabctrl_super_id = user ))))  ORDER BY atvalrt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVADTL_RG.ValueSet.Config" name="ATVADTL_RG">
+    <columns>
+		<column name="ATVADTL_CODE" type="String" size="15"/>
+		<column name="ATVADTL_DESC" type="String" size="60"/>
+		<column name="ATVADTL_ACTIVITY_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvadtl_code, atvadtl_desc, atvadtl_activity_date  FROM atvadtl  ORDER BY atvadtl_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSCTG_RG.ValueSet.Config" name="ATVSCTG_RG">
+    <columns>
+		<column name="ATVSCTG_CODE" type="String" size="15"/>
+		<column name="ATVSCTG_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvsctg_code, atvsctg_desc  FROM atvsctg  ORDER BY atvsctg_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVSGRP_RG.ValueSet.Config" name="ATVSGRP_RG">
+    <columns>
+		<column name="ATVSGRP_CODE" type="String" size="15"/>
+		<column name="ATVSGRP_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvsgrp_code, atvsgrp_desc  FROM atvsgrp  ORDER BY atvsgrp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ATVPFTP_RG.ValueSet.Config" name="ATVPFTP_RG">
+    <columns>
+		<column name="ATVPFTP_CODE" type="String" size="15"/>
+		<column name="ATVPFTP_DESC" type="String" size="60"/>
+	</columns>
+	<query><![CDATA[
+	SELECT atvpftp_code, atvpftp_desc  FROM atvpftp 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

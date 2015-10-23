@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alerts>
+	<Alert Name="A$_USER_ALERTS" Title="Banner" Type="INFORMATION">
+		<Text>*Note* User Alerts exist for this ID.</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+</Alerts>
+

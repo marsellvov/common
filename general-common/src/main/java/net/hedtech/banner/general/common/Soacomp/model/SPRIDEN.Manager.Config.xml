@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPRIDEN.Manager.Config" name="SPRIDEN">
+		
+		<items>
+			<item name="SPRIDEN_ID" logicalName="spridenId" type="String" physicalName="SPRIDEN_ID"  />
+			<item name="SPRIDEN_LAST_NAME" logicalName="spridenLastName" type="String" physicalName="SPRIDEN_LAST_NAME" caseInsensitiveQuery="true"  />
+			<item name="SPRIDEN_NTYP_CODE" logicalName="spridenNtypCode" type="String" physicalName="SPRIDEN_NTYP_CODE"  />
+			<item name="SPRIDEN_CHANGE_IND" logicalName="spridenChangeInd" type="String" physicalName="SPRIDEN_CHANGE_IND"  />
+			<item name="SPRIDEN_ACTIVITY_DATE" logicalName="spridenActivityDate" type="java.util.Date" physicalName="SPRIDEN_ACTIVITY_DATE"  />
+			<item name="SPRIDEN_PIDM" logicalName="spridenPidm" type="java.math.BigDecimal" physicalName="SPRIDEN_PIDM"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Soacomp.model.SpridenAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE ((spriden_id LIKE :GLOBAL_SEARCH_ID AND :GLOBAL_SEARCH_ID IS NOT NULL) OR :GLOBAL_SEARCH_ID IS NULL) AND (((soundex(spriden_last_name) = soundex(:SOUNDEX_LAST_NAME)) AND :SOUNDEX_LAST_NAME IS NOT NULL) OR (spriden_search_last_name LIKE :GLOBAL_LAST_NAME AND :GLOBAL_LAST_NAME IS NOT NULL) OR (:GLOBAL_LAST_NAME IS NULL AND :SOUNDEX_LAST_NAME IS NULL)) AND spriden_entity_ind = 'C']]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by spriden_last_name, spriden_id, spriden_change_ind, spriden_activity_date]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

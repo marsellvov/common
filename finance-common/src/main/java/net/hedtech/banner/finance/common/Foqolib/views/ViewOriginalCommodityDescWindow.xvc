@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" title="originalCommodityDescWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<formpanel name="originalCommodityDescWindow" width="100%">
+		<include src="net/hedtech/banner/finance/common/Foqolib/views/PanelOriginalCommodityDescCanvas"/>
+	</formpanel>
+</config>

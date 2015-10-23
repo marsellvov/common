@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FRBGRNT"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="FORM_HEADER"/>
+	<panel width="100%">
+		<accordion width="100%">
+			<panel label="agencyInfo.title">
+				<panel width="100%">
+					<gridlayout cols="2" orientation="vertical">
+						<gridcell>
+							<textfield block="FRBGRNT" case="upper" datatype="String" enabled="false" height="23px" label="frbgrnt.frbgrntAgencyCode2.prompt" maxlength="9" member="FRBGRNT_AGENCY_CODE_2" name="frbgrntAgencyCode2" width="88px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+							<textfield block="FRBGRNT" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="FRBGRNT_AGENCY_NAME_2" name="frbgrntAgencyName2" width="283px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="String" height="23px" keyactions="PREVIOUS_ITEM" label="frbgrnt.frbgrntAgencyContact.prompt" maxlength="35" member="FRBGRNT_AGENCY_CONTACT" name="frbgrntAgencyContact" width="375px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textfield block="FORM_HEADER" datatype="String" enabled="false" height="23px" label="formHeader.frbgrntAgencyPredCode.prompt" maxlength="9" member="FRBGRNT_AGENCY_PRED_CODE" name="frbgrntAgencyPredCode" width="88px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+							<textfield block="FORM_HEADER" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="FRBGRNT_AGENCY_PRED_NAME" name="frbgrntAgencyPredName" width="283px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<lovbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" label="frbgrnt.frbgrntAgencyAddrCode.prompt" maxlength="2" member="FRBGRNT_AGENCY_ADDR_CODE" name="frbgrntAgencyAddrCode" style="ui-buttoninput" width="73px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_AGENCY_ADDR_CODE_LBT" name="frbgrntAgencyAddrCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntAgencyAddrCodeLbt.tooltip" width="23px"/> -->
+						</gridcell>
+						<gridcell>
+							<lovbox autoskip="true" block="FRBGRNT" datatype="Number" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntAgencyAddrSeqNum.prompt" maxlength="2" member="FRBGRNT_AGENCY_ADDR_SEQ_NUM" name="frbgrntAgencyAddrSeqNum" style="ui-buttoninput" textalign="right" width="73px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="AGENCY_ADDR_SEQ_NUM" name="agencyAddrSeqNum" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.agencyAddrSeqNum.tooltip" width="23px"/> -->
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" label="frbgrnt.houseNumber.prompt" maxlength="75" member="HOUSE_NUMBER" name="houseNumber" visible="false" width="120px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textfield block="FRBGRNT" datatype="String" enabled="false" height="23px" label="frbgrnt.addressLine1.prompt" maxlength="75" member="ADDRESS_LINE_1" name="addressLine1" width="346px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textfield block="FRBGRNT" datatype="String" enabled="false" height="23px" label="frbgrnt.addressLine2.prompt" maxlength="75" member="ADDRESS_LINE_2" name="addressLine2" width="346px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textfield block="FRBGRNT" datatype="String" enabled="false" height="23px" label="frbgrnt.addressLine3.prompt" maxlength="75" member="ADDRESS_LINE_3" name="addressLine3" width="346px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" label="frbgrnt.addressLine4.prompt" maxlength="75" member="ADDRESS_LINE_4" name="addressLine4" visible="false" width="346px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textfield block="FRBGRNT" datatype="String" enabled="false" height="23px" label="frbgrnt.city.prompt" maxlength="50" member="CITY" name="city" width="153px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textfield block="FRBGRNT" datatype="String" enabled="false" height="23px" label="frbgrnt.state.prompt" maxlength="30" member="STATE" name="state" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textfield block="FRBGRNT" datatype="String" enabled="false" height="23px" label="frbgrnt.zipCode.prompt" maxlength="30" member="ZIP_CODE" name="zipCode" width="77px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="String" height="23px" label="frbgrnt.frbgrntAgencyEmail.prompt" maxlength="128" member="FRBGRNT_AGENCY_EMAIL" name="frbgrntAgencyEmail" width="332px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="FRBGRNT" enabled="false" height="23px" label="frbgrnt.phoneExists.label" member="PHONE_EXISTS" name="phoneExists" value="Y" width="214px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<lovbox block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="PREVIOUS_ITEM" label="frrgrpi.frrgrpiPhoneType.prompt" maxlength="4" member="FRBGRNT_AGENCY_PHONE_TYPE" name="frbgrntAgencyPhoneType" style="ui-buttoninput" tooltip="frbgrnt.frbgrntAgencyPhoneType.prompt" validation="server" width="73px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_AGENCY_PHONE_TYPE_LBT" name="frbgrntAgencyPhoneTypeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntAgencyPhoneTypeLbt.tooltip" width="23px"/> -->
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="String" label="frbgrnt.ctryCodePhone.prompt" enabled="false" height="23px" maxlength="4" member="CTRY_CODE_PHONE" name="ctryCodePhone" tooltip="frbgrnt.ctryCodePhone.prompt" visible="false" width="73px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textfield block="FRBGRNT" datatype="String" height="23px" label="frbgrnt.areaCode.prompt" maxlength="6" member="AREA_CODE" name="areaCode" tooltip="frbgrnt.areaCode.prompt" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textfield block="FRBGRNT" datatype="String" height="23px" label="frbgrnt.phoneNumber.prompt" maxlength="12" member="PHONE_NUMBER" name="phoneNumber" tooltip="frbgrnt.phoneNumber.prompt" width="140px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textfield block="FRBGRNT" datatype="String" height="23px" label="frbgrnt.extension.prompt" maxlength="10" member="EXTENSION" name="extension" tooltip="frbgrnt.extension.prompt" width="120px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<lovbox block="FRBGRNT" case="upper" datatype="Number" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntAgencyTeleSeqno.prompt" maxlength="2" member="FRBGRNT_AGENCY_TELE_SEQNO" name="frbgrntAgencyTeleSeqno" style="ui-buttoninput" validation="server" width="73px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_AGENCY_TELE_SEQNO_LBT" name="frbgrntAgencyTeleSeqnoLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntAgencyTeleSeqnoLbt.tooltip" width="23px"/> -->
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

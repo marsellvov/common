@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Ftmecls/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Ftmecls/model/FTVECLS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Ftmecls/model/BUTTON_CONTROL_BLOCK.Manager.Config.xml"/>
+	
+	<formModel id="FTMECLS.Model.Config" name="FTMECLS">
+		<modelClass>net.hedtech.banner.finance.common.Ftmecls.model.FtmeclsModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FTVECLS" manager="FTVECLS.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="BUTTON_CONTROL_BLOCK" manager="BUTTON_CONTROL_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+	</formModel>
+</b:beans>

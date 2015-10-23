@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="GOBEACC"/>
+	<panel class="ContentCanvas" id="pnlGobeaccCanvas" menu="G$_DEFAULT_PM" name="GOBEACC_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="gobeacc.accordion.title">
+				<gridview block="GOBEACC" name="grdGobeacc" width="100%">
+					<viewheader>
+						<viewcolumn block="GOBEACC" case="upper" datatype="String" label="gobeacc.gobeaccUsername.prompt" labelstyle="DEFAULT" maxlength="30" member="GOBEACC_USERNAME" name="gobeaccUsername" required="true" validation="server" width="266px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn autoskip="true" block="GOBEACC" case="upper" datatype="String" keyactions="NEXT_ITEM" label="gobeacc.wacsId.prompt" labelstyle="DEFAULT" maxlength="9" member="WACS_ID" name="wacsId" validation="server" width="106px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox action="WHEN-BUTTON-PRESSED"/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="GOBEACC" datatype="String" enabled="false" keyactions="NEXT_ITEM" label="gobeacc.nname.prompt" labelstyle="DEFAULT" maxlength="230" member="NAME" name="nname" width="479px"/>
+					</viewheader>
+				</gridview>
+			</panel>
+		</accordion>
+	</panel>
+</config>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVSDAT.Manager.Config" name="FTVSDAT">
+		
+		<items>
+			<item name="FTVSDAT_SDAT_CODE_OPT_1" logicalName="ftvsdatSdatCodeOpt1" type="String" physicalName="FTVSDAT_SDAT_CODE_OPT_1"  />
+			<item name="FTVSDAT_SDAT_CODE_OPT_2" logicalName="ftvsdatSdatCodeOpt2" type="String" physicalName="FTVSDAT_SDAT_CODE_OPT_2"  />
+			<item name="FTVSDAT_CODE_LEVEL" logicalName="ftvsdatCodeLevel" type="java.math.BigDecimal" physicalName="FTVSDAT_CODE_LEVEL"  />
+			<item name="FTVSDAT_STATUS_IND" logicalName="ftvsdatStatusInd" type="String" physicalName="FTVSDAT_STATUS_IND"  />
+			<item name="FTVSDAT_EFF_DATE" logicalName="ftvsdatEffDate" type="java.util.Date" physicalName="FTVSDAT_EFF_DATE"  />
+			<item name="FTVSDAT_ACTIVITY_DATE" logicalName="ftvsdatActivityDate" type="java.util.Date" physicalName="FTVSDAT_ACTIVITY_DATE"  />
+			<item name="FTVSDAT_USER_ID" logicalName="ftvsdatUserId" type="String" physicalName="FTVSDAT_USER_ID"  />
+			<item name="FTVSDAT_COAS_CODE" logicalName="ftvsdatCoasCode" type="String" physicalName="FTVSDAT_COAS_CODE"  />
+			<item name="FTVSDAT_SDAT_CODE_ENTITY" logicalName="ftvsdatSdatCodeEntity" type="String" physicalName="FTVSDAT_SDAT_CODE_ENTITY"  />
+			<item name="FTVSDAT_SDAT_CODE_ATTR" logicalName="ftvsdatSdatCodeAttr" type="String" physicalName="FTVSDAT_SDAT_CODE_ATTR"  />
+			<item name="FTVSDAT_DATA" logicalName="ftvsdatData" type="String" physicalName="FTVSDAT_DATA"  />
+			<item name="FTVSDAT_TITLE" logicalName="ftvsdatTitle" type="String" physicalName="FTVSDAT_TITLE"  />
+			<item name="FTVSDAT_SHORT_TITLE" logicalName="ftvsdatShortTitle" type="String" physicalName="FTVSDAT_SHORT_TITLE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Foqsdlv.model.FtvsdatAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE (:HD_COAS = ftvsdat_coas_code OR :HD_COAS IS NULL) AND (:HD_ENTITY = ftvsdat_sdat_code_entity OR :HD_ENTITY IS NULL) AND (:HD_ATTR = ftvsdat_sdat_code_attr OR :HD_ATTR IS NULL)]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by ftvsdat_coas_code, ftvsdat_sdat_code_entity, ftvsdat_sdat_code_attr, ftvsdat_sdat_code_opt_1, ftvsdat_sdat_code_opt_2, ftvsdat_code_level, ftvsdat_eff_date]]></defaultOrderByClause>	
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="18" enabled="true"/>
+	</manager>
+</b:beans>

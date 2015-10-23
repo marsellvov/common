@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlTempCanvas" menu="G$_DEFAULT_PM" name="TEMP_CANVAS" visible="false" width="100%">
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.detailBtn.label" member="DETAIL_BTN" name="detailBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.searchBtn.label" member="SEARCH_BTN" name="searchBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.soundexBtn.label" member="SOUNDEX_BTN" name="soundexBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.soundexSearchBtn.label" member="SOUNDEX_SEARCH_BTN" name="soundexSearchBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spriden1ExitvalueBtn.label" member="SPRIDEN_1_EXITVALUE_BTN" name="spriden1ExitvalueBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spriden1RollbackBtn.label" member="SPRIDEN_1_ROLLBACK_BTN" name="spriden1RollbackBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.soundexRollbackBtn.label" member="SOUNDEX_ROLLBACK_BTN" name="soundexRollbackBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spriden1ExitBtn.label" member="SPRIDEN_1_EXIT_BTN" name="spriden1ExitBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.soundexExitBtn.label" member="SOUNDEX_EXIT_BTN" name="soundexExitBtn" navigable="false" width="80px"/>
+	</panel>
+</config>

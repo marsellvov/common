@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/alumni/common/Apaiden/ApaidenAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/alumni/common/Apaiden/ApaidenLovs.xml" Name="APAIDEN">
+  <Visual>
+    <Window Id="USER_ALERTS_WINDOW" Modal="true" Url="net/hedtech/banner/alumni/common/Apaiden/views/ViewUserAlertsWindow">
+      <ContentCanvas Id="A$_USER_ALERT_CANVAS" />
+    </Window>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/alumni/common/Apaiden/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <TabPageCanvas Id="G$_IDEN_TAB_CANVAS">
+        <Page Id="CURRENT_ID_TAB" />
+        <Page Id="ALTERNATE_ID_TAB" />
+        <Page Id="ADDRESS_TAB" />
+        <Page Id="TELEPHONE_TAB" />
+        <Page Id="EMAIL_TAB" />
+        <Page Id="BIO_TAB" />
+        <Page Id="ADDITIONAL_ID_TAB" />
+        <Page Id="HOUSEHOLD_TAB" />
+      </TabPageCanvas>
+      <StackedCanvas Id="SPRIDEN_CURRENT_1_CANVAS" />
+      <ContentCanvas Id="KEY_BLOCK_CANVAS" />
+      <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false" />
+    </Window>
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/alumni/common/Apaiden/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+    <Window Id="APTADDR_ARE_YOU_SURE" Modal="true" Url="net/hedtech/banner/alumni/common/Apaiden/views/ViewAptaddrAreYouSure">
+      <ContentCanvas Id="APTADDR_2_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_SDKEY" />
+    <Block Id="G$_SDISP" />
+    <Block Id="G$_VPDI_BLOCK" />
+    <Block Id="KEY_BLOCK">
+      <Item AutoSkip="true" CanvasName="KEY_BLOCK_CANVAS" Id="ID" MaxLength="9" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="FULL_NAME" MaxLength="230" Navigable="false" Type="TextItem" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="GENERATE_BTN" MaxLength="11" Type="Button" />
+      <Item AllowSearch="false" Enabled="false" Id="PREFERRED_RECORD_NUMBER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="DECEASED_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_PREF_CLASS" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="PREF_CLASS" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="CONFID_IND" MaxLength="14" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_DONR_CAT" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item AllowSearch="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_NAME" MaxLength="230" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_IDNO" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="true" Id="DONR_CAT" MaxLength="30" Navigable="false" Type="DisplayItem" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="DONR_CAT_LBT" MaxLength="0" Navigable="true" Type="Button" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_IDNO_LBT" MaxLength="0" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="KEY_BLOCK_CANVAS" Enabled="false" Id="SPS_DECEASED_IND" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SPS_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="ENTITY_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="ID_LBT" MaxLength="11" Navigable="false" Type="Button" />
+      <Item Id="ATYP_COUNT" MaxLength="4" Navigable="false" Type="TextItem" />
+      <Item Enabled="false" Id="MANUAL_CM_CALL" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="EXECUTE_BTN" MaxLength="30" Type="Button" />
+      <Item CanvasName="KEY_BLOCK_CANVAS" Id="KEY-CLRFRM_BTN" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+    </Block>
+    <Block Id="SPRIDEN_CURRENT" />
+    <Block Id="SPRIDEN_PREVIOUS" />
+    <Block Id="SPRADDR">
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_FROM_DATE" MaxLength="11" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_FROM_DATE_DBT" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_TO_DATE" MaxLength="11" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_TO_DATE_DBT" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+      <Item AllowUpdate="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_ATYP_CODE" Lov="STVATYP_LOV" MaxLength="30" PageName="ADDRESS_TAB" Required="true" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_ATYP_CODE_LBT" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="ATYP_DESCRIPTION" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="DisplayItem" />
+      <Item AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="SPRADDR_SEQNO" MaxLength="2" Navigable="false" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_HOUSE_NUMBER" MaxLength="10" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_STREET_LINE1" MaxLength="75" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_STREET_LINE2" MaxLength="75" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_STREET_LINE3" MaxLength="75" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_STREET_LINE4" MaxLength="75" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_CITY" MaxLength="50" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_STAT_CODE" Lov="STVSTAT_LOV" MaxLength="30" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_STAT_CODE_LBT" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="STAT_DESCRIPTION" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="DisplayItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_ZIP" MaxLength="30" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_ZIP_LBT" MaxLength="6" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_CNTY_CODE" Lov="STVCNTY_LOV" MaxLength="30" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_CNTY_CODE_LBT" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="CNTY_DESCRIPTION" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="DisplayItem" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_NATN_CODE" Lov="STVNATN_LOV" MaxLength="30" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_NATN_CODE_LBT" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="NATN_DESCRIPTION" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="TELE_CODE" Lov="STVTELE_LOV" MaxLength="30" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="TELE_CODE_LBT" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="TELE_DESCRIPTION" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="DisplayItem" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="PHONE_CTRY" MaxLength="4" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="PHONE_AREA" MaxLength="6" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="PHONE_NUMBER" MaxLength="12" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="PHONE_EXT" MaxLength="10" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="PHONE_BTN" MaxLength="14" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="FAX_CTRY" MaxLength="4" PageName="ADDRESS_TAB" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="FAX_AREA" MaxLength="6" PageName="ADDRESS_TAB" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="FAX_NUMBER" MaxLength="12" PageName="ADDRESS_TAB" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="FAX_EXT" MaxLength="10" PageName="ADDRESS_TAB" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="PREFERRED_ADDR" MaxLength="30" PageName="ADDRESS_TAB" Type="Checkbox" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="PREFERRED_REGION" MaxLength="30" PageName="ADDRESS_TAB" Type="Checkbox" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="COMBINED_MAILING" MaxLength="30" PageName="ADDRESS_TAB" Type="Checkbox" Visible="false" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_STATUS_IND" MaxLength="1" PageName="ADDRESS_TAB" Type="Checkbox" />
+      <Item AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_ASRC_CODE" Lov="STVASRC_LOV" MaxLength="30" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_ASRC_CODE_LBT" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_DELIVERY_POINT" MaxLength="2" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AllowSearch="false" AutoSkip="true" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_CORRECTION_DIGIT" MaxLength="1" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_CARRIER_ROUTE" MaxLength="4" PageName="ADDRESS_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="SPRADDR_GST_TAX_ID" MaxLength="15" PageName="ADDRESS_TAB" Type="TextItem" Visible="false" />
+      <!--<Item AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="SPRADDR_USER" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="TextItem" />-->
+      <Item AllowUpdate="false" Enabled="false" Id="SPRADDR_USER" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="TextItem"  CanvasName="G$_IDEN_TAB_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID"/>
+      </Item>
+      <!--<Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="SPRADDR_ACTIVITY_DATE" MaxLength="26" Navigable="false" PageName="ADDRESS_TAB" Type="TextItem" />-->
+      <Item AllowInsert="false" AllowUpdate="false" Enabled="false" Id="SPRADDR_ACTIVITY_DATE" MaxLength="26" Navigable="false" PageName="ADDRESS_TAB" Type="TextItem"  CanvasName="G$_IDEN_TAB_CANVAS" >
+      	<Extension Name="ViewMode" Value="Filter"/>
+      	<Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE"/>
+      </Item>
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SPRADDR_PIDM" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SPRTELE_SEQNO" MaxLength="3" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CHANGE_FAX" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CHANGE_PHONE" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CHANGE_STATUS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_ADDR_TELE_SEQNO" MaxLength="3" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_PHONE_CTRY" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_PHONE_AREA" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_PHONE_NUMBER" MaxLength="12" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_PHONE_EXT" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_FAX_AREA" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_FAX_NUMBER" MaxLength="12" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_FAX_EXT" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_SEQNO" MaxLength="3" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DisplayAsPassword="true" Enabled="false" Id="HOLD_STAT_CODE" MaxLength="3" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_STATUS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_TELE_CODE" MaxLength="4" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DisplayAsPassword="true" Enabled="false" Id="NO_ADDR_INFO" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item Id="PHONE_EXISTS" MaxLength="1" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="EMPLOYMENT_DETAILS" MaxLength="30" PageName="ADDRESS_TAB" Type="Checkbox" Visible="false" />
+    </Block>
+    <Block Id="SPRTELE" />
+    <Block Id="GOREMAL" />
+    <Block Id="SPBPERS" />
+    <Block Id="GORPRAC" />
+    <Block Id="GORADID" />
+    <Block Id="APTADDR_HEADER" NextBlock="APTADDR">
+      <Item AllowSearch="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_NAME_LF30" MaxLength="230" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_ID" MaxLength="9" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_ATYP_CODE" MaxLength="2" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="ADDR_ATYP_DESC" MaxLength="30" Navigable="false" PageName="HOUSEHOLD_TAB" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_ADDR_SEQNO" MaxLength="2" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_HOUSE_NUMBER" MaxLength="10" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_STREET_LINE1" MaxLength="75" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_STREET_LINE2" MaxLength="75" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_STREET_LINE3" MaxLength="75" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_STREET_LINE4" MaxLength="75" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_CITY" MaxLength="50" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_STAT_CODE" MaxLength="3" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_ZIP" MaxLength="30" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_FROM_DATE" MaxLength="11" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_NATN_DESC" MaxLength="30" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_CNTY_DESC" MaxLength="30" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_TO_DATE" MaxLength="11" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_TELE_CODE" MaxLength="4" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Id="ADDR_TELE_DESC" MaxLength="30" Navigable="false" PageName="HOUSEHOLD_TAB" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_PHONE" MaxLength="40" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item Id="ADDR_CNTY_CODE" MaxLength="5" Type="TextItem" />
+      <Item Id="ADDR_NATN_CODE" MaxLength="5" Type="TextItem" />
+      <Item Id="ADDR_IN_USE_PIDM" MaxLength="8" Type="TextItem" />
+      <Item Id="ADDR_IN_USE_USER" MaxLength="30" Type="TextItem" />
+      <Item Enabled="false" Id="ADDR_IN_USE_NAME_LF30" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AutoSkip="true" Enabled="false" Id="HOUSEHOLD_COUNT" MaxLength="3" />
+      <Item AllowInsert="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="ADDR_DATA_BAR_1" MaxLength="24" Navigable="false" PageName="HOUSEHOLD_TAB" Type="DisplayItem" />
+    </Block>
+    <Block AllowDelete="false" AllowInsert="false" Id="APTADDR">
+      <Item AllowInsert="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_SLCT_IND" MaxLength="1" PageName="HOUSEHOLD_TAB" Type="Checkbox" />
+      <Item Enabled="false" Id="APTADDR_UPDATABLE_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item Enabled="false" Id="APTADDR_PIDM" MaxLength="9" Navigable="false" Type="TextItem" />
+      <Item Enabled="false" Id="APTADDR_HEAD_IND" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item Enabled="false" Id="APTADDR_ATYP_CODE" MaxLength="2" Navigable="false" Type="TextItem" />
+      <Item Enabled="false" Id="APTADDR_CNTY_CODE" MaxLength="5" Navigable="false" Type="TextItem" />
+      <Item Enabled="false" Id="APTADDR_NATN_CODE" MaxLength="5" Navigable="false" Type="TextItem" />
+      <Item Enabled="false" Id="APTADDR_SESSIONID" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item Enabled="false" Id="APTADDR_USER" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item Enabled="false" Id="APTADDR_ACTIVITY_DATETIME" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_NAME_LF30" MaxLength="230" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_ID" MaxLength="9" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_XREF_CODE" MaxLength="4" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_AGE" MaxLength="3" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_ADDRESS_COMPARE_IND" MaxLength="1" Navigable="false" PageName="HOUSEHOLD_TAB" Type="DisplayItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_HOUSE_NUMBER" MaxLength="75" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_STREET_LINE1" MaxLength="75" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_STREET_LINE2" MaxLength="75" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_STREET_LINE3" MaxLength="75" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_STREET_LINE4" MaxLength="75" Navigable="false" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_CITY" MaxLength="50" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_STAT_CODE" MaxLength="3" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_ZIP" MaxLength="30" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="TADDR_NATN_DESC" MaxLength="30" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="TADDR_CNTY_DESC" MaxLength="30" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_PHONE_COMPARE_IND" MaxLength="1" Navigable="false" PageName="HOUSEHOLD_TAB" Type="DisplayItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_PHONE" MaxLength="40" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_FROM_DATE" MaxLength="26" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_TO_DATE" MaxLength="26" PageName="HOUSEHOLD_TAB" Type="TextItem" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item AutoSkip="true" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="GO_ITEM" MaxLength="30" Type="TextItem" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DisplayAsPassword="true" Enabled="false" Id="MATERIAL_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_BLOCK" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_FIELD" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="HOLD_BLOCK_FIELD" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CURRENT_USER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" Enabled="false" Id="WHICH_NAME_SEARCH" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item Enabled="false" Id="CALLED_FROM_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item Enabled="false" Id="HOLD_KEY_IDNO_FOR_ALERTS" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item Enabled="false" Id="EMAIL_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item Enabled="false" Id="CMT_RESULT" MaxLength="30" Navigable="false" Type="TextItem" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="TEMP_CANVAS" Enabled="false" Id="ADDRESS_BTN" MaxLength="11" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="false" Id="NAMES_BTN" MaxLength="11" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="false" Id="SOURCE_BTN" MaxLength="11" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="PREVIOUS_SOURCE_BTN" MaxLength="11" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="false" Id="EMPLOYMENT_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="ALUMNI_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="false" Id="SPOUSE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_6_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_6_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_6_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_5_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_5_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRADDR_5_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_CURRENT_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_CURRENT_1_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_CURRENT_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="false" Id="SPRIDEN_CURRENT_1_PREV_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Id="SPRIDEN_CURRENT_2_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_CURRENT_2_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_CURRENT_2_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item Id="SPRIDEN_PREV_4_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREV_4_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREV_4_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREVIOUS_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREVIOUS_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Id="SPRIDEN_PREVIOUS_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="false" Id="SPRADDR_5_EXITVALUE_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="APTADDR_2_CANVAS" Enabled="false" Id="APTADDR_YES" MaxLength="30" NextItem="APTADDR_NO" PreviousItem="APTADDR_NO" Type="Button" />
+      <Item CanvasName="APTADDR_2_CANVAS" Enabled="false" Id="APTADDR_NO" MaxLength="30" NextItem="APTADDR_YES" PreviousItem="APTADDR_YES" Type="Button" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Enabled="false" Id="APTADDR_GUASYST_BTN" MaxLength="30" NextItem="APTADDR_INACTIVATE_BTN" PageName="HOUSEHOLD_TAB" Type="Button" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="APTADDR_INACTIVATE_BTN" MaxLength="30" Navigable="false" PageName="HOUSEHOLD_TAB" PreviousItem="APTADDR_GUASYST_BTN" Type="Button" />
+      <Item CanvasName="G$_IDEN_TAB_CANVAS" Id="APREHIS_UPDATE_BTN" MaxLength="30" Navigable="false" PageName="ADDRESS_TAB" Type="Button" />
+    </Block>
+    <Block Id="AURALRT" />
+    <Block Id="G$_EXTENDED_SEARCH_BLOCK" />
+    <Block Id="G$_OPT_BLOCK" />
+  </Logic>
+</FormStructure>

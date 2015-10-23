@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Guamesg/GuamesgAlerts.xml" FirstNavigationBlock="GURTKLR" LovDataPath="/net/hedtech/banner/general/common/Guamesg/GuamesgLovs.xml" Name="GUAMESG">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Guamesg/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="GURTKLR_1_CANVAS" />
+    </Window>
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Guamesg/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_RELEASE" MaxLength="10" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="HOLD_NUMBER1" MaxLength="25" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="RESEQUENCE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="HOLD_NUMBER2" MaxLength="25" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_FORM" MaxLength="7" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="QUERY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKUSER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_USER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="GURTKLR" MultiRecord="true">
+      <Item AllowUpdate="false" CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="true" Hint="gurtklr.gurtklrUserId.hint" Id="GURTKLR_USER_ID" Lov="USER_ID_LOV" MaxLength="30" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="GURTKLR_1_CANVAS" Id="IDNO_LBT" MaxLength="14" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GURTKLR_1_CANVAS" DataType="String" Id="USER_ID_NAME" MaxLength="161" Navigable="false" Type="TextItem" />
+      <Item CanvasName="GURTKLR_1_CANVAS" Id="GURTKLR_COMMENT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="GURTKLR_1_CANVAS" Id="GURTKLR_USER_ID_LBT" MaxLength="14" Navigable="false" Type="Button" />
+      <Item AllowUpdate="false" CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="false" Hint="gurtklr.gurtklrCreator.hint" Id="GURTKLR_CREATOR" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item CanvasName="GURTKLR_1_CANVAS" DataType="Date" Enabled="true" FormatMask="DD-MON-YYYY" Hint="gurtklr.gurtklrTodoDate.hint" Id="GURTKLR_TODO_DATE" MaxLength="11" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="GURTKLR_1_CANVAS" DataType="Number" Enabled="true" Hint="gurtklr.gurtklrTodoTime.hint" Id="GURTKLR_TODO_TIME" MaxLength="4" MaxValue="2359" MinValue="0" Type="TextItem" Visible="true" />
+      <Item CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="true" Hint="gurtklr.gurtklrComment.hint" Id="GURTKLR_COMMENT" MaxLength="180" Required="true" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="false" Hint="gurtklr.gurtklrSource.hint" Id="GURTKLR_SOURCE" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="true" Hint="gurtklr.idno.hint" Id="IDNO" MaxLength="9" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="false" Hint="gurtklr.nname.hint" Id="NAME" MaxLength="230" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="true" Hint="gurtklr.gurtklrItemRefno.hint" Id="GURTKLR_ITEM_REFNO" MaxLength="15" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Hint="gurtklr.gurtklrActivityDate.hint" Id="GURTKLR_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="true" Hint="gurtklr.gurtklrSystemInd.hint" Id="GURTKLR_SYSTEM_IND" Lov="GTVSYSI_LOV" MaxLength="30" NextItem="GURTKLR_STATUS" Required="true" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="true" Hint="gurtklr.gurtklrSystemDesc.hint" Id="GURTKLR_SYSTEM_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="true" Hint="gurtklr.gurtklrStatus.hint" Id="GURTKLR_STATUS" MaxLength="1" Type="RadioGroup" Visible="true">
+        <Item Id="GURTKLR_STATUS_RBT1" Type="RadioButton" />
+        <Item Id="GURTKLR_STATUS_RBT2" Type="RadioButton" />
+        <Item Id="GURTKLR_STATUS_RBT3" Type="RadioButton" />
+      </Item>
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="STATUS_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GURTKLR_1_CANVAS" DataType="String" Enabled="true" Hint="gurtklr.gurtklrConfidInd.hint" Id="GURTKLR_CONFID_IND" MaxLength="1" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Hint="gurtklr.gurtklrSeqno.hint" Id="GURTKLR_SEQNO" MaxLength="25" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Hint="gurtklr.gurtklrIdenCode.hint" Id="GURTKLR_IDEN_CODE" MaxLength="5" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="QUERY_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="DUPREC_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GURTKLR_1_CANVAS" Id="GURTKLR_SYSTEM_IND_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="GURTKLR_1_CANVAS" Id="GURTKLR_TODO_DATE_DBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="GURTKLR_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="GURTKLR_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="GURTKLR_1_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="GURTKLR_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="G$_OPT_BLOCK">
+      <Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Id="OPT_SEL" MaxLength="30" Type="TextItem"/>
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+    </Block>
+  </Logic>
+</FormStructure>

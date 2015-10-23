@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel width="100%">
+		<tabpanel id="tabGoaintlTabCanvas" name="GOAINTL_TAB_CANVAS">
+			<xl:event action="WHEN-TAB-PAGE-CHANGED" name="change"/>
+			<tab id="page_goaintl1Canvas" label="goaintl1Canvas.label" name="GOAINTL_1_CANVAS">
+				<include src="net/hedtech/banner/general/common/Goaintl/views/TabGoaintlTabCanvasGoaintl1Canvas"/>
+			</tab>
+			<tab id="page_goaintl2Canvas" label="goaintl2Canvas.label" name="GOAINTL_2_CANVAS">
+				<include src="net/hedtech/banner/general/common/Goaintl/views/TabGoaintlTabCanvasGoaintl2Canvas"/>
+			</tab>
+			<tab id="page_goaintl3Canvas" label="goaintl3Canvas.label" name="GOAINTL_3_CANVAS">
+				<include src="net/hedtech/banner/general/common/Goaintl/views/TabGoaintlTabCanvasGoaintl3Canvas"/>
+			</tab>
+			<tab id="page_goaintl4Canvas" label="goaintl4Canvas.label" name="GOAINTL_4_CANVAS">
+				<include src="net/hedtech/banner/general/common/Goaintl/views/TabGoaintlTabCanvasGoaintl4Canvas"/>
+			</tab>
+		</tabpanel>
+	</panel>
+</config>

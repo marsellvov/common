@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	
+	
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/general/common/Noqolib/model/NOQOLIB.Model.Config.xml"/>
+	
+	<task id="NOQOLIB.TaskPart.Config" name="NOQOLIB">
+		
+		<taskClass>net.hedtech.banner.general.common.Noqolib.NoqolibTaskPart</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/general/common/Noqolib/NoqolibStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.general.common.Noqolib.services.NoqolibServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="NOQOLIB.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.banner.general.common.Noqolib.controller.NoqolibFormController</formController>
+		<blockControllers>
+			<block  name="FORM_HEADER">net.hedtech.banner.general.common.Noqolib.controller.FormHeaderController</block>
+			<block  name="NOQOLIB">net.hedtech.banner.general.common.Noqolib.controller.NoqolibController</block>
+		</blockControllers>
+		<menuControllers>
+			<menu  name="G$_DEFAULT_PM">net.hedtech.banner.general.common.Noqolib.controller.GDefaultPmContextController</menu>
+		</menuControllers>
+
+	</task>
+</b:beans>
+
+ 

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="STVMAJR.Manager.Config" name="STVMAJR">
+		
+		<items>
+			<item name="STVMAJR_CODE" logicalName="stvmajrCode" type="String" physicalName="STVMAJR_CODE"  />
+			<item name="STVMAJR_DESC" logicalName="stvmajrDesc" type="String" physicalName="STVMAJR_DESC"  />
+			<item name="STVMAJR_CIPC_CODE" logicalName="stvmajrCipcCode" type="String" physicalName="STVMAJR_CIPC_CODE"  />
+			<item name="STVMAJR_VALID_MAJOR_IND" logicalName="stvmajrValidMajorInd" type="String" physicalName="STVMAJR_VALID_MAJOR_IND"  />
+			<item name="STVMAJR_VALID_MINOR_IND" logicalName="stvmajrValidMinorInd" type="String" physicalName="STVMAJR_VALID_MINOR_IND"  />
+			<item name="STVMAJR_VALID_CONCENTRATN_IND" logicalName="stvmajrValidConcentratnInd" type="String" physicalName="STVMAJR_VALID_CONCENTRATN_IND"  />
+			<item name="STVMAJR_OCCUPATION_IND" logicalName="stvmajrOccupationInd" type="String" physicalName="STVMAJR_OCCUPATION_IND"  />
+			<item name="STVMAJR_AID_ELIGIBILITY_IND" logicalName="stvmajrAidEligibilityInd" type="String" physicalName="STVMAJR_AID_ELIGIBILITY_IND"  />
+			<item name="STVMAJR_VR_MSG_NO" logicalName="stvmajrVrMsgNo" type="java.math.BigDecimal" physicalName="STVMAJR_VR_MSG_NO"  />
+			<item name="STVMAJR_SEVIS_EQUIV" logicalName="stvmajrSevisEquiv" type="String" physicalName="STVMAJR_SEVIS_EQUIV"  />
+			<item name="STVMAJR_SYSTEM_REQ_IND" logicalName="stvmajrSystemReqInd" type="String" physicalName="STVMAJR_SYSTEM_REQ_IND"  />
+			<item name="STVMAJR_ACTIVITY_DATE" logicalName="stvmajrActivityDate" type="java.util.Date" physicalName="STVMAJR_ACTIVITY_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Stvmajr.model.StvmajrAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[stvmajr_code]]></defaultOrderByClause>	
+		
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="20" enabled="true"/>
+		
+	</manager>
+</b:beans>

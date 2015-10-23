@@ -1,0 +1,22 @@
+﻿<Lovs>
+  <Lov Name="ETVAXAP_LOV" Title="Document Management  Application Validation (ETVAXAP)" Width="575" Height="267" RecordGroup="ETVAXAP_RG">
+    <Columns>
+      <Column DataMember="ETVAXAP_CODE" Title="Application Code" Width="130" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ETVAXAP_DESC" Title="Application Desc" Width="300" ReturnItem="">
+      </Column>
+      <Column DataMember="ETVAXAP_ACTIVITY_DATE" Title="Activity Date" Width="100" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+  <Lov Name="ETVDTYP_LOV" Title="Document Management -  Document Type Validation (ETVDTYP)" Width="575" Height="267" RecordGroup="ETVDTYP_RG">
+    <Columns>
+      <Column DataMember="ETVDTYP_CODE" Title="Document Type Code" Width="180" ReturnItem="GLOBAL.VALUE">
+      </Column>
+      <Column DataMember="ETVDTYP_DESC" Title="Description" Width="530" ReturnItem="">
+      </Column>
+      <Column DataMember="ETVDTYP_ACTIVITY_DATE" Title="Activity Date" Width="100" ReturnItem="">
+      </Column>
+    </Columns>
+  </Lov>
+</Lovs>

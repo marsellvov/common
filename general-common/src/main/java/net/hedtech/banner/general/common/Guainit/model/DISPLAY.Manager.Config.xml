@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+		xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="DISPLAY.Manager.Config" name="Display">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="DESKTOP" logicalName="desktop" type="String"   />
+			<item name="LOGO_IMAGE" logicalName="logoImage" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="STARTUP_MENU" logicalName="startupMenu" type="String"   />
+			<item name="DATE_TIME" logicalName="dateTime" type="String"   />
+			<item name="TIME1" logicalName="time1" type="Integer"   />
+			<item name="TIME2" logicalName="time2" type="Integer"   />
+			<item name="TIME3" logicalName="time3" type="Integer"   />
+			<item name="TIME4" logicalName="time4" type="Integer"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Guainit.model.Display</managerClass>
+
+	</manager>
+</b:beans>

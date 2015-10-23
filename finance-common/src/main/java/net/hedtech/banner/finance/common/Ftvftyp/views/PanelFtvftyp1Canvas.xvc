@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVFTYP"/>
+	<panel class="ContentCanvas" id="pnlFtvftyp1Canvas" menu="G$_DEFAULT_PM" name="FTVFTYP_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title2">
+				<panel width="100%">
+					<gridview block="FTVFTYP" name="grdFtvftyp" width="100%">
+						<viewheader>
+							<viewcolumn block="FTVFTYP" case="upper" datatype="String" label="ftvftyp.ftvftypCoasCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVFTYP_COAS_CODE" name="ftvftypCoasCode" width="75px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVFTYP" case="upper" datatype="String" enabled="false" label="ftvftyp.ftvftypFtypCode.prompt" labelstyle="DEFAULT" maxlength="2" member="FTVFTYP_FTYP_CODE" name="ftvftypFtypCode" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVFTYP" datatype="String" label="ftvftyp.ftvftypTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FTVFTYP_TITLE" name="ftvftypTitle" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVFTYP" case="upper" datatype="String" enabled="false" label="ftvftyp.ftvftypFtypCodePred.prompt" labelstyle="DEFAULT" maxlength="2" member="FTVFTYP_FTYP_CODE_PRED" name="ftvftypFtypCodePred" width="90px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVFTYP" case="upper" datatype="String" enabled="false" label="ftvftyp.ftvftypStatusInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVFTYP_STATUS_IND" name="ftvftypStatusInd" width="35px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVFTYP" case="upper" datatype="String" label="ftvftyp.ftvftypEncMultYrInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVFTYP_ENC_MULT_YR_IND" name="ftvftypEncMultYrInd" width="110px">
+								<editor>
+									<checkbox falsevalue="N" othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVFTYP" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvftyp.ftvftypEffDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVFTYP_EFF_DATE" name="ftvftypEffDate" width="60px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVFTYP" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvftyp.ftvftypTermDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVFTYP_TERM_DATE" name="ftvftypTermDate" width="70px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

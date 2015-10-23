@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="gtvsysi.gtvsysiCode.prompt">System</msg>
+  <msg id="gtvsysi.gtvsysiCode.hint">System Indicator;</msg>
+  <msg id="gtvsysi.gtvsysiDesc.prompt">Description</msg>
+  <msg id="gtvsysi.gtvsysiDesc.hint">System Indicator Description;</msg>
+  <msg id="gtvsysi.gtvsysiActivityDate.prompt">Activity Date</msg>
+  <msg id="buttonControlBlock.gtvsysi1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.gtvsysi1SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.gtvsysi1ExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.gtvsysi1ExitvalueBtn.label">Select</msg>
+  <msg id="mainWindow.title">System Indicator Validation</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

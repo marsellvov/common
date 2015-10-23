@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Foqolib/model/LIB__FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Foqolib/model/CP___BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Foqolib/model/LAST_QUERY.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Foqolib/model/DATE___BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Foqolib/model/CONSUMP___BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Foqolib/model/ORIGINAL_COMMODITY_DESC_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Foqolib/model/DUMMY.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Foqolib/model/RQPO_SUSPENSE_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Foqolib/model/F___FORMAT_NUMBERS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Foqolib/model/FOQOLIB.ValueSet.Config.xml"/>
+
+	
+	<formModel id="FOQOLIB.Model.Config" name="FOQOLIB">
+		<modelClass>net.hedtech.banner.finance.common.Foqolib.model.FoqolibModel</modelClass>
+		
+		<businessObjects>
+			<businessObject name="LIB$FORM_HEADER" manager="LIB__FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="CP$_BLOCK" manager="CP___BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="LAST_QUERY" manager="LAST_QUERY.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="DATE$_BLOCK" manager="DATE___BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="CONSUMP$_BLOCK" manager="CONSUMP___BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="ORIGINAL_COMMODITY_DESC_BLOCK" manager="ORIGINAL_COMMODITY_DESC_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="DUMMY" manager="DUMMY.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="RQPO_SUSPENSE_BLOCK" manager="RQPO_SUSPENSE_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="F$_FORMAT_NUMBERS" manager="F___FORMAT_NUMBERS.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="FTVFATV_RG.ValueSet.Config"/>
+				<valueSet config="FTVSATV_ALL_RG.ValueSet.Config"/>
+				<valueSet config="FTVFATV_ALL_RG.ValueSet.Config"/>
+				<valueSet config="FTVFSET_RG.ValueSet.Config"/>
+				<valueSet config="FTVATTS_FTMFATA_RG.ValueSet.Config"/>
+				<valueSet config="FTVFATA_RG.ValueSet.Config"/>
+				<valueSet config="FTRATTV_RG.ValueSet.Config"/>
+				<valueSet config="FTVSATV_RG.ValueSet.Config"/>
+				<valueSet config="FTVCOAS_RG.ValueSet.Config"/>
+				<valueSet config="FTVATTT_RG.ValueSet.Config"/>
+				<valueSet config="FTVATTS_RG.ValueSet.Config"/>
+				<valueSet config="FTVVENT_RG.ValueSet.Config"/>
+				<valueSet config="FTVVEND_RG.ValueSet.Config"/>
+				<valueSet config="FTVSTKL_RG.ValueSet.Config"/>
+				<valueSet config="FTVRULP_RG.ValueSet.Config"/>
+				<valueSet config="FTVRTCT_RG.ValueSet.Config"/>
+				<valueSet config="FTVRTCL_RG.ValueSet.Config"/>
+				<valueSet config="FTVRRGH_RG.ValueSet.Config"/>
+				<valueSet config="FTVRQPO_RG.ValueSet.Config"/>
+				<valueSet config="FTVRQBD_RG.ValueSet.Config"/>
+				<valueSet config="FTVRGUS_RG.ValueSet.Config"/>
+				<valueSet config="FTVRGRC_RG.ValueSet.Config"/>
+				<valueSet config="FTVRECP_RG.ValueSet.Config"/>
+				<valueSet config="FTVPRCE_RG.ValueSet.Config"/>
+				<valueSet config="FTVPOOL_RG.ValueSet.Config"/>
+				<valueSet config="FTVIMGR_RG.ValueSet.Config"/>
+				<valueSet config="FTVFSPD_RG.ValueSet.Config"/>
+				<valueSet config="FTVFBAL_RG.ValueSet.Config"/>
+				<valueSet config="FTVEDIT_RG.ValueSet.Config"/>
+				<valueSet config="FTVCRAT_RG.ValueSet.Config"/>
+				<valueSet config="FTVCHRG_RG.ValueSet.Config"/>
+				<valueSet config="FTVBUYO_RG.ValueSet.Config"/>
+				<valueSet config="FTVBUYC_RG.ValueSet.Config"/>
+				<valueSet config="FTVBDPO_RG.ValueSet.Config"/>
+				<valueSet config="FTVARAT_RG.ValueSet.Config"/>
+				<valueSet config="FTVACTL_RG.ValueSet.Config"/>
+				<valueSet config="FTVACIV_RG.ValueSet.Config"/>
+				<valueSet config="FTVADJT_RG.ValueSet.Config"/>
+				<valueSet config="FTVACCI_RG.ValueSet.Config"/>
+				<valueSet config="FTVAUSE_RG.ValueSet.Config"/>
+				<valueSet config="FTVAPPQ_RG.ValueSet.Config"/>
+				<valueSet config="FTVASTY_RG.ValueSet.Config"/>
+				<valueSet config="FTVCLAS_RG.ValueSet.Config"/>
+				<valueSet config="FTVATYP_RG.ValueSet.Config"/>
+				<valueSet config="FTVEELI_RG.ValueSet.Config"/>
+				<valueSet config="FTVEELC_RG.ValueSet.Config"/>
+				<valueSet config="FTVECLS_RG.ValueSet.Config"/>
+				<valueSet config="FTVDTYP_RG.ValueSet.Config"/>
+				<valueSet config="FTVDISC_RG.ValueSet.Config"/>
+				<valueSet config="FTVDEPR_RG.ValueSet.Config"/>
+				<valueSet config="FTVCTYP_RG.ValueSet.Config"/>
+				<valueSet config="FTVFTYP_RG.ValueSet.Config"/>
+				<valueSet config="FTVFOBS_RG.ValueSet.Config"/>
+				<valueSet config="FTVEXRT_RG.ValueSet.Config"/>
+				<valueSet config="FTVEENT_RG.ValueSet.Config"/>
+				<valueSet config="FTVIVTP_RG.ValueSet.Config"/>
+				<valueSet config="FTVINTS_RG.ValueSet.Config"/>
+				<valueSet config="FTVINRT_RG.ValueSet.Config"/>
+				<valueSet config="FTVOBPH_RG.ValueSet.Config"/>
+				<valueSet config="FTVOBUD_RG.ValueSet.Config"/>
+				<valueSet config="FTVPAYM_RG.ValueSet.Config"/>
+				<valueSet config="FTVPCLS_RG.ValueSet.Config"/>
+				<valueSet config="FTVPROJ_RG.ValueSet.Config"/>
+				<valueSet config="FTVRCMT_RG.ValueSet.Config"/>
+				<valueSet config="FTVRRSN_RG.ValueSet.Config"/>
+				<valueSet config="FTVRSNC_RG.ValueSet.Config"/>
+				<valueSet config="FTVRTYP_RG.ValueSet.Config"/>
+				<valueSet config="FTVRUGR_RG.ValueSet.Config"/>
+				<valueSet config="FTVRUCL_RG.ValueSet.Config"/>
+				<valueSet config="FTVTRSK_RG.ValueSet.Config"/>
+				<valueSet config="FTVTRAT_RG.ValueSet.Config"/>
+				<valueSet config="FTVUOMS_RG.ValueSet.Config"/>
+				<valueSet config="FTVVTYP_RG.ValueSet.Config"/>
+				<valueSet config="FTVUVMS_RG.ValueSet.Config"/>
+				<valueSet config="FTVAGCY_RG.ValueSet.Config"/>
+				<valueSet config="FTVFMGR_RG.ValueSet.Config"/>
+				<valueSet config="FTVCUST_RG.ValueSet.Config"/>
+				<valueSet config="FTVBIDH_RG.ValueSet.Config"/>
+				<valueSet config="FTVAGRH_RG.ValueSet.Config"/>
+				<valueSet config="FTVCARR_RG.ValueSet.Config"/>
+				<valueSet config="FTVBOND_RG.ValueSet.Config"/>
+				<valueSet config="FTVCONP_RG.ValueSet.Config"/>
+				<valueSet config="FTVCERD_RG.ValueSet.Config"/>
+				<valueSet config="FTVMMKT_RG.ValueSet.Config"/>
+				<valueSet config="FTVPRTY_RG.ValueSet.Config"/>
+				<valueSet config="FTVRRUL_RG.ValueSet.Config"/>
+				<valueSet config="FTVPKSL_RG.ValueSet.Config"/>
+				<valueSet config="FTVRORD_RG.ValueSet.Config"/>
+				<valueSet config="FTVSTOP_RG.ValueSet.Config"/>
+				<valueSet config="FTVSTCK_RG.ValueSet.Config"/>
+				<valueSet config="FTVINVT_RG.ValueSet.Config"/>
+				<valueSet config="FTVHBUD_RG.ValueSet.Config"/>
+				<valueSet config="FTVBUYR_RG.ValueSet.Config"/>
+				<valueSet config="FTVSHIP_RG.ValueSet.Config"/>
+				<valueSet config="FTVITYP_RG.ValueSet.Config"/>
+				<valueSet config="FTVEQPT_RG.ValueSet.Config"/>
+				<valueSet config="FUVPROF_RG.ValueSet.Config"/>
+				<valueSet config="FTVEQUL_RG.ValueSet.Config"/>
+				<valueSet config="FTVEELT_RG.ValueSet.Config"/>
+				<valueSet config="FTVFSYR_RG.ValueSet.Config"/>
+				<valueSet config="FTVTGRP_RG.ValueSet.Config"/>
+				<valueSet config="FTVCHKS_RG.ValueSet.Config"/>
+				<valueSet config="FTVIRTO_RG.ValueSet.Config"/>
+				<valueSet config="FTVCSTO_RG.ValueSet.Config"/>
+				<valueSet config="FTVSDAT_RG.ValueSet.Config"/>
+				<valueSet config="FTVBLCS_RG.ValueSet.Config"/>
+				<valueSet config="FRVEGRP_RG.ValueSet.Config"/>
+				<valueSet config="FRRCSTR_RG.ValueSet.Config"/>
+				<valueSet config="FRBCSTA_RG.ValueSet.Config"/>
+				<valueSet config="FRBCSTD_RG.ValueSet.Config"/>
+				<valueSet config="FRBBUDG_RG.ValueSet.Config"/>
+				<valueSet config="FRBBUDP_RG.ValueSet.Config"/>
+				<valueSet config="FFVDISP_RG.ValueSet.Config"/>
+				<valueSet config="FFVACON_RG.ValueSet.Config"/>
+				<valueSet config="FFVACQM_RG.ValueSet.Config"/>
+				<valueSet config="FFVTTST_RG.ValueSet.Config"/>
+				<valueSet config="FTVORGN_RG.ValueSet.Config"/>
+				<valueSet config="FTVFTRM_RG.ValueSet.Config"/>
+				<valueSet config="FTVCRSN_RG.ValueSet.Config"/>
+				<valueSet config="FGBRCLE_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

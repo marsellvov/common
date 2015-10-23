@@ -1,0 +1,1540 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Lovs>
+	<Lov Height="267" Name="GTVVPDI_LOV" RecordGroup="GTVVPDI_RG" Title="Institution Code Validation (GTVVPDI)" Width="575">
+		<Columns>
+			<Column DataMember="GTVVPDI_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="53"/>
+			<Column DataMember="GTVVPDI_DESC" ReturnItem="G$_VPDI_BLOCK.VPDI_DESC" Title="Description" Width="160"/>
+			<Column DataMember="GTVVPDI_TYPE_CDE" Title="Type " Width="33"/>
+			<Column DataMember="GTVVPDI_SYS_DEF_INST_IND" Title="Default Ind" Width="80"/>
+			<Column DataMember="GTVVPDI_ACTIVITY_DATE" Title="Activity Date" Width="86"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_VPDI_ALL_LOV" RecordGroup="G$_VPDI_ALL_RG" Title="Existing Institution Values" Width="575">
+		<Columns>
+			<Column DataMember="A" Width="133"/>
+			<Column DataMember="B" Width="133"/>
+			<Column DataMember="C" Width="133"/>
+			<Column DataMember="D" Width="133"/>
+			<Column DataMember="E" Width="133"/>
+			<Column DataMember="F" Width="133"/>
+			<Column DataMember="G" Width="133"/>
+			<Column DataMember="H" Width="133"/>
+			<Column DataMember="I" Width="133"/>
+			<Column DataMember="J" Width="133"/>
+			<Column DataMember="A$" Width="90"/>
+			<Column DataMember="B$" ReturnItem="G$_VPDI_BLOCK.VPDI_HOLD_VALUE" Width="90"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSQPR_LOV" RecordGroup="GTVSQPR_RG" Title="Business Rule Process Code Validation List (GTVSQPR)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSQPR_CODE" ReturnItem="GLOBAL.VALUE" Title="Process Code" Width="226"/>
+			<Column DataMember="GTVSQPR_DESC" Title="Description" Width="678"/>
+			<Column DataMember="GTVSQPR_SYS_REQ_IND" Title="Sys Req'd" Width="60"/>
+			<Column DataMember="GTVSQPR_ACTIVITY_DATE" Title="Activity Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="339" Name="GTVSQRU_LOV" RecordGroup="GTVSQRU_RG" Title="Business Rule Code Validation List (GTVSQRU)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSQRU_CODE" ReturnItem="GLOBAL.VALUE" Title="Parameter Code" Width="226"/>
+			<Column DataMember="GTVSQRU_DESC" Title="Description" Width="678"/>
+			<Column DataMember="GTVSQRU_SYS_REQ_IND" Title="Sys Req" Width="27"/>
+			<Column DataMember="GTVSQRU_ACTIVITY_DATE" Title="Activity Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVAP_LOV" RecordGroup="GTVSVAP_RG" Title="SEVIS Auto Populate Codes (GTVSVAP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVAP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="226"/>
+			<Column DataMember="GTVSVAP_DESC" Title="Desc" Width="678"/>
+			<Column DataMember="GTVSVAP_SYS_REQ_IND" Title="Sys Req" Width="60"/>
+			<Column DataMember="GTVSVAP_ACTIVITY_DATE" Title="Activity Date" Width="108"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVBA_LOV" RecordGroup="GTVSVBA_RG" Title="SEVIS Business Action Codes (GTVSVBA)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVBA_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="231"/>
+			<Column DataMember="GTVSVBA_DESC" Title="Desc" Width="678"/>
+			<Column DataMember="GTVSVBA_DBPROC_NAME" Title="Dbproc Name" Width="907"/>
+			<Column DataMember="GTVSVBA_SYS_REQ_IND" Title="Sys Req" Width="60"/>
+			<Column DataMember="GTVSVBA_ACTIVITY_DATE" Title="Activity Date" Width="108"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVCA_LOV" RecordGroup="GTVSVCA_RG" Title="SEVIS Student Cancellation Reason Code (GTVSVCA)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVCA_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVSVCA_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVCA_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVCC_LOV" RecordGroup="GTVSVCC_RG" Title="SEVIS Category Code (GTVSVCC)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVCC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVSVCC_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVCC_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVCP_LOV" RecordGroup="GTVSVCP_RG" Title="SEVIS Consular Post Code (GTVSVCP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVCP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVSVCP_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVCP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVCR_LOV" RecordGroup="GTVSVCR_RG" Title="SEVIS Creation Reason Code (GTVSVCR)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVCR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="51"/>
+			<Column DataMember="GTVSVCR_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVSVCR_USAGE_IND" Title="Usage" Width="40"/>
+			<Column DataMember="GTVSVCR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVDT_LOV" RecordGroup="GTVSVDT_RG" Title="SEVIS Dependent Termination Code (GTVSVDT)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVDT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVSVDT_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVDT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVEL_LOV" RecordGroup="GTVSVEL_RG" Title="SEVIS Education Level Code (GTVSVEL)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVEL_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVSVEL_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVEL_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVEP_LOV" RecordGroup="GTVSVEP_RG" Title="SEVIS End EV Program Reason Code (GTVSVEP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVEP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVSVEP_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVEP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVFT_LOV" RecordGroup="GTVSVFT_RG" Title="SEVIS Drop Below FT Reason Code (GTVSVFT)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVFT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVSVFT_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVFT_ACTIVITY_DATE" Title="Description" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVGO_LOV" RecordGroup="GTVSVGO_RG" Title="SEVIS Government Organization Code (GTVSVGO)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVGO_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="104"/>
+			<Column DataMember="GTVSVGO_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVGO_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVPC_LOV" RecordGroup="GTVSVPC_RG" Title="SEVIS Positon Code (GTVSVPC)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVPC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVSVPC_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVPC_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVRP_LOV" RecordGroup="GTVSVRP_RG" Title="SEVIS Request for Reprint Code (GTVSVRP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVRP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVSVRP_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVRP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVTR_LOV" RecordGroup="GTVSVTR_RG" Title="SEVIS Termination Reason Code (GTVSVTR)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVTR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="72"/>
+			<Column DataMember="GTVSVTR_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVTR_USAGE_IND" Title="Usage" Width="40"/>
+			<Column DataMember="GTVSVTR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVTS_LOV" RecordGroup="GTVSVTS_RG" Title="SEVIS Transmission Status Code (GTVSVTS)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVTS_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVSVTS_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVTS_SYSTEM_REQ_IND" Title="SysReq" Width="40"/>
+			<Column DataMember="GTVSVTS_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVIO_LOV" RecordGroup="GTVSVIO_RG" Title="SEVIS International Organization Code (GTVSVIO)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVIO_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="104"/>
+			<Column DataMember="GTVSVIO_DESC" Title="Description" Width="141"/>
+			<Column DataMember="GTVSVIO_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSVIT_LOV" RecordGroup="GTVSVIT_RG" Title="SEVIS Infraction Type Code (GTVSVIT)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSVIT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="104"/>
+			<Column DataMember="GTVSVIT_DESC" Title="Description" Width="173"/>
+			<Column DataMember="GTVSVIT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="ALL_USERS_LOV" RecordGroup="ALL_USERS_RG" Title="All Oracle Users" Width="575">
+		<Columns>
+			<Column DataMember="USERNAME" ReturnItem="GLOBAL.VALUE" Title="Username" Width="500"/>
+			<Column DataMember="USER_ID" Width="0"/>
+			<Column DataMember="CREATED" Width="0"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GJQPVAL_LOV" RecordGroup="GJQPVAL_RG" Title="Parameter Values" Width="575">
+		<Columns>
+			<Column DataMember="GJBPVAL_VALUE" ReturnItem="GLOBAL.VALUE" Title="Value" Width="247"/>
+			<Column DataMember="GJBPVAL_DESC" Title="Description" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GLBAPPL_LOV" RecordGroup="GLBAPPL_RG" Title="Application Inquiry" Width="575">
+		<Columns>
+			<Column DataMember="GLBAPPL_APPLICATION" ReturnItem="GLOBAL.VALUE" Title="Application" Width="225"/>
+			<Column DataMember="GLBAPPL_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GLBAPPL_SYSI_CODE" Title="System" Width="90"/>
+			<Column DataMember="GLBAPPL_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GOBFDMN_LOV" RecordGroup="GOBFDMN_RG" Title="FGAC Domain Information (GOBFDMN)" Width="575">
+		<Columns>
+			<Column DataMember="GTVFDMN_CODE" ReturnItem="GLOBAL.VALUE" Title="Code " Width="239"/>
+			<Column DataMember="GTVFDMN_DESC" Title="Description" Width="239"/>
+			<Column DataMember="GOBFDMN_FDTP_CODE" Title="Type" Width="108"/>
+			<Column DataMember="GOBFDMN_ENABLE_PII_IND" Title="PII Enabled" Width="108"/>
+			<Column DataMember="GOBFDMN_TABLE_NAME" Title="Driver Table" Width="173"/>
+			<Column DataMember="ACTIVITY_DATE" Title="Activity Date " Width="108"/>
+			<Column DataMember="GOBFDMN_USER_ID" Title="User ID" Width="108"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GOBWFDD_LOV" RecordGroup="GOBWFDD_RG" Title="Application Name Metadata List" Width="575">
+		<Columns>
+			<Column DataMember="CODE" ReturnItem="GLOBAL.VALUE" Title="Application Name" Width="133"/>
+			<Column DataMember="DESC" Width="646"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GOBWFED_LOV" RecordGroup="GOBWFED_RG" Title="Electronic Documents Transaction Description List (GOBWFED)" Width="575">
+		<Columns>
+			<Column DataMember="GOBWFED_DESC" ReturnItem="GLOBAL.VALUE" Title="Transaction Description" Width="247"/>
+			<Column DataMember="GOBWFED_TRANS_NO" Title="Transaction Number" Width="192"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GORDWIZ_LOV" RecordGroup="GORDWIZ_RG" Title="Enabled Wizards for Add-In" Width="575">
+		<Columns>
+			<Column DataMember="GORDWIZ_WIZARD_NAME" ReturnItem="GLOBAL.VALUE" Title="Wizard Name" Width="128"/>
+			<Column DataMember="GORDWIZ_WIZARD_DESCRIPTION" Title="Description" Width="440"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GORFPII_LOV" RecordGroup="GORPFII_RG" Title="User PII Domains (GORFPII)" Width="575">
+		<Columns>
+			<Column DataMember="GORFPII_FGAC_USER_ID" Title="FGAC User ID" Width="239"/>
+			<Column DataMember="GORFPII_FDMN_CODE_PII" ReturnItem="GLOBAL.VALUE" Title="PII Domain" Width="90"/>
+			<Column DataMember="ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GORFPII_USER_ID" Width="90"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVCALL_LOV" RecordGroup="GTVCALL_RG" Title="QuickFlow Validation (GTVCALL)" Width="575">
+		<Columns>
+			<Column DataMember="GTVCALL_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="88"/>
+			<Column DataMember="GTVCALL_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVCALL_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVCELG_LOV" RecordGroup="GTVCELG_RG" Title="Certification of Eligibility Code (GTVCELG)" Width="575">
+		<Columns>
+			<Column DataMember="GTVCELG_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="72"/>
+			<Column DataMember="GTVCELG_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVCELG_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVCMSC_LOV" RecordGroup="GTVCMSC_RG" Title="Common Matching Source Code (GTVCMSC)" Width="575">
+		<Columns>
+			<Column DataMember="GTVCMSC_CODE" ReturnItem="GLOBAL.VALUE" Title="Source Code" Width="100"/>
+			<Column DataMember="GTVCMSC_DESC" Title="Description" Width="279"/>
+			<Column DataMember="GTVCMSC_ACTIVITY_DATE" Title="Activity Date" Width="75"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVCURR_LOV" RecordGroup="GTVCURR_RG" Title="Currency Code Validation (GTVCURR)" Width="575">
+		<Columns>
+			<Column DataMember="GTVCURR_CURR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="60"/>
+			<Column DataMember="GTVCURR_RATE_EFF_DATE" Title="Effective Date" Width="112"/>
+			<Column DataMember="GTVCURR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVCURR_USER_ID" Title="User ID" Width="147"/>
+			<Column DataMember="GTVCURR_RATE_NCHG_DATE" Title="Rate Change" Width="104"/>
+			<Column DataMember="GTVCURR_RATE_TERM_DATE" Title="Term Date" Width="104"/>
+			<Column DataMember="GTVCURR_TITLE" Title="Description" Width="227"/>
+			<Column DataMember="GTVCURR_STATUS_IND" Title="St" Width="56"/>
+			<Column DataMember="GTVCURR_AP_ACCT" Title="Ap Acct" Width="56"/>
+			<Column DataMember="GTVCURR_NATION_CODE" Title="Nation" Width="48"/>
+			<Column DataMember="GTVCURR_CONV_TYPE" Title="Conv" Width="52"/>
+			<Column DataMember="GTVCURR_EXCH_ACCT" Title="Xchange" Width="76"/>
+			<Column DataMember="GTVCURR_BANK_CODE" Title="Bank" Width="52"/>
+			<Column DataMember="GTVCURR_DISB_AGENT_PIDM" Title="DPidm" Width="60"/>
+			<Column DataMember="GTVCURR_AP_ACCT2" Title="Ap Account 2" Width="107"/>
+			<Column DataMember="GTVCURR_EXCH_ACCT2" Title="Exchange Account 2" Width="147"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVDADD_GORDWIZ_LOV" RecordGroup="GTVDADD_GORDWIZ_RG" Title="Available Add-Ins" Width="575">
+		<Columns>
+			<Column DataMember="GTVDADD_CODE" ReturnItem="GLOBAL.VALUE" Title="Add-In Code" Width="128"/>
+			<Column DataMember="GTVDADD_DESC" Title="Description" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVDOCM_LOV" RecordGroup="GTVDOCM_RG" Title="Visa Document Code (GTVDOCM)" Width="575">
+		<Columns>
+			<Column DataMember="GTVDOCM_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="72"/>
+			<Column DataMember="GTVDOCM_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVDOCM_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVDUNT_LOV" RecordGroup="GTVDUNT_RG" Title="Duration Unit Validation (GTVDUNT)" Width="575">
+		<Columns>
+			<Column DataMember="GTVDUNT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="GTVDUNT_DESC" Title="Description" Width="239"/>
+			<Column DataMember="GTVDUNT_NUMBER_OF_DAYS" Title="Days" Width="56"/>
+			<Column DataMember="GTVDUNT_ACTIVITY_DATE" Title="Activity Date" Width="108"/>
+			<Column DataMember="GTVDUNT_USER_ID" Title="User" Width="108"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVEMAL_LOV" RecordGroup="GTVEMAL_RG" Title="E-mail Type Validation (GTVEMAL)" Width="575">
+		<Columns>
+			<Column DataMember="GTVEMAL_CODE" ReturnItem="GLOBAL.VALUE" Title="E-mail Type" Width="88"/>
+			<Column DataMember="GTVEMAL_DESC" Title="Description" Width="300"/>
+			<Column DataMember="GTVEMAL_ACTIVITY_DATE" Title="Activity Date" Width="112"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVEMPH_LOV" RecordGroup="GTVEMPH_RG" Title="Function Emphasis Validation (GTVEMPH)" Width="575">
+		<Columns>
+			<Column DataMember="GTVEMPH_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="88"/>
+			<Column DataMember="GTVEMPH_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVEMPH_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVEMPH_COLL_CODE" Title="Coll" Width="32"/>
+			<Column DataMember="GTVEMPH_DEPT_CODE" Title="Dept" Width="50"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVEQNM_LOV" RecordGroup="GTVEQNM_RG" Title="Event Validation List (GTVEQNM)" Width="575">
+		<Columns>
+			<Column DataMember="GTVEQNM_CODE" ReturnItem="GLOBAL.VALUE" Title="Event Code" Width="250"/>
+			<Column DataMember="GTVEQNM_DESC" Title="Description" Width="300"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVEQPG_LOV" RecordGroup="GTVEQPG_RG" Title="Parameter Group Validation List (GTVEQPG)" Width="575">
+		<Columns>
+			<Column DataMember="GTVEQPG_CODE" ReturnItem="GLOBAL.VALUE" Title="Group Code" Width="226"/>
+			<Column DataMember="GTVEQPG_DESC" Title="Description" Width="278"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVEQPM_LOV" RecordGroup="GTVEQPM_RG" Title="Parameter Validation List (GTVEQPM)" Width="575">
+		<Columns>
+			<Column DataMember="GTVEQPM_CODE" ReturnItem="GLOBAL.VALUE" Title="Parameter Code" Width="10241"/>
+			<Column DataMember="GTVEQPM_DESC" Title="Description" Width="678"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVEQTS_LOV" RecordGroup="GTVEQTS_RG" Title="Target System Validation List (GTVEQTS)" Width="575">
+		<Columns>
+			<Column DataMember="GTVEQTS_CODE" ReturnItem="GLOBAL.VALUE" Title="Target System Code" Width="226"/>
+			<Column DataMember="GTVEQTS_DESC" Title="Description" Width="330"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVEXPN_LOV" RecordGroup="GTVEXPN_RG" Title="Expense Code Validation (GTVEXPN)" Width="575">
+		<Columns>
+			<Column DataMember="GTVEXPN_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVEXPN_DESC" Title="Description" Width="200"/>
+			<Column DataMember="GTVEXPN_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVFEES_LOV" RecordGroup="GTVFEES_RG" Title="Fee Status Validation (GTVFEES)" Width="575">
+		<Columns>
+			<Column DataMember="GTVFEES_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="48"/>
+			<Column DataMember="GTVFEES_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVFEES_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVFEES_PAID_IND" Title="Pd" Width="46"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVFSTA_LOV" RecordGroup="GTVFSTA_RG" Title="Function Status Validation (GTVFSTA)" Width="575">
+		<Columns>
+			<Column DataMember="GTVFSTA_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVFSTA_DESC" Title="Description" Width="150"/>
+			<Column DataMember="GTVFSTA_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVFSTA_ACTIVE_IND" Title="Ac" Width="30"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVFTYP_LOV" RecordGroup="GTVFTYP_RG" Title="Fee Type Code Validation (GTVFTYP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVFTYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="GTVFTYP_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVFTYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVFUNC_LOV" RecordGroup="GTVFUNC_RG" Title="Function Code Validation (GTVFUNC)" Width="575">
+		<Columns>
+			<Column DataMember="GTVFUNC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="104"/>
+			<Column DataMember="GTVFUNC_DESC" Title="Description" Width="487"/>
+			<Column DataMember="GTVFUNC_ETYP_CODE" Title="Etyp" Width="40"/>
+			<Column DataMember="GTVFUNC_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVINSM_LOV" RecordGroup="GTVINSM_RG" Title="Instructional Method Validation (GTVINSM)" Width="575">
+		<Columns>
+			<Column DataMember="GTVINSM_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="55"/>
+			<Column DataMember="GTVINSM_DESC" Title="Description" Width="239"/>
+			<Column DataMember="GTVINSM_ACTIVITY_DATE" Title="Activity Date" Width="108"/>
+			<Column DataMember="GTVINSM_USER_ID" Width="90"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVLETR_LOV" RecordGroup="GTVLETR_RG" Title="Letter Code Validation (GTVLETR)" Width="575">
+		<Columns>
+			<Column DataMember="GTVLETR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="140"/>
+			<Column DataMember="GTVLETR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVLETR_DUPL_IND" Title="Dup" Width="40"/>
+			<Column DataMember="GTVLETR_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVLETR_PRINT_COMMAND" Title="Print Cmd" Width="88"/>
+			<Column DataMember="GTVLETR_LETR_CODE_ALT" Title="Alt Letter Code" Width="128"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVMAIL_LOV" RecordGroup="GTVMAIL_RG" Title="Mail Code Validation (GTVMAIL)" Width="575">
+		<Columns>
+			<Column DataMember="GTVMAIL_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="GTVMAIL_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVMAIL_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVMENU_LOV" RecordGroup="GTVMENU_RG" Title="Menu Code Validation (GTVMENU)" Width="575">
+		<Columns>
+			<Column DataMember="GTVMENU_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="88"/>
+			<Column DataMember="GTVMENU_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVMENU_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVMTYP_LOV" RecordGroup="GTVMTYP_RG" Title="Meeting Type Validation (GTVMTYP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVMTYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="61"/>
+			<Column DataMember="GTVMTYP_DESC" Title="Description" Width="239"/>
+			<Column DataMember="GTVMTYP_SYS_REQ_IND" Title="Sys Req" Width="45"/>
+			<Column DataMember="GTVMTYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVMTYP_USER_ID" Title="User" Width="108"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVNTYP_LOV" RecordGroup="GTVNTYP_RG" Title="Name Type Validation (GTVNTYP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVNTYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVNTYP_DESC" Title="Desc" Width="247"/>
+			<Column DataMember="GTVNTYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVNTYP_LOV_IDNAME" RecordGroup="GTVNTYP_RG_IDNAME" Title="Name Type Validation (GTVNTYP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVNTYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVNTYP_DESC" Title="Desc" Width="247"/>
+			<Column DataMember="GTVNTYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVOBJT_LOV" RecordGroup="GTVOBJT_RG" Title="Object Type Validation (GTVOBJT)" Width="575">
+		<Columns>
+			<Column DataMember="GTVOBJT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="80"/>
+			<Column DataMember="GTVOBJT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVOBJT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVPARA_LOV" RecordGroup="GTVPARA_RG" Title="Paragraph Validation (GTVPARA)" Width="575">
+		<Columns>
+			<Column DataMember="GTVPARA_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="64"/>
+			<Column DataMember="GTVPARA_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVPARA_COMMENT" Title="Comment" Width="500"/>
+			<Column DataMember="GTVPARA_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVPRNT_LOV" RecordGroup="GTVPRNT_RG" Title="Printer Validation (GTVPRNT)" Width="575">
+		<Columns>
+			<Column DataMember="GTVPRNT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="247"/>
+			<Column DataMember="GTVPRNT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVPRNT_PRINTER_COMMAND" Title="Printer Command" Width="500"/>
+			<Column DataMember="GTVPRNT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVPTYP_LOV" RecordGroup="GTVPTYP_RG" Title="Participant Type Code Validation (GTVPTYP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVPTYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="48"/>
+			<Column DataMember="GTVPTYP_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVPTYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVPURP_LOV" RecordGroup="GTVPURP_RG" Title="Function Purpose Validation (GTVPURP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVPURP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="100"/>
+			<Column DataMember="GTVPURP_DESC" Title="Description" Width="300"/>
+			<Column DataMember="GTVPURP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVRATE_LOV" RecordGroup="GTVRATE_RG" Title="Rate Code Validation (GTVRATE)" Width="575">
+		<Columns>
+			<Column DataMember="GTVRATE_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="GTVRATE_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVRATE_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVREVN_LOV" RecordGroup="GTVREVN_RG" Title="Function Revenue Validation (GTVREVN)" Width="575">
+		<Columns>
+			<Column DataMember="GTVREVN_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVREVN_DESC" Title="Description" Width="200"/>
+			<Column DataMember="GTVREVN_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVRSVP_LOV" RecordGroup="GTVRSVP_RG" Title="RSVP Code Validation (GTVRSVP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVRSVP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="GTVRSVP_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVRSVP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVRSVP_PLAN_TO_ATTEND_IND" Title="PA" Width="46"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVRTNG_LOV" RecordGroup="GTVRTNG_RG" Title="Rating Code Validation (GTVRTNG)" Width="575">
+		<Columns>
+			<Column DataMember="GTVRTNG_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="GTVRTNG_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVRTNG_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSRCE_LOV" RecordGroup="GTVSRCE_RG" Title="Visa Source Code (GTVSRCE)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSRCE_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="72"/>
+			<Column DataMember="GTVSRCE_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVSRCE_ACTIVITY_DATE" Title="Activity date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSUBJ_LOV" RecordGroup="GTVSUBJ_RG" Title="Subject Index Validation (GTVSUBJ)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSUBJ_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="GTVSUBJ_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVSUBJ_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVSYSI_LOV" RecordGroup="GTVSYSI_RG" Title="System Indicator Validation (GTVSYSI)" Width="575">
+		<Columns>
+			<Column DataMember="GTVSYSI_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="GTVSYSI_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVSYSI_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVTARG_LOV" RecordGroup="GTVTARG_RG" Title="Target Audience Validation (GTVTARG)" Width="575">
+		<Columns>
+			<Column DataMember="GTVTARG_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="48"/>
+			<Column DataMember="GTVTARG_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVTARG_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVTASK_LOV" RecordGroup="GTVTASK_RG" Title="Function Task Code (GTVTASK)" Width="575">
+		<Columns>
+			<Column DataMember="GTVTASK_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="88"/>
+			<Column DataMember="GTVTASK_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVTASK_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVTASK_TTYP_CODE" Title="Type" Width="55"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVTSTA_LOV" RecordGroup="GTVTSTA_RG" Title="Task Status Validation (GTVTSTA)" Width="575">
+		<Columns>
+			<Column DataMember="GTVTSTA_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="GTVTSTA_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVTSTA_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVTSTA_COMPL_IND" Title="CI" Width="16"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVTTYP_LOV" RecordGroup="GTVTTYP_RG" Title="Task Type Validation (GTVTTYP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVTTYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="48"/>
+			<Column DataMember="GTVTTYP_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVTTYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVUOMS_LOV" RecordGroup="GTVUOMS_RG" Title="Unit of Measure Validation (GTVUOMS)" Width="575">
+		<Columns>
+			<Column DataMember="GTVUOMS_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVUOMS_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVUOMS_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVUOMS_USER_ID" Title="User ID" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVADID_LOV" RecordGroup="GTVADID_RG" Title="Additional Identification Type Validation (GTVADID)" Width="575">
+		<Columns>
+			<Column DataMember="GTVADID_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVADID_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVADID_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVVISS_LOV" RecordGroup="GTVVISS_RG" Title="Visa Issuing Authority Code (GTVVISS)" Width="575">
+		<Columns>
+			<Column DataMember="GTVVISS_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="72"/>
+			<Column DataMember="GTVVISS_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVVISS_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVWFED_LOV" RecordGroup="GTVWFED_RG" Title="Electronic Document Type List (GTVWFED)" Width="575">
+		<Columns>
+			<Column DataMember="GTVWFED_CODE" ReturnItem="GLOBAL.VALUE" Title="Document Type" Width="160"/>
+			<Column DataMember="GTVWFED_DESC" Title="Description" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVZIPC_LOV" RecordGroup="GTVZIPC_RG" Title="Zip Code Validation (GTVZIPC)" Width="575">
+		<Columns>
+			<Column DataMember="GTVZIPC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="88"/>
+			<Column DataMember="GTVZIPC_CITY" Title="City" Width="168"/>
+			<Column DataMember="GTVZIPC_STAT_CODE" Title="St " Width="45"/>
+			<Column DataMember="GTVZIPC_NATN_CODE" Title="Nation" Width="48"/>
+			<Column DataMember="GTVZIPC_ACTIVITY_DATE" Title="Activity Date" Width="100"/>
+			<Column DataMember="GTVZIPC_USER_ID" Title="User ID" Width="150"/>
+			<Column DataMember="GTVZIPC_CNTY_CODE" Title="County" Width="60"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUBBHLP_BLK_LOV" RecordGroup="GUBBHLP_BLK_RG" Title="Block Names for the Form" Width="575">
+		<Columns>
+			<Column DataMember="GUBBHLP_BLOCK_NAME" ReturnItem="GLOBAL.VALUE" Title="Block Name" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUBBHLP_FLD_LOV" RecordGroup="GUBBHLP_FLD_RG" Title="Field Name for the Block" Width="575">
+		<Columns>
+			<Column DataMember="GUBBHLP_FIELD_NAME" ReturnItem="GLOBAL.VALUE" Title="Field Name" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUBBHLP_FRM_LOV" RecordGroup="GUBBHLP_FRM_RG" Title="Form List for Banner Help" Width="575">
+		<Columns>
+			<Column DataMember="GUBBHLP_FORM_NAME" ReturnItem="GLOBAL.VALUE" Title="Form Name" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUBLHLP_BLK_LOV" RecordGroup="GUBLHLP_BLK_RG" Title="Block Name for the  Form" Width="575">
+		<Columns>
+			<Column DataMember="GUBLHLP_BLOCK_NAME" ReturnItem="GLOBAL.VALUE" Title="Block Name" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUBLHLP_FLD_LOV" RecordGroup="GUBLHLP_FLD_RG" Title="Field Name for the Block" Width="575">
+		<Columns>
+			<Column DataMember="GUBLHLP_FIELD_NAME" ReturnItem="GLOBAL.VALUE" Title="Field Name" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUBLHLP_FRM_LOV" RecordGroup="GUBLHLP_FRM_RG" Title="Form List for Local Help" Width="575">
+		<Columns>
+			<Column DataMember="GUBLHLP_FORM_NAME" ReturnItem="GLOBAL.VALUE" Title="Form Name" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUBOBJS_LOV" RecordGroup="GUBOBJS_RG" Title="List of Objects" Width="575">
+		<Columns>
+			<Column DataMember="GUBOBJS_NAME" ReturnItem="GLOBAL.VALUE" Title="Object" Width="120"/>
+			<Column DataMember="GUBOBJS_DESC" Title="Description" Width="400"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GXVBANK_LOV" RecordGroup="GXVBANK_RG" Title="Bank Codes" Width="575">
+		<Columns>
+			<Column DataMember="GXVBANK_COAS_CODE" Title="COA" Width="40"/>
+			<Column DataMember="GXVBANK_BANK_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="44"/>
+			<Column DataMember="GXVBANK_ACCT_NAME" ReturnItem="GLOBAL.VALUE_DESC" Title="Bank Account Name" Width="137"/>
+			<Column DataMember="GXVBANK_STATUS_IND" Title="Status" Width="80"/>
+			<Column DataMember="ICRGGQ_0" Title="Eff Date" Width="96"/>
+			<Column DataMember="ICRGGQ_1" Title="Term Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVACAT_LOV" RecordGroup="STVACAT_RG" Title="Award Catagory Validation (STVACAT)" Width="575">
+		<Columns>
+			<Column DataMember="STVACAT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVACAT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVACAT_SYSTEM_REQ_IND" Title="Sys Req" Width="56"/>
+			<Column DataMember="STVACAT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVACCG_LOV" RecordGroup="STVACCG_RG" Title="Activity Category Validation (STVACCG)" Width="575">
+		<Columns>
+			<Column DataMember="STVACCG_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="48"/>
+			<Column DataMember="STVACCG_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVACCG_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVACTC_LOV" RecordGroup="STVACTC_RG" Title="Activity Validation (STVACTC)" Width="575">
+		<Columns>
+			<Column DataMember="STVACTC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="72"/>
+			<Column DataMember="STVACTC_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVACTC_ACTP_CODE" Title="Type" Width="48"/>
+			<Column DataMember="STVACTC_ACCG_CODE" Title="Category" Width="48"/>
+			<Column DataMember="STVACTC_LEAD_CODE" Title="Lead" Width="48"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVACTP_LOV" RecordGroup="STVACTP_RG" Title="Activity Type Validation (STVACTP)" Width="575">
+		<Columns>
+			<Column DataMember="STVACTP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="48"/>
+			<Column DataMember="STVACTP_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVACTP_SYSTEM_REQ_IND" Title="Sys Req" Width="56"/>
+			<Column DataMember="STVACTP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVACYR_LOV" RecordGroup="STVACYR_RG" Title="Academic Year Validation (STVACYR)" Width="575">
+		<Columns>
+			<Column DataMember="STVACYR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVACYR_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVACYR_SYSREQ_IND" Title="Sys Req" Width="56"/>
+			<Column DataMember="STVACYR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVADMR_LOV" RecordGroup="STVADMR_RG" Title="Admission Request Code Validation (STVADMR)" Width="575">
+		<Columns>
+			<Column DataMember="STVADMR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVADMR_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVADMR_TABLE_NAME" Title="T Name" Width="64"/>
+			<Column DataMember="STVADMR_VR_ELIG_IND" Title="VR Elig" Width="56"/>
+			<Column DataMember="STVADMR_VR_MSG_NO" Title="VR Msg" Width="48"/>
+			<Column DataMember="STVADMR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVASCD_LOV" RecordGroup="STVASCD_RG" Title="Room Assignment Status Code Validation (STVASCD)" Width="575">
+		<Columns>
+			<Column DataMember="STVASCD_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVASCD_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVASCD_COUNT_IN_USAGE" Title="Count In Usage" Width="112"/>
+			<Column DataMember="STVASCD_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVASRC_LOV" RecordGroup="STVASRC_RG" Title="Address Source Code Validation (STVASRC)" Width="575">
+		<Columns>
+			<Column DataMember="STVASRC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVASRC_DESC" Title="Description" Width="147"/>
+			<Column DataMember="STVASRC_ACTIVITY_DATE" Title="Activity Date" Width="50"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVASTY_LOV" RecordGroup="STVASTY_RG" Title="Assignment Type Code Validation (STVASTY)" Width="575">
+		<Columns>
+			<Column DataMember="STVASTY_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVASTY_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVASTY_ACTIVITY_DATE" Title="ACTIVITY DATE" Width="112"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVATYP_LOV" RecordGroup="STVATYP_RG" Title="Address Type Validation (STVATYP)" Width="575">
+		<Columns>
+			<Column DataMember="STVATYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="50"/>
+			<Column DataMember="STVATYP_DESC" Title="Desc" Width="247"/>
+			<Column DataMember="STVATYP_SYSTEM_REQ_IND" Title="Sys Req" Width="56"/>
+			<Column DataMember="STVATYP_TELE_CODE" Title="Tele Code" Width="72"/>
+			<Column DataMember="STVATYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVBCHR_LOV" RecordGroup="STVBCHR_RG" Title="Background Institution Characteristics Validation (STVBCHR)" Width="575">
+		<Columns>
+			<Column DataMember="STVBCHR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVBCHR_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVBCHR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVBLDG_LOV" RecordGroup="STVBLDG_RG" Title="Building Code Validation (STVBLDG)" Width="575">
+		<Columns>
+			<Column DataMember="STVBLDG_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="STVBLDG_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVBLDG_VR_MSG_NO" Title="VR Msg" Width="56"/>
+			<Column DataMember="STVBLDG_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVCAMP_LOV" RecordGroup="STVCAMP_RG" Title="Campus Validation (STVCAMP)" Width="575">
+		<Columns>
+			<Column DataMember="STVCAMP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVCAMP_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVCAMP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVCIPC_LOV" RecordGroup="STVCIPC_RG" Title="CIP Code Validation (STVCIPC)" Width="575">
+		<Columns>
+			<Column DataMember="STVCIPC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="STVCIPC_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVCIPC_CIPC_A_IND" Title="Ind A" Width="48"/>
+			<Column DataMember="STVCIPC_CIPC_B_IND" Title="Ind B" Width="48"/>
+			<Column DataMember="STVCIPC_CIPC_C_IND" Title="Ind C" Width="48"/>
+			<Column DataMember="STVCIPC_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVCNTY_LOV" RecordGroup="STVCNTY_RG" Title="County Code Validation (STVCNTY)" Width="575">
+		<Columns>
+			<Column DataMember="STVCNTY_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVCNTY_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="48"/>
+			<Column DataMember="STVCNTY_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVCOLL_LOV" RecordGroup="STVCOLL_RG" Title="College Validation (STVCOLL)" Width="575">
+		<Columns>
+			<Column DataMember="STVCOLL_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVCOLL_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVCOLL_VR_MSG_NO" Title="VR Msg" Width="56"/>
+			<Column DataMember="STVCOLL_SYSTEM_REQ_IND" Title="Sys Req" Width="64"/>
+			<Column DataMember="STVCOLL_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVCOMF_LOV" RecordGroup="STVCOMF_RG" Title="Committee/Service Function Code Validation (STVCOMF)" Width="575">
+		<Columns>
+			<Column DataMember="STVCOMF_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="STVCOMF_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVCOMF_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVCOMS_LOV" RecordGroup="STVCOMS_RG" Title="Committee/Service Status Code Validation (STVCOMS)" Width="575">
+		<Columns>
+			<Column DataMember="STVCOMS_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="STVCOMS_DESC" Title="Description" Width="88"/>
+			<Column DataMember="STVCOMS_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVCOMT_LOV" RecordGroup="STVCOMT_RG" Title="Committee/Service Type Validation (STVCOMT)" Width="575">
+		<Columns>
+			<Column DataMember="STVCOMT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="STVCOMT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVCOMT_TRANS_PRINT" Title="Transcript Print" Width="128"/>
+			<Column DataMember="STVCOMT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVDAYS_LOV" RecordGroup="STVDAYS_RG" Title="Day of Week Validation (STVDAYS)" Width="575">
+		<Columns>
+			<Column DataMember="STVDAYS_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="STVDAYS_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVDAYS_NUMBER" Title="Number" Width="56"/>
+			<Column DataMember="STVDAYS_SYSREQ_IND" Title="Sys Req" Width="64"/>
+			<Column DataMember="STVDAYS_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVDEGC_LOV" RecordGroup="STVDEGC_RG" Title="Degree Code Validation (STVDEGC)" Width="575">
+		<Columns>
+			<Column DataMember="STVDEGC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="STVDEGC_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVDEGC_FA_COUNT_IND" Title="Count in FinAid" Width="120"/>
+			<Column DataMember="STVDEGC_DLEV_CODE" Title="Degree Lvl" Width="80"/>
+			<Column DataMember="STVDEGC_ACAT_CODE" Title="Degree Ctgry" Width="96"/>
+			<Column DataMember="STVDEGC_VR_MSG_NO" Title="VR Msg" Width="56"/>
+			<Column DataMember="STVDEGC_SYSTEM_REQ_IND" Title="Sys Req" Width="64"/>
+			<Column DataMember="STVDEGC_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVDEPT_LOV" RecordGroup="STVDEPT_RG" Title="Department Validation (STVDEPT)" Width="575">
+		<Columns>
+			<Column DataMember="STVDEPT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="50"/>
+			<Column DataMember="STVDEPT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVDEPT_SYSTEM_REQ_IND" Title="Sys Req" Width="64"/>
+			<Column DataMember="STVDEPT_VR_MSG_NO" Title="VR Mesg" Width="80"/>
+			<Column DataMember="STVDEPT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVDISA_LOV" RecordGroup="STVDISA_RG" Title="Disability Type Validation (STVDISA)" Width="575">
+		<Columns>
+			<Column DataMember="STVDISA_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVDISA_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVDISA_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVDLEV_LOV" RecordGroup="STVDLEV_RG" Title="Degree Level Validation (STVDLEV)" Width="575">
+		<Columns>
+			<Column DataMember="STVDLEV_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVDLEV_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVDLEV_NUMERIC_VALUE" Title="Num Value" Width="80"/>
+			<Column DataMember="STVDLEV_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVDPLM_LOV" RecordGroup="STVDPLM_RG" Title="Diploma Type Validation (STVDPLM)" Width="575">
+		<Columns>
+			<Column DataMember="STVDPLM_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVDPLM_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVDPLM_EDI_EQUIV" Title="EDI Equiv" Width="72"/>
+			<Column DataMember="STVDPLM_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVEMPT_LOV" RecordGroup="STVEMPT_RG" Title="Employment Type Validation (STVEMPT)" Width="575">
+		<Columns>
+			<Column DataMember="STVEMPT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVEMPT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVEMPT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVETCT_LOV" RecordGroup="STVETCT_RG" Title="IPEDS Ethnic Validation (STVETCT)" Width="575">
+		<Columns>
+			<Column DataMember="STVETCT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVETCT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVETCT_SYSTEM_REQ_IND" Title="Sys Req" Width="64"/>
+			<Column DataMember="STVETCT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVETYP_LOV" RecordGroup="STVETYP_RG" Title="Event/Function Type Validation (STVETYP)" Width="575">
+		<Columns>
+			<Column DataMember="STVETYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="48"/>
+			<Column DataMember="STVETYP_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVETYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVETHN_LOV" RecordGroup="STVETHN_RG" Title="Ethnic Code Validation (STVETHN)" Width="575">
+		<Columns>
+			<Column DataMember="STVETHN_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVETHN_DESC" Title="Description" Width="200"/>
+			<Column DataMember="STVETHN_ETCT_CODE" Title="IPEDS" Width="48"/>
+			<Column DataMember="STVETHN_EDI_EQUIV" Title="EDI Equiv" Width="80"/>
+			<Column DataMember="STVETHN_LMS_EQUIV" Title="LMS Equiv" Width="80"/>
+			<Column DataMember="STVETHN_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVFCNT_LOV" RecordGroup="STVFCNT_RG" Title="Faculty Contract Type Code (STVFCNT)" Width="575">
+		<Columns>
+			<Column DataMember="STVFCNT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVFCNT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVFCNT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVGEOD_LOV" RecordGroup="STVGEOD_RG" Title="Geographic Region Division Validation (STVGEOD)" Width="575">
+		<Columns>
+			<Column DataMember="STVGEOD_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="88"/>
+			<Column DataMember="STVGEOD_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVGEOD_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVGEOR_LOV" RecordGroup="STVGEOR_RG" Title="Geographic Region Validation (STVGEOR)" Width="575">
+		<Columns>
+			<Column DataMember="STVGEOR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="88"/>
+			<Column DataMember="STVGEOR_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVGEOR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVHLDD_LOV" RecordGroup="STVHLDD_RG" Title="Hold Type Codes (STVHLDD)" Width="575">
+		<Columns>
+			<Column DataMember="STVHLDD_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="27"/>
+			<Column DataMember="STVHLDD_DESC" Title="Desc" Width="278"/>
+			<Column DataMember="STVHLDD_REG_HOLD_IND" Title="Reg Hold" Width="66"/>
+			<Column DataMember="STVHLDD_ENV_HOLD_IND" Title="Env Hold" Width="66"/>
+			<Column DataMember="STVHLDD_TRANS_HOLD_IND" Title="Trans Hold" Width="66"/>
+			<Column DataMember="STVHLDD_GRAD_HOLD_IND" Title="Grad Hold" Width="66"/>
+			<Column DataMember="STVHLDD_GRADE_HOLD_IND" Title="Grade Hold" Width="66"/>
+			<Column DataMember="STVHLDD_AR_HOLD_IND" Title="AR Hold" Width="66"/>
+			<Column DataMember="STVHLDD_APPLICATION_HOLD_IND" Title="Application Hold" Width="66"/>
+			<Column DataMember="STVHLDD_COMPLIANCE_HOLD_IND" Title="Compliance Hold" Width="66"/>
+			<Column DataMember="STVHLDD_VR_MSG_NO" Title="VR Msg No" Width="93"/>
+			<Column DataMember="STVHLDD_DISP_WEB_IND" Title="Disp Web" Width="66"/>
+			<Column DataMember="STVHLDD_ACTIVITY_DATE" Title="Activity Date" Width="108"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVHOND_LOV" RecordGroup="STVHOND_RG" Title="Departmental Honors Code Validation (STVHOND)" Width="575">
+		<Columns>
+			<Column DataMember="STVHOND_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="STVHOND_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVHOND_TRANSC_PRT_IND" Title="Transcript Print" Width="128"/>
+			<Column DataMember="STVHOND_COMMENCE_PRT_IND" Title="Commencement Print" Width="144"/>
+			<Column DataMember="STVHOND_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVHONR_LOV" RecordGroup="STVHONR_RG" Title="Institutional Honors Code Validation (STVHONR)" Width="575">
+		<Columns>
+			<Column DataMember="STVHONR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="STVHONR_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVHONR_TRANSC_PRT_IND" Title="Tran Print" Width="88"/>
+			<Column DataMember="STVHONR_COMMENCE_PRT_IND" Title="Commence Print" Width="112"/>
+			<Column DataMember="STVHONR_EDI_EQUIV" Title="EDI Equiv" Width="80"/>
+			<Column DataMember="STVHONR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVINIT_LOV" RecordGroup="STVINIT_RG" Title="Initials Code Validation (STVINIT)" Width="575">
+		<Columns>
+			<Column DataMember="STVINIT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="60"/>
+			<Column DataMember="STVINIT_DESC" Title="Full Name" Width="250"/>
+			<Column DataMember="STVINIT_TITLE1" Title="Title1" Width="250"/>
+			<Column DataMember="STVINIT_TITLE2" Title="Title2" Width="250"/>
+			<Column DataMember="STVINIT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVLANG_LOV" RecordGroup="STVLANG_RG" Title="Native Language Validation (STVLANG)" Width="575">
+		<Columns>
+			<Column DataMember="STVLANG_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVLANG_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVLANG_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVLEAD_LOV" RecordGroup="STVLEAD_RG" Title="Leadership Validation (STVLEAD)" Width="575">
+		<Columns>
+			<Column DataMember="STVLEAD_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="48"/>
+			<Column DataMember="STVLEAD_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVLEAD_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVLEVL_LOV" RecordGroup="STVLEVL_RG" Title="Level Code Validation (STVLEVL)" Width="575">
+		<Columns>
+			<Column DataMember="STVLEVL_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVLEVL_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVLEVL_CEU_IND" Title="CEU" Width="32"/>
+			<Column DataMember="STVLEVL_VR_MSG_NO" Title="VR Msg " Width="60"/>
+			<Column DataMember="STVLEVL_SYSTEM_REQ_IND" Title="Sys Req" Width="64"/>
+			<Column DataMember="STVLEVL_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVLGCY_LOV" RecordGroup="STVLGCY_RG" Title="Legacy Code Validation (STVLGCY)" Width="575">
+		<Columns>
+			<Column DataMember="STVLGCY_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVLGCY_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVLGCY_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVMAJR_LOV" RecordGroup="STVMAJR_RG" Title="Major, Minor, Concentration (STVMAJR)" Width="575">
+		<Columns>
+			<Column DataMember="STVMAJR_CODE" ReturnItem="GLOBAL.VALUE" Title="Major" Width="50"/>
+			<Column DataMember="STVMAJR_DESC" Title="Desc" Width="247"/>
+			<Column DataMember="STVMAJR_CIPC_CODE" Title="Cipc" Width="95"/>
+			<Column DataMember="STVMAJR_VALID_MAJOR_IND" Title="Major Ind" Width="120"/>
+			<Column DataMember="STVMAJR_VALID_MINOR_IND" Title="Minor Ind" Width="120"/>
+			<Column DataMember="STVMAJR_VALID_CONCENTRATN_IND" Title="Conc Ind" Width="150"/>
+			<Column DataMember="STVMAJR_OCCUPATION_IND" Title="Occ Ind" Width="120"/>
+			<Column DataMember="STVMAJR_AID_ELIGIBILITY_IND" Title="Aid Ind" Width="170"/>
+			<Column DataMember="STVMAJR_SYSTEM_REQ_IND" Title="Sys Req Ind" Width="120"/>
+			<Column DataMember="STVMAJR_VR_MSG_NO" Title="Vr Msg No" Width="80"/>
+			<Column DataMember="STVMAJR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVMATL_LOV" RecordGroup="STVMATL_RG" Title="Material Code Validation (STVMATL)" Width="575">
+		<Columns>
+			<Column DataMember="STVMATL_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVMATL_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVMATL_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVMRTL_LOV" RecordGroup="STVMRTL_RG" Title="Marital Status Validation (STVMRTL)" Width="575">
+		<Columns>
+			<Column DataMember="STVMRTL_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVMRTL_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVMRTL_FA_CONV_CODE" Title="FinAid Equiv" Width="96"/>
+			<Column DataMember="STVMRTL_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVNATN_LOV" RecordGroup="STVNATN_RG" Title="Nation Validation (STVNATN)" Width="575">
+		<Columns>
+			<Column DataMember="STVNATN_NATION" Title="Description" Width="239"/>
+			<Column DataMember="STVNATN_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="48"/>
+			<Column DataMember="STVNATN_EDI_EQUIV" Title="EDI Equiv" Width="80"/>
+			<Column DataMember="STVNATN_LMS_EQUIV" Title="LMS Equiv" Width="80"/>
+			<Column DataMember="STVNATN_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVRELG_LOV" RecordGroup="STVRELG_RG" Title="Religion Code Validation (STVRELG)" Width="575">
+		<Columns>
+			<Column DataMember="STVRELG_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVRELG_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVRELG_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVSBGI_LOV" RecordGroup="STVSBGI_RG" Title="Source/Background Inst Validation (STVSBGI)" Width="575">
+		<Columns>
+			<Column DataMember="STVSBGI_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="STVSBGI_TYPE_IND" Title="Type Ind" Width="64"/>
+			<Column DataMember="STVSBGI_SRCE_IND" Title="Srce Ind" Width="64"/>
+			<Column DataMember="STVSBGI_DESC" Title="Desc" Width="247"/>
+			<Column DataMember="STVSBGI_ADMR_CODE" Title="Admr" Width="40"/>
+			<Column DataMember="STVSBGI_EDI_CAPABLE" Title="Edi" Width="32"/>
+			<Column DataMember="STVSBGI_FICE" Title="Fice" Width="56"/>
+			<Column DataMember="STVSBGI_VR_MSG_NO" Title="Vr Msg No" Width="72"/>
+			<Column DataMember="STVSBGI_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVSTAT_LOV" RecordGroup="STVSTAT_RG" Title="State/Province Code Validation (STVSTAT)" Width="575">
+		<Columns>
+			<Column DataMember="STVSTAT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVSTAT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVSTAT_EDI_EQUIV" Title="EDI Equiv" Width="80"/>
+			<Column DataMember="STVSTAT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVSTAT_LOV_IDNAME" RecordGroup="STVSTAT_RG_IDNAME" Title="State/Province Code Validation (STVSTAT)" Width="575">
+		<Columns>
+			<Column DataMember="STVSTAT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVSTAT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVSTAT_EDI_EQUIV" Title="EDI Equiv" Width="80"/>
+			<Column DataMember="STVSTAT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVTERM_LOV" RecordGroup="STVTERM_RG" Title="Term Code Validation (STVTERM)" Width="575">
+		<Columns>
+			<Column DataMember="STVTERM_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="STVTERM_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVTERM_START_DATE" Title="Start Date" Width="96"/>
+			<Column DataMember="STVTERM_END_DATE" Title="End Date" Width="96"/>
+			<Column DataMember="STVTERM_FA_PROC_YR" Title="FinAid Yr" Width="80"/>
+			<Column DataMember="STVTERM_FA_TERM" Title="FinAid Term" Width="96"/>
+			<Column DataMember="STVTERM_FA_PERIOD" Title="FinAid Start Period" Width="160"/>
+			<Column DataMember="STVTERM_FA_END_PERIOD" Title="FinAid End Period" Width="144"/>
+			<Column DataMember="STVTERM_TRMT_CODE" Title="Term Type" Width="80"/>
+			<Column DataMember="STVTERM_ACYR_CODE" Title="Acad Yr" Width="64"/>
+			<Column DataMember="STVTERM_HOUSING_START_DATE" Title="Housing Start" Width="112"/>
+			<Column DataMember="STVTERM_HOUSING_END_DATE" Title="Housing End" Width="96"/>
+			<Column DataMember="STVTERM_SYSTEM_REQ_IND" Title="Sys Req" Width="64"/>
+			<Column DataMember="STVTERM_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVTESC_LOV" RecordGroup="STVTESC_RG" Title="Test Code Validation (STVTESC)" Width="575">
+		<Columns>
+			<Column DataMember="STVTESC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVTESC_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVTESC_NO_POSITIONS" Title="Positions" Width="72"/>
+			<Column DataMember="STVTESC_DATA_TYPE" Title="Data Type" Width="72"/>
+			<Column DataMember="STVTESC_MIN_VALUE" Title="Min" Width="48"/>
+			<Column DataMember="STVTESC_MAX_VALUE" Title="Max" Width="48"/>
+			<Column DataMember="STVTESC_ADMR_CODE" Title="Admr" Width="40"/>
+			<Column DataMember="STVTESC_MIS_CODE" Title="MIS" Width="56"/>
+			<Column DataMember="STVTESC_ASSESSMENT_FORM" Title="AD" Width="16"/>
+			<Column DataMember="STVTESC_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVCITZ_LOV" RecordGroup="STVCITZ_RG" Title="Citizen Type Validation (STVCITZ)" Width="575">
+		<Columns>
+			<Column DataMember="STVCITZ_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="STVCITZ_DESC" Title="Desc" Width="247"/>
+			<Column DataMember="STVCITZ_CITIZEN_IND" Title="Citizen" Width="64"/>
+			<Column DataMember="STVCITZ_EDI_EQUIV" Title="EDI Equiv" Width="72"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVPRCD_LOV" RecordGroup="STVPRCD_RG" Title="Phone Rate Code Validation (STVPRCD)" Width="575">
+		<Columns>
+			<Column DataMember="STVPRCD_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVPRCD_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVPRCD_MONTHLY_IND" Title="Month" Width="48"/>
+			<Column DataMember="STVPRCD_DAILY_IND" Title="Day" Width="32"/>
+			<Column DataMember="STVPRCD_TERMLY_IND" Title="Term" Width="40"/>
+			<Column DataMember="STVPRCD_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVPENT_LOV" RecordGroup="STVPENT_RG" Title="Port of Entry Validation (STVPENT)" Width="575">
+		<Columns>
+			<Column DataMember="STVPENT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVPENT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVPENT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVORIG_LOV" RecordGroup="STVORIG_RG" Title="Originator Validation (STVORIG)" Width="575">
+		<Columns>
+			<Column DataMember="STVORIG_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVORIG_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVORIG_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVMDEQ_LOV" RecordGroup="STVMDEQ_RG" Title="Medical Equipment Code Validation (STVMDEQ)" Width="575">
+		<Columns>
+			<Column DataMember="STVMDEQ_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVMDEQ_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVMDEQ_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVMEDI_LOV" RecordGroup="STVMEDI_RG" Title="Medical Code Validation (STVMEDI)" Width="575">
+		<Columns>
+			<Column DataMember="STVMEDI_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="93"/>
+			<Column DataMember="STVMEDI_DESC" Title="Desc" Width="247"/>
+			<Column DataMember="STVMEDI_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVRELT_LOV" RecordGroup="STVRELT_RG" Title="Relationship Validation (STVRELT)" Width="575">
+		<Columns>
+			<Column DataMember="STVRELT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVRELT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVRELT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVRDEF_LOV" RecordGroup="STVRDEF_RG" Title="Building/Room Attributes Validation (STVRDEF)" Width="575">
+		<Columns>
+			<Column DataMember="STVRDEF_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVRDEF_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVRDEF_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVSPSR_LOV" RecordGroup="STVSPSR_RG" Title="Disability Service Validation (STVSPSR)" Width="575">
+		<Columns>
+			<Column DataMember="STVSPSR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVSPSR_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVSPSR_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVPTYP_LOV" RecordGroup="STVPTYP_RG" Title="Person Type Validation (STVPTYP)" Width="575">
+		<Columns>
+			<Column DataMember="STVPTYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVPTYP_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVPTYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVSPON_LOV" RecordGroup="STVSPON_RG" Title="International Sponsor Validation (STVSPON)" Width="575">
+		<Columns>
+			<Column DataMember="STVSPON_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVSPON_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVSPON_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVSITE_LOV" RecordGroup="STVSITE_RG" Title="Site Validation (STVSITE)" Width="575">
+		<Columns>
+			<Column DataMember="STVSITE_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVSITE_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVSITE_STREET_ADDR1" Title="Address Line 1" Width="247"/>
+			<Column DataMember="STVSITE_STREET_ADDR2" Title="Address Line 2" Width="247"/>
+			<Column DataMember="STVSITE_STREET_ADDR3" Title="Address Line 3" Width="247"/>
+			<Column DataMember="STVSITE_CITY" Title="City" Width="168"/>
+			<Column DataMember="STVSITE_STATE" Title="State" Width="48"/>
+			<Column DataMember="STVSITE_ZIPC" Title="Zip" Width="88"/>
+			<Column DataMember="STVSITE_NATN_CODE" Title="Nation" Width="56"/>
+			<Column DataMember="STVSITE_FOREIGN_COUNTRY" Title="Nation Info" Width="231"/>
+			<Column DataMember="STVSITE_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVRRCD_LOV" RecordGroup="STVRRCD_RG" Title="Room Rate Code Validation (STVRRCD)" Width="575">
+		<Columns>
+			<Column DataMember="STVRRCD_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVRRCD_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVRRCD_MONTHLY_IND" Title="Month" Width="48"/>
+			<Column DataMember="STVRRCD_DAILY_IND" Title="Day" Width="32"/>
+			<Column DataMember="STVRRCD_TERMLY_IND" Title="Term" Width="16"/>
+			<Column DataMember="STVRRCD_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVRMST_LOV" RecordGroup="STVRMST_RG" Title="Room Status Code Validation (STVRMST)" Width="575">
+		<Columns>
+			<Column DataMember="STVRMST_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVRMST_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVRMST_INACT_IND" Title="Inactive" Width="72"/>
+			<Column DataMember="STVRMST_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVTELE_LOV" RecordGroup="STVTELE_RG" Title="Telephone Type Validation (STVTELE)" Width="575">
+		<Columns>
+			<Column DataMember="STVTELE_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVTELE_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVTELE_ACTIVITY_DATE" Title="Activity Date" Width="74"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVSUBJ_LOV" RecordGroup="STVSUBJ_RG" Title="Subject Validation (STVSUBJ)" Width="575">
+		<Columns>
+			<Column DataMember="STVSUBJ_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVSUBJ_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVSUBJ_VR_MSG_NO" Title="VR Msg" Width="56"/>
+			<Column DataMember="STVSUBJ_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVDICD_LOV" RecordGroup="GTVDICD_RG" Title="District/Division Code Validation (GTVDICD)" Width="575">
+		<Columns>
+			<Column DataMember="GTVDICD_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="GTVDICD_DESC" Title="Description" Width="247"/>
+			<Column DataMember="GTVDICD_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVVTYP_LOV" RecordGroup="STVVTYP_RG" Title="Visa Type Code (STVVTYP)" Width="575">
+		<Columns>
+			<Column DataMember="STVVTYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Stvvtyp_Code" Width="24"/>
+			<Column DataMember="STVVTYP_DESC" Title="Desc" Width="247"/>
+			<Column DataMember="STVVTYP_ADMR_CODE" Title="Admr Code" Width="72"/>
+			<Column DataMember="STVVTYP_NON_RES_IND" Title="Non Res Ind" Width="88"/>
+			<Column DataMember="STVVTYP_VR_MSG_NO" Title="Vr Msg No" Width="72"/>
+			<Column DataMember="STVVTYP_STATSCAN_CDE2" Title="Statscan" Width="64"/>
+			<Column DataMember="STVVTYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUROPTM_LOV" RecordGroup="GUROPTM_RG" Title="Option Menu" Width="575">
+		<Columns>
+			<Column DataMember="GUROPTM_NAME1_DESC" Width="487"/>
+			<Column DataMember="GUROPTM_NAME1" ReturnItem="GLOBAL.GUROPTM_NAME1" Width="0"/>
+			<Column DataMember="GUROPTM_TYPE_IND" ReturnItem="GLOBAL.GUROPTM_TYPE_IND" Width="0"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVPROC_LOV" RecordGroup="GTVPROC_RG" Title="Process Code (GTVPROC)" Width="575">
+		<Columns>
+			<Column DataMember="GTVPROC_CODE" ReturnItem="GLOBAL.VALUE" Title="Gtvproc_Code" Width="77"/>
+			<Column DataMember="GTVPROC_DESC" Title="Gtvproc_Desc" Width="126"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVCCRD_LOV" RecordGroup="GTVCCRD_RG" Title="Credit Card Codes (GTVCCRD)" Width="575">
+		<Columns>
+			<Column DataMember="GTVCCRD_CODE" ReturnItem="GLOBAL.VALUE" Title="Gtvccrd_Code" Width="77"/>
+			<Column DataMember="GTVCCRD_DESC" Title="Gtvccrd_Desc" Width="126"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_ATVGIFT_LOVD" RecordGroup="G$_ATVGIFT_RGD" Title="Credit Card Detail (ATVGIFT)" Width="575">
+		<Columns>
+			<Column DataMember="CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="33"/>
+			<Column DataMember="DESC" Title="Desc" Width="239"/>
+			<Column DataMember="ACT_DATE" Title="Activity Date" Width="64"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVRUCL_LOVD" RecordGroup="G$_FTVRUCL_RGD" Title="Rule Class List (FTVRUCL)" Width="575">
+		<Columns>
+			<Column DataMember="RUCL" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="TITLE" Title="Rule Class Title" Width="287"/>
+			<Column DataMember="TYPE" Title="Rule Type" Width="80"/>
+			<Column DataMember="STAT" Title="Status" Width="56"/>
+			<Column DataMember="EFF" Title="Eff date1" Width="96"/>
+			<Column DataMember="TERM" Title="Term date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVPROG_LOVD" RecordGroup="G$_FTVPROG_RGD" Title="Program Code List (FTVPROG)" Width="575">
+		<Columns>
+			<Column DataMember="COA" ReturnItem="GLOBAL.VALUE" Title="COA" Width="32"/>
+			<Column DataMember="PROG" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="TITLE" Title="Program Title" Width="287"/>
+			<Column DataMember="DATA" Title="Data Entry" Width="88"/>
+			<Column DataMember="STAT" Title="Status" Width="56"/>
+			<Column DataMember="EFF" Title="Eff date" Width="96"/>
+			<Column DataMember="TERM" Title="Term date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVORGN_LOVD" RecordGroup="G$_FTVORGN_RGD" Title="Organization Code List (FTVORGN)" Width="575">
+		<Columns>
+			<Column DataMember="COAS" ReturnItem="GLOBAL.VALUE" Title="COA" Width="32"/>
+			<Column DataMember="ORGN" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="TITLE" Title="Organization Title" Width="287"/>
+			<Column DataMember="DATA" Title="Data Entry" Width="88"/>
+			<Column DataMember="STATUS" Title="Status" Width="56"/>
+			<Column DataMember="EFF" Title="Eff date" Width="96"/>
+			<Column DataMember="TERM" Title="Term date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVLOCN_LOVD" RecordGroup="G$_FTVLOCN_RGD" Title="Location Code List (FTVLOCN)" Width="575">
+		<Columns>
+			<Column DataMember="COA" ReturnItem="GLOBAL.VALUE" Title="COA" Width="32"/>
+			<Column DataMember="LOCN" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="TITLE" Title="Location Title" Width="287"/>
+			<Column DataMember="STAT" Title="Status" Width="56"/>
+			<Column DataMember="EFF" Title="Eff date" Width="96"/>
+			<Column DataMember="TERM" Title="Term date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVFUND_LOVD" RecordGroup="G$_FTVFUND_RGD" Title="Fund Code List (FTVFUND)" Width="575">
+		<Columns>
+			<Column DataMember="COA" ReturnItem="GLOBAL.VALUE" Title="COA" Width="32"/>
+			<Column DataMember="FUND" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="TITLE" ReturnItem="GLOBAL.VALUE_DESC" Title="Fund Title" Width="287"/>
+			<Column DataMember="FTYP" Title="Type " Width="40"/>
+			<Column DataMember="DATA" Title="Data Entry" Width="88"/>
+			<Column DataMember="STAT" Title="Status " Width="56"/>
+			<Column DataMember="POOL" Title="Pool Ind" Width="72"/>
+			<Column DataMember="EFF" Title="Eff date" Width="96"/>
+			<Column DataMember="TERM" Title="Term date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVCOAS_LOVD" RecordGroup="G$_FTVCOAS_RGD" Title="Chart of Accounts List (FTVCOAS)" Width="575">
+		<Columns>
+			<Column DataMember="COAS" ReturnItem="GLOBAL.VALUE" Title="COA" Width="52"/>
+			<Column DataMember="TITLE" ReturnItem="GLOBAL.VALUE_DESC" Title="Title" Width="247"/>
+			<Column DataMember="STATUS" Title="Status" Width="56"/>
+			<Column DataMember="EFF" Title="Eff date" Width="96"/>
+			<Column DataMember="TERM" Title="Term date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVACTV_LOVD" RecordGroup="G$_FTVACTV_RGD" Title="Activity Code List (FTVACTV)" Width="575">
+		<Columns>
+			<Column DataMember="COA" ReturnItem="GLOBAL.VALUE" Title="COA" Width="32"/>
+			<Column DataMember="ACTV" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="TITLE" Title="Activity Title" Width="287"/>
+			<Column DataMember="STAT" Title="Status" Width="56"/>
+			<Column DataMember="EFF" Title="Eff date" Width="96"/>
+			<Column DataMember="TERM" Title="Term date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVACCT_LOVD" RecordGroup="G$_FTVACCT_RGD" Title="Account Code List (FTVACCT)" Width="575">
+		<Columns>
+			<Column DataMember="COA" ReturnItem="GLOBAL.VALUE" Title="COA" Width="32"/>
+			<Column DataMember="ACCT" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="TITLE" ReturnItem="GLOBAL.VALUE_DESC" Title="Account Title" Width="287"/>
+			<Column DataMember="ATYP" Title="Type" Width="40"/>
+			<Column DataMember="DATA" Title="Data Entry" Width="88"/>
+			<Column DataMember="STAT" Title="Status" Width="56"/>
+			<Column DataMember="EFF" Title="Eff date" Width="96"/>
+			<Column DataMember="TERM" Title="Term date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVACCI_LOVD" RecordGroup="G$_FTVACCI_RGD" Title="Account Index Code List (FTVACCI)" Width="575">
+		<Columns>
+			<Column DataMember="COA" ReturnItem="GLOBAL.VALUE" Title="COA" Width="32"/>
+			<Column DataMember="ACCI" ReturnItem="GLOBAL.VALUE" Title="Acct Index Code" Width="128"/>
+			<Column DataMember="TITLE" Title="Account Index Title" Width="287"/>
+			<Column DataMember="STAT" Title="Status" Width="56"/>
+			<Column DataMember="EFF" Title="Eff date" Width="96"/>
+			<Column DataMember="TERM" Title="Term date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVATYP_LOVD" RecordGroup="G$_FTVATYP_RGD" Title="Account Type List (FTVATYP)" Width="575">
+		<Columns>
+			<Column DataMember="COAS" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="ATYP" ReturnItem="GLOBAL.VALUE" Title="Account Type" Width="104"/>
+			<Column DataMember="TITLE" Title="Account Title" Width="287"/>
+			<Column DataMember="PRED" Title="Acct Type Pred" Width="120"/>
+			<Column DataMember="STAT" Title="Status" Width="56"/>
+			<Column DataMember="EFFDT" Title="Eff Date" Width="96"/>
+			<Column DataMember="TERMDT" Title="Term Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVCTYP_LOVD" RecordGroup="G$_FTVCTYP_RGD" Title="Cost Type Code List (FTVCTYP)" Width="575">
+		<Columns>
+			<Column DataMember="CTYP" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="SHORT_DESC" Title="Short Desc" Width="88"/>
+			<Column DataMember="LONG_DESC" Title="Full Desc" Width="287"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_FTVPROJ_LOVD" RecordGroup="G$_FTVPROJ_RGD" Title="Project Code List (FTVPROJ)" Width="575">
+		<Columns>
+			<Column DataMember="PROJ" ReturnItem="GLOBAL.VALUE" Title="Code" Width="72"/>
+			<Column DataMember="DESC" Title="Project Description" Width="287"/>
+			<Column DataMember="EFF" Title="Start Date" Width="96"/>
+			<Column DataMember="TERM" Title="Term Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_GENERIC_LOVD" RecordGroup="G$_GENERIC_RGD" Title="Valid Codes and Descriptions" Width="575">
+		<Columns>
+			<Column DataMember="CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="106"/>
+			<Column DataMember="DESC" ReturnItem="GLOBAL.DESC" Title="Desc" Width="239"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_GXVBANK_LOVD" RecordGroup="G$_GXVBANK_RGD" Title="Bank Account Code List (GXVBANK)" Width="575">
+		<Columns>
+			<Column DataMember="COA" ReturnItem="GLOBAL.VALUE" Title="COA" Width="32"/>
+			<Column DataMember="CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="NAME" ReturnItem="GLOBAL.VALUE_DESC" Title="Bank Account Name" Width="287"/>
+			<Column DataMember="STATUS" Title="Status" Width="56"/>
+			<Column DataMember="EFF" Title="Eff date" Width="96"/>
+			<Column DataMember="TERM" Title="Term date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_GXRDIRD_LOVD" RecordGroup="G$_GXRDIRD_RGD" Title="Direct Deposit Records by Person" Width="575">
+		<Columns>
+			<Column DataMember="ROUT_NUM" ReturnItem="GLOBAL.BANK_CODE" Title="Routing Number" Width="90"/>
+			<Column DataMember="GXVDIRD_DESC" Title="Description" Width="160"/>
+			<Column DataMember="ACCT_NUM" ReturnItem="GLOBAL.BANK_ACCT_NO" Title="Account Number" Width="90"/>
+			<Column DataMember="ACCT_TYPE" ReturnItem="GLOBAL.BANK_ACCT_TYPE" Title="Account Type" Width="90"/>
+			<Column DataMember="PRIORITY" Title="Priority" Width="90"/>
+			<Column DataMember="AMT_PCT" Title="Amt/Percent" Width="90"/>
+			<Column DataMember="ACT_DATE" Title="Activity Date" Width="90"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_ROIAIDY_LOVD" RecordGroup="G$_ROIAIDY_RGD" Title="Aid Year Validation" Width="575">
+		<Columns>
+			<Column DataMember="CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="DESC" Title="Desc" Width="239"/>
+			<Column DataMember="STATUS" Title="Status" Width="16"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_SEARCH_LOV" RecordGroup="G$_SEARCH_RG" Title="Search Results" Width="575">
+		<Columns>
+			<Column DataMember="DESC" ReturnItem="GLOBAL.DESC" Title="Desc" Width="213"/>
+			<Column DataMember="CODE" ReturnItem="GLOBAL.CODE" Title="Code" Width="106"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_TBBDETC_LOVD" RecordGroup="G$_TBBDETC_RGD" Title="Credit Card Detail (TBBDETC)" Width="575">
+		<Columns>
+			<Column DataMember="CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="DESC" Title="Desc" Width="239"/>
+			<Column DataMember="DCAT" Title="Category" Width="47"/>
+			<Column DataMember="PRIORITY" Title="Priority" Width="47"/>
+			<Column DataMember="RECEIPT_IND" Title="Receipt" Width="47"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVDADD_LOV" RecordGroup="GTVDADD_RG" Title="Add-In Code Validation (GTVDADD)" Width="575">
+		<Columns>
+			<Column DataMember="GTVDADD_CODE" ReturnItem="GLOBAL.VALUE" Title="Addin Code" Width="128"/>
+			<Column DataMember="GTVDADD_DESC" Title="Description" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVDPRP_LOV" RecordGroup="GTVDPRP_RG" Title="Property Code Validation (GTVDPRP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVDPRP_CODE" ReturnItem="GLOBAL.VALUE" Title="Property Code" Width="128"/>
+			<Column DataMember="GTVDPRP_DESC" Title="Description" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVDSTP_LOV" RecordGroup="GTVDSTP_RG" Title="Step Type Code Validation (GTVDSTP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVDSTP_CODE" ReturnItem="GLOBAL.VALUE" Title="Step Type Code" Width="128"/>
+			<Column DataMember="GTVDSTP_DESC" Title="Description" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVFBPR_LOV" RecordGroup="GTVFBPR_RG" Title="FGAC Business Profile (GTVFBPR)" Width="575">
+		<Columns>
+			<Column DataMember="GTVFBPR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="140"/>
+			<Column DataMember="GTVFBPR_DESC" Title="Description" Width="200"/>
+			<Column DataMember="ACTIVITY_DATE" Title="Activity Date" Width="108"/>
+			<Column DataMember="GTVFBPR_USER_ID" Title="User ID" Width="108"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVFDMN_LOV" RecordGroup="GTVFDMN_RG" Title="FGAC Domain Codes Validation (GTVFDMN)" Width="575">
+		<Columns>
+			<Column DataMember="GTVFDMN_CODE" ReturnItem="GLOBAL.VALUE" Title="Domain" Width="278"/>
+			<Column DataMember="GTVFDMN_DESC" Title="Desc" Width="548"/>
+			<Column DataMember="ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+			<Column DataMember="GTVFDMN_USER_ID" Title="User ID" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVFDTP_LOV" RecordGroup="GTVFDTP_RG" Title="FGAC Domain Type Validation (GTVFDTP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVFDTP_CODE" ReturnItem="GLOBAL.VALUE" Title="Domain_Type" Width="86"/>
+			<Column DataMember="GTVFDTP_DESC" Title="Description" Width="548"/>
+			<Column DataMember="ACTIVITY_DATE" Title="Activity Date" Width="108"/>
+			<Column DataMember="GTVFDTP_USER_ID" Title="User ID" Width="108"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVFGAC_LOV" RecordGroup="GTVFGAC_RG" Title="FGAC Code Validation (GTVFGAC)" Width="575">
+		<Columns>
+			<Column DataMember="GTVFGAC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="186"/>
+			<Column DataMember="GTVFGAC_DESC" Title="Description" Width="290"/>
+			<Column DataMember="ACTIVITY_DATE" Title="Activity Date" Width="110"/>
+			<Column DataMember="GTVFGAC_USER_ID" Title="User ID" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVLFST_LOV" RecordGroup="GTVLFST_RG" Title="Learner Field of Study Type (GTVLFST)" Width="575">
+		<Columns>
+			<Column DataMember="GTVLFST_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="133"/>
+			<Column DataMember="GTVLFST_DESC" Title="Description" Width="173"/>
+			<Column DataMember="ACTIVITY_DATE" Title="Activity Date" Width="108"/>
+			<Column DataMember="GTVLFST_USER_ID" Title="User ID" Width="108"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVTRMT_LOV" RecordGroup="STVTRMT_RG" Title="Term Type Validation (STVTRMT)" Width="575">
+		<Columns>
+			<Column DataMember="STVTRMT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="STVTRMT_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVTRMT_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="TELE_LOV" RecordGroup="STVTELE_RG" Width="575">
+		<Columns>
+			<Column DataMember="STVTELE_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVTELE_DESC" Title="Description" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="WFED_TRANS_NO_LOV" RecordGroup="WFED_TRANS_NO_RG" Title="Transaction History Data List" Width="638">
+		<Columns>
+			<Column DataMember="GORWFDH_TRANS_NO" ReturnItem="GLOBAL.VALUE" Title="Transaction #" Width="80"/>
+			<Column DataMember="CODE" Title="Electronic Document" Width="160"/>
+			<Column DataMember="DESC" Title="Description" Width="332"/>
+			<Column DataMember="GORWFDH_STATUS" Title="Status" Width="66"/>
+			<Column DataMember="GORWFDH_ACTIVITY_DATE" Title="Activity Date" Width="96"/>
+			<Column DataMember="GORWFDH_USER_ID" Title="Originator" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GORRACE_LOV" RecordGroup="GORRACE_RG" Title="Race Rules (GORRACE)" Width="575">
+		<Columns>
+			<Column DataMember="GORRACE_RACE_CDE" ReturnItem="GLOBAL.VALUE" Title="Race Code" Width="80"/>
+			<Column DataMember="GORRACE_DESC" Title="Description" Width="280"/>
+			<Column DataMember="GORRACE_RRAC_CODE" Title="Regulatory Race Code" Width="150"/>
+			<Column DataMember="GORRACE_EDI_EQUIV" Title="EDI" Width="50"/>
+			<Column DataMember="GORRACE_LMS_EQUIV" Title="LMS" Width="50"/>
+			<Column DataMember="GORRACE_USER_ID" Title="User ID" Width="130"/>
+			<Column DataMember="GORRACE_ACTIVITY_DATE" Title="Activity Date" Width="108"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GOBSDTB_LOV" RecordGroup="GOBSDTB_RG" Title="SDE Tables" Width="575">
+		<Columns>
+			<Column DataMember="GOBSDTB_TABLE_NAME" ReturnItem="GLOBAL.VALUE" Title="Table Name" Width="239"/>
+			<Column DataMember="GOBSDTB_OWNER" Title="Owner" Width="74"/>
+			<Column DataMember="GOBSDTB_ACTIVITY_DATE" Title="Activity Date" Width="100"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVRRAC_LOV" RecordGroup="GTVRRAC_RG" Title="Regulatory Race Validation (GTVRRAC)" Width="575">
+		<Columns>
+			<Column DataMember="GTVRRAC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="90"/>
+			<Column DataMember="GTVRRAC_DESC" Title="Description" Width="270"/>
+			<Column DataMember="GTVRRAC_SYS_REQ_IND" Title="System Required Indicator" Width="220"/>
+			<Column DataMember="GTVRRAC_USER_ID" Title="User ID" Width="88"/>
+			<Column DataMember="GTVRRAC_ACTIVITY_DATE" Title="Activity Date" Width="88"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="ALL_TAB_COLUMNS_LOV" RecordGroup="ALL_TAB_COLUMNS_RG" Title="Table Columns" Width="575">
+		<Columns>
+			<Column DataMember="COLUMN_NAME" ReturnItem="GLOBAL.VALUE" Title="Column Name" Width="239"/>
+			<Column DataMember="DATA_TYPE" ReturnItem="GLOBAL.VALUE_2" Title="Data Type" Width="106"/>
+			<Column DataMember="NEW_LENGTH" ReturnItem="GLOBAL.VALUE_3" Title="Data Length" Width="80"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_EXT_SEARCH_LOV" Title="Extended Search" Width="500">
+		<Columns>
+			<Column DataMember="NAME" ReturnItem="" Title="ID and Name" Width="575" />
+			<Column DataMember="ID" ReturnItem="IDNAME_EXTSEARCH_LIST" Title="Code" Width="0" />
+		</Columns>
+	</Lov>
+	
+	<Lov Height="267" Name="GTVPLAT_LOV" RecordGroup="GTVPLAT_RG" Title="Platform Type Validation (GTVPLAT)" Width="575">
+		<Columns>
+			<Column DataMember="GTVPLAT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="90"/>
+			<Column DataMember="GTVPLAT_DESC" Title="Description" Width="270"/>
+			<Column DataMember="GTVPLAT_SYS_REQ_IND" Title="System Required Indicator" Width="270"/>
+			<Column DataMember="GTVPLAT_USER_ID" Title="User ID" Width="220"/>
+			<Column DataMember="GTVPLAT_ACTIVITY_DATE" Title="Activity Date" Width="88"/>
+		</Columns>
+	</Lov>
+</Lovs>

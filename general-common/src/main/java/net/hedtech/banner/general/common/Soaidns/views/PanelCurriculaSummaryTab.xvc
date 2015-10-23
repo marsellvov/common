@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="SOVLCUR"/>
+	<interactionblock name="SOVLFOS"/>
+	<interactionblock name="S$_CURRICULA_SUMMARY"/>
+	<panel class="StackedCanvas" id="pnlCurriculaSummaryTab" menu="G$_DEFAULT_PM" name="CURRICULA_SUMMARY_TAB" width="100%">
+		<accordion width="100%">
+			<panel label="curriculaSummaryTab.text781.text">
+				<panel width="100%">
+					<framepanel label="curriculaSummaryTab.text782.text" width="100%">
+						<gridlayout cols="2" orientation="vertical">
+							<gridcell>
+								<textbox block="SOVLCUR" case="upper" height="23px" label="sovlcur.sovlcurPriorityNo.prompt" maxlength="5" member="SOVLCUR_PRIORITY_NO" name="sovlcurPriorityNo" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox block="SOVLCUR" case="upper" height="23px" label="sovlcur.sovlcurTermCode.prompt" maxlength="30" member="SOVLCUR_TERM_CODE" name="sovlcurTermCode" width="64px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+								<textfield block="SOVLCUR" height="23px" label="sovlcur.sovlcurProgramDesc.prompt" maxlength="30" member="SOVLCUR_PROGRAM_DESC" name="sovlcurProgramDesc" width="125px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox block="SOVLCUR" case="upper" height="23px" label="sovlcur.sovlcurTermCodeCtlg.prompt" maxlength="6" member="SOVLCUR_TERM_CODE_CTLG" name="sovlcurTermCodeCtlg" width="63px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+								<textfield block="SOVLCUR" height="23px" label="sovlcur.stvlevlDesc.prompt" maxlength="30" member="STVLEVL_DESC" name="stvlevlDesc" width="136px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield block="SOVLCUR" height="23px" label="sovlcur.stvcampDesc.prompt" maxlength="30" member="STVCAMP_DESC" name="stvcampDesc" width="126px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield block="SOVLCUR" height="23px" label="sovlcur.stvcollDesc.prompt" maxlength="30" member="STVCOLL_DESC" name="stvcollDesc" width="144px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield block="SOVLCUR" height="23px" label="sovlcur.stvdegcDesc.prompt" maxlength="30" member="STVDEGC_DESC" name="stvdegcDesc" width="120px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox block="SOVLCUR" case="upper" height="23px" label="sovlcur.sovlcurTermCodeEnd.prompt" maxlength="30" member="SOVLCUR_TERM_CODE_END" name="sovlcurTermCodeEnd" width="64px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox block="SOVLCUR" height="23px" label="sovlcur.sovlcurDgmrSeqno.prompt" maxlength="4" member="SOVLCUR_DGMR_SEQNO" name="sovlcurDgmrSeqno" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textfield block="SOVLCUR" height="23px" label="sovlcur.sovlcurStvadmtDesc.prompt" maxlength="30" member="SOVLCUR_STVADMT_DESC" name="sovlcurStvadmtDesc" width="166px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textbox block="SOVLCUR" height="23px" label="sovlcur.sovlcurTermCodeAdmit.prompt" maxlength="30" member="SOVLCUR_TERM_CODE_ADMIT" name="sovlcurTermCodeAdmit" width="64px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textbox block="SOVLCUR" height="21px" label="sovlcur.sovlcurTermCodeMatric.prompt" maxlength="30" member="SOVLCUR_TERM_CODE_MATRIC" name="sovlcurTermCodeMatric" width="64px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+							<gridcell>
+								<textfield block="SOVLCUR" height="21px" label="sovlcur.sovlcurStvstypDesc.prompt" maxlength="30" member="SOVLCUR_STVSTYP_DESC" name="sovlcurStvstypDesc" width="190px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+							</gridcell>
+							<gridcell>
+								<textfield block="SOVLCUR" height="23px" label="sovlcur.sovlcurStvrateDesc.prompt" maxlength="30" member="SOVLCUR_STVRATE_DESC" name="sovlcurStvrateDesc" width="246px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textfield>
+								<textbox block="SOVLCUR" height="21px" label="sovlcur.sovlcurKeySeqno.prompt" maxlength="30" member="SOVLCUR_KEY_SEQNO" name="sovlcurKeySeqno" visible="false" width="50px">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</textbox>
+							</gridcell>
+						</gridlayout>
+					</framepanel>
+					<framepanel label="curriculaSummaryTab.text820.text" width="100%">
+						<panel width="100%">
+							<gridview block="SOVLFOS" name="grdSovlfos" width="100%">
+								<viewheader>
+									<viewcolumn block="SOVLFOS" case="upper" label="sovlfos.sovlfosPriorityNo.prompt" labelstyle="DEFAULT" maxlength="5" member="SOVLFOS_PRIORITY_NO" name="sovlfosPriorityNo" width="100px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</viewcolumn>
+									<viewcolumn block="SOVLFOS" case="upper" label="sovlfos.sovlfosTermCode.prompt" labelstyle="DEFAULT" maxlength="30" member="SOVLFOS_TERM_CODE" name="sovlfosTermCode" width="66px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</viewcolumn>
+									<viewcolumn block="SOVLFOS" label="sovlfos.gtvlfstDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="GTVLFST_DESC" name="gtvlfstDesc" width="144px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</viewcolumn>
+									<viewcolumn block="SOVLFOS" label="sovlfos.stvmajrDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVMAJR_DESC" name="stvmajrDesc" width="219px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</viewcolumn>
+									<viewcolumn block="SOVLFOS" label="sovlfos.stvdeptDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVDEPT_DESC" name="stvdeptDesc" width="211px">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</viewcolumn>
+									<viewcolumn action="WHEN-MOUSE-DOUBLECLICK" block="SOVLFOS" label="sovlfos.stvconcDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVCONC_DESC" name="stvconcDesc" width="166px">
+										<editor>
+											<lovbox/>
+										</editor>
+									</viewcolumn>
+								</viewheader>
+							</gridview>
+						</panel>
+					</framepanel>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

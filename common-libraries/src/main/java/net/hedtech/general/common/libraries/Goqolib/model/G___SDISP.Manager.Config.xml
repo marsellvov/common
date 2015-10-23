@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="G___SDISP.Manager.Config" name="govsdav">
+		<kind>View</kind>
+		<items>
+			<item name="GOVSDAV_VALUE_AS_CHAR" logicalName="govsdavValueAsChar" type="String" physicalName="GOVSDAV_VALUE_AS_CHAR"  />
+			<item name="GOVSDAV_TABLE_NAME" logicalName="govsdavTableName" type="String" physicalName="GOVSDAV_TABLE_NAME"  />
+			<item name="GOVSDAV_ATTR_NAME" logicalName="govsdavAttrName" type="String" physicalName="GOVSDAV_ATTR_NAME"  />
+			<item name="GOVSDAV_ATTR_TYPE" logicalName="govsdavAttrType" type="String" physicalName="GOVSDAV_ATTR_TYPE"  />
+			<item name="GOVSDAV_ATTR_ORDER" logicalName="govsdavAttrOrder" type="java.math.BigDecimal" physicalName="GOVSDAV_ATTR_ORDER"  />
+			<item name="GOVSDAV_ATTR_REQD_IND" logicalName="govsdavAttrReqdInd" type="String" physicalName="GOVSDAV_ATTR_REQD_IND"  />
+			<item name="GOVSDAV_ATTR_DATA_TYPE" logicalName="govsdavAttrDataType" type="String" physicalName="GOVSDAV_ATTR_DATA_TYPE"  />
+			<item name="GOVSDAV_ATTR_DATA_LEN" logicalName="govsdavAttrDataLen" type="java.math.BigDecimal" physicalName="GOVSDAV_ATTR_DATA_LEN"  />
+			<item name="GOVSDAV_ATTR_DATA_SCALE" logicalName="govsdavAttrDataScale" type="java.math.BigDecimal" physicalName="GOVSDAV_ATTR_DATA_SCALE"  />
+			<item name="GOVSDAV_ATTR_INFO" logicalName="govsdavAttrInfo" type="String" physicalName="GOVSDAV_ATTR_INFO"  />
+			<item name="GOVSDAV_ATTR_BASE_COL" logicalName="govsdavAttrBaseCol" type="String" physicalName="GOVSDAV_ATTR_BASE_COL"  />
+			<item name="GOVSDAV_DISC_TYPE" logicalName="govsdavDiscType" type="String" physicalName="GOVSDAV_DISC_TYPE"  />
+			<item name="GOVSDAV_DISC_METHOD" logicalName="govsdavDiscMethod" type="String" physicalName="GOVSDAV_DISC_METHOD"  />
+			<item name="GOVSDAV_DISC_VALIDATION" logicalName="govsdavDiscValidation" type="String" physicalName="GOVSDAV_DISC_VALIDATION"  />
+			<item name="GOVSDAV_PK_PARENTTAB" logicalName="govsdavPkParenttab" type="String" physicalName="GOVSDAV_PK_PARENTTAB"  />
+			<item name="GOVSDAV_ATTR_PROMPT_DISP" logicalName="govsdavAttrPromptDisp" type="String" physicalName="GOVSDAV_ATTR_PROMPT_DISP"  />
+			<item name="GOVSDAV_ATTR_PROMPT" logicalName="govsdavAttrPrompt" type="String" physicalName="GOVSDAV_ATTR_PROMPT"  />
+			<item name="GOVSDAV_DISC" logicalName="govsdavDisc" type="String" physicalName="GOVSDAV_DISC"  />
+			<item name="GOVSDAV_DESC" logicalName="govsdavDesc" type="String" physicalName="GOVSDAV_DESC"  />
+			<item name="GOVSDAV_ROWID" logicalName="govsdavRowid" type="java.sql.RowId" physicalName="GOVSDAV_ROWID"  />
+			<item name="REQD_IS_NULL" logicalName="reqdIsNull" type="String"  virtual="true" />
+			<item name="IS_LAST_IDX" logicalName="isLastIdx" type="String"  virtual="true" />
+			<item name="GOVSDAV_SDDC_CODE" logicalName="govsdavSddcCode" type="String" physicalName="GOVSDAV_SDDC_CODE"  />
+			<item name="GOVSDAV_LOV_FORM" logicalName="govsdavLovForm" type="String" physicalName="GOVSDAV_LOV_FORM"  />
+			<item name="GOVSDAV_LOV_TABLE_OVRD" logicalName="govsdavLovTableOvrd" type="String" physicalName="GOVSDAV_LOV_TABLE_OVRD"  />
+			<item name="GOVSDAV_LOV_ATTR_OVRD" logicalName="govsdavLovAttrOvrd" type="String" physicalName="GOVSDAV_LOV_ATTR_OVRD"  />
+			<item name="GOVSDAV_LOV_CODE_TITLE" logicalName="govsdavLovCodeTitle" type="String" physicalName="GOVSDAV_LOV_CODE_TITLE"  />
+			<item name="GOVSDAV_LOV_DESC_TITLE" logicalName="govsdavLovDescTitle" type="String" physicalName="GOVSDAV_LOV_DESC_TITLE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqolib.model.GSdispAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE govsdav_table_name(+) = :G___SDKEY_SD_BANTAB]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[5,18]]></defaultOrderByClause>	
+		<queryAllRecords>true</queryAllRecords>	
+
+	</manager>
+</b:beans>

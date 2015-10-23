@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="HELPFLD_RG.ValueSet.Config" name="HELPFLD_RG">
+    <columns>
+		<column name="GUBBHLP_FIELD_NAME" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT gubbhlp_field_name  FROM gubbhlp  WHERE gubbhlp_form_name = :HELP_FORM AND gubbhlp_block_name = :HELP_BLOCK AND :HELP_TYPE = 'B' AND gubbhlp_field_name IS NOT NULL UNION SELECT DISTINCT gublhlp_field_name  FROM gublhlp  WHERE gublhlp_form_name = :HELP_FORM AND gublhlp_block_name = :HELP_BLOCK AND :HELP_TYPE = 'L' AND gublhlp_field_name IS NOT NULL 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="HELP_FORM">
+			<value>
+				<item businessObject="DISPLAY_HELP" name="HELP_FORM"/> 
+			</value>
+        </parameter>
+		<parameter name="HELP_BLOCK">
+			<value>
+				<item businessObject="DISPLAY_HELP" name="HELP_BLOCK"/> 
+			</value>
+        </parameter>
+		<parameter name="HELP_TYPE">
+			<value>
+				<item businessObject="DISPLAY_HELP" name="HELP_TYPE"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="HELPBLK_RG.ValueSet.Config" name="HELPBLK_RG">
+    <columns>
+		<column name="GUBBHLP_BLOCK_NAME" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT DISTINCT gubbhlp_block_name  FROM gubbhlp  WHERE :HELP_TYPE = 'B' AND gubbhlp_form_name = :HELP_FORM AND gubbhlp_block_name IS NOT NULL UNION SELECT DISTINCT gublhlp_block_name  FROM gublhlp  WHERE gublhlp_form_name = :HELP_FORM AND :HELP_TYPE = 'L' AND gublhlp_block_name IS NOT NULL 
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="HELP_TYPE">
+			<value>
+				<item businessObject="DISPLAY_HELP" name="HELP_TYPE"/> 
+			</value>
+        </parameter>
+		<parameter name="HELP_FORM">
+			<value>
+				<item businessObject="DISPLAY_HELP" name="HELP_FORM"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+</b:beans>

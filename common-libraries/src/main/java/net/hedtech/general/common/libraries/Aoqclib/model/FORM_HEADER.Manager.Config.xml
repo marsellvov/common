@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FORM_HEADER.Manager.Config" name="FormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="ATTN_COUNT" logicalName="attnCount" type="long"    /> 
+			<item name="DUMMY_ITEM" logicalName="dummyItem" type="String"    /> 
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"    /> 
+			<item name="CALLED_FROM_ITEM" logicalName="calledFromItem" type="String"    /> 
+			<item name="HOLD_KEY_IDNO_FOR_ALERTS" logicalName="holdKeyIdnoForAlerts" type="String"    /> 
+			<item name="ADTL_NEXT_BLOCK_OK" logicalName="adtlNextBlockOk" type="String"    /> 
+			<item name="PGBE_NEXT_BLOCK_OK" logicalName="pgbeNextBlockOk" type="String"    /> 
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Aoqclib.model.FormHeader</managerClass>
+
+	</manager>
+</b:beans>

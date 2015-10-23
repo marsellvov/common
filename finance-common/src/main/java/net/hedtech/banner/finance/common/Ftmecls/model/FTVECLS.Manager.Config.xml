@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVECLS.Manager.Config" name="FTVECLS">
+		
+		<items>
+			<item name="FTVECLS_ECLS_CODE" logicalName="ftveclsEclsCode" type="String" physicalName="FTVECLS_ECLS_CODE"  />
+			<item name="FTVECLS_DESC" logicalName="ftveclsDesc" type="String" physicalName="FTVECLS_DESC"  />
+			<item name="FTVECLS_PICT_CODE" logicalName="ftveclsPictCode" type="String" physicalName="FTVECLS_PICT_CODE"  />
+			<item name="FTVECLS_WKSH_CODE" logicalName="ftveclsWkshCode" type="String" physicalName="FTVECLS_WKSH_CODE"  />
+			<item name="WKSH_CODE_DESC" logicalName="wkshCodeDesc" type="String"  virtual="true" />
+			<item name="FTVECLS_CONTRACT_IND" logicalName="ftveclsContractInd" type="String" physicalName="FTVECLS_CONTRACT_IND"  >
+				<value>
+					<constant>H</constant>
+				</value>	
+			</item>
+			<item name="FTVECLS_BUDGET_ROLL_IND" logicalName="ftveclsBudgetRollInd" type="String" physicalName="FTVECLS_BUDGET_ROLL_IND"  >
+				<value>
+					<constant>C</constant>
+				</value>	
+			</item>
+			<item name="FTVECLS_HOURS_PER_DAY" logicalName="ftveclsHoursPerDay" type="java.math.BigDecimal" physicalName="FTVECLS_HOURS_PER_DAY"  />
+			<item name="FTVECLS_HOURS_PER_PAY" logicalName="ftveclsHoursPerPay" type="java.math.BigDecimal" physicalName="FTVECLS_HOURS_PER_PAY"  />
+			<item name="FTVECLS_PAYS_PER_YEAR" logicalName="ftveclsPaysPerYear" type="java.math.BigDecimal" physicalName="FTVECLS_PAYS_PER_YEAR"  />
+			<item name="FTVECLS_ACTIVITY_DATE" logicalName="ftveclsActivityDate" type="java.util.Date" physicalName="FTVECLS_ACTIVITY_DATE">
+				 <value>
+				 	<systemVariable name="DBDATE"/>
+				 </value>
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftmecls.model.FtveclsAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[ftvecls_ecls_code]]></defaultOrderByClause>	
+		<pagination maximumRows="1" enabled="true"/>
+	</manager>
+</b:beans>

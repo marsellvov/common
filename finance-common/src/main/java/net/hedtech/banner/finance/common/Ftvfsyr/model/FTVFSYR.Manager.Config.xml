@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVFSYR.Manager.Config" name="FTVFSYR">
+		
+		<items>
+			<item name="FTVFSYR_COAS_CODE" logicalName="ftvfsyrCoasCode" type="String" physicalName="FTVFSYR_COAS_CODE"  />
+			<item name="FTVFSYR_FSYR_CODE" logicalName="ftvfsyrFsyrCode" type="String" physicalName="FTVFSYR_FSYR_CODE"  />
+			<item name="FTVFSYR_START_DATE" logicalName="ftvfsyrStartDate" type="java.util.Date" physicalName="FTVFSYR_START_DATE"  />
+			<item name="FTVFSYR_END_DATE" logicalName="ftvfsyrEndDate" type="java.util.Date" physicalName="FTVFSYR_END_DATE"  />
+			<item name="CURRENT_PERIOD" logicalName="currentPeriod" type="String"  virtual="true" />
+			<item name="CURRENT_PERIOD_START_DATE" logicalName="currentPeriodStartDate" type="java.util.Date"  virtual="true" />
+			<item name="CURRENT_PERIOD_END_DATE" logicalName="currentPeriodEndDate" type="java.util.Date"  virtual="true" />
+			<item name="EARLIEST_OPEN_PERIOD" logicalName="earliestOpenPeriod" type="String"  virtual="true" />
+			<item name="FTVFSYR_EOY_ACCR_STATUS_IND" logicalName="ftvfsyrEoyAccrStatusInd" type="String" physicalName="FTVFSYR_EOY_ACCR_STATUS_IND"  />
+			<item name="FTVFSYR_ACTIVITY_DATE" logicalName="ftvfsyrActivityDate" type="java.util.Date" physicalName="FTVFSYR_ACTIVITY_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvfsyr.model.FtvfsyrAdapter</adapterClass>
+<!-- 		<defaultWhereClause><![CDATA[WHERE (ftvfsyr_coas_code = :HOLD_COAS_CODE OR ftvfsyr_coas_code = :FTVFSYR_COAS_CODE)]]></defaultWhereClause> -->
+		<defaultWhereClause><![CDATA[WHERE (ftvfsyr_coas_code = NVL(:HOLD_COAS_CODE, ftvfsyr_coas_code))]]></defaultWhereClause>		
+		<defaultOrderByClause><![CDATA[order by ftvfsyr_coas_code, to_number(fofycnv(ftvfsyr_fsyr_code))]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

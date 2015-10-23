@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" title="gOptWindow.title">
+  <formpanel width="326px" height="254px" name="gOptWindow" masterpage="com/atxsoftware/common/theme/master">
+    <include src="net/hedtech/general/common/libraries/Soqolib/views/PanelGOptCanvas">
+    </include>
+  </formpanel>
+</config>

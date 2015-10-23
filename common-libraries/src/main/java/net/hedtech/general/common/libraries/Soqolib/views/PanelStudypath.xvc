@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" >
+  <panel top="0px" left="0px" width="1001px" height="521px">
+    <tabpanel id="tabStudypath" name="STUDYPATH">
+      <tab label="studyPath.label" id="page_studyPath" name="STUDY_PATH">
+        <include src="net/hedtech/general/common/libraries/Soqolib/views/TabStudypathStudyPath" />
+      </tab>
+    </tabpanel>
+  </panel>
+</config>

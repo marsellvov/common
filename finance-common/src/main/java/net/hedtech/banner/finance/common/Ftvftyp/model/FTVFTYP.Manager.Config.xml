@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVFTYP.Manager.Config" name="FTVFTYP">
+		
+		<items>
+			<item name="FTVFTYP_COAS_CODE" logicalName="ftvftypCoasCode" type="String" physicalName="FTVFTYP_COAS_CODE"  />
+			<item name="FTVFTYP_FTYP_CODE" logicalName="ftvftypFtypCode" type="String" physicalName="FTVFTYP_FTYP_CODE"  />
+			<item name="FTVFTYP_TITLE" logicalName="ftvftypTitle" type="String" physicalName="FTVFTYP_TITLE"  />
+			<item name="FTVFTYP_FTYP_CODE_PRED" logicalName="ftvftypFtypCodePred" type="String" physicalName="FTVFTYP_FTYP_CODE_PRED"  />
+			<item name="FTVFTYP_STATUS_IND" logicalName="ftvftypStatusInd" type="String" physicalName="FTVFTYP_STATUS_IND"  />
+			<item name="FTVFTYP_ENC_MULT_YR_IND" logicalName="ftvftypEncMultYrInd" type="String" physicalName="FTVFTYP_ENC_MULT_YR_IND"  />
+			<item name="FTVFTYP_EFF_DATE" logicalName="ftvftypEffDate" type="java.util.Date" physicalName="FTVFTYP_EFF_DATE"  />
+			<item name="FTVFTYP_TERM_DATE" logicalName="ftvftypTermDate" type="java.util.Date" physicalName="FTVFTYP_TERM_DATE"  />
+			<item name="FTVFTYP_ACTIVITY_DATE" logicalName="ftvftypActivityDate" type="java.util.Date" physicalName="FTVFTYP_ACTIVITY_DATE"  />
+			<item name="FTVFTYP_USER_ID" logicalName="ftvftypUserId" type="String" physicalName="FTVFTYP_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvftyp.model.FtvftypAdapter</adapterClass>		
+<!-- 		<defaultWhereClause><![CDATA[WHERE (ftvftyp_coas_code = :HOLD_COAS_CODE OR ftvftyp_coas_code = :FTVFTYP_COAS_CODE)]]></defaultWhereClause> -->
+		<defaultWhereClause><![CDATA[WHERE (ftvftyp_coas_code = NVL(:HOLD_COAS_CODE, ftvftyp_coas_code))]]></defaultWhereClause>		
+		<defaultOrderByClause><![CDATA[order by ftvftyp_coas_code, ftvftyp_ftyp_code, ftvftyp_eff_date]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

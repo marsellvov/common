@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRRPUSN.Manager.Config" name="FRRPUSN">
+		
+		<items>
+			<item name="FRRPUSN_SDAT_CODE_ATTR" logicalName="frrpusnSdatCodeAttr" type="String" physicalName="FRRPUSN_SDAT_CODE_ATTR"  />
+			<item name="FRRPUSN_SDAT_CODE_OPT_1" logicalName="frrpusnSdatCodeOpt1" type="String" physicalName="FRRPUSN_SDAT_CODE_OPT_1"  />
+			<item name="FRRPUSN_DESC" logicalName="frrpusnDesc" type="String"  virtual="true" />
+			<item name="FRRPUSN_ACTIVITY_DATE" logicalName="frrpusnActivityDate" type="java.util.Date" physicalName="FRRPUSN_ACTIVITY_DATE"  />
+			<item name="FRRPUSN_USER_ID" logicalName="frrpusnUserId" type="String" physicalName="FRRPUSN_USER_ID"  />
+			<item name="FRRPUSN_PROP_CODE" logicalName="frrpusnPropCode" type="String" physicalName="FRRPUSN_PROP_CODE"  >
+				<value>
+					<item name="FRBPROP_CODE" businessObject="FRBPROP"/>
+				</value>
+			</item>	
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fraprop.model.FrrpusnAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE frrpusn_prop_code = :FRBPROP_CODE]]></defaultWhereClause>	
+
+	</manager>
+</b:beans>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="G___BANNER_REPORT_BLOCK.Manager.Config" name="GBannerReportBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="OREP_DESFORMAT" logicalName="orepDesformat" type="String"  >
+				<value>
+					<constant>PDF</constant>
+				</value>	
+			</item>
+			
+			<item name="OREP_DESTYPE" logicalName="orepDestype" type="String"    >
+				<value>
+					<constant>CACHE</constant>
+				</value>	
+			</item>
+			
+			<item name="OREP_DESNAME" logicalName="orepDesname" type="String"    /> 
+			<item name="OREP_EXECUTION_MODE" logicalName="orepExecutionMode" type="String"     >
+				<value>
+					<constant>RUNTIME</constant>
+				</value>	
+			</item>
+			<item name="OREP_COMM_MODE" logicalName="orepCommMode" type="String"   >
+				<value>
+					<constant>Synchronous</constant>
+				</value>	
+			</item> 
+			<item name="OREP_PARAMFORM_DESIGNATION" logicalName="orepParamformDesignation" type="String"    >
+				<value>
+					<constant>Yes</constant>
+				</value>	
+			</item>  
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Goqrlib.model.GBannerReportBlock</managerClass>
+
+	</manager>
+</b:beans>

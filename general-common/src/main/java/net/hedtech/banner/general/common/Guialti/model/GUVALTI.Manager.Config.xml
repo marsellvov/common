@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GUVALTI.Manager.Config" name="GUVALTI">
+		<kind>View</kind>
+		<items>
+			<item name="GUVALTI_SSN" logicalName="guvaltiSsn" type="String" physicalName="GUVALTI_SSN"  />
+			<item name="GUVALTI_PIDM" logicalName="guvaltiPidm" type="java.math.BigDecimal" physicalName="GUVALTI_PIDM"  />
+			<item name="GUVALTI_ID" logicalName="guvaltiId" type="String" physicalName="GUVALTI_ID"  />
+			<item name="GUVALTI_ENTITY_IND" logicalName="guvaltiEntityInd" type="String" physicalName="GUVALTI_ENTITY_IND"  />
+			<item name="GUVALTI_LAST_NAME" logicalName="guvaltiLastName" type="String" physicalName="GUVALTI_LAST_NAME" caseInsensitiveQuery="true" />
+			<item name="GUVALTI_FIRST_NAME" logicalName="guvaltiFirstName" type="String" physicalName="GUVALTI_FIRST_NAME" caseInsensitiveQuery="true" />
+			<item name="GUVALTI_MI" logicalName="guvaltiMi" type="String" physicalName="GUVALTI_MI" caseInsensitiveQuery="true" />
+			<item name="GUVALTI_SHOW_BIRTHDAY" logicalName="guvaltiShowBirthday" type="String"  virtual="true" />
+			<item name="GUVALTI_BIRTH_DATE" logicalName="guvaltiBirthDate" type="java.util.Date" physicalName="GUVALTI_BIRTH_DATE"  />
+			<item name="GUVALTI_CHANGE_IND" logicalName="guvaltiChangeInd" type="String" physicalName="GUVALTI_CHANGE_IND"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Guialti.model.GuvaltiAdapter</adapterClass>
+			 
+	<defaultOrderByClause><![CDATA[order by GUVALTI_last_name, GUVALTI_first_name, GUVALTI_mi, GUVALTI_birth_date, GUVALTI_ssn, GUVALTI_id, GUVALTI_change_ind]]></defaultOrderByClause>	
+ 	<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

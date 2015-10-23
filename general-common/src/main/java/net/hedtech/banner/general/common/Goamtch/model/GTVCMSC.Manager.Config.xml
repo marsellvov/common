@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GTVCMSC.Manager.Config" name="GTVCMSC">
+		
+		<items>
+			<item name="GTVCMSC_CODE" logicalName="gtvcmscCode" type="String" physicalName="GTVCMSC_CODE"  />
+			<item name="GTVCMSC_DESC" logicalName="gtvcmscDesc" type="String" physicalName="GTVCMSC_DESC"  />
+			<item name="GTVCMSC_LONG_DESC" logicalName="gtvcmscLongDesc" type="String" physicalName="GTVCMSC_LONG_DESC"  />
+			<item name="LONG_DESC" logicalName="longDesc" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Goamtch.model.GtvcmscAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE GTVCMSC_CODE = :KEY_BLOCK_KEYBLOCK_SOURCE_CODE]]></defaultWhereClause>	
+
+	</manager>
+</b:beans>

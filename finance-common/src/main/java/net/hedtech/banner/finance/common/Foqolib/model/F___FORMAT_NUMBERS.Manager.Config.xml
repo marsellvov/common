@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="F___FORMAT_NUMBERS.Manager.Config" name="FFormatNumbers">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="F$_SIGNIFICANT_COMMAS" logicalName="fSignificantCommas" type="String"   >
+				<value>
+					<constant>0</constant>
+				</value>	
+			</item>
+			<item name="F$_DECIMAL_DIGITS" logicalName="fDecimalDigits" type="String"   >
+				<value>
+					<constant>2</constant>
+				</value>	
+			</item>
+			<item name="F$_RETURN_BLOCK_NAME" logicalName="fReturnBlockName" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.finance.common.Foqolib.model.FFormatNumbers</managerClass>
+
+	</manager>
+</b:beans>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="QK_MENU"/>
+	<interactionblock name="QK_FLOW"/>
+	<panel class="StackedCanvas" id="pnlMenuEntire" menu="G$_DEFAULT_PM" name="MENU_ENTIRE" visible="true" width="100%">
+		<panel width="100%">
+			<flowlayout>
+				<textbox block="QK_FLOW" datatype="String" enabled="false" height="17px" maxlength="30" member="GURCALL_CALL_CODE" name="gurcallCallCode" width="372px">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<textbox block="QK_MENU" datatype="String" height="17px" maxlength="30" member="GURMENU_NAME" name="gurmenuName" visible="false" width="372px">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+			</flowlayout>
+		</panel>
+		<panel width="100%">
+			<gridview block="QK_FLOW" name="grdQkFlow" width="100%">
+				<viewheader>
+					<viewcolumn block="QK_FLOW" datatype="String" labelstyle="DEFAULT" maxlength="45" member="QK_DESC" name="qkDesc" width="226px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</viewcolumn>
+					<viewcolumn block="QK_FLOW" case="upper" datatype="String" enabled="false" labelstyle="DEFAULT" maxlength="10" member="QK_TYPE" name="qkType" visible="false" width="226px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</viewcolumn>
+					<viewcolumn block="QK_FLOW" datatype="String" labelstyle="DEFAULT" maxlength="10" member="GURCALL_FORM" name="gurcallForm" required="true" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</viewcolumn>
+				</viewheader>
+			</gridview>
+		</panel>
+		<panel width="100%">
+			<gridview block="QK_MENU" name="grdQkMenu" width="100%">
+				<viewheader>
+					<viewcolumn block="QK_MENU" datatype="String" labelstyle="DEFAULT" maxlength="80" member="QK_DESC" name="qkDesc1" width="226px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</viewcolumn>
+					<viewcolumn block="QK_MENU" case="upper" datatype="String" enabled="false" labelstyle="DEFAULT" maxlength="10" member="QK_TYPE" name="qkType1" visible="false" width="226px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</viewcolumn>
+					<viewcolumn autoskip="true" block="QK_MENU" case="upper" datatype="String" labelstyle="DEFAULT" maxlength="30" member="GURMENU_OBJ_NAME" name="gurmenuObjName" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</viewcolumn>
+				</viewheader>
+			</gridview>
+		</panel>
+	</panel>
+</config>
+

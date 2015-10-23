@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___CURRICULA_TRADITIONAL.Manager.Config" name="SCurriculaTraditional">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="LCUR_REC_NUM" logicalName="lcurRecNum" type="Integer"   />
+			<item name="LFOS_REC_NUM" logicalName="lfosRecNum" type="Integer"   />
+			<item name="LCUR_REC_NUM_LFOS" logicalName="lcurRecNumLfos" type="Integer"   />
+			<item name="LCUR_REC_CNT" logicalName="lcurRecCnt" type="Integer"   />
+			<item name="LCUR_REC_CNT_LFOS" logicalName="lcurRecCntLfos" type="Integer"   />
+			<item name="LCUR_PRIORITY_DISPLAY" logicalName="lcurPriorityDisplay" type="String"   >
+				<value>
+					<item name="SORLCUR_PRIORITY_NO" businessObject="SORLCUR"/>
+				</value>	
+			</item>
+			<item name="LCUR_PROGRAM_DISPLAY" logicalName="lcurProgramDisplay" type="String"   >
+				<value>
+					<item name="SORLCUR_PROGRAM" businessObject="SORLCUR"/>
+				</value>	
+			</item>
+			<item name="LCUR_LEVEL_DISPLAY" logicalName="lcurLevelDisplay" type="String"   >
+				<value>
+					<item name="SORLCUR_LEVL_CODE" businessObject="SORLCUR"/>
+				</value>	
+			</item>
+			<item name="LCUR_COLLEGE_DISPLAY" logicalName="lcurCollegeDisplay" type="String"   >
+				<value>
+					<item name="SORLCUR_COLL_CODE" businessObject="SORLCUR"/>
+				</value>	
+			</item>
+			<item name="LCUR_CAMPUS_DISPLAY" logicalName="lcurCampusDisplay" type="String"   >
+				<value>
+					<item name="SORLCUR_CAMP_CODE" businessObject="SORLCUR"/>
+				</value>	
+			</item>
+			<item name="LCUR_DEGREE_DISPLAY" logicalName="lcurDegreeDisplay" type="String"   >
+				<value>
+					<item name="SORLCUR_DEGC_CODE" businessObject="SORLCUR"/>
+				</value>	
+			</item>
+			<item name="LCUR_CATLG_DISPLAY" logicalName="lcurCatlgDisplay" type="String"   >
+				<value>
+					<item name="SORLCUR_TERM_CODE_CTLG" businessObject="SORLCUR"/>
+				</value>	
+			</item>
+			<item name="LCUR_CURRENT_IND_DISPLAY" logicalName="lcurCurrentIndDisplay" type="String"   />
+			<item name="LCUR_SEQNO_DISPLAY" logicalName="lcurSeqnoDisplay" type="java.math.BigDecimal"   />
+			<item name="LCUR_CACT_CODE_DISPLAY" logicalName="lcurCactCodeDisplay" type="String"   >
+				<value>
+					<item name="DEFAULT_CACT" businessObject="S$_CURRICULA"/>
+				</value>	
+			</item>
+			<item name="LCUR_KEY_SEQNO_DISPLAY" logicalName="lcurKeySeqnoDisplay" type="java.math.BigDecimal"   />
+			<item name="LCUR_TERM_CODE_DISPLAY" logicalName="lcurTermCodeDisplay" type="String"   />
+			<item name="LCUR_TERM_CODE_END_DISPLAY" logicalName="lcurTermCodeEndDisplay" type="String"   />
+			<item name="LCUR_LMOD_CODE_DISPLAY" logicalName="lcurLmodCodeDisplay" type="String"   />
+			<item name="DATA_SEPARATOR_LINE_1" logicalName="dataSeparatorLine1" type="String"   />
+			<item name="DATA_SEPARATOR_LINE_2" logicalName="dataSeparatorLine2" type="String"   />
+			<item name="DATA_SEPARATOR_LINE_2A" logicalName="dataSeparatorLine2a" type="String"   />
+			<item name="PROMPT_LCUR_COMMIT" logicalName="promptLcurCommit" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="LCUR_DELETE_ERROR" logicalName="lcurDeleteError" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="ACTIVE_REG_IND" logicalName="activeRegInd" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SCurriculaTraditional</managerClass>
+
+	</manager>
+</b:beans>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="AGRADTL.Manager.Config" name="AGRADTL">
+		
+		<items>
+			<item name="AGRADTL_ADTL_CODE" logicalName="agradtlAdtlCode" type="String" physicalName="AGRADTL_ADTL_CODE"   /> 
+			<item name="ADTL_DESC" logicalName="adtlDesc" type="String"  virtual="true"  /> 
+			<item name="AGRADTL_PLEDGE_NO" logicalName="agradtlPledgeNo" type="String" physicalName="AGRADTL_PLEDGE_NO"   /> 
+			<item name="AGRADTL_GIFT_NO" logicalName="agradtlGiftNo" type="String" physicalName="AGRADTL_GIFT_NO"   /> 
+			<item name="AGRADTL_AMT" logicalName="agradtlAmt" type="java.math.BigDecimal" physicalName="AGRADTL_AMT"   /> 
+			<item name="AGRADTL_DETAILS" logicalName="agradtlDetails" type="String" physicalName="AGRADTL_DETAILS"   /> 
+			<item name="AGRADTL_COMMENT" logicalName="agradtlComment" type="String" physicalName="AGRADTL_COMMENT"   /> 
+			<item name="AGRADTL_ACTIVITY_DATE" logicalName="agradtlActivityDate" type="java.util.Date" physicalName="AGRADTL_ACTIVITY_DATE"   /> 
+			<item name="AGRADTL_USER_ID" logicalName="agradtlUserId" type="String" physicalName="AGRADTL_USER_ID"   /> 
+			<item name="AGRADTL_PIDM" logicalName="agradtlPidm" type="java.math.BigDecimal" physicalName="AGRADTL_PIDM"   /> 
+			<item name="AGRADTL_DATA_ORIGIN" logicalName="agradtlDataOrigin" type="String" physicalName="AGRADTL_DATA_ORIGIN"   /> 
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Aoqclib.model.AgradtlAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE agradtl_pidm = :PIDM AND ((agradtl_pledge_no = :GLOBAL_PLEDGE_NO AND :GLOBAL_GIFT_NO IS NULL) OR (agradtl_gift_no = :GLOBAL_GIFT_NO AND :GLOBAL_PLEDGE_NO IS NULL) OR (agradtl_pledge_no = :GLOBAL_PLEDGE_NO AND agradtl_gift_no = :GLOBAL_GIFT_NO))]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[AGRADTL_ADTL_CODE]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

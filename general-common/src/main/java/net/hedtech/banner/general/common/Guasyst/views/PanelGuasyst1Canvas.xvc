@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="KEY_BLOCK"/>
+	<interactionblock name="FORM_HEADER"/>
+	<panel class="ContentCanvas" id="pnlGuasyst1Canvas" menu="G$_DEFAULT_PM" name="GUASYST_1_CANVAS" style="ui-grid-empty" width="100%">
+		<gridflowlayout cols="2" orientation="horizontal">
+			<component label="keyBlock.id.prompt">
+				<textbox autoskip="true" block="KEY_BLOCK" case="upper" datatype="String" height="23px" width="100px" keyactions="NEXT_ITEM" maxlength="9" member="ID" name="id" style="ui-buttoninput" validation="server">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="ID_LBT" name="idLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.idLbt.tooltip" width="23px"/>
+				<textbox block="KEY_BLOCK" datatype="String" enabled="false" height="23px" width="399px" keyactions="NEXT_ITEM" maxlength="230" member="NAME" name="nname">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+			</component>
+		</gridflowlayout>
+	</panel>
+	<accordion width="100%">
+		<panel label="mainWindow.title" width="100%">
+			<panel style="ui-framepanel" width="100%">
+				<text block="KEY_BLOCK" member="STD_HEADING" name="stdHeading" style="ui-legend"></text>
+				<panel width="100%">
+					<gridlayout cols="3" orientation="vertical">
+						<gridcell>
+							<checkbox label="keyBlock.stdRecr.label" block="KEY_BLOCK" falsevalue="N" height="23px" member="STD_RECR" name="stdRecr" navigable="false" othervaluestate="unchecked" value="Y" width="200px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" falsevalue="N" label="keyBlock.stdAdm.label" height="23px" member="STD_ADM" name="stdAdm" navigable="false" othervaluestate="unchecked" value="Y" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" label="keyBlock.stdTran.label" falsevalue="N" height="23px" member="STD_TRAN" name="stdTran" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" falsevalue="N" label="keyBlock.stdGenr.label" height="23px" member="STD_GENR" name="stdGenr" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" falsevalue="N" label="keyBlock.stdRegr.label" height="23px" member="STD_REGR" name="stdRegr" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" falsevalue="N" label="keyBlock.stdHous.label" height="23px" member="STD_HOUS" name="stdHous" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" label="keyBlock.stdFacu.label" falsevalue="N" height="23px" member="STD_FACU" name="stdFacu" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+			<panel style="ui-framepanel" width="100%">
+				<text block="KEY_BLOCK" member="HR_HEADING" name="hrHeading" style="ui-legend"></text>
+				<panel width="100%">
+					<gridlayout cols="2" orientation="vertical">
+						<gridcell>
+							<checkbox block="KEY_BLOCK" label="keyBlock.hrAppl.label" falsevalue="N" height="23px" member="HR_APPL" name="hrAppl" navigable="false" othervaluestate="unchecked" value="Y" width="200px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" falsevalue="N" label="keyBlock.hrEmpl.label" height="23px" member="HR_EMPL" name="hrEmpl" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" label="keyBlock.hrBene.label" falsevalue="N" height="23px" member="HR_BENE" name="hrBene" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" falsevalue="N" label="keyBlock.hrCobra.label" height="23px" member="HR_COBRA" name="hrCobra" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+			<panel style="ui-framepanel" width="100%">
+				<text block="KEY_BLOCK" member="ALU_HEADING" name="aluHeading" style="ui-legend"></text>
+				<panel width="100%">
+					<gridlayout cols="2" orientation="vertical">
+						<gridcell>
+							<checkbox block="KEY_BLOCK" falsevalue="N" label="keyBlock.aluConst.label" height="23px" member="ALU_CONST" name="aluConst" navigable="false" othervaluestate="unchecked" value="Y">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<textfield block="KEY_BLOCK" datatype="String" height="23px" label="keyBlock.advIndivDonrCatg.prompt" maxlength="30" member="ADV_INDIV_DONR_CATG" name="advIndivDonrCatg" width="51px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textfield block="KEY_BLOCK" datatype="String" height="23px" label="keyBlock.advIndivPrefClas.prompt" maxlength="30" member="ADV_INDIV_PREF_CLAS" name="advIndivPrefClas" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" falsevalue="N" label="keyBlock.aluOrgn.label" height="23px" member="ALU_ORGN" name="aluOrgn" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<textfield block="KEY_BLOCK" datatype="String" height="23px" label="keyBlock.advOrgnDonrCatg.prompt" maxlength="30" member="ADV_ORGN_DONR_CATG" name="advOrgnDonrCatg" width="51px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+			<panel style="ui-framepanel" width="100%">
+				<text block="KEY_BLOCK" member="FIN_AID_HEADING" name="finAidHeading" style="ui-legend"></text>
+				<panel width="100%">
+					<gridlayout cols="2" orientation="vertical">
+						<gridcell>
+							<checkbox block="KEY_BLOCK" falsevalue="N" label="keyBlock.finAidAppl.label" height="23px" member="FIN_AID_APPL" name="finAidAppl" navigable="false" othervaluestate="unchecked" value="Y" width="200px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+			<panel style="ui-framepanel" width="100%">
+				<text block="KEY_BLOCK" member="FIN_HEADING" name="finHeading" style="ui-legend"></text>
+				<panel width="100%">
+					<gridlayout cols="2" orientation="vertical">
+						<gridcell>
+							<checkbox block="KEY_BLOCK" label="keyBlock.finAgency.label" falsevalue="N" height="23px" member="FIN_AGENCY" name="finAgency" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox label="keyBlock.finBank.label" block="KEY_BLOCK" falsevalue="N" height="23px" member="FIN_BANK" name="finBank" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" label="keyBlock.finCust.label" falsevalue="N" height="23px" member="FIN_CUST" name="finCust" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" label="keyBlock.finEmpl.label" falsevalue="N" height="23px" member="FIN_EMPL" name="finEmpl" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" falsevalue="N" label="keyBlock.finMagr.label" height="23px" member="FIN_MAGR" name="finMagr" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<checkbox block="KEY_BLOCK" label="keyBlock.finVend.label" falsevalue="N" height="23px" member="FIN_VEND" name="finVend" navigable="false" othervaluestate="unchecked" value="Y" width="136px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+			<panel style="ui-framepanel" width="100%">
+				<text block="KEY_BLOCK" member="AR_HEADING_1" name="arHeading1" style="ui-legend"></text>
+				<panel width="100%">
+					<gridlayout cols="1" orientation="vertical">
+						<gridcell>
+							<checkbox block="KEY_BLOCK" label="keyBlock.ar.label" falsevalue="N" height="23px" member="AR" name="ar" navigable="false" othervaluestate="unchecked" value="Y">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+		</panel>
+	</accordion>
+</config>

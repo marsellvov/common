@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+	<formModel id="FOQOLIB.Model.Config" name="FOQOLIB">
+		<parameters/>
+		<businessObjects>
+		</businessObjects>
+		<valueSets>
+			<valueSet config="FTVAGCY_RG.ValueSet.Config"/>
+			<valueSet config="FRBCSTA_RG.ValueSet.Config"/>
+			<valueSet config="FRBCSTD_RG.ValueSet.Config"/>
+			<valueSet config="FTVCOAS_RG.ValueSet.Config"/>
+			<valueSet config="FRRCSTR_RG.ValueSet.Config"/>
+			<valueSet config="FTVPAYM_RG.ValueSet.Config"/>
+			<!--  <valueSet config="FRBCSTD_LOV.ValueSet.Config"/>-->
+		</valueSets>
+	</formModel>
+</b:beans>

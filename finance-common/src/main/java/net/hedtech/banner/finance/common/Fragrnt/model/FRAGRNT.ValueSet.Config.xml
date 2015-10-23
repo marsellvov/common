@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="HRECACTV_RG.ValueSet.Config" name="HRECACTV_RG">
+    <columns>
+		<column name="FTVACTV_COAS_CODE" type="String" size="1"/>
+		<column name="FTVACTV_ACTV_CODE" type="String" size="6"/>
+		<column name="FTVACTV_TITLE" type="String" size="35"/>
+		<column name="FTVACTV_EFF_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT O.FTVACTV_COAS_CODE, O.FTVACTV_ACTV_CODE, O.FTVACTV_TITLE, O.FTVACTV_EFF_DATE  FROM FTVACTV O  WHERE O.FTVACTV_NCHG_DATE > SYSDATE AND O.FTVACTV_EFF_DATE <= SYSDATE AND (O.FTVACTV_TERM_DATE > SYSDATE OR O.FTVACTV_TERM_DATE IS NULL) AND O.FTVACTV_COAS_CODE = :FRBGRNT_FRBGRNT_COAS_CODE AND  NOT EXISTS(SELECT G.FRRGREC_ACCT_ELEMENT_VALUE  FROM FRRGREC G  WHERE G.FRRGREC_ACCT_ELEMENT = 'A' AND G.FRRGREC_ACCT_ELEMENT_VALUE = O.FTVACTV_ACTV_CODE )  ORDER BY O.FTVACTV_COAS_CODE, O.FTVACTV_ACTV_CODE, O.FTVACTV_TITLE, O.FTVACTV_EFF_DATE
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FRBGRNT_FRBGRNT_COAS_CODE">
+			<value>
+				<item businessObject="FRBGRNT" name="FRBGRNT_COAS_CODE"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="HRECLOCN_RG.ValueSet.Config" name="HRECLOCN_RG">
+    <columns>
+		<column name="FTVLOCN_COAS_CODE" type="String" size="1"/>
+		<column name="FTVLOCN_LOCN_CODE" type="String" size="6"/>
+		<column name="FTVLOCN_TITLE" type="String" size="35"/>
+		<column name="FTVLOCN_EFF_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT O.FTVLOCN_COAS_CODE, O.FTVLOCN_LOCN_CODE, O.FTVLOCN_TITLE, O.FTVLOCN_EFF_DATE  FROM FTVLOCN O  WHERE O.FTVLOCN_NCHG_DATE > SYSDATE AND O.FTVLOCN_EFF_DATE <= SYSDATE AND (O.FTVLOCN_TERM_DATE > SYSDATE OR O.FTVLOCN_TERM_DATE IS NULL) AND O.FTVLOCN_COAS_CODE = :FRBGRNT_FRBGRNT_COAS_CODE AND  NOT EXISTS(SELECT G.FRRGREC_ACCT_ELEMENT_VALUE  FROM FRRGREC G  WHERE G.FRRGREC_ACCT_ELEMENT = 'L' AND G.FRRGREC_ACCT_ELEMENT_VALUE = O.FTVLOCN_LOCN_CODE )  ORDER BY O.FTVLOCN_COAS_CODE, O.FTVLOCN_LOCN_CODE, O.FTVLOCN_TITLE, O.FTVLOCN_EFF_DATE
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FRBGRNT_FRBGRNT_COAS_CODE">
+			<value>
+				<item businessObject="FRBGRNT" name="FRBGRNT_COAS_CODE"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="HRECPROG_RG.ValueSet.Config" name="HRECPROG_RG">
+    <columns>
+		<column name="FTVPROG_COAS_CODE" type="String" size="1"/>
+		<column name="FTVPROG_PROG_CODE" type="String" size="6"/>
+		<column name="FTVPROG_TITLE" type="String" size="35"/>
+		<column name="FTVPROG_EFF_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT O.FTVPROG_COAS_CODE, O.FTVPROG_PROG_CODE, O.FTVPROG_TITLE, O.FTVPROG_EFF_DATE  FROM FTVPROG O  WHERE O.FTVPROG_NCHG_DATE > SYSDATE AND O.FTVPROG_EFF_DATE <= SYSDATE AND (O.FTVPROG_TERM_DATE > SYSDATE OR O.FTVPROG_TERM_DATE IS NULL) AND O.FTVPROG_DATA_ENTRY_IND = 'Y' AND O.FTVPROG_COAS_CODE = :FRBGRNT_FRBGRNT_COAS_CODE AND  NOT EXISTS(SELECT G.FRRGREC_ACCT_ELEMENT_VALUE  FROM FRRGREC G  WHERE G.FRRGREC_ACCT_ELEMENT = 'P' AND G.FRRGREC_ACCT_ELEMENT_VALUE = O.FTVPROG_PROG_CODE )  ORDER BY O.FTVPROG_COAS_CODE, O.FTVPROG_PROG_CODE, O.FTVPROG_TITLE, O.FTVPROG_EFF_DATE
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FRBGRNT_FRBGRNT_COAS_CODE">
+			<value>
+				<item businessObject="FRBGRNT" name="FRBGRNT_COAS_CODE"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="HRECFUND_RG.ValueSet.Config" name="HRECFUND_RG">
+    <columns>
+		<column name="FTVFUND_COAS_CODE" type="String" size="1"/>
+		<column name="FTVFUND_FUND_CODE" type="String" size="6"/>
+		<column name="FTVFUND_TITLE" type="String" size="35"/>
+		<column name="FTVFUND_EFF_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT O.FTVFUND_COAS_CODE, O.FTVFUND_FUND_CODE, O.FTVFUND_TITLE, O.FTVFUND_EFF_DATE  FROM FTVFUND O  WHERE O.FTVFUND_NCHG_DATE > SYSDATE AND O.FTVFUND_EFF_DATE <= SYSDATE AND (O.FTVFUND_TERM_DATE > SYSDATE OR O.FTVFUND_TERM_DATE IS NULL) AND O.FTVFUND_DATA_ENTRY_IND = 'Y' AND O.FTVFUND_COAS_CODE = :FRBGRNT_FRBGRNT_COAS_CODE AND (NVL(FTVFUND_GRNT_CODE, '@')) IN (:DISPLAY_FRBGRNT_CODE, '@') AND  NOT EXISTS(SELECT G.FRRGREC_ACCT_ELEMENT_VALUE  FROM FRRGREC G  WHERE G.FRRGREC_ACCT_ELEMENT = 'F' AND G.FRRGREC_ACCT_ELEMENT_VALUE = O.FTVFUND_FUND_CODE )  ORDER BY O.FTVFUND_COAS_CODE, O.FTVFUND_FUND_CODE, O.FTVFUND_TITLE, O.FTVFUND_EFF_DATE
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FRBGRNT_FRBGRNT_COAS_CODE">
+			<value>
+				<item businessObject="FRBGRNT" name="FRBGRNT_COAS_CODE"/> 
+			</value>
+        </parameter>
+		<parameter name="DISPLAY_FRBGRNT_CODE">
+			<value>
+				<item businessObject="KEY_BLOCK" name="DISPLAY_FRBGRNT_CODE"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="HRECORGN_RG.ValueSet.Config" name="HRECORGN_RG">
+    <columns>
+		<column name="FTVORGN_COAS_CODE" type="String" size="1"/>
+		<column name="FTVORGN_ORGN_CODE" type="String" size="6"/>
+		<column name="FTVORGN_TITLE" type="String" size="35"/>
+		<column name="FTVORGN_EFF_DATE" type="Date" size="7"/>
+	</columns>
+	<query><![CDATA[
+	SELECT O.FTVORGN_COAS_CODE, O.FTVORGN_ORGN_CODE, O.FTVORGN_TITLE, O.FTVORGN_EFF_DATE  FROM FTVORGN O  WHERE O.FTVORGN_NCHG_DATE > SYSDATE AND O.FTVORGN_EFF_DATE <= SYSDATE AND (O.FTVORGN_TERM_DATE > SYSDATE OR O.FTVORGN_TERM_DATE IS NULL) AND O.FTVORGN_DATA_ENTRY_IND = 'Y' AND O.FTVORGN_COAS_CODE = :FRBGRNT_FRBGRNT_COAS_CODE AND  NOT EXISTS(SELECT G.FRRGREC_ACCT_ELEMENT_VALUE  FROM FRRGREC G  WHERE G.FRRGREC_ACCT_ELEMENT = 'O' AND G.FRRGREC_ACCT_ELEMENT_VALUE = O.FTVORGN_ORGN_CODE )  ORDER BY O.FTVORGN_COAS_CODE, O.FTVORGN_ORGN_CODE, O.FTVORGN_TITLE, O.FTVORGN_EFF_DATE
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FRBGRNT_FRBGRNT_COAS_CODE">
+			<value>
+				<item businessObject="FRBGRNT" name="FRBGRNT_COAS_CODE"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FTVACCT_RG.ValueSet.Config" name="FTVACCT_RG">
+    <columns>
+		<column name="FTVACCT_ACCT_CODE" type="String" size="6"/>
+		<column name="FTVACCT_COAS_CODE" type="String" size="1"/>
+		<column name="FTVACCT_TITLE" type="String" size="35"/>
+		<column name="FTVACCT_EFF_DATE" type="Date" size="7"/>
+		<column name="FTVACCT_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FTVACCT_USER_ID" type="String" size="30"/>
+		<column name="FTVACCT_NCHG_DATE" type="Date" size="7"/>
+		<column name="FTVACCT_TERM_DATE" type="Date" size="7"/>
+		<column name="FTVACCT_ATYP_CODE" type="String" size="2"/>
+		<column name="FTVACCT_NORMAL_BAL" type="String" size="1"/>
+		<column name="FTVACCT_STATUS_IND" type="String" size="1"/>
+		<column name="FTVACCT_ACCT_CODE_PRED" type="String" size="6"/>
+		<column name="FTVACCT_DATA_ENTRY_IND" type="String" size="1"/>
+		<column name="FTVACCT_ACCT_CODE_FRINGE" type="String" size="6"/>
+		<column name="FTVACCT_FRINGE_PCT" type="Number" size="23"/>
+		<column name="FTVACCT_ACCT_CODE_POOL" type="String" size="6"/>
+		<column name="FTVACCT_ACCT_CODE_ASSET" type="String" size="6"/>
+		<column name="FTVACCT_ITYP_SEQ_CODE" type="Number" size="23"/>
+		<column name="FTVACCT_ACCT_CLASS_CODE" type="String" size="2"/>
+		<column name="FTVACCT_ACCT_CODE_DEPR_EXP" type="String" size="6"/>
+		<column name="FTVACCT_ACCT_CODE_DEPR_ACCUM" type="String" size="6"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ftvacct_acct_code, ftvacct_coas_code, ftvacct_title, ftvacct_eff_date, ftvacct_activity_date, ftvacct_user_id, ftvacct_nchg_date, ftvacct_term_date, ftvacct_atyp_code, ftvacct_normal_bal, ftvacct_status_ind, ftvacct_acct_code_pred, ftvacct_data_entry_ind, ftvacct_acct_code_fringe, ftvacct_fringe_pct, ftvacct_acct_code_pool, ftvacct_acct_code_asset, ftvacct_ityp_seq_code, ftvacct_acct_class_code, ftvacct_acct_code_depr_exp, ftvacct_acct_code_depr_accum  FROM ftvacct  WHERE ftvacct_coas_code = :FRBGRNT_FRBGRNT_COAS_CODE  ORDER BY ftvacct_acct_code, ftvacct_coas_code
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="FRBGRNT_FRBGRNT_COAS_CODE">
+			<value>
+				<item businessObject="FRBGRNT" name="FRBGRNT_COAS_CODE"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="FRVBECL_RG.ValueSet.Config" name="FRVBECL_RG">
+    <columns>
+		<column name="FRVBECL_CODE" type="String" size="4"/>
+		<column name="FRVBECL_DESC" type="String" size="35"/>
+		<column name="FRVBECL_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FRVBECL_USER_ID" type="String" size="30"/>
+	</columns>
+	<query><![CDATA[
+	SELECT frvbecl_code, frvbecl_desc, frvbecl_activity_date, frvbecl_user_id  FROM frvbecl 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FRVPMSC_RG.ValueSet.Config" name="FRVPMSC_RG">
+    <columns>
+		<column name="FRVPMSC_CODE" type="String" size="16"/>
+		<column name="FRVPMSC_DESC" type="String" size="35"/>
+		<column name="FRVPMSC_AGENCY_PIDM" type="Number" size="23"/>
+		<column name="FRVPMSC_ACTIVITY_DATE" type="Date" size="7"/>
+		<column name="FRVPMSC_USER_ID" type="String" size="30"/>
+		<column name="FRVPMSC_LOC_NO" type="String" size="15"/>
+		<column name="FRVPMSC_LOC_LIMIT" type="Number" size="23"/>
+		<column name="FRVPMSC_COAS_CODE" type="String" size="1"/>
+		<column name="FRVPMSC_LOC_FUND_CODE" type="String" size="6"/>
+		<column name="FRVPMSC_ACCT_CODE_RECEIPTS" type="String" size="6"/>
+		<column name="FRVPMSC_LAST_INV_SEQ_NO" type="Number" size="23"/>
+	</columns>
+	<query><![CDATA[
+	SELECT frvpmsc_code, frvpmsc_desc, frvpmsc_agency_pidm, frvpmsc_activity_date, frvpmsc_user_id, frvpmsc_loc_no, frvpmsc_loc_limit, frvpmsc_coas_code, frvpmsc_loc_fund_code, frvpmsc_acct_code_receipts, frvpmsc_last_inv_seq_no  FROM frvpmsc  ORDER BY frvpmsc_code, frvpmsc_activity_date
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVECCG_RG.ValueSet.Config" name="NTVECCG_RG">
+    <columns>
+		<column name="NTVECCG_CODE" type="String" size="8"/>
+		<column name="NTVECCG_DESC" type="String" size="30"/>
+		<column name="ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxxxxx' ntveccg_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ntveccg_desc, 'xxxxxxxxxxxx' activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

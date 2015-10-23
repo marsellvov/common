@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GOBEACC.Manager.Config" name="GOBEACC">
+		
+		<items>
+			<item name="GOBEACC_USERNAME" logicalName="gobeaccUsername" type="String" physicalName="GOBEACC_USERNAME"  />
+			<item name="WACS_ID" logicalName="wacsId" type="String"  virtual="true" />
+			<item name="NAME" logicalName="nname" type="String"  virtual="true" />
+			<item name="GOBEACC_PIDM" logicalName="gobeaccPidm" type="java.math.BigDecimal" physicalName="GOBEACC_PIDM"  />
+			<item name="GOBEACC_ACTIVITY_DATE" logicalName="gobeaccActivityDate" type="java.util.Date" physicalName="GOBEACC_ACTIVITY_DATE"  />
+			<item name="GOBEACC_USER_ID" logicalName="gobeaccUserId" type="String" physicalName="GOBEACC_USER_ID"  />
+			<item name="CONFID_INFO" logicalName="confidInfo" type="String"  virtual="true" />
+			<item name="DECEASED_IND" logicalName="deceasedInd" type="String"  virtual="true" />
+			<item name="VUSR_IND" logicalName="vusrInd" type="String"  virtual="true" />
+			<item name="IDEN_REC_CNT" logicalName="idenRecCnt" type="java.math.BigDecimal"  virtual="true" />
+			<item name="IDEN_ID" logicalName="idenId" type="String"  virtual="true" />
+			<item name="ERR_CODE" logicalName="errCode" type="String"  virtual="true" />
+			<item name="EACC_ERROR_MSG" logicalName="eaccErrorMsg" type="String"  virtual="true" />
+			<item name="VALID_ORACLEUSER" logicalName="validOracleuser" type="String"  virtual="true" />
+			<item name="AMSG" logicalName="amsg" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Goaeacc.model.GobeaccAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[gobeacc_username]]></defaultOrderByClause>	
+
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

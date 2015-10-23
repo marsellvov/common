@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="gtvzipcBlock.gtvzipcCode.prompt">ZIP or Postal Code</msg>
+  <msg id="gtvzipcBlock.gtvzipcCode.hint">Zip Code; enter a valid Zip Code.</msg>
+  <msg id="gtvzipcBlock.gtvzipcCity.prompt">City</msg>
+  <msg id="gtvzipcBlock.gtvzipcCity.hint">City Name; enter the name of a City.</msg>
+  <msg id="gtvzipcBlock.gtvzipcCntyCode.prompt">County</msg>
+  <msg id="gtvzipcBlock.gtvzipcCntyCode.hint">County Code; Enter the associated County Code, press LIST for valid Counties.</msg>
+  <msg id="gtvzipcBlock.gtvzipcStatCode.prompt">State or Province</msg>
+  <msg id="gtvzipcBlock.gtvzipcStatCode.hint">State Code; enter a valid State Code, press LIST for valid State Codes.</msg>
+  <msg id="gtvzipcBlock.gtvzipcNatnCode.prompt">Nation</msg>
+  <msg id="gtvzipcBlock.gtvzipcNatnCode.hint">Nation Code; enter a valid Nation Code, press LIST for valid Nation Codes.</msg>
+  <msg id="gtvzipcBlock.gtvzipcActivityDate.prompt">Activity Date</msg>
+  <msg id="gtvzipcBlock.accordion.title">ZIP/Postal Code Validation</msg>
+  <msg id="buttonControlBlock.gtvzipcBlock1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.gtvzipcStatCodeLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.gtvzipcNatnCodeLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.gtvzipcCntyCodeLbt.tooltip">Search</msg>
+  <msg id="mainWindow.title">ZIP/Postal Code Validation Form</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

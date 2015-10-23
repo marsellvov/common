@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" >
+  <panel top="94px" left="3px" width="1001px" height="480px">
+    <tabpanel id="tabCurriculaCanvas" name="CURRICULA_CANVAS">
+      <tab label="curriculumTab.label" id="page_curriculumTab" name="CURRICULUM_TAB">
+        <include src="net/hedtech/general/common/libraries/Soqolib/views/TabCurriculaCanvasCurriculumTab" />
+      </tab>
+      <tab label="fieldofstudyTab.label" id="page_fieldofstudyTab" name="FIELDOFSTUDY_TAB">
+        <include src="net/hedtech/general/common/libraries/Soqolib/views/TabCurriculaCanvasFieldofstudyTab" />
+      </tab>
+    </tabpanel>
+  </panel>
+</config>

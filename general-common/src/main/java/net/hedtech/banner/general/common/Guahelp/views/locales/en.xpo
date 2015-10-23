@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="displayHelp.helpForm.hint">Enter Form Name;</msg>
+  <msg id="displayHelp.helpBlock.hint">Enter Block Name; press LIST for valid block name.</msg>
+  <msg id="displayHelp.helpField.hint">Enter Field Name; press LIST for valid Field Names.</msg>
+  <msg id="displayHelp.helpType.hint">Help Type; press NXTBLK to display the help.</msg>
+  <msg id="displayHelp.helpType.helpTypeRbt1.label">Banner</msg>
+  <msg id="displayHelp.helpType.helpTypeRbt2.label">Local</msg>
+  <msg id="displayHelp.helpSel.hint">Help Level; select appropriate level.</msg>
+  <msg id="displayHelp.helpSel.helpSelRbt1.label">Form</msg>
+  <msg id="displayHelp.helpSel.helpSelRbt2.label">Block</msg>
+  <msg id="displayHelp.helpSel.helpSelRbt3.label">Field</msg>
+  <msg id="displayHelp.guahelpFindBtn.label">Display</msg>
+  <msg id="displayHelp.guahelp1RollbackBtn.label">Clear</msg>
+  <msg id="displayHelp.guahelp1SaveBtn.label">Save</msg>
+  <msg id="displayHelp.guahelp1ExitBtn.label">Cancel</msg>
+  <msg id="showHelp.helpInd.label">Help Exists?</msg>
+  <msg id="buttonControlBlock.helpBlockLbt.label">Block</msg>
+  <msg id="buttonControlBlock.helpBlockLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.helpFieldLbt.label">Field</msg>
+  <msg id="buttonControlBlock.helpFieldLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.guahelp2RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.guahelp2EditBtn.label">Edit</msg>
+  <msg id="buttonControlBlock.guahelp2SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.guahelp2ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Help Form</msg>
+  <msg id="guahelpWindow.title">Help Form</msg>
+  <msg id="helpfldLov.title">Field Names</msg>
+  <msg id="helpfldLov.gubbhlpFieldName.title">Field Name</msg>
+  <msg id="helpblkLov.title">Block Names</msg>
+  <msg id="helpblkLov.gubbhlpBlockName.title">Block Name</msg>
+</messages>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="KEY_BLOCK.Manager.Config" name="KeyBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="USER_ID" logicalName="userId" type="String"   />
+			<item name="COPY_USER_ID" logicalName="copyUserId" type="String"   />
+			<item name="INCLUDE_COAS_CODE" logicalName="includeCoasCode" type="String"   />
+			<item name="INCLUDE_ORGN_CODE" logicalName="includeOrgnCode" type="String"   />
+			<item name="EXCLUDE_COAS_CODE" logicalName="excludeCoasCode" type="String"   />
+			<item name="EXCLUDE_ORGN_CODE" logicalName="excludeOrgnCode" type="String"   />
+			<item name="CHECK_KEYS" logicalName="checkKeys" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.finance.common.Fomusor.model.KeyBlock</managerClass>
+
+	</manager>
+</b:beans>

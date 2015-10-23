@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVFUND"/>
+	<panel class="ContentCanvas" id="pnlFtvfund1Canvas" menu="G$_DEFAULT_PM" name="FTVFUND_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="ftvfund.accordion.title">
+				<gridview block="FTVFUND" fixedcols="4" name="ntrpcls_grdNtrpcls" width="100%">
+					<viewheader>
+						<viewcolumn block="FTVFUND" case="upper" datatype="String" label="ftvfund.ftvfundCoasCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVFUND_COAS_CODE" name="ftvfundCoasCode" width="135px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FTVFUND" case="upper" datatype="String" enabled="false" label="ftvfund.ftvfundFundCode.prompt" labelstyle="DEFAULT" maxlength="6" member="FTVFUND_FUND_CODE" name="ftvfundFundCode" width="135px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FTVFUND" case="upper" datatype="String" label="ftvfund.ftvfundFtypCode.prompt" labelstyle="DEFAULT" maxlength="2" member="FTVFUND_FTYP_CODE" name="ftvfundFtypCode" width="130px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FTVFUND" datatype="String" label="ftvfund.ftvfundTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FTVFUND_TITLE" name="ftvfundTitle" width="220px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FTVFUND" case="upper" datatype="String" label="ftvfund.ftvfundDataEntryInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVFUND_DATA_ENTRY_IND" name="ftvfundDataEntryInd" width="200px">
+							<editor>
+								<checkbox falsevalue="N" value="Y">
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</checkbox>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="FTVFUND" case="upper" datatype="String" enabled="false" label="ftvfund.ftvfundStatusInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVFUND_STATUS_IND" name="ftvfundStatusInd" width="200px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FTVFUND" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvfund.ftvfundEffDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVFUND_EFF_DATE" name="ftvfundEffDate" width="200px">
+							<editor>
+								<calendar>
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</calendar>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="FTVFUND" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvfund.ftvfundTermDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVFUND_TERM_DATE" name="ftvfundTermDate" width="200px">
+							<editor>
+								<calendar>
+									<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								</calendar>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="FTVFUND" case="upper" datatype="String" keyactions="NEXT_ITEM" label="ftvfund.ftvfundGrntCode.prompt" labelstyle="DEFAULT" maxlength="9" member="FTVFUND_GRNT_CODE" name="ftvfundGrntCode" width="200px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FTVFUND" datatype="String" enabled="false" label="ftvfund.grntDesc.prompt" labelstyle="DEFAULT" maxlength="35" member="GRNT_DESC" name="grntDesc" width="270px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</accordion>
+	</panel>
+</config>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Guqintf/GuqintfAlerts.xml" Name="GUQINTF">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Guqintf/views/ViewMainWindow">
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="GJBPRUN_1_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="DUMMY">
+      <Item DataType="String" Id="CURRENT_TIME" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="CURRENT_DATE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GJBPRUN_1_CANVAS" DataType="String" Enabled="true" Id="PROCESS_MSG" MaxLength="255" Type="TextItem" Visible="true" />
+      <Item CanvasName="GJBPRUN_1_CANVAS" DataType="String" Id="PROCESS_STATUS" MaxLength="255" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GJBPRUN_1_CANVAS" DataType="String" Id="PROCESS_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOST_PREFIX" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COMMAND_NAME" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="JOB_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="PRNT_CODE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="STATUS_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="ONE_UP_NO" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_TERM_CODE" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_JOB_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_CALL_FORM" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="HOLD_ONE_UP_NO" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_DISPLAY_MSG" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="MESSAGE_TEXT" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="IS_AUTO_LOGIN" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_ID_REQUEST_NO" MaxLength="15" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_ID" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_AIDY_CODE" MaxLength="4" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_PERIOD" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ALT_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ALT_PASSWORD" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COMMAND_STRING" MaxLength="240" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="GJBPRUN">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GJBPRUN_JOB" MaxLength="30" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" CanvasName="GJBPRUN_1_CANVAS" DataType="String" Enabled="true" Id="GJBPRUN_DUMMY" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="GJBPRUN_ONE_UP_NO" MaxLength="22" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GJBPRUN_NUMBER" MaxLength="2" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="GJBPRUN_ACTIVITY_DATE" MaxLength="11" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GJBPRUN_VALUE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+  </Logic>
+</FormStructure>

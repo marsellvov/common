@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<!-- <b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/FORM_HEADER.Manager.Config.xml"/> -->
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/GUBOBJS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/G___EXTENDED_SEARCH_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/G___FUNC_BASE_INFO_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/G___NAV_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/G___OPT_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/G___VPDI_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/LIB__FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/QK_MENU.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/QK_FLOW.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/G___SDKEY.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/G___SDISP.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqolib/model/GOQOLIB.ValueSet.Config.xml"/>
+
+	
+	<formModel id="GOQOLIB.Model.Config" name="GOQOLIB">
+		<modelClass>net.hedtech.general.common.libraries.Goqolib.model.GoqolibModel</modelClass>
+		<parameters>
+			<parameter name="G$_PREFERENCES" type="String">			</parameter>
+		</parameters>
+		
+		<businessObjects>
+			<!-- <businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject> -->
+			<businessObject name="GUBOBJS" manager="GUBOBJS.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="G$_EXTENDED_SEARCH_BLOCK" manager="G___EXTENDED_SEARCH_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="G$_FUNC_BASE_INFO_BLOCK" manager="G___FUNC_BASE_INFO_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="G$_NAV_BLOCK" manager="G___NAV_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="G$_OPT_BLOCK" manager="G___OPT_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="G$_VPDI_BLOCK" manager="G___VPDI_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="LIB$FORM_HEADER" manager="LIB__FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="QK_MENU" manager="QK_MENU.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="QK_FLOW" manager="QK_FLOW.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="G$_SDKEY" manager="G___SDKEY.Manager.Config">
+			<summaries>
+				<item name="COUNT_NOT_NULL" summarizedBusinessObject="G$_SDISP" summarizedItem="GOVSDAV_VALUE_AS_CHAR"/>
+
+				<item name="COUNT_REQD_IS_NULL" summarizedBusinessObject="G$_SDISP" summarizedItem="REQD_IS_NULL"/>
+
+			</summaries>
+		
+		
+			</businessObject>
+			<businessObject name="G$_SDISP" manager="G___SDISP.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="GTVVPDI_RG.ValueSet.Config"/>
+				<valueSet config="G___VPDI_ALL_RG.ValueSet.Config"/>
+				<valueSet config="ALL_USERS_RG.ValueSet.Config"/>
+				<valueSet config="GTVSQPR_RG.ValueSet.Config"/>
+				<valueSet config="GTVSQRU_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVAP_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVBA_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVCA_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVCC_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVCP_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVCR_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVDT_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVEL_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVEP_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVFT_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVGO_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVPC_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVRP_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVTR_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVTS_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVIO_RG.ValueSet.Config"/>
+				<valueSet config="GTVSVIT_RG.ValueSet.Config"/>
+				<valueSet config="GTVCMSC_RG.ValueSet.Config"/>
+				<valueSet config="GTVMTYP_RG.ValueSet.Config"/>
+				<valueSet config="GTVINSM_RG.ValueSet.Config"/>
+				<valueSet config="GTVSRCE_RG.ValueSet.Config"/>
+				<valueSet config="GTVDOCM_RG.ValueSet.Config"/>
+				<valueSet config="GTVVISS_RG.ValueSet.Config"/>
+				<valueSet config="GTVCELG_RG.ValueSet.Config"/>
+				<valueSet config="GOBWFED_RG.ValueSet.Config"/>
+				<valueSet config="GTVDUNT_RG.ValueSet.Config"/>
+				<valueSet config="GTVWFED_RG.ValueSet.Config"/>
+				<valueSet config="GOBWFDD_RG.ValueSet.Config"/>
+				<valueSet config="GTVEQPG_RG.ValueSet.Config"/>
+				<valueSet config="GTVEQNM_RG.ValueSet.Config"/>
+				<valueSet config="GTVEQTS_RG.ValueSet.Config"/>
+				<valueSet config="GTVEQPM_RG.ValueSet.Config"/>
+				<valueSet config="GXVBANK_RG.ValueSet.Config"/>
+				<valueSet config="GTVNTYP_RG_IDNAME.ValueSet.Config"/>
+				<valueSet config="STVHLDD_RG.ValueSet.Config"/>
+				<valueSet config="STVSTAT_RG_IDNAME.ValueSet.Config"/>
+				<valueSet config="GUBOBJS_RG.ValueSet.Config"/>
+				<valueSet config="STVCOMF_RG.ValueSet.Config"/>
+				<valueSet config="STVCOMS_RG.ValueSet.Config"/>
+				<valueSet config="STVCOMT_RG.ValueSet.Config"/>
+				<valueSet config="GTVNTYP_RG.ValueSet.Config"/>
+				<valueSet config="STVTELE_RG.ValueSet.Config"/>
+				<valueSet config="STVTESC_RG.ValueSet.Config"/>
+				<valueSet config="STVASRC_RG.ValueSet.Config"/>
+				<valueSet config="STVSBGI_RG.ValueSet.Config"/>
+				<valueSet config="STVRELG_RG.ValueSet.Config"/>
+				<valueSet config="STVMAJR_RG.ValueSet.Config"/>
+				<valueSet config="STVLGCY_RG.ValueSet.Config"/>
+				<valueSet config="STVHONR_RG.ValueSet.Config"/>
+				<valueSet config="STVETHN_RG.ValueSet.Config"/>
+				<valueSet config="STVDEGC_RG.ValueSet.Config"/>
+				<valueSet config="STVACTC_RG.ValueSet.Config"/>
+				<valueSet config="STVMRTL_RG.ValueSet.Config"/>
+				<valueSet config="STVCOLL_RG.ValueSet.Config"/>
+				<valueSet config="STVSTAT_RG.ValueSet.Config"/>
+				<valueSet config="STVNATN_RG.ValueSet.Config"/>
+				<valueSet config="STVCNTY_RG.ValueSet.Config"/>
+				<valueSet config="STVATYP_RG.ValueSet.Config"/>
+				<valueSet config="STVTERM_RG.ValueSet.Config"/>
+				<valueSet config="GTVADID_RG.ValueSet.Config"/>
+				<valueSet config="GTVPROC_RG.ValueSet.Config"/>
+				<valueSet config="GTVCCRD_RG.ValueSet.Config"/>
+				<valueSet config="GTVCURR_RG.ValueSet.Config"/>
+				<valueSet config="GTVZIPC_RG.ValueSet.Config"/>
+				<valueSet config="GTVUOMS_RG.ValueSet.Config"/>
+				<valueSet config="GTVTTYP_RG.ValueSet.Config"/>
+				<valueSet config="GTVTSTA_RG.ValueSet.Config"/>
+				<valueSet config="GTVTASK_RG.ValueSet.Config"/>
+				<valueSet config="GTVTARG_RG.ValueSet.Config"/>
+				<valueSet config="GTVSYSI_RG.ValueSet.Config"/>
+				<valueSet config="GTVSUBJ_RG.ValueSet.Config"/>
+				<valueSet config="GTVRTNG_RG.ValueSet.Config"/>
+				<valueSet config="GTVRSVP_RG.ValueSet.Config"/>
+				<valueSet config="GTVREVN_RG.ValueSet.Config"/>
+				<valueSet config="GTVRATE_RG.ValueSet.Config"/>
+				<valueSet config="GTVPURP_RG.ValueSet.Config"/>
+				<valueSet config="GTVPTYP_RG.ValueSet.Config"/>
+				<valueSet config="GTVPRNT_RG.ValueSet.Config"/>
+				<valueSet config="GTVPARA_RG.ValueSet.Config"/>
+				<valueSet config="GTVOBJT_RG.ValueSet.Config"/>
+				<valueSet config="GTVMENU_RG.ValueSet.Config"/>
+				<valueSet config="GTVMAIL_RG.ValueSet.Config"/>
+				<valueSet config="GTVLETR_RG.ValueSet.Config"/>
+				<valueSet config="GTVFTYP_RG.ValueSet.Config"/>
+				<valueSet config="GTVFUNC_RG.ValueSet.Config"/>
+				<valueSet config="GTVFSTA_RG.ValueSet.Config"/>
+				<valueSet config="GTVFEES_RG.ValueSet.Config"/>
+				<valueSet config="GTVEXPN_RG.ValueSet.Config"/>
+				<valueSet config="GTVEMPH_RG.ValueSet.Config"/>
+				<valueSet config="GTVCALL_RG.ValueSet.Config"/>
+				<valueSet config="STVASCD_RG.ValueSet.Config"/>
+				<valueSet config="STVADMR_RG.ValueSet.Config"/>
+				<valueSet config="STVACYR_RG.ValueSet.Config"/>
+				<valueSet config="STVACTP_RG.ValueSet.Config"/>
+				<valueSet config="STVACCG_RG.ValueSet.Config"/>
+				<valueSet config="STVACAT_RG.ValueSet.Config"/>
+				<valueSet config="STVMATL_RG.ValueSet.Config"/>
+				<valueSet config="STVLEVL_RG.ValueSet.Config"/>
+				<valueSet config="STVLEAD_RG.ValueSet.Config"/>
+				<valueSet config="STVLANG_RG.ValueSet.Config"/>
+				<valueSet config="STVINIT_RG.ValueSet.Config"/>
+				<valueSet config="STVGEOR_RG.ValueSet.Config"/>
+				<valueSet config="STVGEOD_RG.ValueSet.Config"/>
+				<valueSet config="STVFCNT_RG.ValueSet.Config"/>
+				<valueSet config="STVETYP_RG.ValueSet.Config"/>
+				<valueSet config="STVETCT_RG.ValueSet.Config"/>
+				<valueSet config="STVEMPT_RG.ValueSet.Config"/>
+				<valueSet config="STVDPLM_RG.ValueSet.Config"/>
+				<valueSet config="STVDLEV_RG.ValueSet.Config"/>
+				<valueSet config="STVDISA_RG.ValueSet.Config"/>
+				<valueSet config="STVDEPT_RG.ValueSet.Config"/>
+				<valueSet config="STVDAYS_RG.ValueSet.Config"/>
+				<valueSet config="STVCITZ_RG.ValueSet.Config"/>
+				<valueSet config="STVCIPC_RG.ValueSet.Config"/>
+				<valueSet config="STVCAMP_RG.ValueSet.Config"/>
+				<valueSet config="STVBLDG_RG.ValueSet.Config"/>
+				<valueSet config="STVBCHR_RG.ValueSet.Config"/>
+				<valueSet config="STVPRCD_RG.ValueSet.Config"/>
+				<valueSet config="STVPENT_RG.ValueSet.Config"/>
+				<valueSet config="STVORIG_RG.ValueSet.Config"/>
+				<valueSet config="STVMEDI_RG.ValueSet.Config"/>
+				<valueSet config="STVMDEQ_RG.ValueSet.Config"/>
+				<valueSet config="STVRELT_RG.ValueSet.Config"/>
+				<valueSet config="STVRDEF_RG.ValueSet.Config"/>
+				<valueSet config="STVPTYP_RG.ValueSet.Config"/>
+				<valueSet config="STVSPSR_RG.ValueSet.Config"/>
+				<valueSet config="STVSPON_RG.ValueSet.Config"/>
+				<valueSet config="STVSITE_RG.ValueSet.Config"/>
+				<valueSet config="STVRRCD_RG.ValueSet.Config"/>
+				<valueSet config="STVRMST_RG.ValueSet.Config"/>
+				<valueSet config="STVSUBJ_RG.ValueSet.Config"/>
+				<valueSet config="GLBAPPL_RG.ValueSet.Config"/>
+				<valueSet config="STVVTYP_RG.ValueSet.Config"/>
+				<valueSet config="GTVDICD_RG.ValueSet.Config"/>
+				<valueSet config="GUROPTM_RG.ValueSet.Config"/>
+				<valueSet config="G___GENERIC_RGD.ValueSet.Config"/>
+				<valueSet config="G___ATVGIFT_RGD.ValueSet.Config"/>
+				<valueSet config="G___TBBDETC_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVFUND_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVRUCL_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVPROG_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVORGN_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVLOCN_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVCOAS_RGD.ValueSet.Config"/>
+				<valueSet config="G___GXRDIRD_RGD.ValueSet.Config"/>
+				<valueSet config="G___GXVBANK_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVACTV_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVACCT_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVACCI_RGD.ValueSet.Config"/>
+				<valueSet config="GJQPVAL_RG.ValueSet.Config"/>
+				<valueSet config="G___FTVPROJ_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVCTYP_RGD.ValueSet.Config"/>
+				<valueSet config="G___ROIAIDY_RGD.ValueSet.Config"/>
+				<valueSet config="G___FTVATYP_RGD.ValueSet.Config"/>
+				<valueSet config="G___SEARCH_RG.ValueSet.Config"/>
+				<valueSet config="STVTRMT_RG.ValueSet.Config"/>
+				<valueSet config="GUBLHLP_FLD_RG.ValueSet.Config"/>
+				<valueSet config="GUBLHLP_BLK_RG.ValueSet.Config"/>
+				<valueSet config="GUBLHLP_FRM_RG.ValueSet.Config"/>
+				<valueSet config="GUBBHLP_FLD_RG.ValueSet.Config"/>
+				<valueSet config="GUBBHLP_BLK_RG.ValueSet.Config"/>
+				<valueSet config="GUBBHLP_FRM_RG.ValueSet.Config"/>
+				<valueSet config="STVHOND_RG.ValueSet.Config"/>
+				<valueSet config="GTVEMAL_RG.ValueSet.Config"/>
+				<valueSet config="STVASTY_RG.ValueSet.Config"/>
+				<valueSet config="GORDWIZ_RG.ValueSet.Config"/>
+				<valueSet config="GTVDPRP_RG.ValueSet.Config"/>
+				<valueSet config="GTVDSTP_RG.ValueSet.Config"/>
+				<valueSet config="GTVDADD_GORDWIZ_RG.ValueSet.Config"/>
+				<valueSet config="GTVDADD_RG.ValueSet.Config"/>
+				<valueSet config="GOBFDMN_RG.ValueSet.Config"/>
+				<valueSet config="GORPFII_RG.ValueSet.Config"/>
+				<valueSet config="GTVFBPR_RG.ValueSet.Config"/>
+				<valueSet config="GTVFDMN_RG.ValueSet.Config"/>
+				<valueSet config="GTVFDTP_RG.ValueSet.Config"/>
+				<valueSet config="GTVFGAC_RG.ValueSet.Config"/>
+				<valueSet config="GTVLFST_RG.ValueSet.Config"/>
+				<valueSet config="GTVRRAC_RG.ValueSet.Config"/>
+				<valueSet config="GORRACE_RG.ValueSet.Config"/>
+				<valueSet config="GOBSDTB_RG.ValueSet.Config"/>
+				<valueSet config="WFED_TRANS_NO_RG.ValueSet.Config"/>
+				<valueSet config="ALL_TAB_COLUMNS_RG.ValueSet.Config"/>
+				<valueSet config="G_EXT_SEARCH_RG.ValueSet.Config"/>
+				<valueSet config="GTVPLAT_RG.ValueSet.Config"/>				
+		</valueSets>
+
+	</formModel>
+</b:beans>

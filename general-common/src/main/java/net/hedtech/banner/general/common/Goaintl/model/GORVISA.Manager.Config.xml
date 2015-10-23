@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GORVISA.Manager.Config" name="GORVISA">
+		
+		<items>
+			<item name="GORVISA_PIDM" logicalName="gorvisaPidm" type="java.math.BigDecimal" physicalName="GORVISA_PIDM"  >
+				<value>
+					<item name="PIDM" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="GORVISA_SEQ_NO" logicalName="gorvisaSeqNo" type="java.math.BigDecimal" physicalName="GORVISA_SEQ_NO"  />
+			<item name="SEQNO" logicalName="seqno" type="java.math.BigDecimal"  virtual="true" />
+			<item name="GORVISA_VTYP_CODE" logicalName="gorvisaVtypCode" type="String" physicalName="GORVISA_VTYP_CODE"  />
+			<item name="VTYP_DESC" logicalName="vtypDesc" type="String"  virtual="true" />
+			<item name="GORVISA_VISA_NUMBER" logicalName="gorvisaVisaNumber" type="String" physicalName="GORVISA_VISA_NUMBER"  />
+			<item name="GORVISA_NATN_CODE_ISSUE" logicalName="gorvisaNatnCodeIssue" type="String" physicalName="GORVISA_NATN_CODE_ISSUE"  />
+			<item name="ISSUE_NATN_DESC" logicalName="issueNatnDesc" type="String"  virtual="true" />
+			<item name="GORVISA_VISS_CODE" logicalName="gorvisaVissCode" type="String" physicalName="GORVISA_VISS_CODE"  />
+			<item name="VISS_DESC" logicalName="vissDesc" type="String"  virtual="true" />
+			<item name="GORVISA_PENT_CODE" logicalName="gorvisaPentCode" type="String" physicalName="GORVISA_PENT_CODE"  />
+			<item name="PENT_DESC" logicalName="pentDesc" type="String"  virtual="true" />
+			<item name="GORVISA_ENTRY_IND" logicalName="gorvisaEntryInd" type="String" physicalName="GORVISA_ENTRY_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GORVISA_NO_ENTRIES" logicalName="gorvisaNoEntries" type="String" physicalName="GORVISA_NO_ENTRIES"  />
+			<item name="GORVISA_VISA_REQ_DATE" logicalName="gorvisaVisaReqDate" type="java.util.Date" physicalName="GORVISA_VISA_REQ_DATE"  />
+			<item name="GORVISA_VISA_ISSUE_DATE" logicalName="gorvisaVisaIssueDate" type="java.util.Date" physicalName="GORVISA_VISA_ISSUE_DATE"  />
+			<item name="GORVISA_VISA_START_DATE" logicalName="gorvisaVisaStartDate" type="java.util.Date" physicalName="GORVISA_VISA_START_DATE"  />
+			<item name="GORVISA_VISA_EXPIRE_DATE" logicalName="gorvisaVisaExpireDate" type="java.util.Date" physicalName="GORVISA_VISA_EXPIRE_DATE"  />
+			<item name="GORVISA_USER_ID" logicalName="gorvisaUserId" type="String" physicalName="GORVISA_USER_ID"  />
+			<item name="GORVISA_ACTIVITY_DATE" logicalName="gorvisaActivityDate" type="java.util.Date" physicalName="GORVISA_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATETIME"/>
+				</value>	
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Goaintl.model.GorvisaAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[gorvisa_seq_no desc]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

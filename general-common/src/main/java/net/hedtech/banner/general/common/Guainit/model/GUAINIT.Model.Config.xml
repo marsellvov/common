@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guainit/model/DISPLAY.Manager.Config.xml"/>
+	
+	<formModel id="GUAINIT.Model.Config" name="GUAINIT">
+		<modelClass>net.hedtech.banner.general.common.Guainit.model.GuainitModel</modelClass>
+		<parameters>
+			<parameter name="BAN_MODE" type="String">			</parameter>
+			<parameter name="WF_ACTIONQUEUE_IOR" type="String">			</parameter>
+			<parameter name="WF_ARGS" type="String">			</parameter>
+			<parameter name="BAN_ARGS" type="String">			</parameter>
+			<parameter name="LAUNCH_FORM" type="String">			</parameter>
+			<parameter name="KEEP_ALIVE" type="String">			</parameter>
+			<parameter name="START_TRACE" type="String">			</parameter>
+			<parameter name="TIMING" type="String">			</parameter>
+			<parameter name="VPDI_CODE" type="String">			</parameter>
+			<parameter name="IAMTICKET" type="String">			</parameter>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="DISPLAY" manager="DISPLAY.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+	</formModel>
+</b:beans>

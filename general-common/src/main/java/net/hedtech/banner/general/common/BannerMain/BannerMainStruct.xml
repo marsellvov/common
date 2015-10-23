@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/BannerMain/BannerMainAlerts.xml" Name="BANNER_MAIN">
+	<Visual>
+	    <Window Id="MAIN_WINDOW" modal="true" Url="net/hedtech/banner/general/common/BannerMain/views/ViewMainWindow">
+	      <ContentCanvas Id="MAIN_CANVAS">
+	      </ContentCanvas>
+    </Window>
+	</Visual>
+	<Logic>
+		<Block Id="DISPLAY">
+			<Item DataType="String" Id="DESKTOP" MaxLength="30" Type="TextItem"/>
+			<Item DataType="String" Id="LOGO_IMAGE" MaxLength="30"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="STARTUP_MENU" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" DataType="String" Id="DATE_TIME" MaxLength="22" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" DataType="Number" Id="TIME1" MaxLength="20" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" DataType="Number" Id="TIME2" MaxLength="20" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" DataType="Number" Id="TIME3" MaxLength="20" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" DataType="Number" Id="TIME4" MaxLength="20" Navigable="false" Type="TextItem"/>
+		</Block>
+		<Block Id="GUISETI" MultiRecord="true" AllowInsert="false" AllowDelete="false" AllowUpdate="false">
+	      <Item Id="VPDI_CODE" CanvasName="MAIN_CANVAS" MaxLength="6" Type="TextItem">
+	      </Item>
+	      <Item Id="PRIMARY_IND" CanvasName="" Navigable="false" MaxLength="1" Visible="false" Type="TextItem">
+	      </Item>
+	      <Item Id="CODE_DESC" CanvasName="MAIN_CANVAS" MaxLength="30" Type="TextItem">
+	      </Item>
+	    </Block>
+	</Logic>
+</FormStructure>

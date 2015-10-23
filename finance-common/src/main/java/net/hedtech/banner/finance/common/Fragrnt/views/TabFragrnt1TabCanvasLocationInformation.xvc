@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <interactionblock name="FRRGLOC" />
+  <panel width="100%">
+    <accordion width="100%">
+      <panel label="locationInfo.title">
+        <panel width="100%">
+          <gridview block="FRRGLOC" name="grdFrrgloc" width="100%">
+            <viewheader>
+              <viewcolumn autoskip="true" block="FRRGLOC" case="upper" datatype="String" keyactions="NEXT_ITEM" label="frrgloc.frrglocLocnCode.prompt" labelstyle="DEFAULT" maxlength="30" member="FRRGLOC_LOCN_CODE" name="frrglocLocnCode" required="true">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <editor>
+                  <lovbox />
+                </editor>
+              </viewcolumn>
+              <viewcolumn block="FRRGLOC" datatype="String" label="frrgloc.frrglocLocnTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FRRGLOC_LOCN_TITLE" name="frrglocLocnTitle">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn autoskip="true" block="FRRGLOC" datatype="String" label="frrgloc.frrglocLocnResearchInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FRRGLOC_LOCN_RESEARCH_IND" name="frrglocLocnResearchInd" required="true">
+                <editor>
+                  <combobox>
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                    <model>
+                      <item label="frrgloc.frrglocLocnResearchInd.item0.label" value="C" />
+                      <item label="frrgloc.frrglocLocnResearchInd.item1.label" value="O" />
+                    </model>
+                  </combobox>
+                </editor>
+              </viewcolumn>
+            </viewheader>
+          </gridview>
+        </panel>
+      </panel>
+    </accordion>
+  </panel>
+</config>

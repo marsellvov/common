@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+   	<panel width="100%" class="Canvas" name="G$_WELCOME_CANVAS" style="welcome-container">	
+  		<text>gWelcome.message.text</text>
+  	</panel> 
+</config>

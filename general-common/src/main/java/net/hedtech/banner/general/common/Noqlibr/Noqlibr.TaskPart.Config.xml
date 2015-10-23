@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans xmlns="urn:schemas:morphis:foundations:task" xmlns:b="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/general/common/Noqlibr/model/NOQLIBR.Model.Config.xml"/>
+	<task id="NOQLIBR.TaskPart.Config" name="NOQLIBR">
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.general.common.Noqlibr.NoqlibrTaskPart</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/general/common/Noqlibr/NoqlibrStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.general.common.Noqlibr.services.NoqlibrServices</services>
+			<!-- Package Beans-->
+			<packages>
+				<package name="NOQLIBR">net.hedtech.banner.general.common.Noqlibr.controller.NoqlibrFormController</package>
+				<package name="NOBTRAN_INFO_1">net.hedtech.banner.general.common.Noqlibr.controller.NobtranInfo1Controller</package>
+				<package name="NORCMNT">net.hedtech.banner.general.common.Noqlibr.controller.NorcmntController</package>
+				<package name="N$_GUROPTM_CALL_FORM_CLASS">net.hedtech.banner.general.common.Noqlibr.services.NGuroptmCallFormClass</package>
+				<package name="N$_COMMENTS_EDITOR_CLASS">net.hedtech.banner.general.common.Noqlibr.services.NCommentsEditorClass</package>
+			</packages>
+			<attachedLibraries>
+				<!-- Attached Libs -->
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+		<!-- model -->
+		<formModelConfiguration config="NOQLIBR.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.banner.general.common.Noqlibr.controller.NoqlibrFormController</formController>		
+		<blockControllers>
+			<block  name="FORM_HEADER">net.hedtech.banner.general.common.Noqlibr.controller.FormHeaderController</block>
+			<block  name="NOQOLIB">net.hedtech.banner.general.common.Noqlibr.controller.NoqolibController</block>
+			<block  name="NOBTRAN">net.hedtech.banner.general.common.Noqlibr.controller.NobtranController</block>
+			<block  name="NOBTRAN_INFO_1">net.hedtech.banner.general.common.Noqlibr.controller.NobtranInfo1Controller</block>
+			<block  name="NORCMNT">net.hedtech.banner.general.common.Noqlibr.controller.NorcmntController</block>
+		</blockControllers>
+		<menuControllers>
+			<menu  name="G$_DEFAULT_PM">net.hedtech.banner.general.common.Noqlibr.controller.GDefaultPmContextController</menu>
+		</menuControllers>
+	</task>
+</b:beans>

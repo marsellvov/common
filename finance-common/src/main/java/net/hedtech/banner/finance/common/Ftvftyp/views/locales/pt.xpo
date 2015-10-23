@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="ftvftyp.ftvftypCoasCode.prompt">Chart of Accounts</msg>
+  <msg id="ftvftyp.ftvftypFtypCode.prompt">Fund Type</msg>
+  <msg id="ftvftyp.ftvftypTitle.prompt">Title</msg>
+  <msg id="ftvftyp.ftvftypFtypCodePred.prompt">Predecessor Fund Type</msg>
+  <msg id="ftvftyp.ftvftypStatusInd.prompt">Status</msg>
+  <msg id="ftvftyp.ftvftypEncMultYrInd.prompt">Encumber Multi Year Labor</msg>
+  <msg id="ftvftyp.ftvftypEncMultYrInd.hint">Allow multi-year labor encumbering.</msg>
+  <msg id="ftvftyp.ftvftypEffDate.prompt">Effective Date</msg>
+  <msg id="ftvftyp.ftvftypTermDate.prompt">Termination Date</msg>
+  <msg id="buttonControlBlock.ftvftyp1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.ftvftyp1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.ftvftyp1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Fund Type Validation Form</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

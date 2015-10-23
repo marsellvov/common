@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="APTADDR_HEADER"/>
+	<interactionblock name="APTADDR"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel width="100%">
+		<collapsiblepanel label="householdTab.text28.text" name="rect190" width="100%">
+			<panel width="100%">
+				<gridlayout cols="2" orientation="vertical">
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" label="aptaddrHeader.addrNameLf30.prompt" member="ADDR_NAME_LF30" name="addrNameLf30" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrId.prompt" member="ADDR_ID" name="addrId" width="78px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrAtypCode.prompt" member="ADDR_ATYP_CODE" name="addrAtypCode" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+						<textfield block="APTADDR_HEADER" datatype="String" height="23px" member="ADDR_ATYP_DESC" name="addrAtypDesc" width="118px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textfield>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="Number" enabled="false" height="23px" label="aptaddrHeader.addrAddrSeqno.prompt" member="ADDR_ADDR_SEQNO" name="addrAddrSeqno" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrHouseNumber.prompt" member="ADDR_HOUSE_NUMBER" name="addrHouseNumber" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<calendar block="APTADDR_HEADER" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" label="aptaddrHeader.addrFromDate.prompt" member="ADDR_FROM_DATE" name="addrFromDate" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</calendar>
+					</gridcell>
+					<gridcell>
+						<calendar block="APTADDR_HEADER" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" label="aptaddrHeader.addrToDate.prompt" member="ADDR_TO_DATE" name="addrToDate" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</calendar>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrStreetLine1.prompt" member="ADDR_STREET_LINE1" name="addrStreetLine1" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrStreetLine2.prompt" member="ADDR_STREET_LINE2" name="addrStreetLine2" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrStreetLine3.prompt" member="ADDR_STREET_LINE3" name="addrStreetLine3" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrStreetLine4.prompt" member="ADDR_STREET_LINE4" name="addrStreetLine4" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrCity.prompt" member="ADDR_CITY" name="addrCity" width="318px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrStatCode.prompt" member="ADDR_STAT_CODE" name="addrStatCode" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrZip.prompt" member="ADDR_ZIP" name="addrZip" width="239px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrNatnDesc.prompt" member="ADDR_NATN_DESC" name="addrNatnDesc" width="299px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrTeleCode.prompt" member="ADDR_TELE_CODE" name="addrTeleCode" width="51px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+						<textfield block="APTADDR_HEADER" datatype="String" height="23px" member="ADDR_TELE_DESC" name="addrTeleDesc" width="246px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textfield>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrCntyDesc.prompt" member="ADDR_CNTY_DESC" name="addrCntyDesc" width="239px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="APTADDR_HEADER" datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrPhone.prompt" member="ADDR_PHONE" name="addrPhone" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<component>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" enabled="false" height="24px" keyactions="NEXT_BLOCK,PREVIOUS_BLOCK,NEXT_ITEM,PREVIOUS_ITEM" label="buttonControlBlock.aptaddrGuasystBtn.label" member="APTADDR_GUASYST_BTN" name="aptaddrGuasystBtn" width="93px">
+								<xl:event action="WHEN-MOUSE-CLICK" name="click" />
+							</button>
+						</component>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</collapsiblepanel>
+		<collapsiblepanel width="100%" label="householdTabMembers.label">
+			<panel width="100%">
+				<gridlayout cols="1" orientation="vertical">
+					<gridcell style="empty">
+						<component>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK"  keyactions="NEXT_BLOCK,PREVIOUS_BLOCK,NEXT_ITEM,PREVIOUS_ITEM" label="buttonControlBlock.aptaddrInactivateBtn.label" member="APTADDR_INACTIVATE_BTN" name="aptaddrInactivateBtn" navigable="false" tooltip="buttonControlBlock.aptaddrInactivateBtn.tooltip" >
+								<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+							</button>
+						</component>
+					</gridcell>
+				</gridlayout>
+				<repeater block="APTADDR" width="100%">
+				<gridlayout cols="2" orientation="vertical">
+					<gridcell>
+						<checkbox action="WHEN-CHECKBOX-CHANGED"  enabled="false" falsevalue="N" height="23px" label="aptaddr.aptaddrSlctInd.prompt" member="APTADDR_SLCT_IND" name="aptaddrSlctInd" value="Y" width="19px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</checkbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" label="aptaddr.aptaddrNameLf30.prompt" member="APTADDR_NAME_LF30" name="aptaddrNameLf30" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  case="upper" datatype="String" enabled="false" height="23px" label="aptaddr.aptaddrId.prompt" member="APTADDR_ID" name="aptaddrId" width="78px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  case="upper" datatype="String" enabled="false" height="23px" label="aptaddr.aptaddrXrefCode.prompt" member="APTADDR_XREF_CODE" name="aptaddrXrefCode" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="Number" enabled="false" height="23px" label="aptaddr.aptaddrAge.prompt" member="APTADDR_AGE" name="aptaddrAge" textalign="right" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" label="aptaddr.aptaddrHouseNumber.prompt" member="APTADDR_HOUSE_NUMBER" name="aptaddrHouseNumber" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+<!-- 					<gridcell> -->
+<!-- 						<textfield  datatype="String" enabled="false" height="23px" member="APTADDR_ADDRESS_COMPARE_IND" name="aptaddrAddressCompareInd" textalign="center" width="50px"> -->
+<!-- 							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/> -->
+<!-- 						</textfield> -->
+<!-- 					</gridcell> -->
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" label="aptaddr.aptaddrStreetLine1.prompt" member="APTADDR_STREET_LINE1" name="aptaddrStreetLine1" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrStreetLine2.prompt" member="APTADDR_STREET_LINE2" name="aptaddrStreetLine2" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrStreetLine3.prompt" member="APTADDR_STREET_LINE3" name="aptaddrStreetLine3" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" label="aptaddrHeader.addrStreetLine4.prompt" member="APTADDR_STREET_LINE4" name="aptaddrStreetLine4" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" label="aptaddr.aptaddrCity.prompt" member="APTADDR_CITY" name="aptaddrCity" width="318px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					
+					<gridcell>
+						<textbox  case="upper" datatype="String" enabled="false" height="23px" label="aptaddr.aptaddrStatCode.prompt" member="APTADDR_STAT_CODE" name="aptaddrStatCode" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" label="aptaddr.aptaddrZip.prompt" member="APTADDR_ZIP" name="aptaddrZip" width="239px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" label="aptaddr.taddrNatnDesc.prompt" member="TADDR_NATN_DESC" name="taddrNatnDesc" width="294px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" label="aptaddr.taddrCntyDesc.prompt" member="TADDR_CNTY_DESC" name="taddrCntyDesc" width="239px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox  datatype="String" enabled="false" height="23px" label="aptaddr.aptaddrPhone.prompt" member="APTADDR_PHONE" name="aptaddrPhone" width="301px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<textfield  datatype="String" enabled="false" height="23px" member="APTADDR_PHONE_COMPARE_IND" name="aptaddrPhoneCompareInd" textalign="center" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+					<gridcell>
+						<calendar  case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" label="aptaddr.aptaddrFromDate.prompt" member="APTADDR_FROM_DATE" name="aptaddrFromDate" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+					<gridcell>
+						<calendar  case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" height="23px" label="aptaddr.aptaddrToDate.prompt" member="APTADDR_TO_DATE" name="aptaddrToDate" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+				</gridlayout>
+				</repeater>
+			</panel>
+		</collapsiblepanel>
+	</panel>
+</config>

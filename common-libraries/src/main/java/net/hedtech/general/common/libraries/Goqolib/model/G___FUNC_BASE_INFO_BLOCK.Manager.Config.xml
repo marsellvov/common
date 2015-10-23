@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="G___FUNC_BASE_INFO_BLOCK.Manager.Config" name="GFuncBaseInfoBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="FUNC_EVNT_CRN" logicalName="funcEvntCrn" type="String"   />
+			<item name="FUNC_FUNC_CODE" logicalName="funcFuncCode" type="String"   />
+			<item name="FUNC_SPNSR_ORGN_PIDM" logicalName="funcSpnsrOrgnPidm" type="java.math.BigDecimal"   />
+			<item name="FUNC_PURP_CODE" logicalName="funcPurpCode" type="String"   />
+			<item name="FUNC_PURP_DESC" logicalName="funcPurpDesc" type="String"   />
+			<item name="PARK_SPOT" logicalName="parkSpot" type="String"   />
+			<item name="FUNC_ETYP_CODE" logicalName="funcEtypCode" type="String"   />
+			<item name="ETYP_DESC" logicalName="etypDesc" type="String"   />
+			<item name="FUNC_EMPH_CODE" logicalName="funcEmphCode" type="String"   />
+			<item name="FUNC_FSTA_CODE" logicalName="funcFstaCode" type="String"   />
+			<item name="SPONSOR_ID" logicalName="sponsorId" type="String"   />
+			<item name="SPONSOR_NAME" logicalName="sponsorName" type="String"   />
+			<item name="LOCATION_CONTACT_PIDM" logicalName="locationContactPidm" type="java.math.BigDecimal"   />
+			<item name="LOCATION_CONTACT_ID" logicalName="locationContactId" type="String"   />
+			<item name="LOCATION_CONTACT_NAME" logicalName="locationContactName" type="String"   />
+			<item name="PRIMARY_CONTACT_PIDM" logicalName="primaryContactPidm" type="java.math.BigDecimal"   />
+			<item name="PRIMARY_CONTACT_ID" logicalName="primaryContactId" type="String"   />
+			<item name="PRIMARY_CONTACT_NAME" logicalName="primaryContactName" type="String"   />
+			<item name="START_DATE" logicalName="startDate" type="String"   />
+			<item name="END_DATE" logicalName="endDate" type="String"   />
+			<item name="MONDAY" logicalName="monday" type="String"   />
+			<item name="TUESDAY" logicalName="tuesday" type="String"   />
+			<item name="WEDNESDAY" logicalName="wednesday" type="String"   />
+			<item name="THURSDAY" logicalName="thursday" type="String"   />
+			<item name="FRIDAY" logicalName="friday" type="String"   />
+			<item name="SATURDAY" logicalName="saturday" type="String"   />
+			<item name="SUNDAY" logicalName="sunday" type="String"   />
+			<item name="BEGIN_TIME" logicalName="beginTime" type="String"   />
+			<item name="END_TIME" logicalName="endTime" type="String"   />
+			<item name="BUILDING" logicalName="building" type="String"   />
+			<item name="ROOM" logicalName="room" type="String"   />
+			<item name="SAVE_BLOCK_NAME" logicalName="saveBlockName" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Goqolib.model.GFuncBaseInfoBlock</managerClass>
+
+	</manager>
+</b:beans>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GOREMAL.Manager.Config" name="GOREMAL">
+		
+		<items>
+			<item name="GOREMAL_EMAL_CODE" logicalName="goremalEmalCode" type="String" physicalName="GOREMAL_EMAL_CODE"  />
+			<item name="EMAIL_DESC" logicalName="emailDesc" type="String"  virtual="true" />
+			<item name="GOREMAL_EMAIL_ADDRESS" logicalName="goremalEmailAddress" type="String" physicalName="GOREMAL_EMAIL_ADDRESS"  />
+			<item name="GOREMAL_PREFERRED_IND" logicalName="goremalPreferredInd" type="String" physicalName="GOREMAL_PREFERRED_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="GOREMAL_STATUS_IND" logicalName="goremalStatusInd" type="String" physicalName="GOREMAL_STATUS_IND"  >
+				<value>
+					<constant>A</constant>
+				</value>	
+			</item>
+			<item name="GOREMAL_DISP_WEB_IND" logicalName="goremalDispWebInd" type="String" physicalName="GOREMAL_DISP_WEB_IND"  >
+				<value>
+					<constant>Y</constant>
+				</value>	
+			</item>
+			<item name="URL_IND" logicalName="urlInd" type="String"  virtual="true" />
+			<item name="GOREMAL_COMMENT" logicalName="goremalComment" type="String" physicalName="GOREMAL_COMMENT"  />
+			<item name="GOREMAL_ACTIVITY_DATE" logicalName="goremalActivityDate" type="java.util.Date"  virtual="true" />
+			<item name="GOREMAL_USER_ID" logicalName="goremalUserId" type="String" physicalName="GOREMAL_USER_ID"  />
+			<item name="GOREMAL_PIDM" logicalName="goremalPidm" type="java.math.BigDecimal" physicalName="GOREMAL_PIDM"  />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqclib.model.GoremalAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE goremal_pidm = :PIDM]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[GOREMAL_PREFERRED_IND DESC, GOREMAL_STATUS_IND,
+GOREMAL_EMAL_CODE, GOREMAL_ACTIVITY_DATE DESC]]></defaultOrderByClause>	
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="1" enabled="true"/>
+	</manager>
+</b:beans>

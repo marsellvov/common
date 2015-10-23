@@ -1,0 +1,60 @@
+﻿@import "../style.css";
+		.SELECTED_ITEM
+		{
+			
+      background-color: White;
+		}
+	
+		.SELECTED_ITEMPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.LOCAL_TEXT
+		{
+			
+      background-color: White;
+      font-family: Verdana;
+      font-size:8pt;
+      color: Blue;
+		}
+	
+		.LOCAL_TEXTPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.LOCAL_HIGHLITE_TEXT
+		{
+			
+      background-color: White;
+      font-family: Verdana;
+      font-size:8pt;
+		}
+	
+		.LOCAL_HIGHLITE_TEXTPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	
+		.G$_ICON_BTN_CLASS
+		{
+			
+      font-size:8pt;
+      width: 20px;
+      height: 20px;
+		}
+	
+		.G$_ICON_BTN_CLASSPrompt
+		{
+			
+      font-size:8pt;
+			
+		}
+	

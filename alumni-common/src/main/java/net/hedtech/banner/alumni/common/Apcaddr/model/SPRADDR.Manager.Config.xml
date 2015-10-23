@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPRADDR.Manager.Config" name="SPRADDR">
+		
+		<items>
+			<item name="SPRADDR_PIDM" logicalName="spraddrPidm" type="java.math.BigDecimal" physicalName="SPRADDR_PIDM">
+			<value>
+					<item name="KEY_PIDM" businessObject="KEY_BLOCK"/>
+				</value>
+			</item> 
+			<item name="SPRADDR_ATYP_CODE" logicalName="spraddrAtypCode" type="String" physicalName="SPRADDR_ATYP_CODE"   /> 
+			<item name="SPRADDR_SEQNO" logicalName="spraddrSeqno" type="java.math.BigDecimal" physicalName="SPRADDR_SEQNO"   /> 
+			<item name="SPRADDR_ASRC_CODE" logicalName="spraddrAsrcCode" type="String" physicalName="SPRADDR_ASRC_CODE"   /> 
+			<item name="SPRADDR_HOUSE_NUMBER" logicalName="spraddrHouseNumber" type="String" physicalName="SPRADDR_HOUSE_NUMBER"   /> 
+			<item name="SPRADDR_STREET_LINE1" logicalName="spraddrStreetLine1" type="String" physicalName="SPRADDR_STREET_LINE1"   /> 
+			<item name="SPRADDR_STREET_LINE2" logicalName="spraddrStreetLine2" type="String" physicalName="SPRADDR_STREET_LINE2"   /> 
+			<item name="SPRADDR_STREET_LINE3" logicalName="spraddrStreetLine3" type="String" physicalName="SPRADDR_STREET_LINE3"   /> 
+			<item name="SPRADDR_STREET_LINE4" logicalName="spraddrStreetLine4" type="String" physicalName="SPRADDR_STREET_LINE4"   /> 
+			<item name="SPRADDR_CITY" logicalName="spraddrCity" type="String" physicalName="SPRADDR_CITY"   /> 
+			<item name="SPRADDR_STAT_CODE" logicalName="spraddrStatCode" type="String" physicalName="SPRADDR_STAT_CODE"   /> 
+			<item name="SPRADDR_ZIP" logicalName="spraddrZip" type="String" physicalName="SPRADDR_ZIP"   /> 
+			<item name="SPRADDR_NATN_CODE" logicalName="spraddrNatnCode" type="String" physicalName="SPRADDR_NATN_CODE"   /> 
+			<item name="NATN_DESC" logicalName="natnDesc" type="String"  virtual="true"  /> 
+			<item name="SPRADDR_FROM_DATE" logicalName="spraddrFromDate" type="java.util.Date" physicalName="SPRADDR_FROM_DATE"   /> 
+			<item name="SPRADDR_STATUS_IND" logicalName="spraddrStatusInd" type="String" physicalName="SPRADDR_STATUS_IND"   /> 
+			<item name="SPRADDR_TO_DATE" logicalName="spraddrToDate" type="java.util.Date" physicalName="SPRADDR_TO_DATE"   /> 
+		</items>
+		
+		<adapterClass>net.hedtech.banner.alumni.common.Apcaddr.model.SpraddrAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE spraddr_pidm = :KEY_BLOCK_PIDM AND ((:GLOBAL_CALLING_FORM = 'AOAORGN' AND nvl(spraddr_status_ind, 'A') = 'A') OR (nvl(:GLOBAL_CALLING_FORM, 'APCADDR') <> 'AOAORGN'))]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by spraddr_status_ind desc, spraddr_to_date desc, spraddr_from_date desc, spraddr_atyp_code]]></defaultOrderByClause>	
+
+		<pagination maximumRows="1" enabled="true"/>
+
+	</manager>
+</b:beans>

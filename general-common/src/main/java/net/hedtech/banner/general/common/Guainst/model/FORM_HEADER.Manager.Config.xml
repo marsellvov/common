@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FORM_HEADER.Manager.Config" name="FormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CURRENT_FORM" logicalName="currentForm" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="CURRENT_INSTITUTION" logicalName="currentInstitution" type="String"   />
+			<item name="CURRENT_DATE" logicalName="currentDate" type="String"   />
+			<item name="CURRENT_TIME" logicalName="currentTime" type="String"   />
+			<item name="WORKFLD" logicalName="workfld" type="String"   />
+			<item name="CALLFLD" logicalName="callfld" type="String"   />
+			<item name="WORKDATE" logicalName="workdate" type="String"   />
+			<item name="QRY_CHG_IND" logicalName="qryChgInd" type="String"   />
+			<item name="EFFDATE_EFF_DATE_TIME" logicalName="effdateEffDateTime" type="String"   />
+			<item name="WORK_DATETIME" logicalName="workDatetime" type="java.util.Date"   />
+			<item name="HOLD_CONV_RATE" logicalName="holdConvRate" type="java.math.BigDecimal"   />
+			<item name="SAVE_ITEM" logicalName="saveItem" type="String"   />
+			<item name="DATA_SEPARATOR_LINE_0" logicalName="dataSeparatorLine0" type="String"   />
+			<item name="DATA_SEPARATOR_LINE_1" logicalName="dataSeparatorLine1" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Guainst.model.FormHeader</managerClass>
+
+	</manager>
+</b:beans>

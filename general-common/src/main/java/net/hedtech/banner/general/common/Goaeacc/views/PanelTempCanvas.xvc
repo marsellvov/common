@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlTempCanvas" menu="G$_DEFAULT_PM" name="TEMP_CANVAS" visible="false" width="100%">
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.gobvusrExitBtn.label" member="GOBVUSR_EXIT_BTN" name="gobvusrExitBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.gobvusrSaveBtn.label" member="GOBVUSR_SAVE_BTN" name="gobvusrSaveBtn" navigable="false" width="80px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.gobvusrRollbackBtn.label" member="GOBVUSR_ROLLBACK_BTN" name="gobvusrRollbackBtn" navigable="false" width="80px"/>
+	</panel>
+</config>

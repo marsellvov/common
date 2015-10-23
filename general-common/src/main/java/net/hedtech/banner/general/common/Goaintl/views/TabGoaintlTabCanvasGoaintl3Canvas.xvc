@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="GOBINTL"/>
+	<accordion width="100%">
+		<panel label="certificationWindow.title">
+			<panel width="100%">
+				<gridlayout cols="1" orientation="vertical" width="100%">
+					<gridcell>
+						<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK,PREVIOUS_ITEM" label="gobintl.gobintlCelgCode.prompt" maxlength="6" member="GOBINTL_CELG_CODE" name="gobintlCelgCode" style="ui-buttoninput" width="72px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GOBINTL_CELG_CODE_LBT" name="gobintlCelgCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gobintlCelgCodeLbt.tooltip" width="23px"/>
+						<textfield block="GOBINTL" datatype="String" height="23px" maxlength="30" member="CELG_DESC" name="celgDesc" width="217px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlCertNumber.prompt" maxlength="11" member="GOBINTL_CERT_NUMBER" name="gobintlCertNumber" width="132px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<calendar autoskip="true" block="GOBINTL" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlCertDateIssue.prompt" maxlength="11" member="GOBINTL_CERT_DATE_ISSUE" name="gobintlCertDateIssue" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+					<gridcell>
+						<calendar autoskip="true" block="GOBINTL" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlCertDateReceipt.prompt" maxlength="11" member="GOBINTL_CERT_DATE_RECEIPT" name="gobintlCertDateReceipt" validation="server" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlAdmrCode.prompt" maxlength="4" member="GOBINTL_ADMR_CODE" name="gobintlAdmrCode" style="ui-buttoninput" width="56px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GOBINTL_ADMR_CODE_LBT" name="gobintlAdmrCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gobintlAdmrCodeLbt.tooltip" width="23px"/>
+						<textfield block="GOBINTL" datatype="String" height="23px" maxlength="30" member="ADMR_DESC" name="admrDesc" width="237px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</panel>
+	</accordion>
+</config>

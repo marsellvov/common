@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GUQWUTL"/>
+	<panel class="ContentCanvas" id="pnlGuqwutl1Canvas" menu="G$_DEFAULT_PM" name="GUQWUTL_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel>
+				<panel width="100%">
+					<gridlayout cols="2" orientation="vertical">
+						<gridcell>
+							<button action="WHEN-BUTTON-PRESSED" block="GUQWUTL" height="23px" member="EXTRACT_BTN" name="extractBtn" width="136px"/>
+						</gridcell>
+						<gridcell>
+							<button action="WHEN-BUTTON-PRESSED" block="GUQWUTL" height="23px" member="EXIT_BTN" name="exitBtn" width="136px"/>
+						</gridcell>
+						<gridcell>
+							<textfield block="GUQWUTL" datatype="String" height="23px" maxlength="200" member="ITEM1" name="item1" width="339px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textfield block="GUQWUTL" datatype="String" height="23px" maxlength="200" member="ITEM2" name="item2" width="339px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textfield block="GUQWUTL" datatype="String" height="23px" maxlength="200" member="ITEM3" name="item3" width="339px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

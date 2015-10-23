@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="GOVCMRT_MATCH"/>
+	<accordion width="100%">
+		<panel label="matchTab.label">
+			<panel width="100%">
+				<gridlayout cols="2" orientation="vertical">
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" case="upper" datatype="String" height="23px" label="govcmrtMatch.matchId.prompt" maxlength="9" member="MATCH_ID" name="matchId" width="76px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" datatype="String" height="23px" label="govcmrtMatch.matchName.prompt" maxlength="230" member="MATCH_NAME" name="matchName" width="250px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" datatype="String" height="23px" label="govcmrtMatch.matchSsn.prompt" maxlength="15" member="MATCH_SSN" name="matchSsn" width="178px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<calendar block="GOVCMRT_MATCH" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" label="govcmrtMatch.matchBirthDate.prompt" maxlength="11" member="MATCH_BIRTH_DATE" name="matchBirthDate" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" case="upper" datatype="String" height="23px" label="govcmrtMatch.matchSex.prompt" maxlength="1" member="MATCH_SEX" name="matchSex" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" datatype="String" height="23px" label="govcmrtMatch.matchStreetLine.prompt" maxlength="90" member="MATCH_STREET_LINE1" name="matchStreetLine1" width="278px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" datatype="String" height="23px" label="govcmrtMatch.matchStreetLine2.prompt" maxlength="75" member="MATCH_STREET_LINE2" name="matchStreetLine2" width="278px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" datatype="String" height="23px" label="govcmrtMatch.matchStreetLine3.prompt" maxlength="75" member="MATCH_STREET_LINE3" name="matchStreetLine3" width="278px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" datatype="String" height="23px" maxlength="100" label="govcmrtMatch.matchStreetLine1.prompt" member="MATCH_CITY_STATE_ZIP" name="matchCityStateZip" width="278px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" datatype="String" height="23px" maxlength="60" label="govcmrtMatch.matchStreetLine1.prompt" member="MATCH_COUNTY_NATION" name="matchCountyNation" width="278px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" datatype="String" height="23px" label="govcmrtMatch.matchPhone.prompt" maxlength="30" member="MATCH_PHONE" name="matchPhone" width="120px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" datatype="String" height="23px" label="govcmrtMatch.matchEmail.prompt" maxlength="140" member="MATCH_EMAIL" name="matchEmail" width="120px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="GOVCMRT_MATCH" datatype="String" height="23px" label="govcmrtMatch.matchAdditionalId.prompt" maxlength="80" member="MATCH_ADDITIONAL_ID" name="matchAdditionalId" width="278px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<combobox block="GOVCMRT_MATCH" height="23px" label="govcmrtMatch.addressList.prompt" member="ADDRESS_LIST" name="addressList" width="278px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<model>
+								<item label="govcmid.noaddressesfound.label" value="Unknown"/>
+							</model>
+						</combobox>
+					</gridcell>
+					<gridcell>
+						<combobox block="GOVCMRT_MATCH" height="23px" label="govcmrtMatch.phoneList.prompt" member="PHONE_LIST" name="phoneList" width="200px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<model>
+								<item label="govcmid.notelephonesavailable.label" value="Unknown"/>
+							</model>
+						</combobox>
+					</gridcell>
+					<gridcell>
+						<combobox block="GOVCMRT_MATCH" height="23px" label="govcmrtMatch.emailList.prompt" member="EMAIL_LIST" name="emailList" width="200px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<model>
+								<item label="govcmid.noemailsavailable.label" value="Unknown"/>
+							</model>
+						</combobox>
+					</gridcell>
+					<gridcell>
+						<combobox block="GOVCMRT_MATCH" height="23px" datatype="String" label="govcmrtMatch.matchList.prompt" member="MATCH_LIST" name="matchList" width="278px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<model>
+								<item label="govcmid.nomatches.label" value="NM"/>
+							</model>
+						</combobox>
+						
+						
+					</gridcell>
+					<gridcell>
+						<component>
+							<!-- <text>buttonControlBlock.clearMatchBtn.prompt</text> -->
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" enabled="false"  label="buttonControlBlock.clearMatchBtn.prompt" height="23px" member="CLEAR_MATCH_BTN" name="clearMatchBtn" navigable="false" tooltip="buttonControlBlock.clearMatchBtn.tooltip" width="250px"/>
+						</component>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</panel>
+	</accordion>
+</config>

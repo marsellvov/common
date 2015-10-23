@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPRIDEN_PREVIOUS.Manager.Config" name="SPRIDEN">
+		
+		<items>
+			<item name="SPRIDEN_NTYP_CODE" logicalName="spridenNtypCode" type="String" physicalName="SPRIDEN_NTYP_CODE"  />
+			<item name="PREVIOUS_NTYP_DESC" logicalName="previousNtypDesc" type="String"  virtual="true" />
+			<item name="SPRIDEN_CHANGE_IND" logicalName="spridenChangeInd" type="String" physicalName="SPRIDEN_CHANGE_IND"  />
+			<item name="SPRIDEN_ID" logicalName="spridenId" type="String" physicalName="SPRIDEN_ID"  />
+			<item name="SPRIDEN_SURNAME_PREFIX" logicalName="spridenSurnamePrefix" type="String" physicalName="SPRIDEN_SURNAME_PREFIX"  />
+			<item name="SPRIDEN_LAST_NAME" logicalName="spridenLastName" type="String" physicalName="SPRIDEN_LAST_NAME"  />
+			<item name="SPRIDEN_FIRST_NAME" logicalName="spridenFirstName" type="String" physicalName="SPRIDEN_FIRST_NAME"  />
+			<item name="SPRIDEN_MI" logicalName="spridenMi" type="String" physicalName="SPRIDEN_MI"  />
+			<item name="SPRIDEN_ORIGIN" logicalName="spridenOrigin" type="String" physicalName="SPRIDEN_ORIGIN"  />
+			<item name="SPRIDEN_USER" logicalName="spridenUser" type="String" physicalName="SPRIDEN_USER"  />
+			<item name="SPRIDEN_ACTIVITY_DATE" logicalName="spridenActivityDate" type="java.util.Date" physicalName="SPRIDEN_ACTIVITY_DATE"  />
+			<item name="SPRIDEN_CREATE_USER" logicalName="spridenCreateUser" type="String" physicalName="SPRIDEN_CREATE_USER"  />
+			<item name="SPRIDEN_CREATE_DATE" logicalName="spridenCreateDate" type="java.util.Date" physicalName="SPRIDEN_CREATE_DATE"  />
+			<item name="SPRIDEN_PIDM" logicalName="spridenPidm" type="java.math.BigDecimal" physicalName="SPRIDEN_PIDM"  >
+				<value>
+					<item name="PIDM" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="SPRIDEN_ENTITY_IND" logicalName="spridenEntityInd" type="String" physicalName="SPRIDEN_ENTITY_IND"  />
+			<item name="DO_REQUERY" logicalName="doRequery" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqclib.model.SpridenPreviousAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE spriden_change_ind IS NOT NULL]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by spriden_activity_date desc, spriden_change_ind]]></defaultOrderByClause>	
+		<pagination maximumRows="1" enabled="true"/>
+	</manager>
+</b:beans>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="GUBOBJS" />
+  <interactionblock name="FORM_HEADER" />
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <panel class="StackedCanvas" id="pnlGubobjsCanvas" menu="G$_DEFAULT_PM" name="GUBOBJS_CANVAS" width="100%">
+  	
+  	<gridlayout cols="1" width="100%">
+		<gridcell style="empty">
+		    <combobox action="WHEN-LIST-CHANGED" block="FORM_HEADER" height="23px" label="formHeader.objectType.prompt" member="OBJECT_TYPE" name="objectType" required="true" width="200px">
+		      <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+		      <model>
+		        <item label="formHeader.objectType.item0.label" />
+		      </model>
+		    </combobox>
+		  	<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" icon="ui-icon-arrowrefresh-1-w" height="20px" member="OBJECT_SORT_BTN" name="objectSortBtn" navigable="false" tooltip="buttonControlBlock.objectSortBtn.tooltip" visible="false"  width="20px" />
+	  	</gridcell>
+  	</gridlayout>
+  </panel>
+<!--   <panel style="keyblock-button-container">
+    <button accesskey="ALT+PAGE_DOWN" action="NEXT_BLOCK" block="KEY_BLOCK" label="keyBlock.executeBtn.label" member="EXECUTE_BTN" tooltip="keyBlock.executeBtn.tooltip" />
+    <button accesskey="F5" action="CLEAR-FORM" block="KEY_BLOCK" label="keyBlock.keyClrfrmBtn.label" member="KEY-CLRFRM_BTN" tooltip="keyBlock.keyClrfrmBtn.tooltip" visible="false" />
+  </panel> -->
+</config>

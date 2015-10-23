@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<FormStructure AlertDataPath="/net/hedtech/general/common/libraries/Goqolib/GoqolibAlerts.xml" LovDataPath="/net/hedtech/general/common/libraries/Goqolib/GoqolibLovs.xml" Name="GOQOLIB">
+	<Visual>
+		<Window Id="FUNC_BASE_WINDOW" Url="net/hedtech/general/common/libraries/Goqolib/views/ViewFuncBaseWindow">
+			<ContentCanvas Id="FUNC_BASE_CANVAS"/>
+		</Window>
+		<Window Id="G$_EXTENDED_SEARCH_WINDOW" Modal="true" Url="net/hedtech/general/common/libraries/Goqolib/views/ViewGExtendedSearchWindow" CloseButton="true">
+			<ContentCanvas Id="G$_EXTENDED_SEARCH_CANVAS"/>
+		</Window>
+		<Window Id="G$_NVA_WINDOW" Modal="true" Url="net/hedtech/general/common/libraries/Goqolib/views/ViewGNvaWindow"/>
+		<Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/general/common/libraries/Goqolib/views/ViewGOptWindow" >
+			<ContentCanvas Id="G$_OPT_CANVAS"/>
+		</Window>
+		<Window Id="G$_VPDI_WINDOW" Modal="true" Url="net/hedtech/general/common/libraries/Goqolib/views/ViewGVpdiWindow">
+			<ContentCanvas Id="G$_VPDI_CANVAS"/>
+		</Window>
+		<Window Id="MAIN_WINDOW" Url="net/hedtech/general/common/libraries/Goqolib/views/ViewMainWindow">
+			<StackedCanvas Id="G$_NAV_CANVAS" Visible="false"/>
+			<StackedCanvas Id="GUBOBJS_CANVAS"/>
+			<ContentCanvas Id="MAIN_CANVAS"/>
+			<StackedCanvas Id="MENU_ENTIRE" Visible="false"/>
+			<ContentCanvas Id="TEMP_CANVAS" Visible="false"/>
+		</Window>
+		<Window Id="G$_SDSP_WINDOW" Url="net/hedtech/general/common/libraries/Goqolib/views/ViewGSdspWindow" Modal="true" CloseButton="true">
+			<ContentCanvas Id="G$_SDSP_CANVAS"/>
+		</Window>
+	</Visual>
+	<Logic>
+		<Block AllowSearch="false" Id="FORM_HEADER">
+			<Item CanvasName="GUBOBJS_CANVAS" Id="OBJECT_TYPE" MaxLength="30" Required="true" Type="List"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="INITIAL_QUERY" MaxLength="1" Navigable="false" Type="TextItem"/>
+		</Block>
+		<Block Id="GUBOBJS">
+			<Item AllowInsert="false" AllowUpdate="false" CanvasName="GUBOBJS_CANVAS" Id="GUBOBJS_NAME" Lov="GUBOBJS_LOV" MaxLength="30" Required="true" Type="TextItem"/>
+		</Block>
+		<Block Id="G$_EXTENDED_SEARCH_BLOCK">
+			<!-- <Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="IDNAME_EXTSEARCH_LIST" MaxLength="100" Navigable="false" Type="List"/> -->
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="IDNAME_EXTSEARCH_LIST" Lov="G_EXT_SEARCH_LOV" MaxLength="100" Type="TextItem" ReadOnly="true"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="IDNAME_EXTSEARCH_BTN" Type="Button"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="PERSON_DETAIL_BTN" MaxLength="30" Type="Button"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="NPERSON_DETAIL_BTN" MaxLength="30" Type="Button"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.searchGroup.hint" Id="SEARCH_GROUP" MaxLength="1" Navigable="false" Type="RadioGroup">
+				<Item Id="PERSON" Type="RadioButton"/>
+				<Item Id="NONPERSON" Type="RadioButton"/>
+				<Item Id="BOTH" Type="RadioButton"/>
+			</Item>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpraddrCity.hint" Id="SR_SPRADDR_CITY" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpraddrStatCode.hint" Id="SR_SPRADDR_STAT_CODE" Lov="STVSTAT_LOV_IDNAME" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpraddrZip.hint" Id="SR_SPRADDR_ZIP" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpridenNtypCode.hint" Id="SR_SPRIDEN_NTYP_CODE" Lov="GTVNTYP_LOV_IDNAME" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpbpersSsn.hint" Id="SR_SPBPERS_SSN" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpbpersBirthDate.hint" Id="SR_SPBPERS_BIRTH_DATE" MaxLength="13" Navigable="false" Type="TextItem"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Hint="gExtendedSearchBlock.srSpbpersSex.hint" Id="SR_SPBPERS_SEX" MaxLength="1" Navigable="false" Type="TextItem"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="SR_SPRADDR_ZIP_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="SR_SPRADDR_STAT_CODE_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="SR_SPRIDEN_NTYP_CODE_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="EXTSEARCH_CLEAR_BTN" MaxLength="30" Navigable="false"  Type="Button"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="NARROW_SEARCH_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item CanvasName="G$_EXTENDED_SEARCH_CANVAS" Id="EXTSEARCH_COUNT" MaxLength="5" Type="DisplayItem"/>
+		</Block>
+		<Block Id="G$_FUNC_BASE_INFO_BLOCK">
+			<Item AllowSearch="false" AllowUpdate="false" Id="FUNC_EVNT_CRN" MaxLength="5" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="FUNC_FUNC_CODE" MaxLength="12" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="FUNC_SPNSR_ORGN_PIDM" MaxLength="8" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="FUNC_PURP_CODE" MaxLength="10" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="FUNC_PURP_DESC" MaxLength="60" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Hint="gFuncBaseInfoBlock.parkSpot.hint" Id="PARK_SPOT" MaxLength="1" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="FUNC_ETYP_CODE" MaxLength="4" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="ETYP_DESC" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="FUNC_EMPH_CODE" MaxLength="10" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="FUNC_FSTA_CODE" MaxLength="1" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="SPONSOR_ID" MaxLength="9" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="SPONSOR_NAME" MaxLength="94" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="LOCATION_CONTACT_PIDM" MaxLength="8" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="LOCATION_CONTACT_ID" MaxLength="9" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="LOCATION_CONTACT_NAME" MaxLength="96" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="PRIMARY_CONTACT_PIDM" MaxLength="8" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="PRIMARY_CONTACT_ID" MaxLength="9" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="PRIMARY_CONTACT_NAME" MaxLength="96" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="START_DATE" MaxLength="11" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="END_DATE" MaxLength="11" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="MONDAY" MaxLength="1" Navigable="false" Type="Checkbox"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="TUESDAY" MaxLength="1" Navigable="false" Type="Checkbox"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="WEDNESDAY" MaxLength="1" Navigable="false" Type="Checkbox"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="THURSDAY" MaxLength="1" Navigable="false" Type="Checkbox"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="FRIDAY" MaxLength="1" Navigable="false" Type="Checkbox"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="SATURDAY" MaxLength="1" Navigable="false" Type="Checkbox"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="SUNDAY" MaxLength="1" Navigable="false" Type="Checkbox"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="BEGIN_TIME" MaxLength="4" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="END_TIME" MaxLength="4" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="BUILDING" MaxLength="6" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="FUNC_BASE_CANVAS" Id="ROOM" MaxLength="10" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="SAVE_BLOCK_NAME" MaxLength="32" Navigable="false" Type="TextItem"/>
+		</Block>
+		<Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+			<Item CanvasName="G$_NAV_CANVAS" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem"/>
+			<Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button"/>
+			<Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem"/>
+		</Block>
+		<Block Id="G$_OPT_BLOCK">
+			<Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Id="OPT_SEL" MaxLength="30" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem"/>
+			<Item CanvasName="G$_OPT_CANVAS" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button"/>
+		</Block>
+		<Block Id="G$_VPDI_BLOCK">
+			<Item CanvasName="G$_VPDI_CANVAS" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Id="VPDI_OK_BTN" MaxLength="14" Type="Button"/>
+			<Item Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem"/>
+			<Item AllowSearch="false" AllowUpdate="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem"/>
+		</Block>
+		<Block AllowUpdate="false" Id="QK_MENU" MultiRecord="true">
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Id="GURMENU_NAME" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item AllowInsert="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Hint="qkMenu.gurmenuObjName.hint" Id="GURMENU_OBJ_NAME" MaxLength="30" Type="DisplayItem"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Id="QK_TYPE" MaxLength="10" Navigable="false" Type="DisplayItem"/>
+			<Item AllowInsert="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Id="QK_DESC" MaxLength="45" Navigable="false" Type="TextItem"/>
+		</Block>
+		<Block AllowUpdate="false" Id="QK_FLOW" MultiRecord="true">
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Id="GURCALL_CALL_CODE" MaxLength="30" Navigable="false" Type="TextItem"/>
+			<Item CanvasName="MENU_ENTIRE" Hint="qkFlow.gurcallForm.hint" Id="GURCALL_FORM" MaxLength="10" Required="true" Type="DisplayItem"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Id="QK_TYPE" MaxLength="10" Navigable="false" Type="DisplayItem"/>
+			<Item AllowInsert="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Id="QK_DESC" MaxLength="45" Navigable="false" Type="TextItem"/>
+		</Block>
+		<Block Id="G$_SDKEY">
+			<Item Id="SD_BLOCK" MaxLength="30" Navigable="false" Type="TextItem" Enabled="false"/>
+			<Item Id="SD_DISPBLOCK" MaxLength="30" Navigable="false" Type="TextItem" Enabled="false"/>
+			<Item Id="SD_BANTAB" MaxLength="512" Navigable="false" Type="TextItem" Enabled="false"/>
+			<Item Id="SD_KEY" MaxLength="512" Navigable="false" Type="TextItem" Enabled="false"/>
+			<Item Id="SD_ROWID" MaxLength="18" Navigable="false" Type="TextItem" Enabled="false"/>
+			<Item Id="SD_DISPROWID" MaxLength="18" Type="TextItem" Enabled="false"/>
+			<Item Id="SD_EXISTS" MaxLength="1" Navigable="false" Type="TextItem" Enabled="false"/>
+			<Item Id="ENABLE_ATTR_INS" MaxLength="1" Type="DisplayItem" Visible="false"/>
+			<Item Id="TRIG_ENA" MaxLength="1" Type="DisplayItem" Visible="false"/>
+			<Item Id="RENUM_SD_REC" MaxLength="1" Type="DisplayItem" Visible="false"/>
+			<Item Id="COUNT_NOT_NULL" MaxLength="30" Type="DisplayItem" Visible="false"/>
+			<Item CanvasName="G$_SDSP_CANVAS" Id="COUNT_REQD_IS_NULL" MaxLength="30" Type="DisplayItem" Visible="false"  />
+			<Item CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_VALUE_AS_CHAR_LBT" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_VALUE_AS_CHAR_DBT" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item CanvasName="G$_SDSP_CANVAS" Id="SDE_CLOSE_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+		</Block>
+		<Block Id="G$_SDISP" MultiRecord="true">
+			<Item CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_VALUE_AS_CHAR" MaxLength="2000" Type="TextItem" Enabled="false"/>
+			<Item Id="GOVSDAV_TABLE_NAME" MaxLength="30" Required="true" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_ATTR_NAME" MaxLength="30" Required="true" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_ATTR_TYPE" MaxLength="1" Required="true" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_ATTR_ORDER" MaxLength="4" Required="true" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_ATTR_REQD_IND" MaxLength="1" Required="true" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_ATTR_DATA_TYPE" MaxLength="30" Required="true" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_ATTR_DATA_LEN" MaxLength="9" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_ATTR_DATA_SCALE" MaxLength="3" Type="DisplayItem"/>
+			<Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_ATTR_INFO" MaxLength="1024" Navigable="false" Type="TextItem" Enabled="false"/>
+			<Item Id="GOVSDAV_ATTR_BASE_COL" MaxLength="30" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_DISC_TYPE" MaxLength="1" Required="true" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_DISC_METHOD" MaxLength="1" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_DISC_VALIDATION" MaxLength="1024" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_PK_PARENTTAB" MaxLength="512" Type="DisplayItem"/>
+			<Item AllowInsert="false" AllowUpdate="false" CanvasName="G$_SDSP_CANVAS" Id="GOVSDAV_ATTR_PROMPT_DISP" MaxLength="100" Required="true" Type="TextItem" Enabled="false"/>
+			<Item Id="GOVSDAV_ATTR_PROMPT" MaxLength="50" Required="true" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_DISC" MaxLength="64" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_DESC" MaxLength="64" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_ROWID" MaxLength="18" Type="DisplayItem"/>
+			<Item Id="REQD_IS_NULL" MaxLength="1" Type="DisplayItem"/>
+			<Item Id="IS_LAST_IDX" MaxLength="1" Type="DisplayItem"/>
+			<Item Id="GOVSDAV_SDDC_CODE" MaxLength="10" Required="true" Type="DisplayItem" Visible="false"/>
+			<Item Id="GOVSDAV_LOV_FORM" MaxLength="30" Required="true" Type="DisplayItem" Visible="false"/>
+			<Item Id="GOVSDAV_LOV_TABLE_OVRD" MaxLength="30" Required="true" Type="DisplayItem" Visible="false"/>
+			<Item Id="GOVSDAV_LOV_ATTR_OVRD" MaxLength="30" Required="true" Type="DisplayItem" Visible="false"/>
+			<Item Id="GOVSDAV_LOV_CODE_TITLE" MaxLength="255" Required="true" Type="DisplayItem" Visible="false"/>
+			<Item Id="GOVSDAV_LOV_DESC_TITLE" MaxLength="255" Required="true" Type="DisplayItem" Visible="false"/>
+		</Block>
+	</Logic>
+</FormStructure>

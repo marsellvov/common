@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="FORUSOR" />
+  <interactionblock name="FORUSOR_DUMMY" />
+  <interactionblock name="FORM_HEADER" />
+  <panel class="StackedCanvas" id="pnlForusor1Canvas" menu="G$_DEFAULT_PM" name="FORUSOR_1_CANVAS" width="100%">
+    <accordion width="100%">
+      <panel label="mainWindow.title" width="100%">
+        <panel width="100%">
+          <gridview block="FORUSOR" name="grdForusor1" width="100%">
+            <viewheader>
+              <viewcolumn autoskip="true" block="FORUSOR" case="upper" datatype="String" keyactions="NEXT_ITEM" label="forusor.forusorCoasCode.prompt" labelstyle="DEFAULT" maxlength="35" member="FORUSOR_COAS_CODE" name="forusorCoasCode" required="true">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <editor>
+                  <lovbox />
+                </editor>
+              </viewcolumn>
+              <viewcolumn autoskip="true" block="FORUSOR" case="upper" datatype="String" keyactions="NEXT_ITEM" label="forusor.forusorOrgnCode.prompt" labelstyle="DEFAULT" maxlength="35" member="FORUSOR_ORGN_CODE" name="forusorOrgnCode" required="true">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <editor>
+                  <lovbox />
+                </editor>
+              </viewcolumn>
+              <viewcolumn block="FORUSOR" datatype="String" label="forusor.orgnTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="ORGN_TITLE" name="orgnTitle">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </viewcolumn>
+              <viewcolumn autoskip="true" block="FORUSOR" case="upper" datatype="String" label="forusor.accessInd.prompt" labelstyle="DEFAULT" maxlength="1" member="ACCESS_IND" name="accessInd" required="true">
+                <editor>
+                  <combobox>
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                    <model>
+                      <item label="forusor.accessInd.item0.label" value="Q" />
+                      <item label="forusor.accessInd.item1.label" value="P" />
+                      <item label="forusor.accessInd.item2.label" value="B" />
+                    </model>
+                  </combobox>
+                </editor>
+              </viewcolumn>
+              <viewcolumn autoskip="true" block="FORUSOR" case="upper" datatype="String" label="forusor.forusorWbudAccessInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FORUSOR_WBUD_ACCESS_IND" name="forusorWbudAccessInd" required="true">
+                <editor>
+                  <combobox>
+                    <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                    <model>
+                      <item label="forusor.forusorWbudAccessInd.item0.label" value="Q" />
+                      <item label="forusor.forusorWbudAccessInd.item1.label" value="B" />
+                      <item label="forusor.forusorWbudAccessInd.item2.label" value="N" />
+                    </model>
+                  </combobox>
+                </editor>
+              </viewcolumn>
+            </viewheader>
+          </gridview>
+        </panel>
+      </panel>
+    </accordion>
+  </panel>
+</config>

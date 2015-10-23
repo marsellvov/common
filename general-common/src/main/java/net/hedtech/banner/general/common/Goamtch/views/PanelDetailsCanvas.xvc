@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GORCMDO"/>
+	<panel style="lightbox" class="StackedCanvas" id="pnlDetailsCanvas" menu="G$_DEFAULT_PM" name="DETAILS_CANVAS" width="450px">
+		<flowlayout orientation="vertical">
+			<button action="WHEN-BUTTON-PRESSED" block="GORCMDO" height="24px" member="OBJS_DESC1" name="objsDesc1" width="278px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="GORCMDO" height="24px" member="OBJS_DESC2" name="objsDesc2" visible="false" width="278px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="GORCMDO" height="24px" member="OBJS_DESC3" name="objsDesc3" visible="false" width="278px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="GORCMDO" height="24px" member="OBJS_DESC4" name="objsDesc4" visible="false" width="278px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="GORCMDO" height="24px" member="OBJS_DESC5" name="objsDesc5" visible="false" width="278px"/>
+			<button action="WHEN-BUTTON-PRESSED" block="GORCMDO" height="24px" member="OBJS_DESC6" name="objsDesc6" visible="false" width="278px"/>
+		</flowlayout>
+	</panel>
+</config>

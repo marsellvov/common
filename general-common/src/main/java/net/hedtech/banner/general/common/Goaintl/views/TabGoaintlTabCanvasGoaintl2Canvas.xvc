@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="GOBINTL"/>
+	<accordion width="100%">
+		<panel label="passportWindow.title">
+			<framepanel label="goaintl2Canvas.text42.text" width="100%">
+				<gridlayout cols="1" orientation="vertical" width="100%">
+					<gridcell>
+						<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="PREVIOUS_BLOCK,NEXT_BLOCK,PREVIOUS_ITEM" label="gobintl.gobintlPassportId.prompt" maxlength="25" member="GOBINTL_PASSPORT_ID" name="gobintlPassportId" width="200px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlNatnCodeIssue.prompt" maxlength="30" member="GOBINTL_NATN_CODE_ISSUE" name="gobintlNatnCodeIssue" style="ui-buttoninput" width="64px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="GOBINTL_NATN_CODE_ISSUE_LBT" name="gobintlNatnCodeIssueLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.gobintlNatnCodeIssueLbt.tooltip" width="23px"/>
+						<textfield block="GOBINTL" datatype="String" height="23px" maxlength="30" member="ISSUE_NATN_DESC" name="issueNatnDesc1" width="217px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textfield>
+					</gridcell>
+					<gridcell>
+						<calendar autoskip="true" block="GOBINTL" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlPassportExpDate.prompt" maxlength="11" member="GOBINTL_PASSPORT_EXP_DATE" name="gobintlPassportExpDate" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+				</gridlayout>
+			</framepanel>
+			<framepanel label="goaintl2Canvas.graphic202.text" width="100%">
+				<gridlayout cols="1" orientation="vertical">
+					<gridcell>
+						<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlI94Status.prompt" maxlength="3" member="GOBINTL_I94_STATUS" name="gobintlI94Status" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<calendar block="GOBINTL" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlI94Date.prompt" maxlength="11" member="GOBINTL_I94_DATE" name="gobintlI94Date" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</calendar>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="GOBINTL" case="upper" datatype="String" height="23px" keyactions="NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlRegNumber.prompt" maxlength="11" member="GOBINTL_REG_NUMBER" name="gobintlRegNumber" width="133px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<checkbox block="GOBINTL" falsevalue="N" height="23px" keyactions="NEXT_ITEM,NEXT_BLOCK,PREVIOUS_BLOCK" label="gobintl.gobintlDuration.label" member="GOBINTL_DURATION" name="gobintlDuration" othervaluestate="unchecked" value="Y" width="194px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</checkbox>
+					</gridcell>
+				</gridlayout>
+			</framepanel>
+		</panel>
+	</accordion>
+</config>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GTVZIPC_BLOCK.Manager.Config" name="GTVZIPC">
+		
+		<items>
+			<item name="GTVZIPC_USER_ID" logicalName="gtvzipcUserId" type="String" physicalName="GTVZIPC_USER_ID"  />
+			<item name="GTVZIPC_CODE" logicalName="gtvzipcCode" type="String" physicalName="GTVZIPC_CODE"  />
+			<item name="GTVZIPC_CITY" logicalName="gtvzipcCity" type="String" physicalName="GTVZIPC_CITY"  />
+			<item name="GTVZIPC_CNTY_CODE" logicalName="gtvzipcCntyCode" type="String" physicalName="GTVZIPC_CNTY_CODE"  />
+			<item name="GTVZIPC_STAT_CODE" logicalName="gtvzipcStatCode" type="String" physicalName="GTVZIPC_STAT_CODE"  />
+			<item name="GTVZIPC_NATN_CODE" logicalName="gtvzipcNatnCode" type="String" physicalName="GTVZIPC_NATN_CODE"  />
+			<item name="GTVZIPC_ACTIVITY_DATE" logicalName="gtvzipcActivityDate" type="java.util.Date" physicalName="GTVZIPC_ACTIVITY_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Gtvzipc.model.GtvzipcBlockAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[gtvzipc_code]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

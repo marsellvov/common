@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVSDAT"/>
+	<interactionblock name="FORM_HEADER"/>
+	<panel class="ContentCanvas" id="pnlFtvsdat1Canvas" menu="G$_DEFAULT_PM" name="FTVSDAT_1_CANVAS"  width="100%">
+		<collapsiblepanel label="ftvsdat.accordion.title" width="100%">
+			<panel style="ui-section ui-button-container" width="100%">
+				<textbox block="FORM_HEADER" datatype="String" enabled="false" height="23px" label="formHeader.hdCoas.prompt" maxlength="1" member="HD_COAS" name="hdCoas" width="50px">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<textbox block="FORM_HEADER" datatype="String" enabled="false" height="23px" label="formHeader.hdEntity.prompt" maxlength="8" member="HD_ENTITY" name="hdEntity" width="80px">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<textbox block="FORM_HEADER" datatype="String" enabled="false" height="23px" label="formHeader.hdAttr.prompt" maxlength="30" member="HD_ATTR" name="hdAttr" width="239px">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+			</panel>
+			<panel  style="ui-section"  width="100%" >
+<!-- 				<panel width="100%"> -->
+					<gridview block="FTVSDAT" name="grdFtvsdat" width="100%">
+						<viewheader>
+							<viewcolumn block="FTVSDAT" case="upper" datatype="String" label="ftvsdat.ftvsdatSdatCodeOpt1.prompt" labelstyle="DEFAULT" maxlength="8" member="FTVSDAT_SDAT_CODE_OPT_1" name="ftvsdatSdatCodeOpt1" width="64px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVSDAT" case="upper" datatype="String" label="ftvsdat.ftvsdatSdatCodeOpt2.prompt" labelstyle="DEFAULT" maxlength="8" member="FTVSDAT_SDAT_CODE_OPT_2" name="ftvsdatSdatCodeOpt2" width="64px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVSDAT" datatype="Number" label="ftvsdat.ftvsdatCodeLevel.prompt" labelstyle="DEFAULT" maxlength="4" member="FTVSDAT_CODE_LEVEL" name="ftvsdatCodeLevel" width="33px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVSDAT" datatype="String" label="ftvsdat.ftvsdatData.prompt" labelstyle="DEFAULT" maxlength="15" member="FTVSDAT_DATA" name="ftvsdatData" width="120px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVSDAT" datatype="String" label="ftvsdat.ftvsdatTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FTVSDAT_TITLE" name="ftvsdatTitle" width="279px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVSDAT" case="upper" datatype="String" enabled="false" label="ftvsdat.ftvsdatStatusInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVSDAT_STATUS_IND" name="ftvsdatStatusInd" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVSDAT" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvsdat.ftvsdatEffDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVSDAT_EFF_DATE" name="ftvsdatEffDate" width="88px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+<!-- 				</panel> -->
+			</panel>
+		</collapsiblepanel>
+	</panel>
+</config>

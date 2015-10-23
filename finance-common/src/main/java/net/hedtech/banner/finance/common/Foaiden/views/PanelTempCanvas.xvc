@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="StackedCanvas" id="pnlTempCanvas" menu="G$_DEFAULT_PM" name="TEMP_CANVAS" visible="false" width="100%">
+		<accordion width="100%">
+			<panel label="&lt;title1&gt;">
+				<panel width="100%">
+					<gridcell>
+						<textbox action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="11" member="ADDRESS_BTN" name="addressBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="11" member="PREVIOUS_NAME_BTN" name="previousNameBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="11" member="SOURCE_BTN" name="sourceBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="11" member="PREVIOUS_SOURCE_BTN" name="previousSourceBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRADDR_6_CANCEL_BTN" name="spraddr6CancelBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRADDR_6_SAVE_BTN" name="spraddr6SaveBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRADDR_6_EXIT_BTN" name="spraddr6ExitBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRADDR_6_ROLLBACK_BTN" name="spraddr6RollbackBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRADDR_5_ROLLBACK_BTN" name="spraddr5RollbackBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRADDR_5_SAVE_BTN" name="spraddr5SaveBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRADDR_5_EXIT_BTN" name="spraddr5ExitBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_CURRENT_1_ROLLBACK_BTN" name="spridenCurrent1RollbackBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_CURRENT_1_EXIT_BTN" name="spridenCurrent1ExitBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_CURRENT_2_CANCEL_BTN" name="spridenCurrent2CancelBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_CURRENT_2_ROLLBACK_BTN" name="spridenCurrent2RollbackBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_CURRENT_2_EXIT_BTN" name="spridenCurrent2ExitBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_PREV_4_CANCEL_BTN" name="spridenPrev4CancelBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_PREV_4_ROLLBACK_BTN" name="spridenPrev4RollbackBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_PREV_4_EXIT_BTN" name="spridenPrev4ExitBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_PREVIOUS_ROLLBACK_BTN" name="spridenPreviousRollbackBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_PREVIOUS_SAVE_BTN" name="spridenPreviousSaveBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_PREVIOUS_EXIT_BTN" name="spridenPreviousExitBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="BUTTON_CONTROL_BLOCK" datatype="String" height="23px" maxlength="14" member="SPRIDEN_CURRENT_1_SAVE_BTN" name="spridenCurrent1SaveBtn" width="80px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

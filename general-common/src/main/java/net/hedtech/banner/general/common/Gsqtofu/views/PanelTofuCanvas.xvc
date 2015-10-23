@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="TERMS_OF_USAGE"/>
+	<panel class="ContentCanvas" id="pnlTofuCanvas" menu="G$_DEFAULT_PM" name="TOFU_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="&lt;title1&gt;">
+				<panel width="100%">
+					<flowlayout>
+						<gridcell>
+							<textbox block="TERMS_OF_USAGE" datatype="String" height="442px" maxlength="32767" member="GUBIPRF_TOFU_TEXT" multiline="true" name="gubiprfTofuText" width="951px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<button action="WHEN-BUTTON-PRESSED" block="TERMS_OF_USAGE" height="23px" member="ACCEPT_BTN" name="acceptBtn" tooltip="termsOfUsage.acceptBtn.tooltip" width="306px"/>
+						</gridcell>
+						<gridcell>
+							<button action="WHEN-BUTTON-PRESSED" block="TERMS_OF_USAGE" height="23px" member="REJECT_BTN" name="rejectBtn" tooltip="termsOfUsage.rejectBtn.tooltip" width="285px"/>
+						</gridcell>
+					</flowlayout>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

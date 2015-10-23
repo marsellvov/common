@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel width="100%">
+		<tabpanel id="tabAContactsCanvas" name="A$_CONTACTS_CANVAS">
+			<tab id="page_amrattnTab" label="amrattnTab.label" name="AMRATTN_TAB">
+				<include src="net/hedtech/general/common/libraries/Aoqclib/views/TabAContactsCanvasAmrattnTab"/>
+			</tab>
+		</tabpanel>
+	</panel>
+</config>

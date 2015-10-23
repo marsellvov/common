@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRRGRPI.Manager.Config" name="FRRGRPI">
+		
+		<items>
+			<item name="FRRGRPI_ID" logicalName="frrgrpiId" type="String"  virtual="true" />
+			<item name="FRRGRPI_ID_NAME" logicalName="frrgrpiIdName" type="String"  virtual="true" />
+			<item name="FRRGRPI_ID_IND" logicalName="frrgrpiIdInd" type="String" physicalName="FRRGRPI_ID_IND"  />
+			<item name="FRRGRPI_COAS" logicalName="frrgrpiCoas" type="String"  virtual="true" >
+				<value>				
+					<item name="FRBGRNT_COAS_CODE" businessObject="FRBGRNT" />
+				</value>
+			</item>
+			<item name="FRRGRPI_ID_IND_NAME" logicalName="frrgrpiIdIndName" type="String"  virtual="true" />
+			<item name="FRRGRPI_ORGN_CODE" logicalName="frrgrpiOrgnCode" type="String" physicalName="FRRGRPI_ORGN_CODE"  >
+				<value>				
+					<item name="FRBGRNT_ORGN_CODE_RESP_OFFICE" businessObject="FRBGRNT" />
+				</value>
+			</item>
+			<item name="FRRGRPI_ORGN_CODE_NAME" logicalName="frrgrpiOrgnCodeName" type="String"  virtual="true" />
+			<item name="FRRGRPI_SALUTATION" logicalName="frrgrpiSalutation" type="String" physicalName="FRRGRPI_SALUTATION"  />
+			<item name="FRRGRPI_TITLE" logicalName="frrgrpiTitle" type="String" physicalName="FRRGRPI_TITLE"  />
+			<item name="FRRGRPI_ADDR_TYPE" logicalName="frrgrpiAddrType" type="String" physicalName="FRRGRPI_ADDR_TYPE"  />
+			<item name="FRRGRPI_ADDR_SEQNO" logicalName="frrgrpiAddrSeqno" type="java.math.BigDecimal" physicalName="FRRGRPI_ADDR_SEQNO"  />
+			<item name="FRRGRPI_PHONE_TYPE" logicalName="frrgrpiPhoneType" type="String" physicalName="FRRGRPI_PHONE_TYPE"  />
+			<item name="FRRGRPI_TELE_SEQNO" logicalName="frrgrpiTeleSeqno" type="java.math.BigDecimal" physicalName="FRRGRPI_TELE_SEQNO"  />
+			<item name="FRRGRPI_EMAIL" logicalName="frrgrpiEmail" type="String" physicalName="FRRGRPI_EMAIL"  />
+			<item name="FRRGRPI_BFRM_CODE" logicalName="frrgrpiBfrmCode" type="String" physicalName="FRRGRPI_BFRM_CODE"  />
+			<item name="BFRM_NAME" logicalName="bfrmName" type="String"  virtual="true" />
+			<item name="FRRGRPI_FTE" logicalName="frrgrpiFte" type="java.math.BigDecimal" physicalName="FRRGRPI_FTE"  />
+			<item name="FRRGRPI_EMPLOYEE_IND" logicalName="frrgrpiEmployeeInd" type="String" physicalName="FRRGRPI_EMPLOYEE_IND"  />
+			
+			<item name="FRRGRPI_GRNT_CODE" logicalName="frrgrpiGrntCode" type="String" physicalName="FRRGRPI_GRNT_CODE">
+				<value>				
+					<item name="frbgrnt_CODE" businessObject="FRBGRNT" />
+				</value>
+			</item>
+			
+			<item name="FRRGRPI_ACTIVITY_DATE" logicalName="frrgrpiActivityDate" type="java.util.Date" physicalName="FRRGRPI_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+			<item name="FRRGRPI_ID_PIDM" logicalName="frrgrpiIdPidm" type="java.math.BigDecimal" physicalName="FRRGRPI_ID_PIDM"  />
+			<item name="FRRGRPI_USER_ID" logicalName="frrgrpiUserId" type="String" physicalName="FRRGRPI_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fragrnt.model.FrrgrpiAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE frrgrpi_grnt_code = :FRBGRNT_CODE]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[frrgrpi_id_ind]]></defaultOrderByClause>	
+
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="1" enabled="true"/>
+
+	</manager>
+</b:beans>

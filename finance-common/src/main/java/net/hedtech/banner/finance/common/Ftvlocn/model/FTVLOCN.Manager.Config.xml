@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVLOCN.Manager.Config" name="FTVLOCN">
+		
+		<items>
+			<item name="FTVLOCN_COAS_CODE" logicalName="ftvlocnCoasCode" type="String" physicalName="FTVLOCN_COAS_CODE"  />
+			<item name="FTVLOCN_LOCN_CODE" logicalName="ftvlocnLocnCode" type="String" physicalName="FTVLOCN_LOCN_CODE"  />
+			<item name="FTVLOCN_TITLE" logicalName="ftvlocnTitle" type="String" physicalName="FTVLOCN_TITLE"  />
+			<item name="FTVLOCN_STATUS_IND" logicalName="ftvlocnStatusInd" type="String" physicalName="FTVLOCN_STATUS_IND"  />
+			<item name="FTVLOCN_EFF_DATE" logicalName="ftvlocnEffDate" type="java.util.Date" physicalName="FTVLOCN_EFF_DATE"  />
+			<item name="FTVLOCN_TERM_DATE" logicalName="ftvlocnTermDate" type="java.util.Date" physicalName="FTVLOCN_TERM_DATE"  />
+			<item name="FTVLOCN_ACTIVITY_DATE" logicalName="ftvlocnActivityDate" type="java.util.Date" physicalName="FTVLOCN_ACTIVITY_DATE"  />
+			<item name="FTVLOCN_USER_ID" logicalName="ftvlocnUserId" type="String" physicalName="FTVLOCN_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvlocn.model.FtvlocnAdapter</adapterClass>
+<!-- 		<defaultWhereClause><![CDATA[WHERE (ftvlocn_coas_code = :HOLD_COAS_CODE OR ftvlocn_coas_code = :FTVLOCN_COAS_CODE)]]></defaultWhereClause> -->
+		<defaultWhereClause><![CDATA[WHERE (ftvlocn_coas_code = NVL(:HOLD_COAS_CODE, ftvlocn_coas_code))]]></defaultWhereClause>		
+		<defaultOrderByClause><![CDATA[order by ftvlocn_coas_code, ftvlocn_locn_code, ftvlocn_eff_date]]></defaultOrderByClause>	
+
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="20" enabled="true"/>
+
+	</manager>
+</b:beans>

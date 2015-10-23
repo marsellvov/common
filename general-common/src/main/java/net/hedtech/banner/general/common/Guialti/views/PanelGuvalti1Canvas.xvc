@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FORM_HEADER"/>
+	<interactionblock name="GUVALTI"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlGuvalti1Canvas" menu="G$_DEFAULT_PM" name="GUVALTI_1_CANVAS" width="100%">
+		<textfield block="FORM_HEADER" datatype="String" height="12px" maxlength="100" member="DISP_QUERY_STATUS" name="dispQueryStatus" visible="false" width="211px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</textfield>
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%" style="ui-section">
+					<gridview block="GUVALTI" name="grdGuvalti" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="GUVALTI" case="upper" datatype="String" label="guvalti.guvaltiSsn.prompt" labelstyle="DEFAULT" maxlength="15" member="GUVALTI_SSN" name="guvaltiSsn" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GUVALTI" case="upper" datatype="String" label="guvalti.guvaltiId.prompt" labelstyle="DEFAULT" maxlength="9" member="GUVALTI_ID" name="guvaltiId" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GUVALTI" case="upper" datatype="String" label="guvalti.guvaltiEntityInd.prompt" labelstyle="DEFAULT" maxlength="1" member="GUVALTI_ENTITY_IND" name="guvaltiEntityInd" textalign="center" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GUVALTI" datatype="String" label="guvalti.guvaltiLastName.prompt" labelstyle="DEFAULT" maxlength="60" member="GUVALTI_LAST_NAME" name="guvaltiLastName" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GUVALTI" datatype="String" label="guvalti.guvaltiFirstName.prompt" labelstyle="DEFAULT" maxlength="60" member="GUVALTI_FIRST_NAME" name="guvaltiFirstName" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GUVALTI" datatype="String" label="guvalti.guvaltiMi.prompt" labelstyle="DEFAULT" maxlength="60" member="GUVALTI_MI" name="guvaltiMi" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="GUVALTI" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="guvalti.guvaltiBirthDate.prompt" labelstyle="DEFAULT" maxlength="11" member="GUVALTI_BIRTH_DATE" name="guvaltiBirthDate" width="100px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GUVALTI" case="upper" datatype="String" label="guvalti.guvaltiChangeInd.prompt" labelstyle="DEFAULT" maxlength="1" member="GUVALTI_CHANGE_IND" name="guvaltiChangeInd" textalign="center" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+		<panel width="100%">
+<!-- 			<gridflowlayout cols="1"> -->
+				<radiogroup action="WHEN-RADIO-CHANGED" block="BUTTON_CONTROL_BLOCK" datatype="String" id="caseInsensitiveRg" member="CASE_INSENSITIVE_RG" name="caseInsensitiveRg" navigable="false">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					<radiobox group="caseInsensitiveRg" height="19px" label="buttonControlBlock.caseInsensitiveRg.caseInsensitiveTrue.label" labelalign="start" labelposition="left" name="rb_CaseInsensitiveRg_CaseInsensitiveTrue" value="T" width="200px"/>
+					<radiobox group="caseInsensitiveRg" height="19px" label="buttonControlBlock.caseInsensitiveRg.caseInsensitiveFalse.label" labelalign="start" labelposition="left" name="rb_CaseInsensitiveRg_CaseInsensitiveFalse" value="F" width="200px"/>
+				</radiogroup>
+<!-- 			</gridflowlayout> -->
+		</panel>
+	</panel>
+</config>

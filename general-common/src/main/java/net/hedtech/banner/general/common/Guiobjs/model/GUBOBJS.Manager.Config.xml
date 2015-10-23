@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GUBOBJS.Manager.Config" name="GUBOBJS">
+		
+		<items>
+			<item name="GUBOBJS_NAME" logicalName="gubobjsName" type="String" physicalName="GUBOBJS_NAME"  />
+			<item name="GUBOBJS_DESC" logicalName="gubobjsDesc" type="String" physicalName="GUBOBJS_DESC"  />
+			<item name="GUBOBJS_OBJT_CODE" logicalName="gubobjsObjtCode" type="String" physicalName="GUBOBJS_OBJT_CODE"  >
+				<value>
+					<constant>All</constant>
+				</value>	
+			</item>
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Guiobjs.model.GubobjsAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[ORDER BY GUBOBJS_NAME, GUBOBJS_OBJT_CODE]]></defaultOrderByClause>	
+		<pagination maximumRows="5" enabled="true"/>
+
+	</manager>
+</b:beans>

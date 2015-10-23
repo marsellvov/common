@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SGRSTSP.Manager.Config" name="SGRSTSP">
+		
+		<items>
+			<item name="SGRSTSP_PIDM" logicalName="sgrstspPidm" type="java.math.BigDecimal" physicalName="SGRSTSP_PIDM"  />
+			<item name="SGRSTSP_TERM_CODE_EFF" logicalName="sgrstspTermCodeEff" type="String" physicalName="SGRSTSP_TERM_CODE_EFF"  />
+			<item name="END_STSP_TERM" logicalName="endStspTerm" type="String"  virtual="true" />
+			<item name="SGRSTSP_KEY_SEQNO" logicalName="sgrstspKeySeqno" type="java.math.BigDecimal" physicalName="SGRSTSP_KEY_SEQNO"  />
+			<item name="SGRSTSP_NAME" logicalName="sgrstspName" type="String"  virtual="true" />
+			<item name="SGRSTSP_STSP_CODE" logicalName="sgrstspStspCode" type="String" physicalName="SGRSTSP_STSP_CODE"  />
+			<item name="SGRSTSP_STSP_DESC" logicalName="sgrstspStspDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_ASTD_CODE" logicalName="sgrstspAstdCode" type="String" physicalName="SGRSTSP_ASTD_CODE"  />
+			<item name="SGRSTSP_ASTD_DESC" logicalName="sgrstspAstdDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_PREV_CODE" logicalName="sgrstspPrevCode" type="String" physicalName="SGRSTSP_PREV_CODE"  />
+			<item name="SGRSTSP_PREV_DESC" logicalName="sgrstspPrevDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_CAST_CODE" logicalName="sgrstspCastCode" type="String" physicalName="SGRSTSP_CAST_CODE"  />
+			<item name="SGRSTSP_CAST_DESC" logicalName="sgrstspCastDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_RESD_CODE" logicalName="sgrstspResdCode" type="String" physicalName="SGRSTSP_RESD_CODE"  />
+			<item name="SGRSTSP_RESD_DESC" logicalName="sgrstspResdDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_BLCK_CODE" logicalName="sgrstspBlckCode" type="String" physicalName="SGRSTSP_BLCK_CODE"  />
+			<item name="SGRSTSP_BLCK_DESC" logicalName="sgrstspBlckDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_FULL_PART_IND" logicalName="sgrstspFullPartInd" type="String" physicalName="SGRSTSP_FULL_PART_IND"  />
+			<item name="SGRSTSP_SESS_CODE" logicalName="sgrstspSessCode" type="String" physicalName="SGRSTSP_SESS_CODE"  />
+			<item name="SGRSTSP_SESS_DESC" logicalName="sgrstspSessDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_BSKL_CODE" logicalName="sgrstspBsklCode" type="String" physicalName="SGRSTSP_BSKL_CODE"  />
+			<item name="SGRSTSP_BSKL_DESC" logicalName="sgrstspBsklDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_PRAC_CODE" logicalName="sgrstspPracCode" type="String" physicalName="SGRSTSP_PRAC_CODE"  />
+			<item name="SGRSTSP_PRAC_DESC" logicalName="sgrstspPracDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_ORSN_CODE" logicalName="sgrstspOrsnCode" type="String" physicalName="SGRSTSP_ORSN_CODE"  />
+			<item name="SGRSTSP_ORSN_DESC" logicalName="sgrstspOrsnDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_CAPL_CODE" logicalName="sgrstspCaplCode" type="String" physicalName="SGRSTSP_CAPL_CODE"  />
+			<item name="SGRSTSP_CAPL_DESC" logicalName="sgrstspCaplDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_EDLV_CODE" logicalName="sgrstspEdlvCode" type="String" physicalName="SGRSTSP_EDLV_CODE"  />
+			<item name="SGRSTSP_EDLV_DESC" logicalName="sgrstspEdlvDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_EMEX_CODE" logicalName="sgrstspEmexCode" type="String" physicalName="SGRSTSP_EMEX_CODE"  />
+			<item name="SGRSTSP_EMEX_DESC" logicalName="sgrstspEmexDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_TRCN_CODE" logicalName="sgrstspTrcnCode" type="String" physicalName="SGRSTSP_TRCN_CODE"  />
+			<item name="SGRSTSP_TRCN_DESC" logicalName="sgrstspTrcnDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_VOED_CODE" logicalName="sgrstspVoedCode" type="String" physicalName="SGRSTSP_VOED_CODE"  />
+			<item name="SGRSTSP_VOED_DESC" logicalName="sgrstspVoedDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_EGOL_CODE" logicalName="sgrstspEgolCode" type="String" physicalName="SGRSTSP_EGOL_CODE"  />
+			<item name="SGRSTSP_EGOL_DESC" logicalName="sgrstspEgolDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_APRN_CODE" logicalName="sgrstspAprnCode" type="String" physicalName="SGRSTSP_APRN_CODE"  />
+			<item name="SGRSTSP_APRN_DESC" logicalName="sgrstspAprnDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_GAIN_CODE" logicalName="sgrstspGainCode" type="String" physicalName="SGRSTSP_GAIN_CODE"  />
+			<item name="SGRSTSP_GAIN_DESC" logicalName="sgrstspGainDesc" type="String"  virtual="true" />
+			<item name="SGRSTSP_INCM_CODE" logicalName="sgrstspIncmCode" type="String" physicalName="SGRSTSP_INCM_CODE"  />
+			<item name="SGRSTSP_INCM_DESC" logicalName="sgrstspIncmDesc" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Soqolib.model.SgrstspAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE sgrstsp_pidm = :KEY_BLOCK_PIDM AND sgrstsp_term_code_eff <= nvl(sb_learner.f_query_end(:KEY_BLOCK_PIDM, :GLOBAL_STUDYPATH_TERM), '999999')]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[sgrstsp_term_code_eff desc, sgrstsp_key_seqno]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

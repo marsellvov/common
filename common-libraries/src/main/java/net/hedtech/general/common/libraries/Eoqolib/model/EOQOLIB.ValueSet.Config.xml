@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="ETVAXAP_RG.ValueSet.Config" name="ETVAXAP_RG">
+    <columns>
+		<column name="ETVAXAP_CODE" type="String" size="64"/>
+		<column name="ETVAXAP_DESC" type="String" size="100"/>
+		<column name="ETVAXAP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT etvaxap_code, etvaxap_desc, to_char(etvaxap_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) etvaxap_activity_date  FROM etvaxap  ORDER BY etvaxap_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="ETVDTYP_RG.ValueSet.Config" name="ETVDTYP_RG">
+    <columns>
+		<column name="ETVDTYP_CODE" type="String" size="60"/>
+		<column name="ETVDTYP_DESC" type="String" size="100"/>
+		<column name="ETVDTYP_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT etvdtyp_code, etvdtyp_desc, to_char(etvdtyp_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) etvdtyp_activity_date  FROM etvdtyp  ORDER BY etvdtyp_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

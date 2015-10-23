@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Lovs>
+	<Lov Height="267" Name="GTVVPDI_LOV" RecordGroup="GTVVPDI_RG" Title="Institution Code Validation (GTVVPDI)" Width="575">
+		<Columns>
+			<Column DataMember="GTVVPDI_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="53"/>
+			<Column DataMember="GTVVPDI_DESC" ReturnItem="G$_VPDI_BLOCK.VPDI_DESC" Title="Description" Width="160"/>
+			<Column DataMember="GTVVPDI_TYPE_CDE" Title="Type " Width="33"/>
+			<Column DataMember="GTVVPDI_SYS_DEF_INST_IND" Title="Default Ind" Width="80"/>
+			<Column DataMember="GTVVPDI_ACTIVITY_DATE" Title="Activity Date" Width="86"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_VPDI_ALL_LOV" RecordGroup="G$_VPDI_ALL_RG" Title="Existing Institution Values" Width="575">
+		<Columns>
+			<Column DataMember="A" Width="133"/>
+			<Column DataMember="B" Width="133"/>
+			<Column DataMember="C" Width="133"/>
+			<Column DataMember="D" Width="133"/>
+			<Column DataMember="E" Width="133"/>
+			<Column DataMember="F" Width="133"/>
+			<Column DataMember="G" Width="133"/>
+			<Column DataMember="H" Width="133"/>
+			<Column DataMember="I" Width="133"/>
+			<Column DataMember="J" Width="133"/>
+			<Column DataMember="A$" Width="90"/>
+			<Column DataMember="B$" ReturnItem="G$_VPDI_BLOCK.VPDI_HOLD_VALUE" Width="90"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GTVNTYP_LOV_IDNAME" RecordGroup="GTVNTYP_RG_IDNAME" Title="Name Type Validation (GTVNTYP)" Width="575">
+		<Columns>
+			<Column DataMember="GTVNTYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="80"/>
+			<Column DataMember="GTVNTYP_DESC" Title="Desc" Width="377"/>
+			<Column DataMember="GTVNTYP_ACTIVITY_DATE" Title="Activity Date" Width="100"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="STVSTAT_LOV_IDNAME" RecordGroup="STVSTAT_RG_IDNAME" Title="State/Province Code Validation (STVSTAT)" Width="575">
+		<Columns>
+			<Column DataMember="STVSTAT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="80"/>
+			<Column DataMember="STVSTAT_DESC" Title="Description" Width="248"/>
+			<Column DataMember="STVSTAT_EDI_EQUIV" Title="EDI Equiv" Width="130"/>
+			<Column DataMember="STVSTAT_ACTIVITY_DATE" Title="Activity Date" Width="100"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="G$_SEARCH_LOV" RecordGroup="G$_SEARCH_RG" Title="Search Results" Width="575">
+		<Columns>
+			<Column DataMember="DESC" ReturnItem="GLOBAL.DESC" Title="Desc" Width="213"/>
+			<Column DataMember="CODE" ReturnItem="GLOBAL.CODE" Title="Code" Width="106"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="FTVACCT_LOV" RecordGroup="FTVACCT_RG" Width="575">
+		<Columns>
+			<Column DataMember="FTVACCT_ACCT_CODE" ReturnItem="GLOBAL.VALUE" Title="Ftvacct_Acct_Code" Width="56"/>
+			<Column DataMember="FTVACCT_COAS_CODE" Title="Ftvacct_Coas_Code" Width="16"/>
+			<Column DataMember="FTVACCT_TITLE" Title="Ftvacct_Title" Width="287"/>
+			<Column DataMember="FTVACCT_EFF_DATE" Title="Ftvacct_Eff_Date" Width="96"/>
+			<Column DataMember="FTVACCT_ACTIVITY_DATE" Title="Ftvacct_Activity_Date" Width="96"/>
+			<Column DataMember="FTVACCT_USER_ID" Title="Ftvacct_User_Id" Width="247"/>
+			<Column DataMember="FTVACCT_NCHG_DATE" Title="Ftvacct_Nchg_Date" Width="96"/>
+			<Column DataMember="FTVACCT_TERM_DATE" Title="Ftvacct_Term_Date" Width="96"/>
+			<Column DataMember="FTVACCT_ATYP_CODE" Title="Ftvacct_Atyp_Code" Width="24"/>
+			<Column DataMember="FTVACCT_NORMAL_BAL" Title="Ftvacct_Normal_Bal" Width="16"/>
+			<Column DataMember="FTVACCT_STATUS_IND" Title="Ftvacct_Status_Ind" Width="16"/>
+			<Column DataMember="FTVACCT_ACCT_CODE_PRED" Title="Ftvacct_Acct_Code_Pred" Width="56"/>
+			<Column DataMember="FTVACCT_DATA_ENTRY_IND" Title="Ftvacct_Data_Entry_Ind" Width="16"/>
+			<Column DataMember="FTVACCT_ACCT_CODE_FRINGE" Title="Ftvacct_Acct_Code_Fringe" Width="56"/>
+			<Column DataMember="FTVACCT_FRINGE_PCT" Title="Ftvacct_Fringe_Pct" Width="40"/>
+			<Column DataMember="FTVACCT_ACCT_CODE_POOL" Title="Ftvacct_Acct_Code_Pool" Width="56"/>
+			<Column DataMember="FTVACCT_ACCT_CODE_ASSET" Title="Ftvacct_Acct_Code_Asset" Width="56"/>
+			<Column DataMember="FTVACCT_ITYP_SEQ_CODE" Title="Ftvacct_Ityp_Seq_Code" Width="40"/>
+			<Column DataMember="FTVACCT_ACCT_CLASS_CODE" Title="Ftvacct_Acct_Class_Code" Width="24"/>
+			<Column DataMember="FTVACCT_ACCT_CODE_DEPR_EXP" Title="Ftvacct_Acct_Code_Depr_Exp" Width="56"/>
+			<Column DataMember="FTVACCT_ACCT_CODE_DEPR_ACCUM" Title="Ftvacct_Acct_Code_Depr_Accum" Width="56"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="HRECORGN_LOV" RecordGroup="HRECORGN_RG" Title="Organization List" Width="575">
+		<Columns>
+			<Column DataMember="FTVORGN_COAS_CODE" Title="COA" Width="32"/>
+			<Column DataMember="FTVORGN_ORGN_CODE" ReturnItem="GLOBAL.VALUE" Title="Organization" Width="93"/>
+			<Column DataMember="FTVORGN_TITLE" Title="Title" Width="287"/>
+			<Column DataMember="FTVORGN_EFF_DATE" Title="Effective Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="HRECFUND_LOV" RecordGroup="HRECFUND_RG" Title="Fund List" Width="575">
+		<Columns>
+			<Column DataMember="FTVFUND_COAS_CODE" Title="COA" Width="32"/>
+			<Column DataMember="FTVFUND_FUND_CODE" ReturnItem="GLOBAL.VALUE" Title="Fund" Width="93"/>
+			<Column DataMember="FTVFUND_TITLE" Title="Title" Width="287"/>
+			<Column DataMember="FTVFUND_EFF_DATE" Title="Effective Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="HRECPROG_LOV" RecordGroup="HRECPROG_RG" Title="Program List" Width="575">
+		<Columns>
+			<Column DataMember="FTVPROG_COAS_CODE" Title="COA" Width="32"/>
+			<Column DataMember="FTVPROG_PROG_CODE" ReturnItem="GLOBAL.VALUE" Title="Program" Width="93"/>
+			<Column DataMember="FTVPROG_TITLE" Title="Title" Width="287"/>
+			<Column DataMember="FTVPROG_EFF_DATE" Title="Effective Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="HRECLOCN_LOV" RecordGroup="HRECLOCN_RG" Title="Location List" Width="575">
+		<Columns>
+			<Column DataMember="FTVLOCN_COAS_CODE" Title="COA" Width="32"/>
+			<Column DataMember="FTVLOCN_LOCN_CODE" ReturnItem="GLOBAL.VALUE" Title="Location" Width="93"/>
+			<Column DataMember="FTVLOCN_TITLE" Title="Title" Width="287"/>
+			<Column DataMember="FTVLOCN_EFF_DATE" Title="Effective Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="HRECACTV_LOV" RecordGroup="HRECACTV_RG" Title="Activity List" Width="575">
+		<Columns>
+			<Column DataMember="FTVACTV_COAS_CODE" Title="COA" Width="32"/>
+			<Column DataMember="FTVACTV_ACTV_CODE" ReturnItem="GLOBAL.VALUE" Title="Activity" Width="93"/>
+			<Column DataMember="FTVACTV_TITLE" Title="Title" Width="287"/>
+			<Column DataMember="FTVACTV_EFF_DATE" Title="Effective Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="FTVAGCY_LOV" RecordGroup="FTVAGCY_RG" Title="Agency Code List" Width="575">
+		<Columns>
+			<Column DataMember="SPRIDEN_ID" ReturnItem="GLOBAL.VALUE" Title="Code" Width="80"/>
+			<Column DataMember="NAME" Title="Agency Name" Width="376"/>
+			<Column DataMember="FTVAGCY_STATUS_IND" Title="Status" Width="100"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="FRVBECL_LOV" RecordGroup="FRVBECL_RG" Width="575">
+		<Columns>
+			<Column DataMember="FRVBECL_CODE" ReturnItem="GLOBAL.VALUE" Title="CODE" Width="40"/>
+			<Column DataMember="FRVBECL_DESC" Title="DESCRIPTION" Width="287"/>
+			<Column DataMember="FRVBECL_ACTIVITY_DATE" Title="ACTIVITY DATE" Width="96"/>
+			<Column DataMember="FRVBECL_USER_ID" Title="USER ID" Width="247"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="FRVPMSC_LOV" RecordGroup="FRVPMSC_RG" Width="575">
+		<Columns>
+			<Column DataMember="FRVPMSC_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="136"/>
+			<Column DataMember="FRVPMSC_DESC" Title="Description" Width="287"/>
+			<Column DataMember="FRVPMSC_AGENCY_PIDM" Title="Pidm" Width="40"/>
+			<Column DataMember="FRVPMSC_ACTIVITY_DATE" Title="Activity Date" Width="96"/>
+			<Column DataMember="FRVPMSC_USER_ID" Title="User  Id" Width="247"/>
+			<Column DataMember="FRVPMSC_LOC_NO" Title="Loc No" Width="128"/>
+			<Column DataMember="FRVPMSC_LOC_LIMIT" Title="Loc Limit" Width="40"/>
+			<Column DataMember="FRVPMSC_COAS_CODE" Title="Coas Code" Width="16"/>
+			<Column DataMember="FRVPMSC_LOC_FUND_CODE" Title="Fund Code" Width="56"/>
+			<Column DataMember="FRVPMSC_ACCT_CODE_RECEIPTS" Title="Code Receipts" Width="56"/>
+			<Column DataMember="FRVPMSC_LAST_INV_SEQ_NO" Title="Inv Seq No" Width="40"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="FRBCSTA_LOV" RecordGroup="FRBCSTA_RG" Title="Cost Share Credit Account List (FRBCSTA)" Width="575">
+		<Columns>
+			<Column DataMember="FRBCSTA_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="60"/>
+			<Column DataMember="FRBCSTA_COAS_CODE" Title="COA" Width="57"/>
+			<Column DataMember="FRVCSTA_DESC" Title="Description" Width="249"/>
+			<Column DataMember="ICRGGQ_0" Title="Eff Date" Width="96"/>
+			<Column DataMember="ICRGGQ_1" Title="Term Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="STVATYP_LOV" RecordGroup="STVATYP_RG" Title="Address Type Validation (STVATYP)" Width="575">
+		<Columns>
+			<Column DataMember="STVATYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="32"/>
+			<Column DataMember="STVATYP_DESC" Title="Desc" Width="247"/>
+			<Column DataMember="STVATYP_SYSTEM_REQ_IND" Title="Sys Req" Width="56"/>
+			<Column DataMember="STVATYP_TELE_CODE" Title="Tele Code" Width="72"/>
+			<Column DataMember="STVATYP_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="FRRCSTR_LOV" RecordGroup="FRRCSTR_RG" Title="Cost Share Rate List (FRRCSTR)" Width="575">
+		<Columns>
+			<Column DataMember="FRRCSTR_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="56"/>
+			<Column DataMember="FRVCSTR_DESC" Title="Description" Width="250"/>
+			<Column DataMember="ICRGGQ_0" Title="Eff Date" Width="110"/>
+			<Column DataMember="ICRGGQ_1" Title="Term Date" Width="110"/>
+			<Column DataMember="FRRCSTR_RATE" Title="Rate" Width="80"/>
+			<Column DataMember="FRRCSTR_MEMO_RATE" Title="Memo Rate" Width="115"/>
+			<Column DataMember="FRRCSTR_MAX_AMT" Title="Maximum Amt" Width="135"/>
+			<Column DataMember="FRRCSTR_MEMO_MAX_AMT" Title="Memo Maximum Amt" Width="165"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="FTVPAYM_LOV" RecordGroup="FTVPAYM_RG" Title="Grant Pay Method List (FTVPAYM)" Width="575">
+		<Columns>
+			<Column DataMember="FTVPAYM_PAYM_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="FTVPAYM_TITLE" Title="Pay Method Title" Width="287"/>
+			<Column DataMember="FTVPAYM_STATUS_IND" Title="Status" Width="56"/>
+			<Column DataMember="ICRGGQ_0" Title="Eff Date" Width="96"/>
+			<Column DataMember="ICRGGQ_1" Title="Term Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUROPTM_LOV" RecordGroup="GUROPTM_RG" Title="Option Menu" Width="575">
+		<Columns>
+			<Column DataMember="GUROPTM_NAME1_DESC" Width="487"/>
+			<Column DataMember="GUROPTM_NAME1" ReturnItem="GLOBAL.GUROPTM_NAME1" Width="0"/>
+			<Column DataMember="GUROPTM_TYPE_IND" ReturnItem="GLOBAL.GUROPTM_TYPE_IND" Width="0"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="FTVCOAS_LOV" RecordGroup="FTVCOAS_RG" Title="Chart of Accounts List (FTVCOAS)" Width="575">
+		<Columns>
+			<Column DataMember="FTVCOAS_COAS_CODE" ReturnItem="GLOBAL.VALUE" Title="COA" Width="80"/>
+			<Column DataMember="FTVCOAS_TITLE" ReturnItem="GLOBAL.VALUE_DESC" Title="Chart of Account Title" Width="177"/>
+			<Column DataMember="FTVCOAS_STATUS_IND" Title="Status" Width="100"/>
+			<Column DataMember="ICRGGQ_0" Title="Eff Date" Width="100"/>
+			<Column DataMember="ICRGGQ_1" Title="Term Date" Width="100"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="STVTELE_LOV" RecordGroup="STVTELE_RG" Title="Telephone Type Validation (STVTELE)" Width="575">
+		<Columns>
+			<Column DataMember="STVTELE_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="40"/>
+			<Column DataMember="STVTELE_DESC" Title="Description" Width="247"/>
+			<Column DataMember="STVTELE_ACTIVITY_DATE" Title="Activity Date" Width="104"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="FRBCSTD_LOV" RecordGroup="FRBCSTD_RG" Title="Cost Share Distribution List (FRBCSTD)" Width="575">
+		<Columns>
+			<Column DataMember="FRBCSTD_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="60"/>
+			<Column DataMember="FRBCSTD_COAS_CODE" Title="COA" Width="57"/>
+			<Column DataMember="FRVCSTD_DESC" Title="Description" Width="249"/>
+			<Column DataMember="ICRGGQ_0" Title="Eff Date" Width="96"/>
+			<Column DataMember="ICRGGQ_1" Title="Term Date" Width="96"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="NTVECCG_LOV" RecordGroup="NTVECCG_RG" Title="Effort Certification Category Code Validation (NTVECCG)" Width="575">
+		<Columns>
+			<Column DataMember="NTVECCG_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="80"/>
+			<Column DataMember="NTVECCG_DESC" Title="Description" Width="356"/>
+			<Column DataMember="ACTIVITY_DATE" Title="Activity Date" Width="120"/>
+		</Columns>
+	</Lov>
+</Lovs>

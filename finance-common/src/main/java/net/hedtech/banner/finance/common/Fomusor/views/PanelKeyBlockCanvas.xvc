@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="KEY_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlKeyBlock" name="KEY_BLOCK_CANVAS" style="keyblock ui-grid-empty" width="100%">
+		<gridflowlayout cols="2" orientation="horizontal" style="ui-layout-responsive">
+			<component label="keyBlock.userId.prompt">
+				<textbox block="KEY_BLOCK" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" maxlength="30" member="USER_ID" name="userId" style="ui-buttoninput" validation="server">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="USER_ID_LBT" name="userIdLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.userIdLbt.tooltip" width="23px">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</button>
+			</component>
+			<component label="keyBlock.copyUserId.prompt">
+				<textbox block="KEY_BLOCK" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" maxlength="30" member="COPY_USER_ID" name="copyUserId" style="ui-buttoninput" validation="server">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="COPY_USER_ID_LBT" name="copyUserIdLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.copyUserIdLbt.tooltip" width="23px">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</button>
+			</component>
+			<component label="keyBlock.includeCoasCode.prompt">
+				<textbox block="KEY_BLOCK" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" maxlength="30" member="INCLUDE_COAS_CODE" name="includeCoasCode" style="ui-buttoninput" validation="server">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="dou                    bleClick"/>
+				</textbox>
+				<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="INCLUDE_COAS_CODE_LBT" name="includeCoasCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.includeCoasCodeLbt.tooltip" width="23px">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</button>
+			</component>
+			<component label="keyBlock.includeOrgnCode.prompt">
+				<textbox block="KEY_BLOCK" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" maxlength="30" member="INCLUDE_ORGN_CODE" name="includeOrgnCode" style="ui-buttoninput" validation="server">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="INCLUDE_ORGN_CODE_LBT" name="includeOrgnCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.includeOrgnCodeLbt.tooltip" width="23px">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</button>
+			</component>
+			<component label="keyBlock.excludeCoasCode.prompt">
+				<textbox block="KEY_BLOCK" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" maxlength="30" member="EXCLUDE_COAS_CODE" name="excludeCoasCode" style="ui-buttoninput" validation="server">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="EXCLUDE_COAS_CODE_LBT" name="excludeCoasCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.excludeCoasCodeLbt.tooltip" width="23px">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</button>
+			</component>
+			<component label="keyBlock.excludeOrgnCode.prompt">
+				<textbox block="KEY_BLOCK" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" maxlength="30" member="EXCLUDE_ORGN_CODE" name="excludeOrgnCode" style="ui-buttoninput" validation="server">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+				<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="EXCLUDE_ORGN_CODE_LBT" name="excludeOrgnCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.excludeOrgnCodeLbt.tooltip" width="23px">
+					<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</button>
+			</component>
+		</gridflowlayout>
+	</panel>
+	<panel style="keyblock-button-container">
+		<button accesskey="ALT+PAGE_DOWN" action="NEXT_BLOCK" block="KEY_BLOCK" label="keyBlock.executeBtn.label" member="EXECUTE_BTN" style="ui-buttoninput" tooltip="keyBlock.executeBtn.tooltip"/>
+		<button accesskey="F5" action="CLEAR-FORM" block="KEY_BLOCK" label="keyBlock.keyClrfrmBtn.label" member="KEY-CLRFRM_BTN" style="ui-buttoninput" tooltip="keyBlock.keyClrfrmBtn.tooltip" visible="false"/>
+	</panel>
+</config>

@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="FOQOLIB" LovDataPath="/net/hedtech/banner/finance/common/Foqolib/FoqolibLovs.xml">
+  <Visual>
+    <Window Id="ROOT_WINDOW" Url="net/hedtech/banner/finance/common/Foqolib/views/ViewRootWindow">
+    </Window>
+    <Window Id="ORIGINAL_COMMODITY_DESC_WINDOW" Url="net/hedtech/banner/finance/common/Foqolib/views/ViewOriginalCommodityDescWindow">
+      <ContentCanvas Id="ORIGINAL_COMMODITY_DESC_CANVAS">
+      </ContentCanvas>
+    </Window>
+    <Window Id="RQPO_SUSPENSE_WINDOW" Url="net/hedtech/banner/finance/common/Foqolib/views/ViewRqpoSuspenseWindow">
+      <ContentCanvas Id="RQPO_SUSPENSE_CANVAS">
+      </ContentCanvas>
+    </Window>
+    <Window Id="F$_FORMAT_NUMBER_WINDOW" Url="net/hedtech/banner/finance/common/Foqolib/views/ViewFFormatNumberWindow">
+      <ContentCanvas Id="F$_FORMAT_NUMBER_CANVAS">
+      </ContentCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="LIB$FORM_HEADER">
+      <Item Id="CURRENT_FORM" CanvasName="PAGE_1" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="10" Type="TextItem">
+      </Item>
+      <Item Id="CURRENT_RELEASE" CanvasName="PAGE_1" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="4" Type="TextItem">
+      </Item>
+      <Item Id="CURRENT_INSTITUTION" CanvasName="PAGE_1" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="30" Type="TextItem">
+      </Item>
+      <Item Id="CURRENT_DATE" CanvasName="PAGE_1" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="9" Type="TextItem">
+      </Item>
+      <Item Id="CURRENT_TIME" CanvasName="PAGE_1" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="8" Type="TextItem">
+      </Item>
+      <Item Id="WORKDATE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="60" Type="TextItem">
+      </Item>
+      <Item Id="WORKUSER" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="60" Type="TextItem">
+      </Item>
+      <Item Id="WORKYEAR" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="2" Type="TextItem">
+      </Item>
+      <Item Id="PIVOT_YEAR" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="2" Type="TextItem">
+      </Item>
+      <Item Id="CHARDATE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="60" Type="TextItem">
+      </Item>
+      <Item Id="DATEDATE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="11" Type="TextItem">
+      </Item>
+      <Item Id="VARLENGTH" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="3" Type="TextItem">
+      </Item>
+      <Item Id="CALLFLD" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="10" Type="TextItem">
+      </Item>
+      <Item Id="CURRENT_USER" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="35" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="CP$_BLOCK">
+      <Item Id="CP$_CALL_MODE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="CP$_EXIT_MODE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="CP$_FORM_NAME" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="8" Type="TextItem">
+      </Item>
+      <Item Id="CP$_POST_DONE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="LAST_QUERY">
+      <Item Id="LAST_QUERY" CanvasName="PAGE_2" AllowSearch="false" AllowUpdate="false" MaxLength="1000" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="DATE$_BLOCK">
+      <Item Id="DATE$_CENTURY_PIVOT" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="2" Type="TextItem">
+      </Item>
+      <Item Id="DATE$_DEFAULT_FORMAT" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="DATE$_VALUE" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="11" Type="TextItem">
+      </Item>
+      <Item Id="DATE$_FORMAT" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="11" Type="TextItem">
+      </Item>
+      <Item Id="DATE$_FIELD_NAME" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="61" Type="TextItem">
+      </Item>
+      <Item Id="DATE$_CURRENT_MON" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="3" Type="TextItem">
+      </Item>
+      <Item Id="DATE$_CURRENT_YY" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="2" Type="TextItem">
+      </Item>
+      <Item Id="DATE$_CURRENT_CENT" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="2" Type="TextItem">
+      </Item>
+      <Item Id="DATE$_CURRENT_MM" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="2" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="CONSUMP$_BLOCK">
+      <Item Id="ITEM451" CanvasName="" MaxLength="30" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="ORIGINAL_COMMODITY_DESC_BLOCK">
+      <Item Id="ORIGINAL_COMMODITY_DESC_ITEM" CanvasName="ORIGINAL_COMMODITY_DESC_CANVAS" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="50" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="DUMMY">
+      <Item Id="FTVFUND_TMP_X" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="11" Type="Checkbox">
+      </Item>
+      <Item Id="FTVRSNC_TMP_X" CanvasName="" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="CANCEL_REASON_CODE" CanvasName="" MaxLength="30" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="RQPO_SUSPENSE_BLOCK" MultiRecord="true">
+      <Item Id="RECORD_COUNT" CanvasName="" Hint="rqpoSuspenseBlock.recordCount.hint" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="4" Type="TextItem">
+      </Item>
+      <Item Id="SINGLE_ACCTG_IND" CanvasName="RQPO_SUSPENSE_CANVAS" AllowInsert="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="Checkbox">
+      </Item>
+      <Item Id="ACCTG_SUSP_IND" CanvasName="RQPO_SUSPENSE_CANVAS" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="Checkbox">
+      </Item>
+      <Item Id="ACCTG_NSF_SUSP_IND" CanvasName="RQPO_SUSPENSE_CANVAS" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="Checkbox">
+      </Item>
+      <Item Id="COMM_SUSP_IND" CanvasName="RQPO_SUSPENSE_CANVAS" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="Checkbox">
+      </Item>
+      <Item Id="ACCTG_SEQ_NO" CanvasName="RQPO_SUSPENSE_CANVAS" Hint="rqpoSuspenseBlock.acctgSeqNo.hint" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="4" Type="TextItem">
+      </Item>
+      <Item Id="ITEM_NO" CanvasName="RQPO_SUSPENSE_CANVAS" Hint="rqpoSuspenseBlock.itemNo.hint" AllowSearch="false" AllowUpdate="false" MaxLength="4" Type="TextItem">
+      </Item>
+      <Item Id="RQPO_SUSPENSE_BLOCKScrollbar" CanvasName="RQPO_SUSPENSE_CANVAS">
+      </Item>
+    </Block>
+    <Block Id="F$_FORMAT_NUMBERS">
+      <Item Id="F$_SIGNIFICANT_COMMAS" CanvasName="F$_FORMAT_NUMBER_CANVAS" Hint="fFormatNumbers.fSignificantCommas.hint" MaxLength="30" Type="RadioGroup">
+        <Item Id="F$_SIG_COMMA_4" Type="RadioButton">
+        </Item>
+        <Item Id="F$_SIG_COMMA_3" Type="RadioButton">
+        </Item>
+        <Item Id="F$_SIG_COMMA_2" Type="RadioButton">
+        </Item>
+        <Item Id="F$_SIG_COMMA_1" Type="RadioButton">
+        </Item>
+        <Item Id="F$_SIG_COMMA_0" Type="RadioButton">
+        </Item>
+      </Item>
+      <Item Id="F$_DECIMAL_DIGITS" CanvasName="F$_FORMAT_NUMBER_CANVAS" Hint="fFormatNumbers.fDecimalDigits.hint" MaxLength="30" Type="RadioGroup">
+        <Item Id="F$_DEC_DIGIT_2" Type="RadioButton">
+        </Item>
+        <Item Id="F$_DEC_DIGIT_1" Type="RadioButton">
+        </Item>
+        <Item Id="F$_DEC_DIGIT_0" Type="RadioButton">
+        </Item>
+      </Item>
+      <Item Id="F$_OK_BTN" CanvasName="F$_FORMAT_NUMBER_CANVAS" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="F$_CANCEL_BTN" CanvasName="F$_FORMAT_NUMBER_CANVAS" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="F$_APPLY_BTN" CanvasName="F$_FORMAT_NUMBER_CANVAS" Navigable="false" MaxLength="30" Type="Button">
+      </Item>
+      <Item Id="F$_RETURN_BLOCK_NAME" CanvasName="" Navigable="false" MaxLength="60" Type="TextItem">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

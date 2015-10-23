@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" >
+  <interactionblock name="S$_STUDYPATH" />
+  <interactionblock name="SGRSTSP" />
+  <panel>
+    <slider name="sgrstspscrollbar" block="" top="51px" left="942px" width="16px" height="129px" />
+    <textfield labelposition="left" labelalign="start" name="studyPathSeparator1" style="GNvaDataSeparatorLinegDataSeparatorLineClass" left="3px" top="8px" width="1001px" height="5px" enabled="false" wrapStyle="none" bordertype="none" member="STUDY_PATH_SEPARATOR_1" block="S$_STUDYPATH" maxlength="24" datatype="" case="upper" />
+    <framepanel width="971px" height="274px" top="210px" left="5px" name="rect1057">
+      <textbox label="sgrstsp.sgrstspResdCode.prompt" labelposition="right" labeloffset="-150" labelalign="center" name="sgrstspResdCode" style="GNvaTextItem" left="149px" top="40px" width="19px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_RESD_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="right" labeloffset="-219" labelalign="center" name="sgrstspResdDesc" style="GDescClass" left="193px" top="40px" width="218px" height="23px" bordertype="none" member="SGRSTSP_RESD_DESC" block="SGRSTSP" required="true" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspBlckCode.prompt" labelposition="right" labeloffset="-217" labelalign="center" name="sgrstspBlckCode" style="GNvaTextItem" left="149px" top="63px" width="85px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_BLCK_CODE" block="SGRSTSP" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="right" labeloffset="-219" labelalign="center" name="sgrstspBlckDesc" style="GDescClass" left="260px" top="63px" width="196px" height="23px" bordertype="none" member="SGRSTSP_BLCK_DESC" block="SGRSTSP" required="true" maxlength="30" datatype="" case="mixed" />
+      <radiogroup id="sgrstspFullPartInd" name="sgrstspFullPartInd" style="DEFAULT" member="SGRSTSP_FULL_PART_IND" block="SGRSTSP" maxlength="30" datatype="" case="mixed">
+        <radiobox group="sgrstspFullPartInd" labelposition="right" labeloffset="-186" labelalign="center" label="sgrstsp.sgrstspFullPartInd.full.label" value="F" name="rb_SgrstspFullPartInd_Full" style="G$_NVA_RADIO_BUTTON" left="151px" top="85px" width="53px" height="23px" />
+        <radiobox group="sgrstspFullPartInd" labelposition="left" labelalign="start" label="sgrstsp.sgrstspFullPartInd.part.label" value="P" name="rb_SgrstspFullPartInd_Part" style="G$_NVA_RADIO_BUTTON" left="212px" top="85px" width="53px" height="23px" />
+        <radiobox group="sgrstspFullPartInd" labelposition="left" labelalign="start" label="sgrstsp.sgrstspFullPartInd.none.label" value="" name="rb_SgrstspFullPartInd_None" style="G$_NVA_RADIO_BUTTON" left="272px" top="85px" width="61px" height="23px" />
+      </radiogroup>
+      <textbox label="sgrstsp.sgrstspSessCode.prompt" labelposition="right" labeloffset="-148" labelalign="center" name="sgrstspSessCode" style="GNvaTextItem" left="149px" top="108px" width="16px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_SESS_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="right" labeloffset="-219" labelalign="center" name="sgrstspSessDesc" style="GDescClass" left="191px" top="108px" width="206px" height="23px" bordertype="none" member="SGRSTSP_SESS_DESC" block="SGRSTSP" required="true" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspBsklCode.prompt" labelposition="right" labeloffset="-154" labelalign="center" name="sgrstspBsklCode" style="GNvaTextItem" left="149px" top="130px" width="23px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_BSKL_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspBsklDesc" style="GDescClass" left="197px" top="130px" width="178px" height="23px" bordertype="none" member="SGRSTSP_BSKL_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspPracCode.prompt" labelposition="right" labeloffset="-161" labelalign="center" name="sgrstspPracCode" style="GNvaTextItem" left="149px" top="153px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_PRAC_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspPracDesc" style="GDescClass" left="205px" top="153px" width="205px" height="23px" bordertype="none" member="SGRSTSP_PRAC_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspOrsnCode.prompt" labelposition="right" labeloffset="-222" labelalign="center" name="sgrstspOrsnCode" style="GNvaTextItem" left="680px" top="40px" width="19px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_ORSN_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspOrsnDesc" style="GDescClass" left="724px" top="40px" width="205px" height="23px" bordertype="none" member="SGRSTSP_ORSN_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspCaplCode.prompt" labelposition="right" labeloffset="-233" labelalign="center" name="sgrstspCaplCode" style="GNvaTextItem" left="680px" top="63px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_CAPL_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspCaplDesc" style="GDescClass" left="734px" top="63px" width="205px" height="23px" bordertype="none" member="SGRSTSP_CAPL_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspEdlvCode.prompt" labelposition="right" labeloffset="-239" labelalign="center" name="sgrstspEdlvCode" style="GNvaTextItem" left="680px" top="85px" width="36px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_EDLV_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspEdlvDesc" style="GDescClass" left="741px" top="85px" width="205px" height="23px" bordertype="none" member="SGRSTSP_EDLV_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspEmexCode.prompt" labelposition="right" labeloffset="-233" labelalign="center" name="sgrstspEmexCode" style="GNvaTextItem" left="680px" top="108px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_EMEX_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspEmexDesc" style="GDescClass" left="733px" top="108px" width="205px" height="23px" bordertype="none" member="SGRSTSP_EMEX_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspTrcnCode.prompt" labelposition="right" labeloffset="-233" labelalign="center" name="sgrstspTrcnCode" style="GNvaTextItem" left="680px" top="130px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_TRCN_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspTrcnDesc" style="GDescClass" left="734px" top="130px" width="205px" height="23px" bordertype="none" member="SGRSTSP_TRCN_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspVoedCode.prompt" labelposition="right" labeloffset="-233" labelalign="center" name="sgrstspVoedCode" style="GNvaTextItem" left="680px" top="153px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_VOED_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspVoedDesc" style="GDescClass" left="736px" top="153px" width="198px" height="23px" bordertype="none" member="SGRSTSP_VOED_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspEgolCode.prompt" labelposition="right" labeloffset="-233" labelalign="center" name="sgrstspEgolCode" style="GNvaTextItem" left="680px" top="176px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_EGOL_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspEgolDesc" style="GDescClass" left="736px" top="176px" width="205px" height="23px" bordertype="none" member="SGRSTSP_EGOL_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspAprnCode.prompt" labelposition="right" labeloffset="-233" labelalign="center" name="sgrstspAprnCode" style="GNvaTextItem" left="680px" top="198px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_APRN_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspAprnDesc" style="GDescClass" left="736px" top="198px" width="205px" height="23px" bordertype="none" member="SGRSTSP_APRN_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspGainCode.prompt" labelposition="right" labeloffset="-233" labelalign="center" name="sgrstspGainCode" style="GNvaTextItem" left="680px" top="221px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_GAIN_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspGainDesc" style="GDescClass" left="734px" top="221px" width="205px" height="23px" bordertype="none" member="SGRSTSP_GAIN_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspIncmCode.prompt" labelposition="right" labeloffset="-233" labelalign="center" name="sgrstspIncmCode" style="GNvaTextItem" left="680px" top="244px" width="29px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_INCM_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="left" labelalign="start" name="sgrstspIncmDesc" style="GDescClass" left="733px" top="244px" width="205px" height="23px" bordertype="none" member="SGRSTSP_INCM_DESC" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspResdCodeLbt.label" name="sgrstspResdCodeLbt" style="GIconBtnClass" left="168px" top="41px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspResdCodeLbt.tooltip" member="SGRSTSP_RESD_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspSessCodeLbt.label" name="sgrstspSessCodeLbt" style="GIconBtnClass" left="165px" top="109px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspSessCodeLbt.tooltip" member="SGRSTSP_SESS_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspBsklCodeLbt.label" name="sgrstspBsklCodeLbt" style="GIconBtnClass" left="172px" top="132px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspBsklCodeLbt.tooltip" member="SGRSTSP_BSKL_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspPracCodeLbt.label" name="sgrstspPracCodeLbt" style="GIconBtnClass" left="180px" top="154px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspPracCodeLbt.tooltip" member="SGRSTSP_PRAC_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspOrsnCodeLbt.label" name="sgrstspOrsnCodeLbt" style="GIconBtnClass" left="700px" top="41px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspOrsnCodeLbt.tooltip" member="SGRSTSP_ORSN_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspCaplCodeLbt.label" name="sgrstspCaplCodeLbt" style="GIconBtnClass" left="711px" top="64px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspCaplCodeLbt.tooltip" member="SGRSTSP_CAPL_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspEdlvCodeLbt.label" name="sgrstspEdlvCodeLbt" style="GIconBtnClass" left="717px" top="87px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspEdlvCodeLbt.tooltip" member="SGRSTSP_EDLV_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspEmexCodeLbt.label" name="sgrstspEmexCodeLbt" style="GIconBtnClass" left="709px" top="109px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspEmexCodeLbt.tooltip" member="SGRSTSP_EMEX_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspTrcnCodeLbt.label" name="sgrstspTrcnCodeLbt" style="GIconBtnClass" left="709px" top="132px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspTrcnCodeLbt.tooltip" member="SGRSTSP_TRCN_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspVoedCodeLbt.label" name="sgrstspVoedCodeLbt" style="GIconBtnClass" left="711px" top="154px" width="21px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspVoedCodeLbt.tooltip" member="SGRSTSP_VOED_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspEgolCodeLbt.label" name="sgrstspEgolCodeLbt" style="GIconBtnClass" left="711px" top="177px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspEgolCodeLbt.tooltip" member="SGRSTSP_EGOL_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspAprnCodeLbt.label" name="sgrstspAprnCodeLbt" style="GIconBtnClass" left="711px" top="200px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspAprnCodeLbt.tooltip" member="SGRSTSP_APRN_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspGainCodeLbt.label" name="sgrstspGainCodeLbt" style="GIconBtnClass" left="711px" top="222px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspGainCodeLbt.tooltip" member="SGRSTSP_GAIN_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspIncmCodeLbt.label" name="sgrstspIncmCodeLbt" style="GIconBtnClass" left="711px" top="245px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspIncmCodeLbt.tooltip" member="SGRSTSP_INCM_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspBlckCodeLbt.label" name="sgrstspBlckCodeLbt" style="GIconBtnClass" left="234px" top="64px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspBlckCodeLbt.tooltip" member="SGRSTSP_BLCK_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+    </framepanel>
+    <framepanel width="970px" height="188px" top="17px" left="7px" name="rect1058">
+      <textbox label="sgrstsp.sgrstspTermCodeEff.prompt" labelposition="right" labeloffset="-275" labelalign="center" name="sgrstspTermCodeEff" style="GNvaTextItem" left="228px" top="34px" width="63px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_TERM_CODE_EFF" block="SGRSTSP" required="true" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textbox label="sgrstsp.endStspTerm.prompt" labelposition="right" labeloffset="-149" labelalign="center" name="endStspTerm" style="GNvaTextItem" left="405px" top="34px" width="63px" height="23px" enabled="false" member="END_STSP_TERM" block="SGRSTSP" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspKeySeqno.prompt" labelposition="right" labeloffset="-249" labelalign="center" name="sgrstspKeySeqno" style="GNvaTextItem" left="228px" top="56px" width="36px" height="23px" member="SGRSTSP_KEY_SEQNO" block="SGRSTSP" required="true" maxlength="2" datatype="" case="mixed" />
+      <textfield labelposition="right" labeloffset="-219" labelalign="center" name="sgrstspName" style="GDescClass" left="270px" top="56px" width="364px" height="23px" bordertype="none" member="SGRSTSP_NAME" block="SGRSTSP" required="true" maxlength="4000" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspStspCode.prompt" labelposition="right" labeloffset="-261" labelalign="center" name="sgrstspStspCode" style="GNvaTextItem" left="228px" top="79px" width="48px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_STSP_CODE" block="SGRSTSP" required="true" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="right" labeloffset="-219" labelalign="center" name="sgrstspStspDesc" style="GDescClass" left="300px" top="80px" width="221px" height="23px" bordertype="none" member="SGRSTSP_STSP_DESC" block="SGRSTSP" required="true" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspAstdCode.prompt" labelposition="right" labeloffset="-239" labelalign="center" name="sgrstspAstdCode" style="GNvaTextItem" left="228px" top="101px" width="27px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_ASTD_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="right" labeloffset="-219" labelalign="center" name="sgrstspAstdDesc" style="GDescClass" left="283px" top="101px" width="200px" height="23px" bordertype="none" member="SGRSTSP_ASTD_DESC" block="SGRSTSP" required="true" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspPrevCode.prompt" labelposition="right" labeloffset="-241" labelalign="center" name="sgrstspPrevCode" style="GNvaTextItem" left="228px" top="124px" width="28px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_PREV_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="right" labeloffset="-219" labelalign="center" name="sgrstspPrevDesc" style="GDescClass" left="283px" top="124px" width="200px" height="23px" bordertype="none" member="SGRSTSP_PREV_DESC" block="SGRSTSP" required="true" maxlength="30" datatype="" case="mixed" />
+      <textbox label="sgrstsp.sgrstspCastCode.prompt" labelposition="right" labeloffset="-241" labelalign="center" name="sgrstspCastCode" style="GNvaTextItem" left="228px" top="147px" width="28px" height="23px" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SGRSTSP_CAST_CODE" block="SGRSTSP" validation="server" maxlength="30" datatype="" case="upper">
+        <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+      </textbox>
+      <textfield labelposition="right" labeloffset="-219" labelalign="center" name="sgrstspCastDesc" style="GDescClass" left="283px" top="147px" width="200px" height="23px" bordertype="none" member="SGRSTSP_CAST_DESC" block="SGRSTSP" required="true" maxlength="30" datatype="" case="mixed" />
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspStspCodeLbt.label" name="sgrstspStspCodeLbt" style="GIconBtnClass" left="276px" top="80px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspStspCodeLbt.tooltip" member="SGRSTSP_STSP_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspAstdCodeLbt.label" name="sgrstspAstdCodeLbt" style="GIconBtnClass" left="256px" top="103px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspAstdCodeLbt.tooltip" member="SGRSTSP_ASTD_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspPrevCodeLbt.label" name="sgrstspPrevCodeLbt" style="GIconBtnClass" left="256px" top="125px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspPrevCodeLbt.tooltip" member="SGRSTSP_PREV_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sStudypath.sgrstspCastCodeLbt.label" name="sgrstspCastCodeLbt" style="GIconBtnClass" left="256px" top="147px" width="20px" height="20px" navigable="false" icon="search" tooltip="sStudypath.sgrstspCastCodeLbt.tooltip" member="SGRSTSP_CAST_CODE_LBT" block="S$_STUDYPATH" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+    </framepanel>
+    <text fontfamily="Verdana" fontsize="11pt" fontcolor="Black" name="text10591" left="19px" top="234px" bordertype="none">studyPath.text1059.text</text>
+    <text fontfamily="Verdana" fontsize="11pt" fontcolor="Black" name="text11741" left="19px" top="28px" bordertype="none">studyPath.text1174.text</text>
+  </panel>
+</config>

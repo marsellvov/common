@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GTVCMSC"/>
+	<interactionblock name="GORCMSP"/>
+	<interactionblock name="FORM_HEADER"/>
+	<panel class="StackedCanvas" id="pnlCommentsCanvas" menu="G$_DEFAULT_PM" name="COMMENTS_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="gtvcmsc.longDesc.prompt">
+				<panel width="100%">
+					<gridlayout>
+						<gridcell>
+							<textbox block="GTVCMSC" datatype="String" height="52px" maxlength="4000" member="LONG_DESC" multiline="true" name="longDesc" width="735px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+		</accordion>
+		<accordion width="100%">
+			<panel label="gorcmsp.gorcmspDescription.prompt">
+				<panel width="100%">
+					<gridlayout cols="1" orientation="vertical">
+						<gridcell>
+							<textbox block="GORCMSP" datatype="Number" label="gorcmsp.gorcmspPriorityNo.prompt" labelstyle="DEFAULT" maxlength="3" member="GORCMSP_PRIORITY_NO" name="gorcmspPriorityNo" required="true" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textbox block="GORCMSP" datatype="String" height="300px" label="gorcmsp.longDesc.prompt" labelstyle="DEFAULT" maxlength="4000" member="LONG_DESC" multiline="true" name="longDesc1" width="600px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+	<panel style="alert-footer">
+		<flowlayout orientation="horizontal">
+			<button action="KEY-EXIT" block="GORCMSP" height="30px" keyactions="EXIT" label="panelCommentsCanvas.commentsCloseBtn.label" member="COMMENTS_CLOSE_BTN" name="commentsCloseBtn" navigable="false">
+				<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+			</button>
+		</flowlayout>
+	</panel>
+</config>

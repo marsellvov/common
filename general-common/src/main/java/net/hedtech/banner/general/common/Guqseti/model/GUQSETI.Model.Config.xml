@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guqseti/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guqseti/model/GUISETI.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guqseti/model/BUTTON_CONTROL_BLOCK.Manager.Config.xml"/>
+	
+	<formModel id="GUQSETI.Model.Config" name="GUQSETI">
+		<modelClass>net.hedtech.banner.general.common.Guqseti.model.GuqsetiModel</modelClass>
+		<parameters>
+			<parameter name="BAN_MODE" type="String">			</parameter>
+			<parameter name="BAN_ARGS" type="String">			</parameter>
+			<parameter name="LAUNCH_FORM" type="String">			</parameter>
+			<parameter name="KEEP_ALIVE" type="String">			</parameter>
+			<parameter name="TIMING" type="String">			</parameter>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GUISETI" manager="GUISETI.Manager.Config">
+				<parameters>
+			<select >					
+			</select>				
+			<insert >				
+			</insert>				
+			<update >				
+			</update>				
+			<delete >				
+			</delete>				
+				</parameters>
+		
+		
+			</businessObject>
+			<businessObject name="BUTTON_CONTROL_BLOCK" manager="BUTTON_CONTROL_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+	</formModel>
+</b:beans>

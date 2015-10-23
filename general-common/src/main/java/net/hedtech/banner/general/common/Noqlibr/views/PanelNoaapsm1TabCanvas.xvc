@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel width="100%">
+		<tabpanel id="tabNoaapsm1TabCanvas" name="NOAAPSM_1_TAB_CANVAS">
+			<tab id="page_otherDataAndComments" label="otherDataAndComments.label" name="OTHER_DATA_AND_COMMENTS">
+				<include src="net/hedtech/banner/general/common/Noqlibr/views/TabNoaapsm1TabCanvasOtherDataAndComments"/>
+			</tab>
+		</tabpanel>
+	</panel>
+</config>

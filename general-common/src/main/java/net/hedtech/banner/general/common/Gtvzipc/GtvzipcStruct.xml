@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Gtvzipc/GtvzipcAlerts.xml" FirstNavigationBlock="GTVZIPC_BLOCK" LovDataPath="/net/hedtech/banner/general/common/Gtvzipc/GtvzipcLovs.xml" Name="GTVZIPC">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Gtvzipc/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <StackedCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="GTVZIPC_BLOCK_1_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD_TM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HEADER_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="GTVZIPC_BLOCK" MultiRecord="true">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GTVZIPC_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false">
+        <Extension Name="ViewMode" Value="None" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID" />
+      </Item>
+      <Item CanvasName="GTVZIPC_BLOCK_1_CANVAS" DataType="String" Enabled="true" Hint="gtvzipcBlock.gtvzipcCode.hint" PreviousItem="GTVZIPC_NATN_CODE" Id="GTVZIPC_CODE" MaxLength="30" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="GTVZIPC_BLOCK_1_CANVAS" DataType="String" Enabled="true" Hint="gtvzipcBlock.gtvzipcCity.hint" Id="GTVZIPC_CITY" MaxLength="50" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="GTVZIPC_BLOCK_1_CANVAS" DataType="String" Enabled="true" Hint="gtvzipcBlock.gtvzipcCntyCode.hint" PreviousItem="GTVZIPC_CITY" Id="GTVZIPC_CNTY_CODE" Lov="STVCNTY_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="GTVZIPC_BLOCK_1_CANVAS" DataType="String" Enabled="true" Hint="gtvzipcBlock.gtvzipcStatCode.hint" PreviousItem="GTVZIPC_CNTY_CODE" Id="GTVZIPC_STAT_CODE" Lov="STVSTAT_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="GTVZIPC_BLOCK_1_CANVAS" DataType="String" Enabled="true" NextItem="GTVZIPC_CODE" PreviousItem="GTVZIPC_STAT_CODE" Hint="gtvzipcBlock.gtvzipcNatnCode.hint" Id="GTVZIPC_NATN_CODE" Lov="STVNATN_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <!--<Item AllowSearch="false" AllowUpdate="false" CanvasName="GTVZIPC_BLOCK_1_CANVAS" DataType="Date" Enabled="false" Id="GTVZIPC_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />-->
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="GTVZIPC_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" CanvasName="GTVZIPC_BLOCK_1_CANVAS">
+        <Extension Name="ViewMode" Value="None" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE" />
+      </Item>
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="GTVZIPC_BLOCK_1_EXITVALUE_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="GTVZIPC_BLOCK_1_CANVAS" Enabled="true" Id="GTVZIPC_STAT_CODE_LBT" Lov="GTVSTAT_LOV" MaxLength="5" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="GTVZIPC_BLOCK_1_CANVAS" Enabled="true" Id="GTVZIPC_NATN_CODE_LBT" Lov="GTVNATN_LOV" MaxLength="6" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="GTVZIPC_BLOCK_1_CANVAS" Enabled="true" Id="GTVZIPC_CNTY_CODE_LBT" Lov="GTVCNTY_LOV" MaxLength="6" Navigable="false" Type="Button" Visible="true" />
+    </Block>
+  </Logic>
+</FormStructure>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FTVORGN.Manager.Config" name="FTVORGN">
+		
+		<items>
+			<item name="FTVORGN_COAS_CODE" logicalName="ftvorgnCoasCode" type="String" physicalName="FTVORGN_COAS_CODE"  />
+			<item name="FTVORGN_ORGN_CODE" logicalName="ftvorgnOrgnCode" type="String" physicalName="FTVORGN_ORGN_CODE"  />
+			<item name="FTVORGN_TITLE" logicalName="ftvorgnTitle" type="String" physicalName="FTVORGN_TITLE"  />
+			<item name="FTVORGN_DATA_ENTRY_IND" logicalName="ftvorgnDataEntryInd" type="String" physicalName="FTVORGN_DATA_ENTRY_IND"  />
+			<item name="FTVORGN_STATUS_IND" logicalName="ftvorgnStatusInd" type="String" physicalName="FTVORGN_STATUS_IND"  />
+			<item name="FTVORGN_EFF_DATE" logicalName="ftvorgnEffDate" type="java.util.Date" physicalName="FTVORGN_EFF_DATE"  />
+			<item name="FTVORGN_TERM_DATE" logicalName="ftvorgnTermDate" type="java.util.Date" physicalName="FTVORGN_TERM_DATE"  />
+			<item name="FTVORGN_ACTIVITY_DATE" logicalName="ftvorgnActivityDate" type="java.util.Date" physicalName="FTVORGN_ACTIVITY_DATE"  />
+			<item name="FTVORGN_USER_ID" logicalName="ftvorgnUserId" type="String" physicalName="FTVORGN_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Ftvorgn.model.FtvorgnAdapter</adapterClass>
+<!-- 		<defaultWhereClause><![CDATA[WHERE (ftvorgn_coas_code = :HOLD_COAS_CODE OR ftvorgn_coas_code = :FTVORGN_COAS_CODE) AND (ftvorgn_data_entry_ind = 'Y' OR ftvorgn_data_entry_ind = :FTVORGN_DATA_ENTRY_IND)]]></defaultWhereClause>	 -->
+		<defaultWhereClause><![CDATA[WHERE (ftvorgn_coas_code = NVL(:HOLD_COAS_CODE, ftvorgn_coas_code)) AND (ftvorgn_data_entry_ind = 'Y')]]></defaultWhereClause>
+		<defaultOrderByClause><![CDATA[order by ftvorgn_coas_code, ftvorgn_orgn_code, ftvorgn_eff_date]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

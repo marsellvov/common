@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GTVSCOD"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlGtvscod1Canvas" menu="G$_DEFAULT_PM" name="GTVSCOD_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="GTVSCOD" name="grdGtvscod" width="100%">
+						<viewheader>
+							<viewcolumn block="GTVSCOD" datatype="String" label="gtvscod.gtvscodElementId.prompt" labelstyle="DEFAULT" maxlength="4" member="GTVSCOD_ELEMENT_ID" name="gtvscodElementId" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GTVSCOD" case="upper" datatype="String" label="gtvscod.gtvscodCode.prompt" labelstyle="DEFAULT" maxlength="8" member="GTVSCOD_CODE" name="gtvscodCode" required="true" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GTVSCOD" datatype="String" label="gtvscod.gtvscodDesc.prompt" labelstyle="DEFAULT" maxlength="80" member="GTVSCOD_DESC" name="gtvscodDesc" required="true" width="150px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GTVSCOD" case="upper" datatype="String" keyactions="NEXT_ITEM" label="gtvscod.gtvscodStandardInd.prompt" labelstyle="DEFAULT" maxlength="30" member="GTVSCOD_STANDARD_IND" name="gtvscodStandardInd" required="true" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

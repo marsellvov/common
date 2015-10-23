@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="gobeacc.accordion.title">ENTERPRISE ACCESS CONTROLS</msg>
+  <msg id="gobeacc.gobeaccUsername.prompt">Username</msg>
+  <msg id="gobeacc.gobeaccUsername.label">Gobwacs User Id</msg>
+  <msg id="gobeacc.gobeaccUsername.hint">Oracle ID; press List for valid Oracle Users.</msg>
+  <msg id="gobeacc.wacsId.prompt">ID</msg>
+  <msg id="gobeacc.wacsId.hint">ID; press LIST for valid Banner ID's, COUNT HITS for SSN/SIN Search.</msg>
+  <msg id="gobeacc.nname.prompt">Name</msg>
+  <msg id="gobeacc.nname.hint">Name; Enter a name Last, First, Middle and press enter or tab. Use the wildcard "%" if needed.</msg>
+  <msg id="gobeacc.gobeaccPidm.label">Gobwacs Pidm</msg>
+  <msg id="gobeacc.gobeaccPidm.hint">Enter value for : GOBWACS_PIDM</msg>
+  <msg id="gobeacc.gobeaccActivityDate.label">Gobwacs Activity Date</msg>
+  <msg id="gobeacc.gobeaccActivityDate.hint">Enter value for : GOBWACS_ACTIVITY_DATE</msg>
+  <msg id="buttonControlBlock.gobeaccUsernameLbt.label">Username</msg>
+  <msg id="buttonControlBlock.gobeaccUsernameLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.wacsIdLbt.label">ID</msg>
+  <msg id="buttonControlBlock.wacsIdLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.gobvusrExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.gobvusrSaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.gobvusrRollbackBtn.label">Rollback</msg>
+  <msg id="gExtendedSearchBlock.idnameExtsearchList.prompt">Results</msg>
+  <msg id="mainWindow.title">Enterprise Access Control Form</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

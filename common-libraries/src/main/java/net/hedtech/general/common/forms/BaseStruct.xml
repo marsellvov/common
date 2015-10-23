@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="BASE" AlertDataPath="net/hedtech/general/common/forms/BaseAlerts.xml">
+ <Visual>
+  <Window Id="MAIN_WINDOW">
+    	<StackedCanvas Id="TOOLS" />
+    	</Window>
+  </Visual>
+  <Logic>
+    <Block Id="MENU_CONTROL" CanvasName="TOOLS">
+      <Item Id="STATUS" Type="Text" Navigable="false">
+      </Item>    
+      <Item Id="GOTO_MENU" Type="Tree"  Navigable="false">
+      </Item>      
+       <Item Id="SELECT_BT" Type="Button"  Navigable="false" Visible="false" >
+      </Item>
+      <Item Id="SAVE_BT" Type="Button"  Navigable="false" Visible="false" >
+      </Item>      
+      <Item Id="CANCEL_BT" Type="Button"  Navigable="false" Visible="false" >
+      </Item>      
+    </Block>
+  </Logic>
+</FormStructure>

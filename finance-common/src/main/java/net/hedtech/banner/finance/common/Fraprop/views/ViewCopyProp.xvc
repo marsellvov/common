@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" title="copyProp.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<formpanel name="copyProp" width="100%">
+		<include src="net/hedtech/banner/finance/common/Fraprop/views/PanelCopyProp"/>
+	</formpanel>
+</config>

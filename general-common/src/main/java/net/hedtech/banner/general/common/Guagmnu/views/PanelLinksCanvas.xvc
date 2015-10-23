@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FORM_HEADER"/>
+	<interactionblock name="MY_LINKS"/>
+	<panel class="StackedCanvas" id="pnlLinksCanvas" label="linksCanvas.text555.text" name="LINKS_CANVAS" style="keyblock" width="100%">
+		<textfield block="FORM_HEADER" datatype="String" height="3px" maxlength="30" member="GRAY_DATA_BAR_1" name="grayDataBar1" width="200px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</textfield>
+		<textfield block="FORM_HEADER" datatype="String" height="3px" maxlength="30" member="GRAY_DATA_BAR_2" name="grayDataBar2" width="200px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</textfield>
+		<button action="WHEN-BUTTON-PRESSED" block="MY_LINKS" height="24px" label="myLinks.urlPassword.label" member="URL_PASSWORD" name="urlPassword" navigable="false" tooltip="myLinks.urlPassword.tooltip" width="200px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="MY_LINKS" height="24px" label="myLinks.urlMessages.label" member="URL_MESSAGES" name="urlMessages" navigable="false" tooltip="myLinks.urlMessages.tooltip" width="170px"/>
+		<image block="MY_LINKS" height="21px" maxlength="30" member="NEW_MESSAGE_IMAGE" name="newMessageImage" tooltip="myLinks.newMessageImage.tooltip" width="21px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</image>
+		<button action="WHEN-BUTTON-PRESSED" block="MY_LINKS" height="24px" member="URL_PREF1" name="urlPref1" navigable="false" width="200px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="MY_LINKS" height="24px" member="URL_PREF2" name="urlPref2" navigable="false" width="200px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="MY_LINKS" height="24px" member="URL_PREF3" name="urlPref3" navigable="false" width="200px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="MY_LINKS" height="24px" member="URL_PREF4" name="urlPref4" navigable="false" width="200px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="MY_LINKS" height="24px" member="URL_PREF5" name="urlPref5" navigable="false" width="200px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="MY_LINKS" height="24px" member="URL_PREF6" name="urlPref6" navigable="false" width="200px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="MY_LINKS" height="24px" label="myLinks.urlMyInst.label" member="URL_MY_INST" name="urlMyInst" navigable="false" tooltip="myLinks.urlMyInst.tooltip" width="200px"/>
+		<image block="MY_LINKS" height="188px" maxlength="30" member="MY_INST_IMAGE" name="myInstImage" width="217px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</image>
+	</panel>
+	<panel style="keyblock-button-container">
+		<button accesskey="ALT+PAGE_DOWN" action="NEXT_BLOCK" block="KEY_BLOCK" label="keyBlock.executeBtn.label" member="EXECUTE_BTN" tooltip="keyBlock.executeBtn.tooltip"/>
+		<button accesskey="F5" action="CLEAR-FORM" block="KEY_BLOCK" label="keyBlock.keyClrfrmBtn.label" member="KEY-CLRFRM_BTN" tooltip="keyBlock.keyClrfrmBtn.tooltip" visible="false"/>
+	</panel>
+</config>

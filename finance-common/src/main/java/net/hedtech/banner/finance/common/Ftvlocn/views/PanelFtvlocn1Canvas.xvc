@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVLOCN"/>
+	<panel class="ContentCanvas" id="pnlFtvlocn1Canvas" menu="G$_DEFAULT_PM" name="FTVLOCN_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="FTVLOCN" name="grdFtvlocn" width="100%">
+						<viewheader>
+							<viewcolumn block="FTVLOCN" case="upper" datatype="String" label="ftvlocn.ftvlocnCoasCode.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVLOCN_COAS_CODE" name="ftvlocnCoasCode">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVLOCN" case="upper" datatype="String" enabled="false" label="ftvlocn.ftvlocnLocnCode.prompt" labelstyle="DEFAULT" maxlength="6" member="FTVLOCN_LOCN_CODE" name="ftvlocnLocnCode">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVLOCN" datatype="String" enabled="false" label="ftvlocn.ftvlocnTitle.prompt" labelstyle="DEFAULT" maxlength="35" member="FTVLOCN_TITLE" name="ftvlocnTitle">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVLOCN" case="upper" datatype="String" enabled="false" label="ftvlocn.ftvlocnStatusInd.prompt" labelstyle="DEFAULT" maxlength="1" member="FTVLOCN_STATUS_IND" name="ftvlocnStatusInd">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FTVLOCN" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvlocn.ftvlocnEffDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVLOCN_EFF_DATE" name="ftvlocnEffDate">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn block="FTVLOCN" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="ftvlocn.ftvlocnTermDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FTVLOCN_TERM_DATE" name="ftvlocnTermDate">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

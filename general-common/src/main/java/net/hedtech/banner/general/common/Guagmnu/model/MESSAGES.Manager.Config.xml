@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="MESSAGES.Manager.Config" name="GURTKLR">
+		
+		<items>
+			<item name="GURTKLR_TODO_DATE" logicalName="gurtklrTodoDate" type="java.util.Date" physicalName="GURTKLR_TODO_DATE"  />
+			<item name="GURTKLR_COMMENT" logicalName="gurtklrComment" type="String" physicalName="GURTKLR_COMMENT"  />
+			<item name="GURTKLR_ACTIVITY_DATE" logicalName="gurtklrActivityDate" type="java.util.Date" physicalName="GURTKLR_ACTIVITY_DATE"  />
+			<item name="GURTKLR_TODO_TIME" logicalName="gurtklrTodoTime" type="java.math.BigDecimal" physicalName="GURTKLR_TODO_TIME"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Guagmnu.model.MessagesAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE GURTKLR_USER_ID = 'BASELINE' AND GURTKLR_TODO_DATE <= SYSDATE AND GURTKLR_STATUS = 'P'  ORDER BY GURTKLR_TODO_DATE DESC, GURTKLR_TODO_TIME DESC, GURTKLR_ACTIVITY_DATE DESC]]></defaultWhereClause>	
+		<queryAllRecords>true</queryAllRecords>	
+
+	</manager>
+</b:beans>

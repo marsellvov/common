@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:menu"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:menu http://www.morphis-tech.com/schema/foundations/menu.xsd">
+	
+	<menu id="Base.Menu.Config" name="BASE_MENU">
+		<menuControllers>
+			<menu name="Main">net.hedtech.general.common.forms.controller.GoToMenuController</menu>
+			<menu name="Detail">net.hedtech.general.common.forms.controller.GoToMenuController</menu>
+			<menu name="GoTo">net.hedtech.general.common.forms.controller.GoToMenuController</menu>
+		</menuControllers>
+	</menu>
+</b:beans>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" title="gSdspWindow.title">
+  <formpanel width="563px" height="198px" name="gSdspWindow" masterpage="com/atxsoftware/common/theme/master">
+    <include src="net/hedtech/general/common/libraries/Soqolib/views/PanelGSdspCanvas">
+    </include>
+  </formpanel>
+</config>

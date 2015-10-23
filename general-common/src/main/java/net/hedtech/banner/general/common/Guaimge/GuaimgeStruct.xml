@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Guaimge/GuaimgeAlerts.xml" Name="GUAIMGE">
+	<Visual>
+		
+		<Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Guaimge/views/ViewMainWindow">
+			<ContentCanvas Id="TEMP_CANVAS" Visible="false"/>
+		</Window>
+		<Window Id="POP_UP" Modal="true" Url="net/hedtech/banner/general/common/Guaimge/views/ViewPopUp">
+			<StackedCanvas Id="PAGE_1"/>
+		</Window>
+	</Visual>
+	<Logic>
+		
+		
+		<Block AllowDelete="false" AllowSearch="false" Id="FORM_HEADER">
+			<Item AllowUpdate="false" CanvasName="PAGE_1" DataType="String" Enabled="false" Id="PERSON_IMAGE" MaxLength="32767" Navigable="false" Visible="true"/>
+			<Item CanvasName="PAGE_1" Enabled="true" Id="EXIT_BTN" MaxLength="30" Type="Button" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+	</Logic>
+</FormStructure>

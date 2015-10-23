@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___CURRICULUM_HOLD_ITEMS.Manager.Config" name="SCurriculumHoldItems">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CURR_LOCK_IND" logicalName="currLockInd" type="String"   />
+			<item name="ERR_NUMBERT" logicalName="errNumbert" type="java.math.BigDecimal"   />
+			<item name="CURR_PROGRAM_1_CHANGE" logicalName="currProgram1Change" type="String"   />
+			<item name="CURR_LEVL_1_CHANGE" logicalName="currLevl1Change" type="String"   />
+			<item name="CURR_CAMP_1_CHANGE" logicalName="currCamp1Change" type="String"   />
+			<item name="CURR_COLL_1_CHANGE" logicalName="currColl1Change" type="String"   />
+			<item name="CURR_DEGC_1_CHANGE" logicalName="currDegc1Change" type="String"   />
+			<item name="CURR_CTLG_TERM_1_CHANGE" logicalName="currCtlgTerm1Change" type="String"   />
+			<item name="CURR_MAJR11_CHANGE" logicalName="currMajr11Change" type="String"   />
+			<item name="CURR_DEPT11_CHANGE" logicalName="currDept11Change" type="String"   />
+			<item name="CURR_MAJR12_CHANGE" logicalName="currMajr12Change" type="String"   />
+			<item name="CURR_DEPT12_CHANGE" logicalName="currDept12Change" type="String"   />
+			<item name="CURR_PROGRAM_2_CHANGE" logicalName="currProgram2Change" type="String"   />
+			<item name="CURR_LEVL_2_CHANGE" logicalName="currLevl2Change" type="String"   />
+			<item name="CURR_CAMP_2_CHANGE" logicalName="currCamp2Change" type="String"   />
+			<item name="CURR_COLL_2_CHANGE" logicalName="currColl2Change" type="String"   />
+			<item name="CURR_DEGC_2_CHANGE" logicalName="currDegc2Change" type="String"   />
+			<item name="CURR_CTLG_TERM_2_CHANGE" logicalName="currCtlgTerm2Change" type="String"   />
+			<item name="CURR_MAJR21_CHANGE" logicalName="currMajr21Change" type="String"   />
+			<item name="CURR_DEPT21_CHANGE" logicalName="currDept21Change" type="String"   />
+			<item name="CURR_MAJR22_CHANGE" logicalName="currMajr22Change" type="String"   />
+			<item name="CURR_DEPT22_CHANGE" logicalName="currDept22Change" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SCurriculumHoldItems</managerClass>
+
+	</manager>
+</b:beans>

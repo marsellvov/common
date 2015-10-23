@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SORLCUR_LITE.Manager.Config" name="SOVLCUR">
+		<kind>View</kind>
+		<items>
+			<item name="SORLCUR_GAPP_SEQNO" logicalName="sorlcurGappSeqno" type="java.math.BigDecimal" physicalName="SOVLCUR_gapp_SEQNO"  />
+			<item name="SORLFOS_SEQNO_CNT" logicalName="sorlfosSeqnoCnt" type="java.math.BigDecimal"  virtual="true" />
+			<item name="SORLCUR_DUPLICATE_IND" logicalName="sorlcurDuplicateInd" type="String"  virtual="true" />
+			<item name="SORLCUR_QUERY_IND" logicalName="sorlcurQueryInd" type="String"  virtual="true" />
+			<item name="LFOS_MAJR_ATTACH_IND" logicalName="lfosMajrAttachInd" type="String"  virtual="true" />
+			<item name="LFOS_MINR_ATTACH_IND" logicalName="lfosMinrAttachInd" type="String"  virtual="true" />
+			<item name="LFOS_CONCMAJR_ATTACH_IND" logicalName="lfosConcmajrAttachInd" type="String"  virtual="true" />
+			<item name="LFOS_CONCBASE_ATTACH_IND" logicalName="lfosConcbaseAttachInd" type="String"  virtual="true" />
+			<item name="CURRIC_WARNING" logicalName="curricWarning" type="java.math.BigDecimal"  virtual="true" />
+			<item name="SEVERITY_OUT" logicalName="severityOut" type="String"  virtual="true" />
+			<item name="CURR_ERROR" logicalName="currError" type="java.math.BigDecimal"  virtual="true" />
+			<item name="SORLCUR_PIDM" logicalName="sorlcurPidm" type="java.math.BigDecimal" physicalName="SOVLCUR_PIDM"  />
+			<item name="SOVLCUR_ROWID" logicalName="sovlcurRowid" type="String" physicalName="sovlcur_rowid"  />
+			<item name="SORLCUR_CURR_RULE" logicalName="sorlcurCurrRule" type="java.math.BigDecimal" physicalName="SOVLCUR_CURR_RULE"  />
+			<item name="SOVLCUR_CURRENT_IND" logicalName="sovlcurCurrentInd" type="String" physicalName="sovlcur_current_ind"  />
+			<item name="SORLCUR_LMOD_CODE" logicalName="sorlcurLmodCode" type="String" physicalName="SOVLCUR_LMOD_CODE"  />
+			<item name="SORLCUR_SEQNO" logicalName="sorlcurSeqno" type="java.math.BigDecimal" physicalName="SOVLCUR_SEQNO"  />
+			<item name="SORLCUR_TERM_CODE" logicalName="sorlcurTermCode" type="String" physicalName="SOVLCUR_TERM_CODE"  />
+			<item name="SORLCUR_TERM_CODE_CTLG" logicalName="sorlcurTermCodeCtlg" type="String" physicalName="SOVLCUR_TERM_CODE_CTLG"  />
+			<item name="SORLCUR_PRIORITY_NO" logicalName="sorlcurPriorityNo" type="java.math.BigDecimal" physicalName="SOVLCUR_PRIORITY_NO"  />
+			<item name="SORLCUR_PROGRAM" logicalName="sorlcurProgram" type="String" physicalName="SOVLCUR_PROGRAM"  />
+			<item name="SORLCUR_LEVL_CODE" logicalName="sorlcurLevlCode" type="String" physicalName="SOVLCUR_LEVL_CODE"  />
+			<item name="SORLCUR_CAMP_CODE" logicalName="sorlcurCampCode" type="String" physicalName="SOVLCUR_CAMP_CODE"  />
+			<item name="SORLCUR_COLL_CODE" logicalName="sorlcurCollCode" type="String" physicalName="SOVLCUR_COLL_CODE"  />
+			<item name="SORLCUR_DEGC_CODE" logicalName="sorlcurDegcCode" type="String" physicalName="SOVLCUR_DEGC_CODE"  />
+			<item name="SORLCUR_KEY_SEQNO" logicalName="sorlcurKeySeqno" type="java.math.BigDecimal" physicalName="SOVLCUR_KEY_SEQNO"  />
+			<item name="SORLCUR_CACT_CODE" logicalName="sorlcurCactCode" type="String" physicalName="SOVLCUR_CACT_CODE"  />
+			<item name="SORLCUR_START_DATE" logicalName="sorlcurStartDate" type="java.util.Date" physicalName="SOVLCUR_START_DATE"  />
+			<item name="SORLCUR_END_DATE" logicalName="sorlcurEndDate" type="java.util.Date" physicalName="SOVLCUR_END_DATE"  />
+			<item name="SORLCUR_ROLL_IND" logicalName="sorlcurRollInd" type="String" physicalName="SOVLCUR_ROLL_IND"  >
+				<value>
+					<constant>D</constant>
+				</value>	
+			</item>
+			<item name="SORLCUR_USER_ID" logicalName="sorlcurUserId" type="String" physicalName="SOVLCUR_USER_ID"  />
+			<item name="SORLCUR_ACTIVITY_DATE" logicalName="sorlcurActivityDate" type="java.util.Date" physicalName="SOVLCUR_ACTIVITY_DATE"  />
+			<item name="SORLCUR_ADMT_CODE" logicalName="sorlcurAdmtCode" type="String" physicalName="SOVLCUR_ADMT_CODE"  />
+			<item name="SORLCUR_TERM_CODE_ADMIT" logicalName="sorlcurTermCodeAdmit" type="String" physicalName="SOVLCUR_TERM_CODE_ADMIT"  />
+			<item name="SORLCUR_TERM_CODE_MATRIC" logicalName="sorlcurTermCodeMatric" type="String" physicalName="SOVLCUR_TERM_CODE_MATRIC"  />
+			<item name="SORLCUR_TERM_CODE_END" logicalName="sorlcurTermCodeEnd" type="String" physicalName="SOVLCUR_TERM_CODE_END"  />
+			<item name="SORLCUR_ROLLED_SEQNO" logicalName="sorlcurRolledSeqno" type="java.math.BigDecimal" physicalName="SOVLCUR_ROLLED_SEQNO"  />
+			<item name="SORLCUR_LEVL_DESC" logicalName="sorlcurLevlDesc" type="String"  virtual="true" />
+			<item name="SORLCUR_CAMP_DESC" logicalName="sorlcurCampDesc" type="String"  virtual="true" />
+			<item name="SORLCUR_COLL_DESC" logicalName="sorlcurCollDesc" type="String"  virtual="true" />
+			<item name="SORLCUR_DEGC_DESC" logicalName="sorlcurDegcDesc" type="String"  virtual="true" />
+			<item name="SORLCUR_ADMT_DESC" logicalName="sorlcurAdmtDesc" type="String"  virtual="true" />
+			<item name="SORLCUR_TERM_DESC" logicalName="sorlcurTermDesc" type="String"  virtual="true" />
+			<item name="SORLCUR_CATLG_TERM_DESC" logicalName="sorlcurCatlgTermDesc" type="String"  virtual="true" />
+			<item name="TEMP_SORLCUR_CURR_RULE" logicalName="tempSorlcurCurrRule" type="java.math.BigDecimal"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Soqolib.model.SorlcurLiteAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE (:S___CURRICULA_MODULE_CODE IS NULL OR sovlcur_lmod_code = :S___CURRICULA_MODULE_CODE) AND (((:S___CURRICULA_MODULE_KEY_SEQNO IS NULL OR sovlcur_key_seqno = :S___CURRICULA_MODULE_KEY_SEQNO) AND sovlcur_lmod_code <> sb_curriculum_str.f_learner) OR (sovlcur_lmod_code = sb_curriculum_str.f_learner)) AND ((:S___CURRICULA_MODULE_TERM_CODE IS NOT NULL AND ((sovlcur_term_code = :S___CURRICULA_MODULE_TERM_CODE AND (sovlcur_lmod_code) IN (sb_curriculum_str.f_outcome, sb_curriculum_str.f_recruit, sb_curriculum_str.f_admissions)) OR (sovlcur_lmod_code = sb_curriculum_str.f_learner AND (sovlcur_term_code < :S___CURRICULA_MODULE_END_TERM OR (sovlcur_term_code <= :S___CURRICULA_MODULE_END_TERM AND sovlcur_term_code = '999999'))))) OR :S___CURRICULA_MODULE_TERM_CODE IS NULL) AND sovlcur_current_ind = 'Y' AND sovlcur_active_ind = 'Y']]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by decode(sovlcur_lmod_code, sb_curriculum_str.f_recruit,'1',
+   sb_curriculum_str.f_admissions,'2', 
+   sb_curriculum_str.f_learner, '3', 
+   sb_curriculum_str.f_outcome,'4', '5'), 
+ decode(sovlcur_lmod_code, sb_curriculum_str.f_learner,'999999',
+    sovlcur_lmod_code, sb_curriculum_str.f_outcome,'999999',     sovlcur_term_code),
+ sovlcur_key_seqno, 
+ decode(sovlcur_current_ind || sovlcur_active_ind,'YY',1,2),
+ sovlcur_priority_no, sovlcur_seqno desc    ]]></defaultOrderByClause>	
+		<queryAllRecords>true</queryAllRecords>	
+
+	</manager>
+</b:beans>

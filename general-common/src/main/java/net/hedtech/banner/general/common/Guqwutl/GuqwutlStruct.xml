@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Guqwutl/GuqwutlAlerts.xml" FirstNavigationBlock="GUQWUTL" LovDataPath="/net/hedtech/banner/general/common/Guqwutl/GuqwutlLovs.xml" Name="GUQWUTL">
+	<Visual>
+		<Window Id="MAIN_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Guqwutl/views/ViewMainWindow">
+			<ContentCanvas Id="TEMP_CANVAS" Visible="false"/>
+			<StackedCanvas Id="G$_NAV_CANVAS" Visible="false"/>
+			<ContentCanvas Id="GUQWUTL_1_CANVAS"/>
+		</Window>
+	</Visual>
+	<Logic>
+		
+		
+		<Block Id="WEBUTIL">
+			<Item CanvasName="WEBUTIL_CANVAS" Id="DUMMY" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item CanvasName="WEBUTIL_CANVAS" Id="WEBUTIL_CLIENTINFO_FUNCTIONS" MaxLength="1" Navigable="false"/>
+			<Item CanvasName="WEBUTIL_CANVAS" Id="WEBUTIL_FILE_FUNCTIONS" MaxLength="1" Navigable="false"/>
+			<Item CanvasName="WEBUTIL_CANVAS" Id="WEBUTIL_HOST_FUNCTIONS" MaxLength="1" Navigable="false"/>
+			<Item CanvasName="WEBUTIL_CANVAS" Id="WEBUTIL_SESSION_FUNCTIONS" MaxLength="1" Navigable="false"/>
+			<Item CanvasName="WEBUTIL_CANVAS" Id="WEBUTIL_FILETRANSFER_FUNCTIONS" MaxLength="1" Navigable="false"/>
+			<Item CanvasName="WEBUTIL_CANVAS" Id="WEBUTIL_OLE_FUNCTIONS" MaxLength="1" Navigable="false"/>
+			<Item CanvasName="WEBUTIL_CANVAS" Id="WEBUTIL_C_API_FUNCTIONS" MaxLength="1" Navigable="false"/>
+			<Item CanvasName="WEBUTIL_CANVAS" Id="WEBUTIL_BROWSER_FUNCTIONS" MaxLength="1" Navigable="false"/>
+		</Block>
+		<Block Id="G$_VPDI_BLOCK">
+			<Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true"/>
+			<Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true"/>
+			<Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+		<Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+			<Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true"/>
+			<Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button"/>
+			<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button"/>
+			<Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+		<Block Id="FORM_HEADER">
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HEADER_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false"/>
+			<Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false"/>
+		</Block>
+		<Block AllowDelete="false" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Id="GUQWUTL">
+			<Item CanvasName="GUQWUTL_1_CANVAS" Enabled="true" Id="EXTRACT_BTN" MaxLength="14" Type="Button" Visible="true"/>
+			<Item CanvasName="GUQWUTL_1_CANVAS" Enabled="true" Id="EXIT_BTN" MaxLength="14" Type="Button" Visible="true"/>
+			<Item CanvasName="GUQWUTL_1_CANVAS" DataType="String" Id="ITEM1" MaxLength="200" Type="DisplayItem"/>
+			<Item CanvasName="GUQWUTL_1_CANVAS" DataType="String" Id="ITEM2" MaxLength="200" Type="DisplayItem"/>
+			<Item CanvasName="GUQWUTL_1_CANVAS" DataType="String" Id="ITEM3" MaxLength="200" Type="DisplayItem"/>
+		</Block>
+		<Block Id="BUTTON_CONTROL_BLOCK">
+			<Item DataType="String" Enabled="true" Id="GTVSYSI_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item DataType="String" Enabled="true" Id="GTVSYSI_1_SAVE_BTN" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item DataType="String" Enabled="true" Id="GTVSYSI_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+			<Item DataType="String" Enabled="true" Id="GTVSYSI_1_EXITVALUE_BTN" MaxLength="14" Navigable="false" Type="TextItem" Visible="true"/>
+		</Block>
+	</Logic>
+</FormStructure>

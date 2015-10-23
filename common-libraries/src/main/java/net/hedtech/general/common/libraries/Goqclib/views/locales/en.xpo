@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages">
+  <msg id="gExtendedSearchBlock.personDetailBtn.prompt">Person Search Detail:</msg>
+  <msg id="gExtendedSearchBlock.npersonDetailBtn.prompt">Non-Person Search Detail:</msg>
+  <msg id="gExtendedSearchBlock.srSpraddrCity.prompt">City:</msg>
+  <msg id="gExtendedSearchBlock.srSpraddrStatCode.prompt">State or Province:</msg>
+  <msg id="gExtendedSearchBlock.srSpraddrZip.prompt">ZIP or Postal Code:</msg>
+  <msg id="gExtendedSearchBlock.srSpridenNtypCode.prompt">Name Type:</msg>
+  <msg id="gExtendedSearchBlock.srSpbpersSsn.prompt">SSN/SIN/TIN:</msg>
+  <msg id="gExtendedSearchBlock.srSpbpersBirthDate.prompt">Birth Date:</msg>
+  <msg id="gExtendedSearchBlock.srSpbpersSex.prompt">Gender:</msg>
+  <msg id="gExtendedSearchBlock.extsearchCount.prompt">Person/Non-Person Count:</msg>
+</messages>

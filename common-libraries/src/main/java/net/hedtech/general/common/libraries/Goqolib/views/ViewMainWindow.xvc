@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config layout="positional" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <formpanel width="753px" height="436px" name="mainWindow">
+    <include src="net/hedtech/general/common/libraries/Goqolib/views/PanelGNavCanvas">
+    </include>
+    <include src="net/hedtech/general/common/libraries/Goqolib/views/PanelGubobjsCanvas">
+    </include>
+    <include src="net/hedtech/general/common/libraries/Goqolib/views/PanelMainCanvas">
+    </include>
+    <include src="net/hedtech/general/common/libraries/Goqolib/views/PanelMenuEntire">
+    </include>
+
+    </include>
+  </formpanel>
+</config>

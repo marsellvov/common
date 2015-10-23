@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FormStructure AlertDataPath="net/hedtech/general/common/libraries/Eoqolib/parts/goqolib/GOQOLIBAlerts.xml" LovDataPath="net/hedtech/general/common/libraries/Eoqolib/parts/goqolib/GOQOLIBLovs.xml" Name="GOQOLIB">
+	<Visual>
+	</Visual>
+	<Logic>
+	</Logic>
+</FormStructure>
+ 

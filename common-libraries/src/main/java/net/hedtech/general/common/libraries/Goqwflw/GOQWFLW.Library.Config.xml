@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:library"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:library http://www.morphis-tech.com/schema/foundations/library.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+
+	<library id="GOQWFLW.Lib.Config" name="GOQWFLW">
+		<libraryClass>net.hedtech.general.common.libraries.Goqwflw.GoqwflwServices</libraryClass>
+		<!-- support code -->
+		<supportCodeConfiguration>
+				<!-- Packages -->
+				<packages>
+					<package  name="G$_WF_WAIT_FOR_WORK">net.hedtech.general.common.libraries.Goqwflw.GWfWaitForWork</package> 	
+					<package  name="G$_WF_SET_FOCUS">net.hedtech.general.common.libraries.Goqwflw.GWfSetFocus</package> 	
+					<package  name="G$_WF_RECGRP">net.hedtech.general.common.libraries.Goqwflw.GWfRecgrp</package> 	
+					<package  name="G$_WF_LOGGING">net.hedtech.general.common.libraries.Goqwflw.GWfLogging</package> 	
+					<package  name="G$_WF_ICONS">net.hedtech.general.common.libraries.Goqwflw.GWfIcons</package> 	
+					<package  name="G$_WF_HEADER">net.hedtech.general.common.libraries.Goqwflw.GWfHeader</package> 	
+					<package  name="G$_WF_ERROR">net.hedtech.general.common.libraries.Goqwflw.GWfError</package> 	
+					<package  name="G$_WF_DRIVER">net.hedtech.general.common.libraries.Goqwflw.GWfDriver</package> 	
+					<package  name="G$_WF_DELIMITED_STRING">net.hedtech.general.common.libraries.Goqwflw.GWfDelimitedString</package> 	
+					<package  name="G$_WF_CONTROL_KEY_ITMS">net.hedtech.general.common.libraries.Goqwflw.GWfControlKeyItms</package> 	
+					<package  name="G$_WF_CONTROL_FORM">net.hedtech.general.common.libraries.Goqwflw.GWfControlForm</package> 	
+					<package  name="G$_WF_CONTEXT_VALIDATE">net.hedtech.general.common.libraries.Goqwflw.GWfContextValidate</package> 	
+					<package  name="G$_WF_CONTEXT_PROCESS_OUT">net.hedtech.general.common.libraries.Goqwflw.GWfContextProcessOut</package> 	
+					<package  name="G$_WF_CONTEXT_PROCESS_IN">net.hedtech.general.common.libraries.Goqwflw.GWfContextProcessIn</package> 	
+					<package  name="G$_WF_CONDITIONS">net.hedtech.general.common.libraries.Goqwflw.GWfConditions</package> 	
+					<package  name="G$_WF_BA">net.hedtech.general.common.libraries.Goqwflw.GWfBa</package> 	
+					<package  name="EXCEPTION_">net.hedtech.general.common.libraries.Goqwflw.Exception_</package> 	
+					<package  name="CREDENTIALCLIENT">net.hedtech.general.common.libraries.Goqwflw.Credentialclient</package> 	
+					<package  name="CREDENTIAL">net.hedtech.general.common.libraries.Goqwflw.Credential</package> 	
+				</packages>
+				<attachedLibraries>
+	<!-- Attached Libs -->
+					<libraryConfiguration  config="GOQRPLS.Lib.Config"/>
+					<libraryConfiguration  config="EOQRPLS.Lib.Config"/>
+				</attachedLibraries>
+		</supportCodeConfiguration>
+		
+	</library>
+</b:beans>
+
+ 

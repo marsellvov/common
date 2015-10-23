@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config layout="positional" title="funcBaseWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <formpanel width="1007px" height="265px" name="funcBaseWindow">
+    <include src="net/hedtech/general/common/libraries/Goqolib/views/PanelFuncBaseCanvas">
+    </include>
+  </formpanel>
+</config>

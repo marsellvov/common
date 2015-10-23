@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" title="NOQOLIB" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<formpanel name="mainWindow" width="100%">
+		<include src="net/hedtech/banner/general/common/Noqolib/views/PanelPage1"/>
+	</formpanel>
+</config>

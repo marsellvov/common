@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" >
+  <interactionblock name="S$_ADMIN_ASSIGN" />
+  <interactionblock name="SORAINF" />
+  <panel width="1007px" height="591px" top="0px" left="0px" id="pnlAdminAssignCanvas" name="ADMIN_ASSIGN_CANVAS" class="ContentCanvas" menu="G$_DEFAULT_PM">
+    <slider name="sorainfscrollbar" block="" top="90px" left="976px" width="16px" height="137px" />
+    <textfield labelposition="left" labelalign="start" name="dataSeparatorLine" style="GNvaDataSeparatorLinegDataSeparatorLineClass" left="5px" top="9px" width="1001px" height="5px" enabled="false" wrapStyle="none" bordertype="none" member="DATA_SEPARATOR_LINE" block="S$_ADMIN_ASSIGN" maxlength="24" datatype="" case="upper" />
+    <framepanel width="1001px" height="247px" top="16px" left="4px" name="rect534">
+      <radiogroup id="sorainfModule" name="sorainfModule" style="GNvaRadioButton" member="SORAINF_MODULE" block="SORAINF" validation="server" maxlength="30" datatype="" case="mixed">
+        <radiobox group="sorainfModule" labelposition="top" labeloffset="19" labelalign="center" labelalignoffset="-3px" label="" value="R" name="rb_SorainfModule_Recruit" style="G$_NVA_RADIO_BUTTON" left="555px" top="74px" width="24px" height="23px" />
+        <radiobox group="sorainfModule" labelposition="top" labeloffset="19" labelalign="center" labelalignoffset="-4px" label="" value="A" name="rb_SorainfModule_Applicant" style="G$_NVA_RADIO_BUTTON" left="624px" top="74px" width="24px" height="23px" />
+      </radiogroup>
+      <gridview top="55px" left="25px" width="935px" name="grdSorainf" block="SORAINF">
+        <viewheader>
+          <viewcolumn width="89px" label="sorainf.adminId.prompt" labelposition="top" labeloffset="19" labelalign="center" name="adminId" style="GNvaTextItem" labelstyle="DEFAULT" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="ADMIN_ID" block="SORAINF" validation="server" maxlength="9" datatype="" case="upper" />
+          <viewcolumn width="229px" label="sorainf.adminName.prompt" labelposition="top" labeloffset="19" labelalign="center" name="adminName" style="GNvaTextItem" labelstyle="DEFAULT" enabled="false" wrapStyle="none" keyactions="NEXT_ITEM" member="ADMIN_NAME" block="SORAINF" validation="server" maxlength="230" datatype="" case="mixed" />
+          <viewcolumn width="132px" label="sorainf.sorainfRadmCode.prompt" labelposition="top" labeloffset="19" labelalign="center" name="sorainfRadmCode" style="GNvaTextItem" labelstyle="DEFAULT" wrapStyle="none" autoskip="true" keyactions="NEXT_ITEM" member="SORAINF_RADM_CODE" block="SORAINF" validation="server" maxlength="30" datatype="" case="upper">
+            <xl:event name="doubleClick" action="WHEN-MOUSE-DOUBLECLICK" />
+          </viewcolumn>
+          <viewcolumn width="61px" label="sorainf.sorainfTermCode.prompt" labelposition="top" labeloffset="19" labelalign="center" name="sorainfTermCode" style="GNvaTextItem" labelstyle="DEFAULT" member="SORAINF_TERM_CODE" block="SORAINF" validation="server" maxlength="30" datatype="" case="upper" />
+          <viewcolumn width="39px" label="sorainf.sorainfSeqno.prompt" labelposition="top" labeloffset="19" labelalign="center" name="sorainfSeqno" style="GNvaTextItem" labelstyle="DEFAULT" member="SORAINF_SEQNO" block="SORAINF" validation="server" maxlength="42" datatype="" case="mixed" />
+          <viewcolumn width="17px" label="sorainf.sorainfSourceInd.prompt" labelposition="top" labeloffset="19" labelalign="center" name="sorainfSourceInd" style="GNvaTextItem" labelstyle="DEFAULT" enabled="false" member="SORAINF_SOURCE_IND" block="SORAINF" validation="server" maxlength="1" datatype="" case="upper" />
+          <viewcolumn width="69px" label="" labelposition="left" labelalign="start" name="adminSourceDesc" style="DEFAULT" labelstyle="DEFAULT" bordertype="none" member="ADMIN_SOURCE_DESC" block="SORAINF" validation="server" maxlength="30" datatype="" case="mixed" />
+        </viewheader>
+      </gridview>
+      <button labelposition="left" labelalign="start" name="sorainfRadmCodeLbt" style="GIconBtnClass" left="430px" top="54px" width="20px" height="20px" navigable="false" icon="flashlit" tooltip="sAdminAssign.sorainfRadmCodeLbt.tooltip" member="SORAINF_RADM_CODE_LBT" block="S$_ADMIN_ASSIGN" maxlength="30" case="mixed">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sAdminAssign.adminAssignCanvasTermBtn.label" name="adminAssignCanvasTermBtn" style="GFlashliteBtnClass" left="709px" top="54px" width="20px" height="20px" navigable="false" icon="flashlit" tooltip="sAdminAssign.adminAssignCanvasTermBtn.tooltip" member="ADMIN_ASSIGN_CANVAS_TERM_BTN" block="S$_ADMIN_ASSIGN" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sAdminAssign.adminAssignCanvasReturnBtn.label" name="adminAssignCanvasReturnBtn" style="GNvaButtonItem" left="902px" top="215px" width="66px" height="23px" navigable="false" wrapStyle="none" bordertype="raised" member="ADMIN_ASSIGN_CANVAS_RETURN_BTN" block="S$_ADMIN_ASSIGN" maxlength="14" case="mixed" action="WHEN-BUTTON-PRESSED" />
+      <button labelposition="left" labelalign="start" label="sAdminAssign.adminIdLbt.label" name="adminIdLbt" style="GFlashliteBtnClass" left="60px" top="54px" width="20px" height="20px" navigable="false" icon="flashlit" tooltip="sAdminAssign.adminIdLbt.tooltip" member="ADMIN_ID_LBT" block="S$_ADMIN_ASSIGN" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+      <button labelposition="left" labelalign="start" label="sAdminAssign.adminAssignCanvasSeqnoBtn.label" name="adminAssignCanvasSeqnoBtn" style="GIconBtnClass" left="794px" top="54px" width="20px" height="20px" navigable="false" icon="flashlit" tooltip="sAdminAssign.adminAssignCanvasSeqnoBtn.tooltip" member="ADMIN_ASSIGN_CANVAS_SEQNO_BTN" block="S$_ADMIN_ASSIGN" maxlength="30" case="mixed" action="WHEN-BUTTON-PRESSED">
+        <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+      </button>
+    </framepanel>
+  </panel>
+</config>

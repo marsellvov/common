@@ -1,0 +1,337 @@
+package net.hedtech.general.common.dbservices;
+
+import java.util.*;
+import morphis.foundations.core.appdatalayer.*;
+import morphis.foundations.core.appdatalayer.data.*;
+import morphis.foundations.core.appdatalayer.data.types.*;
+import morphis.foundations.core.appdatalayer.data.types.configuration.DbRecordField;
+import morphis.foundations.core.appdatalayer.data.types.configuration.DbRecordType;
+import morphis.foundations.core.types.*;
+import morphis.foundations.core.util.Ref;
+
+
+public class RbPellOriginationsRules {
+		public static void pRegisterEntity(NNumber pOperationType,NString pInternalRecordId) {
+			
+			IDataCommand cmd = DbManager.getDataAccessFactory().createDataCommand("RB_PELL_ORIGINATIONS_RULES.P_REGISTER_ENTITY", DbManager.getDataBaseFactory());
+			
+			cmd.addParameter("@P_OPERATION_TYPE", pOperationType);
+			cmd.addParameter("@P_INTERNAL_RECORD_ID", pInternalRecordId);
+				
+			cmd.execute();
+
+
+		}
+		
+		public static void pRegisterEntity(NNumber pOperationType,NString pAidyCode,NNumber pPidm,NString pCampPellId,NString pInstPellId,NString pAcadCal,NDate pDateSent,NNumber pAttendCost,NString pEnrollStatus,NNumber pExpectHrs,NNumber pHrsInYr,NNumber pAmtPaid,NNumber pAmtDue,NNumber pNbrMthsPay,NString pInstXref,NString pSecondaryPgiUsed,NNumber pPgi,NString pPrisonInd,NString pVerStatus,NString pSarSsn,NString pSarInit,NString pSarTranNo,NString pPaymentMethod,NNumber pExpectWks,NNumber pWksInYr,NDate pEnrollmentDate,NDate pEstDisbDate01,NDate pEstDisbDate02,NDate pEstDisbDate03,NDate pEstDisbDate04,NDate pEstDisbDate05,NDate pEstDisbDate06,NDate pEstDisbDate07,NDate pEstDisbDate08,NDate pEstDisbDate09,NDate pEstDisbDate10,NDate pEstDisbDate11,NDate pEstDisbDate12,NDate pEstDisbDate13,NDate pEstDisbDate14,NDate pEstDisbDate15,NString pLowCostCde,NString pOrigBatchNo,NString pOrigId,NString pStatusCde,NNumber pAcptNbrMthsPay,NNumber pAcptAmtDue,NDate pAcptEstDisbDate01,NDate pAcptEstDisbDate02,NDate pAcptEstDisbDate03,NDate pAcptEstDisbDate04,NDate pAcptEstDisbDate05,NDate pAcptEstDisbDate06,NDate pAcptEstDisbDate07,NDate pAcptEstDisbDate08,NDate pAcptEstDisbDate09,NDate pAcptEstDisbDate10,NDate pAcptEstDisbDate11,NDate pAcptEstDisbDate12,NDate pAcptEstDisbDate13,NDate pAcptEstDisbDate14,NDate pAcptEstDisbDate15,NDate pAcptEnrollmentDate,NString pAcptLowCostCde,NString pAcptVerStatus,NString pAcptPrisonInd,NString pAcptSarTranNo,NNumber pAcptPgi,NString pAcptSecPgiUsed,NString pAcptAcadCal,NString pAcptPaymentMethod,NNumber pAcptAttendCost,NString pAcptEnrollStatus,NNumber pAcptExpectWks,NNumber pAcptWksInYr,NNumber pAcptExpectHrs,NNumber pAcptHrsInYr,NNumber pSchPellGrant,NString pPrevAcptSarTranNo,NNumber pPrevAcptEfc,NString pPrevAcptSecEfcCde,NNumber pPrevAcptAttendCost,NString pEditRej01,NString pEditRej02,NString pEditRej03,NString pEditRej04,NString pEditRej05,NString pEditRej06,NString pEditRej07,NString pEditRej08,NString pEditRej09,NString pEditRej10,NString pEditRej11,NString pEditRej12,NString pEditRej13,NString pEditRej14,NString pEditRej15,NString pEditRej16,NString pEditRej17,NString pEditRej18,NString pEditRej19,NString pEditRej20,NString pEditRej21,NString pEditRej22,NString pEditRej23,NString pEditRej24,NString pEditRej25,NString pSharedSarIdFlag,NString pVerifWStatusFlag,NString pConcurEnrollFlag,NString pPotentialOverpmtFlag,NString pLockInd,NNumber pLowTuitionCost,NNumber pIntSeqNo,NNumber pAcptIntSeqNo,NString pCurrentSsn,NDate pCurrentBirthDate,NString pCurrentLastName,NString pCurrentFirstName,NString pCurrentMi,NNumber pNegPendingAmt,NNumber pSecEfc,NString pAcptCurrentSsn,NDate pAcptBirthDate,NString pAcptLastName,NString pAcptFirstName,NString pAcptMi,NString pDocumentId,NString pUserId,NString pDataOrigin,NString pEditField1,NString pEditValue1,NString pEditField2,NString pEditValue2,NString pEditField3,NString pEditValue3,NString pEditField4,NString pEditValue4,NString pEditField5,NString pEditValue5,NNumber pPercentEligUsed,NString pAddlEligInd,NString pAcptAddlEligInd,NNumber pPellLeu,NString pInternalRecordId) {
+			
+			IDataCommand cmd = DbManager.getDataAccessFactory().createDataCommand("RB_PELL_ORIGINATIONS_RULES.P_REGISTER_ENTITY", DbManager.getDataBaseFactory());
+			
+			cmd.addParameter("@P_OPERATION_TYPE", pOperationType);
+			cmd.addParameter("@P_AIDY_CODE", pAidyCode);
+			cmd.addParameter("@P_PIDM", pPidm);
+			cmd.addParameter("@P_CAMP_PELL_ID", pCampPellId);
+			cmd.addParameter("@P_INST_PELL_ID", pInstPellId);
+			cmd.addParameter("@P_ACAD_CAL", pAcadCal);
+			cmd.addParameter("@P_DATE_SENT", pDateSent);
+			cmd.addParameter("@P_ATTEND_COST", pAttendCost);
+			cmd.addParameter("@P_ENROLL_STATUS", pEnrollStatus);
+			cmd.addParameter("@P_EXPECT_HRS", pExpectHrs);
+			cmd.addParameter("@P_HRS_IN_YR", pHrsInYr);
+			cmd.addParameter("@P_AMT_PAID", pAmtPaid);
+			cmd.addParameter("@P_AMT_DUE", pAmtDue);
+			cmd.addParameter("@P_NBR_MTHS_PAY", pNbrMthsPay);
+			cmd.addParameter("@P_INST_XREF", pInstXref);
+			cmd.addParameter("@P_SECONDARY_PGI_USED", pSecondaryPgiUsed);
+			cmd.addParameter("@P_PGI", pPgi);
+			cmd.addParameter("@P_PRISON_IND", pPrisonInd);
+			cmd.addParameter("@P_VER_STATUS", pVerStatus);
+			cmd.addParameter("@P_SAR_SSN", pSarSsn);
+			cmd.addParameter("@P_SAR_INIT", pSarInit);
+			cmd.addParameter("@P_SAR_TRAN_NO", pSarTranNo);
+			cmd.addParameter("@P_PAYMENT_METHOD", pPaymentMethod);
+			cmd.addParameter("@P_EXPECT_WKS", pExpectWks);
+			cmd.addParameter("@P_WKS_IN_YR", pWksInYr);
+			cmd.addParameter("@P_ENROLLMENT_DATE", pEnrollmentDate);
+			cmd.addParameter("@P_EST_DISB_DATE_01", pEstDisbDate01);
+			cmd.addParameter("@P_EST_DISB_DATE_02", pEstDisbDate02);
+			cmd.addParameter("@P_EST_DISB_DATE_03", pEstDisbDate03);
+			cmd.addParameter("@P_EST_DISB_DATE_04", pEstDisbDate04);
+			cmd.addParameter("@P_EST_DISB_DATE_05", pEstDisbDate05);
+			cmd.addParameter("@P_EST_DISB_DATE_06", pEstDisbDate06);
+			cmd.addParameter("@P_EST_DISB_DATE_07", pEstDisbDate07);
+			cmd.addParameter("@P_EST_DISB_DATE_08", pEstDisbDate08);
+			cmd.addParameter("@P_EST_DISB_DATE_09", pEstDisbDate09);
+			cmd.addParameter("@P_EST_DISB_DATE_10", pEstDisbDate10);
+			cmd.addParameter("@P_EST_DISB_DATE_11", pEstDisbDate11);
+			cmd.addParameter("@P_EST_DISB_DATE_12", pEstDisbDate12);
+			cmd.addParameter("@P_EST_DISB_DATE_13", pEstDisbDate13);
+			cmd.addParameter("@P_EST_DISB_DATE_14", pEstDisbDate14);
+			cmd.addParameter("@P_EST_DISB_DATE_15", pEstDisbDate15);
+			cmd.addParameter("@P_LOW_COST_CDE", pLowCostCde);
+			cmd.addParameter("@P_ORIG_BATCH_NO", pOrigBatchNo);
+			cmd.addParameter("@P_ORIG_ID", pOrigId);
+			cmd.addParameter("@P_STATUS_CDE", pStatusCde);
+			cmd.addParameter("@P_ACPT_NBR_MTHS_PAY", pAcptNbrMthsPay);
+			cmd.addParameter("@P_ACPT_AMT_DUE", pAcptAmtDue);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_01", pAcptEstDisbDate01);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_02", pAcptEstDisbDate02);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_03", pAcptEstDisbDate03);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_04", pAcptEstDisbDate04);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_05", pAcptEstDisbDate05);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_06", pAcptEstDisbDate06);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_07", pAcptEstDisbDate07);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_08", pAcptEstDisbDate08);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_09", pAcptEstDisbDate09);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_10", pAcptEstDisbDate10);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_11", pAcptEstDisbDate11);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_12", pAcptEstDisbDate12);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_13", pAcptEstDisbDate13);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_14", pAcptEstDisbDate14);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_15", pAcptEstDisbDate15);
+			cmd.addParameter("@P_ACPT_ENROLLMENT_DATE", pAcptEnrollmentDate);
+			cmd.addParameter("@P_ACPT_LOW_COST_CDE", pAcptLowCostCde);
+			cmd.addParameter("@P_ACPT_VER_STATUS", pAcptVerStatus);
+			cmd.addParameter("@P_ACPT_PRISON_IND", pAcptPrisonInd);
+			cmd.addParameter("@P_ACPT_SAR_TRAN_NO", pAcptSarTranNo);
+			cmd.addParameter("@P_ACPT_PGI", pAcptPgi);
+			cmd.addParameter("@P_ACPT_SEC_PGI_USED", pAcptSecPgiUsed);
+			cmd.addParameter("@P_ACPT_ACAD_CAL", pAcptAcadCal);
+			cmd.addParameter("@P_ACPT_PAYMENT_METHOD", pAcptPaymentMethod);
+			cmd.addParameter("@P_ACPT_ATTEND_COST", pAcptAttendCost);
+			cmd.addParameter("@P_ACPT_ENROLL_STATUS", pAcptEnrollStatus);
+			cmd.addParameter("@P_ACPT_EXPECT_WKS", pAcptExpectWks);
+			cmd.addParameter("@P_ACPT_WKS_IN_YR", pAcptWksInYr);
+			cmd.addParameter("@P_ACPT_EXPECT_HRS", pAcptExpectHrs);
+			cmd.addParameter("@P_ACPT_HRS_IN_YR", pAcptHrsInYr);
+			cmd.addParameter("@P_SCH_PELL_GRANT", pSchPellGrant);
+			cmd.addParameter("@P_PREV_ACPT_SAR_TRAN_NO", pPrevAcptSarTranNo);
+			cmd.addParameter("@P_PREV_ACPT_EFC", pPrevAcptEfc);
+			cmd.addParameter("@P_PREV_ACPT_SEC_EFC_CDE", pPrevAcptSecEfcCde);
+			cmd.addParameter("@P_PREV_ACPT_ATTEND_COST", pPrevAcptAttendCost);
+			cmd.addParameter("@P_EDIT_REJ_01", pEditRej01);
+			cmd.addParameter("@P_EDIT_REJ_02", pEditRej02);
+			cmd.addParameter("@P_EDIT_REJ_03", pEditRej03);
+			cmd.addParameter("@P_EDIT_REJ_04", pEditRej04);
+			cmd.addParameter("@P_EDIT_REJ_05", pEditRej05);
+			cmd.addParameter("@P_EDIT_REJ_06", pEditRej06);
+			cmd.addParameter("@P_EDIT_REJ_07", pEditRej07);
+			cmd.addParameter("@P_EDIT_REJ_08", pEditRej08);
+			cmd.addParameter("@P_EDIT_REJ_09", pEditRej09);
+			cmd.addParameter("@P_EDIT_REJ_10", pEditRej10);
+			cmd.addParameter("@P_EDIT_REJ_11", pEditRej11);
+			cmd.addParameter("@P_EDIT_REJ_12", pEditRej12);
+			cmd.addParameter("@P_EDIT_REJ_13", pEditRej13);
+			cmd.addParameter("@P_EDIT_REJ_14", pEditRej14);
+			cmd.addParameter("@P_EDIT_REJ_15", pEditRej15);
+			cmd.addParameter("@P_EDIT_REJ_16", pEditRej16);
+			cmd.addParameter("@P_EDIT_REJ_17", pEditRej17);
+			cmd.addParameter("@P_EDIT_REJ_18", pEditRej18);
+			cmd.addParameter("@P_EDIT_REJ_19", pEditRej19);
+			cmd.addParameter("@P_EDIT_REJ_20", pEditRej20);
+			cmd.addParameter("@P_EDIT_REJ_21", pEditRej21);
+			cmd.addParameter("@P_EDIT_REJ_22", pEditRej22);
+			cmd.addParameter("@P_EDIT_REJ_23", pEditRej23);
+			cmd.addParameter("@P_EDIT_REJ_24", pEditRej24);
+			cmd.addParameter("@P_EDIT_REJ_25", pEditRej25);
+			cmd.addParameter("@P_SHARED_SAR_ID_FLAG", pSharedSarIdFlag);
+			cmd.addParameter("@P_VERIF_W_STATUS_FLAG", pVerifWStatusFlag);
+			cmd.addParameter("@P_CONCUR_ENROLL_FLAG", pConcurEnrollFlag);
+			cmd.addParameter("@P_POTENTIAL_OVERPMT_FLAG", pPotentialOverpmtFlag);
+			cmd.addParameter("@P_LOCK_IND", pLockInd);
+			cmd.addParameter("@P_LOW_TUITION_COST", pLowTuitionCost);
+			cmd.addParameter("@P_INT_SEQ_NO", pIntSeqNo);
+			cmd.addParameter("@P_ACPT_INT_SEQ_NO", pAcptIntSeqNo);
+			cmd.addParameter("@P_CURRENT_SSN", pCurrentSsn);
+			cmd.addParameter("@P_CURRENT_BIRTH_DATE", pCurrentBirthDate);
+			cmd.addParameter("@P_CURRENT_LAST_NAME", pCurrentLastName);
+			cmd.addParameter("@P_CURRENT_FIRST_NAME", pCurrentFirstName);
+			cmd.addParameter("@P_CURRENT_MI", pCurrentMi);
+			cmd.addParameter("@P_NEG_PENDING_AMT", pNegPendingAmt);
+			cmd.addParameter("@P_SEC_EFC", pSecEfc);
+			cmd.addParameter("@P_ACPT_CURRENT_SSN", pAcptCurrentSsn);
+			cmd.addParameter("@P_ACPT_BIRTH_DATE", pAcptBirthDate);
+			cmd.addParameter("@P_ACPT_LAST_NAME", pAcptLastName);
+			cmd.addParameter("@P_ACPT_FIRST_NAME", pAcptFirstName);
+			cmd.addParameter("@P_ACPT_MI", pAcptMi);
+			cmd.addParameter("@P_DOCUMENT_ID", pDocumentId);
+			cmd.addParameter("@P_USER_ID", pUserId);
+			cmd.addParameter("@P_DATA_ORIGIN", pDataOrigin);
+			cmd.addParameter("@P_EDIT_FIELD_1", pEditField1);
+			cmd.addParameter("@P_EDIT_VALUE_1", pEditValue1);
+			cmd.addParameter("@P_EDIT_FIELD_2", pEditField2);
+			cmd.addParameter("@P_EDIT_VALUE_2", pEditValue2);
+			cmd.addParameter("@P_EDIT_FIELD_3", pEditField3);
+			cmd.addParameter("@P_EDIT_VALUE_3", pEditValue3);
+			cmd.addParameter("@P_EDIT_FIELD_4", pEditField4);
+			cmd.addParameter("@P_EDIT_VALUE_4", pEditValue4);
+			cmd.addParameter("@P_EDIT_FIELD_5", pEditField5);
+			cmd.addParameter("@P_EDIT_VALUE_5", pEditValue5);
+			cmd.addParameter("@P_PERCENT_ELIG_USED", pPercentEligUsed);
+			cmd.addParameter("@P_ADDL_ELIG_IND", pAddlEligInd);
+			cmd.addParameter("@P_ACPT_ADDL_ELIG_IND", pAcptAddlEligInd);
+			cmd.addParameter("@P_PELL_LEU", pPellLeu);
+			cmd.addParameter("@P_INTERNAL_RECORD_ID", pInternalRecordId);
+				
+			cmd.execute();
+
+
+		}
+		
+		public static void pValidate(NString pAidyCode,NNumber pPidm,NString pCampPellId,NString pInstPellId,NString pAcadCal,NDate pDateSent,NNumber pAttendCost,NString pEnrollStatus,NNumber pExpectHrs,NNumber pHrsInYr,NNumber pAmtPaid,NNumber pAmtDue,NNumber pNbrMthsPay,NString pInstXref,NString pSecondaryPgiUsed,NNumber pPgi,NString pPrisonInd,NString pVerStatus,NString pSarSsn,NString pSarInit,NString pSarTranNo,NString pPaymentMethod,NNumber pExpectWks,NNumber pWksInYr,NDate pEnrollmentDate,NDate pEstDisbDate01,NDate pEstDisbDate02,NDate pEstDisbDate03,NDate pEstDisbDate04,NDate pEstDisbDate05,NDate pEstDisbDate06,NDate pEstDisbDate07,NDate pEstDisbDate08,NDate pEstDisbDate09,NDate pEstDisbDate10,NDate pEstDisbDate11,NDate pEstDisbDate12,NDate pEstDisbDate13,NDate pEstDisbDate14,NDate pEstDisbDate15,NString pLowCostCde,NString pOrigBatchNo,NString pOrigId,NString pStatusCde,NNumber pAcptNbrMthsPay,NNumber pAcptAmtDue,NDate pAcptEstDisbDate01,NDate pAcptEstDisbDate02,NDate pAcptEstDisbDate03,NDate pAcptEstDisbDate04,NDate pAcptEstDisbDate05,NDate pAcptEstDisbDate06,NDate pAcptEstDisbDate07,NDate pAcptEstDisbDate08,NDate pAcptEstDisbDate09,NDate pAcptEstDisbDate10,NDate pAcptEstDisbDate11,NDate pAcptEstDisbDate12,NDate pAcptEstDisbDate13,NDate pAcptEstDisbDate14,NDate pAcptEstDisbDate15,NDate pAcptEnrollmentDate,NString pAcptLowCostCde,NString pAcptVerStatus,NString pAcptPrisonInd,NString pAcptSarTranNo,NNumber pAcptPgi,NString pAcptSecPgiUsed,NString pAcptAcadCal,NString pAcptPaymentMethod,NNumber pAcptAttendCost,NString pAcptEnrollStatus,NNumber pAcptExpectWks,NNumber pAcptWksInYr,NNumber pAcptExpectHrs,NNumber pAcptHrsInYr,NNumber pSchPellGrant,NString pPrevAcptSarTranNo,NNumber pPrevAcptEfc,NString pPrevAcptSecEfcCde,NNumber pPrevAcptAttendCost,NString pEditRej01,NString pEditRej02,NString pEditRej03,NString pEditRej04,NString pEditRej05,NString pEditRej06,NString pEditRej07,NString pEditRej08,NString pEditRej09,NString pEditRej10,NString pEditRej11,NString pEditRej12,NString pEditRej13,NString pEditRej14,NString pEditRej15,NString pEditRej16,NString pEditRej17,NString pEditRej18,NString pEditRej19,NString pEditRej20,NString pEditRej21,NString pEditRej22,NString pEditRej23,NString pEditRej24,NString pEditRej25,NString pSharedSarIdFlag,NString pVerifWStatusFlag,NString pConcurEnrollFlag,NString pPotentialOverpmtFlag,NString pLockInd,NNumber pLowTuitionCost,NNumber pIntSeqNo,NNumber pAcptIntSeqNo,NString pCurrentSsn,NDate pCurrentBirthDate,NString pCurrentLastName,NString pCurrentFirstName,NString pCurrentMi,NNumber pNegPendingAmt,NNumber pSecEfc,NString pAcptCurrentSsn,NDate pAcptBirthDate,NString pAcptLastName,NString pAcptFirstName,NString pAcptMi,NString pDocumentId,NString pUserId,NString pDataOrigin,NString pEditField1,NString pEditValue1,NString pEditField2,NString pEditValue2,NString pEditField3,NString pEditValue3,NString pEditField4,NString pEditValue4,NString pEditField5,NString pEditValue5,NNumber pPercentEligUsed,NString pAddlEligInd,NString pAcptAddlEligInd,NNumber pPellLeu) {
+			
+			IDataCommand cmd = DbManager.getDataAccessFactory().createDataCommand("RB_PELL_ORIGINATIONS_RULES.P_VALIDATE", DbManager.getDataBaseFactory());
+			
+			cmd.addParameter("@P_AIDY_CODE", pAidyCode);
+			cmd.addParameter("@P_PIDM", pPidm);
+			cmd.addParameter("@P_CAMP_PELL_ID", pCampPellId);
+			cmd.addParameter("@P_INST_PELL_ID", pInstPellId);
+			cmd.addParameter("@P_ACAD_CAL", pAcadCal);
+			cmd.addParameter("@P_DATE_SENT", pDateSent);
+			cmd.addParameter("@P_ATTEND_COST", pAttendCost);
+			cmd.addParameter("@P_ENROLL_STATUS", pEnrollStatus);
+			cmd.addParameter("@P_EXPECT_HRS", pExpectHrs);
+			cmd.addParameter("@P_HRS_IN_YR", pHrsInYr);
+			cmd.addParameter("@P_AMT_PAID", pAmtPaid);
+			cmd.addParameter("@P_AMT_DUE", pAmtDue);
+			cmd.addParameter("@P_NBR_MTHS_PAY", pNbrMthsPay);
+			cmd.addParameter("@P_INST_XREF", pInstXref);
+			cmd.addParameter("@P_SECONDARY_PGI_USED", pSecondaryPgiUsed);
+			cmd.addParameter("@P_PGI", pPgi);
+			cmd.addParameter("@P_PRISON_IND", pPrisonInd);
+			cmd.addParameter("@P_VER_STATUS", pVerStatus);
+			cmd.addParameter("@P_SAR_SSN", pSarSsn);
+			cmd.addParameter("@P_SAR_INIT", pSarInit);
+			cmd.addParameter("@P_SAR_TRAN_NO", pSarTranNo);
+			cmd.addParameter("@P_PAYMENT_METHOD", pPaymentMethod);
+			cmd.addParameter("@P_EXPECT_WKS", pExpectWks);
+			cmd.addParameter("@P_WKS_IN_YR", pWksInYr);
+			cmd.addParameter("@P_ENROLLMENT_DATE", pEnrollmentDate);
+			cmd.addParameter("@P_EST_DISB_DATE_01", pEstDisbDate01);
+			cmd.addParameter("@P_EST_DISB_DATE_02", pEstDisbDate02);
+			cmd.addParameter("@P_EST_DISB_DATE_03", pEstDisbDate03);
+			cmd.addParameter("@P_EST_DISB_DATE_04", pEstDisbDate04);
+			cmd.addParameter("@P_EST_DISB_DATE_05", pEstDisbDate05);
+			cmd.addParameter("@P_EST_DISB_DATE_06", pEstDisbDate06);
+			cmd.addParameter("@P_EST_DISB_DATE_07", pEstDisbDate07);
+			cmd.addParameter("@P_EST_DISB_DATE_08", pEstDisbDate08);
+			cmd.addParameter("@P_EST_DISB_DATE_09", pEstDisbDate09);
+			cmd.addParameter("@P_EST_DISB_DATE_10", pEstDisbDate10);
+			cmd.addParameter("@P_EST_DISB_DATE_11", pEstDisbDate11);
+			cmd.addParameter("@P_EST_DISB_DATE_12", pEstDisbDate12);
+			cmd.addParameter("@P_EST_DISB_DATE_13", pEstDisbDate13);
+			cmd.addParameter("@P_EST_DISB_DATE_14", pEstDisbDate14);
+			cmd.addParameter("@P_EST_DISB_DATE_15", pEstDisbDate15);
+			cmd.addParameter("@P_LOW_COST_CDE", pLowCostCde);
+			cmd.addParameter("@P_ORIG_BATCH_NO", pOrigBatchNo);
+			cmd.addParameter("@P_ORIG_ID", pOrigId);
+			cmd.addParameter("@P_STATUS_CDE", pStatusCde);
+			cmd.addParameter("@P_ACPT_NBR_MTHS_PAY", pAcptNbrMthsPay);
+			cmd.addParameter("@P_ACPT_AMT_DUE", pAcptAmtDue);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_01", pAcptEstDisbDate01);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_02", pAcptEstDisbDate02);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_03", pAcptEstDisbDate03);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_04", pAcptEstDisbDate04);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_05", pAcptEstDisbDate05);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_06", pAcptEstDisbDate06);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_07", pAcptEstDisbDate07);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_08", pAcptEstDisbDate08);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_09", pAcptEstDisbDate09);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_10", pAcptEstDisbDate10);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_11", pAcptEstDisbDate11);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_12", pAcptEstDisbDate12);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_13", pAcptEstDisbDate13);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_14", pAcptEstDisbDate14);
+			cmd.addParameter("@P_ACPT_EST_DISB_DATE_15", pAcptEstDisbDate15);
+			cmd.addParameter("@P_ACPT_ENROLLMENT_DATE", pAcptEnrollmentDate);
+			cmd.addParameter("@P_ACPT_LOW_COST_CDE", pAcptLowCostCde);
+			cmd.addParameter("@P_ACPT_VER_STATUS", pAcptVerStatus);
+			cmd.addParameter("@P_ACPT_PRISON_IND", pAcptPrisonInd);
+			cmd.addParameter("@P_ACPT_SAR_TRAN_NO", pAcptSarTranNo);
+			cmd.addParameter("@P_ACPT_PGI", pAcptPgi);
+			cmd.addParameter("@P_ACPT_SEC_PGI_USED", pAcptSecPgiUsed);
+			cmd.addParameter("@P_ACPT_ACAD_CAL", pAcptAcadCal);
+			cmd.addParameter("@P_ACPT_PAYMENT_METHOD", pAcptPaymentMethod);
+			cmd.addParameter("@P_ACPT_ATTEND_COST", pAcptAttendCost);
+			cmd.addParameter("@P_ACPT_ENROLL_STATUS", pAcptEnrollStatus);
+			cmd.addParameter("@P_ACPT_EXPECT_WKS", pAcptExpectWks);
+			cmd.addParameter("@P_ACPT_WKS_IN_YR", pAcptWksInYr);
+			cmd.addParameter("@P_ACPT_EXPECT_HRS", pAcptExpectHrs);
+			cmd.addParameter("@P_ACPT_HRS_IN_YR", pAcptHrsInYr);
+			cmd.addParameter("@P_SCH_PELL_GRANT", pSchPellGrant);
+			cmd.addParameter("@P_PREV_ACPT_SAR_TRAN_NO", pPrevAcptSarTranNo);
+			cmd.addParameter("@P_PREV_ACPT_EFC", pPrevAcptEfc);
+			cmd.addParameter("@P_PREV_ACPT_SEC_EFC_CDE", pPrevAcptSecEfcCde);
+			cmd.addParameter("@P_PREV_ACPT_ATTEND_COST", pPrevAcptAttendCost);
+			cmd.addParameter("@P_EDIT_REJ_01", pEditRej01);
+			cmd.addParameter("@P_EDIT_REJ_02", pEditRej02);
+			cmd.addParameter("@P_EDIT_REJ_03", pEditRej03);
+			cmd.addParameter("@P_EDIT_REJ_04", pEditRej04);
+			cmd.addParameter("@P_EDIT_REJ_05", pEditRej05);
+			cmd.addParameter("@P_EDIT_REJ_06", pEditRej06);
+			cmd.addParameter("@P_EDIT_REJ_07", pEditRej07);
+			cmd.addParameter("@P_EDIT_REJ_08", pEditRej08);
+			cmd.addParameter("@P_EDIT_REJ_09", pEditRej09);
+			cmd.addParameter("@P_EDIT_REJ_10", pEditRej10);
+			cmd.addParameter("@P_EDIT_REJ_11", pEditRej11);
+			cmd.addParameter("@P_EDIT_REJ_12", pEditRej12);
+			cmd.addParameter("@P_EDIT_REJ_13", pEditRej13);
+			cmd.addParameter("@P_EDIT_REJ_14", pEditRej14);
+			cmd.addParameter("@P_EDIT_REJ_15", pEditRej15);
+			cmd.addParameter("@P_EDIT_REJ_16", pEditRej16);
+			cmd.addParameter("@P_EDIT_REJ_17", pEditRej17);
+			cmd.addParameter("@P_EDIT_REJ_18", pEditRej18);
+			cmd.addParameter("@P_EDIT_REJ_19", pEditRej19);
+			cmd.addParameter("@P_EDIT_REJ_20", pEditRej20);
+			cmd.addParameter("@P_EDIT_REJ_21", pEditRej21);
+			cmd.addParameter("@P_EDIT_REJ_22", pEditRej22);
+			cmd.addParameter("@P_EDIT_REJ_23", pEditRej23);
+			cmd.addParameter("@P_EDIT_REJ_24", pEditRej24);
+			cmd.addParameter("@P_EDIT_REJ_25", pEditRej25);
+			cmd.addParameter("@P_SHARED_SAR_ID_FLAG", pSharedSarIdFlag);
+			cmd.addParameter("@P_VERIF_W_STATUS_FLAG", pVerifWStatusFlag);
+			cmd.addParameter("@P_CONCUR_ENROLL_FLAG", pConcurEnrollFlag);
+			cmd.addParameter("@P_POTENTIAL_OVERPMT_FLAG", pPotentialOverpmtFlag);
+			cmd.addParameter("@P_LOCK_IND", pLockInd);
+			cmd.addParameter("@P_LOW_TUITION_COST", pLowTuitionCost);
+			cmd.addParameter("@P_INT_SEQ_NO", pIntSeqNo);
+			cmd.addParameter("@P_ACPT_INT_SEQ_NO", pAcptIntSeqNo);
+			cmd.addParameter("@P_CURRENT_SSN", pCurrentSsn);
+			cmd.addParameter("@P_CURRENT_BIRTH_DATE", pCurrentBirthDate);
+			cmd.addParameter("@P_CURRENT_LAST_NAME", pCurrentLastName);
+			cmd.addParameter("@P_CURRENT_FIRST_NAME", pCurrentFirstName);
+			cmd.addParameter("@P_CURRENT_MI", pCurrentMi);
+			cmd.addParameter("@P_NEG_PENDING_AMT", pNegPendingAmt);
+			cmd.addParameter("@P_SEC_EFC", pSecEfc);
+			cmd.addParameter("@P_ACPT_CURRENT_SSN", pAcptCurrentSsn);
+			cmd.addParameter("@P_ACPT_BIRTH_DATE", pAcptBirthDate);
+			cmd.addParameter("@P_ACPT_LAST_NAME", pAcptLastName);
+			cmd.addParameter("@P_ACPT_FIRST_NAME", pAcptFirstName);
+			cmd.addParameter("@P_ACPT_MI", pAcptMi);
+			cmd.addParameter("@P_DOCUMENT_ID", pDocumentId);
+			cmd.addParameter("@P_USER_ID", pUserId);
+			cmd.addParameter("@P_DATA_ORIGIN", pDataOrigin);
+			cmd.addParameter("@P_EDIT_FIELD_1", pEditField1);
+			cmd.addParameter("@P_EDIT_VALUE_1", pEditValue1);
+			cmd.addParameter("@P_EDIT_FIELD_2", pEditField2);
+			cmd.addParameter("@P_EDIT_VALUE_2", pEditValue2);
+			cmd.addParameter("@P_EDIT_FIELD_3", pEditField3);
+			cmd.addParameter("@P_EDIT_VALUE_3", pEditValue3);
+			cmd.addParameter("@P_EDIT_FIELD_4", pEditField4);
+			cmd.addParameter("@P_EDIT_VALUE_4", pEditValue4);
+			cmd.addParameter("@P_EDIT_FIELD_5", pEditField5);
+			cmd.addParameter("@P_EDIT_VALUE_5", pEditValue5);
+			cmd.addParameter("@P_PERCENT_ELIG_USED", pPercentEligUsed);
+			cmd.addParameter("@P_ADDL_ELIG_IND", pAddlEligInd);
+			cmd.addParameter("@P_ACPT_ADDL_ELIG_IND", pAcptAddlEligInd);
+			cmd.addParameter("@P_PELL_LEU", pPellLeu);
+				
+			cmd.execute();
+
+
+		}
+		
+	
+	
+	
+}

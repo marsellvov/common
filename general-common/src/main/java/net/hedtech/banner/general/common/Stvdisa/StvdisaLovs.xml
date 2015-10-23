@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Lovs>
+	<Lov Height="267" Name="GTVVPDI_LOV" RecordGroup="GTVVPDI_RG" Title="Institution Code Validation (GTVVPDI)" Width="575">
+		<Columns>
+			<Column DataMember="GTVVPDI_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="85"/>
+			<Column DataMember="GTVVPDI_DESC" ReturnItem="G$_VPDI_BLOCK.VPDI_DESC" Title="Description" Width="145"/>
+			<Column DataMember="GTVVPDI_TYPE_CDE" Title="Type " Width="115"/>
+			<Column DataMember="GTVVPDI_SYS_DEF_INST_IND" Title="Default Ind" Width="115"/>
+			<Column DataMember="GTVVPDI_ACTIVITY_DATE" Title="Activity Date" Width="115"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_VPDI_ALL_LOV" RecordGroup="G$_VPDI_ALL_RG" Title="Existing Institution Values" Width="575">
+		<Columns>
+			<Column DataMember="A" Width="47"/>
+			<Column DataMember="B" Width="47"/>
+			<Column DataMember="C" Width="47"/>
+			<Column DataMember="D" Width="47"/>
+			<Column DataMember="E" Width="47"/>
+			<Column DataMember="F" Width="47"/>
+			<Column DataMember="G" Width="47"/>
+			<Column DataMember="H" Width="47"/>
+			<Column DataMember="I" Width="47"/>
+			<Column DataMember="J" Width="47"/>
+			<Column DataMember="A$" Width="47"/>
+			<Column DataMember="B$" ReturnItem="G$_VPDI_BLOCK.VPDI_HOLD_VALUE" Width="47"/>
+		</Columns>
+	</Lov>
+</Lovs>

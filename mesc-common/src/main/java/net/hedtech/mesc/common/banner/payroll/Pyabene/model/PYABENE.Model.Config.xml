@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/mesc/common/banner/payroll/Pyabene/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/mesc/common/banner/payroll/Pyabene/model/KEY_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/mesc/common/banner/payroll/Pyabene/model/PDRBENE.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/mesc/common/banner/payroll/Pyabene/model/BUTTON_CONTROL_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/mesc/common/banner/payroll/Pyabene/model/PYABENE.ValueSet.Config.xml"/>
+
+	
+	<formModel id="PYABENE.Model.Config" name="PYABENE">
+		<modelClass>net.hedtech.mesc.common.banner.payroll.Pyabene.model.PyabeneModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="KEY_BLOCK" manager="KEY_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="PDRBENE" manager="PDRBENE.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="BUTTON_CONTROL_BLOCK" manager="BUTTON_CONTROL_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="STVMRTL_RG.ValueSet.Config"/>
+				<valueSet config="STVNATN_RG.ValueSet.Config"/>
+				<valueSet config="GYVTYP1_RG.ValueSet.Config"/>
+				<valueSet config="GYVTYP2_RG.ValueSet.Config"/>
+				<valueSet config="GYVTYP3_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FormStructure AlertDataPath="net/hedtech/banner/alumni/common/Apcaddr/parts/aoqolib/AOQOLIBAlerts.xml" LovDataPath="net/hedtech/banner/alumni/common/Apcaddr/parts/aoqolib/AOQOLIBLovs.xml" Name="AOQOLIB">
+	<Visual>
+	</Visual>
+	<Logic>
+	</Logic>
+</FormStructure>
+ 

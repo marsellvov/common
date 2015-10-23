@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GTVSCOD.Manager.Config" name="GTVSCOD">
+		
+		<items>
+			<item name="GTVSCOD_ELEMENT_ID" logicalName="gtvscodElementId" type="String" physicalName="GTVSCOD_ELEMENT_ID"  />
+			<item name="GTVSCOD_CODE" logicalName="gtvscodCode" type="String" physicalName="GTVSCOD_CODE"  />
+			<item name="GTVSCOD_DESC" logicalName="gtvscodDesc" type="String" physicalName="GTVSCOD_DESC" caseInsensitiveQuery="true"  />
+			<item name="GTVSCOD_STANDARD_IND" logicalName="gtvscodStandardInd" type="String" physicalName="GTVSCOD_STANDARD_IND"  />
+			<item name="GTVSCOD_ACTIVITY_DATE" logicalName="gtvscodActivityDate" type="java.util.Date" physicalName="GTVSCOD_ACTIVITY_DATE"  >
+			<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+				</item>
+			<item name="GTVSCOD_USER_ID" logicalName="gtvscodUserId" type="String" physicalName="GTVSCOD_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Gtvscod.model.GtvscodAdapter</adapterClass>
+
+<!--  <defaultWhereClause><![CDATA[( gtvscod_element_id = nvl(:EDI_ELEMENT_ID, gtvscod_element_id)
+OR gtvscod_element_id=:GTVSCOD_ELEMENT_ID) AND (gtvscod_standard_ind= nvl(:EDI_STANDARD_IND, gtvscod_standard_ind )
+OR gtvscod_standard_ind ='I' OR GTVSCOD_STANDARD_IND='E') ]]></defaultWhereClause> -->
+
+<defaultWhereClause><![CDATA[WHERE ((gtvscod_element_id LIKE :GLOBAL_ELEMENT_ID AND :GLOBAL_ELEMENT_ID IS NOT NULL) 
+OR :GLOBAL_ELEMENT_ID IS NULL)  AND ((gtvscod_standard_ind LIKE :GLOBAL_STANDARD_IND
+AND :GLOBAL_STANDARD_IND IS NOT NULL) OR :GLOBAL_STANDARD_IND IS NULL)  ]]></defaultWhereClause>		
+		
+		<defaultOrderByClause><![CDATA[gtvscod_element_id, gtvscod_code]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+
+	</manager>
+</b:beans>

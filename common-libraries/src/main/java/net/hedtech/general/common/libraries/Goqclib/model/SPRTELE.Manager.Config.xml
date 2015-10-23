@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPRTELE.Manager.Config" name="SPRTELE">
+		
+		<items>
+			<item name="SPRTELE_TELE_CODE" logicalName="sprteleTeleCode" type="String" physicalName="SPRTELE_TELE_CODE"  />
+			<item name="TELE_DESCRIPTION" logicalName="teleDescription" type="String"  virtual="true" />
+			<item name="SPRTELE_CTRY_CODE_PHONE" logicalName="sprteleCtryCodePhone" type="String" physicalName="SPRTELE_CTRY_CODE_PHONE"  />
+			<item name="SPRTELE_PHONE_AREA" logicalName="sprtelePhoneArea" type="String" physicalName="SPRTELE_PHONE_AREA"  />
+			<item name="SPRTELE_PHONE_NUMBER" logicalName="sprtelePhoneNumber" type="String" physicalName="SPRTELE_PHONE_NUMBER"  />
+			<item name="SPRTELE_PHONE_EXT" logicalName="sprtelePhoneExt" type="String" physicalName="SPRTELE_PHONE_EXT"  />
+			<item name="SPRTELE_INTL_ACCESS" logicalName="sprteleIntlAccess" type="String" physicalName="SPRTELE_INTL_ACCESS"  />
+			<item name="SPRTELE_PRIMARY_IND" logicalName="sprtelePrimaryInd" type="String" physicalName="SPRTELE_PRIMARY_IND"  />
+			<item name="SPRTELE_UNLIST_IND" logicalName="sprteleUnlistInd" type="String" physicalName="SPRTELE_UNLIST_IND"  />
+			<item name="SPRTELE_STATUS_IND" logicalName="sprteleStatusInd" type="String" physicalName="SPRTELE_STATUS_IND"  />
+			<item name="SPRTELE_COMMENT" logicalName="sprteleComment" type="String" physicalName="SPRTELE_COMMENT"  />
+			<item name="SPRTELE_ATYP_CODE" logicalName="sprteleAtypCode" type="String" physicalName="SPRTELE_ATYP_CODE"  />
+			<item name="ATYP_DESCRIPTION" logicalName="atypDescription" type="String"  virtual="true" />
+			<item name="SPRTELE_ADDR_SEQNO" logicalName="sprteleAddrSeqno" type="java.math.BigDecimal" physicalName="SPRTELE_ADDR_SEQNO"  />
+			<item name="SPRTELE_ACTIVITY_DATE" logicalName="sprteleActivityDate" type="java.util.Date" physicalName="SPRTELE_ACTIVITY_DATE"  />
+			<item name="SPRTELE_USER_ID" logicalName="sprteleUserId" type="String" physicalName="SPRTELE_USER_ID"  />
+			<item name="SPRTELE_PIDM" logicalName="sprtelePidm" type="java.math.BigDecimal" physicalName="SPRTELE_PIDM"  >
+				<value>
+					<item name="PIDM" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="SPRTELE_SEQNO" logicalName="sprteleSeqno" type="java.math.BigDecimal" physicalName="SPRTELE_SEQNO"  />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqclib.model.SprteleAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE sprtele_pidm = :PIDM]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[order by decode(sprtele_status_ind, 'I',-2) desc]]></defaultOrderByClause>	
+		<pagination maximumRows="1" enabled="true"/>
+	</manager>
+</b:beans>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="KEY_BLOCK.Manager.Config" name="KeyBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="ID" logicalName="id" type="String"    /> 
+			<item name="FULL_NAME" logicalName="fullName" type="String"    /> 
+			<item name="PREFERRED_RECORD_NUMBER" logicalName="preferredRecordNumber" type="java.math.BigDecimal"    /> 
+			<item name="DECEASED_IND" logicalName="deceasedInd" type="String"    /> 
+			<item name="SPS_PREF_CLASS" logicalName="spsPrefClass" type="String"    /> 
+			<item name="PREF_CLASS" logicalName="prefClass" type="String"    /> 
+			<item name="CONFID_IND" logicalName="confidInd" type="String"    /> 
+			<item name="SPS_DONR_CAT" logicalName="spsDonrCat" type="String"    /> 
+			<item name="SPS_NAME" logicalName="spsName" type="String"    /> 
+			<item name="SPS_IDNO" logicalName="spsIdno" type="String"    /> 
+			<item name="DONR_CAT" logicalName="donrCat" type="String"    /> 
+			<item name="SPS_DECEASED_IND" logicalName="spsDeceasedInd" type="String"    /> 
+			<item name="PIDM" logicalName="pidm" type="java.math.BigDecimal"    /> 
+			<item name="SPS_PIDM" logicalName="spsPidm" type="String"    /> 
+			<item name="ENTITY_IND" logicalName="entityInd" type="String"    /> 
+			<item name="ATYP_COUNT" logicalName="atypCount" type="java.math.BigDecimal"    /> 
+			<item name="MANUAL_CM_CALL" logicalName="manualCmCall" type="String"    /> 
+		</items>
+		
+			<managerClass>net.hedtech.banner.alumni.common.Apaiden.model.KeyBlock</managerClass>
+
+	</manager>
+</b:beans>

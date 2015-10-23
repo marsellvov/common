@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="STVCNTY.Manager.Config" name="STVCNTY">
+		
+		<items>
+			<item name="STVCNTY_CODE" logicalName="stvcntyCode" type="String" physicalName="STVCNTY_CODE"  />
+			<item name="STVCNTY_DESC" logicalName="stvcntyDesc" type="String" physicalName="STVCNTY_DESC"  />
+			<item name="STVCNTY_ACTIVITY_DATE" logicalName="stvcntyActivityDate" type="java.util.Date" physicalName="STVCNTY_ACTIVITY_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Stvcnty.model.StvcntyAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[stvcnty_code]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

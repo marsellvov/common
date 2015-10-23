@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<!-- <b:import resource="classpath:/net/hedtech/banner/general/common/Noqlibr/model/FORM_HEADER.Manager.Config.xml"/>-->
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Noqlibr/model/NOQOLIB.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Noqlibr/model/NOBTRAN.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Noqlibr/model/NOBTRAN_INFO_1.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Noqlibr/model/NORCMNT.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Noqlibr/model/NOQLIBR.ValueSet.Config.xml"/>
+
+	
+	<formModel id="NOQLIBR.Model.Config" name="NOQLIBR">
+		<modelClass>net.hedtech.banner.general.common.Noqlibr.model.NoqlibrModel</modelClass>
+		
+		<businessObjects>
+			<!-- <businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>-->
+			<businessObject name="NOQOLIB" manager="NOQOLIB.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="NOBTRAN" manager="NOBTRAN.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="NOBTRAN_INFO_1" manager="NOBTRAN_INFO_1.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="NORCMNT" manager="NORCMNT.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="SPRTELE_RG.ValueSet.Config"/>
+				<valueSet config="PTQECLC_RG.ValueSet.Config"/>
+				<valueSet config="PTVSTGR_RG.ValueSet.Config"/>
+				<valueSet config="PTQWKPR_RG.ValueSet.Config"/>
+				<valueSet config="PTVEGRP_RG.ValueSet.Config"/>
+				<valueSet config="PTVNRSI_RG.ValueSet.Config"/>
+				<valueSet config="PTVLCAT_RG.ValueSet.Config"/>
+				<valueSet config="PTQBCAT_RG.ValueSet.Config"/>
+				<valueSet config="NBAJOBS_RG.ValueSet.Config"/>
+				<valueSet config="PTQDCHN_RG.ValueSet.Config"/>
+				<valueSet config="PTQECLS_RG.ValueSet.Config"/>
+				<valueSet config="PTQEARN_RG.ValueSet.Config"/>
+				<valueSet config="NTVAPTY_RG.ValueSet.Config"/>
+				<valueSet config="PTQBDPL_RG.ValueSet.Config"/>
+				<valueSet config="PTQBDPL1_RG.ValueSet.Config"/>
+				<valueSet config="PTV87TR_RG.ValueSet.Config"/>
+				<valueSet config="NTVWKSH_RG.ValueSet.Config"/>
+				<valueSet config="NTVPNOC_RG.ValueSet.Config"/>
+				<valueSet config="NTVPFOC_RG.ValueSet.Config"/>
+				<valueSet config="NTVDOTT_RG.ValueSet.Config"/>
+				<valueSet config="FBIN_EFF_DATES_RG.ValueSet.Config"/>
+				<valueSet config="NTVJOBP_RG.ValueSet.Config"/>
+				<valueSet config="FBEX_EFF_DATES_RG.ValueSet.Config"/>
+				<valueSet config="FELD_EFF_DATES_RG.ValueSet.Config"/>
+				<valueSet config="PTQDFPR_RG.ValueSet.Config"/>
+				<valueSet config="PTQEMPR_RG.ValueSet.Config"/>
+				<valueSet config="PTVPCAT_RG.ValueSet.Config"/>
+				<valueSet config="PTVORGN_RG.ValueSet.Config"/>
+				<valueSet config="PTQLOCN_RG.ValueSet.Config"/>
+				<valueSet config="PTVLGCD_RG.ValueSet.Config"/>
+				<valueSet config="PTVJCRE_RG.ValueSet.Config"/>
+				<valueSet config="PTVWKCP_RG.ValueSet.Config"/>
+				<valueSet config="PTQJBLN_RG.ValueSet.Config"/>
+				<valueSet config="PTVEFUN_RG.ValueSet.Config"/>
+				<valueSet config="PTVBARG_RG.ValueSet.Config"/>
+				<valueSet config="FTVOBPH_RG.ValueSet.Config"/>
+				<valueSet config="PTVESKL_RG.ValueSet.Config"/>
+				<valueSet config="PTQBDCA_RG.ValueSet.Config"/>
+				<valueSet config="PTQSCHL_RG.ValueSet.Config"/>
+				<valueSet config="PTVECIP_RG.ValueSet.Config"/>
+				<valueSet config="PTRESOC_RG.ValueSet.Config"/>
+				<valueSet config="FTVECLS_RG.ValueSet.Config"/>
+				<valueSet config="FTVCTYP_RG.ValueSet.Config"/>
+				<valueSet config="FTVPROJ_RG.ValueSet.Config"/>
+				<valueSet config="FTVOBUD_RG.ValueSet.Config"/>
+				<valueSet config="NTQAPTY_RG.ValueSet.Config"/>
+				<valueSet config="NTQALVL_RG.ValueSet.Config"/>
+				<valueSet config="NTVACAT_RG.ValueSet.Config"/>
+				<valueSet config="NTQLVID_RG.ValueSet.Config"/>
+				<valueSet config="PTVASSN_RG.ValueSet.Config"/>
+				<valueSet config="NTQROUT_RG.ValueSet.Config"/>
+				<valueSet config="NTQACLV_RG.ValueSet.Config"/>
+				<valueSet config="NTQSALA_RG.ValueSet.Config"/>
+				<valueSet config="JOBS_EFF_DATES_RG.ValueSet.Config"/>
+				<valueSet config="NTVBPRO_RG.ValueSet.Config"/>
+				<valueSet config="NTQSPEX_RG.ValueSet.Config"/>
+				<valueSet config="NTVAGRP_RG.ValueSet.Config"/>
+				<valueSet config="NTQAGRP_RG.ValueSet.Config"/>
+				<valueSet config="NTQAGID_RG.ValueSet.Config"/>
+				<valueSet config="NTVECCG_RG.ValueSet.Config"/>
+				<valueSet config="NTVPRXM_RG.ValueSet.Config"/>
+				<valueSet config="NTVQPRT_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

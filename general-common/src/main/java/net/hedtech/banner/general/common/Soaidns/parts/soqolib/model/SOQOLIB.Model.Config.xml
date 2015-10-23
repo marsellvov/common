@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+	<formModel id="SOQOLIB.Model.Config" name="SOQOLIB">
+		<parameters/>
+		<businessObjects>
+			<businessObject name="SOVLCUR" />
+			<businessObject name="SOVLFOS" />
+			<businessObject name="S$_CURRICULA_SUMMARY" />
+		</businessObjects>
+		<valueSets>
+			<valueSet config="STVCLAS_RG.ValueSet.Config"/>
+			<valueSet config="SOVLFOS_ATTACH_MAJR_RG.ValueSet.Config"/>
+			<valueSet config="STVSTYP_RG.ValueSet.Config"/>
+			<valueSet config="STVADMT_RG.ValueSet.Config"/>
+			<valueSet config="STVRESD_RG.ValueSet.Config"/>
+			<valueSet config="STVSTST_RG.ValueSet.Config"/>
+		</valueSets>
+	</formModel>
+</b:beans>

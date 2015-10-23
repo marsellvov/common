@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="CURRENT_VALUES"/>
+	<panel class="ContentCanvas" id="pnlGuauipw1Canvas" menu="G$_DEFAULT_PM" name="GUAUIPW_1_CANVAS" width="500px">
+		<gridlayout orientation="vertical" cols="1">
+			<gridcell>
+				<textbox block="CURRENT_VALUES" case="upper" datatype="String" height="23px" label="currentValues.currAltUserId.prompt" maxlength="30" member="CURR_ALT_USER_ID" name="currAltUserId" validation="server" width="239px">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+			</gridcell>
+			<gridcell>
+				<textbox block="CURRENT_VALUES" datatype="String" height="23px" label="currentValues.currAltPassword.prompt" maxlength="30" member="CURR_ALT_PASSWORD" name="currAltPassword" width="239px" type="password">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textbox>
+			</gridcell>
+			
+		</gridlayout>
+	</panel>
+	<panel style="alert-footer">
+		<flowlayout orientation="horizontal">
+			<button action="WHEN-BUTTON-PRESSED" label="currentValues.verify1SaveBtn.label" block="CURRENT_VALUES" member="VERIFY_1_SAVE_BTN" name="verify1SaveBtn"/>
+		</flowlayout>
+	</panel>
+</config>

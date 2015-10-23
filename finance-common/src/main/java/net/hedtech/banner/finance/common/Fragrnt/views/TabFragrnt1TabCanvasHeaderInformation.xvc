@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FRBGRNT"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title.label">
+				<panel width="100%">
+					<gridlayout cols="2" orientation="vertical">
+						<gridcell>
+							<textbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbgrnt.frbgrntCoasCode.prompt" maxlength="30" member="FRBGRNT_COAS_CODE" name="frbgrntCoasCode" required="true" style="ui-buttoninput" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGRNT_COAS_CODE_LBT" name="frbgrntCoasCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntCoasCodeLbt.tooltip" width="23px"/>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" case="upper" datatype="String" height="23px" label="frbgrnt.frbgrntOrgnCodeRespOffice.prompt" maxlength="30" member="FRBGRNT_ORGN_CODE_RESP_OFFICE" name="frbgrntOrgnCodeRespOffice" required="true" style="ui-buttoninput" width="69px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_ORGN_CODE_RESP_OFF" name="frbgrntOrgnCodeRespOff" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntOrgnCodeRespOff.tooltip" width="23px"/>
+							<textfield block="FRBGRNT" datatype="String" height="23px" maxlength="35" member="ORGN_CODE_DESCR" name="orgnCodeDescr" width="279px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="String" height="23px" label="frbgrnt.frbgrntLongTitle.prompt" maxlength="256" member="FRBGRNT_LONG_TITLE" name="frbgrntLongTitle" required="true" width="415px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textbox autoskip="true" block="FRBGRNT" datatype="String" height="23px" label="frbgrnt.frbgrntTitle.prompt" maxlength="35" member="FRBGRNT_TITLE" name="frbgrntTitle" required="true" width="192px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<checkbox action="WHEN-CHECKBOX-CHANGED" block="FRBGRNT" falsevalue="N" height="23px" label="frbgrnt.frbgrntEffCertRequiredInd.label" member="FRBGRNT_EFF_CERT_REQUIRED_IND" name="frbgrntEffCertRequiredInd" value="Y" width="213px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<textbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntAgencyCode.prompt" maxlength="9" member="FRBGRNT_AGENCY_CODE" name="frbgrntAgencyCode" style="ui-buttoninput" validation="server" width="90px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_AGENCY_CODE_LBT" name="frbgrntAgencyCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntAgencyCodeLbt.tooltip" width="23px"/>
+							<textfield block="FRBGRNT" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="FRBGRNT_AGENCY_NAME" name="frbgrntAgencyName" width="295px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntPiIdCode.prompt" maxlength="9" member="FRBGRNT_PI_ID_CODE" name="frbgrntPiIdCode" style="ui-buttoninput" validation="server" width="90px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_PI_ID_CODE_LBT" name="frbgrntPiIdCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntPiIdCodeLbt.tooltip" width="23px"/>
+							<textfield block="FRBGRNT" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="FRBGRNT_PI_ID_NAME" name="frbgrntPiIdName" width="295px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<calendar autoskip="true" block="FRBGRNT" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntProjectStartDate.prompt" maxlength="11" member="FRBGRNT_PROJECT_START_DATE" name="frbgrntProjectStartDate" required="true" validation="server" width="140px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</calendar>
+						</gridcell>
+						<gridcell>
+							<calendar autoskip="true" block="FRBGRNT" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntProjectEndDate.prompt" maxlength="11" member="FRBGRNT_PROJECT_END_DATE" name="frbgrntProjectEndDate" validation="server" width="140px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</calendar>
+						</gridcell>
+						<gridcell>
+							<textbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntPropCode.prompt" maxlength="30" member="FRBGRNT_PROP_CODE" name="frbgrntPropCode" style="ui-buttoninput" validation="server" width="88px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGRNT_PROP_CODE_LBT" name="frbgrntPropCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntPropCodeLbt.tooltip" width="23px"/>
+						</gridcell>
+						<gridcell>
+							<calendar autoskip="true" block="FRBGRNT" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntTermDate.prompt" maxlength="11" member="FRBGRNT_TERM_DATE" name="frbgrntTermDate" width="140px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</calendar>
+						</gridcell>
+						<gridcell>
+							<calendar autoskip="true" block="FRBGRNT" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntExpendEndDate.prompt" maxlength="11" member="FRBGRNT_EXPEND_END_DATE" name="frbgrntExpendEndDate" width="140px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</calendar>
+						</gridcell>
+						<gridcell>
+							<textbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntStatusCode.prompt" maxlength="2" member="FRBGRNT_STATUS_CODE" name="frbgrntStatusCode" style="ui-buttoninput" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGRNT_STATUS_CODE_LBT" name="frbgrntStatusCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntStatusCodeLbt.tooltip" width="23px"/>
+							<textfield block="FRBGRNT" datatype="String" height="24px" maxlength="70" member="STATUS_DESCR" name="statusDescr" width="271px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<checkbox action="WHEN-CHECKBOX-CHANGED" block="FRBGRNT" enabled="false" falsevalue="N" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.displayPassThruInd.label" member="DISPLAY_PASS_THRU_IND" name="displayPassThruInd" value="Y" width="178px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="String" height="23px" label="frbgrnt.frbgrntAlternateStatusDesc.prompt" maxlength="35" member="FRBGRNT_ALTERNATE_STATUS_DESC" name="frbgrntAlternateStatusDesc" validation="server" width="293px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<calendar autoskip="true" block="FRBGRNT" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntStatusDate.prompt" maxlength="11" member="FRBGRNT_STATUS_DATE" name="frbgrntStatusDate" width="140px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</calendar>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="Number" formatmask="999G999G999G999G990D99" height="23px" label="frbgrnt.frbgrntCurrentFundingAmt.prompt" maxlength="25" member="FRBGRNT_CURRENT_FUNDING_AMT" name="frbgrntCurrentFundingAmt" textalign="right" width="164px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="Number" formatmask="999G999G999G999G990D99" height="23px" label="frbgrnt.frbgrntCumFundingAmt.prompt" maxlength="25" member="FRBGRNT_CUM_FUNDING_AMT" name="frbgrntCumFundingAmt" textalign="right" width="165px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="Number" formatmask="999G999G999G999G990D99" height="23px" label="frbgrnt.frbgrntMaxFundingAmt.prompt" maxlength="25" member="FRBGRNT_MAX_FUNDING_AMT" name="frbgrntMaxFundingAmt" textalign="right" width="165px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" datatype="Number" formatmask="9G999G999G990D99" height="23px" label="frbgrnt.frbgrntRcptShareTotal.prompt" maxlength="16" member="FRBGRNT_RCPT_SHARE_TOTAL" name="frbgrntRcptShareTotal" textalign="right" width="128px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" case="upper" datatype="String" enabled="false" height="23px" label="frbgrnt.frbgrntGrntCodeRelated.prompt" maxlength="9" member="FRBGRNT_GRNT_CODE_RELATED" name="frbgrntGrntCodeRelated" width="72px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" maxlength="35" member="RELATED_GRNT_DESCR" name="relatedGrntDescr" width="279px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<textbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntGrantType.prompt" maxlength="2" member="FRBGRNT_GRANT_TYPE" name="frbgrntGrantType" style="ui-buttoninput" validation="server" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGRNT_GRANT_TYPE_LBT" name="frbgrntGrantTypeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntGrantTypeLbt.tooltip" width="23px"/>
+							<textfield block="FRBGRNT" datatype="String" height="23px" maxlength="70" member="FRBGRNT_GRANT_DESC" name="frbgrntGrantDesc" width="298px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntCategory.prompt" maxlength="1" member="FRBGRNT_CATEGORY" name="frbgrntCategory" style="ui-buttoninput" validation="server" width="50px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGRNT_CATEGORY_LBT" name="frbgrntCategoryLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntCategoryLbt.tooltip" width="23px"/>
+							<textfield block="FRBGRNT" datatype="String" height="23px" maxlength="70" member="FRBGRNT_CATEGORY_DESC" name="frbgrntCategoryDesc" width="309px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntSubCategory.prompt" maxlength="4" member="FRBGRNT_SUB_CATEGORY" name="frbgrntSubCategory" style="ui-buttoninput" validation="server" width="104px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGRNT_SUB_CATEGORY_LBT" name="frbgrntSubCategoryLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntSubCategoryLbt.tooltip" width="23px"/>
+							<textfield block="FRBGRNT" datatype="String" height="23px" maxlength="70" member="FRBGRNT_SUB_CAT_DESC" name="frbgrntSubCatDesc" width="279px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textfield>
+						</gridcell>
+						<gridcell>
+							<textbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntCfdaCode.prompt" maxlength="30" member="FRBGRNT_CFDA_CODE" name="frbgrntCfdaCode" style="ui-buttoninput" validation="server" width="104px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGRNT_CFDA_CODE_LBT" name="frbgrntCfdaCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntCfdaCodeLbt.tooltip" width="23px"/>
+						</gridcell>
+						<gridcell>
+							<textbox block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntSponsorId.prompt" maxlength="30" member="FRBGRNT_SPONSOR_ID" name="frbgrntSponsorId" width="209px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

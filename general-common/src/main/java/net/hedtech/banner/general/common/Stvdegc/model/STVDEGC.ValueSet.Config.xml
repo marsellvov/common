@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="STVACAT_RG.ValueSet.Config" name="STVACAT_RG">
+    <columns>
+		<column name="STVACAT_CODE" type="String" size="2"/>
+		<column name="STVACAT_DESC" type="String" size="30"/>
+		<column name="STVACAT_ACTIVITY_DATE" type="String" size="7"/>
+		<column name="STVACAT_SYSTEM_REQ_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT STVACAT_CODE, STVACAT_DESC, to_char(stvacat_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) STVACAT_ACTIVITY_DATE, STVACAT_SYSTEM_REQ_IND  FROM stvacat  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

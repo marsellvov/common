@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="S___CURR_PROC_BLOCK.Manager.Config" name="SCurrProcBlock">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="ERR_NUMBER" logicalName="errNumber" type="java.math.BigDecimal"   />
+			<item name="DELREC_IND" logicalName="delrecInd" type="String"   />
+			<item name="CURRENT_RECORD" logicalName="currentRecord" type="java.math.BigDecimal"   />
+			<item name="NEXT_RECORD" logicalName="nextRecord" type="java.math.BigDecimal"   />
+			<item name="OPT_IND" logicalName="optInd" type="String"   />
+			<item name="HOLD_DEPT_ATTACH" logicalName="holdDeptAttach" type="String"   />
+			<item name="CONC_ATTACH_NUM" logicalName="concAttachNum" type="java.math.BigDecimal"   />
+			<item name="COMM_PLAN_IND" logicalName="commPlanInd" type="String"   />
+			<item name="CREREC_IND" logicalName="crerecInd" type="String"   />
+			<item name="DUPREC_IND" logicalName="duprecInd" type="String"   />
+			<item name="MODULE_IND" logicalName="moduleInd" type="String"   />
+			<item name="HOLD_EFF_TERM" logicalName="holdEffTerm" type="String"   />
+			<item name="HOLD_MAJR_RULE" logicalName="holdMajrRule" type="java.math.BigDecimal"   />
+			<item name="HOLD_CURR_RULE" logicalName="holdCurrRule" type="java.math.BigDecimal"   />
+			<item name="HOLD_TERM_CTLG" logicalName="holdTermCtlg" type="String"   />
+			<item name="HOLD_DEPT" logicalName="holdDept" type="String"   />
+			<item name="HOLD_MINR_RULE" logicalName="holdMinrRule" type="java.math.BigDecimal"   />
+			<item name="HOLD_CONC_RULE" logicalName="holdConcRule" type="java.math.BigDecimal"   />
+			<item name="HOLD_PROGMAJR_LOV" logicalName="holdProgmajrLov" type="String"   />
+			<item name="HOLD_CRES_LOV" logicalName="holdCresLov" type="String"   />
+			<item name="HOLD_ATTACH_LOV" logicalName="holdAttachLov" type="String"   />
+			<item name="HOLD_ITEM_LOV" logicalName="holdItemLov" type="String"   />
+			<item name="FND_LIT" logicalName="fndLit" type="java.math.BigDecimal"   />
+			<item name="HELP_ITEM_TYPE" logicalName="helpItemType" type="String"   />
+			<item name="HOLD_HELP_ITEM" logicalName="holdHelpItem" type="String"   />
+			<item name="HELP_BASE_KEY" logicalName="helpBaseKey" type="String"   />
+			<item name="CCON_ATTACH_IND" logicalName="cconAttachInd" type="String"   />
+			<item name="CCNG_CAMP_CODE" logicalName="ccngCampCode" type="String"   />
+			<item name="CCNG_COLL_CODE" logicalName="ccngCollCode" type="String"   />
+			<item name="CCNG_DEGC_CODE" logicalName="ccngDegcCode" type="String"   />
+			<item name="CCNG_LEVL_CODE" logicalName="ccngLevlCode" type="String"   />
+			<item name="CCNG_PROGRAM" logicalName="ccngProgram" type="String"   />
+			<item name="MAJOR_IND" logicalName="majorInd" type="String"   />
+			<item name="CURR_UPD_BASE" logicalName="currUpdBase" type="String"   />
+			<item name="CURR_CTLG_TERM" logicalName="currCtlgTerm" type="String"   />
+			<item name="CURR_EFF_TERM" logicalName="currEffTerm" type="String"   />
+			<item name="CURR_PROGRAM" logicalName="currProgram" type="String"   />
+			<item name="CURR_LEVL_CODE" logicalName="currLevlCode" type="String"   />
+			<item name="CURR_CAMP_CODE" logicalName="currCampCode" type="String"   />
+			<item name="CURR_COLL_CODE" logicalName="currCollCode" type="String"   />
+			<item name="CURR_DEGC_CODE" logicalName="currDegcCode" type="String"   />
+			<item name="CURR_MAJR_CODE" logicalName="currMajrCode" type="String"   />
+			<item name="TEMP_RULE_IND" logicalName="tempRuleInd" type="String"   />
+			<item name="TEMP_RULE_2_IND" logicalName="tempRule2Ind" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.general.common.libraries.Soqolib.model.SCurrProcBlock</managerClass>
+
+	</manager>
+</b:beans>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FORM_HEADER"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlAlertCanvas" label="alertCanvas.text291.text" name="ALERT_CANVAS" style="keyblock" visible="false" width="100%">
+		<textbox block="FORM_HEADER" datatype="String" height="43px" maxlength="200" member="ALERT_MSG" multiline="true" name="alertMsg" textalign="center" width="238px">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</textbox>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="21px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="buttonControlBlock.alertBtn1.label" member="ALERT_BTN1" name="alertBtn1" width="37px"/>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="21px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="buttonControlBlock.alertBtn2.label" member="ALERT_BTN2" name="alertBtn2" width="37px"/>
+	</panel>
+	<panel style="keyblock-button-container">
+		<button accesskey="ALT+PAGE_DOWN" action="NEXT_BLOCK" block="KEY_BLOCK" label="keyBlock.executeBtn.label" member="EXECUTE_BTN" tooltip="keyBlock.executeBtn.tooltip"/>
+		<button accesskey="F5" action="CLEAR-FORM" block="KEY_BLOCK" label="keyBlock.keyClrfrmBtn.label" member="KEY-CLRFRM_BTN" tooltip="keyBlock.keyClrfrmBtn.tooltip" visible="false"/>
+	</panel>
+</config>

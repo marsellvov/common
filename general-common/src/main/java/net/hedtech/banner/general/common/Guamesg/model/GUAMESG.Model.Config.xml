@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guamesg/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guamesg/model/GURTKLR.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guamesg/model/BUTTON_CONTROL_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Guamesg/model/GUAMESG.ValueSet.Config.xml"/>
+
+	
+	<formModel id="GUAMESG.Model.Config" name="GUAMESG">
+		<modelClass>net.hedtech.banner.general.common.Guamesg.model.GuamesgModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GURTKLR" manager="GURTKLR.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="BUTTON_CONTROL_BLOCK" manager="BUTTON_CONTROL_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="USER_ID_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

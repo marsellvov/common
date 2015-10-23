@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<panel width="100%">
+		<tabpanel id="tabFragrnt1TabCanvas" style="ui-panel-view-scroll" name="FRAGRNT_1_TAB_CANVAS">
+			<xl:event action="WHEN-TAB-PAGE-CHANGED" name="change"/>
+			<tab id="page_headerInformation" label="headerInformation.label" name="HEADER_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fragrnt/views/TabFragrnt1TabCanvasHeaderInformation"/>
+			</tab>
+			<tab id="page_grantAgencyInformation" label="grantAgencyInformation.label" name="GRANT_AGENCY_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fragrnt/views/TabFragrnt1TabCanvasGrantAgencyInformation"/>
+			</tab>
+			<tab id="page_locationInformation" label="locationInformation.label" name="LOCATION_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fragrnt/views/TabFragrnt1TabCanvasLocationInformation"/>
+			</tab>
+			<tab id="page_costCodeInformation" label="costCodeInformation.label" name="COST_CODE_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fragrnt/views/TabFragrnt1TabCanvasCostCodeInformation"/>
+			</tab>
+			<tab id="page_personnelInformation" label="personnelInformation.label" name="PERSONNEL_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fragrnt/views/TabFragrnt1TabCanvasPersonnelInformation"/>
+			</tab>
+			<tab id="page_billingInformation" label="billingInformation.label" name="BILLING_INFORMATION">
+				<include src="net/hedtech/banner/finance/common/Fragrnt/views/TabFragrnt1TabCanvasBillingInformation"/>
+			</tab>
+			<tab id="page_userDefinedData" label="userDefinedData.label" name="USER_DEFINED_DATA">
+				<include src="net/hedtech/banner/finance/common/Fragrnt/views/TabFragrnt1TabCanvasUserDefinedData"/>
+			</tab>
+			<tab id="page_effortReporting" label="effortReporting.label" name="EFFORT_REPORTING">
+				<include src="net/hedtech/banner/finance/common/Fragrnt/views/TabFragrnt1TabCanvasEffortReporting"/>
+			</tab>
+			<tab id="page_passthroughAgency" label="passthroughAgency.label" name="PASSTHROUGH_AGENCY">
+				<include src="net/hedtech/banner/finance/common/Fragrnt/views/TabFragrnt1TabCanvasPassthroughAgency"/>
+			</tab>
+		</tabpanel>
+	</panel>
+</config>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="RQPO_SUSPENSE_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlRqpoSuspenseCanvas" name="RQPO_SUSPENSE_CANVAS" width="100%">
+		<checkbox block="RQPO_SUSPENSE_BLOCK" enabled="false" falsevalue="N" height="23px" label="rqpoSuspenseBlock.singleAcctgInd.label" member="SINGLE_ACCTG_IND" name="singleAcctgInd" othervaluestate="unchecked" value="Y" width="160px"/>
+		<slider height="136px" name="rqpoSuspenseBlockscrollbar" width="16px"/>
+		<gridview block="RQPO_SUSPENSE_BLOCK" name="grdRqpoSuspenseBlock" width="100%">
+			<viewheader>
+				<viewcolumn block="RQPO_SUSPENSE_BLOCK" label="rqpoSuspenseBlock.itemNo.prompt" labelstyle="DEFAULT" maxlength="4" member="ITEM_NO" name="itemNo" textalign="right" width="40px"/>
+				<viewcolumn block="RQPO_SUSPENSE_BLOCK" enabled="false" label="rqpoSuspenseBlock.acctgSeqNo.prompt" labelstyle="DEFAULT" maxlength="4" member="ACCTG_SEQ_NO" name="acctgSeqNo" textalign="right" width="40px"/>
+				<viewcolumn block="RQPO_SUSPENSE_BLOCK" enabled="false" label="rqpoSuspenseBlock.commSuspInd.prompt" labelstyle="DEFAULT" maxlength="1" member="COMM_SUSP_IND" name="commSuspInd" width="16px">
+					<editor>
+						<checkbox falsevalue="N" othervaluestate="unchecked" value="Y"/>
+					</editor>
+				</viewcolumn>
+				<viewcolumn block="RQPO_SUSPENSE_BLOCK" enabled="false" label="rqpoSuspenseBlock.acctgNsfSuspInd.prompt" labelstyle="DEFAULT" maxlength="1" member="ACCTG_NSF_SUSP_IND" name="acctgNsfSuspInd" width="16px">
+					<editor>
+						<checkbox falsevalue="N" othervaluestate="unchecked" value="Y"/>
+					</editor>
+				</viewcolumn>
+				<viewcolumn block="RQPO_SUSPENSE_BLOCK" enabled="false" label="rqpoSuspenseBlock.acctgSuspInd.prompt" labelstyle="DEFAULT" maxlength="1" member="ACCTG_SUSP_IND" name="acctgSuspInd" width="16px">
+					<editor>
+						<checkbox falsevalue="N" othervaluestate="unchecked" value="Y"/>
+					</editor>
+				</viewcolumn>
+			</viewheader>
+		</gridview>
+		<text fontcolor="Black" fontfamily="Verdana" fontsize="11pt" name="text4471">rqpoSuspenseCanvas.text447.text</text>
+	</panel>
+</config>

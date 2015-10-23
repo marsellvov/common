@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Lovs>
+	<Lov Height="267" Name="GTVVPDI_LOV" RecordGroup="GTVVPDI_RG" Title="Institution Code Validation (GTVVPDI)" Width="575">
+		<Columns>
+			<Column DataMember="GTVVPDI_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="53"/>
+			<Column DataMember="GTVVPDI_DESC" ReturnItem="G$_VPDI_BLOCK.VPDI_DESC" Title="Description" Width="160"/>
+			<Column DataMember="GTVVPDI_TYPE_CDE" Title="Type " Width="33"/>
+			<Column DataMember="GTVVPDI_SYS_DEF_INST_IND" Title="Default Ind" Width="80"/>
+			<Column DataMember="GTVVPDI_ACTIVITY_DATE" Title="Activity Date" Width="86"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_VPDI_ALL_LOV" RecordGroup="G$_VPDI_ALL_RG" Title="Existing Institution Values" Width="575">
+		<Columns>
+			<Column DataMember="A" Width="133"/>
+			<Column DataMember="B" Width="133"/>
+			<Column DataMember="C" Width="133"/>
+			<Column DataMember="D" Width="133"/>
+			<Column DataMember="E" Width="133"/>
+			<Column DataMember="F" Width="133"/>
+			<Column DataMember="G" Width="133"/>
+			<Column DataMember="H" Width="133"/>
+			<Column DataMember="I" Width="133"/>
+			<Column DataMember="J" Width="133"/>
+			<Column DataMember="A$" Width="90"/>
+			<Column DataMember="B$" ReturnItem="G$_VPDI_BLOCK.VPDI_HOLD_VALUE" Width="90"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="G$_SEARCH_LOV" RecordGroup="G$_SEARCH_RG" Title="Search Results" Width="575">
+		<Columns>
+			<Column DataMember="DESC" ReturnItem="GLOBAL.DESC" Title="Desc" Width="213"/>
+			<Column DataMember="CODE" ReturnItem="GLOBAL.CODE" Title="Code" Width="106"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUROPTM_LOV" RecordGroup="GUROPTM_RG" Title="Option Menu" Width="575">
+		<Columns>
+			<Column DataMember="GUROPTM_NAME1_DESC" Width="487"/>
+			<Column DataMember="GUROPTM_NAME1" ReturnItem="GLOBAL.GUROPTM_NAME1" Width="0"/>
+			<Column DataMember="GUROPTM_TYPE_IND" ReturnItem="GLOBAL.GUROPTM_TYPE_IND" Width="0"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="STVCNTY_LOV" RecordGroup="STVCNTY_RG" Title="County Code Validation (STVCNTY)" Width="575">
+		<Columns>
+			<Column DataMember="STVCNTY_DESC" Title="Description" Width="191"/>
+			<Column DataMember="STVCNTY_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="191"/>
+			<Column DataMember="STVCNTY_ACTIVITY_DATE" Title="Activity Date" Width="171"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="STVNATN_LOV" RecordGroup="STVNATN_RG" Title="Nation Validation (STVNATN)" Width="575">
+		<Columns>
+			<Column DataMember="STVNATN_NATION" Title="Description" Width="200"/>
+			<Column DataMember="STVNATN_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="80"/>
+			<Column DataMember="STVNATN_EDI_EQUIV" Title="EDI Equiv" Width="90"/>
+			<Column DataMember="STVNATN_LMS_EQUIV" Title="LMS Equiv" Width="90"/>
+			<Column DataMember="STVNATN_ACTIVITY_DATE" Title="Activity Date" Width="95"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="STVSTAT_LOV" RecordGroup="STVSTAT_RG" Title="State/Province Code Validation (STVSTAT)" Width="575">
+		<Columns>
+			<Column DataMember="STVSTAT_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="110"/>
+			<Column DataMember="STVSTAT_DESC" Title="Description" Width="209"/>
+			<Column DataMember="STVSTAT_EDI_EQUIV" Title="EDI Equiv" Width="110"/>
+			<Column DataMember="STVSTAT_ACTIVITY_DATE" Title="Activity Date" Width="113"/>
+		</Columns>
+	</Lov>
+</Lovs>

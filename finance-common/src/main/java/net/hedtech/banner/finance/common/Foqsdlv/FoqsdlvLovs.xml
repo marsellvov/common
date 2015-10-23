@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Lovs>
+	<Lov Height="267" Name="GTVVPDI_LOV" RecordGroup="GTVVPDI_RG" Title="Institution Code Validation (GTVVPDI)" Width="575">
+		<Columns>
+			<Column DataMember="GTVVPDI_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="53"/>
+			<Column DataMember="GTVVPDI_DESC" ReturnItem="G$_VPDI_BLOCK.VPDI_DESC" Title="Description" Width="160"/>
+			<Column DataMember="GTVVPDI_TYPE_CDE" Title="Type " Width="33"/>
+			<Column DataMember="GTVVPDI_SYS_DEF_INST_IND" Title="Default Ind" Width="80"/>
+			<Column DataMember="GTVVPDI_ACTIVITY_DATE" Title="Activity Date" Width="86"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_VPDI_ALL_LOV" RecordGroup="G$_VPDI_ALL_RG" Title="Existing Institution Values" Width="575">
+		<Columns>
+			<Column DataMember="A" Width="133"/>
+			<Column DataMember="B" Width="133"/>
+			<Column DataMember="C" Width="133"/>
+			<Column DataMember="D" Width="133"/>
+			<Column DataMember="E" Width="133"/>
+			<Column DataMember="F" Width="133"/>
+			<Column DataMember="G" Width="133"/>
+			<Column DataMember="H" Width="133"/>
+			<Column DataMember="I" Width="133"/>
+			<Column DataMember="J" Width="133"/>
+			<Column DataMember="A$" Width="90"/>
+			<Column DataMember="B$" ReturnItem="G$_VPDI_BLOCK.VPDI_HOLD_VALUE" Width="90"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="FTVSDAT_LOV" RecordGroup="FTVSDAT_RG" Title="System Data Validation List (FTVSDAT)" Width="575">
+		<Columns>
+			<Column DataMember="FTVSDAT_COAS_CODE" Title="COA" Width="32"/>
+			<Column DataMember="FTVSDAT_SDAT_CODE_ENTITY" Title="Entity" Width="72"/>
+			<Column DataMember="FTVSDAT_SDAT_CODE_OPT_1" Title="Opt#1" Width="72"/>
+			<Column DataMember="FTVSDAT_SDAT_CODE_ATTR" Title="Attribute" Width="247"/>
+			<Column DataMember="FTVSDAT_SDAT_CODE_OPT_2" Title="Opt#2" Width="72"/>
+			<Column DataMember="FTVSDAT_SHORT_TITLE" Title="Short Title" Width="168"/>
+			<Column DataMember="FTVSDAT_CODE_LEVEL" Title="Level" Width="48"/>
+			<Column DataMember="FTVSDAT_DATA" Title="Data" Width="128"/>
+			<Column DataMember="FTVSDAT_STATUS_IND" Title="Status" Width="56"/>
+			<Column DataMember="ICRGGQ_0" Title="Eff Date" Width="88"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUROPTM_LOV" RecordGroup="GUROPTM_RG" Title="Option Menu" Width="575">
+		<Columns>
+			<Column DataMember="GUROPTM_NAME1_DESC" Width="487"/>
+			<Column DataMember="GUROPTM_NAME1" ReturnItem="GLOBAL.GUROPTM_NAME1" Width="0"/>
+			<Column DataMember="GUROPTM_TYPE_IND" ReturnItem="GLOBAL.GUROPTM_TYPE_IND" Width="0"/>
+		</Columns>
+	</Lov>
+</Lovs>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="STVNATN.Manager.Config" name="STVNATN">
+		
+		<items>
+			<item name="STVNATN_CODE" logicalName="stvnatnCode" type="String" physicalName="STVNATN_CODE"  />
+			<item name="STVNATN_NATION" logicalName="stvnatnNation" type="String" physicalName="STVNATN_NATION"  />
+			<item name="STVNATN_SEVIS_EQUIV" logicalName="stvnatnSevisEquiv" type="String" physicalName="STVNATN_SEVIS_EQUIV"  />
+			<item name="STVNATN_EDI_EQUIV" logicalName="stvnatnEdiEquiv" type="String" physicalName="STVNATN_EDI_EQUIV"  />
+			<item name="STVNATN_LMS_EQUIV" logicalName="stvnatnLmsEquiv" type="String" physicalName="STVNATN_LMS_EQUIV"  />
+			<item name="STVNATN_SCOD_CODE_ISO" logicalName="stvnatnScodCodeIso" type="String" physicalName="STVNATN_SCOD_CODE_ISO"  />
+			<item name="STVNATN_STATSCAN_CDE" logicalName="stvnatnStatscanCde" type="String" physicalName="STVNATN_STATSCAN_CDE"  />
+			<item name="STVNATN_SSA_REPORTING_EQUIV" logicalName="stvnatnSsaReportingEquiv" type="String" physicalName="STVNATN_SSA_REPORTING_EQUIV"  />
+			<item name="STVNATN_ACTIVITY_DATE" logicalName="stvnatnActivityDate" type="java.util.Date" physicalName="STVNATN_ACTIVITY_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Stvnatn.model.StvnatnAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[stvnatn_nation]]></defaultOrderByClause>	
+		<pagination maximumRows="20" enabled="true"/>
+	</manager>
+</b:beans>

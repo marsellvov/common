@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlTempCanvas" menu="G$_DEFAULT_PM" name="TEMP_CANVAS" visible="false" width="100%">
+		<panel width="100%">
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" enabled="false" height="23px" label="buttonControlBlock.emalBtn.label" member="EMAL_BTN" name="emalBtn" navigable="false" width="128px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr1RollbackBtn.label" member="SPRADDR_1_ROLLBACK_BTN" name="spraddr1RollbackBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr1ExitvalueBtn.label" member="SPRADDR_1_EXITVALUE_BTN" name="spraddr1ExitvalueBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.spraddr1ExitBtn.label" member="SPRADDR_1_EXIT_BTN" name="spraddr1ExitBtn" navigable="false" width="80px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+		</panel>
+	</panel>
+</config>

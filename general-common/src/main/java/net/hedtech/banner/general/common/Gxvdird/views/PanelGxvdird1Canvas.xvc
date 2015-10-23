@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GXVDIRD"/>
+	<panel class="ContentCanvas" id="pnlGxvdird1Canvas" menu="G$_DEFAULT_PM" name="GXVDIRD_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="GXVDIRD" name="grdGxvdird" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="GXVDIRD" case="upper" datatype="String" label="gxvdird.gxvdirdCodeBankRoutNum.prompt" labelstyle="DEFAULT" maxlength="9" member="GXVDIRD_CODE_BANK_ROUT_NUM" name="gxvdirdCodeBankRoutNum" required="true">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GXVDIRD" datatype="String" label="gxvdird.gxvdirdDesc.prompt" labelstyle="DEFAULT" maxlength="60" member="GXVDIRD_DESC" name="gxvdirdDesc" required="true">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

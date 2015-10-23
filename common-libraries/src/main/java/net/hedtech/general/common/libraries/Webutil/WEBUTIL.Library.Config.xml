@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:library"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:library http://www.morphis-tech.com/schema/foundations/library.xsd">
+	<!-- Attached Libs -->
+
+	<library id="WEBUTIL.Lib.Config" name="WEBUTIL">
+		<libraryClass>net.hedtech.general.common.libraries.Webutil.WebutilServices</libraryClass>
+		<!-- support code -->
+		<supportCodeConfiguration>
+				<!-- Packages -->
+				<packages>
+					<package  name="WEBUTIL_UTIL">net.hedtech.general.common.libraries.Webutil.WebutilUtil</package> 	
+					<package  name="WEBUTIL_SESSION">net.hedtech.general.common.libraries.Webutil.WebutilSession</package> 	
+					<package  name="WEBUTIL_SEPARATEFRAME">net.hedtech.general.common.libraries.Webutil.WebutilSeparateframe</package> 	
+					<package  name="WEBUTIL_HOST">net.hedtech.general.common.libraries.Webutil.WebutilHost</package> 	
+					<package  name="WEBUTIL_FILE_TRANSFER">net.hedtech.general.common.libraries.Webutil.WebutilFileTransfer</package> 	
+					<package  name="WEBUTIL_FILE">net.hedtech.general.common.libraries.Webutil.WebutilFile</package> 	
+					<package  name="WEBUTIL_DB_LOCAL">net.hedtech.general.common.libraries.Webutil.WebutilDbLocal</package> 	
+					<package  name="WEBUTIL_C_API">net.hedtech.general.common.libraries.Webutil.WebutilCApi</package> 	
+					<package  name="WEBUTIL_CORE">net.hedtech.general.common.libraries.Webutil.WebutilCore</package> 	
+					<package  name="WEBUTIL_CLIENTINFO">net.hedtech.general.common.libraries.Webutil.WebutilClientinfo</package> 	
+					<package  name="WEBUTIL_BROWSER">net.hedtech.general.common.libraries.Webutil.WebutilBrowser</package> 	
+					<package  name="JAVA_SYSTEM">net.hedtech.general.common.libraries.Webutil.JavaSystem</package> 	
+					<package  name="JAVA_FILE">net.hedtech.general.common.libraries.Webutil.JavaFile</package> 	
+					<package  name="JAVA_EXCEPTION">net.hedtech.general.common.libraries.Webutil.JavaException</package> 	
+					<package  name="JAVA_APPSERV_WRITER">net.hedtech.general.common.libraries.Webutil.JavaAppservWriter</package> 	
+					<package  name="JAVA_APPSERV_READER">net.hedtech.general.common.libraries.Webutil.JavaAppservReader</package> 	
+					<package  name="DELIMSTR">net.hedtech.general.common.libraries.Webutil.Delimstr</package> 	
+					<package  name="CLIENT_WIN_API_PRELOAD">net.hedtech.general.common.libraries.Webutil.ClientWinApiPreload</package> 	
+					<package  name="CLIENT_WIN_API_ENVIRONMENT">net.hedtech.general.common.libraries.Webutil.ClientWinApiEnvironment</package> 	
+					<package  name="CLIENT_WIN_API_DEBUG">net.hedtech.general.common.libraries.Webutil.ClientWinApiDebug</package> 	
+					<package  name="CLIENT_WIN_API">net.hedtech.general.common.libraries.Webutil.ClientWinApi</package> 	
+					<package  name="CLIENT_TOOL_ENV">net.hedtech.general.common.libraries.Webutil.ClientToolEnv</package> 	
+					<package  name="CLIENT_TEXT_IO">net.hedtech.general.common.libraries.Webutil.ClientTextIo</package> 	
+					<package  name="CLIENT_OLE2">net.hedtech.general.common.libraries.Webutil.ClientOle2</package> 	
+					<package  name="CLIENT_IMAGE">net.hedtech.general.common.libraries.Webutil.ClientImage</package> 	
+				</packages>
+				<attachedLibraries>
+	<!-- Attached Libs -->
+				</attachedLibraries>
+		</supportCodeConfiguration>
+		
+	</library>
+</b:beans>
+
+ 

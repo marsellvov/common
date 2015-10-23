@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FRBGRNT"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel width="100%">
+		<accordion width="100%">
+			<panel label="costCodeInformation.label">
+				<panel width="100%">
+					<gridlayout cols="1">
+							<gridcell>
+							<checkbox block="FRBGRNT" falsevalue="N" height="24px" keyactions="PREVIOUS_ITEM" label="frbgrnt.frbgrntIdcEncInd.label" member="FRBGRNT_IDC_ENC_IND" name="frbgrntIdcEncInd" othervaluestate="unchecked" value="Y" width="391px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</checkbox>
+						</gridcell>
+						<gridcell>
+							<lovbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntCoasCodeIcCs.prompt" maxlength="30" member="FRBGRNT_COAS_CODE_IC_CS" name="frbgrntCoasCodeIcCs" style="ui-buttoninput" width="73px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBGRNT_COAS_CODE_IC_CS_LBT" name="frbgrntCoasCodeIcCsLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntCoasCodeIcCsLbt.tooltip" width="23px"/> -->
+						</gridcell>
+					</gridlayout>
+					<gridlayout cols="2" orientation="vertical">
+						<gridcell>
+							<lovbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" label="frbgrnt.frbgrntBasiCodeIc.prompt" maxlength="6" member="FRBGRNT_BASI_CODE_IC" name="frbgrntBasiCodeIc" style="ui-buttoninput" width="79px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_BASI_CODE_IC_LBT" name="frbgrntBasiCodeIcLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntBasiCodeIcLbt.tooltip" width="23px"/> -->
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" maxlength="35" member="FRBGRNT_BASI_CODE_IC_NAME" name="frbgrntBasiCodeIcName" width="180px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<lovbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" label="frbgrnt.frbgrntIndrCodeRate.prompt" maxlength="6" member="FRBGRNT_INDR_CODE_RATE" name="frbgrntIndrCodeRate" style="ui-buttoninput" width="79px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_INDR_CODE_RATE_LBT" name="frbgrntIndrCodeRateLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntIndrCodeRateLbt.tooltip" width="23px"/> -->
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" maxlength="35" member="FRBGRNT_INDR_CODE_RATE_NAME" name="frbgrntIndrCodeRateName" width="180px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<lovbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" label="frbgrnt.frbgrntIndaCodeCharge.prompt" maxlength="6" member="FRBGRNT_INDA_CODE_CHARGE" name="frbgrntIndaCodeCharge" style="ui-buttoninput" width="79px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_INDA_CODE_CHARGE_LBT" name="frbgrntIndaCodeChargeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntIndaCodeChargeLbt.tooltip" width="23px"/> -->
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" maxlength="35" member="FRBGRNT_INDA_CODE_CHARGE_NAME" name="frbgrntIndaCodeChargeName" width="180px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<lovbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" label="frbgrnt.frbgrntInddCodeDistr.prompt" maxlength="6" member="FRBGRNT_INDD_CODE_DISTR" name="frbgrntInddCodeDistr" style="ui-buttoninput" width="79px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_INDD_CODE_DISTR_LBT" name="frbgrntInddCodeDistrLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntInddCodeDistrLbt.tooltip" width="23px"/> -->
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" maxlength="35" member="FRBGRNT_INDD_CODE_DISTR_NAME" name="frbgrntInddCodeDistrName" width="180px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<lovbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" label="frbgrnt.frbgrntBasiCodeCs.prompt" maxlength="6" member="FRBGRNT_BASI_CODE_CS" name="frbgrntBasiCodeCs" style="ui-buttoninput" width="93px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_BASI_CODE_CS_LBT" name="frbgrntBasiCodeCsLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntBasiCodeCsLbt.tooltip" width="23px"/> -->
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" maxlength="35" member="FRBGRNT_BASI_CODE_CS_NAME" name="frbgrntBasiCodeCsName" width="180px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<lovbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" label="frbgrnt.frbgrntCstrCodeRate.prompt" maxlength="6" member="FRBGRNT_CSTR_CODE_RATE" name="frbgrntCstrCodeRate" style="ui-buttoninput" width="93px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_CSTR_CODE_RATE_LBT" name="frbgrntCstrCodeRateLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntCstrCodeRateLbt.tooltip" width="23px"/> -->
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" maxlength="35" member="FRBGRNT_CSTR_CODE_RATE_NAME" name="frbgrntCstrCodeRateName" width="180px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<lovbox autoskip="true" block="FRBGRNT" case="upper" datatype="String" height="23px" label="frbgrnt.frbgrntCstaCodeCharge.prompt" maxlength="6" member="FRBGRNT_CSTA_CODE_CHARGE" name="frbgrntCstaCodeCharge" style="ui-buttoninput" width="93px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_CSTA_CODE_CHARGE_LBT" name="frbgrntCstaCodeChargeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntCstaCodeChargeLbt.tooltip" width="23px"/> -->
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" maxlength="35" member="FRBGRNT_CSTA_CODE_CHARGE_NAME" name="frbgrntCstaCodeChargeName" width="180px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+						<gridcell>
+							<lovbox block="FRBGRNT" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frbgrnt.frbgrntCstdCodeDistr.prompt" maxlength="6" member="FRBGRNT_CSTD_CODE_DISTR" name="frbgrntCstdCodeDistr" style="ui-buttoninput" width="93px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</lovbox>
+<!-- 							<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBGRNT_CSTD_CODE_DISTR_LBT" name="frbgrntCstdCodeDistrLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbgrntCstdCodeDistrLbt.tooltip" width="23px"/> -->
+							<textbox block="FRBGRNT" datatype="String" enabled="false" height="23px" maxlength="35" member="FRBGRNT_CSTD_CODE_DISTR_NAME" name="frbgrntCstdCodeDistrName" width="180px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</textbox>
+						</gridcell>
+					</gridlayout>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<!-- <b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/FORM_HEADER.Manager.Config.xml"/> -->
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/SPRIDEN_CURRENT.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/SPRIDEN_PREVIOUS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/SPRADDR.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/SPRTELE.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/SPBPERS.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/GORPRAC.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/GOREMAL.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/SPREMRG.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/GORADID.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/general/common/libraries/Goqclib/model/GOQCLIB.ValueSet.Config.xml"/>
+
+	
+	<formModel id="GOQCLIB.Model.Config" name="GOQCLIB">
+		<modelClass>net.hedtech.general.common.libraries.Goqclib.model.GoqclibModel</modelClass>
+		
+		<businessObjects>
+			<!-- <businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject> -->
+			<businessObject name="SPRIDEN_CURRENT" manager="SPRIDEN_CURRENT.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SPRIDEN_PREVIOUS" manager="SPRIDEN_PREVIOUS.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SPRADDR" manager="SPRADDR.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SPRTELE" manager="SPRTELE.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SPBPERS" manager="SPBPERS.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GORPRAC" manager="GORPRAC.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GOREMAL" manager="GOREMAL.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="SPREMRG" manager="SPREMRG.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GORADID" manager="GORADID.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="GTVADID_RG.ValueSet.Config"/>
+				<valueSet config="GTVEMAL_RG.ValueSet.Config"/>
+				<valueSet config="GTVNTYP_RG.ValueSet.Config"/>
+				<valueSet config="GTVZIPC_RG.ValueSet.Config"/>
+				<valueSet config="STVASRC_RG.ValueSet.Config"/>
+				<valueSet config="STVATYP_RG.ValueSet.Config"/>
+				<valueSet config="STVCITZ_RG.ValueSet.Config"/>
+				<valueSet config="STVCNTY_RG.ValueSet.Config"/>
+				<valueSet config="STVETHN_RG.ValueSet.Config"/>
+				<valueSet config="STVLGCY_RG.ValueSet.Config"/>
+				<valueSet config="STVMRTL_RG.ValueSet.Config"/>
+				<valueSet config="STVNATN_RG.ValueSet.Config"/>
+				<valueSet config="STVRELG_RG.ValueSet.Config"/>
+				<valueSet config="STVRELT_RG.ValueSet.Config"/>
+				<valueSet config="STVSTAT_RG.ValueSet.Config"/>
+				<valueSet config="STVTELE_RG.ValueSet.Config"/>
+				<valueSet config="GORRACE_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

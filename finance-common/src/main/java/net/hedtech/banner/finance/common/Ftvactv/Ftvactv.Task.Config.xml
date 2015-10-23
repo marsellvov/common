@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:task"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:task http://www.morphis-tech.com/schema/foundations/task.xsd">
+	<!-- Attached Libs -->
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Foqrpls/FOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqrpls/GOQRPLS.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Goqwflw/GOQWFLW.Library.Config.xml"/>		
+	<b:import resource="classpath:net/hedtech/general/common/libraries/Eoqrpls/EOQRPLS.Library.Config.xml"/>		
+	
+	
+	
+	<!-- model definition-->
+	<b:import resource="classpath:/net/hedtech/banner/finance/common/Ftvactv/model/FTVACTV.Model.Config.xml"/>
+	
+	<task id="FTVACTV.Task.Config" name="FTVACTV">
+		<baseTaskConfiguration config="BASE.Task.Config"/>
+		<taskParts>
+			<taskPartConfiguration name="GOQOLIB" config="GOQOLIB.TaskPart.Config"/>
+			<taskPartConfiguration name="FOQOLIB" config="FOQOLIB.TaskPart.Config"/>
+		</taskParts>
+		<taskClass>net.hedtech.banner.finance.common.Ftvactv.FtvactvTask</taskClass>
+		<!-- struct -->
+		<taskResources>/net/hedtech/banner/finance/common/Ftvactv/FtvactvStruct.xml</taskResources>
+		<!-- support code -->
+		<supportCodeConfiguration>
+			<services>net.hedtech.banner.finance.common.Ftvactv.services.FtvactvServices</services>
+				<!-- Package Beans-->
+
+			<packages>
+
+			</packages>
+			<attachedLibraries>
+	<!-- Attached Libs -->
+				<libraryConfiguration config="FOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQRPLS.Lib.Config"/>
+				<libraryConfiguration config="GOQWFLW.Lib.Config"/>
+				<libraryConfiguration config="EOQRPLS.Lib.Config"/>
+			</attachedLibraries>
+		</supportCodeConfiguration>
+
+		<!-- model -->
+		<formModelConfiguration config="FTVACTV.Model.Config"/>
+		<!-- controllers -->
+		<formController>net.hedtech.banner.finance.common.Ftvactv.controller.FtvactvFormController</formController>
+		<blockControllers>
+			<block  name="G$_VPDI_BLOCK">net.hedtech.banner.finance.common.Ftvactv.controller.GVpdiBlockController</block>
+			
+			
+			<block  name="G$_NAV_BLOCK">net.hedtech.banner.finance.common.Ftvactv.controller.GNavBlockController</block>
+			<block  name="FORM_HEADER">net.hedtech.banner.finance.common.Ftvactv.controller.FormHeaderController</block>
+			<block  name="FTVACTV">net.hedtech.banner.finance.common.Ftvactv.controller.FtvactvController</block>
+			<block  name="BUTTON_CONTROL_BLOCK">net.hedtech.banner.finance.common.Ftvactv.controller.ButtonControlBlockController</block>
+		</blockControllers>
+		<menuControllers>
+			<menu  name="G$_DEFAULT_PM">net.hedtech.banner.finance.common.Ftvactv.controller.GDefaultPmContextController</menu>
+		</menuControllers>
+
+	</task>
+</b:beans>
+
+ 

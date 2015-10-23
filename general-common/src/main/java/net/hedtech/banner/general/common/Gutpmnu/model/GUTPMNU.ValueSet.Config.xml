@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="DRAG_GR.ValueSet.Config" name="DRAG_GR">
+    <columns>
+		<column name="ITEMS" type="String" size="60"/>
+		<column name="TYPE" type="String" size="30"/>
+	</columns>
+			<rows>
+			<row>
+				<ITEMS><![CDATA[BUTTON_CONTROL_BLOCK.DISPLAY_LINE1]]></ITEMS>
+
+				<TYPE><![CDATA[ITEM]]></TYPE>
+			</row>	
+			<row>
+				<ITEMS><![CDATA[BUTTON_CONTROL_BLOCK.DISPLAY_LINE2]]></ITEMS>
+
+				<TYPE><![CDATA[ITEM]]></TYPE>
+			</row>	
+			<row>
+				<ITEMS><![CDATA[BUTTON_CONTROL_BLOCK.ADD_BTN]]></ITEMS>
+
+				<TYPE><![CDATA[ITEM]]></TYPE>
+			</row>	
+			<row>
+				<ITEMS><![CDATA[BUTTON_CONTROL_BLOCK.DELETE_BTN]]></ITEMS>
+
+				<TYPE><![CDATA[ITEM]]></TYPE>
+			</row>	
+			<row>
+				<ITEMS><![CDATA[]]></ITEMS>
+
+				<TYPE><![CDATA[CANVAS]]></TYPE>
+			</row>	
+		</rows>
+</valueSet>
+
+<valueSet id="USER_RG.ValueSet.Config" name="USER_RG">
+	<columns>
+		<column name="USERNAME" type="String" size="30"/>
+		<column name="USER_ID" type="Number" size="42"/>
+		<column name="FLAG" type="String" size="1"/>
+	</columns>
+	
+	<query>
+	</query>
+	
+	 <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

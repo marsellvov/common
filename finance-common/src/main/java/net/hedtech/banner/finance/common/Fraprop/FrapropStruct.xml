@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/finance/common/Fraprop/FrapropAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/finance/common/Fraprop/FrapropLovs.xml" Name="FRAPROP">
+  <Visual>
+    <Window Id="PASS_THRU_IND_INFO" Modal="true" Url="net/hedtech/banner/finance/common/Fraprop/views/ViewPassThruIndInfo" />
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/finance/common/Fraprop/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <StackedCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="FRAPROP_1_CANVAS" />
+      <TabPageCanvas Id="FFRAPROP_1_TAB_CANVAS">
+        <Page Id="HEADER_INFORMATION" />
+        <Page Id="PROPOSAL_AGENCY_INFORMATION" />
+        <Page Id="LOCATION_INFORMATION" />
+        <Page Id="COST_CODE_INFORMATION" />
+        <Page Id="PERSONNEL_INFORMATION" />
+        <Page Id="USER_DEFINED_DATA" />
+        <Page Id="PASSTHROUGH_AGENCY" />
+      </TabPageCanvas>
+      <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false" />
+    </Window>
+    <Window Id="NAVIGATE_TO" Modal="true" Url="net/hedtech/banner/finance/common/Fraprop/views/ViewNavigateTo">
+      <ContentCanvas Id="NAVIGATE_TO" />
+    </Window>
+    <Window Id="COPY_PROP" Url="net/hedtech/banner/finance/common/Fraprop/views/ViewCopyProp">
+      <ContentCanvas Id="COPY_PROP" />
+    </Window>
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/finance/common/Fraprop/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item DataType="String" Id="ORG_VALIDATE_FLAG" MaxLength="1" Type="TextItem" />
+      <Item DataType="String" Id="ORG_P_VALIDATE_FLAG" MaxLength="1" Type="TextItem" />
+      <Item AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="formHeader.frbpropAgencyCode2.hint" Id="FRBPROP_AGENCY_CODE_2" MaxLength="9" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item DataType="String" Id="HOLD_DESC" MaxLength="35" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="formHeader.frbpropAgencyName2.hint" Id="FRBPROP_AGENCY_NAME_2" MaxLength="230" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORK_STATUS_DESC" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COMMIT_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FROM_NEW_ITEM" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURR_BLOCK" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_FORM" MaxLength="7" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GOT_PIDM" MaxLength="9" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKUSER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="CURRENT_USER1" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ERR_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_PRESS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_ALT_STATUS_DESC" MaxLength="35" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_BOX_DEFLT" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_PRED" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ROLLBACK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="RECLR_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COPY_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="BLOCK_STATUS_F" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="BLOCK_STATUS_S" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKFLD" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORK_STATUS_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="RETRIEVED_ORGN_CODE" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_ORGN" MaxLength="6" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_FOBSEQN_TYPE" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="POST_QUERY_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="BYPASS_REFORMAT" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_STATUS_CODE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="HOLD_STATUS_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="LOCN_ERROR_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_ITEM_NAME" MaxLength="40" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_PI_ID_CODE" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_PI_ID_CODE_FRRPRPI" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COPY_FUNCT_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COPY_FUNCT_PROCESS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRPRPI_FRBPROP_COPY_ID" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="CURRENT_AGENCY_CODE" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Number" Enabled="true" Id="TOTAL" MaxLength="25" MaxValue="100.0" MinValue="0.0" Navigable="false" PageName="PASSTHROUGH_AGENCY" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="true" Id="PRE_TOTAL" MaxLength="25" MaxValue=" 999,999,999,999,999.99" MinValue="0.0" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FROM_EXECUTE_QUERY" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="STORE_ORG_STATUS_DESC" MaxLength="70" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_2" MaxLength="24" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item DataType="String" Id="FORM_CLEARED" MaxLength="30" Type="TextItem" />
+      <Item DataType="String" Id="DEL_READY" MaxLength="30" Type="TextItem" />
+      <Item DataType="String" Enabled="false" Id="NEXT_DOC_NUM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="KEY_BLOCK">
+      <Item AllowSearch="false" CanvasName="FRAPROP_1_CANVAS" DataType="String" Enabled="true" Id="DISPLAY_FRBPROP_CODE" MaxLength="9" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="FRAPROP_1_CANVAS" DataType="String" Enabled="false" Id="DISPLAY_TEXT_IND" MaxLength="1" Navigable="false" Type="Checkbox" Visible="true" />
+      <Item CanvasName="FRAPROP_1_CANVAS" Id="EXECUTE_BTN" Navigable="true" Type="Button" />
+      <Item CanvasName="FRAPROP_1_CANVAS" Id="KEY-CLRFRM_BTN" Type="Button" Visible="false" />
+    </Block>
+    <Block Id="FRBPROP">
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropCoasCode.hint" Id="FRBPROP_COAS_CODE" Lov="FTVCOAS_LOV" MaxLength="30" PageName="HEADER_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frbprop.frbpropOrgnCodeRespOffice.hint" Id="FRBPROP_ORGN_CODE_RESP_OFFICE" MaxLength="30" PageName="HEADER_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.orgnCodeDescr.hint" Id="ORGN_CODE_DESCR" MaxLength="35" Navigable="false" PageName="HEADER_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropLongTitle.hint" Id="FRBPROP_LONG_TITLE" MaxLength="256" PageName="HEADER_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropTitle.hint" Id="FRBPROP_TITLE" MaxLength="35" PageName="HEADER_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropAgencyCode.hint" Id="FRBPROP_AGENCY_CODE" MaxLength="9" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.frbpropAgencyName.hint" Id="FRBPROP_AGENCY_NAME" MaxLength="60" Navigable="false" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropPiIdCode.hint" Id="FRBPROP_PI_ID_CODE" MaxLength="9" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.frbpropPiIdName.hint" Id="FRBPROP_PI_ID_NAME" MaxLength="230" Navigable="false" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frbprop.frbpropRequestedAmt.hint" Id="FRBPROP_REQUESTED_AMT" MaxLength="25" MaxValue=" 999,999,999,999,999.99" MinValue="0.0" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.displayPassThruInd.hint" Id="DISPLAY_PASS_THRU_IND" MaxLength="1" PageName="HEADER_INFORMATION" Type="Checkbox" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbprop.frbpropOrigPrepDate.hint" Id="FRBPROP_ORIG_PREP_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbprop.frbpropDueDate.hint" Id="FRBPROP_DUE_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbprop.frbpropSubmittedDate.hint" Id="FRBPROP_SUBMITTED_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropStatusCode.hint" Id="FRBPROP_STATUS_CODE" MaxLength="2" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.statusDescr.hint" Id="STATUS_DESCR" MaxLength="70" Navigable="false" PageName="HEADER_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropAlternateStatusDesc.hint" Id="FRBPROP_ALTERNATE_STATUS_DESC" MaxLength="35" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbprop.frbpropStatusDate.hint" Id="FRBPROP_STATUS_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="FRBPROP_AGENCY_PRED_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbprop.frbpropProjectStartDate.hint" Id="FRBPROP_PROJECT_START_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbprop.frbpropProjectEndDate.hint" Id="FRBPROP_PROJECT_END_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropGrntCode.hint" Id="FRBPROP_GRNT_CODE" MaxLength="30" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbprop.frbpropBudgPrdStartDat.hint" Id="FRBPROP_BUDG_PRD_START_DAT" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbprop.frbpropBudgPrdEndDate.hint" Id="FRBPROP_BUDG_PRD_END_DATE" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Date" Enabled="true" Hint="frbprop.frbpropExpectedGrantDat.hint" Id="FRBPROP_EXPECTED_GRANT_DAT" MaxLength="11" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.frbpropPropCodeRelated.hint" Id="FRBPROP_PROP_CODE_RELATED" MaxLength="9" Navigable="false" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="RELATED_PROP_DESCR" MaxLength="35" Navigable="false" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frbprop.frbpropProbabilityRate.hint" Id="FRBPROP_PROBABILITY_RATE" MaxLength="3" MaxValue="100" MinValue="0" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropProposalType.hint" Id="FRBPROP_PROPOSAL_TYPE" MaxLength="2" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropProposalDesc.hint" Id="FRBPROP_PROPOSAL_DESC" MaxLength="35" Navigable="false" PageName="HEADER_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropCategory.hint" Id="FRBPROP_CATEGORY" MaxLength="1" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropCategoryDesc.hint" Id="FRBPROP_CATEGORY_DESC" MaxLength="35" Navigable="false" PageName="HEADER_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropSubCategory.hint" Id="FRBPROP_SUB_CATEGORY" MaxLength="4" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropSubCatDesc.hint" Id="FRBPROP_SUB_CAT_DESC" MaxLength="35" Navigable="false" PageName="HEADER_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropCfdaCode.hint" Id="FRBPROP_CFDA_CODE" MaxLength="30" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropSponsorId.hint" Id="FRBPROP_SPONSOR_ID" MaxLength="30" PageName="HEADER_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropAgencyContact.hint" Id="FRBPROP_AGENCY_CONTACT" MaxLength="35" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBPROP_AGENCY_PRED_CODE" MaxLength="9" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.frbpropAgencyPredName.hint" Id="FRBPROP_AGENCY_PRED_NAME" MaxLength="230" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropAgencyAddrCode.hint" Id="FRBPROP_AGENCY_ADDR_CODE" MaxLength="2" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frbprop.frbpropAgencyAddrSeqNum.hint" Id="FRBPROP_AGENCY_ADDR_SEQ_NUM" MaxLength="2" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.addressHouseNumber.hint" Id="ADDRESS_HOUSE_NUMBER" MaxLength="10" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.addressLine1.hint" Id="ADDRESS_LINE_1" MaxLength="75" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.addressLine2.hint" Id="ADDRESS_LINE_2" MaxLength="75" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.addressLine3.hint" Id="ADDRESS_LINE_3" MaxLength="75" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.addressLine4.hint" Id="ADDRESS_LINE_4" MaxLength="75" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="CITY" MaxLength="50" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="STATE" MaxLength="30" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="ZIP_CODE" MaxLength="30" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="PHONE_EXISTS" MaxLength="1" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.phoneType.hint" Id="PHONE_TYPE" Lov="STVTELE_LOV" MaxLength="4" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.ctryCodePhone.hint" Id="CTRY_CODE_PHONE" MaxLength="4" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.areaCode.hint" Id="AREA_CODE" MaxLength="6" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.phoneNumber.hint" Id="PHONE_NUMBER" MaxLength="12" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.extension.hint" Id="EXTENSION" MaxLength="10" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frbprop.frbpropCoasCodeIcCs.hint" Id="FRBPROP_COAS_CODE_IC_CS" Lov="FTVCOAS_LOV" MaxLength="30" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frbprop.frbpropBasiCodeIc.hint" Id="FRBPROP_BASI_CODE_IC" MaxLength="30" PageName="COST_CODE_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBPROP_BASI_CODE_IC_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frbprop.frbpropIndrCodeRate.hint" Id="FRBPROP_INDR_CODE_RATE" MaxLength="30" PageName="COST_CODE_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBPROP_INDR_CODE_RATE_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frbprop.frbpropIndaCodeCharge.hint" Id="FRBPROP_INDA_CODE_CHARGE" MaxLength="30" PageName="COST_CODE_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.frbpropIndaCodeChargeName.hint" Id="FRBPROP_INDA_CODE_CHARGE_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frbprop.frbpropInddCodeDistr.hint" Id="FRBPROP_INDD_CODE_DISTR" MaxLength="30" PageName="COST_CODE_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frbprop.frbpropInddCodeDistrName.hint" Id="FRBPROP_INDD_CODE_DISTR_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frbprop.frbpropBasiCodeCs.hint" Id="FRBPROP_BASI_CODE_CS" MaxLength="30" PageName="COST_CODE_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBPROP_BASI_CODE_CS_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frbprop.frbpropCstrCodeRate.hint" Id="FRBPROP_CSTR_CODE_RATE" Lov="FRRCSTR_LOV" MaxLength="30" PageName="COST_CODE_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBPROP_CSTR_CODE_RATE_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frbprop.frbpropCstaCodeCharge.hint" Id="FRBPROP_CSTA_CODE_CHARGE" Lov="FRBCSTA_LOV" MaxLength="30" PageName="COST_CODE_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBPROP_CSTA_CODE_CHARGE_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frbprop.frbpropCstdCodeDistr.hint" Id="FRBPROP_CSTD_CODE_DISTR" Lov="FRBCSTD_LOV" MaxLength="30" PageName="COST_CODE_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRBPROP_CSTD_CODE_DISTR_NAME" MaxLength="35" Navigable="false" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frbprop.frbpropFringeRate.hint" Id="FRBPROP_FRINGE_RATE" MaxLength="6" MaxValue="100000" MinValue="0" PageName="COST_CODE_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRBPROP_CODE" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="FRBPROP_AGENCY_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="FRBPROP_CFDA_INTERNAL_ID_NO" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <!--<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="FRAPROP_1_CANVAS" DataType="Date" Enabled="false" Id="FRBPROP_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />-->
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="FRBPROP_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" CanvasName="FRAPROP_1_CANVAS">
+        <Extension Name="ViewMode" Value="None" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.ACTIVITY_DATE" />
+      </Item>
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="FRBPROP_PI_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <!--<Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="FRAPROP_1_CANVAS" DataType="String" Enabled="false" Id="FRBPROP_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />-->
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRBPROP_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" CanvasName="FRAPROP_1_CANVAS">
+        <Extension Name="ViewMode" Value="None" />
+        <Extension Name="CopyTo" Value="BANNER_FOOTER_DATA.USER_ID" />
+      </Item>
+    </Block>
+    <Block Id="FRRPRPT" MultiRecord="true" NavigationStyle="ChangeRecord">
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Hint="frrprpt.frrprptPropCode.hint" Id="FRRPRPT_PROP_CODE" MaxLength="9" Navigable="false" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrprpt.frrprptAgencyCode.hint" Id="FRRPRPT_AGENCY_CODE" Lov="FTVAGCY_LOV" MaxLength="9" PageName="PASSTHROUGH_AGENCY" Type="TextItem" Visible="true" />
+      <Item DataType="Number" Enabled="true" Hint="frrprpt.frrprptAgcyPidm.hint" Id="FRRPRPT_AGCY_PIDM" MaxLength="8" Required="true" Type="TextItem" />
+      <Item AllowSearch="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frrprpt.frrprptAgcyName.hint" Id="FRRPRPT_AGCY_NAME" MaxLength="230" Navigable="false" PageName="PASSTHROUGH_AGENCY" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Number" Hint="frrprpt.frrprptFederalFundPercent.hint" Id="FRRPRPT_FEDERAL_FUND_PERCENT" MaxLength="6" MaxValue="100.0" MinValue="0.0" PageName="PASSTHROUGH_AGENCY" Type="TextItem" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frrprpt.frrprptSponsorId.hint" Id="FRRPRPT_SPONSOR_ID" MaxLength="40" PageName="PASSTHROUGH_AGENCY" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="FRRPRPT_ACTIVITY_DATE" MaxLength="11" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRPRPT_USER_ID" MaxLength="30" Navigable="false" Required="true" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FRRPUSN" MultiRecord="true">
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrpusn.frrpusnSdatCodeAttr.hint" Id="FRRPUSN_SDAT_CODE_ATTR" MaxLength="35" PageName="USER_DEFINED_DATA" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrpusn.frrpusnSdatCodeOpt1.hint" Id="FRRPUSN_SDAT_CODE_OPT_1" MaxLength="8" PageName="USER_DEFINED_DATA" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Id="FRRPUSN_DESC" MaxLength="35" PageName="USER_DEFINED_DATA" Type="TextItem" Visible="true" />
+      <Item DataType="Date" Enabled="false" Id="FRRPUSN_ACTIVITY_DATE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRPUSN_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRPUSN_PROP_CODE" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FRRPLOC" MultiRecord="true">
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrploc.frrplocLocnCode.hint" Id="FRRPLOC_LOCN_CODE" MaxLength="30" PageName="LOCATION_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrploc.frrplocLocnResearchInd.hint" Id="FRRPLOC_LOCN_RESEARCH_IND" MaxLength="1" PageName="LOCATION_INFORMATION" Required="true" Type="List" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrploc.frrplocLocnTitle.hint" Id="FRRPLOC_LOCN_TITLE" MaxLength="35" Navigable="false" PageName="LOCATION_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRPLOC_PROP_CODE" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="FRRPLOC_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRPLOC_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FRRPRPI" MultiRecord="true">
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="EVENTS_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="TEXT_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrprpi.frrprpiId.hint" Id="FRRPRPI_ID" MaxLength="9" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Hint="frrprpi.frrprpiIdName.hint" Id="FRRPRPI_ID_NAME" MaxLength="230" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="false" Id="FRRPRPI_COAS" MaxLength="1" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrprpi.frrprpiIdInd.hint" Id="FRRPRPI_ID_IND" MaxLength="30" PageName="PERSONNEL_INFORMATION" Required="true" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrprpi.frrprpiIdIndName.hint" Id="FRRPRPI_ID_IND_NAME" MaxLength="35" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Hint="frrprpi.frrprpiOrgnCode.hint" Id="FRRPRPI_ORGN_CODE" MaxLength="30" PageName="PERSONNEL_INFORMATION" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrprpi.frrprpiOrgnCodeName.hint" Id="FRRPRPI_ORGN_CODE_NAME" MaxLength="35" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrprpi.frrprpiSalutation.hint" Id="FRRPRPI_SALUTATION" MaxLength="35" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrprpi.frrprpiTitle.hint" Id="FRRPRPI_TITLE" MaxLength="35" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="Number" Enabled="true" Hint="frrprpi.frrprpiFte.hint" Id="FRRPRPI_FTE" MaxLength="4" MaxValue="1.0" MinValue="0.0" PageName="PERSONNEL_INFORMATION" Type="TextItem" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" DataType="String" Enabled="true" Hint="frrprpi.frrprpiEmployeeInd.hint" Id="FRRPRPI_EMPLOYEE_IND" MaxLength="1" PageName="PERSONNEL_INFORMATION" Type="Checkbox" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="FRRPRPI_PROP_CODE" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="FRRPRPI_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Enabled="true" Id="FRRPRPI_ORGN_CODE_LBT" MaxLength="14" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="FRRPRPI_ID_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRRPRPI_ID_LBT" MaxLength="14" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRRPRPI_ID_IND_LBT" MaxLength="0" Navigable="false" PageName="PERSONNEL_INFORMATION" Type="Button" />
+      <Item DataType="String" Enabled="true" Id="FRRPRPI_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="BLOCK5">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="TEXT_ITEM_99" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="true" Hint="block5.frbpropOrgnCode.hint" Id="FRBPROP_ORGN_CODE" MaxLength="6" Type="TextItem" Visible="true" />
+      <Item DataType="String" Enabled="true" Id="TEXT_ITEM16" MaxLength="35" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Hint="buttonControlBlock.frrprptAgencyCodeLbt.hint" Id="FRRPRPT_AGENCY_CODE_LBT" MaxLength="0" Navigable="false" PageName="PASSTHROUGH_AGENCY" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Hint="buttonControlBlock.frbpropGrntCodeLbt.hint" Id="FRBPROP_GRNT_CODE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="VIEW_HIER_BTN" MaxLength="30" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRRPUSN_SDAT_CODE_OPT_1_LBT" MaxLength="0" Navigable="false" PageName="USER_DEFINED_DATA" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRRPUSN_SDAT_CODE_ATTR_LBT" MaxLength="0" Navigable="false" PageName="USER_DEFINED_DATA" Type="Button" />
+      <Item CanvasName="COPY_PROP" Enabled="true" Id="CANCEL_COPY_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="COPY_PROP" Enabled="true" Id="OK_COPY_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="COPY_PROP" Id="COPY_PROP_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="PUSH_BUTTON314" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_6_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="AGENCY_ADDR_SEQ_NUM" MaxLength="0" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_5_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_4_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_EXIT_1_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_ROLLBACK_1_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_SAVE_1_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Enabled="true" Id="FRBPROP_STATUS_CODE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Enabled="true" Hint="buttonControlBlock.frbpropOrgnCodeRespOff.hint" Id="FRBPROP_ORGN_CODE_RESP_OFF" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Hint="buttonControlBlock.frbpropProposalTypeLbt.hint" Id="FRBPROP_PROPOSAL_TYPE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Hint="buttonControlBlock.frbpropCategoryLbt.hint" Id="FRBPROP_CATEGORY_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FRAPROP_1_CANVAS" Id="DISPLAY_FRBPROP_CODE_LBT" MaxLength="0" Navigable="false" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_SUB_CATEGORY_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_CFDA_CODE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Enabled="true" Id="FRRPLOC_LOCN_CODE_LBT" MaxLength="0" Navigable="false" PageName="LOCATION_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="COPY_PROP" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Enabled="true" Id="RATE_DOWN" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Enabled="true" Id="RATE_UP" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="NAVIGATE_TO_1_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="NAVIGATE_TO" Enabled="true" Id="CANCEL_NAVIGATE_BTN" MaxLength="0" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_EXIT_2_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_SAVE_2_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_ROLLBACK_2_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_ROLLBACK_5_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_SAVE_5_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="EXIT_6_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="SAVE_6_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="ROLLBACK_6_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_EXIT_5_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_EXIT_4_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_BASI_CODE_IC_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_INDR_CODE_RATE_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Enabled="true" Id="FRBPROP_COAS_CODE_IC_CS_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_INDA_CODE_CHARGE_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_SAVE_4_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="FRBPROP_ROLLBACK_4_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_INDD_CODE_DISTR_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_BASI_CODE_CS_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_CSTR_CODE_RATE_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_CSTD_CODE_DISTR_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_CSTA_CODE_CHARGE_LBT" MaxLength="30" Navigable="false" PageName="COST_CODE_INFORMATION" Type="Button" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="TBRRRAS_1_SAVE_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="TBRRRAS_1_EXIT_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="TEMP_CANVAS" Enabled="true" Id="TBRRRAS_1_ROLLBACK_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_PI_ID_CODE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Enabled="true" Id="FRBPROP_COAS_CODE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" Visible="true" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_AGENCY_CODE_LBT" MaxLength="0" Navigable="false" PageName="HEADER_INFORMATION" Type="Button" />
+      <Item CanvasName="FFRAPROP_1_TAB_CANVAS" Id="FRBPROP_AGENCY_ADDR_CODE_LBT" MaxLength="0" Navigable="false" PageName="PROPOSAL_AGENCY_INFORMATION" Type="Button" />
+    </Block>
+    <Block Id="NAVIGATE_TO">
+      <Item CanvasName="NAVIGATE_TO" DataType="String" Enabled="true" Id="NAVIGATE_TO_LIST" MaxLength="45" Required="true" Type="List" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="NAVIGATE_TO" DataType="String" Enabled="true" Id="DUMMY_LIST" MaxLength="1" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="COPY_BLOCK">
+      <Item AllowSearch="false" CanvasName="COPY_PROP" DataType="String" Enabled="true" Hint="copyBlock.copyPropCode.hint" Id="COPY_PROP_CODE" MaxLength="9" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="G$_OPT_BLOCK">
+      <Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_SEL" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+    </Block>
+  </Logic>
+</FormStructure>

@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Gutpmnu/GutpmnuAlerts.xml" FirstNavigationBlock="GUBOBJS" LovDataPath="/net/hedtech/banner/general/common/Gutpmnu/GutpmnuLovs.xml" Name="GUTPMNU">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Gutpmnu/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="MAIN_CANVAS" />
+      <StackedCanvas Id="GUBOBJS_CANVAS" />
+      <StackedCanvas Id="GURMENU_CANVAS" />
+      <StackedCanvas Id="GURMENU2_CANVAS" Visible="false" />
+      <StackedCanvas Id="MENU_ENTIRE" Visible="false" />
+      <StackedCanvas Id="USER_VIEW" Visible="false" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item CanvasName="MAIN_CANVAS" DataType="String" Enabled="true" Hint="formHeader.custUserId.hint" Id="CUST_USER_ID" MaxLength="100" Type="List" />
+      <Item CanvasName="USER_VIEW" DataType="String" Hint="formHeader.userSearch.hint" Id="USER_SEARCH" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item CanvasName="GUBOBJS_CANVAS" DataType="String" Id="OBJECT_TYPE" MaxLength="30" Required="true" Type="List" />
+      <Item AllowSearch="false" DataType="String" Enabled="false" Id="SEARCH_CR" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="String" Enabled="false" Id="WORK_CR" MaxLength="1" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Id="current_user1" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_BLOCK" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item DataType="String" Id="HOLD_RECORD" MaxLength="30" Type="TextItem" />
+      <Item DataType="String" Id="SUB_NAME" MaxLength="30" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="COMMIT_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="NAVIGATE_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="INITIAL_QUERY" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowInsert="false" AllowUpdate="false" Id="GUBOBJS" MultiRecord="true">
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="GURMENU_CANVAS" DataType="String" Enabled="true" Id="GUBOBJS_NAME" Lov="GUBOBJS_LOV" MaxLength="30" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" DataType="String" Enabled="true" Hint="gubobjs.gubobjsObjtCode.hint" Id="GUBOBJS_OBJT_CODE" Lov="GUBOBJS_LOV" MaxLength="30" Required="true" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="GURMENU_CANVAS" DataType="String" Enabled="true" Id="GUBOBJS_DESC" MaxLength="80" Required="true" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="GURMENU" MultiRecord="true">
+      <Item CanvasName="GURMENU_CANVAS" DataType="String" Enabled="true" Hint="gurmenu.gurmenuObjName.hint" Id="GURMENU_OBJ_NAME" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="GURMENU_CANVAS" DataType="String" Enabled="true" Hint="gurmenu.displayDesc.hint" Id="DISPLAY_DESC" MaxLength="80" Type="TextItem" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="OBJ_TYPE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="GURMENU_NAME" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="GURMENU_DESC" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" DataType="Number" Enabled="true" Id="GURMENU_SORT_SEQ" MaxLength="22" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="GURMENU_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="Date" Enabled="false" Id="GURMENU_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="HOLD_DESC" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="Number" Id="GURMENU_COUNT" MaxLength="30" Type="TextItem" />
+    </Block>
+    <Block Id="GURMENU2" MultiRecord="true">
+      <Item CanvasName="GURMENU2_CANVAS" DataType="String" Enabled="true" Hint="gurmenu2.gurmenuObjName.hint" Id="GURMENU_OBJ_NAME" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="GURMENU2_CANVAS" DataType="String" Enabled="true" Hint="gurmenu2.displayDesc.hint" Id="DISPLAY_DESC" MaxLength="80" Required="true" Type="TextItem" Visible="true" />
+      <Item DataType="String" Enabled="false" Id="GURMENU_NAME" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="true" Hint="gurmenu2.gurmenuDesc.hint" Id="GURMENU_DESC" MaxLength="80" Required="true" Type="TextItem" Visible="false" />
+      <Item DataType="Number" Enabled="false" Id="GURMENU_SORT_SEQ" MaxLength="22" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="GURMENU_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="Date" Enabled="false" Id="GURMENU_ACTIVITY_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="HOLD_DESC" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="OBJ_TYPE" MaxLength="10" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="Number" Id="GURMENU_COUNT" MaxLength="30" Type="TextItem" />
+    </Block>
+    <Block AllowDelete="false" Id="ALL_USERS_BLOCK" MultiRecord="true">
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="USER_VIEW" DataType="String" Enabled="true" Hint="allUsersBlock.userName.hint" Id="USER_NAME" MaxLength="30" NextItem="USER_ID" Type="TextItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="USER_VIEW" DataType="Number" Enabled="true" Hint="allUsersBlock.userId.hint" Id="USER_ID" MaxLength="42" Type="TextItem" Visible="true" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item CanvasName="GUBOBJS_CANVAS" Id="OBJECT_SORT_BTN" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="GURMENU_CANVAS" Id="INSERT_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="GURMENU_CANVAS" Id="DELETE_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="GURMENU_CANVAS" Id="INSERT_ALL_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="GURMENU_CANVAS" Id="DELETE_ALL_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="GURMENU_CANVAS" Id="ALL_USERS_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="GURMENU_CANVAS" Id="COPY_BTN" MaxLength="14" Navigable="false" Type="Button" />
+      <Item CanvasName="GURMENU_CANVAS" Id="CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" />
+    </Block>
+    <Block AllowUpdate="false" Id="QK_FLOW" MultiRecord="true">
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Enabled="false" Id="GURCALL_CALL_CODE" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item CanvasName="MENU_ENTIRE" Enabled="true" Hint="qkFlow.gurcallForm.hint" Id="GURCALL_FORM" MaxLength="10" Required="true" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Enabled="false" Id="QK_TYPE" MaxLength="10" Navigable="false" Type="DisplayItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Enabled="true" Id="QK_DESC" MaxLength="45" Navigable="false" Type="TextItem" Visible="true" />
+    </Block>
+    <Block AllowUpdate="false" Id="QK_MENU" MultiRecord="true">
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Enabled="true" Id="GURMENU_NAME" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Enabled="true" Hint="qkMenu.gurmenuObjName.hint" Id="GURMENU_OBJ_NAME" MaxLength="30" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Enabled="false" Id="QK_TYPE" MaxLength="10" Navigable="false" Type="DisplayItem" Visible="false" />
+      <Item AllowInsert="false" AllowUpdate="false" CanvasName="MENU_ENTIRE" Enabled="true" Id="QK_DESC" MaxLength="80" Navigable="false" Type="TextItem" Visible="true" />
+    </Block>
+  </Logic>
+</FormStructure>

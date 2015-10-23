@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlTempCanvas" menu="G$_DEFAULT_PM" name="TEMP_CANVAS" visible="false" width="100%">
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.deleteBtn.label" member="DELETE_BTN" name="deleteBtn" navigable="false" width="96px">
+			<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</button>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.forusorExitBtn.label" member="FORUSOR_EXIT_BTN" name="forusorExitBtn" navigable="false" width="80px">
+			<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</button>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.forusorRollbackBtn.label" member="FORUSOR_ROLLBACK_BTN" name="forusorRollbackBtn" navigable="false" width="80px">
+			<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</button>
+		<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" label="buttonControlBlock.forusorSaveBtn.label" member="FORUSOR_SAVE_BTN" name="forusorSaveBtn" navigable="false" width="80px">
+			<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</button>
+	</panel>
+</config>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="QK_MENU.Manager.Config" name="GURMENU">
+		
+		<items>
+			<item name="GURMENU_NAME" logicalName="gurmenuName" type="String" physicalName="GURMENU_NAME"  />
+			<item name="GURMENU_OBJ_NAME" logicalName="gurmenuObjName" type="String" physicalName="GURMENU_OBJ_NAME"  />
+			<item name="QK_TYPE" logicalName="qkType" type="String"  virtual="true" />
+			<item name="QK_DESC" logicalName="qkDesc" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqolib.model.QkMenuAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE GURMENU_NAME = :GUBOBJS_NAME AND (GURMENU_USER_ID) IN ('BASELINE', 'LOCAL')]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[ORDER BY GURMENU_SORT_SEQ]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

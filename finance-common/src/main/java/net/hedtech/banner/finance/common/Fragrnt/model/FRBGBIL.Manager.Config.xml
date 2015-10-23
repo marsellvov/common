@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRBGBIL.Manager.Config" name="FRBGBIL">
+		
+		<items>
+			<item name="FRBGBIL_COAS_CODE" logicalName="frbgbilCoasCode" type="String" physicalName="FRBGBIL_COAS_CODE"  />
+			<item name="FRBGBIL_GRNT_CODE" logicalName="frbgbilGrntCode" type="String" physicalName="FRBGBIL_GRNT_CODE" >
+				<value>
+					<item name="FRBGRNT_CODE" businessObject="FRBGRNT" />
+				</value>
+			</item>		
+			
+			<item name="FRBGBIL_USER_ID" logicalName="frbgbilUserId" type="String" physicalName="FRBGBIL_USER_ID"  />
+			<item name="FRBGBIL_ACTIVITY_DATE" logicalName="frbgbilActivityDate" type="java.util.Date" physicalName="FRBGBIL_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+			<item name="FRBGBIL_PMSC_CODE" logicalName="frbgbilPmscCode" type="String" physicalName="FRBGBIL_PMSC_CODE"  />
+			<item name="PMSC_NAME" logicalName="pmscName" type="String"  virtual="true" />
+			<item name="FRBGBIL_BECL_CODE" logicalName="frbgbilBeclCode" type="String" physicalName="FRBGBIL_BECL_CODE"  />
+			<item name="BECL_NAME" logicalName="beclName" type="String"  virtual="true" />
+			<item name="FRBGBIL_BUDGET_LIMIT_IND" logicalName="frbgbilBudgetLimitInd" type="String" physicalName="FRBGBIL_BUDGET_LIMIT_IND"  />
+			<item name="FRBGBIL_PAYMENT_FUND_CODE" logicalName="frbgbilPaymentFundCode" type="String" physicalName="FRBGBIL_PAYMENT_FUND_CODE"  />
+			<item name="PAYMENT_FUND_NAME" logicalName="paymentFundName" type="String"  virtual="true" />
+			<item name="FRBGBIL_PAYMENT_ACCT_CODE" logicalName="frbgbilPaymentAcctCode" type="String" physicalName="FRBGBIL_PAYMENT_ACCT_CODE"  />
+			<item name="PAYMENT_ACCT_NAME" logicalName="paymentAcctName" type="String"  virtual="true" />
+			<item name="FRBGBIL_CLEARING_ACCT_CODE" logicalName="frbgbilClearingAcctCode" type="String" physicalName="FRBGBIL_CLEARING_ACCT_CODE"  />
+			<item name="CLEARING_ACCT_NAME" logicalName="clearingAcctName" type="String"  virtual="true" />
+			<item name="FRBGBIL_ADDR_TYPE" logicalName="frbgbilAddrType" type="String" physicalName="FRBGBIL_ADDR_TYPE"  />
+			<item name="FRBGBIL_ADDR_SEQNO" logicalName="frbgbilAddrSeqno" type="java.math.BigDecimal" physicalName="FRBGBIL_ADDR_SEQNO"  />
+			<item name="FRBGBIL_LAST_INV_SEQ_NO" logicalName="frbgbilLastInvSeqNo" type="java.math.BigDecimal" physicalName="FRBGBIL_LAST_INV_SEQ_NO"  />
+			<item name="FRBGBIL_BFRM_CODE_1034_EXT" logicalName="frbgbilBfrmCode1034Ext" type="String" physicalName="FRBGBIL_BFRM_CODE_1034_EXT"  />
+			<item name="FRBGBIL_BUD_LINE_EXCEED_IND" logicalName="frbgbilBudLineExceedInd" type="String" physicalName="FRBGBIL_BUD_LINE_EXCEED_IND"  />
+			<item name="FRBGBIL_MIN_NOT_REACHED_IND" logicalName="frbgbilMinNotReachedInd" type="String" physicalName="FRBGBIL_MIN_NOT_REACHED_IND"  />
+			<item name="FRBGBIL_BUD_TOTAL_EXCEED_IND" logicalName="frbgbilBudTotalExceedInd" type="String" physicalName="FRBGBIL_BUD_TOTAL_EXCEED_IND"  />
+			<item name="FRBGBIL_BUD_CHECK_SOURCE_IND" logicalName="frbgbilBudCheckSourceInd" type="String" physicalName="FRBGBIL_BUD_CHECK_SOURCE_IND"  />
+			<item name="FRBGBIL_BILLING_START_DATE" logicalName="frbgbilBillingStartDate" type="java.util.Date" physicalName="FRBGBIL_BILLING_START_DATE"  />
+			<item name="FRBGBIL_BILLING_END_DATE" logicalName="frbgbilBillingEndDate" type="java.util.Date" physicalName="FRBGBIL_BILLING_END_DATE"  />
+			<item name="FRBGBIL_BILLING_MIN_AMT" logicalName="frbgbilBillingMinAmt" type="java.math.BigDecimal" physicalName="FRBGBIL_BILLING_MIN_AMT"  >
+				<value>
+					<constant>0.00</constant>
+				</value>	
+			</item>
+			<item name="FRBGBIL_CUMULATIVE_BILLED_AMT" logicalName="frbgbilCumulativeBilledAmt" type="java.math.BigDecimal" physicalName="FRBGBIL_CUMULATIVE_BILLED_AMT"  />
+			<item name="FRBGBIL_BILLING_MAX_AMT" logicalName="frbgbilBillingMaxAmt" type="java.math.BigDecimal" physicalName="FRBGBIL_BILLING_MAX_AMT"  />
+			<item name="FRBGBIL_DEFERRED_ACCT_CODE" logicalName="frbgbilDeferredAcctCode" type="String" physicalName="FRBGBIL_DEFERRED_ACCT_CODE"  />
+			<item name="DEFFERED_ACCT_NAME" logicalName="defferedAcctName" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fragrnt.model.FrbgbilAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE frbgbil_grnt_code = :FRBGRNT_CODE]]></defaultWhereClause>	
+
+	</manager>
+</b:beans>

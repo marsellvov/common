@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FORM_HEADER"/>
+	<panel class="StackedCanvas" id="pnlPage1" menu="G$_DEFAULT_PM" name="PAGE_1">
+		<image block="FORM_HEADER" style="ui-image-id" enabled="false" member="PERSON_IMAGE" name="personImage">
+			<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+		</image>
+	</panel>
+	<panel style="alert-footer">
+		<flowlayout orientation="horizontal">
+			<button action="WHEN-BUTTON-PRESSED" block="FORM_HEADER" label="formHeader.exitBtn.label" member="EXIT_BTN" name="exitBtn"/>
+		</flowlayout>
+	</panel>
+</config>

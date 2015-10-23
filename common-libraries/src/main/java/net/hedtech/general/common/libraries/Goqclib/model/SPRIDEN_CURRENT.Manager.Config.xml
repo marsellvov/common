@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SPRIDEN_CURRENT.Manager.Config" name="SPRIDEN">
+		
+		<items>
+			<item name="SPRIDEN_ID" logicalName="spridenId" type="String" physicalName="SPRIDEN_ID"  >
+				<value>
+					<item name="ID" businessObject="KEY_BLOCK"/>
+				</value>
+			</item>
+			<item name="SPRIDEN_NTYP_CODE" logicalName="spridenNtypCode" type="String" physicalName="SPRIDEN_NTYP_CODE"  />
+			<item name="CURRENT_NTYP_DESC" logicalName="currentNtypDesc" type="String"  virtual="true" />
+			<item name="PERS_SSN" logicalName="persSsn" type="String"  virtual="true" />
+			<item name="PERS_SURNAME_PREFIX" logicalName="persSurnamePrefix" type="String"  virtual="true" />
+			<item name="PERS_LAST_NAME" logicalName="persLastName" type="String"  virtual="true" />
+			<item name="PERS_FIRST_NAME" logicalName="persFirstName" type="String"  virtual="true" />
+			<item name="PERS_MI" logicalName="persMi" type="String"  virtual="true" />
+			<item name="PERS_PREFIX" logicalName="persPrefix" type="String"  virtual="true" />
+			<item name="PERS_SUFFIX" logicalName="persSuffix" type="String"  virtual="true" />
+			<item name="PERS_PREF_FNAME" logicalName="persPrefFname" type="String"  virtual="true" />
+			<item name="PERS_LEGAL_NAME" logicalName="persLegalName" type="String"  virtual="true" />
+			<item name="PERS_MRTL_CODE" logicalName="persMrtlCode" type="String"  virtual="true" />
+			<item name="MRTL_DESC" logicalName="mrtlDesc" type="String"  virtual="true" />
+			<item name="NON_PERS_NAME" logicalName="nonPersName" type="String"  virtual="true" />
+			<item name="SPRIDEN_USER" logicalName="spridenUser" type="String" physicalName="SPRIDEN_USER"  />
+			<item name="SPRIDEN_ACTIVITY_DATE" logicalName="spridenActivityDate" type="java.util.Date" physicalName="SPRIDEN_ACTIVITY_DATE"  />
+			<item name="SPRIDEN_ORIGIN" logicalName="spridenOrigin" type="String" physicalName="SPRIDEN_ORIGIN"  />
+			<item name="SPRIDEN_CREATE_USER" logicalName="spridenCreateUser" type="String" physicalName="SPRIDEN_CREATE_USER"  />
+			<item name="SPRIDEN_CREATE_DATE" logicalName="spridenCreateDate" type="java.util.Date" physicalName="SPRIDEN_CREATE_DATE"  />
+			<item name="SPRIDEN_PIDM" logicalName="spridenPidm" type="java.math.BigDecimal" physicalName="SPRIDEN_PIDM"  />
+			<item name="SPRIDEN_CHANGE_IND" logicalName="spridenChangeInd" type="String" physicalName="SPRIDEN_CHANGE_IND"  />
+			<item name="SPRIDEN_MI" logicalName="spridenMi" type="String" physicalName="SPRIDEN_MI"  />
+			<item name="SPRIDEN_FIRST_NAME" logicalName="spridenFirstName" type="String" physicalName="SPRIDEN_FIRST_NAME"  />
+			<item name="SPRIDEN_ENTITY_IND" logicalName="spridenEntityInd" type="String" physicalName="SPRIDEN_ENTITY_IND"  />
+			<item name="SPRIDEN_SURNAME_PREFIX" logicalName="spridenSurnamePrefix" type="String" physicalName="SPRIDEN_SURNAME_PREFIX"  />
+			<item name="SPRIDEN_LAST_NAME" logicalName="spridenLastName" type="String" physicalName="SPRIDEN_LAST_NAME"  />
+			<item name="CHANGE_SPBPERS" logicalName="changeSpbpers" type="String"  virtual="true" />
+			<item name="FOUND_SPBPERS" logicalName="foundSpbpers" type="String"  virtual="true" />
+			<item name="HOLD_ITEM" logicalName="holdItem" type="String"  virtual="true" />
+			<item name="HOLD_MRTL_CODE" logicalName="holdMrtlCode" type="String"  virtual="true" />
+			<item name="HOLD_SSN" logicalName="holdSsn" type="String"  virtual="true" />
+			<item name="HOLD_PREFIX" logicalName="holdPrefix" type="String"  virtual="true" />
+			<item name="HOLD_SUFFIX" logicalName="holdSuffix" type="String"  virtual="true" />
+			<item name="HOLD_PREF_FNAME" logicalName="holdPrefFname" type="String"  virtual="true" />
+			<item name="HOLD_LEGAL_NAME" logicalName="holdLegalName" type="String"  virtual="true" />
+			<item name="CHANGE_IDEN" logicalName="changeIden" type="String"  virtual="true" />
+			<item name="GREEN_DATA_BAR_1" logicalName="greenDataBar1" type="String"  virtual="true" />
+			<item name="GREEN_DATA_BAR_2" logicalName="greenDataBar2" type="String"  virtual="true" />
+			<item name="GREEN_DATA_BAR_3" logicalName="greenDataBar3" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Goqclib.model.SpridenCurrentAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE spriden_change_ind IS NULL AND spriden_id = :KEY_BLOCK_ID]]></defaultWhereClause>	
+
+	</manager>
+</b:beans>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="KEY_BLOCK"/>
+	<panel class="StackedCanvas" id="pnlSpridenCurrent1Canvas" menu="G$_DEFAULT_PM" name="SPRIDEN_CURRENT_1_CANVAS" width="100%">
+		<panel width="100%">
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="20px" icon="maintenance" label="buttonControlBlock.generateBtn.label" member="GENERATE_BTN" name="generateBtn" navigable="false" tooltip="buttonControlBlock.generateBtn.tooltip" width="20px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+		</panel>
+	</panel>
+</config>

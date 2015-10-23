@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/KEY_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/FRBGRNT.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/FRRAGPT.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/FRRGUSN.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/FRRGLOC.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/FRBGBIL.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/FRRGRPI.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/FRRGREC.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/BLOCK3.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/BLOCK5.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/NAVIGATE_TO.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/COPY_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/finance/common/Fragrnt/model/FRAGRNT.ValueSet.Config.xml"/>
+
+	
+	<formModel id="FRAGRNT.Model.Config" name="FRAGRNT">
+		<modelClass>net.hedtech.banner.finance.common.Fragrnt.model.FragrntModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="KEY_BLOCK" manager="KEY_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRBGRNT" manager="FRBGRNT.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRRAGPT" manager="FRRAGPT.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRRGUSN" manager="FRRGUSN.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRRGLOC" manager="FRRGLOC.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRBGBIL" manager="FRBGBIL.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRRGRPI" manager="FRRGRPI.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="FRRGREC" manager="FRRGREC.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="BLOCK3" manager="BLOCK3.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="BLOCK5" manager="BLOCK5.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="NAVIGATE_TO" manager="NAVIGATE_TO.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="COPY_BLOCK" manager="COPY_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="HRECACTV_RG.ValueSet.Config"/>
+				<valueSet config="HRECLOCN_RG.ValueSet.Config"/>
+				<valueSet config="HRECPROG_RG.ValueSet.Config"/>
+				<valueSet config="HRECFUND_RG.ValueSet.Config"/>
+				<valueSet config="HRECORGN_RG.ValueSet.Config"/>
+				<valueSet config="FTVACCT_RG.ValueSet.Config"/>
+				<valueSet config="FRVBECL_RG.ValueSet.Config"/>
+				<valueSet config="FRVPMSC_RG.ValueSet.Config"/>
+				<valueSet config="NTVECCG_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

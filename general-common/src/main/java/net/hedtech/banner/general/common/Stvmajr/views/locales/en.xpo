@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="stvmajr.accordion.title">Major, Minor, Concentration Code Validation</msg>
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="stvmajr.stvmajrCode.prompt">Major Code</msg>
+  <msg id="stvmajr.stvmajrCode.hint">Major Code.</msg>
+  <msg id="stvmajr.stvmajrDescription.prompt">Major Description</msg>
+  <msg id="stvmajr.stvmajrDesc.hint">Major code description.</msg>
+  <msg id="stvmajr.stvmajrCipcCode.prompt">CIPC</msg>
+  <msg id="stvmajr.stvmajrCipcCode.hint">CIPC Code; press LIST for  valid codes.</msg>
+  <msg id="stvmajr.stvmajrValidMajorInd.prompt">Major</msg>
+  <msg id="stvmajr.stvmajrValidMajorInd.hint">Major indicator; check for valid major.</msg>
+  <msg id="stvmajr.stvmajrValidMinorInd.prompt">Minor</msg>
+  <msg id="stvmajr.stvmajrValidMinorInd.hint">Minor indicator; check for valid minor.</msg>
+  <msg id="stvmajr.stvmajrValidConcentratnInd.prompt">Concentration</msg>
+  <msg id="stvmajr.stvmajrValidConcentratnInd.hint">Concentration indicator; check for valid concentration.</msg>
+  <msg id="stvmajr.stvmajrOccupationInd.prompt">Occupation</msg>
+  <msg id="stvmajr.stvmajrOccupationInd.hint">Occupation specific indicator; check if program is occupation specific.</msg>
+  <msg id="stvmajr.stvmajrAidEligibilityInd.prompt">Financial Aid Eligibility</msg>
+  <msg id="stvmajr.stvmajrAidEligibilityInd.hint">Financial Aid Eligibility Indicator; check if eligible.</msg>
+  <msg id="stvmajr.stvmajrVrMsgNo.prompt">Voice Response Message Number</msg>
+  <msg id="stvmajr.stvmajrVrMsgNo.hint">Voice Response Message Number.</msg>
+  <msg id="stvmajr.stvmajrSevisEquiv.prompt">SEVIS Equivalent</msg>
+  <msg id="stvmajr.stvmajrSevisEquiv.prompt.label">SEVIS Equivalent</msg>
+  <msg id="stvmajr.stvmajrSevisEquiv.hint">SEVIS equivalency code.</msg>
+  <msg id="stvmajr.stvmajrSystemReqInd.prompt">System Required</msg>
+  <msg id="stvmajr.stvmajrSystemReqInd.hint">System Required Indicator; check if required by the system.</msg>
+  <msg id="stvmajr.stvmajrActivityDate.prompt">Activity Date</msg>
+  <msg id="stvmajr.stvmajrActivityDate.prompt.label">Activity Date</msg>
+  <msg id="buttonControlBlock.stvmajrCipcCodeLbt.tooltip">Search</msg>
+  <msg id="buttonControlBlock.stvmajr1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.stvmajr1SaveBtn.label">Save</msg>
+  <msg id="buttonControlBlock.stvmajr1ExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.stvmajr1ExitvalueBtn.label">Select</msg>
+  <msg id="mainWindow.title">Major, Minor, Concentration Code Validation Form</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

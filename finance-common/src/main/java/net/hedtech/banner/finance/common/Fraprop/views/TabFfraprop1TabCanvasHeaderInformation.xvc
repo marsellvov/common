@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FRBPROP"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<collapsiblepanel label="Header Information" width="100%">
+		<panel width="100%">
+			<gridlayout cols="2" orientation="vertical">
+				<gridcell>
+					<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropCoasCode.prompt" maxlength="1" member="FRBPROP_COAS_CODE" name="frbpropCoasCode" style="ui-buttoninput" validation="server" width="50px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBPROP_COAS_CODE_LBT" name="frbpropCoasCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropCoasCodeLbt.tooltip" width="23px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</button>
+				</gridcell>
+				<gridcell>
+					<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropOrgnCodeRespOffice.prompt" maxlength="50" member="FRBPROP_ORGN_CODE_RESP_OFFICE" name="frbpropOrgnCodeRespOffice" style="ui-buttoninput" validation="server" width="56px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBPROP_ORGN_CODE_RESP_OFF" name="frbpropOrgnCodeRespOff" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropOrgnCodeRespOff.tooltip" width="23px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</button>
+					<textfield block="FRBPROP" datatype="String" height="23px" maxlength="35" member="ORGN_CODE_DESCR" name="orgnCodeDescr" width="239px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textfield>
+				</gridcell>
+				<gridcell>
+					<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropLongTitle.prompt" maxlength="256" member="FRBPROP_LONG_TITLE" name="frbpropLongTitle" validation="server" width="650px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+				</gridcell>
+				<gridcell>
+					<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropTitle.prompt" maxlength="35" member="FRBPROP_TITLE" name="frbpropTitle" validation="server" width="279px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+				</gridcell>
+				<gridcell>
+					<textbox autoskip="true" block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropAgencyCode.prompt" maxlength="9" member="FRBPROP_AGENCY_CODE" name="frbpropAgencyCode" style="ui-buttoninput" validation="server" width="72px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBPROP_AGENCY_CODE_LBT" name="frbpropAgencyCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropAgencyCodeLbt.tooltip" width="23px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</button>
+					<textbox block="FRBPROP" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="60" member="FRBPROP_AGENCY_NAME" name="frbpropAgencyName" width="301px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+				</gridcell>
+				<gridcell>
+					<textbox autoskip="true" block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropPiIdCode.prompt" maxlength="9" member="FRBPROP_PI_ID_CODE" name="frbpropPiIdCode" style="ui-buttoninput" validation="server" width="72px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBPROP_PI_ID_CODE_LBT" name="frbpropPiIdCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropPiIdCodeLbt.tooltip" width="23px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</button>
+					<textbox block="FRBPROP" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="FRBPROP_PI_ID_NAME" name="frbpropPiIdName" width="301px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+				</gridcell>
+				<gridcell>
+					<textbox block="FRBPROP" datatype="Number" formatmask="999G999G999G999G990D00" height="23px" label="frbprop.frbpropRequestedAmt.prompt" maxlength="25" maxvalue=" 999,999,999,999,999.99" member="FRBPROP_REQUESTED_AMT" minvalue="0.0" name="frbpropRequestedAmt" textalign="right" width="164px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+				</gridcell>
+				<gridcell>
+					<checkbox action="WHEN-CHECKBOX-CHANGED" block="FRBPROP" enabled="false" falsevalue="N" height="19px" keyactions="NEXT_ITEM" label="frbprop.displayPassThruInd.label" member="DISPLAY_PASS_THRU_IND" name="displayPassThruInd" value="Y" width="186px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</checkbox>
+				</gridcell>
+				<gridcell>
+					<calendar autoskip="true" block="FRBPROP" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbprop.frbpropOrigPrepDate.prompt" maxlength="11" member="FRBPROP_ORIG_PREP_DATE" name="frbpropOrigPrepDate" required="true" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</calendar>
+				</gridcell>
+				<gridcell>
+					<calendar autoskip="true" block="FRBPROP" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbprop.frbpropDueDate.prompt" maxlength="11" member="FRBPROP_DUE_DATE" name="frbpropDueDate" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</calendar>
+				</gridcell>
+				<gridcell>
+					<calendar autoskip="true" block="FRBPROP" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbprop.frbpropSubmittedDate.prompt" maxlength="11" member="FRBPROP_SUBMITTED_DATE" name="frbpropSubmittedDate" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</calendar>
+				</gridcell>
+				<gridcell>
+					<textbox autoskip="true" block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropStatusCode.prompt" maxlength="2" member="FRBPROP_STATUS_CODE" name="frbpropStatusCode" style="ui-buttoninput" validation="server" width="50px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBPROP_STATUS_CODE_LBT" name="frbpropStatusCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropStatusCodeLbt.tooltip" width="23px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</button>
+					<textfield block="FRBPROP" datatype="String" height="23px" maxlength="70" member="STATUS_DESCR" name="statusDescr" width="399px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textfield>
+				</gridcell>
+				<gridcell>
+					<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropAlternateStatusDesc.prompt" maxlength="35" member="FRBPROP_ALTERNATE_STATUS_DESC" name="frbpropAlternateStatusDesc" validation="server" width="269px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+				</gridcell>
+				<gridcell>
+					<calendar autoskip="true" block="FRBPROP" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbprop.frbpropStatusDate.prompt" maxlength="11" member="FRBPROP_STATUS_DATE" name="frbpropStatusDate" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</calendar>
+				</gridcell>
+				<gridcell>
+					<calendar autoskip="true" block="FRBPROP" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbprop.frbpropProjectStartDate.prompt" maxlength="11" member="FRBPROP_PROJECT_START_DATE" name="frbpropProjectStartDate" required="true" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</calendar>
+				</gridcell>
+				<gridcell>
+					<calendar autoskip="true" block="FRBPROP" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbprop.frbpropProjectEndDate.prompt" maxlength="11" member="FRBPROP_PROJECT_END_DATE" name="frbpropProjectEndDate" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</calendar>
+				</gridcell>
+				<gridcell>
+					<textbox autoskip="true" block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropGrntCode.prompt" maxlength="30" member="FRBPROP_GRNT_CODE" name="frbpropGrntCode" style="ui-buttoninput" validation="server" width="50px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBPROP_GRNT_CODE_LBT" name="frbpropGrntCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropGrntCodeLbt.tooltip" width="23px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</button>
+				</gridcell>
+				<gridcell>
+					<calendar autoskip="true" block="FRBPROP" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbprop.frbpropBudgPrdStartDat.prompt" maxlength="11" member="FRBPROP_BUDG_PRD_START_DAT" name="frbpropBudgPrdStartDat" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</calendar>
+				</gridcell>
+				<gridcell>
+					<calendar autoskip="true" block="FRBPROP" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbprop.frbpropBudgPrdEndDate.prompt" maxlength="11" member="FRBPROP_BUDG_PRD_END_DATE" name="frbpropBudgPrdEndDate" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</calendar>
+				</gridcell>
+				<gridcell>
+					<calendar autoskip="true" block="FRBPROP" case="upper" datatype="Date" formatmask="DD-MON-YYYY" height="23px" keyactions="NEXT_ITEM" label="frbprop.frbpropExpectedGrantDat.prompt" maxlength="11" member="FRBPROP_EXPECTED_GRANT_DAT" name="frbpropExpectedGrantDat" width="140px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</calendar>
+				</gridcell>
+				<gridcell>
+					<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropPropCodeRelated.prompt" maxlength="9" member="FRBPROP_PROP_CODE_RELATED" name="frbpropPropCodeRelated" validation="server" width="72px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<textbox block="FRBPROP" datatype="String" enabled="false" height="23px" maxlength="35" member="RELATED_PROP_DESCR" name="relatedPropDescr" width="201px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+				</gridcell>
+				<gridcell>
+					<component label="frbprop.frbpropProbabilityRate.prompt">
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="ui-icon-triangle-1-w" member="RATE_DOWN" name="rateDown" navigable="false" style="ui-buttoninput-left" tooltip="buttonControlBlock.rateDown.label" width="23px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</button>
+						<textbox block="FRBPROP" case="upper" datatype="Number" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" maxlength="3" maxvalue="100" member="FRBPROP_PROBABILITY_RATE" minvalue="0" name="frbpropProbabilityRate" style="ui-buttoninput ui-buttoninput-left ui-hidelabel" validation="server" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="ui-icon-triangle-1-e" member="RATE_UP" name="rateUp" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.rateUp.label" width="23px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</button>
+					</component>
+				</gridcell>
+				<gridcell>
+					<textbox autoskip="true" block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropProposalType.prompt" maxlength="2" member="FRBPROP_PROPOSAL_TYPE" name="frbpropProposalType" style="ui-buttoninput" validation="server" width="50px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBPROP_PROPOSAL_TYPE_LBT" name="frbpropProposalTypeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropProposalTypeLbt.tooltip" width="23px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</button>
+					<textfield block="FRBPROP" datatype="String" height="23px" maxlength="35" member="FRBPROP_PROPOSAL_DESC" name="frbpropProposalDesc" width="326px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textfield>
+				</gridcell>
+				<gridcell>
+					<textbox autoskip="true" block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropCategory.prompt" maxlength="1" member="FRBPROP_CATEGORY" name="frbpropCategory" style="ui-buttoninput" validation="server" width="50px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBPROP_CATEGORY_LBT" name="frbpropCategoryLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropCategoryLbt.tooltip" width="23px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</button>
+					<textfield block="FRBPROP" datatype="String" height="23px" maxlength="35" member="FRBPROP_CATEGORY_DESC" name="frbpropCategoryDesc" width="335px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textfield>
+				</gridcell>
+				<gridcell>
+					<textbox autoskip="true" block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropSubCategory.prompt" maxlength="4" member="FRBPROP_SUB_CATEGORY" name="frbpropSubCategory" style="ui-buttoninput" validation="server" width="51px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBPROP_SUB_CATEGORY_LBT" name="frbpropSubCategoryLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropSubCategoryLbt.tooltip" width="23px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</button>
+					<textfield block="FRBPROP" datatype="String" height="23px" maxlength="35" member="FRBPROP_SUB_CAT_DESC" name="frbpropSubCatDesc" width="302px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textfield>
+				</gridcell>
+				<gridcell>
+					<textbox autoskip="true" block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropCfdaCode.prompt" maxlength="30" member="FRBPROP_CFDA_CODE" name="frbpropCfdaCode" style="ui-buttoninput" validation="server" width="104px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+					<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRBPROP_CFDA_CODE_LBT" name="frbpropCfdaCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropCfdaCodeLbt.tooltip" width="23px">
+						<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</button>
+				</gridcell>
+				<gridcell>
+					<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropSponsorId.prompt" maxlength="30" member="FRBPROP_SPONSOR_ID" name="frbpropSponsorId" validation="server" width="247px">
+						<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+					</textbox>
+				</gridcell>
+			</gridlayout>
+		</panel>
+	</collapsiblepanel>
+</config>

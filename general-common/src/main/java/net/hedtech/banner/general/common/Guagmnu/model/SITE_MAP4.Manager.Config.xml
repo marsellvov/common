@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SITE_MAP4.Manager.Config" name="SiteMap4">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="GURMENU_DESC" logicalName="gurmenuDesc" type="String"   />
+			<item name="GURMENU_OBJ_NAME" logicalName="gurmenuObjName" type="String"   />
+			<item name="MAIN_DESC_1" logicalName="mainDesc1" type="String"   />
+			<item name="MAIN_OBJ_1" logicalName="mainObj1" type="String"   />
+			<item name="DTL_OBJ_1" logicalName="dtlObj1" type="String"   />
+			<item name="MAIN_DESC_2" logicalName="mainDesc2" type="String"   />
+			<item name="MAIN_OBJ_2" logicalName="mainObj2" type="String"   />
+			<item name="DTL_OBJ_2" logicalName="dtlObj2" type="String"   />
+			<item name="MAIN_DESC_3" logicalName="mainDesc3" type="String"   />
+			<item name="MAIN_OBJ_3" logicalName="mainObj3" type="String"   />
+			<item name="DTL_OBJ_3" logicalName="dtlObj3" type="String"   />
+			<item name="MAIN_DESC_4" logicalName="mainDesc4" type="String"   />
+			<item name="MAIN_OBJ_4" logicalName="mainObj4" type="String"   />
+			<item name="DTL_OBJ_4" logicalName="dtlObj4" type="String"   />
+			<item name="MAIN_DESC_5" logicalName="mainDesc5" type="String"   />
+			<item name="MAIN_OBJ_5" logicalName="mainObj5" type="String"   />
+			<item name="DTL_OBJ_5" logicalName="dtlObj5" type="String"   />
+			<item name="MAIN_DESC_6" logicalName="mainDesc6" type="String"   />
+			<item name="MAIN_OBJ_6" logicalName="mainObj6" type="String"   />
+			<item name="DTL_OBJ_6" logicalName="dtlObj6" type="String"   />
+			<item name="MAIN_DESC_7" logicalName="mainDesc7" type="String"   />
+			<item name="MAIN_OBJ_7" logicalName="mainObj7" type="String"   />
+			<item name="DTL_OBJ_7" logicalName="dtlObj7" type="String"   />
+			<item name="MAIN_DESC_8" logicalName="mainDesc8" type="String"   />
+			<item name="MAIN_OBJ_8" logicalName="mainObj8" type="String"   />
+			<item name="DTL_OBJ_8" logicalName="dtlObj8" type="String"   />
+			<item name="MAIN_DESC_9" logicalName="mainDesc9" type="String"   />
+			<item name="MAIN_OBJ_9" logicalName="mainObj9" type="String"   />
+			<item name="DTL_OBJ_9" logicalName="dtlObj9" type="String"   />
+			<item name="MAIN_DESC_10" logicalName="mainDesc10" type="String"   />
+			<item name="MAIN_OBJ_10" logicalName="mainObj10" type="String"   />
+			<item name="DTL_OBJ_10" logicalName="dtlObj10" type="String"   />
+			<item name="MAIN_DESC_11" logicalName="mainDesc11" type="String"   />
+			<item name="MAIN_OBJ_11" logicalName="mainObj11" type="String"   />
+			<item name="DTL_OBJ_11" logicalName="dtlObj11" type="String"   />
+			<item name="MAIN_DESC_12" logicalName="mainDesc12" type="String"   />
+			<item name="MAIN_OBJ_12" logicalName="mainObj12" type="String"   />
+			<item name="DTL_OBJ_12" logicalName="dtlObj12" type="String"   />
+			<item name="MAIN_DESC_13" logicalName="mainDesc13" type="String"   />
+			<item name="MAIN_OBJ_13" logicalName="mainObj13" type="String"   />
+			<item name="DTL_OBJ_13" logicalName="dtlObj13" type="String"   />
+			<item name="MAIN_DESC_14" logicalName="mainDesc14" type="String"   />
+			<item name="MAIN_OBJ_14" logicalName="mainObj14" type="String"   />
+			<item name="DTL_OBJ_14" logicalName="dtlObj14" type="String"   />
+			<item name="MAIN_DESC_15" logicalName="mainDesc15" type="String"   />
+			<item name="MAIN_OBJ_15" logicalName="mainObj15" type="String"   />
+			<item name="DTL_OBJ_15" logicalName="dtlObj15" type="String"   />
+			<item name="MAIN_DESC_16" logicalName="mainDesc16" type="String"   />
+			<item name="MAIN_OBJ_16" logicalName="mainObj16" type="String"   />
+			<item name="DTL_OBJ_16" logicalName="dtlObj16" type="String"   />
+			<item name="MAIN_DESC_17" logicalName="mainDesc17" type="String"   />
+			<item name="MAIN_OBJ_17" logicalName="mainObj17" type="String"   />
+			<item name="DTL_OBJ_17" logicalName="dtlObj17" type="String"   />
+			<item name="MAIN_DESC_18" logicalName="mainDesc18" type="String"   />
+			<item name="MAIN_OBJ_18" logicalName="mainObj18" type="String"   />
+			<item name="DTL_OBJ_18" logicalName="dtlObj18" type="String"   />
+			<item name="MAIN_DESC_19" logicalName="mainDesc19" type="String"   />
+			<item name="MAIN_OBJ_19" logicalName="mainObj19" type="String"   />
+			<item name="DTL_OBJ_19" logicalName="dtlObj19" type="String"   />
+			<item name="MAIN_DESC_20" logicalName="mainDesc20" type="String"   />
+			<item name="MAIN_OBJ_20" logicalName="mainObj20" type="String"   />
+			<item name="DTL_OBJ_20" logicalName="dtlObj20" type="String"   />
+			<item name="MAIN_DESC_21" logicalName="mainDesc21" type="String"   />
+			<item name="MAIN_OBJ_21" logicalName="mainObj21" type="String"   />
+			<item name="DTL_OBJ_21" logicalName="dtlObj21" type="String"   />
+			<item name="MAIN_DESC_22" logicalName="mainDesc22" type="String"   />
+			<item name="MAIN_OBJ_22" logicalName="mainObj22" type="String"   />
+			<item name="DTL_OBJ_22" logicalName="dtlObj22" type="String"   />
+			<item name="MAIN_DESC_23" logicalName="mainDesc23" type="String"   />
+			<item name="MAIN_OBJ_23" logicalName="mainObj23" type="String"   />
+			<item name="DTL_OBJ_23" logicalName="dtlObj23" type="String"   />
+			<item name="MAIN_DESC_24" logicalName="mainDesc24" type="String"   />
+			<item name="MAIN_OBJ_24" logicalName="mainObj24" type="String"   />
+			<item name="DTL_OBJ_24" logicalName="dtlObj24" type="String"   />
+			<item name="MAIN_DESC_25" logicalName="mainDesc25" type="String"   />
+			<item name="MAIN_OBJ_25" logicalName="mainObj25" type="String"   />
+			<item name="DTL_OBJ_25" logicalName="dtlObj25" type="String"   />
+			<item name="MAIN_DESC_26" logicalName="mainDesc26" type="String"   />
+			<item name="MAIN_OBJ_26" logicalName="mainObj26" type="String"   />
+			<item name="DTL_OBJ_26" logicalName="dtlObj26" type="String"   />
+			<item name="MAIN_DESC_27" logicalName="mainDesc27" type="String"   />
+			<item name="MAIN_OBJ_27" logicalName="mainObj27" type="String"   />
+			<item name="DTL_OBJ_27" logicalName="dtlObj27" type="String"   />
+			<item name="MAIN_DESC_28" logicalName="mainDesc28" type="String"   />
+			<item name="MAIN_OBJ_28" logicalName="mainObj28" type="String"   />
+			<item name="DTL_OBJ_28" logicalName="dtlObj28" type="String"   />
+			<item name="MAIN_DESC_29" logicalName="mainDesc29" type="String"   />
+			<item name="MAIN_OBJ_29" logicalName="mainObj29" type="String"   />
+			<item name="DTL_OBJ_29" logicalName="dtlObj29" type="String"   />
+			<item name="MAIN_DESC_30" logicalName="mainDesc30" type="String"   />
+			<item name="MAIN_OBJ_30" logicalName="mainObj30" type="String"   />
+			<item name="DTL_OBJ_30" logicalName="dtlObj30" type="String"   />
+			<item name="MAIN_DESC_31" logicalName="mainDesc31" type="String"   />
+			<item name="MAIN_OBJ_31" logicalName="mainObj31" type="String"   />
+			<item name="DTL_OBJ_31" logicalName="dtlObj31" type="String"   />
+			<item name="MAIN_DESC_32" logicalName="mainDesc32" type="String"   />
+			<item name="MAIN_OBJ_32" logicalName="mainObj32" type="String"   />
+			<item name="DTL_OBJ_32" logicalName="dtlObj32" type="String"   />
+			<item name="MAIN_DESC_33" logicalName="mainDesc33" type="String"   />
+			<item name="MAIN_OBJ_33" logicalName="mainObj33" type="String"   />
+			<item name="DTL_OBJ_33" logicalName="dtlObj33" type="String"   />
+			<item name="MAIN_DESC_34" logicalName="mainDesc34" type="String"   />
+			<item name="MAIN_OBJ_34" logicalName="mainObj34" type="String"   />
+			<item name="DTL_OBJ_34" logicalName="dtlObj34" type="String"   />
+			<item name="MAIN_DESC_35" logicalName="mainDesc35" type="String"   />
+			<item name="MAIN_OBJ_35" logicalName="mainObj35" type="String"   />
+			<item name="DTL_OBJ_35" logicalName="dtlObj35" type="String"   />
+			<item name="MAIN_DESC_36" logicalName="mainDesc36" type="String"   />
+			<item name="MAIN_OBJ_36" logicalName="mainObj36" type="String"   />
+			<item name="DTL_OBJ_36" logicalName="dtlObj36" type="String"   />
+			<item name="MAIN_DESC_37" logicalName="mainDesc37" type="String"   />
+			<item name="MAIN_OBJ_37" logicalName="mainObj37" type="String"   />
+			<item name="DTL_OBJ_37" logicalName="dtlObj37" type="String"   />
+			<item name="MAIN_DESC_38" logicalName="mainDesc38" type="String"   />
+			<item name="MAIN_OBJ_38" logicalName="mainObj38" type="String"   />
+			<item name="DTL_OBJ_38" logicalName="dtlObj38" type="String"   />
+			<item name="MAIN_DESC_39" logicalName="mainDesc39" type="String"   />
+			<item name="MAIN_OBJ_39" logicalName="mainObj39" type="String"   />
+			<item name="DTL_OBJ_39" logicalName="dtlObj39" type="String"   />
+			<item name="MAIN_DESC_40" logicalName="mainDesc40" type="String"   />
+			<item name="MAIN_OBJ_40" logicalName="mainObj40" type="String"   />
+			<item name="DTL_OBJ_40" logicalName="dtlObj40" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Guagmnu.model.SiteMap4</managerClass>
+
+	</manager>
+</b:beans>

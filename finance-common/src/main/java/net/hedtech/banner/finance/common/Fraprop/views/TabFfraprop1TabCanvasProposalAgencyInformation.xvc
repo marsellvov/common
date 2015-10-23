@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FORM_HEADER"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="FRBPROP"/>
+	<panel width="100%">
+		<collapsiblepanel label="proposalAgencyInformation.label" width="100%">
+			<panel width="100%">
+				<gridlayout cols="2" orientation="vertical">
+					<gridcell>
+						<textbox autoskip="true" block="FORM_HEADER" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="formHeader.frbpropAgencyCode2.prompt" maxlength="9" member="FRBPROP_AGENCY_CODE_2" name="frbpropAgencyCode2" validation="server" width="72px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<textbox block="FORM_HEADER" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="FRBPROP_AGENCY_NAME_2" name="frbpropAgencyName2" width="295px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropAgencyContact.prompt" maxlength="35" member="FRBPROP_AGENCY_CONTACT" name="frbpropAgencyContact" validation="server" width="295px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropAgencyPredCode.prompt" maxlength="9" member="FRBPROP_AGENCY_PRED_CODE" name="frbpropAgencyPredCode" validation="server" width="72px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<textbox block="FRBPROP" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="FRBPROP_AGENCY_PRED_NAME" name="frbpropAgencyPredName" width="295px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropAgencyAddrCode.prompt" maxlength="2" member="FRBPROP_AGENCY_ADDR_CODE" name="frbpropAgencyAddrCode" style="ui-buttoninput" validation="server" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRBPROP_AGENCY_ADDR_CODE_LBT" name="frbpropAgencyAddrCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frbpropAgencyAddrCodeLbt.tooltip" width="23px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</button>
+					</gridcell>
+					<gridcell>
+						<textbox autoskip="true" block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.frbpropAgencyAddrSeqNum.prompt" maxlength="2" member="FRBPROP_AGENCY_ADDR_SEQ_NUM" name="frbpropAgencyAddrSeqNum" style="ui-buttoninput" validation="server" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+						<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="AGENCY_ADDR_SEQ_NUM" name="agencyAddrSeqNum" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.agencyAddrSeqNum.tooltip" width="23px">
+							<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</button>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.addressHouseNumber.prompt" maxlength="10" member="ADDRESS_HOUSE_NUMBER" name="addressHouseNumber" validation="server" width="120px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.addressLine1.prompt" maxlength="75" member="ADDRESS_LINE_1" name="addressLine1" validation="server" width="346px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.addressLine2.prompt" maxlength="75" member="ADDRESS_LINE_2" name="addressLine2" validation="server" width="346px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.addressLine3.prompt" maxlength="75" member="ADDRESS_LINE_3" name="addressLine3" validation="server" width="346px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.addressLine4.prompt" maxlength="75" member="ADDRESS_LINE_4" name="addressLine4" validation="server" width="346px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.city.prompt" maxlength="50" member="CITY" name="city" validation="server" width="160px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.state.prompt" maxlength="30" member="STATE" name="state" validation="server" width="50px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.zipCode.prompt" maxlength="30" member="ZIP_CODE" name="zipCode" validation="server" width="77px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<checkbox block="FRBPROP" enabled="false" height="23px" label="frbprop.phoneExists.label" member="PHONE_EXISTS" name="phoneExists" value="Y" width="303px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</checkbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.phoneType.prompt" maxlength="4" member="PHONE_TYPE" name="phoneType" validation="server" width="51px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.ctryCodePhone.prompt" maxlength="4" member="CTRY_CODE_PHONE" name="ctryCodePhone" validation="server" width="73px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.areaCode.prompt" maxlength="6" member="AREA_CODE" name="areaCode" validation="server" width="73px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.phoneNumber.prompt" maxlength="12" member="PHONE_NUMBER" name="phoneNumber" validation="server" width="140px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+					<gridcell>
+						<textbox block="FRBPROP" case="upper" datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM,PREVIOUS_ITEM" label="frbprop.extension.prompt" maxlength="10" member="EXTENSION" name="extension" validation="server" width="120px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</textbox>
+					</gridcell>
+				</gridlayout>
+			</panel>
+		</collapsiblepanel>
+	</panel>
+</config>

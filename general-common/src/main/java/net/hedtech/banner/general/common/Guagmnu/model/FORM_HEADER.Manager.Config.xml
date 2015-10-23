@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FORM_HEADER.Manager.Config" name="FormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CURRENT_INSTITUTION" logicalName="currentInstitution" type="String"   />
+			<item name="CURRENT_FORM" logicalName="currentForm" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="CURRENT_LEVEL" logicalName="currentLevel" type="java.math.BigDecimal"   />
+			<item name="ALERT_MSG" logicalName="alertMsg" type="String"   />
+			<item name="POP_TEMPS_IND" logicalName="popTempsInd" type="String"   >
+				<value>
+					<constant>0</constant>
+				</value>	
+			</item>
+			<item name="TREE_POP" logicalName="treePop" type="String"   >
+				<value>
+					<constant>0</constant>
+				</value>	
+			</item>
+			<item name="BP_POP" logicalName="bpPop" type="String"   >
+				<value>
+					<constant>0</constant>
+				</value>	
+			</item>
+			<item name="GENERAL_INSTALLED_IND" logicalName="generalInstalledInd" type="String"   />
+			<item name="BXS_INSTALLED_IND" logicalName="bxsInstalledInd" type="String"   />
+			<item name="STUDENT_INSTALLED_IND" logicalName="studentInstalledInd" type="String"   />
+			<item name="ALUMNI_INSTALLED_IND" logicalName="alumniInstalledInd" type="String"   />
+			<item name="FINANCE_INSTALLED_IND" logicalName="financeInstalledInd" type="String"   />
+			<item name="FINAID_INSTALLED_IND" logicalName="finaidInstalledInd" type="String"   />
+			<item name="HUMANRE_INSTALLED_IND" logicalName="humanreInstalledInd" type="String"   />
+			<item name="AR_INSTALLED_IND" logicalName="arInstalledInd" type="String"   />
+			<item name="POSBUD_INSTALLED_IND" logicalName="posbudInstalledInd" type="String"   />
+			<item name="MENU_TO_EXPAND" logicalName="menuToExpand" type="String"   />
+			<item name="MENU_TO_EXPAND_LEVEL" logicalName="menuToExpandLevel" type="java.math.BigDecimal"   />
+			<item name="LAST_SEQ" logicalName="lastSeq" type="String"   />
+			<item name="WELCOME_USER" logicalName="welcomeUser" type="String"   />
+			<item name="GREEN_DATA_BAR_1" logicalName="greenDataBar1" type="String"   />
+			<item name="GRAY_DATA_BAR_1" logicalName="grayDataBar1" type="String"   />
+			<item name="GREEN_DATA_BAR_2" logicalName="greenDataBar2" type="String"   />
+			<item name="GRAY_DATA_BAR_2" logicalName="grayDataBar2" type="String"   />
+			<item name="GREEN_DATA_BAR_3" logicalName="greenDataBar3" type="String"   />
+			<item name="GRAY_DATA_BAR_3" logicalName="grayDataBar3" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Guagmnu.model.FormHeader</managerClass>
+
+	</manager>
+</b:beans>

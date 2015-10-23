@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config layout="positional" title="mainWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<formpanel height="591px" masterpage="com/atxsoftware/common/theme/master" name="mainWindow" width="1007px">
+		<include src="net/hedtech/general/common/libraries/Soqolib/views/PanelStudypath"/>
+		<include src="net/hedtech/general/common/libraries/Soqolib/views/PanelCurriculaSummaryTab"/>
+		<include src="net/hedtech/general/common/libraries/Soqolib/views/PanelCurriculaLiteCanvas"/>
+
+		<include src="net/hedtech/general/common/libraries/Soqolib/views/PanelCurriculaCanvas"/>
+	</formpanel>
+</config>

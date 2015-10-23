@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FORM_HEADER.Manager.Config" name="FormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="CURRENT_INSTITUTION" logicalName="currentInstitution" type="String"    /> 
+			<item name="WORKFLD" logicalName="workfld" type="String"    /> 
+			<item name="WORKDATE" logicalName="workdate" type="String"    /> 
+			<item name="TYPE_IND" logicalName="typeInd" type="String"    /> 
+			<item name="SRCE_IND" logicalName="srceInd" type="String"    /> 
+			<item name="CURRENT_DATE" logicalName="currentDate" type="String"    /> 
+			<item name="CURRENT_TIME" logicalName="currentTime" type="String"    /> 
+			<item name="CURRENT_FORM" logicalName="currentForm" type="String"    /> 
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"    /> 
+			<item name="HOLD_STATE" logicalName="holdState" type="String"    /> 
+			<item name="HOLD_CITY" logicalName="holdCity" type="String"    /> 
+		</items>
+		
+			<managerClass>net.hedtech.banner.student.common.Soisbgi.model.FormHeader</managerClass>
+
+	</manager>
+</b:beans>

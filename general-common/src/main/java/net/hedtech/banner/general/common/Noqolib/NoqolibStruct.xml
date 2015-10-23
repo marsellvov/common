@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FormStructure Name="NOQOLIB" LovDataPath="">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Noqolib/views/ViewMainWindow">
+      <ContentCanvas Id="PAGE_1">
+      </ContentCanvas>
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="FORM_HEADER">
+      <Item Id="CURRENT_RELEASE" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="3" Type="TextItem">
+      </Item>
+    </Block>
+    <Block Id="NOQOLIB">
+      <Item Id="N$_ACCI_CODE" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_FUND_CODE" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ORGN_CODE" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ACCT_CODE" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_PROG_CODE" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ACTV_CODE" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_LOCN_CODE" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="6" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_FUND_OVER" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ORGN_OVER" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ACCT_OVER" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_PROG_OVER" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_ACTV_OVER" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_ACCI_LOCN_OVER" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="1" Type="TextItem">
+      </Item>
+      <Item Id="N$_FOAPAL_FIELD" CanvasName="" AllowInsert="false" AllowSearch="false" AllowUpdate="false" Navigable="false" MaxLength="60" Type="TextItem">
+      </Item>
+    </Block>
+  </Logic>
+</FormStructure>

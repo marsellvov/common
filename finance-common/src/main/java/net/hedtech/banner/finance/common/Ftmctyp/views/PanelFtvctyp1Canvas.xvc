@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FTVCTYP"/>
+	<panel class="ContentCanvas" id="pnlFtvctyp1Canvas" menu="G$_DEFAULT_PM" name="FTVCTYP_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="ftvctyp.accordion.title">
+				<panel width="100%">
+					<gridview block="FTVCTYP" name="grdFtvctyp" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="FTVCTYP" case="upper" datatype="String" label="ftvctyp.ftvctypCode.prompt" labelstyle="DEFAULT" maxlength="2" member="FTVCTYP_CODE" name="ftvctypCode" required="true" validation="server" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="FTVCTYP" datatype="String" label="ftvctyp.ftvctypShortDesc.prompt" labelstyle="DEFAULT" maxlength="10" member="FTVCTYP_SHORT_DESC" name="ftvctypShortDesc" validation="server" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="FTVCTYP" datatype="String" label="ftvctyp.ftvctypLongDesc.prompt" labelstyle="DEFAULT" maxlength="35" member="FTVCTYP_LONG_DESC" name="ftvctypLongDesc" required="true" validation="server" width="100px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

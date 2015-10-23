@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<window layout="horizontal" title="mainWindow.title" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<include src="net/hedtech/banner/student/common/Spaiden/views/PanelKeyBlockCanvas"/>
+	<tabpanel style="ui-panel-view-container ui-notabs">
+		<tab label="main">
+			<!-- <include src="net/hedtech/banner/student/common/Spaiden/views/PanelSpridenCurrent1Canvas" xmlns:xc="urn:schemas:morphis:frames:control" xmlns:xl="urn:schemas:morphis:frames:logic" xmlns:xv="urn:schemas:morphis:frames:view"/> -->
+			<include src="net/hedtech/banner/student/common/Spaiden/views/PanelGIdenTabCanvas" xmlns:xc="urn:schemas:morphis:frames:control" xmlns:xl="urn:schemas:morphis:frames:logic" xmlns:xv="urn:schemas:morphis:frames:view"/>
+			<include src="net/hedtech/banner/student/common/Spaiden/views/PanelGNavCanvas" xmlns:xc="urn:schemas:morphis:frames:control" xmlns:xl="urn:schemas:morphis:frames:logic" xmlns:xv="urn:schemas:morphis:frames:view"/>
+
+			<include src="net/hedtech/general/common/libraries/Goqolib/views/PanelGWelcomeCanvas" xmlns:xc="urn:schemas:morphis:frames:control" xmlns:xl="urn:schemas:morphis:frames:logic" xmlns:xv="urn:schemas:morphis:frames:view"/>
+		</tab>
+	</tabpanel>
+</window>

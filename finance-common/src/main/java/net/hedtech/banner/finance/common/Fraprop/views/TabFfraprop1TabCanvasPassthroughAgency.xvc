@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FORM_HEADER"/>
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="FRRPRPT"/>
+	<accordion width="100%">
+		<panel label="Pass Through Agency Information">
+			<panel width="100%">
+				<gridview block="FRRPRPT" name="grdFrrprpt" width="100%">
+					<viewheader>
+						<viewcolumn autoskip="true" block="FRRPRPT" case="upper" datatype="String" label="frrprpt.frrprptAgencyCode.prompt" labelstyle="DEFAULT" maxlength="9" member="FRRPRPT_AGENCY_CODE" name="frrprptAgencyCode" validation="server" width="72px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							<editor>
+								<lovbox/>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="FRRPRPT" datatype="String" enabled="false" keyactions="NEXT_ITEM" label="frrprpt.frrprptAgcyName.prompt" labelstyle="DEFAULT" maxlength="230" member="FRRPRPT_AGCY_NAME" name="frrprptAgcyName" validation="server" width="319px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FRRPRPT" case="upper" datatype="Number" formatmask="999D99" keyactions="NEXT_ITEM" label="frrprpt.frrprptFederalFundPercent.prompt" labelstyle="DEFAULT" maxlength="6" maxvalue="100.0" member="FRRPRPT_FEDERAL_FUND_PERCENT" minvalue="0.0" name="frrprptFederalFundPercent" textalign="right" validation="server" width="56px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="FRRPRPT" datatype="String" keyactions="NEXT_ITEM" label="frrprpt.frrprptSponsorId.prompt" labelstyle="DEFAULT" maxlength="40" member="FRRPRPT_SPONSOR_ID" name="frrprptSponsorId" validation="server" width="239px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</panel>
+	</accordion>
+	<framepanel label="formHeader.total.prompt" width="100%">
+		<gridlayout>
+			<gridcell>
+				<textfield block="FORM_HEADER" datatype="Number" formatmask="999.99" height="23px" label="formHeader.total.prompt" maxlength="25" maxvalue="100.0" member="TOTAL" minvalue="0.0" name="total" textalign="right" width="56px">
+					<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+				</textfield>
+			</gridcell>
+		</gridlayout>
+	</framepanel>
+</config>

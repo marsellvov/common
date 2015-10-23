@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" title="page50.title">
+  <formpanel width="431px" height="181px" name="page50" masterpage="com/atxsoftware/common/theme/master">
+  </formpanel>
+</config>

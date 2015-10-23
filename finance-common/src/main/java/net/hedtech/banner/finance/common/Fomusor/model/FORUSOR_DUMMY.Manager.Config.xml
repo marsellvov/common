@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FORUSOR_DUMMY.Manager.Config" name="FORUSOR">
+		
+		<items>
+			<item name="FORUSOR_USER_ID_ENTERED" logicalName="forusorUserIdEntered" type="String" physicalName="FORUSOR_USER_ID_ENTERED"  />
+			<item name="FORUSOR_COAS_CODE" logicalName="forusorCoasCode" type="String" physicalName="FORUSOR_COAS_CODE"  />
+			<item name="FORUSOR_ORGN_CODE" logicalName="forusorOrgnCode" type="String" physicalName="FORUSOR_ORGN_CODE"  />
+			<item name="FORUSOR_ACCESS_IND" logicalName="forusorAccessInd" type="String" physicalName="FORUSOR_ACCESS_IND"  >
+				<value>
+					<constant>M</constant>
+				</value>	
+			</item>
+			<item name="FORUSOR_WBUD_ACCESS_IND" logicalName="forusorWbudAccessInd" type="String" physicalName="FORUSOR_WBUD_ACCESS_IND"  >
+				<value>
+					<constant>M</constant>
+				</value>	
+			</item>
+			<item name="FORUSOR_ACTIVITY_DATE" logicalName="forusorActivityDate" type="java.util.Date" physicalName="FORUSOR_ACTIVITY_DATE"  />
+			<item name="FORUSOR_USER_ID" logicalName="forusorUserId" type="String" physicalName="FORUSOR_USER_ID"  />
+			<item name="DUMMY" logicalName="dummy" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fomusor.model.ForusorDummyAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE forusor_user_id_entered = :KEY_BLOCK_USER_ID AND forusor_coas_code = '#']]></defaultWhereClause>	
+
+	</manager>
+</b:beans>

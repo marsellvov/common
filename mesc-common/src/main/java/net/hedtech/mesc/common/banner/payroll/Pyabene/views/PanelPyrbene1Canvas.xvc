@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="KEY_BLOCK" />
+  <interactionblock name="PDRBENE" />
+  <interactionblock name="FORM_HEADER" />
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <panel class="StackedCanvas" id="pnlPyrbene1Canvas" menu="G$_DEFAULT_PM" name="PYRBENE_1_CANVAS" width="100%">
+    <collapsiblepanel label="mainWindow.title" name="rect50" width="100%">
+      <repeater block="PDRBENE" width="100%">
+        <panel label="pyrbene1Canvas.graphic90.text" width="100%">
+          <gridlayout cols="2" orientation="vertical">
+            <gridcell>
+              <textbox autoskip="true" datatype="String" enabled="false" label="pdrbene.pdrbeneBeneLastName.prompt" labelstyle="DEFAULT" maxlength="60" member="PDRBENE_BENE_LAST_NAME" name="pdrbeneBeneLastName" width="319px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" datatype="String" enabled="false" label="pdrbene.pdrbeneBeneFirstName.prompt" labelstyle="DEFAULT" maxlength="60" member="PDRBENE_BENE_FIRST_NAME" name="pdrbeneBeneFirstName" width="319px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" case="upper" datatype="Number" enabled="false" keyactions="NEXT_ITEM" label="pdrbene.pdrbeneAge.prompt" labelstyle="DEFAULT" maxlength="3" member="PDRBENE_AGE" name="pdrbeneAge" width="88px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox datatype="String" enabled="false" label="pdrbene.pdrbeneBrelDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_BREL_DESC" name="pdrbeneBrelDesc" width="231px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <combobox autoskip="true" enabled="false" label="pdrbene.pdrbeneSexInd.prompt" labelstyle="DEFAULT" maxlength="1" member="PDRBENE_SEX_IND" name="pdrbeneSexInd" width="128px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <model>
+                  <item label="pdrbene.pdrbeneSexInd.item0.label" value="M" />
+                  <item label="pdrbene.pdrbeneSexInd.item1.label" value="F" />
+                  <item label="pdrbene.pdrbeneSexInd.item2.label" value="N" />
+                </model>
+              </combobox>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" style="ui-buttoninput" case="upper" datatype="String" keyactions="NEXT_ITEM" label="pdrbene.pdrbeneMartlCode.prompt" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_MARTL_CODE" name="pdrbeneMartlCode" validation="server" width="40px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" style="ui-buttoninput" label="pdrbene.pdrbeneMartlCodeLbt.label" icon="flashlit" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_MARTL_CODE_LBT" name="pdrbeneMartlCodeLbt" navigable="false" tooltip="pdrbene.pdrbeneMartlCodeLbt.tooltip" width="20px">
+                <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+              </button>
+              <textfield datatype="String" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_MARTL_DESC" name="pdrbeneMartlDesc" width="258px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" style="ui-buttoninput" case="upper" datatype="String" keyactions="NEXT_ITEM" label="pdrbene.pdrbeneNatnCode.prompt" labelstyle="DEFAULT" maxlength="5" member="PDRBENE_NATN_CODE" name="pdrbeneNatnCode" validation="server" width="40px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" style="ui-buttoninput" label="pdrbene.pdrbeneNatnCodeLbt.label" icon="flashlit" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_NATN_CODE_LBT" name="pdrbeneNatnCodeLbt" navigable="false" tooltip="pdrbene.pdrbeneNatnCodeLbt.tooltip" width="20px">
+                <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+              </button>
+              <textfield datatype="String" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_NATN_DESC" name="pdrbeneNatnDesc" width="258px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" style="ui-buttoninput" case="upper" datatype="String" keyactions="NEXT_ITEM" label="pdrbene.pdrbeneBirthNatn.prompt" labelstyle="DEFAULT" maxlength="5" member="PDRBENE_BIRTH_NATN" name="pdrbeneBirthNatn" validation="server" width="40px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" style="ui-buttoninput" label="pdrbene.pdrbeneBirthNatnLbt.label" icon="flashlit" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_BIRTH_NATN_LBT" name="pdrbeneBirthNatnLbt" navigable="false" tooltip="pdrbene.pdrbeneBirthNatnLbt.tooltip" width="20px">
+                <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+              </button>
+              <textfield datatype="String" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_BIRTH_NATN_DESC" name="pdrbeneBirthNatnDesc" width="258px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <checkbox action="WHEN-CHECKBOX-CHANGED" falsevalue="N" othervaluestate="unchecked" value="Y" label="pdrbene.pdrbeneTktElgbty.label" labelstyle="DEFAULT" maxlength="1" member="PDRBENE_TKT_ELGBTY" name="pdrbeneTktElgbty" required="true" width="321px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </checkbox>
+            </gridcell>
+            <gridcell>
+              <textbox datatype="String" style="ui-buttoninput" keyactions="NEXT_ITEM" label="pdrbene.pdrbeneAirfareCode.prompt" labelstyle="DEFAULT" maxlength="8" member="PDRBENE_AIRFARE_CODE" name="pdrbeneAirfareCode" validation="server" width="40px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" style="ui-buttoninput" label="pdrbene.pdrbeneAirfareCodeLbt.label" icon="flashlit" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_AIRFARE_CODE_LBT" name="pdrbeneAirfareCodeLbt" navigable="false" tooltip="pdrbene.pdrbeneAirfareCodeLbt.tooltip" width="20px">
+                <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+              </button>
+              <textfield datatype="String" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_AIRFARE_DESC" name="pdrbeneAirfareDesc" width="258px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" style="ui-buttoninput" case="upper" datatype="String" keyactions="NEXT_ITEM" label="pdrbene.pdrbeneHomeAirport.prompt" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_HOME_AIRPORT" name="pdrbeneHomeAirport" validation="server" width="40px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" style="ui-buttoninput" label="pdrbene.pdrbeneHomeAirportLbt.label" icon="flashlit" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_HOME_AIRPORT_LBT" name="pdrbeneHomeAirportLbt" navigable="false" tooltip="pdrbene.pdrbeneHomeAirportLbt.tooltip" width="20px">
+                <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+              </button>
+              <textfield datatype="String" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_HOME_AIRPORT_DESC" name="pdrbeneHomeAirportDesc" width="259px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" style="ui-buttoninput" case="upper" datatype="String" keyactions="NEXT_ITEM" label="pdrbene.pdrbeneHomeNatn.prompt" labelstyle="DEFAULT" maxlength="5" member="PDRBENE_HOME_NATN" name="pdrbeneHomeNatn" validation="server" width="40px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+              <button action="WHEN-BUTTON-PRESSED" style="ui-buttoninput" label="pdrbene.pdrbeneHomeNatnLbt.label" icon="flashlit" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_HOME_NATN_LBT" name="pdrbeneHomeNatnLbt" navigable="false" tooltip="pdrbene.pdrbeneHomeNatnLbt.tooltip" width="20px">
+                <xl:event action="WHEN-MOUSE-CLICK" name="click" />
+              </button>
+              <textfield datatype="String" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_HOME_NATN_DESC" name="pdrbeneHomeNatnDesc" width="263px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <checkbox block="PDRBENE" falsevalue="N" othervaluestate="unchecked" value="Y" label="pdrbene.pdrbeneEdufeeElgbty.label" labelstyle="DEFAULT" maxlength="1" member="PDRBENE_EDUFEE_ELGBTY" name="pdrbeneEdufeeElgbty" required="true" width="321px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </checkbox>
+            </gridcell>
+            <gridcell>
+              <checkbox block="PDRBENE" label="pdrbene.pdrbeneSplfeeElgbty.label" falsevalue="N" othervaluestate="unchecked" value="Y" labelstyle="DEFAULT" maxlength="1" member="PDRBENE_SPLFEE_ELGBTY" name="pdrbeneSplfeeElgbty" required="true" width="321px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </checkbox>
+            </gridcell>
+          </gridlayout>
+          <framepanel name="graphic95" width="100%" label="pyrbene1Canvas.graphic87.text">
+            <gridlayout cols="2" orientation="vertical">
+              <gridcell>
+                <textbox autoskip="true" style="ui-buttoninput" case="upper" datatype="String" keyactions="NEXT_ITEM" label="pdrbene.pdrbeneElgbtyReason.prompt" labelstyle="DEFAULT" maxlength="8" member="PDRBENE_ELGBTY_REASON" name="pdrbeneElgbtyReason" validation="server" width="40px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textbox>
+                <button action="WHEN-BUTTON-PRESSED" style="ui-buttoninput" label="pdrbene.pdrbeneElgbtyReasonLbt.label" icon="flashlit" labelstyle="DEFAULT" maxlength="30" member="PDRBENE_ELGBTY_REASON_LBT" name="pdrbeneElgbtyReasonLbt" navigable="false" tooltip="pdrbene.pdrbeneElgbtyReasonLbt.tooltip" width="20px">« 
+<xl:event action="WHEN-MOUSE-CLICK" name="click" /></button>
+                <textfield datatype="String" labelstyle="DEFAULT" maxlength="60" member="PDRBENE_ELGBTY_REASON_DESC" name="pdrbeneElgbtyReasonDesc" width="281px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </textfield>
+              </gridcell>
+              <gridcell>
+                <calendar autoskip="true" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="pdrbene.pdrbeneReasonDate.prompt" labelstyle="DEFAULT" maxlength="26" member="PDRBENE_REASON_DATE" name="pdrbeneReasonDate" width="110px">
+                  <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                </calendar>
+              </gridcell>
+            </gridlayout>
+          </framepanel>
+        </panel>
+      </repeater>
+    </collapsiblepanel>
+  </panel>
+</config>

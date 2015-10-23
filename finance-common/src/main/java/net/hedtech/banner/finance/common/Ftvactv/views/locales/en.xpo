@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="ftvactv.ftvactvCoasCode.prompt">Chart of Accounts</msg>
+  <msg id="ftvactv.ftvactvActvCode.prompt">Activity Code</msg>
+  <msg id="ftvactv.ftvactvTitle.prompt">Title</msg>
+  <msg id="ftvactv.ftvactvStatusInd.prompt">Status</msg>
+  <msg id="ftvactv.ftvactvEffDate.prompt">Effective Date</msg>
+  <msg id="ftvactv.ftvactvTermDate.prompt">Termination Date</msg>
+  <msg id="buttonControlBlock.ftvactv1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.ftvactv1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.ftvactv1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Activity Code Validation</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+  <msg id="ftvcoasLov.title">Chart of Accounts List (FTVCOAS)</msg>
+  <msg id="ftvcoasLov.ftvcoasCoasCode.title">COA</msg>
+  <msg id="ftvcoasLov.ftvcoasTitle.title">Chart of Account Title</msg>
+  <msg id="ftvcoasLov.ftvcoasStatusInd.title">Status</msg>
+  <msg id="ftvcoasLov.icrggq0.title">Eff Date</msg>
+  <msg id="ftvcoasLov.icrggq1.title">Term Date</msg>
+</messages>

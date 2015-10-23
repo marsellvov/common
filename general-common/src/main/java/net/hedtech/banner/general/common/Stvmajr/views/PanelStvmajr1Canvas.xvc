@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<interactionblock name="STVMAJR"/>
+	<panel class="ContentCanvas" id="pnlStvmajr1Canvas" menu="G$_DEFAULT_PM" name="STVMAJR_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="stvmajr.accordion.title">
+				<panel width="100%">
+					<gridview block="STVMAJR" name="grdStvmajr" width="100%">
+						<viewheader height="30px">
+							<viewcolumn autoskip="true" block="STVMAJR" case="upper" datatype="String" label="stvmajr.stvmajrCode.prompt" labelstyle="DEFAULT" maxlength="4" member="STVMAJR_CODE" name="stvmajrCode" required="true">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVMAJR" datatype="String" label="stvmajr.stvmajrDescription.prompt" labelstyle="DEFAULT" maxlength="30" member="STVMAJR_DESC" name="stvmajrDesc" required="true" width="170px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVMAJR" case="upper" datatype="String" keyactions="NEXT_ITEM" label="stvmajr.stvmajrCipcCode.prompt" labelstyle="DEFAULT" maxlength="30" member="STVMAJR_CIPC_CODE" name="stvmajrCipcCode" width="55px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVMAJR" case="upper" datatype="String" label="stvmajr.stvmajrValidMajorInd.prompt" labelstyle="DEFAULT" maxlength="1" member="STVMAJR_VALID_MAJOR_IND" name="stvmajrValidMajorInd" width="60px">
+								<editor>
+									<checkbox othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVMAJR" case="upper" datatype="String" label="stvmajr.stvmajrValidMinorInd.prompt" labelstyle="DEFAULT" maxlength="1" member="STVMAJR_VALID_MINOR_IND" name="stvmajrValidMinorInd" width="60px">
+								<editor>
+									<checkbox othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVMAJR" case="upper" datatype="String" label="stvmajr.stvmajrValidConcentratnInd.prompt" labelstyle="DEFAULT" maxlength="1" member="STVMAJR_VALID_CONCENTRATN_IND" name="stvmajrValidConcentratnInd" width="110px">
+								<editor>
+									<checkbox othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVMAJR" case="upper" datatype="String" label="stvmajr.stvmajrOccupationInd.prompt" labelstyle="DEFAULT" maxlength="1" member="STVMAJR_OCCUPATION_IND" name="stvmajrOccupationInd">
+								<editor>
+									<checkbox othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVMAJR" case="upper" datatype="String" label="stvmajr.stvmajrAidEligibilityInd.prompt" labelstyle="DEFAULT" maxlength="1" member="STVMAJR_AID_ELIGIBILITY_IND" name="stvmajrAidEligibilityInd">
+								<editor>
+									<checkbox othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVMAJR" datatype="Number" label="stvmajr.stvmajrVrMsgNo.prompt" labelstyle="DEFAULT" maxlength="6" member="STVMAJR_VR_MSG_NO" name="stvmajrVrMsgNo" textalign="right">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVMAJR" case="upper" datatype="String" label="stvmajr.stvmajrSevisEquiv.prompt.label" labelstyle="DEFAULT" maxlength="6" member="STVMAJR_SEVIS_EQUIV" name="stvmajrSevisEquiv">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVMAJR" case="upper" datatype="String" label="stvmajr.stvmajrSystemReqInd.prompt" labelstyle="DEFAULT" maxlength="1" member="STVMAJR_SYSTEM_REQ_IND" name="stvmajrSystemReqInd">
+								<editor>
+									<checkbox othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

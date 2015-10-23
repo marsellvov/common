@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="WEBUTIL"/>
+	<panel class="ContentCanvas" id="pnlWebutilCanvas" menu="G$_DEFAULT_PM" name="WEBUTIL_CANVAS" width="100%">
+		<button action="WHEN-BUTTON-PRESSED" block="WEBUTIL" fontfamily="Arial" fontsize="10pt" foregroundcolor="Black" height="21px" label="webutil.dummy.label" member="DUMMY" name="dummy" navigable="false" width="85px"/>
+	</panel>
+</config>

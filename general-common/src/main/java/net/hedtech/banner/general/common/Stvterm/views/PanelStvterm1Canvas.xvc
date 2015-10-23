@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="STVTERM"/>
+	<panel class="ContentCanvas" id="pnlStvterm1Canvas" menu="G$_DEFAULT_PM" name="STVTERM_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="STVTERM" name="grdStvterm" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="String" label="stvterm.stvtermCode.prompt" labelstyle="DEFAULT" maxlength="6" member="STVTERM_CODE" name="stvtermCode" required="true" width="75px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" datatype="String" label="stvterm.stvtermDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="STVTERM_DESC" name="stvtermDesc" required="true" width="200px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="stvterm.stvtermStartDate.prompt" labelstyle="DEFAULT" maxlength="11" member="STVTERM_START_DATE" name="stvtermStartDate" required="true" validation="server" width="100px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="stvterm.stvtermEndDate.prompt" labelstyle="DEFAULT" maxlength="11" member="STVTERM_END_DATE" name="stvtermEndDate" required="true" validation="server" width="100px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="String" keyactions="NEXT_ITEM" label="stvterm.stvtermTrmtCode.prompt" labelstyle="DEFAULT" maxlength="30" member="STVTERM_TRMT_CODE" name="stvtermTrmtCode" width="75px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="String" keyactions="NEXT_ITEM" label="stvterm.stvtermAcyrCode.prompt" labelstyle="DEFAULT" maxlength="30" member="STVTERM_ACYR_CODE" name="stvtermAcyrCode" required="true" width="95px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+								<editor>
+									<lovbox/>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="stvterm.stvtermHousingStartDate.prompt" labelstyle="DEFAULT" maxlength="11" member="STVTERM_HOUSING_START_DATE" name="stvtermHousingStartDate" required="true" validation="server" width="115px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="Date" formatmask="DD-MON-YYYY" keyactions="NEXT_ITEM" label="stvterm.stvtermHousingEndDate.prompt" labelstyle="DEFAULT" maxlength="11" member="STVTERM_HOUSING_END_DATE" name="stvtermHousingEndDate" required="true" validation="server" width="110px">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="String" label="stvterm.stvtermFaProcYr.prompt" labelstyle="DEFAULT" maxlength="4" member="STVTERM_FA_PROC_YR" name="stvtermFaProcYr" width="160px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="String" label="stvterm.stvtermFaSummerInd.label" labelstyle="DEFAULT" maxlength="1" member="STVTERM_FA_SUMMER_IND" name="stvtermFaSummerInd" width="65px">
+								<editor>
+									<checkbox othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="String" label="stvterm.stvtermFaTerm.prompt" labelstyle="DEFAULT" maxlength="1" maxvalue="6" member="STVTERM_FA_TERM" minvalue="1" name="stvtermFaTerm" width="45px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" datatype="Number" label="stvterm.stvtermFaPeriod.prompt" labelstyle="DEFAULT" maxlength="2" maxvalue="12" member="STVTERM_FA_PERIOD" minvalue="1" name="stvtermFaPeriod" textalign="right" width="110px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" datatype="Number" label="stvterm.stvtermFaEndPeriod.prompt" labelstyle="DEFAULT" maxlength="2" maxvalue="12" member="STVTERM_FA_END_PERIOD" minvalue="1" name="stvtermFaEndPeriod" textalign="right" width="90px">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="STVTERM" case="upper" datatype="String" label="stvterm.stvtermSystemReqInd.label" labelstyle="DEFAULT" maxlength="1" member="STVTERM_SYSTEM_REQ_IND" name="stvtermSystemReqInd" width="100px">
+								<editor>
+									<checkbox othervaluestate="unchecked" value="Y">
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</checkbox>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

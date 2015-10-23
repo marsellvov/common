@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="MY_LINKS.Manager.Config" name="MyLinks">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="NEW_MESSAGE_IMAGE" logicalName="newMessageImage" type="String"   />
+			<item name="MY_INST_IMAGE" logicalName="myInstImage" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.general.common.Guagmnu.model.MyLinks</managerClass>
+
+	</manager>
+</b:beans>

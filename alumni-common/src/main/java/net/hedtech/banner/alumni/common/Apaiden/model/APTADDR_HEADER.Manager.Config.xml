@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="APTADDR_HEADER.Manager.Config" name="AptaddrHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="ADDR_NAME_LF30" logicalName="addrNameLf30" type="String"    /> 
+			<item name="ADDR_ID" logicalName="addrId" type="String"    /> 
+			<item name="ADDR_ATYP_CODE" logicalName="addrAtypCode" type="String"    /> 
+			<item name="ADDR_ATYP_DESC" logicalName="addrAtypDesc" type="String"    /> 
+			<item name="ADDR_ADDR_SEQNO" logicalName="addrAddrSeqno" type="java.math.BigDecimal"    /> 
+			<item name="ADDR_HOUSE_NUMBER" logicalName="addrHouseNumber" type="String"    /> 
+			<item name="ADDR_STREET_LINE1" logicalName="addrStreetLine1" type="String"    /> 
+			<item name="ADDR_STREET_LINE2" logicalName="addrStreetLine2" type="String"    /> 
+			<item name="ADDR_STREET_LINE3" logicalName="addrStreetLine3" type="String"    /> 
+			<item name="ADDR_STREET_LINE4" logicalName="addrStreetLine4" type="String"    /> 
+			<item name="ADDR_CITY" logicalName="addrCity" type="String"    /> 
+			<item name="ADDR_STAT_CODE" logicalName="addrStatCode" type="String"    /> 
+			<item name="ADDR_ZIP" logicalName="addrZip" type="String"    /> 
+			<item name="ADDR_FROM_DATE" logicalName="addrFromDate" type="java.util.Date"    /> 
+			<item name="ADDR_NATN_DESC" logicalName="addrNatnDesc" type="String"    /> 
+			<item name="ADDR_CNTY_DESC" logicalName="addrCntyDesc" type="String"    /> 
+			<item name="ADDR_TO_DATE" logicalName="addrToDate" type="java.util.Date"    /> 
+			<item name="ADDR_TELE_CODE" logicalName="addrTeleCode" type="String"    /> 
+			<item name="ADDR_TELE_DESC" logicalName="addrTeleDesc" type="String"    /> 
+			<item name="ADDR_PHONE" logicalName="addrPhone" type="String"    /> 
+			<item name="ADDR_CNTY_CODE" logicalName="addrCntyCode" type="String"    /> 
+			<item name="ADDR_NATN_CODE" logicalName="addrNatnCode" type="String"    /> 
+			<item name="ADDR_IN_USE_PIDM" logicalName="addrInUsePidm" type="String"    /> 
+			<item name="ADDR_IN_USE_USER" logicalName="addrInUseUser" type="String"    /> 
+			<item name="ADDR_IN_USE_NAME_LF30" logicalName="addrInUseNameLf30" type="String"    /> 
+			<item name="HOUSEHOLD_COUNT" logicalName="householdCount" type="String"    > 
+				<value>
+					<constant>0</constant>
+				</value>	
+			</item>
+			<item name="ADDR_DATA_BAR_1" logicalName="addrDataBar1" type="String"    /> 
+		</items>
+		
+			<managerClass>net.hedtech.banner.alumni.common.Apaiden.model.AptaddrHeader</managerClass>
+
+	</manager>
+</b:beans>

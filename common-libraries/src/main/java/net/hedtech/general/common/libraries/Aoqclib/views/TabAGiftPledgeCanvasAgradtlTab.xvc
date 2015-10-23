@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="AGRADTL"/>
+	<panel width="100%">
+		<collapsiblepanel label="mainWindow.title" name="grdAgradtl" width="100%">
+			<panel width="100%">
+				<gridview block="AGRADTL" height="398px" width="100%">
+					<viewheader>
+						<viewcolumn autoskip="true" block="AGRADTL" case="upper" datatype="String" keyactions="NEXT_ITEM" label="agradtl.agradtlPledgeNo.prompt" labelstyle="DEFAULT" member="AGRADTL_PLEDGE_NO" name="agradtlPledgeNo" width="56px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="AGRADTL" datatype="String" label="agradtl.agradtlComment.prompt" labelstyle="DEFAULT" member="AGRADTL_COMMENT" multiline="true" name="agradtlComment" width="648px"/>
+						<viewcolumn block="AGRADTL" datatype="String" label="agradtl.agradtlDetails.prompt" labelstyle="DEFAULT" member="AGRADTL_DETAILS" name="agradtlDetails" width="867px"/>
+						<viewcolumn autoskip="true" block="AGRADTL" case="upper" datatype="String" keyactions="NEXT_ITEM" label="agradtl.agradtlAdtlCode.prompt" labelstyle="DEFAULT" member="AGRADTL_ADTL_CODE" name="agradtlAdtlCode" width="173px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="AGRADTL" icon="flashlit" labelstyle="DEFAULT" member="AGRADTL_PLEDGE_NO_LBT" name="agradtlPledgeNoLbt" navigable="false" tooltip="agradtl.agradtlPledgeNoLbt.tooltip" width="20px">
+							<editor>
+								<button label="agradtl.agradtlPledgeNoLbt.label">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+								</button>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="AGRADTL" icon="search" labelstyle="DEFAULT" member="AGRADTL_ADTL_CODE_LBT" name="agradtlAdtlCodeLbt" navigable="false" tooltip="agradtl.agradtlAdtlCodeLbt.tooltip" width="20px">
+							<editor>
+								<button>
+									<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+								</button>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="AGRADTL" datatype="String" labelstyle="DEFAULT" member="ADTL_DESC" name="adtlDesc" width="399px"/>
+						<viewcolumn autoskip="true" block="AGRADTL" case="upper" datatype="String" keyactions="NEXT_ITEM" label="agradtl.agradtlGiftNo.prompt" labelstyle="DEFAULT" member="AGRADTL_GIFT_NO" name="agradtlGiftNo" width="56px">
+							<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+						</viewcolumn>
+						<viewcolumn block="AGRADTL" icon="flashlit" labelstyle="DEFAULT" member="AGRADTL_GIFT_NO_LBT" name="agradtlGiftNoLbt" navigable="false" tooltip="agradtl.agradtlGiftNoLbt.tooltip" width="20px">
+							<editor>
+								<button label="agradtl.agradtlGiftNoLbt.label">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+								</button>
+							</editor>
+						</viewcolumn>
+						<viewcolumn block="AGRADTL" case="upper" datatype="Number" formatmask="999G999G999G999G990D99" label="agradtl.agradtlAmt.prompt" labelstyle="DEFAULT" member="AGRADTL_AMT" name="agradtlAmt" textalign="right" width="120px"/>
+						<viewcolumn block="AGRADTL" icon="comments" labelstyle="DEFAULT" member="AGRADTL_COMMENT_BTN" name="agradtlCommentBtn" navigable="false" tooltip="agradtl.agradtlCommentBtn.tooltip" width="20px">
+							<editor>
+								<button action="WHEN-BUTTON-PRESSED">
+									<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+								</button>
+							</editor>
+						</viewcolumn>
+					</viewheader>
+				</gridview>
+			</panel>
+		</collapsiblepanel>
+	</panel>
+</config>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GXVDIRD.Manager.Config" name="GXVDIRD">
+		
+		<items>
+			<item name="GXVDIRD_CODE_BANK_ROUT_NUM" logicalName="gxvdirdCodeBankRoutNum" type="String" physicalName="GXVDIRD_CODE_BANK_ROUT_NUM"  />
+			<item name="GXVDIRD_DESC" logicalName="gxvdirdDesc" type="String" physicalName="GXVDIRD_DESC"  />
+			<item name="GXVDIRD_ACTIVITY_DATE" logicalName="gxvdirdActivityDate" type="java.util.Date" physicalName="GXVDIRD_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+			<item name="GXVDIRD_USER_ID" logicalName="gxvdirdUserId" type="String" physicalName="GXVDIRD_USER_ID"  />
+			<item name="DEL_PENDING" logicalName="delPending" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Gxvdird.model.GxvdirdAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[gxvdird_code_bank_rout_num]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

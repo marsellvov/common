@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="formHeader.hdCoas.prompt">Chart of Account</msg>
+  <msg id="formHeader.hdEntity.prompt">Entity</msg>
+  <msg id="formHeader.hdAttr.prompt">Attribute</msg>
+  <msg id="ftvsdat.ftvsdatSdatCodeOpt1.prompt">Option1</msg>
+  <msg id="ftvsdat.ftvsdatSdatCodeOpt2.prompt">Option2</msg>
+  <msg id="ftvsdat.ftvsdatCodeLevel.prompt">Level</msg>
+  <msg id="ftvsdat.ftvsdatStatusInd.prompt">Status</msg>
+  <msg id="ftvsdat.ftvsdatEffDate.prompt">Effective Date</msg>
+  <msg id="ftvsdat.ftvsdatData.prompt">Data</msg>
+  <msg id="ftvsdat.ftvsdatTitle.prompt">Long Title</msg>
+  <msg id="buttonControlBlock.ftvsdat1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.ftvsdat1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.ftvsdat1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">System Data List Form</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+  <msg id="ftvsdat.accordion.title">SYSTEM DATA LIST</msg>
+  <msg id="ftvsdatLov.title">System Data Validation List (FTVSDAT)</msg>
+  <msg id="ftvsdatLov.ftvsdatCoasCode.title">COA</msg>
+  <msg id="ftvsdatLov.ftvsdatSdatCodeEntity.title">Entity</msg>
+  <msg id="ftvsdatLov.ftvsdatSdatCodeOpt1.title">Opt#1</msg>
+  <msg id="ftvsdatLov.ftvsdatSdatCodeAttr.title">Attribute</msg>
+  <msg id="ftvsdatLov.ftvsdatSdatCodeOpt2.title">Opt#2</msg>
+  <msg id="ftvsdatLov.ftvsdatShortTitle.title">Short Title</msg>
+  <msg id="ftvsdatLov.ftvsdatCodeLevel.title">Level</msg>
+  <msg id="ftvsdatLov.ftvsdatData.title">Data</msg>
+  <msg id="ftvsdatLov.ftvsdatStatusInd.title">Status</msg>
+  <msg id="ftvsdatLov.icrggq0.title">Eff Date</msg>
+</messages>

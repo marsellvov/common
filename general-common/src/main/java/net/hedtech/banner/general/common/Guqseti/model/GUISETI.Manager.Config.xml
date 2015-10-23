@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GUISETI.Manager.Config" name="GUISETI">
+		<kind>StoredProcedure</kind>
+		<items>
+			<item name="VPDI_CODE" logicalName="vpdiCode" type="String" physicalName="VPDI_CODE"   /> 
+			<item name="PRIMARY_IND" logicalName="primaryInd" type="String" physicalName="PRIMARY_IND"   /> 
+			<item name="CODE_DESC" logicalName="codeDesc" type="String" physicalName="CODE_DESC"   /> 
+		</items>
+		
+			<select name="g$_vpdi_security.g$_vpdi_get_user_insts" >				
+				<parameters>
+						<parameter name="VPDI_INFO" type="morphis.foundations.core.appsupportlib.model.DBBusinessObject" dbType="G$_VPDI_SECURITY.SECURITY_TABLE" direction="InputOutput">
+							<items>
+								<item name="VPDI_CODE" />	
+								<item name="PRIMARY_IND" />	
+								<item name="CODE_DESC" />	
+							</items>
+						</parameter>
+				</parameters>
+			</select>				
+		<adapterClass>net.hedtech.banner.general.common.Guqseti.model.GuisetiAdapter</adapterClass>
+		<pagination maximumRows="5" enabled="true"/>
+	</manager>
+</b:beans>

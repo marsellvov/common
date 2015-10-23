@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" title="commPlanWindow.title">
+  <formpanel width="1007px" height="266px" name="commPlanWindow" masterpage="com/atxsoftware/common/theme/master">
+    <include src="net/hedtech/general/common/libraries/Soqolib/views/PanelCommPlanCanvas">
+    </include>
+  </formpanel>
+</config>

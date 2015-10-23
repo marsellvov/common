@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="GOVCMRT_MATCH.Manager.Config" name="GOVCMRT">
+		<kind>View</kind>
+		<items>
+			<item name="MATCH_ID" logicalName="matchId" type="String"  virtual="true" />
+			<item name="MATCH_NAME" logicalName="matchName" type="String"  virtual="true" />
+			<item name="MATCH_SSN" logicalName="matchSsn" type="String"  virtual="true" />
+			<item name="MATCH_BIRTH_DATE" logicalName="matchBirthDate" type="java.util.Date"  virtual="true" />
+			<item name="MATCH_SEX" logicalName="matchSex" type="String"  virtual="true" >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="MATCH_ATYP_DESCRIPTION" logicalName="matchAtypDescription" type="String"  virtual="true" />
+			<item name="MATCH_ADDRESS_STATUS_IND" logicalName="matchAddressStatusInd" type="String"  virtual="true" />
+			<item name="MATCH_STREET_LINE1" logicalName="matchStreetLine1" type="String"  virtual="true" />
+			<item name="MATCH_STREET_LINE2" logicalName="matchStreetLine2" type="String"  virtual="true" />
+			<item name="MATCH_STREET_LINE3" logicalName="matchStreetLine3" type="String"  virtual="true" />
+			<item name="MATCH_CITY_STATE_ZIP" logicalName="matchCityStateZip" type="String"  virtual="true" />
+			<item name="MATCH_COUNTY" logicalName="matchCounty" type="String"  virtual="true" />
+			<item name="MATCH_COUNTY_NATION" logicalName="matchCountyNation" type="String"  virtual="true" />
+			<item name="MATCH_NATION" logicalName="matchNation" type="String"  virtual="true" />
+			<item name="MATCH_PHONE" logicalName="matchPhone" type="String"  virtual="true" />
+			<item name="MATCH_EMAIL" logicalName="matchEmail" type="String"  virtual="true" />
+			<item name="MATCH_ADID_CODE" logicalName="matchAdidCode" type="String"  virtual="true" />
+			<item name="MATCH_ADDITIONAL_ID" logicalName="matchAdditionalId" type="String"  virtual="true" />
+			<item name="ADDRESS_LIST" logicalName="addressList" type="String"  virtual="true" />
+			<item name="PHONE_LIST" logicalName="phoneList" type="String"  virtual="true" />
+			<item name="EMAIL_LIST" logicalName="emailList" type="String"  virtual="true" />
+			<item name="MATCH_LIST" logicalName="matchList" type="String"  virtual="true" >
+				<value>
+					<constant>NM</constant>
+				</value>	
+			</item>
+			<item name="GOVCMRT_CMSR_PRIORITY_NO" logicalName="govcmrtCmsrPriorityNo" type="java.math.BigDecimal" physicalName="GOVCMRT_CMSR_PRIORITY_NO"  />
+			<item name="GOVCMRT_MESSAGE" logicalName="govcmrtMessage" type="String" physicalName="GOVCMRT_MESSAGE"  />
+			<item name="GOVCMRT_PIDM" logicalName="govcmrtPidm" type="java.math.BigDecimal" physicalName="GOVCMRT_PIDM"  />
+			<item name="GOVCMRT_SPRIDEN_ID_ROWID" logicalName="govcmrtSpridenIdRowid" type="String" physicalName="GOVCMRT_SPRIDEN_ID_ROWID"  />
+			<item name="GOVCMRT_SPRIDEN_NAME_ROWID" logicalName="govcmrtSpridenNameRowid" type="String" physicalName="GOVCMRT_SPRIDEN_NAME_ROWID"  />
+			<item name="GOVCMRT_SPRADDR_ROWID" logicalName="govcmrtSpraddrRowid" type="String" physicalName="GOVCMRT_SPRADDR_ROWID"  />
+			<item name="GOVCMRT_SPRTELE_ROWID" logicalName="govcmrtSprteleRowid" type="String" physicalName="GOVCMRT_SPRTELE_ROWID"  />
+			<item name="GOVCMRT_GOREMAL_ROWID" logicalName="govcmrtGoremalRowid" type="String" physicalName="GOVCMRT_GOREMAL_ROWID"  />
+			<item name="GOVCMRT_GORADID_ROWID" logicalName="govcmrtGoradidRowid" type="String" physicalName="GOVCMRT_GORADID_ROWID"  />
+			<item name="GOVCMRT_ID" logicalName="govcmrtId" type="String" physicalName="GOVCMRT_ID"  />
+			<item name="GOVCMRT_NAME" logicalName="govcmrtName" type="String" physicalName="GOVCMRT_NAME"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.general.common.Goamtch.model.GovcmrtMatchAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE (GOVCMRT_PIDM = :FORM_HEADER_MATCH_PIDM AND :FORM_HEADER_MATCH_PIDM IS NOT NULL) AND GOVCMRT_RESULT_IND = 'M']]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[ORDER BY GOVCMRT_CMSR_PRIORITY_NO DESC]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

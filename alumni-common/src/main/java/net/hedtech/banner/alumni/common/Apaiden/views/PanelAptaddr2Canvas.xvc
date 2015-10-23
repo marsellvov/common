@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="BUTTON_CONTROL_BLOCK"/>
+	<panel class="ContentCanvas" id="pnlAptaddr2Canvas" name="APTADDR_2_CANVAS" width="100%">
+		<panel width="100%">
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" enabled="false" height="21px" keyactions="NEXT_BLOCK,PREVIOUS_BLOCK,PREVIOUS_ITEM,NEXT_ITEM" label="buttonControlBlock.aptaddrYes.label" member="APTADDR_YES" name="aptaddrYes" width="76px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+			<button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" enabled="false" height="21px" keyactions="NEXT_BLOCK,PREVIOUS_BLOCK,NEXT_ITEM,PREVIOUS_ITEM" label="buttonControlBlock.aptaddrNo.label" member="APTADDR_NO" name="aptaddrNo" width="76px">
+				<xl:event action="WHEN-MOUSE-CLICK" name="click"/>
+			</button>
+		</panel>
+	</panel>
+</config>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FORM_HEADER.Manager.Config" name="FormHeader">
+		<kind>SimpleBusinessObject</kind>
+		<items>
+			<item name="ORG_VALIDATE_FLAG" logicalName="orgValidateFlag" type="String"   />
+			<item name="ORG_P_VALIDATE_FLAG" logicalName="orgPValidateFlag" type="String"   />
+			<item name="FRBPROP_AGENCY_CODE_2" logicalName="frbpropAgencyCode2" type="String"   />
+			<item name="HOLD_DESC" logicalName="holdDesc" type="String"   />
+			<item name="FRBPROP_AGENCY_NAME_2" logicalName="frbpropAgencyName2" type="String"   />
+			<item name="WORK_STATUS_DESC" logicalName="workStatusDesc" type="String"   />
+			<item name="COMMIT_IND" logicalName="commitInd" type="String"   />
+			<item name="FROM_NEW_ITEM" logicalName="fromNewItem" type="String"   />
+			<item name="CURR_BLOCK" logicalName="currBlock" type="String"   />
+			<item name="CURRENT_FORM" logicalName="currentForm" type="String"   />
+			<item name="CURRENT_DATE" logicalName="currentDate" type="String"   />
+			<item name="CURRENT_TIME" logicalName="currentTime" type="String"   />
+			<item name="GOT_PIDM" logicalName="gotPidm" type="String"   />
+			<item name="CURRENT_RELEASE" logicalName="currentRelease" type="String"   />
+			<item name="CURRENT_INSTITUTION" logicalName="currentInstitution" type="String"   />
+			<item name="WORKUSER" logicalName="workuser" type="String"   />
+			<item name="CURRENT_USER1" logicalName="currentUser1" type="String"   />
+			<item name="WORKDATE" logicalName="workdate" type="String"   />
+			<item name="CALLFLD" logicalName="callfld" type="String"   />
+			<item name="ERR_IND" logicalName="errInd" type="String"   />
+			<item name="HOLD_PRESS" logicalName="holdPress" type="String"   />
+			<item name="HOLD_ALT_STATUS_DESC" logicalName="holdAltStatusDesc" type="String"   />
+			<item name="CHECK_BOX_DEFLT" logicalName="checkBoxDeflt" type="String"   />
+			<item name="HOLD_PRED" logicalName="holdPred" type="String"   />
+			<item name="CHECK_KEYS" logicalName="checkKeys" type="String"   />
+			<item name="ROLLBACK_IND" logicalName="rollbackInd" type="String"   />
+			<item name="RECLR_IND" logicalName="reclrInd" type="String"   />
+			<item name="COPY_IND" logicalName="copyInd" type="String"   />
+			<item name="BLOCK_STATUS_F" logicalName="blockStatusF" type="String"   />
+			<item name="BLOCK_STATUS_S" logicalName="blockStatusS" type="String"   />
+			<item name="WORKFLD" logicalName="workfld" type="String"   />
+			<item name="WORK_STATUS_IND" logicalName="workStatusInd" type="String"   />
+			<item name="RETRIEVED_ORGN_CODE" logicalName="retrievedOrgnCode" type="String"   />
+			<item name="HOLD_ORGN" logicalName="holdOrgn" type="String"   />
+			<item name="HOLD_FOBSEQN_TYPE" logicalName="holdFobseqnType" type="String"   />
+			<item name="POST_QUERY_IND" logicalName="postQueryInd" type="String"   />
+			<item name="BYPASS_REFORMAT" logicalName="bypassReformat" type="String"   />
+			<item name="HOLD_STATUS_CODE" logicalName="holdStatusCode" type="String"   />
+			<item name="HOLD_STATUS_DATE" logicalName="holdStatusDate" type="java.util.Date"   />
+			<item name="LOCN_ERROR_IND" logicalName="locnErrorInd" type="String"   />
+			<item name="HOLD_ITEM_NAME" logicalName="holdItemName" type="String"   />
+			<item name="HOLD_PI_ID_CODE" logicalName="holdPiIdCode" type="String"   />
+			<item name="HOLD_PI_ID_CODE_FRRPRPI" logicalName="holdPiIdCodeFrrprpi" type="String"   />
+			<item name="COPY_FUNCT_IND" logicalName="copyFunctInd" type="String"   />
+			<item name="COPY_FUNCT_PROCESS" logicalName="copyFunctProcess" type="String"   />
+			<item name="FRRPRPI_FRBPROP_COPY_ID" logicalName="frrprpiFrbpropCopyId" type="String"   />
+			<item name="CURRENT_AGENCY_CODE" logicalName="currentAgencyCode" type="java.math.BigDecimal"   />
+			<item name="TOTAL" logicalName="total" type="java.math.BigDecimal"   />
+			<item name="PRE_TOTAL" logicalName="preTotal" type="java.math.BigDecimal"   />
+			<item name="FROM_EXECUTE_QUERY" logicalName="fromExecuteQuery" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="STORE_ORG_STATUS_DESC" logicalName="storeOrgStatusDesc" type="String"   />
+			<item name="DATA_SEPARATOR_LINE_2" logicalName="dataSeparatorLine2" type="String"   />
+			<item name="FORM_CLEARED" logicalName="formCleared" type="String"   >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="DEL_READY" logicalName="delReady" type="String"   />
+			<item name="NEXT_DOC_NUM" logicalName="nextDocNum" type="String"   />
+		</items>
+		
+			<managerClass>net.hedtech.banner.finance.common.Fraprop.model.FormHeader</managerClass>
+
+	</manager>
+</b:beans>

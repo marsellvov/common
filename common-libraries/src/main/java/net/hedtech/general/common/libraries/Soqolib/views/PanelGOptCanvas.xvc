@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional" >
+  <interactionblock name="G$_OPT_BLOCK" />
+  <panel label="gOptWindow.title" style="lightbox" width="100%" class="ContentCanvas" id="panelGOptCanvas" name="G$_OPT_CANVAS">
+    <textbox labelposition="left" labelalign="start" name="optSel" style="DEFAULT" left="0px" top="0px" width="0px" height="0px" enabled="false" member="OPT_SEL" block="G$_OPT_BLOCK" maxlength="30" datatype="" case="mixed" />
+    <button labelposition="left" labelalign="start" name="selectADesc" style="DEFAULT" left="15px" top="1px" width="287px" height="27px" enabled="false" navigable="false" bordertype="none" member="SELECT_A_DESC" block="G$_OPT_BLOCK" maxlength="36" case="mixed" action="WHEN-BUTTON-PRESSED">
+      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+    </button>
+    <button labelposition="left" labelalign="start" name="selectBDesc" style="DEFAULT" left="15px" top="28px" width="287px" height="27px" enabled="false" navigable="false" bordertype="none" member="SELECT_B_DESC" block="G$_OPT_BLOCK" maxlength="36" case="mixed" action="WHEN-BUTTON-PRESSED">
+      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+    </button>
+    <button labelposition="left" labelalign="start" name="selectCDesc" style="DEFAULT" left="15px" top="55px" width="287px" height="27px" enabled="false" navigable="false" bordertype="none" member="SELECT_C_DESC" block="G$_OPT_BLOCK" maxlength="36" case="mixed" action="WHEN-BUTTON-PRESSED">
+      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+    </button>
+    <button labelposition="left" labelalign="start" name="selectDDesc" style="DEFAULT" left="15px" top="81px" width="287px" height="27px" enabled="false" navigable="false" bordertype="none" member="SELECT_D_DESC" block="G$_OPT_BLOCK" maxlength="36" case="mixed" action="WHEN-BUTTON-PRESSED">
+      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+    </button>
+    <button labelposition="left" labelalign="start" name="selectEDesc" style="DEFAULT" left="15px" top="108px" width="287px" height="27px" enabled="false" navigable="false" bordertype="none" member="SELECT_E_DESC" block="G$_OPT_BLOCK" maxlength="36" case="mixed" action="WHEN-BUTTON-PRESSED">
+      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+    </button>
+    <button labelposition="left" labelalign="start" name="selectFDesc" style="DEFAULT" left="15px" top="134px" width="287px" height="27px" enabled="false" navigable="false" bordertype="none" member="SELECT_F_DESC" block="G$_OPT_BLOCK" maxlength="36" case="mixed" action="WHEN-BUTTON-PRESSED">
+      <xl:event name="click" action="WHEN-MOUSE-CLICK" />
+    </button>
+    <button labelposition="left" labelalign="start" label="gOptBlock.optCancelBtn.label" name="optCancelBtn" style="GNvaButtonItem" left="223px" top="185px" width="80px" height="23px" enabled="false" navigable="false" wrapStyle="none" bordertype="raised" member="OPT_CANCEL_BTN" block="G$_OPT_BLOCK" maxlength="14" case="mixed" action="WHEN-BUTTON-PRESSED" />
+  </panel>
+</config>

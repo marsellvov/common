@@ -1,0 +1,990 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="SPRTELE_RG.ValueSet.Config" name="SPRTELE_RG">
+    <columns>
+		<column name="SPRTELE_TELE_CODE" type="String" size="4"/>
+		<column name="SPRTELE_CODE_DESC" type="String" size="30"/>
+		<column name="SPRTELE_PHONE" type="String" size="15"/>
+		<column name="SPRTELE_INTL_ACCESS" type="String" size="16"/>
+		<column name="SPRTELE_PRIMARY_IND" type="String" size="1"/>
+		<column name="SPRTELE_STATUS_IND" type="String" size="1"/>
+		<column name="SPRTELE_UNLIST_IND" type="String" size="1"/>
+		<column name="SPRTELE_ATYP_CODE" type="String" size="2"/>
+		<column name="SPRTELE_SEQNO" type="Number" size="3"/>
+		<column name="SPRTELE_ACTIVITY_DATE" type="Date" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxx' SPRTELE_TELE_CODE, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' sprtele_code_desc, 'xxxxxxxxxxxxxxx' SPRTELE_PHONE, 'xxxxxxxxxxxxxxxx' SPRTELE_INTL_ACCESS, 'x' SPRTELE_PRIMARY_IND, 'x' SPRTELE_STATUS_IND, 'x' SPRTELE_UNLIST_IND, 'xx' SPRTELE_ATYP_CODE, 'xxx' SPRTELE_SEQNO, 'xxxxxxxxxxx' SPRTELE_ACTIVITY_DATE  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQECLC_RG.ValueSet.Config" name="PTQECLC_RG">
+    <columns>
+		<column name="PTRECLC_LCAT_CODE" type="String" size="2"/>
+		<column name="PTVLCAT_DESC" type="String" size="30"/>
+		<column name="PTRECLC_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'XX' ptreclc_lcat_code, 'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' ptvlcat_desc, 'XXXXXXXXXXX' ptreclc_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVSTGR_RG.ValueSet.Config" name="PTVSTGR_RG">
+    <columns>
+		<column name="PTVSTGR_CODE" type="String" size="4"/>
+		<column name="PTVSTGR_DESC" type="String" size="15"/>
+		<column name="PTVSTGR_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxx' ptvstgr_code, 'xxxxxxxxxxxxxxx' ptvstgr_desc, 'xxxxxxxxxxxx' ptvstgr_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQWKPR_RG.ValueSet.Config" name="PTQWKPR_RG">
+    <columns>
+		<column name="PTRWKPR_CODE" type="String" size="4"/>
+		<column name="PTRWKPR_DESC" type="String" size="15"/>
+		<column name="PTRWKPR_NUMBER_OF_DAYS" type="String" size="3"/>
+		<column name="PTRWKPR_PERIOD_MAX_NON_OT_HRS" type="String" size="3"/>
+		<column name="PTRWKPR_DAILY_MAX_NON_OT_HRS" type="String" size="3"/>
+		<column name="PTRWKPR_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxx' ptrwkpr_code, 'xxxxxxxxxxxxxxx' ptrwkpr_desc, 'xxx' ptrwkpr_number_of_days, 'xxx' ptrwkpr_period_max_non_ot_hrs, 'xxx' ptrwkpr_daily_max_non_ot_hrs, 'xxxxxxxxxxxx' ptrwkpr_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVEGRP_RG.ValueSet.Config" name="PTVEGRP_RG">
+    <columns>
+		<column name="PTVEGRP_CODE" type="String" size="4"/>
+		<column name="PTVEGRP_DESC" type="String" size="15"/>
+		<column name="PTVEGRP_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxx' ptvegrp_code, 'xxxxxxxxxxxxxxx' ptvegrp_desc, 'xxxxxxxxxxxx' ptvegrp_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVNRSI_RG.ValueSet.Config" name="PTVNRSI_RG">
+    <columns>
+		<column name="PTVNRSI_CODE" type="String" size="4"/>
+		<column name="PTVNRSI_DESC" type="String" size="15"/>
+		<column name="PTVNRSI_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxx' ptvnrsi_code, 'xxxxxxxxxxxxxxx' ptvnrsi_desc, 'xxxxxxxxxxxx' ptvnrsi_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVLCAT_RG.ValueSet.Config" name="PTVLCAT_RG">
+    <columns>
+		<column name="PTVLCAT_CODE" type="String" size="4"/>
+		<column name="PTVLCAT_DESC" type="String" size="15"/>
+		<column name="PTVLCAT_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxx' ptvlcat_code, 'xxxxxxxxxxxxxxx' ptvlcat_desc, 'xxxxxxxxxxxx' ptvlcat_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQBCAT_RG.ValueSet.Config" name="PTQBCAT_RG">
+    <columns>
+		<column name="PTRBCAT_CODE" type="String" size="4"/>
+		<column name="PTRBCAT_DESC" type="String" size="15"/>
+		<column name="PTRBCAT_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxx' ptrbcat_code, 'xxxxxxxxxxxxxxx' ptrbcat_desc, 'xxxxxxxxxxxx' ptrbcat_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NBAJOBS_RG.ValueSet.Config" name="NBAJOBS_RG">
+    <columns>
+		<column name="NBRJOBS_COAS_CODE_TS" type="String" size="1"/>
+		<column name="NBRJOBS_ORGN_CODE_TS" type="String" size="6"/>
+		<column name="FTVORGN_DESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' nbrjobs_coas_code_ts, 'xxxxxx' nbrjobs_orgn_code_ts, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ftvorgn_desc  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQDCHN_RG.ValueSet.Config" name="PTQDCHN_RG">
+    <columns>
+		<column name="PTRBDCA_CODE" type="String" size="3"/>
+		<column name="PTRBDCA_LONG_DESC" type="String" size="31"/>
+		<column name="PTRBDCA_PRIORITY" type="Number" size="1"/>
+		<column name="PTRBDCA_CALC_RULE" type="String" size="2"/>
+		<column name="PTRBDCA_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptrbdca_code, 'x' ptrbdca_long_desc, 'x' ptrbdca_priority, 'x' ptrbdca_calc_rule, 'x' ptrbdca_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQECLS_RG.ValueSet.Config" name="PTQECLS_RG">
+    <columns>
+		<column name="PTRECLS_CODE" type="String" size="2"/>
+		<column name="PTRECLS_LONG_DESC" type="String" size="23"/>
+		<column name="PTRECLS_PICT_CODE" type="String" size="2"/>
+		<column name="PTRECLS_SALARY_ENCUMBRANCE_IND" type="String" size="1"/>
+		<column name="PTRECLS_TS_ROSTER_IND" type="String" size="1"/>
+		<column name="PTRECLS_SALARY_IND" type="String" size="1"/>
+		<column name="PTRECLS_EEOG_CODE" type="String" size="2"/>
+		<column name="PTRECLS_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptrecls_code, 'x' ptrecls_long_desc, 'x' ptrecls_pict_code, 'x' ptrecls_salary_encumbrance_ind, 'x' ptrecls_ts_roster_ind, 'x' ptrecls_salary_ind, 'x' ptrecls_eeog_code, 'x' ptrecls_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQEARN_RG.ValueSet.Config" name="PTQEARN_RG">
+    <columns>
+		<column name="PTREARN_CODE" type="String" size="3"/>
+		<column name="PTREARN_LONG_DESC" type="String" size="30"/>
+		<column name="PTREARN_RATE_IND" type="String" size="1"/>
+		<column name="PTREARN_RATE" type="Number" size="1"/>
+		<column name="PTREARN_MULT_FACTOR" type="Number" size="1"/>
+		<column name="PTREARN_TYPE_IND" type="String" size="2"/>
+		<column name="PTREARN_LEAV_CODE_TAKEN" type="String" size="4"/>
+		<column name="PTREARN_ECLD_IND" type="String" size="1"/>
+		<column name="PTREARN_BASE_SAL_IND" type="String" size="1"/>
+		<column name="PTREARN_EXCEPTION_IND" type="String" size="1"/>
+		<column name="PTREARN_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptrearn_code, 'x' ptrearn_long_desc, 'x' ptrearn_rate_ind, 'x' ptrearn_rate, 'x' ptrearn_mult_factor, 'x' ptrearn_type_ind, 'x' ptrearn_leav_code_taken, 'x' ptrearn_ecld_ind, 'x' ptrearn_base_sal_ind, 'x' ptrearn_exception_ind, 'x' ptrearn_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVAPTY_RG.ValueSet.Config" name="NTVAPTY_RG">
+    <columns>
+		<column name="NTVAPTY_CODE" type="String" size="6"/>
+		<column name="NTVAPTY_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntvapty_code, ntvapty_desc, to_char(ntvapty_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM ntvapty  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQBDPL_RG.ValueSet.Config" name="PTQBDPL_RG">
+    <columns>
+		<column name="PTRBDPL_CODE" type="String" size="2"/>
+		<column name="PTRBDPL_DESC" type="String" size="30"/>
+		<column name="PTRBDPL_AMT1" type="Number" size="12"/>
+		<column name="PTRBDPL_AMT2" type="Number" size="13"/>
+		<column name="PTRBDPL_AMT3" type="Number" size="12"/>
+		<column name="PTRBDPL_AMT4" type="Number" size="13"/>
+		<column name="PTRBDPL_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xx' ptrbdpl_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ptrbdpl_desc, 'xxxxxxxxxxxx' ptrbdpl_amt1, 'xxxxxxxxxxxxx' ptrbdpl_amt2, 'xxxxxxxxxxxx' ptrbdpl_amt3, 'xxxxxxxxxxxxx' ptrbdpl_amt4, 'xxxxxxxxxxxx' ptrbdpl_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQBDPL1_RG.ValueSet.Config" name="PTQBDPL1_RG">
+    <columns>
+		<column name="PTRBDPL_EFFECTIVE_DATE" type="String" size="11"/>
+		<column name="PTRBDPL_CODE" type="String" size="2"/>
+		<column name="PTRBDPL_DESC" type="String" size="30"/>
+		<column name="PTRBDPL_AMT1" type="Number" size="1"/>
+		<column name="PTRBDPL_AMT2" type="Number" size="1"/>
+		<column name="PTRBDPL_AMT3" type="Number" size="1"/>
+		<column name="PTRBDPL_AMT4" type="Number" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptrbdpl_effective_date, 'x' ptrbdpl_code, 'x' ptrbdpl_desc, 'x' ptrbdpl_amt1, 'x' ptrbdpl_amt2, 'x' ptrbdpl_amt3, 'x' ptrbdpl_amt4  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTV87TR_RG.ValueSet.Config" name="PTV87TR_RG">
+    <columns>
+		<column name="PTV87TR_CODE" type="String" size="2"/>
+		<column name="PTV87TR_DESC" type="String" size="60"/>
+		<column name="PTV87TR_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'X' ptv87tr_code, 'X' ptv87tr_desc, 'X' ptv87tr_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVWKSH_RG.ValueSet.Config" name="NTVWKSH_RG">
+    <columns>
+		<column name="NTVWKSH_CODE" type="String" size="4"/>
+		<column name="NTVWKSH_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntvwksh_code, ntvwksh_desc, to_char(ntvwksh_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM ntvwksh  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVPNOC_RG.ValueSet.Config" name="NTVPNOC_RG">
+    <columns>
+		<column name="NTVPNOC_CODE" type="String" size="6"/>
+		<column name="NTVPNOC_DESC" type="String" size="60"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntvpnoc_code, ntvpnoc_desc, to_char(ntvpnoc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM ntvpnoc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVPFOC_RG.ValueSet.Config" name="NTVPFOC_RG">
+    <columns>
+		<column name="NTVPFOC_CODE" type="String" size="3"/>
+		<column name="NTVPFOC_DESC" type="String" size="60"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntvpfoc_code, ntvpfoc_desc, to_char(ntvpfoc_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM ntvpfoc  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVDOTT_RG.ValueSet.Config" name="NTVDOTT_RG">
+    <columns>
+		<column name="NTVDOTT_CODE" type="String" size="11"/>
+		<column name="NTVDOTT_DESC" type="String" size="60"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntvdott_code, ntvdott_desc, to_char(ntvdott_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM ntvdott  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FBIN_EFF_DATES_RG.ValueSet.Config" name="FBIN_EFF_DATES_RG">
+    <columns>
+		<column name="NTRFBIN_EFFECTIVE_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT to_char(ntrfbin_effective_date, G$_DATE.GET_NLS_DATE_FORMAT) ntrfbin_effective_date  FROM ntrfbin  GROUP BY ntrfbin_effective_date  ORDER BY to_date(ntrfbin_effective_date, G$_DATE.GET_NLS_DATE_FORMAT) DESC
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVJOBP_RG.ValueSet.Config" name="NTVJOBP_RG">
+    <columns>
+		<column name="NTVJOBP_CODE" type="String" size="5"/>
+		<column name="NTVJOBP_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxx' ntvjobp_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ntvjobp_desc, 'xxxxxxxxxxx' act_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FBEX_EFF_DATES_RG.ValueSet.Config" name="FBEX_EFF_DATES_RG">
+    <columns>
+		<column name="NTRFBEX_EFFECTIVE_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT to_char(ntrfbex_effective_date, G$_DATE.GET_NLS_DATE_FORMAT) ntrfbex_effective_date  FROM ntrfbex  GROUP BY ntrfbex_effective_date  ORDER BY to_date(ntrfbex_effective_date, G$_DATE.GET_NLS_DATE_FORMAT) DESC
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FELD_EFF_DATES_RG.ValueSet.Config" name="FELD_EFF_DATES_RG">
+    <columns>
+		<column name="NTRFELD_EFFECTIVE_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT to_char(ntrfeld_effective_date, G$_DATE.GET_NLS_DATE_FORMAT) ntrfeld_effective_date  FROM ntrfeld  WHERE ntrfeld_coas_code = :NTRFBEX_COAS_CODE AND nvl(ntrfeld_fund_code, '*') = nvl(:NTRFBEX_FUND_CODE, '*') AND nvl(ntrfeld_orgn_code, '*') = nvl(:NTRFBEX_ORGN_CODE, '*') AND nvl(ntrfeld_acct_code, '*') = nvl(:NTRFBEX_ACCT_CODE, '*') AND nvl(ntrfeld_prog_code, '*') = nvl(:NTRFBEX_PROG_CODE, '*') AND nvl(ntrfeld_actv_code, '*') = nvl(:NTRFBEX_ACTV_CODE, '*') AND nvl(ntrfeld_locn_code, '*') = nvl(:NTRFBEX_LOCN_CODE, '*')  GROUP BY ntrfeld_effective_date  ORDER BY to_date(ntrfeld_effective_date, G$_DATE.GET_NLS_DATE_FORMAT) DESC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="NTRFBEX_COAS_CODE">
+			<value>
+				<item businessObject="" name="NTRFBEX_COAS_CODE"/> 
+			</value>
+        </parameter>
+		<parameter name="NTRFBEX_FUND_CODE">
+			<value>
+				<item businessObject="" name="NTRFBEX_FUND_CODE"/> 
+			</value>
+        </parameter>
+		<parameter name="NTRFBEX_ORGN_CODE">
+			<value>
+				<item businessObject="" name="NTRFBEX_ORGN_CODE"/> 
+			</value>
+        </parameter>
+		<parameter name="NTRFBEX_ACCT_CODE">
+			<value>
+				<item businessObject="" name="NTRFBEX_ACCT_CODE"/> 
+			</value>
+        </parameter>
+		<parameter name="NTRFBEX_PROG_CODE">
+			<value>
+				<item businessObject="" name="NTRFBEX_PROG_CODE"/> 
+			</value>
+        </parameter>
+		<parameter name="NTRFBEX_ACTV_CODE">
+			<value>
+				<item businessObject="" name="NTRFBEX_ACTV_CODE"/> 
+			</value>
+        </parameter>
+		<parameter name="NTRFBEX_LOCN_CODE">
+			<value>
+				<item businessObject="" name="NTRFBEX_LOCN_CODE"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="PTQDFPR_RG.ValueSet.Config" name="PTQDFPR_RG">
+    <columns>
+		<column name="PTRDFPR_CODE" type="String" size="5"/>
+		<column name="PTRDFPR_DESC" type="String" size="30"/>
+		<column name="PTRDFPR_PICT_CODE" type="String" size="2"/>
+		<column name="PTRDFPR_BEGIN_PAYNO" type="Number" size="3"/>
+		<column name="PTRDFPR_END_PAYNO" type="Number" size="3"/>
+		<column name="PTRDFPR_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxx' ptrdfpr_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ptrdfpr_desc, 'xx' ptrdfpr_pict_code, 'xxx' ptrdfpr_begin_payno, 'xxx' ptrdfpr_end_payno, 'xxxxxxxxxxxx' ptrdfpr_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQEMPR_RG.ValueSet.Config" name="PTQEMPR_RG">
+    <columns>
+		<column name="PTREMPR_CODE" type="String" size="4"/>
+		<column name="PTREMPR_DESC" type="String" size="30"/>
+		<column name="PTREMPR_FED_EIN" type="String" size="15"/>
+		<column name="PTREMPR_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptrempr_code, 'x' ptrempr_desc, 'x' ptrempr_fed_ein, 'x' ptrempr_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVPCAT_RG.ValueSet.Config" name="PTVPCAT_RG">
+    <columns>
+		<column name="PTVPCAT_CODE" type="String" size="4"/>
+		<column name="PTVPCAT_DESC" type="String" size="30"/>
+		<column name="PTVPCAT_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxx' ptvpcat_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ptvpcat_desc, 'xxxxxxxxxxxx' ptvpcat_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVORGN_RG.ValueSet.Config" name="PTVORGN_RG">
+    <columns>
+		<column name="PTVORGN_CODE" type="String" size="6"/>
+		<column name="PTVORGN_DESC" type="String" size="30"/>
+		<column name="PTVORGN_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxxx' ptvorgn_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ptvorgn_desc, 'xxxxxxxxxxxx' ptvorgn_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQLOCN_RG.ValueSet.Config" name="PTQLOCN_RG">
+    <columns>
+		<column name="PTRLOCN_CODE" type="String" size="6"/>
+		<column name="PTRLOCN_DESC" type="String" size="35"/>
+		<column name="PTRLOCN_EMPR_CODE" type="String" size="4"/>
+		<column name="PTREMPR_DESC" type="String" size="30"/>
+		<column name="PTRLOCN_HEADQUARTERS_IND" type="String" size="2"/>
+		<column name="PTRLOCN_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxxx' ptrlocn_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ptrlocn_desc, 'xxxx' ptrlocn_empr_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ptrempr_desc, 'xx' ptrlocn_headquarters_ind, 'xxxxxxxxxxxx' ptrlocn_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVLGCD_RG.ValueSet.Config" name="PTVLGCD_RG">
+    <columns>
+		<column name="PTVLGCD_CODE" type="String" size="4"/>
+		<column name="PTVLGCD_DESC" type="String" size="30"/>
+		<column name="PTVLGCD_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxx' ptvlgcd_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ptvlgcd_desc, 'xxxxxxxxxxxx' ptvlgcd_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVJCRE_RG.ValueSet.Config" name="PTVJCRE_RG">
+    <columns>
+		<column name="PTVJCRE_CODE" type="String" size="5"/>
+		<column name="PTVJCRE_DESC" type="String" size="30"/>
+		<column name="PTVJCRE_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxx' ptvjcre_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ptvjcre_desc, 'xxxxxxxxxxxx' ptvjcre_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVWKCP_RG.ValueSet.Config" name="PTVWKCP_RG">
+    <columns>
+		<column name="PTVWKCP_CODE" type="String" size="4"/>
+		<column name="PTVWKCP_DESC" type="String" size="30"/>
+		<column name="PTVWKCP_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptvwkcp_code, 'x' ptvwkcp_desc, 'x' ptvwkcp_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQJBLN_RG.ValueSet.Config" name="PTQJBLN_RG">
+    <columns>
+		<column name="PTRJBLN_CODE" type="String" size="6"/>
+		<column name="PTRJBLN_DESC" type="String" size="30"/>
+		<column name="PTRJBLN_DICD_CODE" type="String" size="3"/>
+		<column name="PTRJBLN_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptrjbln_code, 'x' ptrjbln_desc, 'x' ptrjbln_dicd_code, 'x' ptrjbln_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVEFUN_RG.ValueSet.Config" name="PTVEFUN_RG">
+    <columns>
+		<column name="PTVEFUN_CODE" type="String" size="2"/>
+		<column name="PTVEFUN_DESC" type="String" size="30"/>
+		<column name="PTVEFUN_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptvefun_code, 'x' ptvefun_desc, 'x' ptvefun_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVBARG_RG.ValueSet.Config" name="PTVBARG_RG">
+    <columns>
+		<column name="PTVBARG_CODE" type="String" size="6"/>
+		<column name="PTVBARG_DESC" type="String" size="30"/>
+		<column name="PTVBARG_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxxx' ptvbarg_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ptvbarg_desc, 'xxxxxxxxxxxx' ptvbarg_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVOBPH_RG.ValueSet.Config" name="FTVOBPH_RG">
+    <columns>
+		<column name="FTVOBPH_COAS_CODE" type="String" size="4"/>
+		<column name="FTVOBPH_OBUD_CODE" type="String" size="7"/>
+		<column name="FTVOBPH_OBPH_CODE" type="String" size="7"/>
+		<column name="FTVOBPH_BUDG_PHASE_SHORT_TITLE" type="String" size="21"/>
+		<column name="FTVOBPH_BUDG_PHASE_STATUS" type="String" size="7"/>
+		<column name="DESCRIPT" type="String" size="7"/>
+		<column name="ACTIVE_DATE" type="String" size="11"/>
+		<column name="FTVOBPH_BUDG_MEAS_TYPE" type="String" size="9"/>
+		<column name="FTVOBPH_OBUD_CODE_BASE" type="String" size="11"/>
+		<column name="FTVOBPH_OBPH_CODE_BASE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ftvobph_coas_code, 'x' ftvobph_obud_code, 'x' ftvobph_obph_code, 'x' ftvobph_budg_phase_short_title, 'x' ftvobph_budg_phase_status, 'x' descript, 'x' active_date, 'x' ftvobph_budg_meas_type, 'x' ftvobph_obud_code_base, 'x' ftvobph_obph_code_base  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVESKL_RG.ValueSet.Config" name="PTVESKL_RG">
+    <columns>
+		<column name="PTVESKL_CODE" type="String" size="2"/>
+		<column name="PTVESKL_DESC" type="String" size="30"/>
+		<column name="PTVESKL_ACTIVITY_DATE" type="String" size="11"/>
+		<column name="PTVESKL_EMPR_CODE" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptveskl_code, 'x' ptveskl_desc, 'x' ptveskl_activity_date, 'x' ptveskl_empr_code  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQBDCA_RG.ValueSet.Config" name="PTQBDCA_RG">
+    <columns>
+		<column name="PTRBDCA_CODE" type="String" size="3"/>
+		<column name="PTRBDCA_LONG_DESC" type="String" size="30"/>
+		<column name="PTRBDCA_PRIORITY" type="Number" size="2"/>
+		<column name="PTRBDCA_CALC_RULE" type="String" size="2"/>
+		<column name="PTRBDCA_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxx' ptrbdca_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ptrbdca_long_desc, 'xx' ptrbdca_priority, 'xx' ptrbdca_calc_rule, 'xxxxxxxxxxx' ptrbdca_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTQSCHL_RG.ValueSet.Config" name="PTQSCHL_RG">
+    <columns>
+		<column name="PTRSCHL_CODE" type="String" size="6"/>
+		<column name="PTRSCHL_DESC" type="String" size="35"/>
+		<column name="PTRSCHL_EMPR_CODE" type="String" size="4"/>
+		<column name="PTREMPR_DESC" type="String" size="30"/>
+		<column name="PTRSCHL_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptrschl_code, 'x' ptrschl_desc, 'x' ptrschl_empr_code, 'x' ptrempr_desc, 'x' ptrschl_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVECIP_RG.ValueSet.Config" name="PTVECIP_RG">
+    <columns>
+		<column name="PTVECIP_CODE" type="String" size="2"/>
+		<column name="PTVECIP_DESC" type="String" size="100"/>
+		<column name="PTVECIP_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptvecip_code, 'x' ptvecip_desc, 'x' ptvecip_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTRESOC_RG.ValueSet.Config" name="PTRESOC_RG">
+    <columns>
+		<column name="PTRESOC_CODE" type="String" size="8"/>
+		<column name="PTRESOC_DESC" type="String" size="100"/>
+		<column name="PTRESOC_CATEGORY" type="String" size="100"/>
+		<column name="PTRESOC_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ptresoc_code, 'x' ptresoc_desc, 'x' ptresoc_category, 'x' ptresoc_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVECLS_RG.ValueSet.Config" name="FTVECLS_RG">
+    <columns>
+		<column name="FTVECLS_ECLS_CODE" type="String" size="2"/>
+		<column name="FTVECLS_DESC" type="String" size="30"/>
+		<column name="FTVECLS_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ftvecls_ecls_code, 'y' ftvecls_desc, sysdate ftvecls_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVCTYP_RG.ValueSet.Config" name="FTVCTYP_RG">
+    <columns>
+		<column name="CODE" type="String" size="2"/>
+		<column name="SDESCR" type="String" size="10"/>
+		<column name="LDESC" type="String" size="35"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' code, '2' sdescr, '3' ldesc  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVPROJ_RG.ValueSet.Config" name="FTVPROJ_RG">
+    <columns>
+		<column name="PROJ_CODE" type="String" size="8"/>
+		<column name="LDESC" type="String" size="35"/>
+		<column name="EFF_DATE" type="String" size="11"/>
+		<column name="TERM_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT '1' proj_code, '2' ldesc, '3' eff_date, '4' term_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="FTVOBUD_RG.ValueSet.Config" name="FTVOBUD_RG">
+    <columns>
+		<column name="FTVOBUD_COAS_CODE" type="String" size="3"/>
+		<column name="FTVOBUD_OBUD_CODE" type="String" size="6"/>
+		<column name="FTVOBUD_BUDG_TITLE" type="String" size="35"/>
+		<column name="FTVOBUD_YRS_BUDGETED" type="Number" size="14"/>
+		<column name="FTVOBUD_BUDG_PRD_TYPE" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ftvobud_coas_code, 'x' ftvobud_obud_code, 'x' ftvobud_budg_title, 'x' ftvobud_yrs_budgeted, 'x' ftvobud_budg_prd_type  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTQAPTY_RG.ValueSet.Config" name="NTQAPTY_RG">
+    <columns>
+		<column name="NTRACAT_APTY_CODE" type="String" size="6"/>
+		<column name="NTVAPTY_DESC" type="String" size="30"/>
+		<column name="NTRACAT_APTY_ENTRY_SEQ_NO" type="Number" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxxx' ntracat_apty_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ntvapty_desc, 'xxxxxxxxxxxx' ntracat_apty_entry_seq_no  FROM ntracat, ntvapty  WHERE ntracat_acat_code = :GLOBAL_ACAT_CODE AND ntracat_apty_code = ntvapty_code  ORDER BY ntracat_apty_entry_seq_no
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="GLOBAL_ACAT_CODE">
+			<value>
+				<globalVariable name="ACAT_CODE"/>
+			</value>
+         </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="NTQALVL_RG.ValueSet.Config" name="NTQALVL_RG">
+    <columns>
+		<column name="NTRALVL_CODE" type="String" size="6"/>
+		<column name="NTRALVL_DESC" type="String" size="30"/>
+		<column name="NTRALVL_LEVEL" type="Number" size="23"/>
+		<column name="NTRALVL_SUPERUSER_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntralvl_code, ntralvl_desc, ntralvl_level, ntralvl_superuser_ind  FROM ntralvl  ORDER BY ntralvl_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVACAT_RG.ValueSet.Config" name="NTVACAT_RG">
+    <columns>
+		<column name="NTVACAT_CODE" type="String" size="6"/>
+		<column name="NTVACAT_DESC" type="String" size="30"/>
+		<column name="NTVACAT_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ntvacat_code, 'x' ntvacat_desc, 'x' ntvacat_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTQLVID_RG.ValueSet.Config" name="NTQLVID_RG">
+    <columns>
+		<column name="GOBEACC_USERNAME" type="String" size="30"/>
+		<column name="USERNAME_DESC" type="String" size="81"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' gobeacc_username, 'x' username_desc  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="PTVASSN_RG.ValueSet.Config" name="PTVASSN_RG">
+    <columns>
+		<column name="PTVASSN_CODE" type="String" size="2"/>
+		<column name="PTVASSN_DESC" type="String" size="60"/>
+		<column name="PTVASSN_ACTIVITY_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'X' ptvassn_code, 'X' ptvassn_desc, 'X' ptvassn_activity_date  FROM dual  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTQROUT_RG.ValueSet.Config" name="NTQROUT_RG">
+    <columns>
+		<column name="NTRROUT_RECIPIENT_USER_ID" type="String" size="1"/>
+		<column name="USERNAME_DESC" type="String" size="1"/>
+		<column name="NTRALVL_LEVEL" type="String" size="1"/>
+		<column name="NTRROUT_ALVL_CODE" type="String" size="1"/>
+		<column name="NTRALVL_DESC" type="String" size="1"/>
+		<column name="NTRROUT_ACTION_IND" type="String" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ntrrout_recipient_user_id, 'x' username_desc, 'x' ntralvl_level, 'x' ntrrout_alvl_code, 'x' ntralvl_desc, 'x' ntrrout_action_ind  FROM sys.dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTQACLV_RG.ValueSet.Config" name="NTQACLV_RG">
+    <columns>
+		<column name="NTRALVL_LEVEL" type="String" size="5"/>
+		<column name="NTRACLV_ALVL_CODE" type="String" size="6"/>
+		<column name="NTRALVL_DESC" type="String" size="20"/>
+		<column name="NTRACLV_ACTION_IND" type="String" size="9"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ntralvl_level, 'x' ntraclv_alvl_code, 'x' ntralvl_desc, 'x' ntraclv_action_ind  FROM sys.dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTQSALA_RG.ValueSet.Config" name="NTQSALA_RG">
+    <columns>
+		<column name="NTRSALB_SGRP_CODE" type="String" size="6"/>
+		<column name="NTRSALB_TABLE" type="String" size="2"/>
+		<column name="NTRSALB_GRADE" type="String" size="5"/>
+		<column name="NTRSALA_STEP" type="Number" size="1"/>
+		<column name="NTRSALB_IND" type="String" size="1"/>
+		<column name="NTRSALA_AMOUNT" type="Number" size="1"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'x' ntrsalb_sgrp_code, 'x' ntrsalb_table, 'x' ntrsalb_grade, 'x' ntrsala_step, 'x' ntrsalb_ind, 'x' ntrsala_amount  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="JOBS_EFF_DATES_RG.ValueSet.Config" name="JOBS_EFF_DATES_RG">
+    <columns>
+		<column name="NBRJOBS_EFFECTIVE_DATE" type="String" size="11"/>
+		<column name="NBRJOBS_REG_RATE" type="String" size="13"/>
+		<column name="NBRJOBS_ANN_SALARY" type="String" size="13"/>
+		<column name="NBRJOBS_JCRE_CODE" type="String" size="37"/>
+		<column name="NBRJOBS_ECLS_CODE" type="String" size="2"/>
+		<column name="NBRJOBS_PICT_CODE" type="String" size="2"/>
+	</columns>
+	<query><![CDATA[
+	SELECT to_char(nbrjobs_effective_date, G$_DATE.GET_NLS_DATE_FORMAT) nbrjobs_effective_date, to_char(nbrjobs_reg_rate, '99999D999999') nbrjobs_reg_rate, to_char(nbrjobs_ann_salary, '999999999D99') nbrjobs_ann_salary, nbrjobs_jcre_code || '  XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' nbrjobs_jcre_code, nbrjobs_ecls_code, nbrjobs_pict_code  FROM nbrjobs  WHERE nbrjobs_pidm = :PIDM AND nbrjobs_posn = :POSN AND nbrjobs_suff = :SUFF  ORDER BY nbrjobs_effective_date DESC
+	]]>
+	</query>
+	
+    <parameters>
+		<parameter name="PIDM">
+			<value>
+				<item businessObject="" name="PIDM"/> 
+			</value>
+        </parameter>
+		<parameter name="POSN">
+			<value>
+				<item businessObject="" name="POSN"/> 
+			</value>
+        </parameter>
+		<parameter name="SUFF">
+			<value>
+				<item businessObject="" name="SUFF"/> 
+			</value>
+        </parameter>
+	</parameters>
+</valueSet>
+<valueSet id="NTVBPRO_RG.ValueSet.Config" name="NTVBPRO_RG">
+    <columns>
+		<column name="NTVBPRO_CODE" type="String" size="6"/>
+		<column name="NTVBPRO_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntvbpro_code, ntvbpro_desc, to_char(ntvbpro_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM ntvbpro  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTQSPEX_RG.ValueSet.Config" name="NTQSPEX_RG">
+    <columns>
+		<column name="NTRSPEX_CODE" type="String" size="12"/>
+		<column name="NTRSPEX_DESC" type="String" size="30"/>
+		<column name="ACT_DATE" type="String" size="11"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntrspex_code, ntrspex_desc, to_char(ntrspex_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) act_date  FROM ntrspex  ORDER BY 1
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVAGRP_RG.ValueSet.Config" name="NTVAGRP_RG">
+    <columns>
+		<column name="NTVAGRP_CODE" type="String" size="8"/>
+		<column name="NTVAGRP_DESC" type="String" size="30"/>
+		<column name="NTVAGRP_ACTIVITY_DATE" type="String" size="12"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxxxxx' ntvagrp_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ntvagrp_desc, 'xxxxxxxxxxxx' ntvagrp_activity_date  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTQAGRP_RG.ValueSet.Config" name="NTQAGRP_RG">
+    <columns>
+		<column name="NTRAGRP_AGRP_CODE" type="String" size="9"/>
+		<column name="NTVAGRP_DESC" type="String" size="33"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxxxxxx' ntragrp_agrp_code, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ntvagrp_desc  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTQAGID_RG.ValueSet.Config" name="NTQAGID_RG">
+    <columns>
+		<column name="NTRAGID_ORIGINATOR_USER_ID" type="String" size="33"/>
+		<column name="SPRIDEN_FIRST_NAME" type="String" size="16"/>
+		<column name="SPRIDEN_LAST_NAME" type="String" size="66"/>
+	</columns>
+	<query><![CDATA[
+	SELECT 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' ntragid_originator_user_id, 'xxxxxxxxxxxxxxxx' spriden_first_name, 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' spriden_last_name  FROM dual 
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVECCG_RG.ValueSet.Config" name="NTVECCG_RG">
+    <columns>
+		<column name="NTVECCG_CODE" type="String" size="8"/>
+		<column name="NTVECCG_DESC" type="String" size="30"/>
+		<column name="NTVECCG_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntveccg_code, ntveccg_desc, to_char(ntveccg_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) ntveccg_activity_date  FROM ntveccg  ORDER BY ntveccg_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVPRXM_RG.ValueSet.Config" name="NTVPRXM_RG">
+    <columns>
+		<column name="NTVPRXM_CODE" type="String" size="8"/>
+		<column name="NTVPRXM_DESC" type="String" size="30"/>
+		<column name="NTVPRXM_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntvprxm_code, ntvprxm_desc, to_char(ntvprxm_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) ntvprxm_activity_date  FROM NTVPRXM  ORDER BY ntvprxm_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+<valueSet id="NTVQPRT_RG.ValueSet.Config" name="NTVQPRT_RG">
+    <columns>
+		<column name="NTVQPRT_CODE" type="String" size="8"/>
+		<column name="NTVQPRT_DESC" type="String" size="30"/>
+		<column name="NTVQPRT_ACTIVITY_DATE" type="String" size="75"/>
+	</columns>
+	<query><![CDATA[
+	SELECT ntvqprt_code, ntvqprt_desc, to_char(ntvqprt_activity_date, G$_DATE.GET_NLS_DATE_FORMAT) ntvqprt_activity_date  FROM ntvqprt  ORDER BY ntvqprt_code
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

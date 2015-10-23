@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="APTADDR.Manager.Config" name="APTADDR">
+		
+		<items>
+			<item name="APTADDR_SLCT_IND" logicalName="aptaddrSlctInd" type="String" physicalName="APTADDR_SLCT_IND"   /> 
+			<item name="APTADDR_UPDATABLE_IND" logicalName="aptaddrUpdatableInd" type="String" physicalName="APTADDR_UPDATABLE_IND"   /> 
+			<item name="APTADDR_PIDM" logicalName="aptaddrPidm" type="java.math.BigDecimal" physicalName="APTADDR_PIDM"   /> 
+			<item name="APTADDR_HEAD_IND" logicalName="aptaddrHeadInd" type="String" physicalName="APTADDR_HEAD_IND"   /> 
+			<item name="APTADDR_ATYP_CODE" logicalName="aptaddrAtypCode" type="String" physicalName="APTADDR_ATYP_CODE"   /> 
+			<item name="APTADDR_CNTY_CODE" logicalName="aptaddrCntyCode" type="String" physicalName="APTADDR_CNTY_CODE"   /> 
+			<item name="APTADDR_NATN_CODE" logicalName="aptaddrNatnCode" type="String" physicalName="APTADDR_NATN_CODE"   /> 
+			<item name="APTADDR_SESSIONID" logicalName="aptaddrSessionid" type="String" physicalName="APTADDR_SESSIONID"   /> 
+			<item name="APTADDR_USER" logicalName="aptaddrUser" type="String" physicalName="APTADDR_USER"   /> 
+			<item name="APTADDR_ACTIVITY_DATETIME" logicalName="aptaddrActivityDatetime" type="java.util.Date" physicalName="APTADDR_ACTIVITY_DATE"   > 
+				<value>
+					<systemVariable name="DATETIME"/>
+				</value>	
+			</item>
+			<item name="APTADDR_NAME_LF30" logicalName="aptaddrNameLf30" type="String" physicalName="APTADDR_NAME_LF30"   /> 
+			<item name="APTADDR_ID" logicalName="aptaddrId" type="String" physicalName="APTADDR_ID"   /> 
+			<item name="APTADDR_XREF_CODE" logicalName="aptaddrXrefCode" type="String" physicalName="APTADDR_XREF_CODE"   /> 
+			<item name="APTADDR_AGE" logicalName="aptaddrAge" type="java.math.BigDecimal" physicalName="APTADDR_AGE"   /> 
+			<item name="APTADDR_ADDRESS_COMPARE_IND" logicalName="aptaddrAddressCompareInd" type="String" physicalName="APTADDR_ADDRESS_COMPARE_IND"   /> 
+			<item name="APTADDR_HOUSE_NUMBER" logicalName="aptaddrHouseNumber" type="String" physicalName="APTADDR_HOUSE_NUMBER"   /> 
+			<item name="APTADDR_STREET_LINE1" logicalName="aptaddrStreetLine1" type="String" physicalName="APTADDR_STREET_LINE1"   /> 
+			<item name="APTADDR_STREET_LINE2" logicalName="aptaddrStreetLine2" type="String" physicalName="APTADDR_STREET_LINE2"   /> 
+			<item name="APTADDR_STREET_LINE3" logicalName="aptaddrStreetLine3" type="String" physicalName="APTADDR_STREET_LINE3"   /> 
+			<item name="APTADDR_STREET_LINE4" logicalName="aptaddrStreetLine4" type="String" physicalName="APTADDR_STREET_LINE4"   /> 
+			<item name="APTADDR_CITY" logicalName="aptaddrCity" type="String" physicalName="APTADDR_CITY"   /> 
+			<item name="APTADDR_STAT_CODE" logicalName="aptaddrStatCode" type="String" physicalName="APTADDR_STAT_CODE"   /> 
+			<item name="APTADDR_ZIP" logicalName="aptaddrZip" type="String" physicalName="APTADDR_ZIP"   /> 
+			<item name="TADDR_NATN_DESC" logicalName="taddrNatnDesc" type="String"  virtual="true"  /> 
+			<item name="TADDR_CNTY_DESC" logicalName="taddrCntyDesc" type="String"  virtual="true"  /> 
+			<item name="APTADDR_PHONE_COMPARE_IND" logicalName="aptaddrPhoneCompareInd" type="String" physicalName="APTADDR_PHONE_COMPARE_IND"   /> 
+			<item name="APTADDR_PHONE" logicalName="aptaddrPhone" type="String" physicalName="APTADDR_PHONE"   /> 
+			<item name="APTADDR_FROM_DATE" logicalName="aptaddrFromDate" type="java.util.Date" physicalName="APTADDR_FROM_DATE"   /> 
+			<item name="APTADDR_TO_DATE" logicalName="aptaddrToDate" type="java.util.Date" physicalName="APTADDR_TO_DATE"   /> 
+		</items>
+		
+		<adapterClass>net.hedtech.banner.alumni.common.Apaiden.model.AptaddrAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE APTADDR_HEAD_IND > '1' AND APTADDR_SESSIONID = SUBSTR(SYS_CONTEXT('USERENV', 'SESSIONID'), 1, 30) AND APTADDR_USER = USER]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[TO_NUMBER(NVL(APTADDR_AGE,'0')) DESC, NVL(APTADDR_XREF_CODE,'ZZZZ') ASC, APTADDR_HEAD_IND ASC]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic" layout="positional">
+  <interactionblock name="G$_BANNER_REPORT_HEADER" />
+  <interactionblock name="G$_BANNER_REPORT_BLOCK" />
+  <panel width="798px" height="455px" top="0px" left="0px" id="pnlGBannerReportCanvas" name="G$_BANNER_REPORT_CANVAS" class="ContentCanvas" menu="G$_DEFAULT_PM">
+    <textfield labelposition="left" labelalign="start" name="dataSeparatorLine1" style="GNvaDataSeparatorLine" left="3px" top="4px" width="793px" height="5px" enabled="false" member="DATA_SEPARATOR_LINE_1" block="G$_BANNER_REPORT_HEADER" maxlength="24" datatype="String" case="upper" />
+    <textfield labelposition="left" labelalign="start" name="dataSeparatorLine2" style="GNvaDataSeparatorLine" left="3px" top="117px" width="791px" height="5px" enabled="false" member="DATA_SEPARATOR_LINE_2" block="G$_BANNER_REPORT_HEADER" maxlength="24" datatype="String" case="upper" />
+    <framepanel width="790px" height="98px" top="11px" left="3px" name="rect25">
+      <textfield label="gBannerReportHeader.orepName.prompt" labelposition="right" labeloffset="-298" labelalign="center" labelfontsize="9pt" labelfontfamily="Verdana" name="orepName" style="GNvaTextItem" left="179px" top="12px" width="138px" height="23px" enabled="false" navigable="false" member="OREP_NAME" block="G$_BANNER_REPORT_HEADER" maxlength="30" datatype="String" />
+      <textbox labelposition="left" labelalign="start" name="orepReportDescription" style="GNvaTextItem" left="319px" top="12px" width="394px" height="23px" enabled="false" member="OREP_REPORT_DESCRIPTION" block="G$_BANNER_REPORT_HEADER" maxlength="80" datatype="String" />
+      <textbox label="gBannerReportHeader.orepServerName.prompt" labelposition="right" labeloffset="-692" labelalign="center" name="orepServerName" style="GNvaTextItem" left="179px" top="34px" width="532px" height="23px" enabled="false" member="OREP_SERVER_NAME" block="G$_BANNER_REPORT_HEADER" maxlength="200" datatype="String" />
+      <textbox label="gBannerReportHeader.orepService.prompt" labelposition="right" labeloffset="-399" labelalign="center" name="orepService" style="GNvaTextItem" left="179px" top="57px" width="239px" height="23px" enabled="false" member="OREP_SERVICE" block="G$_BANNER_REPORT_HEADER" maxlength="80" datatype="String" />
+    </framepanel>
+    <framepanel width="789px" height="329px" top="124px" left="3px" name="rect26">
+      <combobox label="gBannerReportBlock.orepDesformat.prompt" labelposition="right" labeloffset="-298" labelalign="center" name="orepDesformat" style="GNvaList" left="179px" top="12px" width="138px" height="23px" enabled="false" navigable="false" member="OREP_DESFORMAT" block="G$_BANNER_REPORT_BLOCK" required="true" validation="server" maxlength="30">
+        <model>
+          <item label="gBannerReportBlock.orepDesformat.item0.label" value="DELIMITED" />
+          <item label="gBannerReportBlock.orepDesformat.item1.label" value="DELIMITEDDATA" />
+          <item label="gBannerReportBlock.orepDesformat.item2.label" value="HTML" />
+          <item label="gBannerReportBlock.orepDesformat.item3.label" value="HTMLCSS" />
+          <item label="gBannerReportBlock.orepDesformat.item4.label" value="PDF" />
+          <item label="gBannerReportBlock.orepDesformat.item5.label" value="POSTSCRIPT" />
+          <item label="gBannerReportBlock.orepDesformat.item6.label" value="PRINTER DEFINITION" />
+          <item label="gBannerReportBlock.orepDesformat.item7.label" value="RTF" />
+          <item label="gBannerReportBlock.orepDesformat.item8.label" value="XML" />
+        </model>
+      </combobox>
+      <combobox label="gBannerReportBlock.orepDestype.prompt" labelposition="right" labeloffset="-298" labelalign="center" name="orepDestype" style="GNvaList" left="179px" top="57px" width="138px" height="23px" enabled="false" navigable="false" member="OREP_DESTYPE" block="G$_BANNER_REPORT_BLOCK" required="true" validation="server" maxlength="30" action="WHEN-LIST-CHANGED">
+        <model>
+          <item label="gBannerReportBlock.orepDestype.item0.label" value="CACHE" />
+          <item label="gBannerReportBlock.orepDestype.item1.label" value="FILE" />
+          <item label="gBannerReportBlock.orepDestype.item2.label" value="MAIL" />
+          <item label="gBannerReportBlock.orepDestype.item3.label" value="PRINTER" />
+        </model>
+      </combobox>
+      <textbox label="gBannerReportBlock.orepDesname.prompt" labelposition="right" labeloffset="-758" labelalign="center" name="orepDesname" style="GNvaTextItem" left="179px" top="102px" width="598px" height="23px" enabled="false" navigable="false" member="OREP_DESNAME" block="G$_BANNER_REPORT_BLOCK" validation="server" maxlength="500" datatype="String" />
+      <combobox label="gBannerReportBlock.orepExecutionMode.prompt" labelposition="right" labeloffset="-298" labelalign="center" name="orepExecutionMode" style="GNvaList" left="179px" top="147px" width="138px" height="23px" enabled="false" navigable="false" member="OREP_EXECUTION_MODE" block="G$_BANNER_REPORT_BLOCK" required="true" validation="server" maxlength="30">
+        <model>
+          <item label="gBannerReportBlock.orepExecutionMode.item0.label" value="BATCH" />
+          <item label="gBannerReportBlock.orepExecutionMode.item1.label" value="RUNTIME" />
+        </model>
+      </combobox>
+      <combobox label="gBannerReportBlock.orepCommMode.prompt" labelposition="right" labeloffset="-298" labelalign="center" name="orepCommMode" style="GNvaList" left="179px" top="193px" width="138px" height="23px" enabled="false" navigable="false" member="OREP_COMM_MODE" block="G$_BANNER_REPORT_BLOCK" required="true" validation="server" maxlength="5">
+        <model>
+          <item label="gBannerReportBlock.orepCommMode.item0.label" value="ASYNC" />
+          <item label="gBannerReportBlock.orepCommMode.item1.label" value="SYNC" />
+        </model>
+      </combobox>
+      <combobox label="gBannerReportBlock.orepParamformDesignation.prompt" labelposition="right" labeloffset="-298" labelalign="center" name="orepParamformDesignation" style="GNvaList" left="179px" top="238px" width="138px" height="23px" enabled="false" navigable="false" member="OREP_PARAMFORM_DESIGNATION" block="G$_BANNER_REPORT_BLOCK" required="true" validation="server" maxlength="3">
+        <model>
+          <item label="gBannerReportBlock.orepParamformDesignation.item0.label" value="NO" />
+          <item label="gBannerReportBlock.orepParamformDesignation.item1.label" value="YES" />
+        </model>
+      </combobox>
+      <button label="gBannerReportBlock.orepSubmitBtn.label" name="orepSubmitBtn" style="GNvaButtonItem" left="577px" top="283px" width="93px" height="23px" enabled="false" navigable="false" member="OREP_SUBMIT_BTN" block="G$_BANNER_REPORT_BLOCK" required="true" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+      <button label="gBannerReportBlock.orepCancelBtn.label" name="orepCancelBtn" style="GNvaButtonItem" left="681px" top="283px" width="93px" height="23px" enabled="false" navigable="false" member="OREP_CANCEL_BTN" block="G$_BANNER_REPORT_BLOCK" required="true" maxlength="30" action="WHEN-BUTTON-PRESSED" />
+    </framepanel>
+  </panel>
+</config>

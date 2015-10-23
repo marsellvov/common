@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<Lovs>
+	<Lov Height="267" Name="GTVVPDI_LOV" RecordGroup="GTVVPDI_RG" Title="Institution Code Validation (GTVVPDI)" Width="575">
+		<Columns>
+			<Column DataMember="GTVVPDI_CODE" ReturnItem="GLOBAL.VALUE" Title="Code" Width="115"/>
+			<Column DataMember="GTVVPDI_DESC" ReturnItem="G$_VPDI_BLOCK.VPDI_DESC" Title="Description" Width="115"/>
+			<Column DataMember="GTVVPDI_TYPE_CDE" Title="Type " Width="115"/>
+			<Column DataMember="GTVVPDI_SYS_DEF_INST_IND" Title="Default Ind" Width="115"/>
+			<Column DataMember="GTVVPDI_ACTIVITY_DATE" Title="Activity Date" Width="115"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="G$_VPDI_ALL_LOV" RecordGroup="G$_VPDI_ALL_RG" Title="Existing Institution Values" Width="575">
+		<Columns>
+			<Column DataMember="A" Width="47"/>
+			<Column DataMember="B" Width="47"/>
+			<Column DataMember="C" Width="47"/>
+			<Column DataMember="D" Width="47"/>
+			<Column DataMember="E" Width="47"/>
+			<Column DataMember="F" Width="47"/>
+			<Column DataMember="G" Width="47"/>
+			<Column DataMember="H" Width="47"/>
+			<Column DataMember="I" Width="47"/>
+			<Column DataMember="J" Width="47"/>
+			<Column DataMember="A$" Width="47"/>
+			<Column DataMember="B$" ReturnItem="G$_VPDI_BLOCK.VPDI_HOLD_VALUE" Width="47"/>
+		</Columns>
+	</Lov>
+	<Lov Height="267" Name="GUROPTM_LOV" RecordGroup="GUROPTM_RG" Title="Option Menu" Width="575">
+		<Columns>
+			<Column DataMember="GUROPTM_NAME1_DESC" Width="191"/>
+			<Column DataMember="GUROPTM_NAME1" ReturnItem="GLOBAL.GUROPTM_NAME1" Width="191"/>
+			<Column DataMember="GUROPTM_TYPE_IND" ReturnItem="GLOBAL.GUROPTM_TYPE_IND" Width="191"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="FTVCOAS_LOV" RecordGroup="FTVCOAS_RG" Title="Chart of Accounts List (FTVCOAS)" Width="575">
+		<Columns>
+			<Column DataMember="FTVCOAS_COAS_CODE" ReturnItem="GLOBAL.VALUE" Title="COA" Width="115"/>
+			<Column DataMember="FTVCOAS_TITLE" ReturnItem="GLOBAL.VALUE_DESC" Title="Chart of Account Title" Width="115"/>
+			<Column DataMember="FTVCOAS_STATUS_IND" Title="Status" Width="115"/>
+			<Column DataMember="ICRGGQ_0" Title="Eff Date" Width="115"/>
+			<Column DataMember="ICRGGQ_1" Title="Term Date" Width="115"/>
+		</Columns>
+	</Lov>
+	<Lov AutoSelect="true" Height="267" Name="FTVFTYP_LOV" RecordGroup="FTVFTYP_RG" Title="Fund Type List (FTVFTYP)" Width="575">
+		<Columns>
+			<Column DataMember="FTVFTYP_COAS_CODE" Title="COA" Width="82"/>
+			<Column DataMember="FTVFTYP_FTYP_CODE" ReturnItem="GLOBAL.VALUE" Title="Fund Type" Width="82"/>
+			<Column DataMember="FTVFTYP_TITLE" Title="Fund Title" Width="82"/>
+			<Column DataMember="FTVFTYP_FTYP_CODE_PRED" Title="Pred Fund Type" Width="82"/>
+			<Column DataMember="FTVFTYP_STATUS_IND" Title="Status" Width="82"/>
+			<Column DataMember="ICRGGQ_0" Title="Eff Date" Width="82"/>
+			<Column DataMember="ICRGGQ_1" Title="Term Date" Width="82"/>
+		</Columns>
+	</Lov>
+</Lovs>

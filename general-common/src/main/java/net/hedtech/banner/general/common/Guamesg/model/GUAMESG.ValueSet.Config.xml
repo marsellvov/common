@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:valueset"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:valueset http://www.morphis-tech.com/schema/foundations/valueset.xsd">
+<valueSet id="USER_ID_RG.ValueSet.Config" name="USER_ID_RG">
+    <columns>
+		<column name="USERNAME" type="String" size="30"/>
+		<column name="BANNER_NAME" type="String" size="121"/>
+	</columns>
+	<query><![CDATA[
+	SELECT username, g$_security.g$_get_username_name(u.username) banner_name  FROM all_users u  WHERE (username) NOT IN ('SYS', 'SYSTEM')  ORDER BY username
+	]]>
+	</query>
+	
+    <parameters>
+	</parameters>
+</valueSet>
+</b:beans>

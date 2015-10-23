@@ -1,0 +1,201 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FormStructure AlertDataPath="/net/hedtech/banner/general/common/Goaintl/GoaintlAlerts.xml" FirstNavigationBlock="KEY_BLOCK" LovDataPath="/net/hedtech/banner/general/common/Goaintl/GoaintlLovs.xml" Name="GOAINTL">
+  <Visual>
+    <Window Id="MAIN_WINDOW" Url="net/hedtech/banner/general/common/Goaintl/views/ViewMainWindow">
+      <StackedCanvas Id="G$_NAV_CANVAS" Visible="false" />
+      <ContentCanvas Id="TEMP_CANVAS" Visible="false" />
+      <ContentCanvas Id="GOAINTL_1_CANVAS" />
+      <TabPageCanvas Id="GOAINTL_TAB_CANVAS">
+        <Page Id="GOAINTL_1_CANVAS" />
+        <Page Id="GOAINTL_2_CANVAS" />
+        <Page Id="GOAINTL_3_CANVAS" />
+        <Page Id="GOAINTL_4_CANVAS" />
+      </TabPageCanvas>
+      <StackedCanvas Id="G$_WELCOME_CANVAS" Visible="false" />
+    </Window>
+    <Window Id="PASSPORT_WINDOW" Url="net/hedtech/banner/general/common/Goaintl/views/ViewPassportWindow" />
+    <Window Id="CERTIFICATION_WINDOW" Url="net/hedtech/banner/general/common/Goaintl/views/ViewCertificationWindow" />
+    <Window Id="NATIONALITY_WINDOW" Url="net/hedtech/banner/general/common/Goaintl/views/ViewNationalityWindow" />
+    <Window Id="G$_OPT_WINDOW" Modal="true" Url="net/hedtech/banner/general/common/Goaintl/views/ViewGOptWindow">
+      <ContentCanvas Id="G$_OPT_CANVAS" />
+    </Window>
+  </Visual>
+  <Logic>
+    <Block Id="G$_VPDI_BLOCK">
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Hint="gVpdiBlock.vpdiCode.hint" Id="VPDI_CODE" Lov="GTVVPDI_LOV" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_VPDI_CANVAS" Enabled="true" Hint="gVpdiBlock.vpdiDesc.hint" Id="VPDI_DESC" MaxLength="30" Navigable="false" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="true" Id="VPDI_CODE_LBT" MaxLength="8" Navigable="false" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OTHER_INSTITUTIONS" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_CANCEL_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item CanvasName="G$_VPDI_CANVAS" Enabled="false" Id="VPDI_OK_BTN" MaxLength="14" Type="Button" Visible="true" />
+      <Item Enabled="false" Id="VPDI_HOLD_VALUE" MaxLength="2000" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="VPDI_SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block AllowDelete="false" AllowSearch="false" Id="G$_NAV_BLOCK">
+      <Item CanvasName="G$_NAV_CANVAS" Enabled="false" Hint="gNavBlock.goItem.hint" Id="GO_ITEM" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item CanvasName="G$_NAV_CANVAS" Id="GO_ITEM_BTN" MaxLength="30" Navigable="false" Type="Button" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="G$_NAV_CANVAS" Enabled="false" Id="URL_MY_INSTITUTION" MaxLength="30" Type="Button" />
+      <Item AllowSearch="false" Id="HOLD_CURSOR_LOCATION" MaxLength="61" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="CALL_FLD" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_LEADING_EDGE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_TYPE_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LEAVING_BLK_IND" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="FORM_INIT_IND" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="LAST_MENU_ITEM" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="FORM_HEADER">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GOBINTL_EXISTS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_INSTITUTION" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CALLFLD" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="WORKDATE" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_USER" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="true" Id="CURRENT_FORM" MaxLength="7" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_RELEASE" MaxLength="10" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CURRENT_TIME" MaxLength="8" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CONVERTED_DATE" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="DATE_TO_CONVERT" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="YEAR" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="HOLD_DATE_TO_CONVERT" MaxLength="11" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="MAX_SEQNO" MaxLength="5" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="RECORD_NUMBER" MaxLength="5" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="DELETION_FLAG" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="ERROR_ITEM" MaxLength="100" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="PREVIOUS_BLOCK" MaxLength="80" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="GTVSDAX_VISANTNDEF_VALUE" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="GTVSDAX_VISAISSDEF_VALUE" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item DataType="String" Id="GTVSDAX_VISANBRDEF_VALUE" MaxLength="30" Type="TextItem" Visible="false" />
+      <Item DataType="Date" Id="GTVSDAX_VISADATEDEF_VALUE" MaxLength="30" Navigable="false" Type="TextItem" />
+      <Item DataType="String" Id="FORM_ACTION" MaxLength="30" Type="TextItem" />
+      <Item AllowInsert="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_0" MaxLength="24" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item AllowInsert="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="false" Id="DATA_SEPARATOR_LINE_1" MaxLength="24" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="DisplayItem" Visible="true" />
+    </Block>
+    <Block Id="KEY_BLOCK">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="PIDM" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GOAINTL_1_CANVAS" DataType="String" Enabled="true" Hint="keyBlock.id.hint" Id="ID" MaxLength="9" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" CanvasName="GOAINTL_1_CANVAS" Enabled="false" DataType="String" Hint="keyBlock.nname.hint" Id="NAME" MaxLength="230" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_1_CANVAS" DataType="String" Enabled="false" Id="CONF_INFO" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowInsert="false" AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_1_CANVAS" DataType="String" Enabled="false" Id="DECEASED_INFO" MaxLength="12" Navigable="false" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_1_CANVAS" Id="EXECUTE_BTN" Navigable="true" Type="Button" />
+      <Item CanvasName="GOAINTL_1_CANVAS" Id="KEY-CLRFRM_BTN" Navigable="true" Type="Button" Visible="false" />
+    </Block>
+    <Block Id="GORVISA">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="GORVISA_PIDM" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="Number" Id="SEQNO" MaxLength="3" Type="TextItem" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gorvisa.vtypDesc.hint" Id="VTYP_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gorvisa.gorvisaVtypCode.hint" Id="GORVISA_VTYP_CODE" Lov="STVVTYP_LOV" MaxLength="30" PageName="GOAINTL_1_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Hint="gorvisa.gorvisaVisaNumber.hint" Id="GORVISA_VISA_NUMBER" MaxLength="18" PageName="GOAINTL_1_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gorvisa.gorvisaNatnCodeIssue.hint" Id="GORVISA_NATN_CODE_ISSUE" Lov="STVNATN_LOV" MaxLength="30" PageName="GOAINTL_1_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gorvisa.issueNatnDesc.hint" Id="ISSUE_NATN_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gorvisa.gorvisaVissCode.hint" Id="GORVISA_VISS_CODE" Lov="GTVVISS_LOV" MaxLength="30" PageName="GOAINTL_1_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gorvisa.vissDesc.hint" Id="VISS_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gorvisa.gorvisaPentCode.hint" Id="GORVISA_PENT_CODE" Lov="STVPENT_LOV" MaxLength="3" PageName="GOAINTL_1_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gorvisa.pentDesc.hint" Id="PENT_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Number" Id="GORVISA_SEQ_NO" MaxLength="3" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="DisplayItem" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Hint="gorvisa.gorvisaEntryInd.hint" Id="GORVISA_ENTRY_IND" MaxLength="1" PageName="GOAINTL_1_CANVAS" Type="Checkbox" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Hint="gorvisa.gorvisaNoEntries.hint" Id="GORVISA_NO_ENTRIES" MaxLength="2" PageName="GOAINTL_1_CANVAS" Type="TextItem" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Date" Hint="gorvisa.gorvisaVisaReqDate.hint" Id="GORVISA_VISA_REQ_DATE" MaxLength="11" PageName="GOAINTL_1_CANVAS" Type="TextItem" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Date" Hint="gorvisa.gorvisaVisaIssueDate.hint" Id="GORVISA_VISA_ISSUE_DATE" MaxLength="11" PageName="GOAINTL_1_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Date" Hint="gorvisa.gorvisaVisaStartDate.hint" Id="GORVISA_VISA_START_DATE" MaxLength="11" PageName="GOAINTL_1_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Date" Hint="gorvisa.gorvisaVisaExpireDate.hint" Id="GORVISA_VISA_EXPIRE_DATE" MaxLength="11" PageName="GOAINTL_1_CANVAS" Type="TextItem" Visible="true" />
+      <Item DataType="String" Enabled="false" Id="GORVISA_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="Date" Enabled="false" Id="GORVISA_ACTIVITY_DATE" MaxLength="26" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="GORDOCM" MultiRecord="true">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="GORDOCM_PIDM" MaxLength="9" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="GORDOCM_SEQ_NO" MaxLength="4" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Hint="gordocm.gordocmVtypCode.hint" Id="GORDOCM_VTYP_CODE" MaxLength="2" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="GORDOCM_VISA_NUMBER" MaxLength="18" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="String" Enabled="false" Id="GORDOCM_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item DataType="Date" Enabled="false" Id="GORDOCM_ACTIVITY_DATE" MaxLength="26" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gordocm.gordocmDocmCode.hint" Id="GORDOCM_DOCM_CODE" Lov="GTVDOCM_LOV" MaxLength="30" PageName="GOAINTL_1_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gordocm.docmDesc.hint" Id="DOCM_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gordocm.gordocmSrceCode.hint" Id="GORDOCM_SRCE_CODE" Lov="GTVSRCE_LOV" MaxLength="6" PageName="GOAINTL_1_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gordocm.srceDesc.hint" Id="SRCE_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Date" Hint="gordocm.gordocmRequestDate.hint" Id="GORDOCM_REQUEST_DATE" MaxLength="11" PageName="GOAINTL_1_CANVAS" Type="TextItem" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Hint="gordocm.gordocmDisposition.hint" Id="GORDOCM_DISPOSITION" MaxLength="1" PageName="GOAINTL_1_CANVAS" Required="true" Type="List" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Date" Hint="gordocm.gordocmReceivedDate.hint" Id="GORDOCM_RECEIVED_DATE" MaxLength="11" PageName="GOAINTL_1_CANVAS" Type="TextItem" />
+      <Item Id="GORDOCM_VTYP_CODE_LBT" MaxLength="30" Navigable="false" Type="Button" />
+    </Block>
+    <Block Id="GOBINTL">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Number" Enabled="false" Id="GOBINTL_PIDM" MaxLength="8" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlPassportId.hint" Id="GOBINTL_PASSPORT_ID" MaxLength="25" PageName="GOAINTL_2_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlNatnCodeIssue.hint" Id="GOBINTL_NATN_CODE_ISSUE" Lov="STVNATN_LOV" MaxLength="30" PageName="GOAINTL_2_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.issueNatnDesc.hint" Id="ISSUE_NATN_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_2_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Date" Enabled="true" Hint="gobintl.gobintlPassportExpDate.hint" Id="GOBINTL_PASSPORT_EXP_DATE" MaxLength="11" PageName="GOAINTL_2_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlI94Status.hint" Id="GOBINTL_I94_STATUS" MaxLength="3" PageName="GOAINTL_2_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Date" Hint="gobintl.gobintlI94Date.hint" Id="GOBINTL_I94_DATE" MaxLength="11" PageName="GOAINTL_2_CANVAS" Type="TextItem" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlRegNumber.hint" Id="GOBINTL_REG_NUMBER" MaxLength="11" PageName="GOAINTL_2_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlDuration.hint" Id="GOBINTL_DURATION" MaxLength="1" PageName="GOAINTL_2_CANVAS" Type="Checkbox" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlCelgCode.hint" Id="GOBINTL_CELG_CODE" Lov="GTVCELG_LOV" MaxLength="6" PageName="GOAINTL_3_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.celgDesc.hint" Id="CELG_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_3_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlCertNumber.hint" Id="GOBINTL_CERT_NUMBER" MaxLength="11" PageName="GOAINTL_3_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Date" Enabled="true" Hint="gobintl.gobintlCertDateIssue.hint" Id="GOBINTL_CERT_DATE_ISSUE" MaxLength="11" PageName="GOAINTL_3_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Date" Enabled="true" Hint="gobintl.gobintlCertDateReceipt.hint" Id="GOBINTL_CERT_DATE_RECEIPT" MaxLength="11" PageName="GOAINTL_3_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlAdmrCode.hint" Id="GOBINTL_ADMR_CODE" Lov="STVADMR_LOV" MaxLength="4" PageName="GOAINTL_3_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.admrDesc.hint" Id="ADMR_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_3_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlNatnCodeBirth.hint" Id="GOBINTL_NATN_CODE_BIRTH" Lov="STVNATN_LOV" MaxLength="30" PageName="GOAINTL_4_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.birthNatnDesc.hint" Id="BIRTH_NATN_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_4_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlNatnCodeLegal.hint" Id="GOBINTL_NATN_CODE_LEGAL" Lov="STVNATN_LOV" MaxLength="30" PageName="GOAINTL_4_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.legalNatnDesc.hint" Id="LEGAL_NATN_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_4_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlLangCode.hint" Id="GOBINTL_LANG_CODE" Lov="STVLANG_LOV" MaxLength="3" PageName="GOAINTL_4_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.langDesc.hint" Id="LANG_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_4_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlSponCode.hint" Id="GOBINTL_SPON_CODE" Lov="STVSPON_LOV" MaxLength="3" PageName="GOAINTL_4_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.sponDesc.hint" Id="SPON_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_4_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlEmptCode.hint" Id="GOBINTL_EMPT_CODE" Lov="STVEMPT_LOV" MaxLength="3" PageName="GOAINTL_4_CANVAS" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.emptDesc.hint" Id="EMPT_DESC" MaxLength="30" Navigable="false" PageName="GOAINTL_4_CANVAS" Type="DisplayItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Enabled="true" Hint="gobintl.gobintlForeignSsn.hint" Id="GOBINTL_FOREIGN_SSN" MaxLength="15" PageName="GOAINTL_4_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Hint="gobintl.gobintlSpouseInd.hint" Id="GOBINTL_SPOUSE_IND" MaxLength="1" PageName="GOAINTL_4_CANVAS" Required="true" Type="List" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="Number" Enabled="true" Hint="gobintl.gobintlChildNumber.hint" Id="GOBINTL_CHILD_NUMBER" MaxLength="2" PageName="GOAINTL_4_CANVAS" Type="TextItem" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" DataType="String" Hint="gobintl.gobintlSignatureInd.hint" Id="GOBINTL_SIGNATURE_IND" MaxLength="1" PageName="GOAINTL_4_CANVAS" Required="true" Type="List" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="GOBINTL_USER_ID" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" DataType="Date" Enabled="false" Id="GOBINTL_ACTIVITY_DATE" MaxLength="26" Navigable="false" Type="TextItem" Visible="false" />
+    </Block>
+    <Block Id="BUTTON_CONTROL_BLOCK">
+      <Item AllowSearch="false" AllowUpdate="false" DataType="String" Enabled="false" Id="CHECK_KEYS" MaxLength="1" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="GOAINTL_1_CANVAS" Id="ID_LBT" MaxLength="30" Navigable="false" Type="Button" />
+      <Item Enabled="true" Id="ADDTL_INFO_BTN" MaxLength="30" Navigable="false" Type="Button" Visible="false" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORVISA_VTYP_CODE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORVISA_VISS_CODE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORVISA_PENT_CODE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORVISA_NATN_CODE_ISSUE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORDOCM_DOCM_CODE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORDOCM_SRCE_CODE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_NATN_CODE_ISSUE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_2_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_CELG_CODE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_3_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_ADMR_CODE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_3_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_NATN_CODE_BIRTH_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_4_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_NATN_CODE_LEGAL_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_4_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_LANG_CODE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_4_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_SPON_CODE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_4_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_EMPT_CODE_LBT" MaxLength="30" Navigable="false" PageName="GOAINTL_4_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORVISA_VISA_REQ_DATE_DBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORVISA_VISA_ISSUE_DATE_DBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORDOCM_REQUEST_DATE_DBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_PASSPORT_EXP_DATE_DBT" MaxLength="30" Navigable="false" PageName="GOAINTL_2_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_I94_DATE_DBT" MaxLength="30" Navigable="false" PageName="GOAINTL_2_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_CERT_DATE_ISSUE_DBT" MaxLength="30" Navigable="false" PageName="GOAINTL_3_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GOBINTL_CERT_DATE_RECEIPT_DBT" MaxLength="30" Navigable="false" PageName="GOAINTL_3_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORDOCM_RECEIVED_DATE_DBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" Visible="true" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORVISA_VISA_ST_DT_DBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" />
+      <Item CanvasName="GOAINTL_TAB_CANVAS" Id="GORVISA_VISA_EXP_DT_DBT" MaxLength="30" Navigable="false" PageName="GOAINTL_1_CANVAS" Type="Button" />
+    </Block>
+    <Block Id="G$_OPT_BLOCK">
+      <Item AllowSearch="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_SEL" MaxLength="30" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_A_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_B_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_C_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_D_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_E_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" CanvasName="G$_OPT_CANVAS" Enabled="false" Id="SELECT_F_DESC" MaxLength="36" Navigable="false" Type="Button" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_A_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="true" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_B_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_C_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_D_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_E_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_F_KEY" MaxLength="30" Navigable="false" Type="TextItem" Visible="false" />
+      <Item AllowSearch="false" AllowUpdate="false" Enabled="false" Id="SELECT_ITEM" MaxLength="60" Navigable="false" Type="TextItem" Visible="false" />
+      <Item CanvasName="G$_OPT_CANVAS" Enabled="false" Id="OPT_CANCEL_BTN" MaxLength="14" Navigable="false" Type="Button" Visible="true" />
+    </Block>
+  </Logic>
+</FormStructure>

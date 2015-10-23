@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="ftvobud.ftvobudCoasCode.prompt">COA</msg>
+  <msg id="ftvobud.ftvobudObudCode.prompt">Budget ID</msg>
+  <msg id="ftvobud.ftvobudBudgTitle.prompt">Title</msg>
+  <msg id="ftvobud.ftvobudYrsBudgeted.prompt">Years Budgeted</msg>
+  <msg id="ftvobud.ftvobudBudgPrdType.prompt">Period Type</msg>
+  <msg id="buttonControlBlock.ftvobud1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.ftvobud1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.ftvobud1ExitBtn.label">Exit</msg>
+  <msg id="mainWindow.title">Operating Budget Validation</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+  <msg id="ftvcoasLov.title">Chart of Accounts List (FTVCOAS)</msg>
+  <msg id="ftvcoasLov.ftvcoasCoasCode.title">COA</msg>
+  <msg id="ftvcoasLov.ftvcoasTitle.title">Chart of Account Title</msg>
+  <msg id="ftvcoasLov.ftvcoasStatusInd.title">Status</msg>
+  <msg id="ftvcoasLov.icrggq0.title">Eff Date</msg>
+  <msg id="ftvcoasLov.icrggq1.title">Term Date</msg>
+  <msg id="ftvobudLov.title">Operating Budget List (FTVOBUD)</msg>
+  <msg id="ftvobudLov.ftvobudCoasCode.title">COA</msg>
+  <msg id="ftvobudLov.ftvobudObudCode.title">ID</msg>
+  <msg id="ftvobudLov.ftvobudBudgTitle.title">Budget Title</msg>
+  <msg id="ftvobudLov.ftvobudYrsBudgeted.title">Years Budgeted</msg>
+  <msg id="ftvobudLov.ftvobudBudgPrdType.title">Period Type</msg>
+</messages>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:formmodel"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:formmodel http://www.morphis-tech.com/schema/foundations/formmodel.xsd">
+	
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goamtch/model/FORM_HEADER.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goamtch/model/KEY_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goamtch/model/GOTCMME.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goamtch/model/GOVCMRT_MATCH.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goamtch/model/GOVCMID.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goamtch/model/GORCMDO.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goamtch/model/GTVCMSC.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goamtch/model/GORCMSP.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goamtch/model/BUTTON_CONTROL_BLOCK.Manager.Config.xml"/>
+		<b:import resource="classpath:/net/hedtech/banner/general/common/Goamtch/model/GOAMTCH.ValueSet.Config.xml"/>
+
+	
+	<formModel id="GOAMTCH.Model.Config" name="GOAMTCH">
+		<modelClass>net.hedtech.banner.general.common.Goamtch.model.GoamtchModel</modelClass>
+		<parameters>
+		</parameters>
+		
+		<businessObjects>
+			<businessObject name="FORM_HEADER" manager="FORM_HEADER.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="KEY_BLOCK" manager="KEY_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GOTCMME" manager="GOTCMME.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GOVCMRT_MATCH" manager="GOVCMRT_MATCH.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GOVCMID" manager="GOVCMID.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GORCMDO" manager="GORCMDO.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GTVCMSC" manager="GTVCMSC.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="GORCMSP" manager="GORCMSP.Manager.Config">
+		
+		
+			</businessObject>
+			<businessObject name="BUTTON_CONTROL_BLOCK" manager="BUTTON_CONTROL_BLOCK.Manager.Config">
+		
+		
+			</businessObject>
+		</businessObjects>
+		<valueSets>
+				<valueSet config="GTVADID_RG.ValueSet.Config"/>
+				<valueSet config="ADDRESS_MATCH_LIST_RG.ValueSet.Config"/>
+				<valueSet config="EMAIL_MATCH_LIST_RG.ValueSet.Config"/>
+				<valueSet config="GOVCMID_ADDRESS_LIST_RG.ValueSet.Config"/>
+				<valueSet config="GOVCMID_EMAIL_LIST_RG.ValueSet.Config"/>
+				<valueSet config="GOVCMID_PHONE_LIST_RG.ValueSet.Config"/>
+				<valueSet config="PHONE_MATCH_LIST_RG.ValueSet.Config"/>
+				<valueSet config="MATCH_LIST_RG.ValueSet.Config"/>
+				<valueSet config="MATCH_PRIORITY_LIST_RG.ValueSet.Config"/>
+		</valueSets>
+
+	</formModel>
+</b:beans>

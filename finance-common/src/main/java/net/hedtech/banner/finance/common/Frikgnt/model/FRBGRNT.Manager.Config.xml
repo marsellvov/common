@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRBGRNT.Manager.Config" name="FRBGRNT">
+		
+		<items>
+			<item name="FRBGRNT_CODE" logicalName="frbgrntCode" type="String" physicalName="FRBGRNT_CODE"  />
+			<item name="FRBGRNT_PROP_CODE" logicalName="frbgrntPropCode" type="String" physicalName="FRBGRNT_PROP_CODE"  />
+			<item name="FRBGRNT_STATUS_CODE" logicalName="frbgrntStatusCode" type="String" physicalName="FRBGRNT_STATUS_CODE"  />
+			<item name="FRBGRNT_TITLE" logicalName="frbgrntTitle" type="String" physicalName="FRBGRNT_TITLE"  />
+			<item name="FRBGRNT_STATUS_DATE" logicalName="frbgrntStatusDate" type="java.util.Date" physicalName="FRBGRNT_STATUS_DATE"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Frikgnt.model.FrbgrntAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE upper(frbgrnt_long_title) LIKE upper(:TITLE)]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[frbgrnt_code ]]></defaultOrderByClause>	
+
+		<queryAllRecords>true</queryAllRecords>
+		<pagination maximumRows="20" enabled="true"/>
+
+	</manager>
+</b:beans>

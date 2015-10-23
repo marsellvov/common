@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Alerts>
+	<Alert Name="ORG_SEARCH_ALERT" Title="" Type="WARNING">
+		<Text>*Warning* Similar name(s) exist.  Would you like to view them?</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="SOACOMP" />
+  			<Button Type="BTN2" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="PERS_SEARCH_ALERT" Title="" Type="WARNING">
+		<Text>*Warning* Similar name(s) exist.  Would you like to view them?</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="SOAIDEN" />
+  			<Button Type="BTN2" Label="Cancel" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="CAUTION_CHANGE_ALERT" Title="" Type="WARNING">
+		<Text>Do you want to save the changes you have made?</Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="YES" />
+  			<Button Type="BTN2" Label="NO" />
+  			<Button Type="BTN3" Label="CANCEL" />
+		</Buttons>
+	</Alert>	
+	<Alert Name="G$_INFO_ALERT" Title="" Type="INFORMATION">
+		<Text></Text>
+ 		<Buttons>
+  			<Button Type="BTN1" Label="OK" />
+		</Buttons>
+	</Alert>	
+</Alerts>
+

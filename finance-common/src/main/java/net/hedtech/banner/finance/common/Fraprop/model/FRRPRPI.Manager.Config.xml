@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="FRRPRPI.Manager.Config" name="FRRPRPI">
+		
+		<items>
+			<item name="FRRPRPI_ID" logicalName="frrprpiId" type="String"  virtual="true" />
+			<item name="FRRPRPI_ID_NAME" logicalName="frrprpiIdName" type="String"  virtual="true" />
+			<item name="FRRPRPI_COAS" logicalName="frrprpiCoas" type="String"  virtual="true" />
+			<item name="FRRPRPI_ID_IND" logicalName="frrprpiIdInd" type="String" physicalName="FRRPRPI_ID_IND"  />
+			<item name="FRRPRPI_ID_IND_NAME" logicalName="frrprpiIdIndName" type="String"  virtual="true" />
+			<item name="FRRPRPI_ORGN_CODE" logicalName="frrprpiOrgnCode" type="String" physicalName="FRRPRPI_ORGN_CODE"  />
+			<item name="FRRPRPI_ORGN_CODE_NAME" logicalName="frrprpiOrgnCodeName" type="String"  virtual="true" />
+			<item name="FRRPRPI_SALUTATION" logicalName="frrprpiSalutation" type="String" physicalName="FRRPRPI_SALUTATION"  />
+			<item name="FRRPRPI_TITLE" logicalName="frrprpiTitle" type="String" physicalName="FRRPRPI_TITLE"  />
+			<item name="FRRPRPI_FTE" logicalName="frrprpiFte" type="java.math.BigDecimal" physicalName="FRRPRPI_FTE"  />
+			<item name="FRRPRPI_EMPLOYEE_IND" logicalName="frrprpiEmployeeInd" type="String" physicalName="FRRPRPI_EMPLOYEE_IND"  >
+				<value>
+					<constant>N</constant>
+				</value>	
+			</item>
+			<item name="FRRPRPI_PROP_CODE" logicalName="frrprpiPropCode" type="String" physicalName="FRRPRPI_PROP_CODE" >
+				<value>
+					<item name="FRBPROP_CODE" businessObject="FRBPROP"/>
+				</value>
+			</item>	
+			<item name="FRRPRPI_ACTIVITY_DATE" logicalName="frrprpiActivityDate" type="java.util.Date" physicalName="FRRPRPI_ACTIVITY_DATE"  >
+				<value>
+					<systemVariable name="DBDATE"/>
+				</value>	
+			</item>
+			<item name="FRRPRPI_ID_PIDM" logicalName="frrprpiIdPidm" type="java.math.BigDecimal" physicalName="FRRPRPI_ID_PIDM"  />
+			<item name="FRRPRPI_USER_ID" logicalName="frrprpiUserId" type="String" physicalName="FRRPRPI_USER_ID"  />
+		</items>
+		
+		<adapterClass>net.hedtech.banner.finance.common.Fraprop.model.FrrprpiAdapter</adapterClass>
+		<defaultWhereClause><![CDATA[WHERE frrprpi_prop_code = :FRBPROP_CODE]]></defaultWhereClause>	
+		<defaultOrderByClause><![CDATA[frrprpi_id_ind]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>

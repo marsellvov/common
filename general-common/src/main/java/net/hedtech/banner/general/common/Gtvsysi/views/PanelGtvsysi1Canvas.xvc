@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="GTVSYSI"/>
+	<panel class="ContentCanvas" id="pnlGtvsysi1Canvas" menu="G$_DEFAULT_PM" name="GTVSYSI_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="GTVSYSI" name="grdGtvsysi" width="100%">
+						<viewheader>
+							<viewcolumn autoskip="true" block="GTVSYSI" case="upper" datatype="String" label="gtvsysi.gtvsysiCode.prompt" labelstyle="DEFAULT" maxlength="2" member="GTVSYSI_CODE" name="gtvsysiCode" required="true">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn autoskip="true" block="GTVSYSI" datatype="String" label="gtvsysi.gtvsysiDesc.prompt" labelstyle="DEFAULT" maxlength="30" member="GTVSYSI_DESC" name="gtvsysiDesc" required="true">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

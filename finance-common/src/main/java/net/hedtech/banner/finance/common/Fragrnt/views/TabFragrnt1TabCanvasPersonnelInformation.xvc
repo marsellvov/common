@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+  <interactionblock name="BUTTON_CONTROL_BLOCK" />
+  <interactionblock name="FRRGRPI" />
+  <panel width="100%">
+    <accordion width="100%">
+      <panel label="personnelInformation.label">
+      <repeater width="100%" block="FRRGRPI">
+        <panel width="100%">
+          <gridlayout cols="2" orientation="vertical">
+            <gridcell>
+              <lovbox autoskip="true" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frrgrpi.frrgrpiId.prompt" maxlength="9" member="FRRGRPI_ID" name="frrgrpiId" style="ui-buttoninput" validation="server" width="113px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" height="23px" icon="flashlit" member="FRRGRPI_ID_LBT" name="frrgrpiIdLbt" navigable="false" style="ui-buttoninput" tooltip="frrgrpi.frrgrpiIdLbt.tooltip" width="23px" /> -->
+              <textbox datatype="String" enabled="false" height="23px" keyactions="NEXT_ITEM" maxlength="230" member="FRRGRPI_ID_NAME" name="frrgrpiIdName" width="255px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <lovbox autoskip="true" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frrgrpi.frrgrpiIdInd.prompt" maxlength="30" member="FRRGRPI_ID_IND" name="frrgrpiIdInd" required="true" style="ui-buttoninput" width="73px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="FRRGRPI_ID_IND_LBT" name="frrgrpiIdIndLbt" navigable="false" style="ui-buttoninput" tooltip="frrgrpi.frrgrpiIdIndLbt.tooltip" width="23px" /> -->
+              <textfield datatype="String" height="23px" maxlength="35" member="FRRGRPI_ID_IND_NAME" name="frrgrpiIdIndName" width="287px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox case="upper" datatype="String" enabled="false" height="23px" label="frrgrpi.frrgrpiCoas.prompt" maxlength="30" member="FRRGRPI_COAS" name="frrgrpiCoas" width="50px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <lovbox case="upper" datatype="String" height="23px" label="frrgrpi.frrgrpiOrgnCode.prompt" maxlength="30" member="FRRGRPI_ORGN_CODE" name="frrgrpiOrgnCode" style="ui-buttoninput" width="95px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" height="23px" icon="search" member="FRRGRPI_ORGN_CODE_LBT" name="frrgrpiOrgnCodeLbt" navigable="false" style="ui-buttoninput" tooltip="frrgrpi.frrgrpiOrgnCodeLbt.tooltip" width="23px" /> -->
+              <textfield datatype="String" height="23px" maxlength="35" member="FRRGRPI_ORGN_CODE_NAME" name="frrgrpiOrgnCodeName" width="239px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" datatype="String" height="23px" label="frrgrpi.frrgrpiSalutation.prompt" maxlength="35" member="FRRGRPI_SALUTATION" name="frrgrpiSalutation" width="279px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" datatype="String" height="23px" label="frrgrpi.frrgrpiTitle.prompt" maxlength="35" member="FRRGRPI_TITLE" name="frrgrpiTitle" width="279px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <lovbox case="upper" datatype="String" height="23px" label="frrgrpi.frrgrpiAddrType.prompt" maxlength="30" member="FRRGRPI_ADDR_TYPE" name="frrgrpiAddrType" style="ui-buttoninput" width="74px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRRGRPI_ADDR_TYPE_LBT" name="frrgrpiAddrTypeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frrgrpiAddrTypeLbt.tooltip" width="23px" /> -->
+              <text></text>
+            </gridcell>
+            <gridcell>
+              <lovbox datatype="Number" height="23px" label="frrgrpi.frrgrpiAddrSeqno.prompt" maxlength="2" member="FRRGRPI_ADDR_SEQNO" name="frrgrpiAddrSeqno" style="ui-buttoninput" width="73px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRRGRPI_ADDR_SEQNO_LBT" name="frrgrpiAddrSeqnoLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frrgrpiAddrSeqnoLbt.tooltip" width="23px" /> -->
+            </gridcell>
+            <gridcell>
+              <lovbox case="upper" datatype="String" height="23px" label="frrgrpi.frrgrpiPhoneType.prompt" maxlength="4" member="FRRGRPI_PHONE_TYPE" name="frrgrpiPhoneType" style="ui-buttoninput" width="74px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRRGRPI_PHONE_TYPE_LBT" name="frrgrpiPhoneTypeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frrgrpiPhoneTypeLbt.tooltip" width="23px" /> -->
+              <text></text>
+            </gridcell>
+            <gridcell>
+              <lovbox datatype="Number" height="23px" label="frrgrpi.frrgrpiTeleSeqno.prompt" maxlength="2" member="FRRGRPI_TELE_SEQNO" name="frrgrpiTeleSeqno" style="ui-buttoninput" validation="server" width="73px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="flashlit" member="FRRGRPI_TELE_SEQNO_LBT" name="frrgrpiTeleSeqnoLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frrgrpiTeleSeqnoLbt.tooltip" width="23px" /> -->
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" datatype="String" height="23px" label="frrgrpi.frrgrpiEmail.prompt" maxlength="128" member="FRRGRPI_EMAIL" name="frrgrpiEmail" width="380px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <lovbox autoskip="true" case="upper" datatype="String" height="23px" keyactions="NEXT_ITEM" label="frrgrpi.frrgrpiBfrmCode.prompt" maxlength="30" member="FRRGRPI_BFRM_CODE" name="frrgrpiBfrmCode" style="ui-buttoninput" width="74px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </lovbox>
+<!--               <button action="WHEN-BUTTON-PRESSED" block="BUTTON_CONTROL_BLOCK" height="23px" icon="search" member="FRRGRPI_BFRM_CODE_LBT" name="frrgrpiBfrmCodeLbt" navigable="false" style="ui-buttoninput" tooltip="buttonControlBlock.frrgrpiBfrmCodeLbt.tooltip" width="23px" /> -->
+              <textfield datatype="String" height="23px" maxlength="35" member="BFRM_NAME" name="bfrmName" width="294px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textfield>
+            </gridcell>
+            <gridcell>
+              <textbox autoskip="true" case="upper" datatype="Number" formatmask="9D99" height="23px" label="frrgrpi.frrgrpiFte.prompt" maxlength="4" maxvalue="1.0" member="FRRGRPI_FTE" minvalue="0.0" name="frrgrpiFte" textalign="right" width="51px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+              </textbox>
+            </gridcell>
+            <gridcell>
+              <combobox autoskip="true" height="23px" label="frrgrpi.frrgrpiEmployeeInd.prompt" member="FRRGRPI_EMPLOYEE_IND" name="frrgrpiEmployeeInd" validation="server" width="80px">
+                <xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick" />
+                <model>
+                  <item label="frrgrpi.frrgrpiEmployeeInd.item0.label" value="Y" />
+                  <item label="frrgrpi.frrgrpiEmployeeInd.item1.label" value="N" />
+                </model>
+              </combobox>
+            </gridcell>
+          </gridlayout>
+        </panel>
+        </repeater>
+      </panel>
+    </accordion>
+  </panel>
+</config>

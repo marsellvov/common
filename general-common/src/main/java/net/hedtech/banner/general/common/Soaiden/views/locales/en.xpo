@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<messages xmlns="urn:schemas:morphis:frames:messages" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <msg id="gVpdiBlock.vpdiCode.prompt">Institution</msg>
+  <msg id="gVpdiBlock.vpdiCodeLbt.label">Subject</msg>
+  <msg id="spriden.accordion.title">PERSON SEARCH</msg>
+  <msg id="spriden.spridenId.prompt">ID</msg>
+  <msg id="spriden.spridenId.hint">Identification Number; press COUNT QUERY HITS to access additional information.</msg>
+  <msg id="spriden.spridenLastName.prompt">Last Name  </msg>
+  <msg id="spriden.spridenLastName.hint">Last Name.</msg>
+  <msg id="spriden.spridenFirstName.prompt">First Name  </msg>
+  <msg id="spriden.spridenFirstName.hint">First Name.</msg>
+  <msg id="spriden.spridenMi.prompt">Middle Name</msg>
+  <msg id="spriden.spridenMi.hint">Middle Name.</msg>
+  <msg id="spriden.birthdate.prompt">Birth Date</msg>
+  <msg id="spriden.birthdate.hint">Date of Birth.</msg>
+  <msg id="spriden.spridenChangeInd.prompt">Change Indicator</msg>
+  <msg id="spriden.spridenChangeInd.hint">Change Indicator; values are 'N' for name change, 'I' for ID change.</msg>
+  <msg id="spriden.spridenNtypCode.prompt">Type</msg>
+  <msg id="spriden.spridenNtypCode.hint">Name Type code</msg>
+  <msg id="soundex.soundexLastName.prompt">Sounds Like...Last Name</msg>
+  <msg id="soundex.soundexLastName.hint">Last name sounds like...enter query information and press EXECUTE QUERY.</msg>
+  <msg id="soundex.soundexFirstName.prompt">First Name</msg>
+  <msg id="soundex.soundexFirstName.hint">First name sounds like...enter query information and press EXECUTE QUERY.</msg>
+  <msg id="buttonControlBlock.caseInsensitiveRg.caseInsensitiveTrue.label">Case Insensitive Query</msg>
+  <msg id="buttonControlBlock.caseInsensitiveRg.caseInsensitiveFalse.label">Case Sensitive Query</msg>
+  <msg id="buttonControlBlock.detailBtn.label">Detail</msg>
+  <msg id="buttonControlBlock.searchBtn.label">Search</msg>
+  <msg id="buttonControlBlock.soundexBtn.label">Soundex</msg>
+  <msg id="buttonControlBlock.soundexSearchBtn.label">Search</msg>
+  <msg id="buttonControlBlock.spriden1ExitvalueBtn.label">Select</msg>
+  <msg id="buttonControlBlock.spriden1RollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.soundexRollbackBtn.label">Rollback</msg>
+  <msg id="buttonControlBlock.spriden1ExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.soundexExitBtn.label">Exit</msg>
+  <msg id="buttonControlBlock.spridenNtypCodeLbt.tooltip">Search</msg>
+  <msg id="mainWindow.title">Person Search Form</msg>
+  <msg id="soundexWindow.title">Soundex Search</msg>
+  <msg id="gNavCanvas.text262.text">My Institution</msg>
+</messages>

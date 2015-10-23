@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<config layout="horizontal" xmlns="urn:schemas:morphis:frames:view" xmlns:xl="urn:schemas:morphis:frames:logic">
+	<interactionblock name="FRBGRNT"/>
+	<interactionblock name="KEY_BLOCK"/>
+	<interactionblock name="FORM_HEADER"/>
+	<panel class="StackedCanvas" id="pnlFrbgrnt1Canvas" menu="G$_DEFAULT_PM" name="FRBGRNT_1_CANVAS" width="100%">
+		<accordion width="100%">
+			<panel label="mainWindow.title">
+				<panel width="100%">
+					<gridview block="FRBGRNT" name="grdFrbgrnt" width="100%">
+						<viewheader>
+							<viewcolumn block="FRBGRNT" case="upper" datatype="String" enabled="false" label="frbgrnt.frbgrntCode.prompt" labelstyle="DEFAULT" maxlength="9" member="FRBGRNT_CODE" name="frbgrntCode">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FRBGRNT" case="upper" datatype="String" enabled="false" label="frbgrnt.frbgrntPropCode.prompt" labelstyle="DEFAULT" maxlength="11" member="FRBGRNT_PROP_CODE" name="frbgrntPropCode">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FRBGRNT" case="upper" datatype="String" enabled="false" label="frbgrnt.frbgrntStatusCode.prompt" labelstyle="DEFAULT" maxlength="2" member="FRBGRNT_STATUS_CODE" name="frbgrntStatusCode">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FRBGRNT" datatype="String" enabled="false" label="frbgrnt.frbgrntTitle.prompt" labelstyle="DEFAULT" maxlength="240" member="FRBGRNT_TITLE" name="frbgrntTitle">
+								<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+							</viewcolumn>
+							<viewcolumn block="FRBGRNT" case="upper" datatype="Date" enabled="false" formatmask="DD-MON-YYYY" label="frbgrnt.frbgrntStatusDate.prompt" labelstyle="DEFAULT" maxlength="11" member="FRBGRNT_STATUS_DATE" name="frbgrntStatusDate">
+								<editor>
+									<calendar>
+										<xl:event action="WHEN-MOUSE-DOUBLECLICK" name="doubleClick"/>
+									</calendar>
+								</editor>
+							</viewcolumn>
+						</viewheader>
+					</gridview>
+				</panel>
+			</panel>
+		</accordion>
+	</panel>
+</config>

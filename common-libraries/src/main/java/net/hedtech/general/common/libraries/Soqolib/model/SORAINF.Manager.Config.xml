@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<b:beans 
+	xmlns="urn:schemas:morphis:foundations:businessobject"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:b="http://www.springframework.org/schema/beans"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd urn:schemas:morphis:foundations:businessobject http://www.morphis-tech.com/schema/foundations/businessobject.xsd">
+	<manager id="SORAINF.Manager.Config" name="SORAINF">
+		
+		<items>
+			<item name="ADMIN_AROL_PIDM" logicalName="adminArolPidm" type="java.math.BigDecimal"  virtual="true" />
+			<item name="ADMIN_ID" logicalName="adminId" type="String"  virtual="true" />
+			<item name="ADMIN_NAME" logicalName="adminName" type="String"  virtual="true" />
+			<item name="SORAINF_RADM_CODE" logicalName="sorainfRadmCode" type="String" physicalName="SORAINF_RADM_CODE"  />
+			<item name="SORAINF_MODULE" logicalName="sorainfModule" type="String" physicalName="SORAINF_MODULE"  />
+			<item name="SORAINF_TERM_CODE" logicalName="sorainfTermCode" type="String" physicalName="SORAINF_TERM_CODE"  />
+			<item name="SORAINF_SOURCE_IND" logicalName="sorainfSourceInd" type="String" physicalName="SORAINF_SOURCE_IND"  />
+			<item name="SORAINF_AROL_PIDM" logicalName="sorainfArolPidm" type="java.math.BigDecimal" physicalName="SORAINF_AROL_PIDM"  />
+			<item name="SORAINF_PIDM" logicalName="sorainfPidm" type="java.math.BigDecimal" physicalName="SORAINF_PIDM"  />
+			<item name="SORAINF_ACTIVITY_DATE" logicalName="sorainfActivityDate" type="java.util.Date" physicalName="SORAINF_ACTIVITY_DATE"  />
+			<item name="ADMIN_CONFID_IND" logicalName="adminConfidInd" type="String"  virtual="true" />
+			<item name="ADMIN_DCSD_IND" logicalName="adminDcsdInd" type="String"  virtual="true" />
+			<item name="SORAINF_SEQNO" logicalName="sorainfSeqno" type="java.math.BigDecimal" physicalName="SORAINF_SEQNO"  />
+			<item name="ADMIN_SOURCE_DESC" logicalName="adminSourceDesc" type="String"  virtual="true" />
+		</items>
+		
+		<adapterClass>net.hedtech.general.common.libraries.Soqolib.model.SorainfAdapter</adapterClass>
+		<defaultOrderByClause><![CDATA[order by sorainf_term_code desc, sorainf_seqno desc]]></defaultOrderByClause>	
+
+	</manager>
+</b:beans>
